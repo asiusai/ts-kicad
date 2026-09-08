@@ -44,9 +44,9 @@ files can be used directly. No source schematic, existing PCB or private package
 is needed to generate the project.
 
 `circuit.ts` contains connectivity, `bom.ts` holds footprint and ordering choices,
-and `index.ts` owns project settings. All components are reached from `HARNESS`.
+and `index.ts` owns project settings. All components are reached from `HARNESS`. References are assigned automatically during export.
 Pins use generated symbol labels, inline resistors belong to the pins they serve,
-and the repeated clamps and switches use loops.
+and each clamp and switch has an explicit declaration.
 
 ## Validation and next step
 
@@ -61,7 +61,7 @@ Validated with Bun 1.3.11 and KiCad 10.0.6:
 - The board still needs an outline, placement and routing of 75 connections.
 
 The connector land pattern has about 0.142 mm between a locating hole and shield
-copper. `index.ts` applies a 0.125 mm minimum only within J3. Confirm this constraint
+copper. `index.ts` applies a 0.125 mm minimum only within the Type-C footprint. Confirm this constraint
 with the chosen fabricator; this is not a claim that the unrouted board is ready
 for manufacture. Full `outputs` requires a finished board that passes DRC.
 
