@@ -1,0 +1,9 @@
+node_modules/
+generated/
+*.tgz
+*.kicad_prl
+*-backups/
+.env
+.env.*
+!.env.example
+.DS_Store
