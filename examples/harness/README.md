@@ -18,12 +18,11 @@ ts-kicad init examples/harness
 ```
 
 `init` binds the downloaded native libraries before loading `src/index.ts` and
-creates the schematic, project, initial PCB and `generated/harness.pdf`.
+creates the schematic, project and review PDF in `generated/`.
 For subsequent circuit or BOM edits:
 
 ```sh
 ts-kicad sync examples/harness
-ts-kicad outputs examples/harness --docs-only
 ```
 
 Downloaded libraries and generated KiCad files are ignored in this example.
@@ -39,8 +38,7 @@ ts-kicad sync my-harness --libraries-only
 ```
 
 Then write `my-harness/src/circuit.ts` and `bom.ts`, import the circuit root in
-`src/index.ts`, and run `ts-kicad sync my-harness`. This example's three source
-files can be used directly. No source schematic, existing PCB or private package
+`src/index.ts`, and run `ts-kicad sync my-harness`. This example's source files can be used directly. No source schematic, existing PCB or private package
 is needed to generate the project.
 
 `circuit.ts` contains connectivity, `bom.ts` holds footprint and ordering choices,
@@ -48,23 +46,11 @@ and `index.ts` owns project settings. All components are reached from `HARNESS`.
 Pins use generated symbol labels, inline resistors belong to the pins they serve,
 and each clamp and switch has an explicit declaration.
 
-## Validation and next step
+## Review
 
-Validated with Bun 1.3.11 and KiCad 10.0.6:
+The schematic has 18 physical components and 26 native nets. References are
+assigned automatically. Review the generated PDF, then use KiCad to update a PCB
+from the schematic and perform placement, routing and DRC there.
 
-- 18 physical components, 98 distinct physical pin identifiers, 26 native nets.
-- All 26 net groups match the original harness-v1 connectivity. The downloaded
-  Type-C library numbers all four shield pads `0`; the original numbered them
-  `S1` through `S4`. All remain grounded.
-- ERC: zero errors and warnings. Initial PCB: zero unexpected DRC violations and
-  zero schematic parity issues.
-- The board still needs an outline, placement and routing of 75 connections.
-
-The connector land pattern has about 0.142 mm between a locating hole and shield
-copper. `index.ts` applies a 0.125 mm minimum only within the Type-C footprint. Confirm this constraint
-with the chosen fabricator; this is not a claim that the unrouted board is ready
-for manufacture. Full `outputs` requires a finished board that passes DRC.
-
-The schematic layout is automatic and currently favors separated labeled groups.
-Dense pin labels can still crowd each other. Inspect the PDF before relying on it
-as a human-readable wiring reference.
+The earlier TypeScript routing API sketch is saved in
+[routing-idea.md](routing-idea.md). It is documentation only.

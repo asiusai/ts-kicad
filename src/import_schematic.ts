@@ -145,8 +145,7 @@ export function importSchematic(tree: Xml, output: string, base: string, verify 
     imports.add(helper ?? (lib.exportName && lib.exportName !== cls ? lib.exportName + ' as ' + cls : cls)); used.set(source, imports)
     return (helper ?? 'new ' + cls) + '(' + q({ ref, value: comps.get(ref)!.value('value'), ...hints.get(ref), ...overrides.get(ref) }) + ')'
   }
-  const connection = (name: string | null | undefined) => name == null ? 'null' : 'local(' + q(name) + ')'
-  used.set(base, new Set([...(used.get(base) ?? []), 'local']))
+  const connection = (name: string | null | undefined) => name == null ? 'null' : q(name)
   let body = ''
   for (const ref of comps.keys()) {
     if (!roots.has(ref)) continue
@@ -157,9 +156,9 @@ export function importSchematic(tree: Xml, output: string, base: string, verify 
       const values=[connection(nets.get(key))]
       for (const [i,[part,own]] of (attachments.get(key) ?? []).entries()) {
         let expression=ctor(part);const childMap=libraries[symbolId(comps.get(part)!)].mapping
-        for (const [otherLabel,otherNumber] of Object.entries(childMap)) if(otherNumber!==own)expression+=`.partial({ ${q(otherLabel)}: ${connection(nets.get(part+'.'+otherNumber))} })`
+        for (const [otherLabel,otherNumber] of Object.entries(childMap)) if(otherNumber!==own)expression+=`.wire({ ${q(otherLabel)}: ${connection(nets.get(part+'.'+otherNumber))} })`
         const pinLabel=Object.keys(childMap).find(k=>childMap[k]===own)!
-        expression+=`.p[${q(pinLabel)}]`;values.push(expression);paths.set(part,`${names.get(ref)}.${label}.${i}`)
+        expression+=`[${q(pinLabel)}]`;values.push(expression);paths.set(part,`${names.get(ref)}.${label}.${i}`)
       }
       body+=`  ${q(label)}: ${values.length===1?values[0]:'['+values.join(', ')+']'},\n`
     }

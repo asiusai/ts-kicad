@@ -1,4 +1,3 @@
-import { local } from './index'
 import { expect, test } from 'bun:test'
 import { parse, dump, node, atom, child, val } from './kicad_sexpr'
 import { parseXml } from './kicad_io'
@@ -113,14 +112,14 @@ test('common helpers expose generated pin keys while preserving physical numbers
   const {c,r,sheet}=await import('./helpers')
   const {PWR_FLAG}=await import('./power')
   sheet('HELPERS')
-  const cap=c().wire({P1:local('helper-test-rail'),P2:null})
-  const flag=new PWR_FLAG().partial({ P1: cap.p.P1 })
-  expect(cap.p.P1.number).toBe('1')
-  expect(cap.p.P2.number).toBe('2')
-  expect(flag.p.P1.connections.has(cap.p.P1)).toBe(true)
-  expect(r().p.P1.number).toBe('1')
+  const cap=c().wire({P1:'helper-test-rail',P2:null})
+  const flag=new PWR_FLAG().wire({ P1: cap.P1 })
+  expect(cap.P1.number).toBe('1')
+  expect(cap.P2.number).toBe('2')
+  expect(flag.P1.connections.has(cap.P1)).toBe(true)
+  expect(r().P1.number).toBe('1')
   // @ts-expect-error Numeric API keys were replaced, not retained as aliases.
-  expect(cap.p['1']).toBeUndefined()
+  expect(cap['1']).toBeUndefined()
 })
 
 test('power export names preserve native rail identities and avoid collisions', async () => {
@@ -136,4 +135,9 @@ test('power export names preserve native rail identities and avoid collisions', 
   expect(rendered).toContain('export const P3V3 = power("+3.3V"')
   expect(rendered).toContain('export const P3V3_3V3 = power("+3V3"')
   expect(renderPowerConnections(Object.fromEntries(Object.entries(catalog).reverse()))).toBe(rendered)
+})
+
+test('generated pin names cannot shadow component metadata or methods', () => {
+  const tree = parseXml('<export><libparts><libpart lib="Test" part="Collision"><pins><pin num="1" name="wire"/><pin num="2" name="schema"/><pin num="3" name="constructor"/><pin num="4" name="SDA"/></pins></libpart></libparts></export>')
+  expect(renderComponents(tree).libraries['Test:Collision'].mapping).toEqual({ PIN_wire: '1', PIN_schema: '2', PIN_constructor: '3', SDA: '4' })
 })

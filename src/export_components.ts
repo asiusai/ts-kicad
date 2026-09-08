@@ -1,9 +1,11 @@
+import { Component } from './index'
 import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { basename, dirname, join } from 'node:path'
 import { type Xml, q, readNetlist, baseImport, cli } from './kicad_io'
 export const identifier = (value: string) => { const s = value.replace(/[^A-Za-z0-9_$]/g, '_') || 'Symbol'; return /^\d/.test(s) ? '_' + s : s }
 export type Library = { className: string; mapping: Record<string, string>; source?: string; exportName?: string }
 export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builtin?: boolean; symbolSource?: string } = {}) {
+  const reserved = new Component({})
   const catalogPath = join(import.meta.dir, '../components/catalog.ts')
   const catalog: Record<string, string> = !options.builtin && existsSync(catalogPath) ? JSON.parse(readFileSync(catalogPath, 'utf8').slice('export default '.length)) : {}
   const libraries: Record<string, Library> = {}, classes = new Set<string>()
@@ -21,7 +23,8 @@ export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builti
     const pins = lib.all('pins/pin'), counts = new Map<string, number>(), mapping: Record<string, string> = {}
     const pinName = (p: Xml) => {
       const name=p.get('name'),number=p.get('num')
-      return !name || name==='~' || name===number ? identifier('P'+number) : name
+      const candidate = !name || name==='~' || name===number ? identifier('P'+number) : name
+      return candidate in reserved ? 'PIN_' + candidate : candidate
     }
     for (const p of pins) counts.set(pinName(p), (counts.get(pinName(p)) ?? 0) + 1)
     for (const p of pins) {

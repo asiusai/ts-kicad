@@ -7,17 +7,19 @@ import { createRequire } from 'node:module'
 
 // Run with the project's own DSL package so global and local installs never mix class identities.
 const [requestedCommand, ...requestedArgs] = process.argv.slice(2)
-if (['init','sync','export','inspect','compare'].includes(requestedCommand)) {
+if (['init', 'sync', 'export', 'inspect'].includes(requestedCommand)) {
   const first = requestedArgs[0]
   const location = first && !first.startsWith('-') ? resolve(first) : process.cwd()
   const directory = existsSync(location) && statSync(location).isDirectory() ? location : dirname(location)
   let localCli: string | undefined
   try {
-    const entry = createRequire(join(directory,'package.json')).resolve('ts-kicad')
-    localCli = join(dirname(dirname(realpathSync(entry))),'cli.ts')
-  } catch { /* A new project can run sync before installing its circuit dependency. */ }
+    const entry = createRequire(join(directory, 'package.json')).resolve('ts-kicad')
+    localCli = join(dirname(dirname(realpathSync(entry))), 'cli.ts')
+  } catch {
+    /* A new project can run sync before installing its circuit dependency. */
+  }
   if (localCli && existsSync(localCli) && realpathSync(localCli) !== realpathSync(import.meta.path)) {
-    const child = Bun.spawn([process.execPath, localCli, ...process.argv.slice(2)], {stdin:'inherit',stdout:'inherit',stderr:'inherit'})
+    const child = Bun.spawn([process.execPath, localCli, ...process.argv.slice(2)], { stdin: 'inherit', stdout: 'inherit', stderr: 'inherit' })
     process.exit(await child.exited)
   }
 }
@@ -38,11 +40,6 @@ const commands = {
     description: 'Generate typed builtin footprints and copy their native geometry.',
     load: () => import('./src/generate_footprints'),
   },
-  outputs: {
-    usage: "project-directory|board.kicad_sch|board.kicad_pcb [--output directory] [--docs-only]",
-    description: "Export native KiCad documentation, BOM and checked fabrication files.",
-    load: () => import("./src/export_outputs"),
-  },
   'generate-components': {
     usage: '[KiCad-symbol-directory]',
     description: 'Regenerate all builtin TypeScript components from installed KiCad libraries.',
@@ -50,13 +47,13 @@ const commands = {
   },
   export: {
     usage: 'project-directory OR entry.ts [other.ts ...] output.kicad_sch [--symbols library.kicad_sym] [--footprints library.pretty] [--project source.kicad_pro] [--verify] [--pdf]',
-    description: 'Generate a complete KiCad project, check ERC, and create its initial PCB.',
+    description: 'Generate a KiCad schematic, check ERC, and optionally export a PDF.',
     load: () => import('./src/export_schematic'),
   },
   import: {
-    usage: 'source.kicad_sch output-directory [--verify] [--base-import path]',
-    description: 'Convert a KiCad schematic into TypeScript.',
-    load: () => import('./src/import_schematic'),
+    usage: 'C<number> [C<number> ...] [project-directory]\n       ts-kicad import source.kicad_sch output-directory [--verify] [--base-import path]',
+    description: 'Import JLCPCB parts with EasyEDA2KiCad, or convert a KiCad schematic into TypeScript.',
+    load: () => import('./src/import_parts'),
   },
   symbols: {
     usage: 'source.kicad_sch|source.kicad_sym output.ts [--base-import path]',
@@ -67,11 +64,6 @@ const commands = {
     usage: 'entry.ts [other.ts ...]',
     description: 'Print the circuit graph as JSON; warnings go to stderr.',
     load: () => import('./src/inspect_circuit'),
-  },
-  compare: {
-    usage: 'entry.ts output-directory --symbols source.kicad_sch [--sheets title]',
-    description: 'Compare schematic layouts and experimental routing.',
-    load: () => import('./src/compare_layouts'),
   },
 } as const
 
@@ -93,11 +85,10 @@ async function main() {
   const command = commands[name as keyof typeof commands]
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`Usage: ts-kicad ${name} ${command.usage}\n\n${command.description}`)
-    if (name === 'export' || name === 'compare') console.log('Repeat --symbols for multiple source schematics.')
-    if (name === 'compare') console.log('Repeat --sheets to select multiple sections.')
+    if (name === 'export') console.log('Repeat --symbols for multiple source schematics.')
     return
   }
-  if (name === 'inspect' && (!args.length || args.some(arg => arg.startsWith('-')))) {
+  if (name === 'inspect' && (!args.length || args.some((arg) => arg.startsWith('-')))) {
     throw new Error(`Usage: ts-kicad inspect ${command.usage}`)
   }
   await (await command.load()).main(args)

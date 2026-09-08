@@ -12,7 +12,7 @@ export type Wire = { a: Point; b: Point; net: string }
 export type Label = Point & { text: string; angle: number }
 export type Note = Point & { text: string }
 export type LayoutGroup = { name: string; width: number; height: number; parts: Placed[]; wires: Wire[]; labels: Label[]; junctions: Point[]; notes: Note[] }
-export type LayoutMode = 'banks' | 'elk'
+export type LayoutMode = 'tscircuit' | 'banks' | 'elk'
 const elk = new ELK({ workerFactory: () => { const worker = new Worker(require.resolve('elkjs/lib/elk-worker.min.js')); (worker as Worker & { unref(): void }).unref(); return worker } })
 export const powerNet = (name: string) => /^(\+|VIN|VCORE|VDD|VCC)/.test(name)
 export function bounds(geometry: PinGeometry[], labels: Record<string,string>): Box {
@@ -66,7 +66,8 @@ function translate(into:LayoutGroup,g:LayoutGroup,x:number,y:number){
   into.notes.push(...g.notes.map(p=>({...p,x:p.x+x,y:p.y+y})))
 }
 /** Fixed-size topology blocks go into ELK; repeated caps stay inside wired banks. */
-export async function layoutGroup(name:string,cards:Card[],mode:LayoutMode='banks'):Promise<LayoutGroup>{
+export async function layoutGroup(name:string,cards:Card[],mode:LayoutMode='tscircuit'):Promise<LayoutGroup>{
+  if (mode === 'tscircuit') return (await import('./layout_topology')).layoutTopology(name,cards)
   const main=cards.filter(c=>c.item.name===name),attached=cards.filter(c=>c.item.name!==name)
   const blocks:LayoutGroup[]=main.map(placeCard),banks=new Map<string,Card[]>()
   for(const card of attached){

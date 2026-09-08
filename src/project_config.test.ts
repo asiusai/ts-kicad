@@ -8,11 +8,10 @@ import { inspect } from './kicad_io'
 
 class Pair extends Component.withPins(['1','2']) {}
 
-test('Project supports empty scaffolds and rejects unknown PCB settings', () => {
+test('Project supports empty scaffolds', () => {
   expect(new Project({entries:[]}).options.entries).toHaveLength(0)
-  expect(new Project({entries:[new Pair()],pcbOptions:{}}).options.entries).toHaveLength(1)
-  // @ts-expect-error Unsupported options must not silently do nothing.
-  expect(() => new Project({entries:[new Pair()],pcbOptions:{unknown:true}})).toThrow('Unknown PCB option')
+  expect(new Project({entries:[new Pair()]}).options.entries).toHaveLength(1)
+
 })
 
 test('entry Project supplies relative paths and multiple disconnected graph roots', async () => {
@@ -24,7 +23,7 @@ test('entry Project supplies relative paths and multiple disconnected graph root
     writeFileSync(entry,`import {Component,Project} from ${JSON.stringify(api)};
 class Pair extends Component.withPins(['1','2']) {}
 const a=new Pair().wire({P1:null,P2:null}),b=new Pair().wire({P1:null,P2:null});
-export default new Project({entries:[a,b],output:'../out/design.kicad_sch',symbols:['../symbols.kicad_sym'],footprints:['../custom.pretty'],project:'../original.kicad_pro',verify:true,pdf:true,pcbOptions:{}});`)
+export default new Project({entries:[a,b],output:'../out/design.kicad_sch',symbols:['../symbols.kicad_sym'],footprints:['../custom.pretty'],project:'../original.kicad_pro',verify:true,pdf:true});`)
     const byDirectory=await resolveExportInputs([directory])
     const byFile=await resolveExportInputs([entry])
     expect(byDirectory).toEqual(byFile)

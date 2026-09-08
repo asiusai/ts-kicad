@@ -5,14 +5,14 @@
     "": {
       "name": "ts-kicad",
       "dependencies": {
-        "@tscircuit/math-utils": "^0.0.38",
-        "@tscircuit/schematic-trace-solver": "^0.0.187",
-        "calculate-elbow": "^0.0.13",
-        "connectivity-map": "^1.0.0",
+        "@tscircuit/math-utils": "0.0.38",
+        "@tscircuit/schematic-trace-solver": "0.0.188",
+        "calculate-elbow": "0.0.13",
+        "connectivity-map": "1.0.0",
         "elkjs": "^0.12.0",
         "fast-xml-parser": "^5.11.1",
-        "flatbush": "^4.6.2",
-        "graphics-debug": "^0.0.100",
+        "flatbush": "4.6.2",
+        "graphics-debug": "0.0.100",
       },
       "devDependencies": {
         "@types/bun": "^1.4.1",
@@ -89,7 +89,7 @@
 
     "@tscircuit/math-utils": ["@tscircuit/math-utils@0.0.38", "", { "peerDependencies": { "typescript": "^5.0.0" } }, "sha512-bY1PMCKuSCASixsjvKkAFz2nxN+CNwpwTVi555whfvwuidqGnstMGzanjGOI7NaiZwgvENiQ0gcnBerkDvuQ4w=="],
 
-    "@tscircuit/schematic-trace-solver": ["@tscircuit/schematic-trace-solver@0.0.187", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-5/GaQsCkQ59lJ1Bn7Hbej72o0cuBDJKha2lCvJN70ifMrjCNWQXfvBrBpsDFOOtNHbmajTrbPdYPuWo7B0M2Og=="],
+    "@tscircuit/schematic-trace-solver": ["@tscircuit/schematic-trace-solver@0.0.188", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-VqW0qam/Wy3FnGwSRDtLKfpZnEakL43efaJyEkOzs4jRuLNnoPGMTUm+KsZKIJDt8h8ou9EnEBIonE0IQVR5Lw=="],
 
     "@types/bun": ["@types/bun@1.4.1", "", { "dependencies": { "bun-types": "1.4.1" } }, "sha512-0AVGiTXGajf1rgKom3N+c5L7CBxuoyyv1i44M0nX4UDK0G/fnRAMiri93nHuVPIb429KKtAgj7HatVmmOjeQLA=="],
 

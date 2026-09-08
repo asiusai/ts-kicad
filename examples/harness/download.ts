@@ -27,6 +27,8 @@ try {
     let footprint = readFileSync(join(temporary, 'catalog.pretty', name), 'utf8')
     // Unnumbered locating holes are non-plated, not zero-annulus PTH pads.
     footprint = footprint.replace(/\(pad "" thru_hole/g, '(pad "" np_thru_hole')
+    // Match the 0.01 mm pad dimensions used by the reference land pattern.
+    if (name === 'R0603.kicad_mod') footprint = footprint.replace(/\(size 0\.806 0\.864\)/g, '(size 0.81 0.86)')
     // The connector body outline crosses pads; keep it on fabrication drawings.
     if (name.includes('212528')) footprint = footprint.replaceAll('F.SilkS', 'F.Fab')
     writeFileSync(join(destination, name), footprint)

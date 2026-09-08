@@ -2,7 +2,7 @@ import { planNetLabels, type NetLabel } from './net_labels'
 import { symbolProperty, symbolDirectory } from './symbol_library'
 import { resolveExportInputs } from './project_config'
 import { checkErc } from './checks'
-import { prepareProject, createBoard, uuid, type ProjectOptions } from './project_files'
+import { prepareProject, uuid, type ProjectOptions } from './project_files'
 import { assignReferences, isPassiveSymbol, isCapacitorSymbol } from './index'
 /** Generate KiCad sheets and review PDF from an executed TS circuit graph. */
 import { existsSync, mkdirSync, writeFileSync, readdirSync, readFileSync, rmSync } from 'node:fs'
@@ -156,11 +156,9 @@ export async function exportSchematic(entry:string|string[],output:string,source
   for(const s of outputs)writeFileSync(join(dirname(output),s.filename),dump(s.tree)+'\n')
   writeFileSync(output,dump(root)+'\n')
   console.log(`Exported ${items.length} components across ${outputs.length} sheets to ${output}`)
-  const footprints=prepareProject(output,items,libraries,options)
+  prepareProject(output,items,libraries,options)
   if(options.verify)verifyExport(output,items,refs)
   checkErc(output)
-  const paths=new Map(items.map(item=>[item.name,'/'+rootId+'/'+uid(project+'/'+(item.sheet||'Circuit'))+'/'+uuid('symbol/'+refs.get(item.name)+'/unit/1')]))
-  createBoard(output,items,footprints,paths,options)
   if(options.pdf){
     const directory=join(dirname(output),'generated')
     mkdirSync(directory,{recursive:true})
@@ -176,6 +174,6 @@ export async function main(args: string[]) {
   const {positionals,values}=cli({symbols:{type:'string',multiple:true},footprints:{type:'string',multiple:true},project:{type:'string'},pdf:{type:'boolean'},layout:{type:'string'}} ,args)
   const {entries,output,config}=await resolveExportInputs(positionals)
   const layout=(values.layout??config.layout) as LayoutMode|undefined
-  if(layout&&!['banks','elk'].includes(layout))throw new Error('Unknown layout engine')
-  await exportSchematic(entries,output,(values.symbols??config.symbols??[])as string[],{settings:config.settings,designRules:config.designRules,pcbOptions:config.pcbOptions,verify:!!(values.verify??config.verify),pdf:!!(values.pdf??config.pdf),layout,footprints:(values.footprints??config.footprints)as string[]|undefined,project:(values.project??config.project)as string|undefined})
+  if(layout&&!['tscircuit','banks','elk'].includes(layout))throw new Error('Unknown layout engine')
+  await exportSchematic(entries,output,(values.symbols??config.symbols??[])as string[],{settings:config.settings,verify:!!(values.verify??config.verify),pdf:!!(values.pdf??config.pdf),layout,footprints:(values.footprints??config.footprints)as string[]|undefined,project:(values.project??config.project)as string|undefined})
 }

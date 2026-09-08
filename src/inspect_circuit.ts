@@ -1,3 +1,4 @@
+import { componentPins } from './index'
 // Generic graph inspection for import verification; does not write any source metadata.
 import { Component, isPassiveSymbol, Net, Pin, validatePins, circuitComponents, validateLabels, assignReferences, applyBom, validateBom, type KicadElement } from './index'
 import { pathToFileURL } from 'node:url'
@@ -45,7 +46,7 @@ for (const [name, component] of entries) {
 const result = entries.map(([name, component]) => ({
   name,
   ref: component.ref,
-  pinTypes: Object.fromEntries(Object.entries(component.pinTypes).map(([name, type]) => [component.p[name].number, type])),
+  pinTypes: Object.fromEntries(Object.entries(component.pinTypes).map(([name, type]) => [componentPins(component)[name].number, type])),
   ...owners.get(component),
   sheet: sheetNames.get(name),
   referencePrefix: component.referencePrefix,
@@ -57,7 +58,7 @@ const result = entries.map(([name, component]) => ({
   footprintProjectDirectory: component.footprintProjectDirectory,
   datasheet: component.datasheet,
   properties: component.properties,
-  pins: Object.values(component.p).map((pin) => {
+  pins: Object.values(componentPins(component)).map((pin) => {
     const visited = new Set<KicadElement>()
     const stack: KicadElement[] = [pin]
     while (stack.length) {

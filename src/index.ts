@@ -1,46 +1,55 @@
 import { type Footprint, validateFootprintPads } from './footprint'
 export type { Footprint } from './footprint'
+const pinsKey = Symbol('component pins')
+/** Enumerate physical pins without mixing in component metadata. */
+export const componentPins = <T extends string>(component: Component<T>): Record<T, Pin<T>> => component[pinsKey]
 let activeSheet: string | undefined
-const pinAccess = (name: string) => /^[A-Za-z_$][\w$]*$/.test(name) ? '.p.'+name : '.p['+JSON.stringify(name)+']'
+const pinAccess = (name: string) => (/^[A-Za-z_$][\w$]*$/.test(name) ? '.' + name : '[' + JSON.stringify(name) + ']')
 
 /** Validate prospective joins without changing the electrical graph. */
 function validateConnections(groups: readonly KicadElement[][]) {
   const edges = new Map<KicadElement, KicadElement[]>()
   for (const group of groups) {
-    if (group.some(element => !(element instanceof KicadElement))) throw new Error('Connections require pins, local() or global(); strings are not supported')
-    for (const element of group) edges.set(element, [...edges.get(element) ?? [], ...group])
+    if (group.some((element) => !(element instanceof KicadElement))) throw new Error('Connections require pins, nets or local-label strings')
+    for (const element of group) edges.set(element, [...(edges.get(element) ?? []), ...group])
   }
   const seen = new Set<KicadElement>()
   for (const start of edges.keys()) {
     if (seen.has(start)) continue
-    const stack = [start], pins: Pin[] = [], nets: Net[] = []
+    const stack = [start],
+      pins: Pin[] = [],
+      nets: Net[] = []
     while (stack.length) {
       const element = stack.pop()!
       if (seen.has(element)) continue
       seen.add(element)
       if (element instanceof Pin) pins.push(element)
       if (element instanceof Net) nets.push(element)
-      stack.push(...element.connections, ...edges.get(element) ?? [])
+      stack.push(...element.connections, ...(edges.get(element) ?? []))
     }
-    const sheets = new Set(pins.map(pin => pin.component.sheetName))
-    const locals = nets.filter(net => net.scope === 'local')
-    for (const net of locals) for (const sheet of sheets) if (sheet !== net.sheetName) {
-      throw new Error(`Local net ${net.name ?? '(unnamed)'} belongs to sheet ${net.sheetName}, cannot connect to sheet ${sheet}; use global() for cross-sheet connections`)
-    }
-    if (new Set(locals.map(net => net.sheetName)).size > 1) throw new Error('Cannot join local nets from different sheets')
-    if (sheets.size > 1 && !nets.some(net => net.scope === 'global')) throw new Error(`Cross-sheet connection (${[...sheets].join(', ')}) requires global()`)
+    const sheets = new Set(pins.map((pin) => pin.component.sheetName))
+    const locals = nets.filter((net) => net.scope === 'local')
+    for (const net of locals)
+      for (const sheet of sheets)
+        if (sheet !== net.sheetName) {
+          throw new Error(`Local net ${net.name ?? '(unnamed)'} belongs to sheet ${net.sheetName}, cannot connect to sheet ${sheet}; use global() for cross-sheet connections`)
+        }
+    if (new Set(locals.map((net) => net.sheetName)).size > 1) throw new Error('Cannot join local nets from different sheets')
+    if (sheets.size > 1 && !nets.some((net) => net.scope === 'global')) throw new Error(`Cross-sheet connection (${[...sheets].join(', ')}) requires global()`)
   }
 }
 
 /** Recheck the final graph, including any changes to component sheet assignments. */
 export function validateNetScopes(entries: readonly (readonly [string, Component<string>])[]) {
-  validateConnections(entries.flatMap(([, component]) => Object.values(component.p).map(pin => [pin])))
+  validateConnections(entries.flatMap(([, component]) => Object.values(componentPins(component)).map((pin) => [pin])))
 }
 
 export class KicadElement {
   readonly connections = new Set<KicadElement>()
 
-  connect(...others: KicadElement[]) {
+  wire(...targets: (KicadElement | string)[]) {
+    const owner = this instanceof Pin ? this.component.sheetName : this instanceof Net && this.scope === 'local' ? this.sheetName : activeSheet ?? 'Circuit'
+    const others = targets.map(target => typeof target === 'string' ? Net.localLabel(target, owner) : target)
     validateConnections([[this, ...others]])
     if (this instanceof Net) this.activate()
     if ([this, ...others].some((element) => element instanceof Pin && element.noConnect)) {
@@ -63,10 +72,20 @@ export class Net extends KicadElement {
 
   private static readonly named = new Map<string, Net>()
 
-  constructor(public readonly name?: string, readonly scope: 'local' | 'global' = 'local', readonly powerSymbol?: string, readonly sheetName = scope === 'local' ? activeSheet ?? 'Circuit' : undefined) {
+  constructor(
+    public readonly name?: string,
+    readonly scope: 'local' | 'global' = 'local',
+    readonly powerSymbol?: string,
+    readonly sheetName = scope === 'local' ? (activeSheet ?? 'Circuit') : undefined,
+  ) {
     super()
     // Power constants remain inert until used; importing a symbol must not change a circuit.
     if (!powerSymbol) this.activate()
+  }
+
+  /** Resolve a local-label string in its receiving component's sheet. */
+  static localLabel(name: string, sheetName: string | undefined) {
+    return Net.named.get(JSON.stringify(['local', sheetName, name])) ?? new Net(name, 'local', undefined, sheetName)
   }
 
   private registered = false
@@ -75,17 +94,16 @@ export class Net extends KicadElement {
     this.registered = true
     const key = JSON.stringify([this.scope, this.scope === 'local' ? this.sheetName : null, this.name])
     const existing = Net.named.get(key)
-    if (existing) this.connect(existing)
+    if (existing) this.wire(existing)
     else Net.named.set(key, this)
   }
-
 }
 
 /** An explicit global label, shared by every sheet in this circuit. */
 export const global = (name?: string) => new Net(name, 'global')
 
 /** A fresh unnamed net. Reuse it or reference a connected pin to join other pins. */
-export const local = (name?: string) => new Net(name, 'local')
+export const local = () => new Net(undefined, 'local')
 
 export class Pin<T extends string = string> extends KicadElement {
   [Symbol.for('nodejs.util.inspect.custom')]() {
@@ -102,8 +120,8 @@ export class Pin<T extends string = string> extends KicadElement {
     super()
   }
 
-  override connect(...others: KicadElement[]) {
-    super.connect(...others)
+  override wire(...others: (KicadElement | string)[]) {
+    super.wire(...others)
     return this
   }
 }
@@ -122,7 +140,7 @@ export type ComponentOptions = {
   properties?: Record<string, string | null>
 }
 
-type Connection = Net | Pin | (Net | Pin)[] | null
+type Connection = string | Net | Pin | (string | Net | Pin)[] | null
 
 export class Component<T extends string> {
   static pinMap: Record<string, string> = {}
@@ -130,14 +148,15 @@ export class Component<T extends string> {
   static withPins<const P extends readonly string[] | Record<string, string>>(definition: P) {
     type Name = P extends readonly string[] ? `P${P[number]}` : keyof P & string
     const pinMap = Array.isArray(definition) ? Object.fromEntries(definition.map((number) => [`P${number}`, number])) : definition
-    return class extends Component<Name> {
+    class PinnedComponent extends Component<Name> {
       static override pinMap = pinMap as Record<string, string>
     }
+    return PinnedComponent as unknown as { new (opts?: ComponentOptions): Component<Name> & Record<Name, Pin<Name>>; pinMap: Record<string, string> }
   }
 
   readonly pinTypes: Record<string, ElectricalPinType>
   ref?: string
-  readonly p: Record<T, Pin<T>>
+  readonly [pinsKey]: Record<T, Pin<T>>
   readonly attachments = new Map<string, Component<string>[]>()
   value: string
   readonly package?: string
@@ -162,11 +181,14 @@ export class Component<T extends string> {
     this.variant = opts.variant
     this.datasheet = opts.datasheet ?? ''
     this.properties = opts.properties ?? {}
-    this.p = {} as Record<T, Pin<T>>
+    this[pinsKey] = {} as Record<T, Pin<T>>
     const pinMap = (this.constructor as typeof Component).pinMap
     for (const name of Object.keys(this.pinTypes)) if (!Object.hasOwn(pinMap, name)) throw new Error('Unknown pin type override: ' + name)
     for (const name of Object.keys(pinMap) as T[]) {
-      this.p[name] = new Pin(this, pinMap[name], name)
+      if (name in this) throw new Error(`Pin name conflicts with component API: ${name}; use a generated pin alias`)
+      const pin = new Pin(this, pinMap[name], name)
+      this[pinsKey][name] = pin
+      Object.defineProperty(this, name, { value: pin, enumerable: true })
     }
     if (opts.footprint) this.setFootprint(opts.footprint)
   }
@@ -187,44 +209,42 @@ export class Component<T extends string> {
     }
   }
 
-  /** Wire every pin, using null for intentional no-connects. */
-  wire(connections: Record<T, Connection>): this {
-    const missing = (Object.keys(this.p) as T[]).filter((number) => !Object.hasOwn(connections, number) || connections[number] === undefined)
-    if (missing.length) {
-      throw new Error(`Missing pins for ${this.schema}: ${missing.join(', ')}`)
-    }
-    return this.partial(connections)
-  }
-
-  /** Wire a subset of pins, leaving the others available for later wiring. */
-  partial(connections: Partial<Record<T, Connection>>): this {
+  /** Wire any subset of pins. Finished-circuit validation warns about remaining unmapped pins. */
+  wire(connections: Partial<Record<T, Connection>>): this {
     // Validate the whole map before adding any connections.
     const joins: KicadElement[][] = []
+    const resolved = new Map<T, (Net | Pin)[]>()
     for (const number of Object.keys(connections) as T[]) {
-      if (!Object.hasOwn(this.p, number)) throw new Error(`Unknown pin: ${this.schema} pin ${number}`)
-      const pin = this.p[number], connection = connections[number]
+      if (!Object.hasOwn(this[pinsKey], number)) throw new Error(`Unknown pin: ${this.schema} pin ${number}`)
+      const pin = this[pinsKey][number],
+        connection = connections[number]
       if (connection === undefined) throw new Error(`Undefined connection: ${this.schema} pin ${number}`)
       if (connection === null) {
         if (pin.connections.size) throw new Error(`Pin already connected: ${this.schema} pin ${number}`)
       } else {
-        const targets = Array.isArray(connection) ? connection : [connection]
+        const targets = (Array.isArray(connection) ? connection : [connection]).map(target => typeof target === 'string' ? Net.localLabel(target, this.sheetName) : target)
+        resolved.set(number, targets)
         joins.push([pin, ...targets])
-        if (pin.noConnect || targets.some(target => target instanceof Pin && target.noConnect)) throw new Error('Cannot connect a no-connect pin')
+        if (pin.noConnect || targets.some((target) => target instanceof Pin && target.noConnect)) throw new Error('Cannot connect a no-connect pin')
       }
     }
-    const disconnected = new Set(Object.entries(connections).filter(([,value])=>value===null).map(([name])=>this.p[name as T]))
-    if(joins.some(group=>group.some(element=>element instanceof Pin && disconnected.has(element as Pin<T>))))throw new Error('Cannot connect a pin marked no-connect in the same map')
+    const disconnected = new Set(
+      Object.entries(connections)
+        .filter(([, value]) => value === null)
+        .map(([name]) => this[pinsKey][name as T]),
+    )
+    if (joins.some((group) => group.some((element) => element instanceof Pin && disconnected.has(element as Pin<T>)))) throw new Error('Cannot connect a pin marked no-connect in the same map')
     validateConnections(joins)
     for (const number of Object.keys(connections) as T[]) {
-      const pin = this.p[number]
+      const pin = this[pinsKey][number]
       if (!pin) throw new Error(`Unknown pin: ${this.schema} pin ${number}`)
       const connection = connections[number]
       if (connection === null) {
         if (pin.connections.size) throw new Error(`Pin already connected: ${this.schema} pin ${number}`)
         pin.noConnect = true
       } else if (connection !== undefined) {
-        const targets = Array.isArray(connection) ? connection : [connection]
-        pin.connect(...targets)
+        const targets = resolved.get(number)!
+        pin.wire(...targets)
         this.attach(number, targets)
       }
     }
@@ -242,14 +262,6 @@ export type PartAssignment = {
 
 export type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue }
 
-export type PcbOptions = {
-  thickness?: number
-  /** Copper layers plus optional user-layer overrides. Standard user layers are included. */
-  layers?: readonly (readonly [number, string, string, string?])[]
-  /** Partial native (setup ...) expression, merged with defaults. */
-  setup?: string
-}
-
 export type ProjectSettings = {
   entries: readonly Component<string>[]
   output?: string
@@ -258,19 +270,15 @@ export type ProjectSettings = {
   project?: string
   verify?: boolean
   pdf?: boolean
-  layout?: 'banks' | 'elk'
+  layout?: 'tscircuit' | 'banks' | 'elk'
   /** Native .kicad_pro overrides. Nested objects merge with builtin defaults; arrays replace. */
   settings?: { [key: string]: JsonValue }
-  /** Native .kicad_dru text, including its (version 1) header. */
-  designRules?: string
-  pcbOptions?: PcbOptions
 }
 
 /** A circuit graph and its export settings. Paths are relative to its entry file. */
 export class Project {
   constructor(readonly options: ProjectSettings) {
-    if (options.entries.some(part => !(part instanceof Component))) throw new Error('Project entries must be an array of components')
-    if (options.pcbOptions && Object.keys(options.pcbOptions).some(key => !['thickness','layers','setup'].includes(key))) throw new Error('Unknown PCB option')
+    if (options.entries.some((part) => !(part instanceof Component))) throw new Error('Project entries must be an array of components')
   }
 }
 
@@ -291,8 +299,8 @@ export function applyBom(components: readonly Component<string>[], bom: Bom) {
       (packageName === undefined || component.package === packageName) &&
       (variant === undefined || component.variant === variant) &&
       (value === undefined || (typeof value === 'string' ? component.value === value : value.includes(component.value)))
-    const general = bom.find(row => row.ref === undefined && matches(row))
-    const specific = bom.find(row => row.ref !== undefined && matches(row))
+    const general = bom.find((row) => row.ref === undefined && matches(row))
+    const specific = bom.find((row) => row.ref !== undefined && matches(row))
     if (!general && !specific) continue
     const part = { ...general, ...specific, properties: { ...general?.properties, ...specific?.properties } }
     if (part.footprint !== undefined) component.setFootprint(part.footprint)
@@ -311,7 +319,9 @@ export function validateBom(entries: readonly (readonly [string, Component<strin
       footprint: component.footprint,
       manufacturer: component.properties['Manufacturer'],
       partNumber: component.properties['MFR.Part #'],
-    }).filter(([, value]) => !value?.trim()).map(([field]) => field)
+    })
+      .filter(([, value]) => !value?.trim())
+      .map(([field]) => field)
     if (missing.length) warnings.push((component.ref ?? name) + ' (' + (component.value || component.schema) + '): ' + missing.join(', '))
   }
   if (warnings.length) console.warn('Warning: missing BOM details:\n' + warnings.join('\n'))
@@ -338,7 +348,7 @@ export function namedComponents(sections: Record<string, Record<string, Componen
 /** Validate the finished circuit, after all modules have added their connections. */
 export function validatePins(entries: readonly (readonly [string, Component<string>])[]) {
   const unmapped = entries.flatMap(([name, component]) =>
-    Object.values(component.p)
+    Object.values(componentPins(component))
       .filter((pin) => !pin.noConnect && pin.connections.size === 0)
       .map((pin) => `${name}${pinAccess(pin.name)} (physical pin ${pin.number})`),
   )
@@ -358,14 +368,14 @@ export function circuitComponents(...entrypoints: Component<string>[]) {
   const entryParts = new Set(entrypoints)
   const seen = new Set<KicadElement>()
   const parts = new Set<Component<string>>(entrypoints)
-  const stack: KicadElement[] = entrypoints.flatMap(root => Object.values(root.p))
+  const stack: KicadElement[] = entrypoints.flatMap((root) => Object.values(componentPins(root)))
   while (stack.length) {
     const element = stack.pop()!
     if (seen.has(element)) continue
     seen.add(element)
     if (element instanceof Pin && !parts.has(element.component)) {
       parts.add(element.component)
-      stack.push(...Object.values(element.component.p))
+      stack.push(...Object.values(componentPins(element.component)))
     }
     stack.push(...element.connections)
   }
@@ -374,9 +384,7 @@ export function circuitComponents(...entrypoints: Component<string>[]) {
   for (const part of parts) {
     for (const attached of part.attachments.values()) {
       for (const other of attached) {
-        if (!entryParts.has(other) && !other.declarationName &&
-            isPassiveSymbol(other.schema) &&
-            other.sheetName === part.sheetName) inline.add(other)
+        if (!entryParts.has(other) && !other.declarationName && isPassiveSymbol(other.schema) && other.sheetName === part.sheetName) inline.add(other)
       }
     }
   }
@@ -407,7 +415,7 @@ export function validateLabels(entries: readonly (readonly [string, Component<st
   const visited = new Set<KicadElement>()
   const warnings: string[] = []
   for (const [, part] of entries) {
-    for (const start of Object.values(part.p)) {
+    for (const start of Object.values(componentPins(part))) {
       if (visited.has(start)) continue
       const stack: KicadElement[] = [start]
       const labels = new Set<string>()
@@ -421,7 +429,7 @@ export function validateLabels(entries: readonly (readonly [string, Component<st
         stack.push(...element.connections)
       }
       if (pins.size >= 2) continue
-      const endpoints = [...pins].map(pin => `${names.get(pin.component)}${pinAccess(pin.name)}`).join(', ')
+      const endpoints = [...pins].map((pin) => `${names.get(pin.component)}${pinAccess(pin.name)}`).join(', ')
       for (const label of labels) warnings.push(`${JSON.stringify(label)} (${pins.size} pin: ${endpoints})`)
     }
   }
@@ -430,17 +438,19 @@ export function validateLabels(entries: readonly (readonly [string, Component<st
 
 export const isPassiveSymbol = (schema: string) => ['Device:C', 'Device:R', 'Device:C_Small', 'Device:R_Small'].includes(schema)
 export const isCapacitorSymbol = (schema: string) => ['Device:C', 'Device:C_Small'].includes(schema)
-export const standardSymbol = (schema: string) => schema === 'Device:C_Small' ? 'Device:C' : schema === 'Device:R_Small' ? 'Device:R' : schema
+export const standardSymbol = (schema: string) => (schema === 'Device:C_Small' ? 'Device:C' : schema === 'Device:R_Small' ? 'Device:R' : schema)
 
 /** Reserve explicit references first, then number remaining parts without collisions. */
 export function assignReferences(entries: readonly (readonly [string, { ref?: string; referencePrefix: string }])[]) {
-  const refs = new Map<string, string>(), reserved = new Set<string>()
+  const refs = new Map<string, string>(),
+    reserved = new Set<string>()
   for (const [name, part] of entries) {
     if (part.ref === undefined) continue
     if (!part.ref.trim() || /[\s?]/.test(part.ref)) throw new Error('Invalid reference: ' + JSON.stringify(part.ref))
     const key = part.ref.toUpperCase()
     if (reserved.has(key)) throw new Error('Duplicate reference: ' + part.ref)
-    reserved.add(key); refs.set(name, part.ref)
+    reserved.add(key)
+    refs.set(name, part.ref)
   }
   const counters = new Map<string, number>()
   for (const [name, part] of [...entries].sort(([a], [b]) => a.localeCompare(b))) {
@@ -449,7 +459,8 @@ export function assignReferences(entries: readonly (readonly [string, { ref?: st
     let number = counters.get(prefix) ?? 0
     while (reserved.has((prefix + ++number).toUpperCase())) {}
     counters.set(prefix, number)
-    refs.set(name, prefix + number); reserved.add((prefix + number).toUpperCase())
+    refs.set(name, prefix + number)
+    reserved.add((prefix + number).toUpperCase())
   }
   return refs
 }

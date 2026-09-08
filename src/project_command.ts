@@ -36,8 +36,8 @@ export async function runProject(mode:'init'|'sync', args:string[]) {
   syncParts(directory)
   if(librariesOnly)return
   const {entries,output,config}=await resolveExportInputs([input])
-  const artifacts=['.kicad_pro','.kicad_sch','.kicad_pcb'].map(ext=>output.replace(/\.kicad_sch$/,ext))
-  if(mode==='init'&&artifacts.some(existsSync))throw new Error('KiCad project already exists. Use ts-kicad sync to update it while preserving PCB placement and routing.')
+  const artifacts=['.kicad_pro','.kicad_sch'].map(ext=>output.replace(/\.kicad_sch$/,ext))
+  if(mode==='init'&&artifacts.some(existsSync))throw new Error('KiCad project already exists. Use ts-kicad sync to update it.')
   if(mode==='sync'&&!existsSync(artifacts[0]))throw new Error('KiCad project is not initialized. Run ts-kicad init first.')
   await exportSchematic(entries,output,[...config.symbols??[]],{
     ...config,footprints:config.footprints&&[...config.footprints],

@@ -4,18 +4,18 @@ import { Component, applyBom, validateBom, namedComponents, validatePins, Net, s
 
 class Pair extends Component.withPins(['1', '2']) {}
 
-test('partial maps a subset and rejects invalid maps before mutating pins', () => {
+test('wire maps a subset and rejects invalid maps before mutating pins', () => {
   const part = new Pair()
-  expect(part.partial({ P1: local('partial-supply') })).toBe(part)
-  expect(part.p.P2.connections.size).toBe(0)
-  expect(part.partial({ P2: null })).toBe(part)
+  expect(part.wire({ P1: new Net('partial-supply') })).toBe(part)
+  expect(part.P2.connections.size).toBe(0)
+  expect(part.wire({ P2: null })).toBe(part)
   const fresh = new Pair()
   // @ts-expect-error Unknown pins must fail type checking too.
-  expect(() => fresh.partial({ P1: local('partial-invalid'), P3: null })).toThrow('Unknown pin')
-  expect(fresh.p.P1.connections.size).toBe(0)
-  expect(() => fresh.partial({ P1: local('partial-invalid'), P2: part.p.P2 })).toThrow('no-connect')
-  expect(fresh.p.P1.connections.size).toBe(0)
-  expect(() => fresh.partial({ P1: undefined })).toThrow('Undefined connection')
+  expect(() => fresh.wire({ P1: new Net('partial-invalid'), P3: null })).toThrow('Unknown pin')
+  expect(fresh.P1.connections.size).toBe(0)
+  expect(() => fresh.wire({ P1: new Net('partial-invalid'), P2: part.P2 })).toThrow('no-connect')
+  expect(fresh.P1.connections.size).toBe(0)
+  expect(() => fresh.wire({ P1: undefined })).toThrow('Undefined connection')
 })
 
 const reachable=(pin:import('./index').KicadElement)=>{
@@ -31,20 +31,28 @@ function markSources(file: string, parts: Record<string, Component<string>>) {
   }
 }
 
-test('wire requires every pin and refuses connections to explicit no-connects', () => {
-  const part = new Pair()
-  // @ts-expect-error A missing physical pin must also fail type checking.
-  expect(() => part.wire({ P1: local('test-supply') })).toThrow('Missing pins')
-  expect(part.p.P1.connections.size).toBe(0)
-  part.wire({ P1: local('test-supply'), P2: null })
-  expect(() => part.p.P2.connect(local('test-ground'))).toThrow('no-connect')
-  expect(part.p.P1.connect(local('test-supply'))).toBe(part.p.P1)
+test('wire allows incremental maps and final validation warns about missing pins', () => {
+  const warn = spyOn(console, 'warn').mockImplementation(() => {})
+  try {
+    const part = new Pair().wire({ P1: new Net('test-supply') })
+    expect(warn).not.toHaveBeenCalled()
+    validatePins([['PART', part]])
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('PART.P2 (physical pin 2)'))
+    warn.mockClear()
+    expect(part.wire({ P2: null })).toBe(part)
+    validatePins([['PART', part]])
+    expect(warn).not.toHaveBeenCalled()
+    expect(() => part.P2.wire(new Net('test-ground'))).toThrow('no-connect')
+    expect(part.P1.wire(new Net('test-supply'))).toBe(part.P1)
+  } finally {
+    warn.mockRestore()
+  }
 })
 
 test('inline collection preserves ownership when roots reference each other', () => {
-  const passive = new Pair().partial({ P2: local('test-return') })
-  const peripheral = new Pair().wire({ P1: local('test-data'), P2: null })
-  const controller = new Pair().wire({ P1: [peripheral.p.P1, passive.p.P1], P2: null })
+  const passive = new Pair().wire({ P2: new Net('test-return') })
+  const peripheral = new Pair().wire({ P1: new Net('test-data'), P2: null })
+  const controller = new Pair().wire({ P1: [peripheral.P1, passive.P1], P2: null })
   expect(namedComponents({ control: { controller }, sensor: { peripheral } }).map(([name]) => name))
     .toEqual(['controller', 'controller.P1.0', 'peripheral'])
 })
@@ -54,12 +62,12 @@ test('final validation warns about incomplete inline wiring without blocking', (
   const warn = spyOn(console, 'warn').mockImplementation(() => {})
   try {
     const passive = new Pair()
-    const root = new Pair().wire({ P1: passive.p.P1, P2: null })
+    const root = new Pair().wire({ P1: passive.P1, P2: null })
     const entries = namedComponents({ circuit: { ROOT: root } })
     expect(() => validatePins(entries)).not.toThrow()
-    expect(warn).toHaveBeenCalledWith(expect.stringContaining('ROOT.P1.0.p.P2 (physical pin 2)'))
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('ROOT.P1.0.P2 (physical pin 2)'))
     warn.mockClear()
-    passive.p.P2.connect(local('test-final-ground'))
+    passive.P2.wire(new Net('test-final-ground'))
     validatePins(entries)
     expect(warn).not.toHaveBeenCalled()
   } finally {
@@ -72,10 +80,10 @@ test('an empty connection list warns; explicit null is valid', () => {
   try {
     const root = new Pair().wire({ P1: [], P2: null })
     validatePins([['ROOT', root]])
-    expect(warn).toHaveBeenCalledWith(expect.stringContaining('ROOT.p.P1'))
-    expect(warn.mock.calls[0]?.[0]).not.toContain('ROOT.p.P2')
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('ROOT.P1'))
+    expect(warn.mock.calls[0]?.[0]).not.toContain('ROOT.P2')
     warn.mockClear()
-    root.partial({ P1: local('test-final-supply') })
+    root.wire({ P1: new Net('test-final-supply') })
     validatePins([['ROOT', root]])
     expect(warn).not.toHaveBeenCalled()
   } finally {
@@ -85,9 +93,9 @@ test('an empty connection list warns; explicit null is valid', () => {
 
 test('graph discovery excludes disconnected declarations and includes inline parts', () => {
   sheet('GRAPH')
-  const inline = new Pair().partial({ P2: local('graph-private-test') })
+  const inline = new Pair().wire({ P2: new Net('graph-private-test') })
   inline.schema = 'Device:C'
-  const root = new Pair().wire({ P1: inline.p.P1, P2: null })
+  const root = new Pair().wire({ P1: inline.P1, P2: null })
   const disconnected = new Pair().wire({ P1: null, P2: null })
   markSources('GRAPH', { MCU: root, UNUSED: disconnected })
   const entries = circuitComponents(root)
@@ -98,7 +106,7 @@ test('graph discovery excludes disconnected declarations and includes inline par
 test('sheet sets context for subsequent components until overridden', () => {
   sheet('USER INTERFACE')
   const inline = new Pair()
-  const first = new Pair().wire({ P1: inline.p.P1, P2: null })
+  const first = new Pair().wire({ P1: inline.P1, P2: null })
   sheet('MCU')
   const second = new Pair()
   expect(first.sheetName).toBe('USER INTERFACE')
@@ -110,10 +118,10 @@ test('sheet sets context for subsequent components until overridden', () => {
 test('one-pin labels warn once even when repeated on that pin', () => {
   const warn = spyOn(console, 'warn').mockImplementation(() => {})
   try {
-    const part = new Pair().wire({ P1: [local('label-single-test'), new Net('label-single-test')], P2: null })
+    const part = new Pair().wire({ P1: [new Net('label-single-test'), new Net('label-single-test')], P2: null })
     expect(() => validateLabels([['PART', part]])).not.toThrow()
     expect(warn).toHaveBeenCalledTimes(1)
-    expect(warn).toHaveBeenCalledWith(expect.stringContaining('"label-single-test" (1 pin: PART.p.P1)'))
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('"label-single-test" (1 pin: PART.P1)'))
   } finally { warn.mockRestore() }
 })
 
@@ -121,8 +129,8 @@ test('a label used once in code is valid when a direct pin reference connects it
   const warn = spyOn(console, 'warn').mockImplementation(() => {})
   try {
     sheet('LABEL TEST')
-    const source = new Pair().wire({ P1: local('label-direct-test'), P2: null })
-    const consumer = new Pair().wire({ P1: source.p.P1, P2: null })
+    const source = new Pair().wire({ P1: new Net('label-direct-test'), P2: null })
+    const consumer = new Pair().wire({ P1: source.P1, P2: null })
     validateLabels([['SOURCE', source], ['CONSUMER', consumer]])
     expect(warn).not.toHaveBeenCalled()
   } finally { warn.mockRestore() }
@@ -131,7 +139,7 @@ test('a label used once in code is valid when a direct pin reference connects it
 test('labels count distinct pins on the same component; anonymous nets are ignored', () => {
   const warn = spyOn(console, 'warn').mockImplementation(() => {})
   try {
-    const part = new Pair().wire({ P1: local('label-two-pins-test'), P2: local('label-two-pins-test') })
+    const part = new Pair().wire({ P1: new Net('label-two-pins-test'), P2: new Net('label-two-pins-test') })
     const anonymous = new Pair().wire({ P1: new Net(), P2: null })
     validateLabels([['PART', part], ['ANONYMOUS', anonymous]])
     expect(warn).not.toHaveBeenCalled()
@@ -141,8 +149,8 @@ test('labels count distinct pins on the same component; anonymous nets are ignor
 test('label validation does not count other nets through a component', () => {
   const warn = spyOn(console, 'warn').mockImplementation(() => {})
   try {
-    const resistor = new Pair().wire({ P1: local('label-unused-side'), P2: local('label-connected-side') })
-    const consumer = new Pair().wire({ P1: resistor.p.P2, P2: null })
+    const resistor = new Pair().wire({ P1: new Net('label-unused-side'), P2: new Net('label-connected-side') })
+    const consumer = new Pair().wire({ P1: resistor.P2, P2: null })
     validateLabels([['RESISTOR', resistor], ['CONSUMER', consumer]])
     expect(warn).toHaveBeenCalledWith(expect.stringContaining('label-unused-side'))
     expect(warn.mock.calls[0]?.[0]).not.toContain('label-connected-side')
@@ -214,18 +222,18 @@ test('multiple roots collect disconnected circuits and deduplicate shared compon
   const entries=circuitComponents(a,b,a)
   expect(new Set(entries.map(([,part])=>part))).toEqual(new Set([a,b]))
   expect(new Set(entries.map(([name])=>name)).size).toBe(2)
-  const c=new Pair(),d=new Pair();c.partial({ P1: d.p.P1 })
+  const c=new Pair(),d=new Pair();c.wire({ P1: d.P1 })
   expect(circuitComponents(c,d)).toHaveLength(2)
 })
 
 test('local labels belong to their declaration sheet; global labels cross sheets',async()=>{
   const {global}=await import('./index')
-  sheet('LOCAL_A');const a=new Pair().wire({P1:local('SAME_LOCAL'),P2:global('SHARED_LABEL_TEST')})
-  sheet('LOCAL_B');const b=new Pair().wire({P1:local('SAME_LOCAL'),P2:global('SHARED_LABEL_TEST')})
+  sheet('LOCAL_A');const a=new Pair().wire({P1:new Net('SAME_LOCAL'),P2:global('SHARED_LABEL_TEST')})
+  sheet('LOCAL_B');const b=new Pair().wire({P1:new Net('SAME_LOCAL'),P2:global('SHARED_LABEL_TEST')})
 
-  expect(reachable(a.p.P1).has(b.p.P1)).toBe(false)
-  expect(reachable(a.p.P2).has(b.p.P2)).toBe(true)
-  expect(() => a.p.P1.connect(local('LATE_LOCAL'))).toThrow('Local net')
+  expect(reachable(a.P1).has(b.P1)).toBe(false)
+  expect(reachable(a.P2).has(b.P2)).toBe(true)
+  expect(() => a.P1.wire(new Net('LATE_LOCAL'))).toThrow('Local net')
 })
 
 test('importing an unused power symbol does not turn a global label into power',async()=>{
@@ -233,9 +241,9 @@ test('importing an unused power symbol does not turn a global label into power',
   const unused=power('UNUSED_POWER_TEST')
   const label=global('UNUSED_POWER_TEST')
   expect(label.connections.has(unused)).toBe(false)
-  const part=new Pair().partial({ P1: unused })
+  const part=new Pair().wire({ P1: unused })
   expect(unused.connections.has(label)).toBe(true)
-  expect(part.p.P1.connections.has(unused)).toBe(true)
+  expect(part.P1.connections.has(unused)).toBe(true)
 })
 
 test('local creates independent unnamed nets and supports direct pin references', async () => {
@@ -244,11 +252,11 @@ test('local creates independent unnamed nets and supports direct pin references'
   expect(first).not.toBe(second)
   expect(first.name).toBeUndefined()
   const a = new Pair().wire({ P1: first, P2: second })
-  const b = new Pair().wire({ P1: a.p.P1, P2: first })
-  expect(reachable(a.p.P1).has(b.p.P1)).toBe(true)
-  expect(reachable(a.p.P1).has(b.p.P2)).toBe(true)
-  expect(reachable(a.p.P1).has(a.p.P2)).toBe(false)
-  expect(a.p.P1.noConnect).toBe(false)
+  const b = new Pair().wire({ P1: a.P1, P2: first })
+  expect(reachable(a.P1).has(b.P1)).toBe(true)
+  expect(reachable(a.P1).has(b.P2)).toBe(true)
+  expect(reachable(a.P1).has(a.P2)).toBe(false)
+  expect(a.P1.noConnect).toBe(false)
 })
 
 test('local scope rejects direct, indirect and late cross-sheet joins without mutation', async () => {
@@ -257,13 +265,13 @@ test('local scope rejects direct, indirect and late cross-sheet joins without mu
   const signal = local(), a = new Pair().wire({P1:signal,P2:global()})
   sheet('STRICT_B')
   const b = new Pair()
-  expect(() => b.partial({P1:global(),P2:a.p.P1})).toThrow('Local net')
-  expect(b.p.P1.connections.size).toBe(0)
-  expect(b.p.P2.connections.size).toBe(0)
-  expect(() => signal.connect(b.p.P1)).toThrow('Local net')
-  expect(() => b.p.P1.connect(a.p.P1,global())).toThrow('Local net')
-  b.partial({P1:a.p.P2})
-  expect(() => a.p.P2.connect(local())).toThrow('Local net')
+  expect(() => b.wire({P1:global(),P2:a.P1})).toThrow('Local net')
+  expect(b.P1.connections.size).toBe(0)
+  expect(b.P2.connections.size).toBe(0)
+  expect(() => signal.wire(b.P1)).toThrow('Local net')
+  expect(() => b.P1.wire(a.P1,global())).toThrow('Local net')
+  b.wire({P1:a.P2})
+  expect(() => a.P2.wire(local())).toThrow('Local net')
   a.sheetName='MOVED_A'
   expect(() => validateNetScopes([['a',a]])).toThrow('Local net')
 })
@@ -273,30 +281,58 @@ test('unnamed global nets cross sheets through pins but remain independent', asy
   sheet('UNNAMED_A')
   const a=new Pair().wire({P1:global(),P2:global()})
   sheet('UNNAMED_B')
-  const b=new Pair().wire({P1:a.p.P1,P2:a.p.P2})
-  expect(reachable(b.p.P1).has(a.p.P1)).toBe(true)
-  expect(reachable(b.p.P1).has(b.p.P2)).toBe(false)
+  const b=new Pair().wire({P1:a.P1,P2:a.P2})
+  expect(reachable(b.P1).has(a.P1)).toBe(true)
+  expect(reachable(b.P1).has(b.P2)).toBe(false)
   const c=new Pair()
   sheet('UNNAMED_C')
-  expect(() => new Pair().partial({P1:c.p.P1})).toThrow('requires global()')
+  expect(() => new Pair().wire({P1:c.P1})).toThrow('requires global()')
 })
 
-test('bare strings are rejected by component and pin APIs', () => {
-  const part=new Pair()
-  // @ts-expect-error Connections no longer accept strings.
-  expect(() => part.partial({P1:'GND'})).toThrow('strings are not supported')
-  // @ts-expect-error Connections no longer accept strings.
-  expect(() => part.p.P1.connect('GND')).toThrow('strings are not supported')
-  expect(part.p.P1.connections.size).toBe(0)
+test('pin.wire joins string labels within the receiving sheet, including later calls', () => {
+  sheet('STRING_A')
+  const first = new Pair().wire({P1: 'SIGNAL', P2: null})
+  const second = new Pair().wire({P1: ['SIGNAL', new Net('SIGNAL')], P2: null})
+  sheet('STRING_B')
+  const other = new Pair().wire({P1: 'SIGNAL', P2: null})
+  expect(reachable(first.P1).has(second.P1)).toBe(true)
+  expect(reachable(first.P1).has(other.P1)).toBe(false)
+  expect(first.P1.wire('LATE_SIGNAL')).toBe(first.P1)
+  expect(() => other.P1.wire(first.P1)).toThrow('Local net')
+  expect([...first.P1.connections].some(n => n instanceof Net && n.name === 'LATE_SIGNAL' && n.sheetName === 'STRING_A')).toBe(true)
 })
 
-test('partial cannot connect a pin marked no-connect in the same map, in either order', () => {
+test('invalid string wiring does not partially connect pins', () => {
+  sheet('STRING_ATOMIC')
+  const existing = new Pair().wire({P1: 'EXISTING'})
+  const next = new Pair().wire({P2: null})
+  expect(() => next.wire({P1: 'EXISTING', P2: 'INVALID'})).toThrow('no-connect')
+  expect(next.P1.connections.size).toBe(0)
+  expect(reachable(existing.P1).has(next.P1)).toBe(false)
+  expect(() => next.P2.wire('EXISTING')).toThrow('no-connect')
+})
+
+test('wire cannot connect a pin marked no-connect in the same map, in either order', () => {
   for (const reverse of [false, true]) {
     const part = new Pair()
-    const mapping = reverse ? { P2: part.p.P1, P1: null } : { P1: null, P2: part.p.P1 }
-    expect(() => part.partial(mapping)).toThrow('no-connect')
-    expect(part.p.P1.noConnect).toBe(false)
-    expect(part.p.P1.connections.size).toBe(0)
-    expect(part.p.P2.connections.size).toBe(0)
+    const mapping = reverse ? { P2: part.P1, P1: null } : { P1: null, P2: part.P1 }
+    expect(() => part.wire(mapping)).toThrow('no-connect')
+    expect(part.P1.noConnect).toBe(false)
+    expect(part.P1.connections.size).toBe(0)
+    expect(part.P2.connections.size).toBe(0)
   }
+})
+
+test('pins are direct typed properties and cannot overwrite component behavior', () => {
+  class Sensor extends Component.withPins({ SDA: '14', SCL: '13' }) {}
+  const sensor = new Sensor()
+  expect(sensor.SDA.number).toBe('14')
+  expect(sensor.SDA.wire(local())).toBe(sensor.SDA)
+  expect('connect' in sensor.SDA).toBe(false)
+  expect(sensor.wire({ SCL: null })).toBe(sensor)
+  expect('p' in sensor).toBe(false)
+  // @ts-expect-error Unknown direct pins are not accepted.
+  expect(sensor.NOT_A_PIN).toBeUndefined()
+  class Invalid extends Component.withPins({ wire: '1' }) {}
+  expect(() => new Invalid()).toThrow('Pin name conflicts')
 })

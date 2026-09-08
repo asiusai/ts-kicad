@@ -14,3 +14,10 @@ Upstream sources:
 Runtime dependency licenses are provided by their respective packages. No project
 schematics, boards or manufacturing data are required by the builtin generators.
 Example downloads must retain their own provenance and licensing information.
+
+The schematic wire router uses tscircuit's MIT-licensed
+`@tscircuit/schematic-trace-solver` (pinned to 0.0.188), with its runtime helper
+packages declared explicitly because its published manifest does not list them.
+The solver's license is retained in its installed package. The four-sided
+placement adapter is an independent implementation inspired by the central-pin
+ordering strategy in tscircuit/schematic-autolayout. See [LAYOUT.md](LAYOUT.md).

@@ -83,3 +83,18 @@ test('sync removes saved board placement from reusable footprint geometry', () =
     expect(child(tree,'version')).not.toHaveLength(0)
   } finally {rmSync(project,{recursive:true,force:true})}
 })
+
+test('a reference circuit imports across projects without copying its native assets', () => {
+  const {project,write}=fixture()
+  try {
+    syncParts(project)
+    write('lib/Package/reference-1.ts', `import {Sensor} from './symbols'; import {Case} from './footprints'; import {global, sheet} from 'ts-kicad'; sheet('Sensor'); export const SENSOR = new Sensor({footprint:Case}).wire({P1:global()});`)
+    write('consumer/src/index.ts', `import {SENSOR} from '../../lib/Package/reference-1'; import {Component, sheet} from 'ts-kicad'; sheet('Consumer'); const MCU = new (Component.withPins(['1'] as const))().wire({P1:SENSOR.P1}); export default MCU;`)
+    const parts=inspect(join(project,'consumer/src/index.ts'))
+    const sensor=parts.find(p=>p.schema==='Sensor:Sensor')!
+    expect(sensor.symbolSource).toBe(join(project,'lib/Package/Sensor.kicad_sym'))
+    expect(sensor.footprintSource).toBe(join(project,'lib/Package/Case.kicad_mod'))
+    expect(parts).toHaveLength(2)
+    expect(existsSync(join(project,'consumer/lib'))).toBe(false)
+  } finally {rmSync(project,{recursive:true,force:true})}
+})
