@@ -34,6 +34,9 @@ test.skipIf(!available)('init scaffolds an empty project; sync updates the schem
     const schematic = readFileSync(join(directory, name + '--Circuit.kicad_sch'), 'utf8')
     expect(schematic).toContain('R1')
     expect(schematic).toContain('R2')
+    const libraries = readFileSync(join(directory, 'sym-lib-table'), 'utf8')
+    expect(libraries).toContain('${KICAD10_SYMBOL_DIR}/Device.kicad_sym')
+    expect(libraries).not.toContain('/usr/share/')
     await command('sync')
     expect(readFileSync(board, 'utf8')).toBe('user-owned PCB sentinel')
   } finally {

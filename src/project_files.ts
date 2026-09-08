@@ -52,7 +52,11 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
     const builtin=join(symbolDirectory(),library+'.kicad_sym')
     const source=members.length?(sources.size===1?[...sources][0]:undefined):(existsSync(builtin)?builtin:undefined)
     if(!source)write(join(directory,library+'.kicad_sym'), N('kicad_symbol_lib',N('version',A(20251024)),N('generator','ts_kicad'),...definitions))
-    symbols.push(N('lib',N('name',library),N('type','KiCad'),N('uri',source?'${KIPRJMOD}/'+relative(directory,source):'${KIPRJMOD}/'+library+'.kicad_sym'),N('options',''),N('descr','Generated project symbols')))
+    // KiCad 10 is required by sync. Stock symbols must resolve on the recipient's
+    // installation, not through a checkout-depth-dependent path to our /usr.
+    const uri = source === builtin ? '${KICAD10_SYMBOL_DIR}/'+library+'.kicad_sym'
+      : source ? '${KIPRJMOD}/'+relative(directory,source) : '${KIPRJMOD}/'+library+'.kicad_sym'
+    symbols.push(N('lib',N('name',library),N('type','KiCad'),N('uri',uri),N('options',''),N('descr','Generated project symbols')))
   }
   writeLibraryTable(join(directory,'sym-lib-table'), symbols)
   const footprintPaths = new Map<string,string>()
