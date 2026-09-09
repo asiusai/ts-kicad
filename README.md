@@ -202,7 +202,15 @@ entry module; explicit CLI paths are relative to the working directory.
 
 Export checks native ERC; `verify` also compares exported physical pin connections
 against the TypeScript graph. Missing pin mappings and BOM assignments warn.
-PCB creation, placement, routing, DRC and fabrication exports belong in KiCad.
+PCB creation, placement, routing and DRC belong in KiCad.
+
+Run `ts-kicad outputs path/to/project` to regenerate `BOM.csv`, the schematic PDF,
+`pos.csv`, STEP/STL models, and the Gerber ZIP in `generated/`. Loose fabrication
+files live in `generated/gerbers/`. ERC, DRC, population and schematic parity
+checks run before fabrication exports; DRC reports are temporary and failures
+are printed. Use `--docs-only` for BOM/PDF or `--output directory` to choose the
+output directory. Staging keeps failed exports from replacing fabrication files.
+
 The CLI does not read or modify existing PCB files.
 
 Pins are direct properties: `MCU.wire({ SCL: IMU.SCL, SDA: IMU.SDA })`.

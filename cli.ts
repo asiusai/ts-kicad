@@ -7,7 +7,7 @@ import { createRequire } from 'node:module'
 
 // Run with the project's own DSL package so global and local installs never mix class identities.
 const [requestedCommand, ...requestedArgs] = process.argv.slice(2)
-if (['init', 'sync', 'export', 'inspect'].includes(requestedCommand)) {
+if (['init', 'sync', 'export', 'inspect', 'outputs'].includes(requestedCommand)) {
   const first = requestedArgs[0]
   const location = first && !first.startsWith('-') ? resolve(first) : process.cwd()
   const directory = existsSync(location) && statSync(location).isDirectory() ? location : dirname(location)
@@ -44,6 +44,11 @@ const commands = {
     usage: '[KiCad-symbol-directory]',
     description: 'Regenerate all builtin TypeScript components from installed KiCad libraries.',
     load: () => import('./src/generate_components'),
+  },
+  outputs: {
+    usage: 'project-directory|board.kicad_sch|board.kicad_pcb [--output directory] [--docs-only]',
+    description: 'Export BOM, PDF, checked fabrication files, positions and mechanical models.',
+    load: () => import('./src/export_outputs'),
   },
   export: {
     usage: 'project-directory OR entry.ts [other.ts ...] output.kicad_sch [--symbols library.kicad_sym] [--footprints library.pretty] [--project source.kicad_pro] [--verify] [--pdf]',
