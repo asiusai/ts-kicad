@@ -168,7 +168,6 @@ export class Component<T extends string> {
   symbolSource?: string
   footprint = ''
   footprintSource?: string
-  footprintProjectDirectory?: string
   referencePrefix = ''
   datasheet: string
   readonly properties: Record<string, string | null>
@@ -197,7 +196,6 @@ export class Component<T extends string> {
     if (typeof footprint !== 'string') validateFootprintPads(this.ref ?? this.constructor.name, Object.values((this.constructor as typeof Component).pinMap), footprint.pads)
     this.footprint = typeof footprint === 'string' ? footprint : footprint.id
     this.footprintSource = typeof footprint === 'string' ? undefined : footprint.file
-    this.footprintProjectDirectory = typeof footprint === 'string' ? undefined : footprint.projectDirectory
   }
 
   private attach(pin: string, targets: readonly (Net | Pin)[]) {
@@ -437,7 +435,6 @@ export function validateLabels(entries: readonly (readonly [string, Component<st
 
 export const isPassiveSymbol = (schema: string) => ['Device:C', 'Device:R', 'Device:C_Small', 'Device:R_Small'].includes(schema)
 export const isCapacitorSymbol = (schema: string) => ['Device:C', 'Device:C_Small'].includes(schema)
-export const standardSymbol = (schema: string) => (schema === 'Device:C_Small' ? 'Device:C' : schema === 'Device:R_Small' ? 'Device:R' : schema)
 
 /** Reserve explicit references first, then number remaining parts without collisions. */
 export function assignReferences(entries: readonly (readonly [string, { ref?: string; referencePrefix: string }])[]) {

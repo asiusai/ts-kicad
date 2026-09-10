@@ -180,37 +180,37 @@
         (stroke (width 0) (type default))
         (fill (type none))
       )
-      (pin unspecified line
+      (pin passive line
         (at -7.62 -12.70 90)
         (length 5.08)
         (name "A1" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
       )
-      (pin unspecified line
+      (pin passive line
         (at -2.54 -12.70 90)
         (length 5.08)
         (name "C1" (effects (font (size 1.27 1.27))))
         (number "2" (effects (font (size 1.27 1.27))))
       )
-      (pin unspecified line
+      (pin passive line
         (at 7.62 -12.70 90)
         (length 5.08)
         (name "AC2" (effects (font (size 1.27 1.27))))
         (number "3" (effects (font (size 1.27 1.27))))
       )
-      (pin unspecified line
+      (pin passive line
         (at 7.62 12.70 270)
         (length 5.08)
         (name "A2" (effects (font (size 1.27 1.27))))
         (number "4" (effects (font (size 1.27 1.27))))
       )
-      (pin unspecified line
+      (pin passive line
         (at 2.54 12.70 270)
         (length 5.08)
         (name "C2" (effects (font (size 1.27 1.27))))
         (number "5" (effects (font (size 1.27 1.27))))
       )
-      (pin unspecified line
+      (pin passive line
         (at -7.62 12.70 270)
         (length 5.08)
         (name "AC1" (effects (font (size 1.27 1.27))))

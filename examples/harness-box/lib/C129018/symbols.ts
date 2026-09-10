@@ -39,7 +39,7 @@ export class TYPE_C_31_M_04 extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C129018.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { GND_B1: "unspecified", SSTXp2: "unspecified", SSTXn2: "unspecified", VBUS_B4: "unspecified", CC2: "unspecified", DP2: "unspecified", DN2: "unspecified", SUB2: "unspecified", VBUS_B9: "unspecified", SSRXn1: "unspecified", SSRXp1: "unspecified", GND_B12: "unspecified", P0: "unspecified", GND_A1: "unspecified", SSTXP1: "unspecified", SSTXn1: "unspecified", VBUS_A4: "unspecified", CC1: "unspecified", DP1: "unspecified", DN1: "unspecified", SUB1: "unspecified", VBUS_A9: "unspecified", SSRXn2: "unspecified", SSRXp2: "unspecified", GND_A12: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { GND_B1: "passive", SSTXp2: "passive", SSTXn2: "passive", VBUS_B4: "passive", CC2: "passive", DP2: "passive", DN2: "passive", SUB2: "passive", VBUS_B9: "passive", SSRXn1: "passive", SSRXp1: "passive", GND_B12: "passive", P0: "passive", GND_A1: "passive", SSTXP1: "passive", SSTXn1: "passive", VBUS_A4: "passive", CC1: "passive", DP1: "passive", DN1: "passive", SUB1: "passive", VBUS_A9: "passive", SSRXn2: "passive", SSRXp2: "passive", GND_A12: "passive", ...opts.pinTypes } });
   }
   override schema = "C129018:TYPE-C-31-M-04";
   override referencePrefix = "USBC";

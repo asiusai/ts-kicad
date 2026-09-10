@@ -36,7 +36,7 @@ export function run(args: string[]): string {
   return proc.stdout.toString()
 }
 export function withTemp<T>(callback: (dir: string) => T): T {
-  const dir = mkdtempSync(join(tmpdir(), 'circuit-code-'))
+  const dir = mkdtempSync(join(tmpdir(), 'ts-kicad-'))
   try { return callback(dir) } finally { rmSync(dir, { recursive: true, force: true }) }
 }
 export function readNetlist(source: string): Xml {
@@ -49,7 +49,7 @@ export function readNetlist(source: string): Xml {
   })
 }
 export type ModelPin = { name: string; number: string; noConnect: boolean; members: { component: string; number: string }[]; netNames: string[]; netScopes?: ('local'|'global')[]; labels?: {name:string;scope:'local'|'global';sheet?:string;powerSymbol?:string}[] }
-export type ModelPart = { name: string; ref?: string; pinTypes?: Record<string, string>; group?: string; ownerPin?: string; sheet: string; schema: string; symbolSource?: string; referencePrefix: string; value: string; footprint: string; footprintSource?: string; footprintProjectDirectory?: string; datasheet: string; properties: Record<string, string | null>; pins: ModelPin[] }
+export type ModelPart = { name: string; ref?: string; pinTypes?: Record<string, string>; group?: string; ownerPin?: string; sheet: string; schema: string; symbolSource?: string; referencePrefix: string; value: string; footprint: string; footprintSource?: string; datasheet: string; properties: Record<string, string | null>; pins: ModelPin[] }
 export function inspect(entry: string | string[]): ModelPart[] { return JSON.parse(run(['bun', join(import.meta.dir, 'inspect_circuit.ts'), ...[entry].flat().map(path => resolve(path))])) }
 export function cli(extra: Record<string, { type: 'string' | 'boolean'; multiple?: boolean }> = {}, args: string[] = []) {
   const parsed = parseArgs({ args, allowPositionals: true, options: extra })

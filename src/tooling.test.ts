@@ -52,7 +52,7 @@ test('native symbol inheritance preserves pins and puts descriptive fields in JS
   const derived = symbols.get('Derived')!
   expect(symbolPins(derived)).toHaveLength(1)
   expect(defaultTemplates(derived).size).toBe(1)
-  const generated = renderComponents(libraryXml('Fixture', symbols), 'ts-kicad', { builtin: true })
+  const generated = renderComponents(libraryXml('Fixture', symbols))
   expect(generated.libraries['Fixture:Derived'].mapping).toEqual({ GND: '01' })
   expect(generated.text).toContain('Derived docs')
   expect(generated.text).toContain('@see https://example.com/datasheet')
@@ -71,11 +71,6 @@ test('standard resistors and capacitors use shared builtin classes', async () =>
   expect(r({ ref: 'R42' }).ref).toBe('R42')
   expect(r().schema).toBe('Device:R')
   expect(new GND().properties).toHaveProperty('exclude_from_bom')
-  const tree = parseXml('<export><libparts><libpart lib="Device" part="C_Small"><pins><pin num="1" name="~" type="passive"/><pin num="2" name="~" type="passive"/></pins></libpart></libparts></export>')
-  const generated = renderComponents(tree)
-  expect(generated.libraries['Device:C_Small'].source).toBe('ts-kicad/lib/symbols/Device')
-  expect(generated.libraries['Device:C_Small'].className).toBe('C')
-  expect(generated.text).not.toContain('export class')
 })
 
 test('inspect applies only the Project BOM after collecting roots and assigning references',async()=>{

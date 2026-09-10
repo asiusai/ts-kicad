@@ -32,7 +32,7 @@ export class _5018761840 extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C293583.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { P1: "unspecified", P2: "unspecified", P3: "unspecified", P4: "unspecified", P5: "unspecified", P6: "unspecified", P7: "unspecified", P8: "unspecified", P9: "unspecified", P10: "unspecified", P11: "unspecified", P12: "unspecified", P13: "unspecified", P14: "unspecified", P15: "unspecified", P16: "unspecified", P17: "unspecified", P18: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", P5: "passive", P6: "passive", P7: "passive", P8: "passive", P9: "passive", P10: "passive", P11: "passive", P12: "passive", P13: "passive", P14: "passive", P15: "passive", P16: "passive", P17: "passive", P18: "passive", ...opts.pinTypes } });
   }
   override schema = "C293583:5018761840";
   override referencePrefix = "U";

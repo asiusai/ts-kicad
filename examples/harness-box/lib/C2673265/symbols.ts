@@ -22,7 +22,7 @@ export class DG419LEDY_T1_GE4 extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C2673265.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { COM: "unspecified", NC: "unspecified", GND: "power_in", "V+": "power_in", VL: "power_in", IN: "input", "V-": "power_in", NO: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { COM: "passive", NC: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", IN: "input", "V-": "power_in", NO: "passive", ...opts.pinTypes } });
   }
   override schema = "C2673265:DG419LEDY-T1-GE4";
   override referencePrefix = "U";

@@ -17,7 +17,7 @@ export class _212528_0400 extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C5354889.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { P4: "unspecified", P3: "unspecified", P2: "unspecified", P1: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { P4: "passive", P3: "passive", P2: "passive", P1: "passive", ...opts.pinTypes } });
   }
   override schema = "C5354889:212528-0400";
   override referencePrefix = "CN";

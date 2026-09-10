@@ -3,7 +3,7 @@ import { basename, join } from 'node:path'
 import { Xml, cli } from './kicad_io'
 import { identifier, renderComponents } from './export_components'
 import { readSymbolLibrary, symbolDirectory, symbolPins, symbolProperty } from './symbol_library'
-import { child, children, val, type Node } from './kicad_sexpr'
+import { child, val, type Node } from './kicad_sexpr'
 
 export function libraryXml(library: string, symbols: Map<string, Node>) {
   const text = (tag: string, value: string) => new Xml(tag, {}, [], value)
@@ -15,7 +15,6 @@ export function libraryXml(library: string, symbols: Map<string, Node>) {
     text('defaultFootprint', symbolProperty(symbol, 'Footprint')),
     text('inBom', child(symbol, 'power').length ? 'no' : val(child(symbol, 'in_bom')[1])),
     text('onBoard', child(symbol, 'power').length ? 'no' : val(child(symbol, 'on_board')[1])),
-    text('units', String(Math.max(1, new Set(children(symbol, 'symbol').map(s => val(s[1]).match(/_(\d+)_\d+$/)?.[1]).filter(u => u && u !== '0')).size))),
     new Xml('fields', {}, [new Xml('field', { name: 'Reference' }, [], symbolProperty(symbol, 'Reference'))]),
     new Xml('footprints', {}, symbolProperty(symbol, 'ki_fp_filters').split(/\s+/).filter(Boolean).map(fp => text('fp', fp))),
     new Xml('pins', {}, symbolPins(symbol).map(pin => new Xml('pin', { num: val(child(pin, 'number')[1]), name: val(child(pin, 'name')[1]), type: val(pin[1]) }, []))),
@@ -50,7 +49,7 @@ export async function main(args: string[]) {
     if (names.has(name)) throw new Error(`Library namespace collision: ${name}`)
     names.add(name)
     const symbols = readSymbolLibrary(join(directory, file))
-    const rendered = renderComponents(libraryXml(library, symbols), 'ts-kicad', { builtin: true })
+    const rendered = renderComponents(libraryXml(library, symbols))
     writeFileSync(join(output, library + '.ts'), rendered.text)
     for (const [schema, component] of Object.entries(rendered.libraries)) catalog[schema] = component.className
     exports.push(`export * as ${name} from './${library}'`)
@@ -58,6 +57,5 @@ export async function main(args: string[]) {
   }
   writeFileSync(join(output, 'index.ts'), '// Generated from the installed KiCad symbol libraries.\n' + exports.join('\n') + "\nexport { c, r } from './Device'\n")
   writeFileSync(join(import.meta.dir, 'power.ts'), renderPowerConnections(catalog))
-  writeFileSync(join(output, 'catalog.ts'), 'export default ' + JSON.stringify(catalog))
   console.log(`Generated ${count} symbols across ${names.size} libraries in ${output}`)
 }

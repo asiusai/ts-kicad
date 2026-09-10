@@ -1,21 +1,16 @@
 import { Component } from './index'
-import { existsSync, readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { type Xml, q } from './kicad_io'
 export const identifier = (value: string) => { const s = value.replace(/[^A-Za-z0-9_$]/g, '_') || 'Symbol'; return /^\d/.test(s) ? '_' + s : s }
-export type Library = { className: string; mapping: Record<string, string>; source?: string; exportName?: string }
-export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builtin?: boolean; symbolSource?: string } = {}) {
+type Library = { className: string; mapping: Record<string, string> }
+export function renderComponents(tree: Xml, options: { symbolSource?: string } = {}) {
   const reserved = new Component({})
-  const catalogPath = join(import.meta.dir, '../lib/symbols/catalog.ts')
-  const catalog: Record<string, string> = !options.builtin && existsSync(catalogPath) ? JSON.parse(readFileSync(catalogPath, 'utf8').slice('export default '.length)) : {}
   const libraries: Record<string, Library> = {}, classes = new Set<string>()
-  let text = `// Generated from KiCad symbols by export_components.ts.\nimport { Component } from ${q(base)};\n\n`
+  let text = `// Generated from KiCad symbols by export_components.ts.\nimport { Component } from "ts-kicad";\n\n`
   if (options.symbolSource) text += "import { fileURLToPath } from 'node:url';\n\n"
   const doc = (s: string) => s.replaceAll('*/', '* /')
   for (const lib of tree.all('libparts/libpart')) {
     const key = lib.get('lib') + ':' + lib.get('part')
-    const normalized = !options.builtin ? (key === 'Device:C_Small' ? 'Device:C' : key === 'Device:R_Small' ? 'Device:R' : key) : key
-    let cls = catalog[normalized] ?? identifier(lib.get('part'))
+    let cls = identifier(lib.get('part'))
     if (classes.has(cls)) cls = identifier(lib.get('lib')) + '_' + cls
     const initial = cls; let suffix = 2
     while (classes.has(cls)) cls = initial + '_' + suffix++
@@ -35,11 +30,6 @@ export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builti
       mapping[name] = number
     }
     libraries[key] = { className: cls, mapping }
-    if (catalog[normalized]) {
-      libraries[key].exportName = catalog[normalized]
-      libraries[key].source = 'ts-kicad/lib/symbols/' + normalized.split(':')[0]
-      continue
-    }
     const prefix = lib.all('fields/field').find(f => f.get('name') === 'Reference')?.text ?? 'U'
     text += '/**\n' + doc(lib.value('description') || lib.get('part')).split('\n').map(l => ' * ' + l + '\n').join('')
     text += ` *\n * KiCad symbol: \`${key}\`. Reference prefix: \`${prefix}\`.\n`
@@ -58,8 +48,8 @@ export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builti
     text += `  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {\n    super({ ${lib.value('power') ? `value: ${q(lib.get('part'))}, ` : ''}...opts, pinTypes: { ${pinTypes}${pinTypes ? ', ' : ''}...opts.pinTypes }${Object.keys(flags).length ? `, properties: { ...${q(flags)}, ...opts.properties }` : ''} });\n  }\n`
     text += `  override schema = ${q(key)};\n  override referencePrefix = ${q(prefix)};\n}\n\n`
   }
-  for (const [id, name, helper] of [['Device:C', 'C', 'c'], ['Device:R', 'R', 'r']]) {
-    if (libraries[id] && !libraries[id].source) text += `export const ${helper} = (opts: ConstructorParameters<typeof ${libraries[id].className}>[0] = {}) => new ${libraries[id].className}(opts);\n`
+  for (const [id, helper] of [['Device:C', 'c'], ['Device:R', 'r']]) {
+    if (libraries[id]) text += `export const ${helper} = (opts: ConstructorParameters<typeof ${libraries[id].className}>[0] = {}) => new ${libraries[id].className}(opts);\n`
   }
   return { text: text.replace(/[ \t]+$/gm, '').trimEnd() + '\n', libraries }
 }

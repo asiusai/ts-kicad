@@ -20,7 +20,7 @@ export class BAS40DW_04_7_F extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C134364.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { A1: "unspecified", C1: "unspecified", AC2: "unspecified", A2: "unspecified", C2: "unspecified", AC1: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { A1: "passive", C1: "passive", AC2: "passive", A2: "passive", C2: "passive", AC1: "passive", ...opts.pinTypes } });
   }
   override schema = "C134364:BAS40DW-04-7-F";
   override referencePrefix = "D";

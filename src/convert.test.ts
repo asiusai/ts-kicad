@@ -49,15 +49,16 @@ test('converted symbols retain native pin types and merge per-instance overrides
       (symbol "Sensor_1_1"
         (pin input line (at 0 0 0) (name "IN") (number "1"))
         (pin power_in line (at 0 2.54 0) (name "GND") (number "2"))
-        (pin power_in line (at 0 5.08 0) (name "V+") (number "3")))))`)
+        (pin power_in line (at 0 5.08 0) (name "V+") (number "3"))
+        (pin unspecified line (at 0 7.62 0) (name "UNKNOWN") (number "4")))))`)
     write('src/index.ts', `import {Sensor} from '../lib/Package/symbols';
-      export default [new Sensor().wire({IN:null,GND:null,'V+':null}),
-        new Sensor({pinTypes:{IN:'output'}}).wire({IN:null,GND:null,'V+':null})];`)
+      export default [new Sensor().wire({IN:null,GND:null,'V+':null,UNKNOWN:null}),
+        new Sensor({pinTypes:{IN:'output'}}).wire({IN:null,GND:null,'V+':null,UNKNOWN:null})];`)
     for(let pass=0;pass<2;pass++){
       convertLibraries(project)
       const parts=inspect(join(project,'src/index.ts'))
-      expect(parts[0].pinTypes).toEqual({'1':'input','2':'power_in','3':'power_in'})
-      expect(parts[1].pinTypes).toEqual({'1':'output','2':'power_in','3':'power_in'})
+      expect(parts[0].pinTypes).toEqual({'1':'input','2':'power_in','3':'power_in','4':'unspecified'})
+      expect(parts[1].pinTypes).toEqual({'1':'output','2':'power_in','3':'power_in','4':'unspecified'})
     }
   } finally {rmSync(project,{recursive:true,force:true})}
 })

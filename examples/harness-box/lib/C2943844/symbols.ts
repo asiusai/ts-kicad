@@ -16,7 +16,7 @@ export class SMF16A_C2943844 extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C2943844.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { C: "unspecified", A: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { C: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "C2943844:SMF16A_C2943844";
   override referencePrefix = "U";

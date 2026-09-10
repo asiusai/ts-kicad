@@ -96,7 +96,10 @@ export const CAN2_CLAMP = new BAS40DW_04_7_F({ value: 'BAS40DW-04-7-F' }).wire({
   AC1: HARNESS.P13,
 })
 
-export const IGNITION = new DMN3200U_7({ value: 'DMN3200U-7' }).wire({
+export const IGNITION = new DMN3200U_7({
+  value: 'DMN3200U-7',
+  pinTypes: { G: 'input' },
+}).wire({
   S: GND,
   G: [IGNITION_GATE.P1, IGNITION_PULLDOWN.P2],
   D: IGNITION_OUTPUT.P1,
@@ -104,6 +107,7 @@ export const IGNITION = new DMN3200U_7({ value: 'DMN3200U-7' }).wire({
 
 export const CAN2_SWITCH = new DG419LEDY_T1_GE4({
   value: 'DG419LEDY-T1-GE4',
+  pinTypes: { IN: 'input', GND: 'power_in', 'V+': 'power_in', VL: 'power_in', 'V-': 'power_in' },
 }).wire({
   COM: HARNESS.P16,
   NC: HARNESS.P3,
@@ -117,6 +121,7 @@ export const CAN2_SWITCH = new DG419LEDY_T1_GE4({
 
 export const CAN0_SWITCH = new DG419LEDY_T1_GE4({
   value: 'DG419LEDY-T1-GE4',
+  pinTypes: { IN: 'input', GND: 'power_in', 'V+': 'power_in', VL: 'power_in', 'V-': 'power_in' },
 }).wire({
   COM: HARNESS.P6,
   NC: HARNESS.P13,

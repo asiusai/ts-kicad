@@ -16,7 +16,7 @@ export class STPS2H100ZFY extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C2969868.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { A: "unspecified", C: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { A: "passive", C: "passive", ...opts.pinTypes } });
   }
   override schema = "C2969868:STPS2H100ZFY";
   override referencePrefix = "U";

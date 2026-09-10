@@ -1,5 +1,5 @@
 import { componentPins } from './index'
-// Generic graph inspection for import verification; does not write any source metadata.
+// Serialize the circuit graph for schematic generation and netlist verification.
 import { Component, isPassiveSymbol, Net, Pin, validatePins, circuitComponents, validateLabels, assignReferences, applyBom, validateBom, type KicadElement } from './index'
 import { pathToFileURL } from 'node:url'
 import { resolve } from 'node:path'
@@ -60,7 +60,6 @@ const result = entries.map(([name, component]) => ({
   value: component.value,
   footprint: component.footprint,
   footprintSource: component.footprintSource,
-  footprintProjectDirectory: component.footprintProjectDirectory,
   datasheet: component.datasheet,
   properties: component.properties,
   pins: Object.values(componentPins(component)).map((pin) => {

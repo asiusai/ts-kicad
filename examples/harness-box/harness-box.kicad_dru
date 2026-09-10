@@ -1,0 +1,8 @@
+(version 1)
+
+# User accepted the existing USBC1 USB-C shield-pad / locating-hole clearances
+# on 2026-09-08. Preserve that footprint exactly; this is not a global waiver.
+# Existing measured minimum is 0.1422 mm. Future reductions still fail DRC.
+(rule "Accepted existing USB-C internal hole clearance"
+  (condition "A.memberOfFootprint('USBC1') && B.memberOfFootprint('USBC1')")
+  (constraint hole_clearance (min 0.14mm)))

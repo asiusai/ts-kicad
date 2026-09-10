@@ -3,6 +3,8 @@ import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, 
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { importParts } from './jlc'
+import { child, val } from './kicad_sexpr'
+import { readSymbolLibrary, symbolPins, symbolProperty } from './symbol_library'
 
 function downloaded(id: string, output: string, pad = '1') {
   writeFileSync(output + '.kicad_sym', `(kicad_symbol_lib (symbol "Part" (property "Reference" "U") (property "Footprint" "${id}:Case") (symbol "Part_1_1" (pin passive line (at 0 0 0) (length 2.54) (name "IN") (number "1")))))`)
@@ -50,6 +52,31 @@ test('incomplete downloads and pad mismatches never publish partial libraries', 
     expect(existsSync(join(directory, 'lib/C100'))).toBe(false)
     await expect(importParts(['C100'], directory, async (id, output) => downloaded(id, output, '2'))).rejects.toThrow()
     expect(existsSync(join(directory, 'lib/C100'))).toBe(false)
+  })
+})
+
+test('JLC import makes unspecified pins passive across units and preserves explicit types', async () => {
+  await temporary(async directory => {
+    const types = ['unspecified', 'input', 'output', 'bidirectional', 'tri_state', 'passive', 'free', 'power_in', 'power_out', 'open_collector', 'open_emitter', 'no_connect', 'unspecified']
+    await importParts(['C100'], directory, async (id, output) => {
+      downloaded(id, output)
+      const pins = types.map((type, i) => `(pin ${type} line (at 0 ${i * 2.54} 0) (length 2.54) (name "P${i + 1}") (number "${i + 1}"))`)
+      writeFileSync(output + '.kicad_sym', `(kicad_symbol_lib (symbol "Part"
+        (property "Reference" "U") (property "Footprint" "${id}:Case")
+        (property "Description" "Keep text such as (pin unspecified line) unchanged")
+        (symbol "Part_1_1" ${pins.slice(0, 6).join(' ')})
+        (symbol "Part_2_1" ${pins.slice(6).join(' ')})))`)
+      writeFileSync(output + '.pretty/Case.kicad_mod', `(footprint "Case" (version 20241229) (layer "F.Cu")
+        ${types.map((_, i) => `(pad "${i + 1}" smd rect (at ${i * 2} 0) (size 1 1) (layers "F.Cu"))`).join(' ')})`)
+    })
+    const folder = join(directory, 'lib/C100')
+    const symbol = readSymbolLibrary(join(folder, 'C100.kicad_sym')).get('Part')!
+    const actual = Object.fromEntries(symbolPins(symbol).map(pin => [val(child(pin, 'number')[1]), val(pin[1])]))
+    const expected = Object.fromEntries(types.map((type, i) => [String(i + 1), type === 'unspecified' ? 'passive' : type]))
+    expect(actual).toEqual(expected)
+    expect(symbolProperty(symbol, 'Description')).toBe('Keep text such as (pin unspecified line) unchanged')
+    const generated = readFileSync(join(folder, 'symbols.ts'), 'utf8')
+    for (const [number, type] of Object.entries(expected)) expect(generated).toContain(`P${number}: "${type}"`)
   })
 })
 

@@ -1,8 +1,8 @@
-import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, renameSync, rmSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs'
 import { basename, join, resolve } from 'node:path'
 import { convertLibraries } from './convert'
 import { readSymbolLibrary, symbolPins, symbolProperty } from './symbol_library'
-import { child, parse, val } from './kicad_sexpr'
+import { atom, child, descendants, dump, parse, val } from './kicad_sexpr'
 import { footprintMetadata } from './internal-footprints'
 import { validateFootprintPads } from './footprint'
 
@@ -40,6 +40,14 @@ export async function importParts(ids: readonly string[], directory: string, dow
         pretty = output + '.pretty',
         shapes = output + '.3dshapes'
       if (!existsSync(symbolFile) || !existsSync(pretty)) throw new Error(`Incomplete EasyEDA download for ${id}: symbol and footprint are required`)
+      const imported = parse(readFileSync(symbolFile, 'utf8'))
+      let changed = false
+      for (const pin of descendants(imported, 'pin')) {
+        if (val(pin[1]) !== 'unspecified') continue
+        pin[1] = atom('passive')
+        changed = true
+      }
+      if (changed) writeFileSync(symbolFile, dump(imported) + '\n')
       const symbols = readSymbolLibrary(symbolFile)
       if (!symbols.size) throw new Error(`Empty symbol library for ${id}`)
       const footprints = readdirSync(pretty, { withFileTypes: true })

@@ -193,7 +193,7 @@
       )
     )
   )
-  (pad "" thru_hole circle
+  (pad "" np_thru_hole circle
     (at 0 5.8)
     (size 3 3)
     (drill 3)

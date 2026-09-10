@@ -58,7 +58,7 @@ export function loadSymbols(paths: string[], requested: readonly string[] = []) 
     const [library, name] = key.split(':')
     if (!library || !name || /[\\/]/.test(library)) throw new Error('Invalid symbol ID: ' + key)
     const path = join(symbolDirectory(), library + '.kicad_sym')
-    if (!existsSync(path)) throw new Error('Missing symbol geometry: ' + key + '. Supply its project schematic with --symbols.')
+    if (!existsSync(path)) throw new Error('Missing symbol geometry: ' + key + '. Add its native library or schematic to Project.symbols.')
     if (!loaded.has(library)) loaded.set(library, readSymbolLibrary(path))
     const original = loaded.get(library)!.get(name)
     if (!original) throw new Error('Missing symbol in library: ' + key)
@@ -67,17 +67,4 @@ export function loadSymbols(paths: string[], requested: readonly string[] = []) 
     templates.set(key, defaultTemplates(symbol))
   }
   return { libraries, templates }
-}
-export function symbolPositions(path: string): Map<string, Point> {
-  const root = parse(readFileSync(path, 'utf8')), positions = new Map<string, Point>()
-  const libraries = new Map(children(child(root, 'lib_symbols'), 'symbol').map(n => [val(n[1]), n]))
-  for (const symbol of children(root, 'symbol')) {
-    const ref = children(symbol, 'property').find(p => val(p[1]) === 'Reference')
-    if (!ref) continue
-    const at = child(symbol, 'at'), x = Number(val(at[1])), y = Number(val(at[2])), name = val(ref[2])
-    positions.set(name, { x, y })
-    const lib = libraries.get(val(child(symbol, 'lib_id')[1]))
-    if (lib) for (const pin of pinGeometry(lib, symbol)) positions.set(name + '.' + pin.number, { x: x + pin.x, y: y + pin.y })
-  }
-  return positions
 }

@@ -47,7 +47,7 @@ export function convertLibraries(projectDirectory: string, folders: readonly str
       const library=basename(file,'.kicad_sym')
       if(symbolLibraries.has(library))throw new Error('Duplicate symbol library name: '+library)
       symbolLibraries.set(library,file)
-      const definitions=readSymbolLibrary(file),rendered=renderComponents(libraryXml(library,definitions),'ts-kicad',{builtin:true,symbolSource:urlPath(directory,file)})
+      const definitions=readSymbolLibrary(file),rendered=renderComponents(libraryXml(library,definitions),{symbolSource:urlPath(directory,file)})
       for(const part of Object.values(rendered.libraries)){if(names.has(part.className))throw new Error('Duplicate symbol TypeScript name: '+part.className);names.add(part.className)}
       text+=rendered.text.replace(/^\/\/ Generated[^\n]*\n/,'').replace(/^import[^\n]*\n/gm,'').trim()+'\n\n'
       symbols+=definitions.size

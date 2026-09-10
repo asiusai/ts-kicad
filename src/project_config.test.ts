@@ -3,7 +3,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { Component, Project } from './index'
-import { resolveExportInputs } from './project_config'
+import { resolveProject } from './project_config'
 import { inspect } from './kicad_io'
 
 class Pair extends Component.withPins(['1','2']) {}
@@ -24,15 +24,13 @@ test('entry Project supplies relative paths and multiple disconnected graph root
 class Pair extends Component.withPins(['1','2']) {}
 const a=new Pair().wire({P1:null,P2:null}),b=new Pair().wire({P1:null,P2:null});
 export default new Project({entries:[a,b],output:'../out/design.kicad_sch',symbols:['../symbols.kicad_sym'],footprints:['../custom.pretty'],project:'../original.kicad_pro',bom:[]});`)
-    const byDirectory=await resolveExportInputs([directory])
-    const byFile=await resolveExportInputs([entry])
+    const byDirectory=await resolveProject(directory)
+    const byFile=await resolveProject(entry)
     expect(byDirectory).toEqual(byFile)
     expect(byFile.output).toBe(join(directory,'out/design.kicad_sch'))
     expect(byFile.config.symbols).toEqual([join(directory,'symbols.kicad_sym')])
     expect(byFile.config.footprints).toEqual([join(directory,'custom.pretty')])
     expect(byFile.config.project).toBe(join(directory,'original.kicad_pro'))
-    const override=await resolveExportInputs([entry,'override.kicad_sch'])
-    expect(override.output).toBe(resolve('override.kicad_sch'))
     expect(inspect(entry)).toHaveLength(2)
   } finally {rmSync(directory,{recursive:true,force:true})}
 })

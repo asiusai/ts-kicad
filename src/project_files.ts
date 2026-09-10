@@ -1,14 +1,13 @@
 import type { ProjectSettings } from './index'
 import { defaultSettings } from './project_defaults'
 import { mergeSettings } from './merge_settings'
-import { normalizeFootprint } from './normalize_footprint'
 import { validateFootprintPads } from './footprint'
 import { footprintMetadata } from './internal-footprints'
 import { symbolDirectory } from './symbol_library'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { basename, dirname, join, resolve, relative } from 'node:path'
 import { createHash } from 'node:crypto'
-import { atom as A, node as N, child, children, clone, dump, parse, remove, val, type Node } from './kicad_sexpr'
+import { atom as A, node as N, child, children, clone, dump, parse, val, type Node } from './kicad_sexpr'
 import { type ModelPart } from './kicad_io'
 
 export type ProjectOptions = { footprints?: string[]; project?: string } & Pick<ProjectSettings, 'settings'>
@@ -19,8 +18,8 @@ export function uuid(key: string) {
 const read = (path: string) => parse(readFileSync(path, 'utf8'))
 const write = (path: string, tree: Node) => { mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, dump(tree)+'\n') }
 
-function modelPath(path: string, projectDirectory: string) {
-  return path.replace(/\$\{([^}]+)\}/g, (_, name) => name==='KIPRJMOD' ? projectDirectory : process.env[name] ?? (/^KICAD\d*_3DMODEL_DIR$/.test(name) ? '/usr/share/kicad/3dmodels' : '${'+name+'}'))
+function libraryPath(path: string, projectDirectory: string) {
+  return path.replace(/\$\{([^}]+)\}/g, (_, name) => name==='KIPRJMOD' ? projectDirectory : process.env[name] ?? '${'+name+'}')
 }
 
 function writeLibraryTable(path:string,tree:Node) {
@@ -64,42 +63,29 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
   if (options.project) {
     const table = join(dirname(options.project),'fp-lib-table')
     if (existsSync(table)) for (const lib of children(read(table),'lib')) {
-      const name=val(child(lib,'name')[1]);if(!footprintPaths.has(name))footprintPaths.set(name,modelPath(val(child(lib,'uri')[1]),dirname(resolve(options.project))))
+      const name=val(child(lib,'name')[1]);if(!footprintPaths.has(name))footprintPaths.set(name,libraryPath(val(child(lib,'uri')[1]),dirname(resolve(options.project))))
     }
   }
   const footprintRoots = [...Object.entries(process.env).filter(([key])=>/^KICAD\d*_FOOTPRINT_DIR$/.test(key)).map(([,v])=>v!),'/usr/share/kicad/footprints','/usr/local/share/kicad/footprints']
-  const copied = new Map<string,Node>(), usedLibraries = new Set<string>(), directLibraries=new Map<string,string>()
+  const pads = new Map<string,string[]>(), directLibraries=new Map<string,string>()
   for (const item of items) {
     if (!item.footprint || Object.hasOwn(item.properties,'exclude_from_board') || item.ref?.startsWith('#')) continue
-    if (copied.has(item.footprint)) continue
+    if (pads.has(item.footprint)) continue
     const [library, footprintName] = item.footprint.split(':')
     if (!library || !footprintName || /[\\/]/.test(library+footprintName)) throw new Error('Invalid footprint: '+item.footprint)
     const root = footprintPaths.get(library) ?? footprintRoots.map(p=>join(p,library+'.pretty')).find(existsSync)
     const path = item.footprintSource ?? (root && join(root, footprintName+'.kicad_mod'))
     if (!path || !existsSync(path)) throw new Error('Footprint not found: '+item.footprint+'. Set Project.footprints to its .pretty directory or use a footprint with a native file.')
-    const footprint = parse(normalizeFootprint(readFileSync(path,'utf8')))
     const previous=directLibraries.get(library)
     if(previous&&previous!==dirname(path))throw new Error('Conflicting footprint library paths: '+library)
     directLibraries.set(library,dirname(path))
-    footprint[0] = A('footprint')
-    remove(footprint,'at','path','sheetname','sheetfile')
-    for(const pad of children(footprint,'pad'))remove(pad,'net','pinfunction','pintype')
-    for (const field of children(footprint,'fp_text')) {
-      const kind=val(field[1]); if(kind!=='reference'&&kind!=='value')continue
-      field[0]=A('property');field[1]=kind==='reference'?'Reference':'Value'
-    }
-    for (const model of children(footprint,'model')) {
-      const original = val(model[1]), candidate = resolve(dirname(path), modelPath(original,item.footprintProjectDirectory ?? dirname(path)))
-      if (!existsSync(candidate)) continue
-      model[1]='${KIPRJMOD}/'+relative(directory,candidate)
-    }
-    copied.set(item.footprint,footprint);usedLibraries.add(library)
+    pads.set(item.footprint,footprintMetadata(read(path)).pads)
   }
   for (const item of items) {
     if (!item.footprint || Object.hasOwn(item.properties,'exclude_from_board') || item.ref?.startsWith('#')) continue
-    validateFootprintPads(item.ref ?? item.name, item.pins.map(pin => pin.number), footprintMetadata(copied.get(item.footprint)!).pads)
+    validateFootprintPads(item.ref ?? item.name, item.pins.map(pin => pin.number), pads.get(item.footprint)!)
   }
-  writeLibraryTable(join(directory,'fp-lib-table'),N('fp_lib_table',N('version',A(7)),...[...usedLibraries].map(library=>N('lib',N('name',library),N('type','KiCad'),N('uri',footprintRoots.some(root=>resolve(root,library+'.pretty')===resolve(directLibraries.get(library)!))?'${KICAD10_FOOTPRINT_DIR}/'+library+'.pretty':'${KIPRJMOD}/'+relative(directory,directLibraries.get(library)!)),N('options',''),N('descr','Generated project footprints')))))
+  writeLibraryTable(join(directory,'fp-lib-table'),N('fp_lib_table',N('version',A(7)),...[...directLibraries].map(([library,path])=>N('lib',N('name',library),N('type','KiCad'),N('uri',footprintRoots.some(root=>resolve(root,library+'.pretty')===resolve(path))?'${KICAD10_FOOTPRINT_DIR}/'+library+'.pretty':'${KIPRJMOD}/'+relative(directory,path)),N('options',''),N('descr','Generated project footprints')))))
   const projectPath = join(directory,name+'.kicad_pro')
   if (!existsSync(projectPath)) {
     const source = options.project ? JSON.parse(readFileSync(options.project,'utf8')) : {}
@@ -114,5 +100,4 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
     current.meta = {...current.meta, filename:basename(projectPath), version:1}
     writeFileSync(projectPath,JSON.stringify(current,null,2)+'\n')
   }
-  return copied
 }

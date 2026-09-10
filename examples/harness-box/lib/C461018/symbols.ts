@@ -17,7 +17,7 @@ export class DMN3200U_7 extends Component.withPins({
 }) {
   override symbolSource = fileURLToPath(new URL("./C461018.kicad_sym", import.meta.url));
   constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
-    super({ ...opts, pinTypes: { S: "unspecified", G: "input", D: "unspecified", ...opts.pinTypes } });
+    super({ ...opts, pinTypes: { S: "passive", G: "input", D: "passive", ...opts.pinTypes } });
   }
   override schema = "C461018:DMN3200U-7";
   override referencePrefix = "Q";
