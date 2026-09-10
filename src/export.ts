@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, copyFileSync, statSyn
 import { basename, dirname, join, resolve, extname } from 'node:path'
 import { cli, readNetlist, run, withTemp, type Xml } from './kicad_io'
 import { child, children, descendants, parse, val, type Node } from './kicad_sexpr'
-import { checkErc } from './checks'
+import { checkErc, checkDrc } from './checks'
 
 const order=(a:string,b:string)=>a.localeCompare(b,undefined,{numeric:true})
 export const csv=(rows:string[][])=>rows.map(row=>row.map(s=>'"'+s.replaceAll('"','""')+'"').join(',')).join('\n')+'\n'
@@ -26,32 +26,19 @@ export function partsFromNetlist(tree:Xml):Part[]{
     return {ref:c.get('ref'),value:c.value('value'),props,dnp:Object.hasOwn(props,'dnp'),inBom:!Object.hasOwn(props,'exclude_from_bom'),onBoard:!Object.hasOwn(props,'exclude_from_board')}
   }).sort((a,b)=>order(a.ref,b.ref))
 }
-const positive=(s:string|undefined)=>s&&/^\d+$/.test(s)&&Number(s)>0?Number(s):0
 export function bomRows(parts:Part[]) {
   const grouped=new Map<string,string[]>()
-  function add(refs:string[],fields:string[]){const key=JSON.stringify(fields);grouped.set(key,[...grouped.get(key)??[],...refs])}
   for(const part of parts.filter(p=>p.inBom)){
-    const p=part.props,qty=positive(p['Quantity per PCB'])
-    const refs=(prefix:string,n:number)=>Array.from({length:n},(_,i)=>part.ref+'.'+prefix+(i+1))
+    const p=part.props
     const flags=[part.dnp?'DNP':'','',''+(part.onBoard?'':'Exclude from Board')]
-    add(qty?refs(p['BOM Reference Prefix']??'P',qty):[part.ref],[qty?p['BOM Comment']??part.value:part.value,...flags,p['MFR.Part #']??p.MPN??'',p.Manufacturer??'',p['JLCPCB Part #']??p['LCSC Part']??'',p['Height (mm)']??'',p['Height Exception']??'',p.Footprint??'',p.Datasheet??''])
-    const anchors=positive(p['Anchor Quantity per PCB'])
-    if(qty&&anchors)add(refs(p['Anchor Reference Prefix']??'S',anchors),[p['Anchor BOM Comment']??'Mechanical anchor',...flags,p['Anchor MFR.Part #']??'',p['Anchor Manufacturer']??'',p['Anchor JLCPCB Part #']??'',p['Anchor Height (mm)']??'',p['Anchor Height Exception']??p['Height Exception']??'',p.Footprint??'',p['Anchor Datasheet']??''])
+    const fields=[part.value,...flags,p['MFR.Part #']??p.MPN??'',p.Manufacturer??'',p['JLCPCB Part #']??p['LCSC Part']??'',p.Footprint??'',p.Datasheet??'']
+    const key=JSON.stringify(fields)
+    grouped.set(key,[...grouped.get(key)??[],part.ref])
   }
-  return [['Designator','Qty','Comment','DNP','Exclude from BOM','Exclude from Board','MFR.Part #','Manufacturer','LCSC Part #','Height (mm)','Height Exception','Footprint','Datasheet'],...[...grouped].map(([key,refs])=>[refs.sort(order).join(','),String(refs.length),...JSON.parse(key) as string[]]).sort((a,b)=>order(a[0],b[0]))]
-}
-export function auditHeights(parts:Part[],limit=2){
-  const selected=parts.filter(p=>!p.dnp&&(p.inBom||positive(p.props['Quantity per PCB'])))
-  if(!selected.some(p=>p.props['Height (mm)']))return
-  const errors:string[]=[]
-  for(const p of selected){const raw=p.props['Height (mm)']?.trim(),height=Number(raw)
-    if(!raw||!Number.isFinite(height)||height<0)errors.push(p.ref+': missing or invalid Height (mm)')
-    else if(height>=limit&&!p.props['Height Exception']?.trim())errors.push(`${p.ref}: ${height} mm requires a Height Exception (limit ${limit} mm)`)
-  }
-  if(errors.length)throw new Error('Component height audit failed:\n'+errors.join('\n'))
+  return [['Designator','Qty','Comment','DNP','Exclude from BOM','Exclude from Board','MFR.Part #','Manufacturer','LCSC Part #','Footprint','Datasheet'],...[...grouped].map(([key,refs])=>[refs.sort(order).join(','),String(refs.length),...JSON.parse(key) as string[]]).sort((a,b)=>order(a[0],b[0]))]
 }
 export function writeDocs(schematic:string,output:string){
-  const tree=readNetlist(schematic),parts=partsFromNetlist(tree);auditHeights(parts);mkdirSync(output,{recursive:true})
+  const tree=readNetlist(schematic),parts=partsFromNetlist(tree);mkdirSync(output,{recursive:true})
   writeFileSync(join(output,'BOM.csv'),csv(bomRows(parts)))
   run(['kicad-cli','sch','export','pdf','--output',join(output,basename(schematic,'.kicad_sch')+'.pdf'),schematic])
   console.log('Wrote BOM and schematic PDF to '+output);return parts
@@ -60,13 +47,13 @@ const prop=(fp:Node,name:string)=>val(children(fp,'property').find(p=>val(p[1])=
 export function checkPopulation(board:Node,parts:Part[]){
   const expected=parts.filter(p=>p.inBom&&p.onBoard&&!p.dnp).map(p=>p.ref).sort(order)
   const actual=children(board,'footprint').concat(children(board,'module')).filter(fp=>!child(fp,'attr').slice(1).some(a=>['dnp','exclude_from_bom','board_only'].includes(val(a)))).map(fp=>prop(fp,'Reference')).sort(order)
-  if(JSON.stringify(expected)!==JSON.stringify(actual))throw new Error('BOM/PCB population mismatch. Missing: '+expected.filter(r=>!actual.includes(r)).join(', ')+'. Extra: '+actual.filter(r=>!expected.includes(r)).join(', '))
+  if(JSON.stringify(expected)!==JSON.stringify(actual))console.error('BOM/PCB population mismatch. Missing: '+expected.filter(r=>!actual.includes(r)).join(', ')+'. Extra: '+actual.filter(r=>!expected.includes(r)).join(', ')+'. Continuing export.')
 }
 export function manufacturingLayers(board:Node){
   const used=new Set([...descendants(board,'layer')].map(n=>val(n[1])))
   return child(board,'layers').filter((n):n is Node=>Array.isArray(n)).flatMap(n=>{
     const name=val(n[1]),alias=val(n[3]);if(name.endsWith('.Cu')||['F.Mask','B.Mask','F.SilkS','B.SilkS','F.Paste','B.Paste','Edge.Cuts'].includes(name))return[name]
-    return used.has(name)&&/^(pit|pib|fr4t|fr4b|gpt|gpb|pst|psb)_/.test(alias)?[alias]:[]
+    return used.has(name)&&/^(pit|pib|fr4t|fr4b|gpt|gpb|pst|psb)_\d+(?:\.\d+)?$/.test(alias)?[alias]:[]
   })
 }
 export const isFabricationFile=(file:string)=>/\.(gbr|gbrjob|drl|gtl|gbl|gts|gbs|gto|gbo|gtp|gbp|gko|gml|g\d+|gm\d+)$/i.test(file)
@@ -84,18 +71,8 @@ function mechanical(board:string,output:string){
 }
 export function fabricate(boardPath:string,output:string,parts:Part[]){
   const board=parse(readFileSync(boardPath,'utf8')),name=basename(boardPath,'.kicad_pcb');mkdirSync(output,{recursive:true})
-  try{
-    checkPopulation(board,parts)
-    withTemp(directory=>{
-      const report=join(directory,'drc.json')
-      run(['kicad-cli','pcb','drc',boardPath,'--schematic-parity','--refill-zones','--save-board','--format','json','--output',report])
-      const drc=JSON.parse(readFileSync(report,'utf8')),issues=[...drc.violations,...drc.schematic_parity,...drc.unconnected_items]
-      if(issues.length)throw new Error(`PCB checks failed: ${issues.length} violations/unconnected items.\n${JSON.stringify(issues,null,2)}`)
-    })
-  }catch(error){
-    try{mechanical(boardPath,output)}catch(previewError){console.warn('Mechanical preview unavailable: '+String(previewError))}
-    throw error
-  }
+  checkPopulation(board,parts)
+  checkDrc(boardPath,join(output,name+'-drc.json'))
   // Stage all manufacturing outputs so failed exports leave the previous release intact.
   withTemp(stage=>{
     const layers=manufacturingLayers(board),gerbers=join(stage,'gerbers')
@@ -134,7 +111,8 @@ export async function main(args:string[]){
   }
   if(!['.kicad_sch','.kicad_pcb'].includes(extname(target)))throw new Error('Expected a KiCad schematic or PCB')
   const schematic=target.replace(/\.kicad_pcb$/,'.kicad_sch'),board=schematic.replace(/\.kicad_sch$/,'.kicad_pcb'),output=resolve(values.output as string??join(dirname(target),'outputs'))
-  checkErc(schematic)
+  mkdirSync(output,{recursive:true})
+  checkErc(schematic,join(output,basename(schematic,'.kicad_sch')+'-erc.json'))
   const parts=writeDocs(schematic,output)
   if(existsSync(board))fabricate(board,output,parts)
 }

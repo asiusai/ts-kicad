@@ -205,11 +205,11 @@ test('reference BOM overrides merge with symbol defaults, including automatic re
   part.schema = 'Device:C'; part.referencePrefix = 'C'
   part.ref = assignReferences([['CAP', part]]).get('CAP')
   applyBom([part], [
-    { schema: 'Device:C', footprint: 'C_0603', manufacturer: 'Maker', partNumber: 'Default', properties: { height: '1' } },
+    { schema: 'Device:C', footprint: 'C_0603', manufacturer: 'Maker', partNumber: 'Default', properties: { voltage: '25V' } },
     { ref: ['C1', 'C2'], partNumber: 'Selected', properties: { tolerance: '5%' } },
   ])
   expect(part.footprint).toBe('C_0603')
-  expect(part.properties).toEqual({ Manufacturer: 'Maker', 'MFR.Part #': 'Selected', height: '1', tolerance: '5%' })
+  expect(part.properties).toEqual({ Manufacturer: 'Maker', 'MFR.Part #': 'Selected', voltage: '25V', tolerance: '5%' })
 })
 
 test('configured electrical modes only override existing pins',()=>{

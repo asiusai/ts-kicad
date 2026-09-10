@@ -32,7 +32,7 @@ const commands = {
   },
   export: {
     usage: '[project-directory|board.kicad_sch|board.kicad_pcb] [--output directory]',
-    description: 'Check ERC/DRC and export BOM, PDF, fabrication files, positions and mechanical models.',
+    description: 'Log ERC/DRC findings and export BOM, PDF, fabrication files, positions and mechanical models.',
     load: () => import('./src/export'),
   },
   convert: {
