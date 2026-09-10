@@ -23,11 +23,11 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./components": "./components/index.ts",
-    "./components/*": "./components/*.ts",
+    "./lib/symbols": "./lib/symbols/index.ts",
+    "./lib/symbols/*": "./lib/symbols/*.ts",
     "./helpers": "./src/helpers.ts",
     "./power": "./src/power.ts",
-    "./footprints/*": "./footprints/*.ts"
+    "./lib/footprints/*": "./lib/footprints/*.ts"
   },
   "bin": {
     "ts-kicad": "./cli.ts"
@@ -40,16 +40,7 @@
   "files": [
     "cli.ts",
     "src",
-    "components",
-    "footprints",
-    "README.md",
-    "THIRD_PARTY.md",
-    "LICENSES",
-    "examples/harness/README.md",
-    "examples/harness/SOURCES.md",
-    "examples/harness/download.ts",
-    "examples/harness/package.json",
-    "examples/harness/src",
-    "examples/harness/routing-idea.md"
+    "lib",
+    "README.md"
   ]
 }

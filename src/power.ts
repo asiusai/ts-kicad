@@ -1,6 +1,6 @@
 // Generated power-symbol connections.
 import { Net } from './index'
-export { PWR_FLAG } from '../components/power'
+export { PWR_FLAG } from '../lib/symbols/power'
 
 /** A named power rail, rendered using a native KiCad power symbol. */
 export const power = (name: string, symbol = 'power:VCC') => new Net(name, 'global', symbol)

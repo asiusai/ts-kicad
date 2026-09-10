@@ -1,0 +1,221 @@
+(kicad_symbol_lib
+  (version 20211014)
+  (generator https://github.com/uPesy/easyeda2kicad.py)
+
+  (symbol "BAS40DW-04-7-F"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "D"
+      (id 0)
+      (at 0 17.78 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "BAS40DW-04-7-F"
+      (id 1)
+      (at 0 -17.78 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "C134364:SOT-363_L2.0-W1.3-P0.65-LS2.1-BR"
+      (id 2)
+      (at 0 -20.32 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_DIODES_BAS40DW-04-7-F_BAS40DW-04-7-F_C134364.html"
+      (id 3)
+      (at 0 -22.86 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "DIODES(美台)"
+      (id 4)
+      (at 0 -25.40 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "BAS40DW-04-7-F"
+      (id 5)
+      (at 0 -27.94 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C134364"
+      (id 6)
+      (at 0 -30.48 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Schottky Barrier Diodes (SBD)"
+      (id 8)
+      (at 0 -33.02 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "BAS40DW-04-7-F_0_1"
+      (rectangle
+        (start -10.16 7.62)
+        (end 10.16 -7.62)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy -6.10 -5.08) (xy -7.62 -2.54) (xy -9.14 -5.08) (xy -6.10 -5.08)
+        )
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy -4.83 -2.54) (xy -3.30 -5.08) (xy -1.78 -2.54) (xy -4.83 -2.54)
+        )
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy 6.10 5.08) (xy 7.62 2.54) (xy 9.14 5.08) (xy 6.10 5.08)
+        )
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy 4.83 2.54) (xy 3.30 5.08) (xy 1.78 2.54) (xy 4.83 2.54)
+        )
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy -9.14 -2.54) (xy -6.10 -2.54)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -1.78 -5.08) (xy -4.83 -5.08)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 9.14 2.54) (xy 6.10 2.54)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 1.78 5.08) (xy 4.83 5.08)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.62 -2.54) (xy -7.62 7.62)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -3.30 -2.54) (xy -3.30 2.54) (xy -7.62 2.54)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 7.62 2.54) (xy 7.62 -7.62)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.30 2.54) (xy 3.30 -2.54) (xy 7.62 -2.54)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 7.62 5.08) (xy 7.62 7.62)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.62 -5.08) (xy -7.62 -7.62)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -3.30 -5.08) (xy -3.30 -5.84) (xy -2.54 -5.84) (xy -2.54 -7.62)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.30 5.08) (xy 3.30 5.59) (xy 2.54 5.59) (xy 2.54 7.62)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -7.62 -12.70 90)
+        (length 5.08)
+        (name "A1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -2.54 -12.70 90)
+        (length 5.08)
+        (name "C1" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 7.62 -12.70 90)
+        (length 5.08)
+        (name "AC2" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 7.62 12.70 270)
+        (length 5.08)
+        (name "A2" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 2.54 12.70 270)
+        (length 5.08)
+        (name "C2" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -7.62 12.70 270)
+        (length 5.08)
+        (name "AC1" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)

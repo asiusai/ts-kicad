@@ -1,0 +1,517 @@
+// Generated from native KiCad footprints.
+import type { Footprint } from '../../src/footprint'
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1010, 10.0x10.5mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_10x10.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x10_5: Footprint = { id: "Capacitor_SMD:CP_Elec_10x10.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 10.0x10.0mm
+ * KiCad: Capacitor_SMD:CP_Elec_10x10
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x10: Footprint = { id: "Capacitor_SMD:CP_Elec_10x10", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1012, 10.0x12.5mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_10x12.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x12_5: Footprint = { id: "Capacitor_SMD:CP_Elec_10x12.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic F12, 10.0x12.6mm
+ * KiCad: Capacitor_SMD:CP_Elec_10x12.6
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x12_6: Footprint = { id: "Capacitor_SMD:CP_Elec_10x12.6", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1014, 10.0x14.3mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_10x14.3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x14_3: Footprint = { id: "Capacitor_SMD:CP_Elec_10x14.3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 10.0x7.7mm
+ * KiCad: Capacitor_SMD:CP_Elec_10x7.7
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x7_7: Footprint = { id: "Capacitor_SMD:CP_Elec_10x7.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic F8, 10.0x7.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_10x7.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_10x7_9: Footprint = { id: "Capacitor_SMD:CP_Elec_10x7.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1616, 16.0x17.5mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_16x17.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_16x17_5: Footprint = { id: "Capacitor_SMD:CP_Elec_16x17.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1621, 16.0x22.0mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_16x22
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_16x22: Footprint = { id: "Capacitor_SMD:CP_Elec_16x22", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1816, 18.0x17.5mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_18x17.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_18x17_5: Footprint = { id: "Capacitor_SMD:CP_Elec_18x17.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 1821, 18.0x22.0mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_18x22
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_18x22: Footprint = { id: "Capacitor_SMD:CP_Elec_18x22", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMT capacitor, aluminium electrolytic, 3x5.3, Cornell Dubilier Electronics
+ * KiCad: Capacitor_SMD:CP_Elec_3x5.3
+ * Keywords: Capacitor Electrolytic */
+export const CP_Elec_3x5_3: Footprint = { id: "Capacitor_SMD:CP_Elec_3x5.3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 3.0x5.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_3x5.4
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_3x5_4: Footprint = { id: "Capacitor_SMD:CP_Elec_3x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 4.0x3.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x3.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x3_9: Footprint = { id: "Capacitor_SMD:CP_Elec_4x3.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 4.0x3mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x3: Footprint = { id: "Capacitor_SMD:CP_Elec_4x3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 4.0x4.5mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x4.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x4_5: Footprint = { id: "Capacitor_SMD:CP_Elec_4x4.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay, 4.0x5.3mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x5.3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x5_3: Footprint = { id: "Capacitor_SMD:CP_Elec_4x5.3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic A5 / Nichicon, 4.0x5.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x5.4
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x5_4: Footprint = { id: "Capacitor_SMD:CP_Elec_4x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, United Chemi-Con, 4.0x5.7mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x5.7
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x5_7: Footprint = { id: "Capacitor_SMD:CP_Elec_4x5.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic, 4.0x5.8mm
+ * KiCad: Capacitor_SMD:CP_Elec_4x5.8
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_4x5_8: Footprint = { id: "Capacitor_SMD:CP_Elec_4x5.8", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 5.0x3.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x3.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x3_9: Footprint = { id: "Capacitor_SMD:CP_Elec_5x3.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 5.0x3.0mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x3: Footprint = { id: "Capacitor_SMD:CP_Elec_5x3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic B45, 5.0x4.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x4.4
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x4_4: Footprint = { id: "Capacitor_SMD:CP_Elec_5x4.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 5.0x4.5mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x4.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x4_5: Footprint = { id: "Capacitor_SMD:CP_Elec_5x4.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 5.0x5.3mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x5.3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x5_3: Footprint = { id: "Capacitor_SMD:CP_Elec_5x5.3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 5.0x5.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x5.4
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x5_4: Footprint = { id: "Capacitor_SMD:CP_Elec_5x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, United Chemi-Con, 5.0x5.7mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x5.7
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x5_7: Footprint = { id: "Capacitor_SMD:CP_Elec_5x5.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic, 5.0x5.8mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x5.8
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x5_8: Footprint = { id: "Capacitor_SMD:CP_Elec_5x5.8", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic B6, 5.0x5.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_5x5.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_5x5_9: Footprint = { id: "Capacitor_SMD:CP_Elec_5x5.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 6.3x3.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x3.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x3_9: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x3.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 6.3x3.0mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x3: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 6.3x4.5mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x4.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x4_5: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x4.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic C5, 6.3x4.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x4.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x4_9: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x4.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, United Chemi-Con, 6.3x5.2mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.2
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_2: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.2", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Cornell Dubilier, 6.3x5.3mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.3
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_3: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic C55, 6.3x5.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.4
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_4: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 6.3x5.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.4_Nichicon
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_4_Nichicon: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.4_Nichicon", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, United Chemi-Con, 6.3x5.7mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.7
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_7: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 6.3x5.8mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.8
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_8: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.8", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic C6, 6.3x5.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x5.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x5_9: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x5.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 6.3x7.7mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x7.7
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x7_7: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x7.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic C10, 6.3x9.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_6.3x9.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_6_3x9_9: Footprint = { id: "Capacitor_SMD:CP_Elec_6.3x9.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Vishay 0810, 8.0x10.5mm, http://www.vishay.com/docs/28395/150crz.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_8x10.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x10_5: Footprint = { id: "Capacitor_SMD:CP_Elec_8x10.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 8.0x10mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x10
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x10: Footprint = { id: "Capacitor_SMD:CP_Elec_8x10", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic E12, 8.0x11.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x11.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x11_9: Footprint = { id: "Capacitor_SMD:CP_Elec_8x11.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 8.0x5.4mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x5.4
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x5_4: Footprint = { id: "Capacitor_SMD:CP_Elec_8x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Nichicon, 8.0x6.2mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x6.2
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x6_2: Footprint = { id: "Capacitor_SMD:CP_Elec_8x6.2", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Rubycon, 8.0x6.5mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x6.5
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x6_5: Footprint = { id: "Capacitor_SMD:CP_Elec_8x6.5", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, United Chemi-Con, 8.0x6.7mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x6.7
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x6_7: Footprint = { id: "Capacitor_SMD:CP_Elec_8x6.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic, Panasonic E7, 8.0x6.9mm
+ * KiCad: Capacitor_SMD:CP_Elec_8x6.9
+ * Keywords: capacitor electrolytic */
+export const CP_Elec_8x6_9: Footprint = { id: "Capacitor_SMD:CP_Elec_8x6.9", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** 5.5V, 470mF supercapacitor, 45mohm, -40ºC to +70ºC, https://www.cap-xx.com/wp-content/uploads/datasheets/CAP-XX-DMF470mF-Datasheet.pdf
+ * KiCad: Capacitor_SMD:CP_Elec_CAP-XX_DMF3Zxxxxxxxx3D
+ * Keywords: supercap */
+export const CP_Elec_CAP_XX_DMF3Zxxxxxxxx3D: Footprint = { id: "Capacitor_SMD:CP_Elec_CAP-XX_DMF3Zxxxxxxxx3D", ...{"pads":["1","2","3"],"mounting":"smd"} }
+
+/** Capacitor SMD 01005 (0402 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.vishay.com/docs/20056/crcw01005e3.pdf)
+ * KiCad: Capacitor_SMD:C_01005_0402Metric
+ * Keywords: capacitor */
+export const C_01005_0402Metric: Footprint = { id: "Capacitor_SMD:C_01005_0402Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 01005 (0402 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: http://www.vishay.com/docs/20056/crcw01005e3.pdf)
+ * KiCad: Capacitor_SMD:C_01005_0402Metric_Pad0.57x0.30mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_01005_0402Metric_Pad0_57x0_30mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_01005_0402Metric_Pad0.57x0.30mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)
+ * KiCad: Capacitor_SMD:C_0201_0603Metric
+ * Keywords: capacitor */
+export const C_0201_0603Metric: Footprint = { id: "Capacitor_SMD:C_0201_0603Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)
+ * KiCad: Capacitor_SMD:C_0201_0603Metric_Pad0.64x0.40mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_0201_0603Metric_Pad0_64x0_40mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_0201_0603Metric_Pad0.64x0.40mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_0402_1005Metric
+ * Keywords: capacitor */
+export const C_0402_1005Metric: Footprint = { id: "Capacitor_SMD:C_0402_1005Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_0402_1005Metric_Pad0_74x0_62mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0504 (1310 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_0504_1310Metric
+ * Keywords: capacitor */
+export const C_0504_1310Metric: Footprint = { id: "Capacitor_SMD:C_0504_1310Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0504 (1310 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_0504_1310Metric_Pad0.83x1.28mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_0504_1310Metric_Pad0_83x1_28mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_0504_1310Metric_Pad0.83x1.28mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_0603_1608Metric
+ * Keywords: capacitor */
+export const C_0603_1608Metric: Footprint = { id: "Capacitor_SMD:C_0603_1608Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_0603_1608Metric_Pad1_08x0_95mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)
+ * KiCad: Capacitor_SMD:C_0805_2012Metric
+ * Keywords: capacitor */
+export const C_0805_2012Metric: Footprint = { id: "Capacitor_SMD:C_0805_2012Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)
+ * KiCad: Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_0805_2012Metric_Pad1_18x1_45mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1206_3216Metric
+ * Keywords: capacitor */
+export const C_1206_3216Metric: Footprint = { id: "Capacitor_SMD:C_1206_3216Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_1206_3216Metric_Pad1_33x1_80mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1210_3225Metric
+ * Keywords: capacitor */
+export const C_1210_3225Metric: Footprint = { id: "Capacitor_SMD:C_1210_3225Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_1210_3225Metric_Pad1_33x2_70mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1808 (4520 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: datasheet page 3, https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_en.pdf)
+ * KiCad: Capacitor_SMD:C_1808_4520Metric
+ * Keywords: capacitor */
+export const C_1808_4520Metric: Footprint = { id: "Capacitor_SMD:C_1808_4520Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1808 (4520 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: datasheet page 3, https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_en.pdf)
+ * KiCad: Capacitor_SMD:C_1808_4520Metric_Pad1.72x2.30mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_1808_4520Metric_Pad1_72x2_30mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_1808_4520Metric_Pad1.72x2.30mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1812_4532Metric
+ * Keywords: capacitor */
+export const C_1812_4532Metric: Footprint = { id: "Capacitor_SMD:C_1812_4532Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_1812_4532Metric_Pad1_57x3_40mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1825 (4564 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1825_4564Metric
+ * Keywords: capacitor */
+export const C_1825_4564Metric: Footprint = { id: "Capacitor_SMD:C_1825_4564Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 1825 (4564 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size from: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)
+ * KiCad: Capacitor_SMD:C_1825_4564Metric_Pad1.57x6.80mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_1825_4564Metric_Pad1_57x6_80mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_1825_4564Metric_Pad1.57x6.80mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 2220 (5750 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)
+ * KiCad: Capacitor_SMD:C_2220_5750Metric
+ * Keywords: capacitor */
+export const C_2220_5750Metric: Footprint = { id: "Capacitor_SMD:C_2220_5750Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 2220 (5750 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)
+ * KiCad: Capacitor_SMD:C_2220_5750Metric_Pad1.97x5.40mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_2220_5750Metric_Pad1_97x5_40mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_2220_5750Metric_Pad1.97x5.40mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 2225 (5664 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)
+ * KiCad: Capacitor_SMD:C_2225_5664Metric
+ * Keywords: capacitor */
+export const C_2225_5664Metric: Footprint = { id: "Capacitor_SMD:C_2225_5664Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 2225 (5664 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)
+ * KiCad: Capacitor_SMD:C_2225_5664Metric_Pad1.80x6.60mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_2225_5664Metric_Pad1_80x6_60mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_2225_5664Metric_Pad1.80x6.60mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 3640 (9110 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)
+ * KiCad: Capacitor_SMD:C_3640_9110Metric
+ * Keywords: capacitor */
+export const C_3640_9110Metric: Footprint = { id: "Capacitor_SMD:C_3640_9110Metric", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** Capacitor SMD 3640 (9110 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)
+ * KiCad: Capacitor_SMD:C_3640_9110Metric_Pad2.10x10.45mm_HandSolder
+ * Keywords: capacitor handsolder */
+export const C_3640_9110Metric_Pad2_10x10_45mm_HandSolder: Footprint = { id: "Capacitor_SMD:C_3640_9110Metric_Pad2.10x10.45mm_HandSolder", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 10.0x10.2mm
+ * KiCad: Capacitor_SMD:C_Elec_10x10.2
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_10x10_2: Footprint = { id: "Capacitor_SMD:C_Elec_10x10.2", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 3.0x5.4mm
+ * KiCad: Capacitor_SMD:C_Elec_3x5.4
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_3x5_4: Footprint = { id: "Capacitor_SMD:C_Elec_3x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 4.0x5.4mm
+ * KiCad: Capacitor_SMD:C_Elec_4x5.4
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_4x5_4: Footprint = { id: "Capacitor_SMD:C_Elec_4x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 4.0x5.8mm
+ * KiCad: Capacitor_SMD:C_Elec_4x5.8
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_4x5_8: Footprint = { id: "Capacitor_SMD:C_Elec_4x5.8", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 5.0x5.4mm
+ * KiCad: Capacitor_SMD:C_Elec_5x5.4
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_5x5_4: Footprint = { id: "Capacitor_SMD:C_Elec_5x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 5.0x5.8mm
+ * KiCad: Capacitor_SMD:C_Elec_5x5.8
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_5x5_8: Footprint = { id: "Capacitor_SMD:C_Elec_5x5.8", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 6.3x5.4mm
+ * KiCad: Capacitor_SMD:C_Elec_6.3x5.4
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_6_3x5_4: Footprint = { id: "Capacitor_SMD:C_Elec_6.3x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 6.3x5.8mm
+ * KiCad: Capacitor_SMD:C_Elec_6.3x5.8
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_6_3x5_8: Footprint = { id: "Capacitor_SMD:C_Elec_6.3x5.8", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 6.3x7.7mm
+ * KiCad: Capacitor_SMD:C_Elec_6.3x7.7
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_6_3x7_7: Footprint = { id: "Capacitor_SMD:C_Elec_6.3x7.7", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 8.0x10.2mm
+ * KiCad: Capacitor_SMD:C_Elec_8x10.2
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_8x10_2: Footprint = { id: "Capacitor_SMD:C_Elec_8x10.2", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 8.0x5.4mm
+ * KiCad: Capacitor_SMD:C_Elec_8x5.4
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_8x5_4: Footprint = { id: "Capacitor_SMD:C_Elec_8x5.4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** SMD capacitor, aluminum electrolytic nonpolar, 8.0x6.2mm
+ * KiCad: Capacitor_SMD:C_Elec_8x6.2
+ * Keywords: capacitor electrolytic nonpolar */
+export const C_Elec_8x6_2: Footprint = { id: "Capacitor_SMD:C_Elec_8x6.2", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
+ * KiCad: Capacitor_SMD:C_Trimmer_Murata_TZB4-A
+ * Keywords:  Murata TZB4 TZB4-A */
+export const C_Trimmer_Murata_TZB4_A: Footprint = { id: "Capacitor_SMD:C_Trimmer_Murata_TZB4-A", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
+ * KiCad: Capacitor_SMD:C_Trimmer_Murata_TZB4-B
+ * Keywords:  Murata TZB4 TZB4-A */
+export const C_Trimmer_Murata_TZB4_B: Footprint = { id: "Capacitor_SMD:C_Trimmer_Murata_TZB4-B", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
+ * KiCad: Capacitor_SMD:C_Trimmer_Murata_TZC3
+ * Keywords:  Murata TZC3 */
+export const C_Trimmer_Murata_TZC3: Footprint = { id: "Capacitor_SMD:C_Trimmer_Murata_TZC3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
+ * KiCad: Capacitor_SMD:C_Trimmer_Murata_TZR1
+ * Keywords:  Murata TZR1 */
+export const C_Trimmer_Murata_TZR1: Footprint = { id: "Capacitor_SMD:C_Trimmer_Murata_TZR1", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
+ * KiCad: Capacitor_SMD:C_Trimmer_Murata_TZW4
+ * Keywords:  Murata TZW4 */
+export const C_Trimmer_Murata_TZW4: Footprint = { id: "Capacitor_SMD:C_Trimmer_Murata_TZW4", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
+ * KiCad: Capacitor_SMD:C_Trimmer_Murata_TZY2
+ * Keywords:  Murata TZY2 */
+export const C_Trimmer_Murata_TZY2: Footprint = { id: "Capacitor_SMD:C_Trimmer_Murata_TZY2", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://media.wix.com/ugd/d86717_38d9821e12823a7aa9cef38c6c2a73cc.pdf
+ * KiCad: Capacitor_SMD:C_Trimmer_Sprague-Goodman_SGC3
+ * Keywords:  Sprague Goodman SGC3 */
+export const C_Trimmer_Sprague_Goodman_SGC3: Footprint = { id: "Capacitor_SMD:C_Trimmer_Sprague-Goodman_SGC3", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
+ * KiCad: Capacitor_SMD:C_Trimmer_Voltronics_JN
+ * Keywords:  Voltronics JN */
+export const C_Trimmer_Voltronics_JN: Footprint = { id: "Capacitor_SMD:C_Trimmer_Voltronics_JN", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
+ * KiCad: Capacitor_SMD:C_Trimmer_Voltronics_JQ
+ * Keywords:  Voltronics JQ */
+export const C_Trimmer_Voltronics_JQ: Footprint = { id: "Capacitor_SMD:C_Trimmer_Voltronics_JQ", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
+ * KiCad: Capacitor_SMD:C_Trimmer_Voltronics_JR
+ * Keywords:  Voltronics JR */
+export const C_Trimmer_Voltronics_JR: Footprint = { id: "Capacitor_SMD:C_Trimmer_Voltronics_JR", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
+ * KiCad: Capacitor_SMD:C_Trimmer_Voltronics_JV
+ * Keywords:  Voltronics JV */
+export const C_Trimmer_Voltronics_JV: Footprint = { id: "Capacitor_SMD:C_Trimmer_Voltronics_JV", ...{"pads":["1","2"],"mounting":"smd"} }
+
+/** trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
+ * KiCad: Capacitor_SMD:C_Trimmer_Voltronics_JZ
+ * Keywords:  Voltronics JR */
+export const C_Trimmer_Voltronics_JZ: Footprint = { id: "Capacitor_SMD:C_Trimmer_Voltronics_JZ", ...{"pads":["1","2"],"mounting":"smd"} }

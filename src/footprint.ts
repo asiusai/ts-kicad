@@ -1,7 +1,8 @@
 /** Generated metadata points to native geometry; manufacturing choices belong in the BOM. */
 export type Footprint = {
   readonly id: string
-  readonly file: string
+  /** Custom native file; omit to resolve the installed KiCad library by id. */
+  readonly file?: string
   /** Base for native ${KIPRJMOD} model references, when using a project library. */
   readonly projectDirectory?: string
   /** Unique numbered copper pads; repeated pad numbers are represented once. */

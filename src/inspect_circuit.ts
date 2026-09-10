@@ -6,11 +6,16 @@ import { resolve } from 'node:path'
 import { Project, validateNetScopes } from './index'
 
 export async function main(args: string[]) {
-if (!args.length) throw new Error('Usage: ts-kicad inspect entry.ts [other.ts ...]')
+if (!args.length) throw new Error('Circuit inspection requires an entry file')
 const roots: Component<string>[] = []
+let project: Project | undefined
 // Load all modules before traversing: later entrypoints may attach to earlier ones.
 for (const file of args) {
   const model = await import(pathToFileURL(resolve(file)).href)
+  if (model.default instanceof Project) {
+    if (project && project !== model.default) throw new Error('Use one Project with a single bom for all entries')
+    project = model.default
+  }
   const exported: readonly unknown[] = model.default instanceof Project ? model.default.options.entries : Array.isArray(model.default) ? model.default : [model.default]
   if ((!exported.length && !(model.default instanceof Project)) || exported.some(part => !(part instanceof Component))) {
     throw new Error(file + ': default-export a Project, component or nonempty array of components')
@@ -18,10 +23,10 @@ for (const file of args) {
   roots.push(...exported as Component<string>[])
 }
 const entries = circuitComponents(...roots)
-const sheetNames = new Map(entries.map(([name, component]) => [name, component.sheetName ?? 'Circuit']))
+const sheetNames = new Map(entries.map(([name, component]) => [name, component.sheetName]))
 const references = assignReferences(entries)
 for (const [name, component] of entries) component.ref ??= references.get(name)
-applyBom(entries.map(([, component]) => component), [...new Set(roots.flatMap(root => root.bom ?? []))])
+applyBom(entries.map(([, component]) => component), project?.options.bom ?? [])
 validateBom(entries)
 validatePins(entries)
 validateNetScopes(entries)
@@ -82,4 +87,9 @@ const result = entries.map(([name, component]) => ({
 }))
 console.log(JSON.stringify(result))
 
+}
+
+if (import.meta.main) {
+  try { await main(process.argv.slice(2)) }
+  catch (error) { console.error(error instanceof Error ? error.message : String(error)); process.exitCode = 1 }
 }

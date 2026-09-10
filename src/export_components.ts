@@ -1,12 +1,12 @@
 import { Component } from './index'
-import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs'
-import { basename, dirname, join } from 'node:path'
-import { type Xml, q, readNetlist, baseImport, cli } from './kicad_io'
+import { existsSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
+import { type Xml, q } from './kicad_io'
 export const identifier = (value: string) => { const s = value.replace(/[^A-Za-z0-9_$]/g, '_') || 'Symbol'; return /^\d/.test(s) ? '_' + s : s }
 export type Library = { className: string; mapping: Record<string, string>; source?: string; exportName?: string }
 export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builtin?: boolean; symbolSource?: string } = {}) {
   const reserved = new Component({})
-  const catalogPath = join(import.meta.dir, '../components/catalog.ts')
+  const catalogPath = join(import.meta.dir, '../lib/symbols/catalog.ts')
   const catalog: Record<string, string> = !options.builtin && existsSync(catalogPath) ? JSON.parse(readFileSync(catalogPath, 'utf8').slice('export default '.length)) : {}
   const libraries: Record<string, Library> = {}, classes = new Set<string>()
   let text = `// Generated from KiCad symbols by export_components.ts.\nimport { Component } from ${q(base)};\n\n`
@@ -37,7 +37,7 @@ export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builti
     libraries[key] = { className: cls, mapping }
     if (catalog[normalized]) {
       libraries[key].exportName = catalog[normalized]
-      libraries[key].source = 'ts-kicad/components/' + normalized.split(':')[0]
+      libraries[key].source = 'ts-kicad/lib/symbols/' + normalized.split(':')[0]
       continue
     }
     const prefix = lib.all('fields/field').find(f => f.get('name') === 'Reference')?.text ?? 'U'
@@ -46,33 +46,20 @@ export function renderComponents(tree: Xml, base = 'ts-kicad', options: { builti
     const filters = lib.all('footprints/fp').map(f => f.text).filter(Boolean)
     if (filters.length) text += ' * Footprint filters: ' + doc(filters.join(', ')) + '.\n'
     if (lib.value('docs')) text += ' * @see ' + doc(lib.value('docs')) + '\n'
-    for (const [field, label] of [['power', 'Power symbol'], ['keywords', 'Keywords'], ['defaultFootprint', 'Default footprint'], ['units', 'Units'], ['inBom', 'Included in BOM'], ['onBoard', 'Placed on board']]) {
+    for (const [field, label] of [['power', 'Power symbol'], ['keywords', 'Keywords'], ['defaultFootprint', 'Default footprint']]) {
       if (lib.value(field)) text += ` * ${label}: ${doc(lib.value(field))}.\n`
     }
     text += ` */\nexport class ${cls} extends Component.withPins({\n`
-    for (const [name, number] of Object.entries(mapping)) {
-      const pin = pins.find(p => p.get('num') === number)!
-      text += `  /** ${doc(`Physical pin ${number}: ${pin.get('name') || 'unnamed'}; ${pin.get('type')}.`)} */\n  ${q(name)}: ${q(number)},\n`
-    }
+    for (const [name, number] of Object.entries(mapping)) text += `  ${q(name)}: ${q(number)},\n`
     text += '}) {\n'
     if (options.symbolSource) text += `  override symbolSource = fileURLToPath(new URL(${q(options.symbolSource)}, import.meta.url));\n`
     const flags = Object.fromEntries([['inBom', 'exclude_from_bom'], ['onBoard', 'exclude_from_board']].filter(([field]) => lib.value(field) === 'no').map(([, property]) => [property, null]))
-    if (Object.keys(flags).length) text += `  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {\n    super({ ${lib.value('power') ? `value: ${q(lib.get('part'))}, ` : ''}...opts, properties: { ...${q(flags)}, ...opts.properties } });\n  }\n`
+    const pinTypes = Object.entries(mapping).map(([name, number]) => `${/^[A-Za-z_$][\w$]*$/.test(name) ? name : q(name)}: ${q(pins.find(pin => pin.get('num') === number)!.get('type') || 'unspecified')}`).join(', ')
+    text += `  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {\n    super({ ${lib.value('power') ? `value: ${q(lib.get('part'))}, ` : ''}...opts, pinTypes: { ${pinTypes}${pinTypes ? ', ' : ''}...opts.pinTypes }${Object.keys(flags).length ? `, properties: { ...${q(flags)}, ...opts.properties }` : ''} });\n  }\n`
     text += `  override schema = ${q(key)};\n  override referencePrefix = ${q(prefix)};\n}\n\n`
   }
   for (const [id, name, helper] of [['Device:C', 'C', 'c'], ['Device:R', 'R', 'r']]) {
     if (libraries[id] && !libraries[id].source) text += `export const ${helper} = (opts: ConstructorParameters<typeof ${libraries[id].className}>[0] = {}) => new ${libraries[id].className}(opts);\n`
   }
-  return { text, libraries }
-}
-export async function main(args: string[]) {
-  const { positionals: [source, output], values } = cli({}, args)
-  if (!source || !output) throw new Error('Usage: ts-kicad symbols source.kicad_sch output.ts [--base-import path]')
-  const tree = source.endsWith('.kicad_sym')
-    ? (await import('./generate_components')).libraryXml(basename(source, '.kicad_sym'), (await import('./symbol_library')).readSymbolLibrary(source))
-    : readNetlist(source)
-  const result = renderComponents(tree, values['base-import'] as string ?? baseImport(dirname(output)))
-  if (!Object.keys(result.libraries).length) throw new Error('No symbol definitions found')
-  mkdirSync(dirname(output), { recursive: true }); writeFileSync(output, result.text)
-  console.log(`Exported ${Object.keys(result.libraries).length} symbol classes to ${output}`)
+  return { text: text.replace(/[ \t]+$/gm, '').trimEnd() + '\n', libraries }
 }

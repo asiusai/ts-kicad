@@ -3,7 +3,7 @@ import { defaultSettings } from './project_defaults'
 import { mergeSettings } from './merge_settings'
 import { normalizeFootprint } from './normalize_footprint'
 import { validateFootprintPads } from './footprint'
-import { footprintMetadata } from './generate_footprints'
+import { footprintMetadata } from './internal-footprints'
 import { symbolDirectory } from './symbol_library'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { basename, dirname, join, resolve, relative } from 'node:path'
@@ -76,7 +76,7 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
     if (!library || !footprintName || /[\\/]/.test(library+footprintName)) throw new Error('Invalid footprint: '+item.footprint)
     const root = footprintPaths.get(library) ?? footprintRoots.map(p=>join(p,library+'.pretty')).find(existsSync)
     const path = item.footprintSource ?? (root && join(root, footprintName+'.kicad_mod'))
-    if (!path || !existsSync(path)) throw new Error('Footprint not found: '+item.footprint+'. Supply its .pretty directory with --footprints.')
+    if (!path || !existsSync(path)) throw new Error('Footprint not found: '+item.footprint+'. Set Project.footprints to its .pretty directory or use a footprint with a native file.')
     const footprint = parse(normalizeFootprint(readFileSync(path,'utf8')))
     const previous=directLibraries.get(library)
     if(previous&&previous!==dirname(path))throw new Error('Conflicting footprint library paths: '+library)
@@ -99,7 +99,7 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
     if (!item.footprint || Object.hasOwn(item.properties,'exclude_from_board') || item.ref?.startsWith('#')) continue
     validateFootprintPads(item.ref ?? item.name, item.pins.map(pin => pin.number), footprintMetadata(copied.get(item.footprint)!).pads)
   }
-  writeLibraryTable(join(directory,'fp-lib-table'),N('fp_lib_table',N('version',A(7)),...[...usedLibraries].map(library=>N('lib',N('name',library),N('type','KiCad'),N('uri','${KIPRJMOD}/'+relative(directory,directLibraries.get(library)!)),N('options',''),N('descr','Generated project footprints')))))
+  writeLibraryTable(join(directory,'fp-lib-table'),N('fp_lib_table',N('version',A(7)),...[...usedLibraries].map(library=>N('lib',N('name',library),N('type','KiCad'),N('uri',footprintRoots.some(root=>resolve(root,library+'.pretty')===resolve(directLibraries.get(library)!))?'${KICAD10_FOOTPRINT_DIR}/'+library+'.pretty':'${KIPRJMOD}/'+relative(directory,directLibraries.get(library)!)),N('options',''),N('descr','Generated project footprints')))))
   const projectPath = join(directory,name+'.kicad_pro')
   if (!existsSync(projectPath)) {
     const source = options.project ? JSON.parse(readFileSync(options.project,'utf8')) : {}

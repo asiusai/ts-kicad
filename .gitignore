@@ -1,8 +1,10 @@
 node_modules/
-generated/
+outputs/
 *.tgz
 *.kicad_prl
 *-backups/
+.history/
+~*.lck
 .env
 .env.*
 !.env.example

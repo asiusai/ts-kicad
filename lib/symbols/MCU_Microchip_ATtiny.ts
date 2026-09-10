@@ -1,0 +1,8150 @@
+// Generated from KiCad symbols by export_components.ts.
+import { Component } from "ts-kicad";
+
+/**
+ * 12MHz, 512B Flash, 32B SRAM, No EEPROM, DFN-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny4-MA`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*2x2mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.5mm.
+ */
+export class ATtiny4_MA extends Component.withPins({
+  "PB1": "1",
+  "NC_2": "2",
+  "NC_3": "3",
+  "GND": "4",
+  "PB0": "5",
+  "~{RESET}/PB3": "6",
+  "VCC": "7",
+  "PB2": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny4-MA";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, ADC, DFN-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny10-MA`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*2x2mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.5mm.
+ */
+export class ATtiny10_MA extends Component.withPins({
+  "PB1": "1",
+  "NC_2": "2",
+  "NC_3": "3",
+  "GND": "4",
+  "PB0": "5",
+  "~{RESET}/PB3": "6",
+  "VCC": "7",
+  "PB2": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny10-MA";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 512B Flash, 32B SRAM, No EEPROM, SOT-23-6
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny4-TS`. Reference prefix: `U`.
+ * Footprint filters: SOT?23?6*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_TO_SOT_SMD:SOT-23-6.
+ */
+export class ATtiny4_TS extends Component.withPins({
+  "PB0": "1",
+  "GND": "2",
+  "PB1": "3",
+  "PB2": "4",
+  "VCC": "5",
+  "~{RESET}/PB3": "6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny4-TS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, ADC, SOT-23-6
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny10-TS`. Reference prefix: `U`.
+ * Footprint filters: SOT?23?6*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_TO_SOT_SMD:SOT-23-6.
+ */
+export class ATtiny10_TS extends Component.withPins({
+  "PB0": "1",
+  "GND": "2",
+  "PB1": "3",
+  "PB2": "4",
+  "VCC": "5",
+  "~{RESET}/PB3": "6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny10-TS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, DFN-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny102-M`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*3x2mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42505-8-bit-AVR-Microcontrollers-ATtiny102-ATtiny104_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm.
+ */
+export class ATtiny102_M extends Component.withPins({
+  "VCC": "1",
+  "PA0": "2",
+  "PA1": "3",
+  "~{RESET}/PA2": "4",
+  "PB1": "5",
+  "PB2": "6",
+  "PB3": "7",
+  "GND": "8",
+  "NC": "9",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA0: "bidirectional", PA1: "bidirectional", "~{RESET}/PA2": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", GND: "power_in", NC: "no_connect", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny102-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny102-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42505-8-bit-AVR-Microcontrollers-ATtiny102-ATtiny104_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny102_SS extends Component.withPins({
+  "VCC": "1",
+  "PA0": "2",
+  "PA1": "3",
+  "~{RESET}/PA2": "4",
+  "PB1": "5",
+  "PB2": "6",
+  "PB3": "7",
+  "GND": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA0: "bidirectional", PA1: "bidirectional", "~{RESET}/PA2": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny102-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny104-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42505-8-bit-AVR-Microcontrollers-ATtiny102-ATtiny104_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny104_SS extends Component.withPins({
+  "VCC": "1",
+  "PA0": "2",
+  "PA1": "3",
+  "~{RESET}/PA2": "4",
+  "PA3": "5",
+  "PA4": "6",
+  "PA5": "7",
+  "PA6": "8",
+  "PA7": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA0: "bidirectional", PA1: "bidirectional", "~{RESET}/PA2": "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny104-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny13V_10M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", PB4: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny13_20M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", PB4: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DFN-10
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13V-10MM`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*3x3mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-10-1EP_3x3mm_P0.5mm_EP1.75x2.7mm.
+ */
+export class ATtiny13V_10MM extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "PB4": "4",
+  "GND_5": "5",
+  "PB0": "6",
+  "PB1": "7",
+  "NC_8": "8",
+  "PB2": "9",
+  "VCC": "10",
+  "GND_11": "11",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", PB4: "bidirectional", GND_5: "power_in", PB0: "bidirectional", PB1: "bidirectional", NC_8: "no_connect", PB2: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13V-10MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DFN-10
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13-20MM`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*3x3mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-10-1EP_3x3mm_P0.5mm_EP1.75x2.7mm.
+ */
+export class ATtiny13_20MM extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "PB4": "4",
+  "GND_5": "5",
+  "PB0": "6",
+  "PB1": "7",
+  "NC_8": "8",
+  "PB2": "9",
+  "VCC": "10",
+  "GND_11": "11",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", PB4: "bidirectional", GND_5: "power_in", PB0: "bidirectional", PB1: "bidirectional", NC_8: "no_connect", PB2: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13-20MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny13V_10P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny13_20P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8 (208 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13V-10S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny13V_10S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8 (208 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13-20S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny13_20S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8 (150 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13V-10SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny13V_10SS extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13V-10SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8 (150 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13-20SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny13_20SS extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13-20SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny13A_M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", PB4: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DFN-10
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13A-MM`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*3x3mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-10-1EP_3x3mm_P0.5mm_EP1.75x2.7mm.
+ */
+export class ATtiny13A_MM extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "PB4": "4",
+  "GND_5": "5",
+  "PB0": "6",
+  "PB1": "7",
+  "NC_8": "8",
+  "PB2": "9",
+  "VCC": "10",
+  "GND_11": "11",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", PB4: "bidirectional", GND_5: "power_in", PB0: "bidirectional", PB1: "bidirectional", NC_8: "no_connect", PB2: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13A-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny13A_P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8 (208 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13A-S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATtiny13A-Data-Sheet-DS40002307A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny13A_S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13A-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8 (150 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny13A-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny13A_SS extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "GND": "4",
+  "PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny13A-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 64B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny204-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/50002687A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny204_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny204-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1604-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny804_1604-Data-Sheet-40002028A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny1604_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1604-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny406-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Microchip%208bit%20mcu%20AVR%20ATtiny406%20data%20sheet%2040001976A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny406_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny406-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1606-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny806_1606_Data_Sheet_40002029A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny1606_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1606-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny406-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Microchip%208bit%20mcu%20AVR%20ATtiny406%20data%20sheet%2040001976A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny406_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny406-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1606-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny806_1606_Data_Sheet_40002029A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny1606_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1606-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny807-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny807_1607-Data-Sheet-40002030A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny807_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny807-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1607-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny807_1607-Data-Sheet-40002030A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny1607_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1607-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1614-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-data-sheet-40001995A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny1614_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1614-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1616-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3216_ATtiny1616-data-sheet-40001997B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny1616_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1616-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1616-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3216_ATtiny1616-data-sheet-40001997B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny1616_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1616-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1617-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3217_1617-Data-Sheet-40001999B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny1617_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1617-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1624-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1624-26-27-DataSheet-DS40002234A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny1624_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1624-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, TSSOP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1624-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x5mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1624-26-27-DataSheet-DS40002234A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-14_4.4x5mm_P0.65mm.
+ */
+export class ATtiny1624_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1624-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1626-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1624-26-27-DataSheet-DS40002234A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny1626_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1626-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1626-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1624-26-27-DataSheet-DS40002234A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny1626_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1626-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, SSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1626-X`. Reference prefix: `U`.
+ * Footprint filters: SSOP*5.3x7.2mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1624-26-27-DataSheet-DS40002234A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SSOP-20_5.3x7.2mm_P0.65mm.
+ */
+export class ATtiny1626_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1626-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 16kB Flash, 2kB SRAM, 256B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1627-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1624-26-27-DataSheet-DS40002234A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny1627_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1627-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, ADC, ACI, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1634-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8303-8-bit-AVR-Microcontroller-tinyAVR-ATtiny1634_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny1634_M extends Component.withPins({
+  "PA6": "1",
+  "PA5": "2",
+  "PA4": "3",
+  "PA3": "4",
+  "PA2": "5",
+  "PA1": "6",
+  "AREF/PA0": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "XTAL1/PC5": "10",
+  "XTAL2/PC4": "11",
+  "~{RESET}/PC3": "12",
+  "PC2": "13",
+  "PC1": "14",
+  "PC0": "15",
+  "PB3": "16",
+  "PB2": "17",
+  "PB1": "18",
+  "PB0": "19",
+  "PA7": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND_8: "power_in", VCC: "power_in", "XTAL1/PC5": "bidirectional", "XTAL2/PC4": "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA7: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1634-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, ADC, ACI, debugWIRE, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny1634-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8303-8-bit-AVR-Microcontroller-tinyAVR-ATtiny1634_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny1634_S extends Component.withPins({
+  "PB0": "1",
+  "PA7": "2",
+  "PA6": "3",
+  "PA5": "4",
+  "PA4": "5",
+  "PA3": "6",
+  "PA2": "7",
+  "PA1": "8",
+  "AREF/PA0": "9",
+  "GND": "10",
+  "VCC": "11",
+  "XTAL1/PC5": "12",
+  "XTAL2/PC4": "13",
+  "~{RESET}/PC3": "14",
+  "PC2": "15",
+  "PC1": "16",
+  "PC0": "17",
+  "PB3": "18",
+  "PB2": "19",
+  "PB1": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", VCC: "power_in", "XTAL1/PC5": "bidirectional", "XTAL2/PC4": "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny1634-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny87-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8265-8-bit-AVR-Microcontroller-tinyAVR-ATtiny87-ATtiny167_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Automotive.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny87_M extends Component.withPins({
+  "NC_1": "1",
+  "NC_2": "2",
+  "PA3": "3",
+  "AVCC": "4",
+  "AGND": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "NC_8": "8",
+  "PA4": "9",
+  "PA5": "10",
+  "PA6": "11",
+  "AREF/PA7": "12",
+  "NC_13": "13",
+  "~{RESET}/PB7": "14",
+  "PB6": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "XTAL2/PB5": "18",
+  "XTAL1/PB4": "19",
+  "VCC": "20",
+  "GND_21": "21",
+  "NC_22": "22",
+  "NC_23": "23",
+  "NC_24": "24",
+  "PB3": "25",
+  "PB2": "26",
+  "PB1": "27",
+  "PB0": "28",
+  "PA0": "29",
+  "PA1": "30",
+  "PA2": "31",
+  "NC_32": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", NC_13: "no_connect", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", NC_16: "no_connect", NC_17: "no_connect", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND_21: "power_in", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", NC_32: "no_connect", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny87-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 16kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny167-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8265-8-bit-AVR-Microcontroller-tinyAVR-ATtiny87-ATtiny167_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Automotive.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny167_M extends Component.withPins({
+  "NC_1": "1",
+  "NC_2": "2",
+  "PA3": "3",
+  "AVCC": "4",
+  "AGND": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "NC_8": "8",
+  "PA4": "9",
+  "PA5": "10",
+  "PA6": "11",
+  "AREF/PA7": "12",
+  "NC_13": "13",
+  "~{RESET}/PB7": "14",
+  "PB6": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "XTAL2/PB5": "18",
+  "XTAL1/PB4": "19",
+  "VCC": "20",
+  "GND_21": "21",
+  "NC_22": "22",
+  "NC_23": "23",
+  "NC_24": "24",
+  "PB3": "25",
+  "PB2": "26",
+  "PB1": "27",
+  "PB0": "28",
+  "PA0": "29",
+  "PA1": "30",
+  "PA2": "31",
+  "NC_32": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", NC_13: "no_connect", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", NC_16: "no_connect", NC_17: "no_connect", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND_21: "power_in", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", NC_32: "no_connect", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny167-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny87-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8265-8-bit-AVR-Microcontroller-tinyAVR-ATtiny87-ATtiny167_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Automotive.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny87_S extends Component.withPins({
+  "PA0": "1",
+  "PA1": "2",
+  "PA2": "3",
+  "PA3": "4",
+  "AVCC": "5",
+  "AGND": "6",
+  "PA4": "7",
+  "PA5": "8",
+  "PA6": "9",
+  "AREF/PA7": "10",
+  "~{RESET}/PB7": "11",
+  "PB6": "12",
+  "XTAL2/PB5": "13",
+  "XTAL1/PB4": "14",
+  "VCC": "15",
+  "GND": "16",
+  "PB3": "17",
+  "PB2": "18",
+  "PB1": "19",
+  "PB0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny87-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 16kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny167-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8265-8-bit-AVR-Microcontroller-tinyAVR-ATtiny87-ATtiny167_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Automotive.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny167_S extends Component.withPins({
+  "PA0": "1",
+  "PA1": "2",
+  "PA2": "3",
+  "PA3": "4",
+  "AVCC": "5",
+  "AGND": "6",
+  "PA4": "7",
+  "PA5": "8",
+  "PA6": "9",
+  "AREF/PA7": "10",
+  "~{RESET}/PB7": "11",
+  "PB6": "12",
+  "XTAL2/PB5": "13",
+  "XTAL1/PB4": "14",
+  "VCC": "15",
+  "GND": "16",
+  "PB3": "17",
+  "PB2": "18",
+  "PB1": "19",
+  "PB0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny167-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, TSSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny87-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x6.5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8265-8-bit-AVR-Microcontroller-tinyAVR-ATtiny87-ATtiny167_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Automotive.
+ * Default footprint: Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm.
+ */
+export class ATtiny87_X extends Component.withPins({
+  "PA0": "1",
+  "PA1": "2",
+  "PA2": "3",
+  "PA3": "4",
+  "AVCC": "5",
+  "AGND": "6",
+  "PA4": "7",
+  "PA5": "8",
+  "PA6": "9",
+  "AREF/PA7": "10",
+  "~{RESET}/PB7": "11",
+  "PB6": "12",
+  "XTAL2/PB5": "13",
+  "XTAL1/PB4": "14",
+  "VCC": "15",
+  "GND": "16",
+  "PB3": "17",
+  "PB2": "18",
+  "PB1": "19",
+  "PB0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny87-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 16kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, TSSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny167-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x6.5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8265-8-bit-AVR-Microcontroller-tinyAVR-ATtiny87-ATtiny167_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Automotive.
+ * Default footprint: Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm.
+ */
+export class ATtiny167_X extends Component.withPins({
+  "PA0": "1",
+  "PA1": "2",
+  "PA2": "3",
+  "PA3": "4",
+  "AVCC": "5",
+  "AGND": "6",
+  "PA4": "7",
+  "PA5": "8",
+  "PA6": "9",
+  "AREF/PA7": "10",
+  "~{RESET}/PB7": "11",
+  "PB6": "12",
+  "XTAL2/PB5": "13",
+  "XTAL1/PB4": "14",
+  "VCC": "15",
+  "GND": "16",
+  "PB3": "17",
+  "PB2": "18",
+  "PB1": "19",
+  "PB0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny167-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 2kB Flash, 128B SRAM, No EEPROM, UFBGA-15
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny20-CC`. Reference prefix: `U`.
+ * Footprint filters: UFBGA*3.0x3.0mm*Layout4x4*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_BGA:UFBGA-15_3.0x3.0mm_Layout4x4_P0.65mm.
+ */
+export class ATtiny20_CC extends Component.withPins({
+  "PA5": "A2",
+  "PA6": "A3",
+  "PB2": "A4",
+  "PA4": "B1",
+  "PA7": "B2",
+  "PB1": "B3",
+  "~{RESET}/PB3": "B4",
+  "PA3": "C1",
+  "PA2": "C2",
+  "PA1": "C3",
+  "PB0": "C4",
+  "PA0": "D1",
+  "GND_D2": "D2",
+  "GND_D3": "D3",
+  "VCC": "D4",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PB0: "bidirectional", PA0: "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny20-CC";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 2kB Flash, 128B SRAM, No EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny20-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny20_MM extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "PB0": "11",
+  "PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "PA5": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny20-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 2kB Flash, 128B SRAM, No EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny20-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny20_SS extends Component.withPins({
+  "VCC": "1",
+  "PB0": "2",
+  "PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PB0: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny20-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 2kB Flash, 128B SRAM, No EEPROM, WLCSP-12
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny20-U`. Reference prefix: `U`.
+ * Footprint filters: WLCSP*1.403x1.555mm*Layout6x4*P0.4mm*Stagger*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_CSP:WLCSP-12_1.403x1.555mm_Layout6x4_P0.4mm_Stagger.
+ */
+export class ATtiny20_U extends Component.withPins({
+  "PA4": "A1",
+  "PA1": "A3",
+  "PA2": "A5",
+  "PA6": "B2",
+  "GND": "B4",
+  "VCC": "B6",
+  "PA5": "C1",
+  "PA7": "C3",
+  "PB1": "C5",
+  "PB2": "D2",
+  "~{RESET}/PB3": "D4",
+  "PB0": "D6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA6: "bidirectional", GND: "power_in", VCC: "power_in", PA5: "bidirectional", PA7: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", "~{RESET}/PB3": "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny20-U";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 2kB Flash, 128B SRAM, No EEPROM, TSSOP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny20-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-14_4.4x5mm_P0.65mm.
+ */
+export class ATtiny20_X extends Component.withPins({
+  "VCC": "1",
+  "PB0": "2",
+  "PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PB0: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny20-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 64B EEPROM, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny202-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny202-402-AVR-MCU-with-Core-Independent-Peripherals_and-picoPower-40001969A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny202_SS extends Component.withPins({
+  "VCC": "1",
+  "PA6": "2",
+  "PA7": "3",
+  "PA1": "4",
+  "PA2": "5",
+  "~{RESET}/PA0": "6",
+  "PA3": "7",
+  "GND": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny202-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 64B EEPROM, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny212-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001911A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny212_SS extends Component.withPins({
+  "VCC": "1",
+  "PA6": "2",
+  "PA7": "3",
+  "PA1": "4",
+  "PA2": "5",
+  "~{RESET}/PA0": "6",
+  "PA3": "7",
+  "GND": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny212-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 64B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny214-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001912A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny214_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny214-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313V-10M`. Reference prefix: `U`.
+ * Footprint filters: MLF*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:MLF-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny2313V_10M extends Component.withPins({
+  "PD1": "1",
+  "PA1/XTAL2": "2",
+  "PA0/XTAL1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "PD5": "7",
+  "GND_8": "8",
+  "PD6": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "PB6": "16",
+  "PB7": "17",
+  "VCC": "18",
+  "PA2/~{RESET}": "19",
+  "PD0": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313-20M`. Reference prefix: `U`.
+ * Footprint filters: MLF*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:MLF-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny2313_20M extends Component.withPins({
+  "PD1": "1",
+  "PA1/XTAL2": "2",
+  "PA0/XTAL1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "PD5": "7",
+  "GND_8": "8",
+  "PD6": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "PB6": "16",
+  "PB7": "17",
+  "VCC": "18",
+  "PA2/~{RESET}": "19",
+  "PD0": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny2313V_10P extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny2313_20P extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313V-10S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny2313V_10S extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313-20S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny2313_20S extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313A-M`. Reference prefix: `U`.
+ * Footprint filters: MLF*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:MLF-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny2313A_M extends Component.withPins({
+  "PD1": "1",
+  "PA1/XTAL2": "2",
+  "PA0/XTAL1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "PD5": "7",
+  "GND_8": "8",
+  "PD6": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "PB6": "16",
+  "PB7": "17",
+  "VCC": "18",
+  "PA2/~{RESET}": "19",
+  "PD0": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313A-MM`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.45mm_EP1.55x1.55mm.
+ */
+export class ATtiny2313A_MM extends Component.withPins({
+  "PD1": "1",
+  "PA1/XTAL2": "2",
+  "PA0/XTAL1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "PD5": "7",
+  "GND_8": "8",
+  "PD6": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "PB6": "16",
+  "PB7": "17",
+  "VCC": "18",
+  "PA2/~{RESET}": "19",
+  "PD0": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313A-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny2313A_P extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny2313A-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny2313A_S extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny2313A-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny24V_10M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny24_20M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny24V_10P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny24_20P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24V-10SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny24V_10SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24V-10SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24-20SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny24_20SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24-20SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, UFBGA-15
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24A-CC`. Reference prefix: `U`.
+ * Footprint filters: UFBGA*3.0x3.0mm*Layout4x4*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_BGA:UFBGA-15_3.0x3.0mm_Layout4x4_P0.65mm.
+ */
+export class ATtiny24A_CC extends Component.withPins({
+  "PA5": "A2",
+  "PA6": "A3",
+  "PB2": "A4",
+  "PA4": "B1",
+  "PA7": "B2",
+  "XTAL2/PB1": "B3",
+  "~{RESET}/PB3": "B4",
+  "PA3": "C1",
+  "PA2": "C2",
+  "PA1": "C3",
+  "XTAL1/PB0": "C4",
+  "AREF/PA0": "D1",
+  "GND_D2": "D2",
+  "GND_D3": "D3",
+  "VCC": "D4",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "XTAL1/PB0": "bidirectional", "AREF/PA0": "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24A-CC";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny24A_M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24A-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny24A_MM extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24A-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny24A_P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny24A-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny24A_SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny24A-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny25V_10M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "XTAL2/PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "AREF/PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny25_20M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "XTAL2/PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "AREF/PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny25V_10P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny25_20P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-8 (208 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25V-10S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny25V_10S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25-20S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny25_20S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-8 (150 mil)
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25V-10SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny25V_10SS extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25V-10SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny25-20SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny25_20SS extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny25-20SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 8MHz, 2kB Flash, 128B SRAM, 128B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny26L-8M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1477.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny26L_8M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny26L-8M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 2kB Flash, 128B SRAM, 128B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny26-16M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1477.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny26_16M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny26-16M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 8MHz, 2kB Flash, 128B SRAM, 128B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny26L-8P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1477.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny26L_8P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "GND_16": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny26L-8P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 2kB Flash, 128B SRAM, 128B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny26-16P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1477.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny26_16P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "GND_16": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny26-16P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 8MHz, 2kB Flash, 128B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny26L-8S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1477.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny26L_8S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "GND_16": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny26L-8S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 2kB Flash, 128B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny26-16S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1477.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny26_16S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "GND_16": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny26-16S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny461V_10M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny261A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny261A_M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny261A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny461V_10P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny261A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny261A_P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny261A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461V-10S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny461V_10S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny261A-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny261A_S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny261A-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, TSSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny261A-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x6.5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm.
+ */
+export class ATtiny261A_X extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny261A-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 1.2MHz, 2kB Flash, No SRAM, No EEPROM, TQFP-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny28V-1A`. Reference prefix: `U`.
+ * Footprint filters: TQFP*7x7mm*P0.8mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1062.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR IR.
+ * Default footprint: Package_QFP:TQFP-32_7x7mm_P0.8mm.
+ */
+export class ATtiny28V_1A extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "NC_3": "3",
+  "VCC_4": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1": "7",
+  "XTAL2": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "VCC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+  "NC_22": "22",
+  "PB6": "23",
+  "PB7": "24",
+  "PA2": "25",
+  "PA3": "26",
+  "PA1": "27",
+  "PA0": "28",
+  "~{RESET}": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny28V-1A";
+  override referencePrefix = "U";
+}
+
+/**
+ * 4MHz, 2kB Flash, No SRAM, No EEPROM, TQFP-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny28L-4A`. Reference prefix: `U`.
+ * Footprint filters: TQFP*7x7mm*P0.8mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1062.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR IR.
+ * Default footprint: Package_QFP:TQFP-32_7x7mm_P0.8mm.
+ */
+export class ATtiny28L_4A extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "NC_3": "3",
+  "VCC_4": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1": "7",
+  "XTAL2": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "VCC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+  "NC_22": "22",
+  "PB6": "23",
+  "PB7": "24",
+  "PA2": "25",
+  "PA3": "26",
+  "PA1": "27",
+  "PA0": "28",
+  "~{RESET}": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny28L-4A";
+  override referencePrefix = "U";
+}
+
+/**
+ * 1.2MHz, 2kB Flash, No SRAM, No EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny28V-1M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1062.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR IR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny28V_1M extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "NC_3": "3",
+  "VCC_4": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1": "7",
+  "XTAL2": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "VCC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+  "NC_22": "22",
+  "PB6": "23",
+  "PB7": "24",
+  "PA2": "25",
+  "PA3": "26",
+  "PA1": "27",
+  "PA0": "28",
+  "~{RESET}": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny28V-1M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 4MHz, 2kB Flash, No SRAM, No EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny28L-4M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1062.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR IR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny28L_4M extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "NC_3": "3",
+  "VCC_4": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1": "7",
+  "XTAL2": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "VCC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+  "NC_22": "22",
+  "PB6": "23",
+  "PB7": "24",
+  "PA2": "25",
+  "PA3": "26",
+  "PA1": "27",
+  "PA0": "28",
+  "~{RESET}": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny28L-4M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 1.2MHz, 2kB Flash, No SRAM, No EEPROM, DIP-28
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny28V-1P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1062.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR IR.
+ * Default footprint: Package_DIP:DIP-28_W7.62mm.
+ */
+export class ATtiny28V_1P extends Component.withPins({
+  "~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "VCC_7": "7",
+  "GND_8": "8",
+  "XTAL1": "9",
+  "XTAL2": "10",
+  "PD5": "11",
+  "PD6": "12",
+  "PD7": "13",
+  "PB0": "14",
+  "PB1": "15",
+  "PB2": "16",
+  "PB3": "17",
+  "PB4": "18",
+  "PB5": "19",
+  "VCC_20": "20",
+  "NC": "21",
+  "GND_22": "22",
+  "PB6": "23",
+  "PB7": "24",
+  "PA2": "25",
+  "PA3": "26",
+  "PA1": "27",
+  "PA0": "28",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC_7: "power_in", GND_8: "power_in", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_20: "passive", NC: "no_connect", GND_22: "passive", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny28V-1P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 4MHz, 2kB Flash, No SRAM, No EEPROM, DIP-28
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny28L-4P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc1062.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR IR.
+ * Default footprint: Package_DIP:DIP-28_W7.62mm.
+ */
+export class ATtiny28L_4P extends Component.withPins({
+  "~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "VCC_7": "7",
+  "GND_8": "8",
+  "XTAL1": "9",
+  "XTAL2": "10",
+  "PD5": "11",
+  "PD6": "12",
+  "PD7": "13",
+  "PB0": "14",
+  "PB1": "15",
+  "PB2": "16",
+  "PB3": "17",
+  "PB4": "18",
+  "PB5": "19",
+  "VCC_20": "20",
+  "NC": "21",
+  "GND_22": "22",
+  "PB6": "23",
+  "PB7": "24",
+  "PA2": "25",
+  "PA3": "26",
+  "PA1": "27",
+  "PA0": "28",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC_7: "power_in", GND_8: "power_in", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_20: "passive", NC: "no_connect", GND_22: "passive", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny28L-4P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 2kB SRAM, 256B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3216-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3216_ATtiny1616-data-sheet-40001997B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny3216_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3216-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 2kB SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3216-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3216_ATtiny1616-data-sheet-40001997B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny3216_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3216-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 2kB SRAM, 256B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3217-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3217_1617-Data-Sheet-40001999B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny3217_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3217-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 3kB SRAM, 256B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3224-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3224-3226-3227-Data-Sheet-DS40002345A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny3224_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3224-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 3kB SRAM, 256B EEPROM, TSSOP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3224-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x5mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3224-3226-3227-Data-Sheet-DS40002345A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-14_4.4x5mm_P0.65mm.
+ */
+export class ATtiny3224_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3224-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 3kB SRAM, 256B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3226-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3224-3226-3227-Data-Sheet-DS40002345A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny3226_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3226-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 3kB SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3226-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3224-3226-3227-Data-Sheet-DS40002345A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny3226_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3226-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 3kB SRAM, 256B EEPROM, SSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3226-X`. Reference prefix: `U`.
+ * Footprint filters: SSOP*5.3x7.2mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3224-3226-3227-Data-Sheet-DS40002345A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SSOP-20_5.3x7.2mm_P0.65mm.
+ */
+export class ATtiny3226_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3226-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 32kB Flash, 3kB SRAM, 256B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny3227-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny3224-3226-3227-Data-Sheet-DS40002345A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny3227_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny3227-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, No EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny40-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8263-8-bit-avr-microcontroller-tinyavr-attiny40_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny40_MM extends Component.withPins({
+  "PA6": "1",
+  "PA5": "2",
+  "PA4": "3",
+  "PA3": "4",
+  "PA2": "5",
+  "PA1": "6",
+  "PA0": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "PC5": "10",
+  "PC4": "11",
+  "~{RESET}/PC3": "12",
+  "PC2": "13",
+  "PC1": "14",
+  "PC0": "15",
+  "PB3": "16",
+  "PB2": "17",
+  "PB1": "18",
+  "PB0": "19",
+  "PA7": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND_8: "power_in", VCC: "power_in", PC5: "bidirectional", PC4: "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA7: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny40-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, No EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny40-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8263-8-bit-avr-microcontroller-tinyavr-attiny40_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny40_S extends Component.withPins({
+  "PB0": "1",
+  "PA7": "2",
+  "PA6": "3",
+  "PA5": "4",
+  "PA4": "5",
+  "PA3": "6",
+  "PA2": "7",
+  "PA1": "8",
+  "PA0": "9",
+  "GND": "10",
+  "VCC": "11",
+  "PC5": "12",
+  "PC4": "13",
+  "~{RESET}/PC3": "14",
+  "PC2": "15",
+  "PC1": "16",
+  "PC0": "17",
+  "PB3": "18",
+  "PB2": "19",
+  "PB1": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", VCC: "power_in", PC5: "bidirectional", PC4: "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny40-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, No EEPROM, TSSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny40-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x6.5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8263-8-bit-avr-microcontroller-tinyavr-attiny40_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm.
+ */
+export class ATtiny40_X extends Component.withPins({
+  "PB0": "1",
+  "PA7": "2",
+  "PA6": "3",
+  "PA5": "4",
+  "PA4": "5",
+  "PA3": "6",
+  "PA2": "7",
+  "PA1": "8",
+  "PA0": "9",
+  "GND": "10",
+  "VCC": "11",
+  "PC5": "12",
+  "PC4": "13",
+  "~{RESET}/PC3": "14",
+  "PC2": "15",
+  "PC1": "16",
+  "PC0": "17",
+  "PB3": "18",
+  "PB2": "19",
+  "PB1": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", VCC: "power_in", PC5: "bidirectional", PC4: "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny40-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny402-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny202-402-AVR-MCU-with-Core-Independent-Peripherals_and-picoPower-40001969A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny402_SS extends Component.withPins({
+  "VCC": "1",
+  "PA6": "2",
+  "PA7": "3",
+  "PA1": "4",
+  "PA2": "5",
+  "~{RESET}/PA0": "6",
+  "PA3": "7",
+  "GND": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny402-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny404-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/50002687A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny404_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny404-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny412-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x4.9mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001911A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm.
+ */
+export class ATtiny412_SS extends Component.withPins({
+  "VCC": "1",
+  "PA6": "2",
+  "PA7": "3",
+  "PA1": "4",
+  "PA2": "5",
+  "~{RESET}/PA0": "6",
+  "PA3": "7",
+  "GND": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny412-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny414-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001912A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny414_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny414-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny416-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001913A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny416_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny416-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny416-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001913A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny416_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny416-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 128B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny417-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001901B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny417_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny417-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 512B SRAM, 128B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny424-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny424_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny424-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 512B SRAM, 128B EEPROM, TSSOP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny424-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x5mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-14_4.4x5mm_P0.65mm.
+ */
+export class ATtiny424_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny424-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 512B SRAM, 128B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny426-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny426_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny426-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 512B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny426-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny426_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny426-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 512B SRAM, 128B EEPROM, SSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny426-X`. Reference prefix: `U`.
+ * Footprint filters: SSOP*5.3x7.2mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SSOP-20_5.3x7.2mm_P0.65mm.
+ */
+export class ATtiny426_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny426-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 512B SRAM, 128B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny427-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny427_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny427-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny4313-M`. Reference prefix: `U`.
+ * Footprint filters: MLF*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:MLF-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny4313_M extends Component.withPins({
+  "PD1": "1",
+  "PA1/XTAL2": "2",
+  "PA0/XTAL1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "PD5": "7",
+  "GND_8": "8",
+  "PD6": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "PB6": "16",
+  "PB7": "17",
+  "VCC": "18",
+  "PA2/~{RESET}": "19",
+  "PD0": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny4313-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny4313-MM`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.45mm_EP1.55x1.55mm.
+ */
+export class ATtiny4313_MM extends Component.withPins({
+  "PD1": "1",
+  "PA1/XTAL2": "2",
+  "PA0/XTAL1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "PD5": "7",
+  "GND_8": "8",
+  "PD6": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "PB6": "16",
+  "PB7": "17",
+  "VCC": "18",
+  "PA2/~{RESET}": "19",
+  "PD0": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny4313-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny4313-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny4313_P extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny4313-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny4313-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny4313_S extends Component.withPins({
+  "PA2/~{RESET}": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PA1/XTAL2": "4",
+  "PA0/XTAL1": "5",
+  "PD2": "6",
+  "PD3": "7",
+  "PD4": "8",
+  "PD5": "9",
+  "GND": "10",
+  "PD6": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "PB6": "18",
+  "PB7": "19",
+  "VCC": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny4313-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 8MHz, 4kB Flash, 256B SRAM, 64B EEPROM, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny43U-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8048.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Battery Boost.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny43U_M extends Component.withPins({
+  "PB2": "1",
+  "PB3": "2",
+  "PB4": "3",
+  "PB5": "4",
+  "PB6": "5",
+  "PB7": "6",
+  "VCC": "7",
+  "GND_8": "8",
+  "LSW": "9",
+  "VBAT": "10",
+  "PA0": "11",
+  "PA1": "12",
+  "PA2": "13",
+  "PA3": "14",
+  "PA4": "15",
+  "PA5": "16",
+  "PA6": "17",
+  "~{RESET}/PA7": "18",
+  "PB0": "19",
+  "PB1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", GND_8: "power_in", LSW: "passive", VBAT: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "~{RESET}/PA7": "bidirectional", PB0: "bidirectional", PB1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny43U-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 8MHz, 4kB Flash, 256B SRAM, 64B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny43U-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8048.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR Battery Boost.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny43U_S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "PB4": "5",
+  "PB5": "6",
+  "PB6": "7",
+  "PB7": "8",
+  "VCC": "9",
+  "GND": "10",
+  "LSW": "11",
+  "VBAT": "12",
+  "PA0": "13",
+  "PA1": "14",
+  "PA2": "15",
+  "PA3": "16",
+  "PA4": "17",
+  "PA5": "18",
+  "PA6": "19",
+  "~{RESET}/PA7": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", GND: "power_in", LSW: "passive", VBAT: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "~{RESET}/PA7": "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny43U-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny44_20M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny44_20P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44-20SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny44_20SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44-20SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 4kB Flash, 256B SRAM, 256B EEPROM, ADC, ACI, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny441-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny441_M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny441-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 4kB Flash, 256B SRAM, 256B EEPROM, ADC, ACI, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny441-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny441_MM extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny441-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 4kB Flash, 256B SRAM, 256B EEPROM, ADC, ACI, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny441-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny441_SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny441-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, UFBGA-15
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44A-CC`. Reference prefix: `U`.
+ * Footprint filters: UFBGA*3.0x3.0mm*Layout4x4*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_BGA:UFBGA-15_3.0x3.0mm_Layout4x4_P0.65mm.
+ */
+export class ATtiny44A_CC extends Component.withPins({
+  "PA5": "A2",
+  "PA6": "A3",
+  "PB2": "A4",
+  "PA4": "B1",
+  "PA7": "B2",
+  "XTAL2/PB1": "B3",
+  "~{RESET}/PB3": "B4",
+  "PA3": "C1",
+  "PA2": "C2",
+  "PA1": "C3",
+  "XTAL1/PB0": "C4",
+  "AREF/PA0": "D1",
+  "GND_D2": "D2",
+  "GND_D3": "D3",
+  "VCC": "D4",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "XTAL1/PB0": "bidirectional", "AREF/PA0": "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44A-CC";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny44A_M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44A-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny44A_MM extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44A-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny44A_P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44A-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny44A_SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44A-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny44V_10M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny44V_10P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny44V-10SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny44V_10SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny44V-10SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny45_20M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "XTAL2/PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "AREF/PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny45_20P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45-20S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny45_20S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, TSSOP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45V-10X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x3mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-8_4.4x3mm_P0.65mm.
+ */
+export class ATtiny45V_10X extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45V-10X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, TSSOP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45-20X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x3mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-8_4.4x3mm_P0.65mm.
+ */
+export class ATtiny45_20X extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45-20X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny45V_10M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "XTAL2/PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "AREF/PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny45V_10P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny45V-10S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny45V_10S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny45V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny461_20M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny461_20P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461-20S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny461_20S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny461A_M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny461A_P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461A-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny461A_S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461A-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, TSSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny461A-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x6.5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm.
+ */
+export class ATtiny461A_X extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny461A-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, 64B EEPROM, TQFP-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny48-A`. Reference prefix: `U`.
+ * Footprint filters: TQFP*7x7mm*P0.8mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_QFP:TQFP-32_7x7mm_P0.8mm.
+ */
+export class ATtiny48_A extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "PA2": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "PA3": "6",
+  "PB6": "7",
+  "PB7": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "AVCC": "18",
+  "PA0": "19",
+  "PC7": "20",
+  "GND_21": "21",
+  "PA1": "22",
+  "PC0": "23",
+  "PC1": "24",
+  "PC2": "25",
+  "PC3": "26",
+  "PC4": "27",
+  "PC5": "28",
+  "~{RESET}/PC6": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny48-A";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, 64B EEPROM, UFBGA-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny48-CC`. Reference prefix: `U`.
+ * Footprint filters: UFBGA*4.0x4.0mm*Layout6x6*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_BGA:UFBGA-32_4.0x4.0mm_Layout6x6_P0.5mm.
+ */
+export class ATtiny48_CC extends Component.withPins({
+  "PD2": "A1",
+  "PD1": "A2",
+  "~{RESET}/PC6": "A3",
+  "PC4": "A4",
+  "PC2": "A5",
+  "PC1": "A6",
+  "PD3": "B1",
+  "PD4": "B2",
+  "PD0": "B3",
+  "PC5": "B4",
+  "PC3": "B5",
+  "PC0": "B6",
+  "GND_C1": "C1",
+  "PA2": "C2",
+  "PA1": "C5",
+  "GND_C6": "C6",
+  "VCC": "D1",
+  "PA3": "D2",
+  "PC7": "D5",
+  "PA0": "D6",
+  "PB6": "E1",
+  "PD6": "E2",
+  "PB0": "E3",
+  "PB2": "E4",
+  "AVCC": "E5",
+  "PB5": "E6",
+  "PB7": "F1",
+  "PD5": "F2",
+  "PD7": "F3",
+  "PB1": "F4",
+  "PB3": "F5",
+  "PB4": "F6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD2: "bidirectional", PD1: "bidirectional", "~{RESET}/PC6": "bidirectional", PC4: "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD0: "bidirectional", PC5: "bidirectional", PC3: "bidirectional", PC0: "bidirectional", GND_C1: "power_in", PA2: "bidirectional", PA1: "bidirectional", GND_C6: "passive", VCC: "power_in", PA3: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PB6: "bidirectional", PD6: "bidirectional", PB0: "bidirectional", PB2: "bidirectional", AVCC: "power_in", PB5: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD7: "bidirectional", PB1: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny48-CC";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, 64B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny48-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny48_M extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "PA2": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "PA3": "6",
+  "PB6": "7",
+  "PB7": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "AVCC": "18",
+  "PA0": "19",
+  "PC7": "20",
+  "GND_21": "21",
+  "PA1": "22",
+  "PC0": "23",
+  "PC1": "24",
+  "PC2": "25",
+  "PC3": "26",
+  "PC4": "27",
+  "PC5": "28",
+  "~{RESET}/PC6": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny48-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, 64B EEPROM, QFN-28
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny48-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-28-1EP_4x4mm_P0.45mm_EP2.4x2.4mm.
+ */
+export class ATtiny48_MM extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "VCC": "3",
+  "GND_4": "4",
+  "PB6": "5",
+  "PB7": "6",
+  "PD5": "7",
+  "PD6": "8",
+  "PD7": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "AVCC": "16",
+  "PC7": "17",
+  "GND_18": "18",
+  "PC0": "19",
+  "PC1": "20",
+  "PC2": "21",
+  "PC3": "22",
+  "PC4": "23",
+  "PC5": "24",
+  "~{RESET}/PC6": "25",
+  "PD0": "26",
+  "PD1": "27",
+  "PD2": "28",
+  "GND_29": "29",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_4: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_18: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_29: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny48-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 4kB Flash, 256B SRAM, 64B EEPROM, DIP-28
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny48-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-28_W7.62mm.
+ */
+export class ATtiny48_P extends Component.withPins({
+  "~{RESET}/PC6": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "VCC": "7",
+  "GND_8": "8",
+  "PB6": "9",
+  "PB7": "10",
+  "PD5": "11",
+  "PD6": "12",
+  "PD7": "13",
+  "PB0": "14",
+  "PB1": "15",
+  "PB2": "16",
+  "PB3": "17",
+  "PB4": "18",
+  "PB5": "19",
+  "AVCC": "20",
+  "PC7": "21",
+  "GND_22": "22",
+  "PC0": "23",
+  "PC1": "24",
+  "PC2": "25",
+  "PC3": "26",
+  "PC4": "27",
+  "PC5": "28",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_8: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_22: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny48-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 512B Flash, 32B SRAM, No EEPROM, ADC, DFN-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny5-MA`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*2x2mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.5mm.
+ */
+export class ATtiny5_MA extends Component.withPins({
+  "PB1": "1",
+  "NC_2": "2",
+  "NC_3": "3",
+  "GND": "4",
+  "PB0": "5",
+  "~{RESET}/PB3": "6",
+  "VCC": "7",
+  "PB2": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny5-MA";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 512B Flash, 32B SRAM, No EEPROM, ADC, SOT-23-6
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny5-TS`. Reference prefix: `U`.
+ * Footprint filters: SOT?23?6*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_TO_SOT_SMD:SOT-23-6.
+ */
+export class ATtiny5_TS extends Component.withPins({
+  "PB0": "1",
+  "GND": "2",
+  "PB1": "3",
+  "PB2": "4",
+  "VCC": "5",
+  "~{RESET}/PB3": "6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny5-TS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny804-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny804_1604-Data-Sheet-40002028A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny804_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny804-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny806-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny806_1606_Data_Sheet_40002029A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny806_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny806-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny806-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny806_1606_Data_Sheet_40002029A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny806_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny806-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny814-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001912A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny814_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny814-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny816-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001913A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny816_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny816-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny816-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001913A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny816_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny816-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 128B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny817-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/40001901B.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny817_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny817-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 1kB SRAM, 128B EEPROM, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny824-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny824_SS extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny824-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 1kB SRAM, 128B EEPROM, TSSOP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny824-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x5mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-14_4.4x5mm_P0.65mm.
+ */
+export class ATtiny824_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB3": "6",
+  "PB2": "7",
+  "PB1": "8",
+  "PB0": "9",
+  "~{RESET}/PA0": "10",
+  "PA1": "11",
+  "PA2": "12",
+  "PA3": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny824-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 1kB SRAM, 128B EEPROM, VQFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny826-M`. Reference prefix: `U`.
+ * Footprint filters: VQFN*1EP*3x3mm*P0.4mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm.
+ */
+export class ATtiny826_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB5": "9",
+  "PB4": "10",
+  "PB3": "11",
+  "PB2": "12",
+  "PB1": "13",
+  "PB0": "14",
+  "PC0": "15",
+  "PC1": "16",
+  "PC2": "17",
+  "PC3": "18",
+  "~{RESET}/PA0": "19",
+  "PA1": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny826-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 1kB SRAM, 128B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny826-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny826_S extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny826-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 1kB SRAM, 128B EEPROM, SSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny826-X`. Reference prefix: `U`.
+ * Footprint filters: SSOP*5.3x7.2mm*P0.65mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SSOP-20_5.3x7.2mm_P0.65mm.
+ */
+export class ATtiny826_X extends Component.withPins({
+  "VCC": "1",
+  "PA4": "2",
+  "PA5": "3",
+  "PA6": "4",
+  "PA7": "5",
+  "PB5": "6",
+  "PB4": "7",
+  "PB3": "8",
+  "PB2": "9",
+  "PB1": "10",
+  "PB0": "11",
+  "PC0": "12",
+  "PC1": "13",
+  "PC2": "14",
+  "PC3": "15",
+  "~{RESET}/PA0": "16",
+  "PA1": "17",
+  "PA2": "18",
+  "PA3": "19",
+  "GND": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny826-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 1kB SRAM, 128B EEPROM, VQFN-24
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny827-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny827_M extends Component.withPins({
+  "PA2": "1",
+  "PA3": "2",
+  "GND_3": "3",
+  "VCC": "4",
+  "PA4": "5",
+  "PA5": "6",
+  "PA6": "7",
+  "PA7": "8",
+  "PB7": "9",
+  "PB6": "10",
+  "PB5": "11",
+  "PB4": "12",
+  "PB3": "13",
+  "PB2": "14",
+  "PB1": "15",
+  "PB0": "16",
+  "PC0": "17",
+  "PC1": "18",
+  "PC2": "19",
+  "PC3": "20",
+  "PC4": "21",
+  "PC5": "22",
+  "~{RESET}/PA0": "23",
+  "PA1": "24",
+  "GND_25": "25",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny827-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 256B EEPROM, debugWIRE, TQFP-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny828-A`. Reference prefix: `U`.
+ * Footprint filters: TQFP*7x7mm*P0.8mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8371.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_QFP:TQFP-32_7x7mm_P0.8mm.
+ */
+export class ATtiny828_A extends Component.withPins({
+  "PC2": "1",
+  "PC3": "2",
+  "PC4": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "PC5": "6",
+  "PC6": "7",
+  "PC7": "8",
+  "PA0": "9",
+  "PA1": "10",
+  "PA2": "11",
+  "PA3": "12",
+  "PA4": "13",
+  "PA5": "14",
+  "PA6": "15",
+  "PA7": "16",
+  "PB0": "17",
+  "AVCC": "18",
+  "PB1": "19",
+  "PB2": "20",
+  "GND_21": "21",
+  "PB3": "22",
+  "PB4": "23",
+  "PB5": "24",
+  "PB6": "25",
+  "PB7": "26",
+  "PD0": "27",
+  "PD1": "28",
+  "PD2/~{RESET}": "29",
+  "PD3": "30",
+  "PC0": "31",
+  "PC1": "32",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", VCC: "power_in", GND_5: "power_in", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", AVCC: "power_in", PB1: "bidirectional", PB2: "bidirectional", GND_21: "passive", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PD2/~{RESET}": "bidirectional", PD3: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny828-A";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 256B EEPROM, debugWIRE, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny828-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8371.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny828_M extends Component.withPins({
+  "PC2": "1",
+  "PC3": "2",
+  "PC4": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "PC5": "6",
+  "PC6": "7",
+  "PC7": "8",
+  "PA0": "9",
+  "PA1": "10",
+  "PA2": "11",
+  "PA3": "12",
+  "PA4": "13",
+  "PA5": "14",
+  "PA6": "15",
+  "PA7": "16",
+  "PB0": "17",
+  "AVCC": "18",
+  "PB1": "19",
+  "PB2": "20",
+  "GND_21": "21",
+  "PB3": "22",
+  "PB4": "23",
+  "PB5": "24",
+  "PB6": "25",
+  "PB7": "26",
+  "PD0": "27",
+  "PD1": "28",
+  "PD2/~{RESET}": "29",
+  "PD3": "30",
+  "PC0": "31",
+  "PC1": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", VCC: "power_in", GND_5: "power_in", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", AVCC: "power_in", PB1: "bidirectional", PB2: "bidirectional", GND_21: "passive", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PD2/~{RESET}": "bidirectional", PD3: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny828-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny84_20M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny84_20P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84-20SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny84_20SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84-20SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 8kB Flash, 512B SRAM, 512B EEPROM, ADC, ACI, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny841-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny841_M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny841-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 8kB Flash, 512B SRAM, 512B EEPROM, ADC, ACI, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny841-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny841_MM extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny841-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 16MHz, 8kB Flash, 512B SRAM, 512B EEPROM, ADC, ACI, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny841-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny841_SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny841-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, UFBGA-15
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84A-CC`. Reference prefix: `U`.
+ * Footprint filters: UFBGA*3.0x3.0mm*Layout4x4*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_BGA:UFBGA-15_3.0x3.0mm_Layout4x4_P0.65mm.
+ */
+export class ATtiny84A_CC extends Component.withPins({
+  "PA5": "A2",
+  "PA6": "A3",
+  "PB2": "A4",
+  "PA4": "B1",
+  "PA7": "B2",
+  "XTAL2/PB1": "B3",
+  "~{RESET}/PB3": "B4",
+  "PA3": "C1",
+  "PA2": "C2",
+  "PA1": "C3",
+  "XTAL1/PB0": "C4",
+  "AREF/PA0": "D1",
+  "GND_D2": "D2",
+  "GND_D3": "D3",
+  "VCC": "D4",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "XTAL1/PB0": "bidirectional", "AREF/PA0": "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84A-CC";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny84A_M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84A-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*3x3mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm.
+ */
+export class ATtiny84A_MM extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84A-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny84A_P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84A-SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny84A_SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84A-SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny84V_10M extends Component.withPins({
+  "PA4": "1",
+  "PA3": "2",
+  "PA2": "3",
+  "PA1": "4",
+  "AREF/PA0": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "VCC": "9",
+  "NC_10": "10",
+  "XTAL1/PB0": "11",
+  "XTAL2/PB1": "12",
+  "~{RESET}/PB3": "13",
+  "PB2": "14",
+  "PA7": "15",
+  "PA6": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "PA5": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-14_W7.62mm.
+ */
+export class ATtiny84V_10P extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-14
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny84V-10SS`. Reference prefix: `U`.
+ * Footprint filters: SOIC*3.9x8.7mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-14_3.9x8.7mm_P1.27mm.
+ */
+export class ATtiny84V_10SS extends Component.withPins({
+  "VCC": "1",
+  "XTAL1/PB0": "2",
+  "XTAL2/PB1": "3",
+  "~{RESET}/PB3": "4",
+  "PB2": "5",
+  "PA7": "6",
+  "PA6": "7",
+  "PA5": "8",
+  "PA4": "9",
+  "PA3": "10",
+  "PA2": "11",
+  "PA1": "12",
+  "AREF/PA0": "13",
+  "GND": "14",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny84V-10SS";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny85-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny85_20M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "XTAL2/PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "AREF/PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny85-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny85-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny85_20P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny85-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny85-20S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny85_20S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny85-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, QFN-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny85V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.
+ */
+export class ATtiny85V_10M extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "NC_3": "3",
+  "NC_4": "4",
+  "XTAL2/PB4": "5",
+  "NC_6": "6",
+  "NC_7": "7",
+  "GND_8": "8",
+  "NC_9": "9",
+  "NC_10": "10",
+  "AREF/PB0": "11",
+  "PB1": "12",
+  "NC_13": "13",
+  "PB2": "14",
+  "VCC": "15",
+  "NC_16": "16",
+  "NC_17": "17",
+  "NC_18": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "GND_21": "21",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny85V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, DIP-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny85V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-8_W7.62mm.
+ */
+export class ATtiny85V_10P extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny85V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny85V-10S`. Reference prefix: `U`.
+ * Footprint filters: *SOIC*5.3x5.3mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-8_5.3x5.3mm_P1.27mm.
+ */
+export class ATtiny85V_10S extends Component.withPins({
+  "~{RESET}/PB5": "1",
+  "XTAL1/PB3": "2",
+  "XTAL2/PB4": "3",
+  "GND": "4",
+  "AREF/PB0": "5",
+  "PB1": "6",
+  "PB2": "7",
+  "VCC": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny85V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861-20M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny861_20M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861-20M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861-20P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny861_20P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861-20P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861-20S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny861_20S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861-20S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861A-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny861A_M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861A-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861A-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny861A_P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861A-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861A-S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny861A_S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861A-S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, TSSOP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861A-X`. Reference prefix: `U`.
+ * Footprint filters: TSSOP*4.4x6.5mm*P0.65mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8197.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm.
+ */
+export class ATtiny861A_X extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861A-X";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861V-10M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny861V_10M extends Component.withPins({
+  "NC_1": "1",
+  "PB3": "2",
+  "NC_3": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "NC_6": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "NC_9": "9",
+  "PB6": "10",
+  "~{RESET}/PB7": "11",
+  "NC_12": "12",
+  "PA7": "13",
+  "PA6": "14",
+  "PA5": "15",
+  "NC_16": "16",
+  "PA4": "17",
+  "AVCC": "18",
+  "NC_19": "19",
+  "NC_20": "20",
+  "AGND": "21",
+  "AREF/PA3": "22",
+  "PA2": "23",
+  "NC_24": "24",
+  "PA1": "25",
+  "PA0": "26",
+  "NC_27": "27",
+  "NC_28": "28",
+  "NC_29": "29",
+  "PB0": "30",
+  "PB1": "31",
+  "PB2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861V-10M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, DIP-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861V-10P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-20_W7.62mm.
+ */
+export class ATtiny861V_10P extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861V-10P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 10MHz, 8kB Flash, 512B SRAM, 512B EEPROM, SOIC-20
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny861V-10S`. Reference prefix: `U`.
+ * Footprint filters: SOIC*7.5x12.8mm*P1.27mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microcontrollers-tinyavr-attiny261-attiny461-attiny861_datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm.
+ */
+export class ATtiny861V_10S extends Component.withPins({
+  "PB0": "1",
+  "PB1": "2",
+  "PB2": "3",
+  "PB3": "4",
+  "VCC": "5",
+  "GND": "6",
+  "XTAL1/PB4": "7",
+  "XTAL2/PB5": "8",
+  "PB6": "9",
+  "~{RESET}/PB7": "10",
+  "PA7": "11",
+  "PA6": "12",
+  "PA5": "13",
+  "PA4": "14",
+  "AVCC": "15",
+  "AGND": "16",
+  "AREF/PA3": "17",
+  "PA2": "18",
+  "PA1": "19",
+  "PA0": "20",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny861V-10S";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 8kB Flash, 512B SRAM, 64B EEPROM, TQFP-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny88-A`. Reference prefix: `U`.
+ * Footprint filters: TQFP*7x7mm*P0.8mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_QFP:TQFP-32_7x7mm_P0.8mm.
+ */
+export class ATtiny88_A extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "PA2": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "PA3": "6",
+  "PB6": "7",
+  "PB7": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "AVCC": "18",
+  "PA0": "19",
+  "PC7": "20",
+  "GND_21": "21",
+  "PA1": "22",
+  "PC0": "23",
+  "PC1": "24",
+  "PC2": "25",
+  "PC3": "26",
+  "PC4": "27",
+  "PC5": "28",
+  "~{RESET}/PC6": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny88-A";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 8kB Flash, 512B SRAM, 64B EEPROM, UFBGA-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny88-CC`. Reference prefix: `U`.
+ * Footprint filters: UFBGA*4.0x4.0mm*Layout6x6*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_BGA:UFBGA-32_4.0x4.0mm_Layout6x6_P0.5mm.
+ */
+export class ATtiny88_CC extends Component.withPins({
+  "PD2": "A1",
+  "PD1": "A2",
+  "~{RESET}/PC6": "A3",
+  "PC4": "A4",
+  "PC2": "A5",
+  "PC1": "A6",
+  "PD3": "B1",
+  "PD4": "B2",
+  "PD0": "B3",
+  "PC5": "B4",
+  "PC3": "B5",
+  "PC0": "B6",
+  "GND_C1": "C1",
+  "PA2": "C2",
+  "PA1": "C5",
+  "GND_C6": "C6",
+  "VCC": "D1",
+  "PA3": "D2",
+  "PC7": "D5",
+  "PA0": "D6",
+  "PB6": "E1",
+  "PD6": "E2",
+  "PB0": "E3",
+  "PB2": "E4",
+  "AVCC": "E5",
+  "PB5": "E6",
+  "PB7": "F1",
+  "PD5": "F2",
+  "PD7": "F3",
+  "PB1": "F4",
+  "PB3": "F5",
+  "PB4": "F6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD2: "bidirectional", PD1: "bidirectional", "~{RESET}/PC6": "bidirectional", PC4: "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD0: "bidirectional", PC5: "bidirectional", PC3: "bidirectional", PC0: "bidirectional", GND_C1: "power_in", PA2: "bidirectional", PA1: "bidirectional", GND_C6: "passive", VCC: "power_in", PA3: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PB6: "bidirectional", PD6: "bidirectional", PB0: "bidirectional", PB2: "bidirectional", AVCC: "power_in", PB5: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD7: "bidirectional", PB1: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny88-CC";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 8kB Flash, 512B SRAM, 64B EEPROM, QFN-32
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny88-M`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*5x5mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm.
+ */
+export class ATtiny88_M extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "PA2": "3",
+  "VCC": "4",
+  "GND_5": "5",
+  "PA3": "6",
+  "PB6": "7",
+  "PB7": "8",
+  "PD5": "9",
+  "PD6": "10",
+  "PD7": "11",
+  "PB0": "12",
+  "PB1": "13",
+  "PB2": "14",
+  "PB3": "15",
+  "PB4": "16",
+  "PB5": "17",
+  "AVCC": "18",
+  "PA0": "19",
+  "PC7": "20",
+  "GND_21": "21",
+  "PA1": "22",
+  "PC0": "23",
+  "PC1": "24",
+  "PC2": "25",
+  "PC3": "26",
+  "PC4": "27",
+  "PC5": "28",
+  "~{RESET}/PC6": "29",
+  "PD0": "30",
+  "PD1": "31",
+  "PD2": "32",
+  "GND_33": "33",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny88-M";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 8kB Flash, 512B SRAM, 64B EEPROM, QFN-28
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny88-MM`. Reference prefix: `U`.
+ * Footprint filters: QFN*1EP*4x4mm*P0.45mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:QFN-28-1EP_4x4mm_P0.45mm_EP2.4x2.4mm.
+ */
+export class ATtiny88_MM extends Component.withPins({
+  "PD3": "1",
+  "PD4": "2",
+  "VCC": "3",
+  "GND_4": "4",
+  "PB6": "5",
+  "PB7": "6",
+  "PD5": "7",
+  "PD6": "8",
+  "PD7": "9",
+  "PB0": "10",
+  "PB1": "11",
+  "PB2": "12",
+  "PB3": "13",
+  "PB4": "14",
+  "PB5": "15",
+  "AVCC": "16",
+  "PC7": "17",
+  "GND_18": "18",
+  "PC0": "19",
+  "PC1": "20",
+  "PC2": "21",
+  "PC3": "22",
+  "PC4": "23",
+  "PC5": "24",
+  "~{RESET}/PC6": "25",
+  "PD0": "26",
+  "PD1": "27",
+  "PD2": "28",
+  "GND_29": "29",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_4: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_18: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_29: "passive", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny88-MM";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 8kB Flash, 512B SRAM, 64B EEPROM, DIP-28
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny88-P`. Reference prefix: `U`.
+ * Footprint filters: DIP*W7.62mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/doc8008.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DIP:DIP-28_W7.62mm.
+ */
+export class ATtiny88_P extends Component.withPins({
+  "~{RESET}/PC6": "1",
+  "PD0": "2",
+  "PD1": "3",
+  "PD2": "4",
+  "PD3": "5",
+  "PD4": "6",
+  "VCC": "7",
+  "GND_8": "8",
+  "PB6": "9",
+  "PB7": "10",
+  "PD5": "11",
+  "PD6": "12",
+  "PD7": "13",
+  "PB0": "14",
+  "PB1": "15",
+  "PB2": "16",
+  "PB3": "17",
+  "PB4": "18",
+  "PB5": "19",
+  "AVCC": "20",
+  "PC7": "21",
+  "GND_22": "22",
+  "PC0": "23",
+  "PC1": "24",
+  "PC2": "25",
+  "PC3": "26",
+  "PC4": "27",
+  "PC5": "28",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_8: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_22: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny88-P";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, DFN-8
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny9-MA`. Reference prefix: `U`.
+ * Footprint filters: DFN*1EP*2x2mm*P0.5mm*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.5mm.
+ */
+export class ATtiny9_MA extends Component.withPins({
+  "PB1": "1",
+  "NC_2": "2",
+  "NC_3": "3",
+  "GND": "4",
+  "PB0": "5",
+  "~{RESET}/PB3": "6",
+  "VCC": "7",
+  "PB2": "8",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny9-MA";
+  override referencePrefix = "U";
+}
+
+/**
+ * 12MHz, 1kB Flash, 32B SRAM, No EEPROM, SOT-23-6
+ *
+ * KiCad symbol: `MCU_Microchip_ATtiny:ATtiny9-TS`. Reference prefix: `U`.
+ * Footprint filters: SOT?23?6*.
+ * @see http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf
+ * Keywords: AVR 8bit Microcontroller tinyAVR.
+ * Default footprint: Package_TO_SOT_SMD:SOT-23-6.
+ */
+export class ATtiny9_TS extends Component.withPins({
+  "PB0": "1",
+  "GND": "2",
+  "PB1": "3",
+  "PB2": "4",
+  "VCC": "5",
+  "~{RESET}/PB3": "6",
+}) {
+  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+    super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
+  }
+  override schema = "MCU_Microchip_ATtiny:ATtiny9-TS";
+  override referencePrefix = "U";
+}

@@ -1,7 +1,7 @@
 import { XMLParser } from 'fast-xml-parser'
 import { mkdtempSync, rmSync, readFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
-import { join, resolve, relative } from 'node:path'
+import { join, resolve } from 'node:path'
 import { parseArgs } from 'node:util'
 
 /** Small typed view over ordered XML, keeping pin numbers and values as strings. */
@@ -50,12 +50,9 @@ export function readNetlist(source: string): Xml {
 }
 export type ModelPin = { name: string; number: string; noConnect: boolean; members: { component: string; number: string }[]; netNames: string[]; netScopes?: ('local'|'global')[]; labels?: {name:string;scope:'local'|'global';sheet?:string;powerSymbol?:string}[] }
 export type ModelPart = { name: string; ref?: string; pinTypes?: Record<string, string>; group?: string; ownerPin?: string; sheet: string; schema: string; symbolSource?: string; referencePrefix: string; value: string; footprint: string; footprintSource?: string; footprintProjectDirectory?: string; datasheet: string; properties: Record<string, string | null>; pins: ModelPin[] }
-export function inspect(entry: string | string[]): ModelPart[] { return JSON.parse(run(['bun', join(import.meta.dir, '../cli.ts'), 'inspect', ...[entry].flat().map(path => resolve(path))])) }
-export function baseImport(_directory: string) { return 'ts-kicad' }
+export function inspect(entry: string | string[]): ModelPart[] { return JSON.parse(run(['bun', join(import.meta.dir, 'inspect_circuit.ts'), ...[entry].flat().map(path => resolve(path))])) }
 export function cli(extra: Record<string, { type: 'string' | 'boolean'; multiple?: boolean }> = {}, args: string[] = []) {
-  const parsed = parseArgs({ args, allowPositionals: true, options: { verify: { type: 'boolean' }, 'base-import': { type: 'string' }, ...extra } })
+  const parsed = parseArgs({ args, allowPositionals: true, options: extra })
   return { positionals: parsed.positionals, values: parsed.values as Record<string, string | boolean | string[] | undefined> }
 }
 export const q = JSON.stringify
-export const symbolId = (comp: Xml) => comp.find('libsource')!.get('lib') + ':' + comp.find('libsource')!.get('part')
-export const compare = (a: string, b: string) => a < b ? -1 : a > b ? 1 : 0

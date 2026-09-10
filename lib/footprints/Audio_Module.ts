@@ -1,0 +1,12 @@
+// Generated from native KiCad footprints.
+import type { Footprint } from '../../src/footprint'
+
+/** Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
+ * KiCad: Audio_Module:Reverb_BTDR-1H
+ * Keywords: audio belton reverb */
+export const Reverb_BTDR_1H: Footprint = { id: "Audio_Module:Reverb_BTDR-1H", ...{"pads":["1","2","3","4","5","6","7"],"mounting":"through_hole"} }
+
+/** Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
+ * KiCad: Audio_Module:Reverb_BTDR-1V
+ * Keywords: audio belton reverb */
+export const Reverb_BTDR_1V: Footprint = { id: "Audio_Module:Reverb_BTDR-1V", ...{"pads":["1","2","3","4","5","6","7"],"mounting":"through_hole"} }

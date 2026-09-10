@@ -8,7 +8,7 @@ import { inspect } from './kicad_io'
 
 class Pair extends Component.withPins(['1','2']) {}
 
-test('Project supports empty scaffolds', () => {
+test('Project supports empty circuits', () => {
   expect(new Project({entries:[]}).options.entries).toHaveLength(0)
   expect(new Project({entries:[new Pair()]}).options.entries).toHaveLength(1)
 
@@ -23,7 +23,7 @@ test('entry Project supplies relative paths and multiple disconnected graph root
     writeFileSync(entry,`import {Component,Project} from ${JSON.stringify(api)};
 class Pair extends Component.withPins(['1','2']) {}
 const a=new Pair().wire({P1:null,P2:null}),b=new Pair().wire({P1:null,P2:null});
-export default new Project({entries:[a,b],output:'../out/design.kicad_sch',symbols:['../symbols.kicad_sym'],footprints:['../custom.pretty'],project:'../original.kicad_pro',verify:true,pdf:true});`)
+export default new Project({entries:[a,b],output:'../out/design.kicad_sch',symbols:['../symbols.kicad_sym'],footprints:['../custom.pretty'],project:'../original.kicad_pro',bom:[]});`)
     const byDirectory=await resolveExportInputs([directory])
     const byFile=await resolveExportInputs([entry])
     expect(byDirectory).toEqual(byFile)
@@ -31,7 +31,6 @@ export default new Project({entries:[a,b],output:'../out/design.kicad_sch',symbo
     expect(byFile.config.symbols).toEqual([join(directory,'symbols.kicad_sym')])
     expect(byFile.config.footprints).toEqual([join(directory,'custom.pretty')])
     expect(byFile.config.project).toBe(join(directory,'original.kicad_pro'))
-    expect(byFile.config.verify).toBe(true)
     const override=await resolveExportInputs([entry,'override.kicad_sch'])
     expect(override.output).toBe(resolve('override.kicad_sch'))
     expect(inspect(entry)).toHaveLength(2)

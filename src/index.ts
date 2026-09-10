@@ -3,7 +3,8 @@ export type { Footprint } from './footprint'
 const pinsKey = Symbol('component pins')
 /** Enumerate physical pins without mixing in component metadata. */
 export const componentPins = <T extends string>(component: Component<T>): Record<T, Pin<T>> => component[pinsKey]
-let activeSheet: string | undefined
+// An empty sheet name represents the main schematic.
+let activeSheet = ''
 const pinAccess = (name: string) => (/^[A-Za-z_$][\w$]*$/.test(name) ? '.' + name : '[' + JSON.stringify(name) + ']')
 
 /** Validate prospective joins without changing the electrical graph. */
@@ -48,7 +49,7 @@ export class KicadElement {
   readonly connections = new Set<KicadElement>()
 
   wire(...targets: (KicadElement | string)[]) {
-    const owner = this instanceof Pin ? this.component.sheetName : this instanceof Net && this.scope === 'local' ? this.sheetName : activeSheet ?? 'Circuit'
+    const owner = this instanceof Pin ? this.component.sheetName : this instanceof Net && this.scope === 'local' ? this.sheetName : activeSheet
     const others = targets.map(target => typeof target === 'string' ? Net.localLabel(target, owner) : target)
     validateConnections([[this, ...others]])
     if (this instanceof Net) this.activate()
@@ -76,7 +77,7 @@ export class Net extends KicadElement {
     public readonly name?: string,
     readonly scope: 'local' | 'global' = 'local',
     readonly powerSymbol?: string,
-    readonly sheetName = scope === 'local' ? (activeSheet ?? 'Circuit') : undefined,
+    readonly sheetName = scope === 'local' ? activeSheet : undefined,
   ) {
     super()
     // Power constants remain inert until used; importing a symbol must not change a circuit.
@@ -161,9 +162,8 @@ export class Component<T extends string> {
   value: string
   readonly package?: string
   readonly variant?: string
-  sheetName = activeSheet ?? 'Circuit'
+  sheetName = activeSheet
   declarationName?: string
-  bom?: Bom
   schema = ''
   symbolSource?: string
   footprint = ''
@@ -264,12 +264,11 @@ export type JsonValue = string | number | boolean | null | JsonValue[] | { [key:
 
 export type ProjectSettings = {
   entries: readonly Component<string>[]
+  bom?: Bom
   output?: string
   symbols?: readonly string[]
   footprints?: readonly string[]
   project?: string
-  verify?: boolean
-  pdf?: boolean
   layout?: 'tscircuit' | 'banks' | 'elk'
   /** Native .kicad_pro overrides. Nested objects merge with builtin defaults; arrays replace. */
   settings?: { [key: string]: JsonValue }

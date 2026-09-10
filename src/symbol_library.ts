@@ -9,7 +9,7 @@ export function symbolDirectory() {
     '/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols',
   ]
   const directory = paths.find(path => existsSync(join(path, 'Device.kicad_sym')))
-  if (!directory) throw new Error('KiCad symbols not found. Set KICAD_SYMBOL_DIR or pass the library directory to generate-components.')
+  if (!directory) throw new Error('KiCad symbols not found. Set KICAD_SYMBOL_DIR or pass the library directory to internal-symbols.')
   return directory
 }
 

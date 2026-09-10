@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test'
-import { parse, dump, node, atom, child, val } from './kicad_sexpr'
+import { parse, dump, node, atom, child } from './kicad_sexpr'
 import { parseXml } from './kicad_io'
 import { transformed } from './kicad_geometry'
 import { renderComponents } from './export_components'
@@ -35,12 +35,12 @@ test('symbol generation disambiguates duplicate pin names and does not bake in f
   expect(generated.libraries['Test:Sensor'].mapping).toEqual({GND_01:'01',GND_02:'02'})
   expect(generated.text).toContain('sensor * / docs')
   expect(generated.text).not.toContain('override footprint')
-  expect(generated.text).not.toContain('pinTypes')
+  expect(generated.text).toContain('pinTypes: { GND_01: "power_in", GND_02: "power_in", ...opts.pinTypes }')
 })
 
 test('native symbol inheritance preserves pins and puts descriptive fields in JSDoc', async () => {
   const { resolveSymbols, symbolPins, defaultTemplates } = await import('./symbol_library')
-  const { libraryXml } = await import('./generate_components')
+  const { libraryXml } = await import('./internal-symbols')
   const symbols = resolveSymbols(parse(`(kicad_symbol_lib
     (symbol "Base" (in_bom no) (on_board no)
       (property "Reference" "#PWR") (property "Description" "Base docs")
@@ -59,43 +59,56 @@ test('native symbol inheritance preserves pins and puts descriptive fields in JS
   expect(generated.text).toContain('Keywords: supply')
   expect(generated.text).toContain('Default footprint: Package:Hint')
   expect(generated.text).not.toContain('override footprint')
-  expect(generated.text).not.toContain('pinTypes')
+  expect(generated.text).toContain('pinTypes: { GND: "power_in", ...opts.pinTypes }')
   expect(generated.text).toContain('exclude_from_bom')
   expect(() => resolveSymbols(parse('(root (symbol "A" (extends "B")) (symbol "B" (extends "A")))'))).toThrow('Cyclic')
 })
 
 test('standard resistors and capacitors use shared builtin classes', async () => {
-  const { c, r } = await import('ts-kicad/components/Device')
-  const { GND } = await import('ts-kicad/components/power')
+  const { c, r } = await import('ts-kicad/lib/symbols/Device')
+  const { GND } = await import('ts-kicad/lib/symbols/power')
   expect(c().schema).toBe('Device:C')
   expect(r({ ref: 'R42' }).ref).toBe('R42')
   expect(r().schema).toBe('Device:R')
   expect(new GND().properties).toHaveProperty('exclude_from_bom')
   const tree = parseXml('<export><libparts><libpart lib="Device" part="C_Small"><pins><pin num="1" name="~" type="passive"/><pin num="2" name="~" type="passive"/></pins></libpart></libparts></export>')
   const generated = renderComponents(tree)
-  expect(generated.libraries['Device:C_Small'].source).toBe('ts-kicad/components/Device')
+  expect(generated.libraries['Device:C_Small'].source).toBe('ts-kicad/lib/symbols/Device')
   expect(generated.libraries['Device:C_Small'].className).toBe('C')
   expect(generated.text).not.toContain('export class')
 })
 
-test('inspect merges entry files, root arrays and BOMs before numbering',async()=>{
+test('inspect applies only the Project BOM after collecting roots and assigning references',async()=>{
   const {withTemp,inspect}=await import('./kicad_io')
   const {writeFileSync}=await import('node:fs')
   const {join,resolve}=await import('node:path')
   withTemp(dir=>{
-    const device=JSON.stringify(resolve(import.meta.dir,'../components/Device.ts'))
+    const device=JSON.stringify(resolve(import.meta.dir,'../lib/symbols/Device.ts'))
+    const api=JSON.stringify(resolve(import.meta.dir,'index.ts'))
     for(const [name,value]of [['main','10k'],['aux','22k']])writeFileSync(join(dir,name+'.ts'),`import { r } from ${device};
 const part=r({value:${JSON.stringify(value)}}).wire({P1:null,P2:null});
-part.bom=[{schema:'Device:R',value:${JSON.stringify(value)},footprint:'Resistor_SMD:R_0603_1608Metric',manufacturer:'Test',partNumber:${JSON.stringify(name)}}];
 export default part;`)
     const files=['main','aux'].map(name=>join(dir,name+'.ts'))
-    const result=inspect(files)
+    const roots=inspect(files)
+    expect(roots).toHaveLength(2)
+    expect(new Set(roots.map(p=>p.ref)).size).toBe(2)
+    expect(inspect([...files,files[0]])).toEqual(roots)
+    const auxRef=roots.find(p=>p.value==='22k')!.ref
+    writeFileSync(join(dir,'project.ts'),`import { Project, type Bom } from ${api};
+import A from './main'; import B from './aux';
+export const bom: Bom = [
+  {schema:'Device:R',footprint:'Resistor_SMD:R_0603_1608Metric',manufacturer:'Test',partNumber:'default',lcsc:'C100'},
+  {ref:${JSON.stringify(auxRef)},partNumber:'override',lcsc:'C200'},
+];
+export default new Project({entries:[A,B,A],bom});`)
+    const result=inspect(join(dir,'project.ts'))
     expect(result).toHaveLength(2)
-    expect(new Set(result.map(p=>p.ref)).size).toBe(2)
-    expect(result.map(p=>p.properties['MFR.Part #']).sort()).toEqual(['aux','main'])
-    expect(inspect([...files,files[0]])).toHaveLength(2)
-    writeFileSync(join(dir,'array.ts'),"import A from './main'; import B from './aux'; export default [A,B,A];")
-    expect(inspect(join(dir,'array.ts'))).toEqual(result)
+    expect(result.every(p=>p.footprint==='Resistor_SMD:R_0603_1608Metric'&&p.properties.Manufacturer==='Test')).toBe(true)
+    expect(result.find(p=>p.value==='10k')!.properties['MFR.Part #']).toBe('default')
+    expect(result.find(p=>p.value==='22k')!.properties['MFR.Part #']).toBe('override')
+    expect(result.find(p=>p.value==='22k')!.properties['JLCPCB Part #']).toBe('C200')
+    writeFileSync(join(dir,'second-project.ts'),`import {Project} from ${api};import B from './aux';export default new Project({entries:[B],bom:[]});`)
+    expect(()=>inspect([join(dir,'project.ts'),join(dir,'second-project.ts')])).toThrow()
     writeFileSync(join(dir,'invalid.ts'),'export default [];')
     expect(()=>inspect(join(dir,'invalid.ts'))).toThrow()
   })
@@ -123,7 +136,7 @@ test('common helpers expose generated pin keys while preserving physical numbers
 })
 
 test('power export names preserve native rail identities and avoid collisions', async () => {
-  const { renderPowerConnections } = await import('./generate_components')
+  const { renderPowerConnections } = await import('./internal-symbols')
   const { P3V3, P5V, N5V, P3V3_3V3 } = await import('./power')
   expect(P3V3.name).toBe('+3.3V')
   expect(P3V3.powerSymbol).toBe('power:+3.3V')
