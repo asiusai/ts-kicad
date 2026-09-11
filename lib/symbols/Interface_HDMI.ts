@@ -77,7 +77,8 @@ export class ADV7611 extends Component.withPins({
   "RXA_5V": "64",
   "GND": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "HPA_A/INT2": "bidirectional", CVDD_2: "power_in", "RXA_C-": "input", "RXA_C+": "input", TVDD_5: "power_in", "RXA_0-": "input", "RXA_0+": "input", TVDD_8: "power_in", "RXA_1-": "input", "RXA_1+": "input", TVDD_11: "power_in", "RXA_2-": "input", "RXA_2+": "input", CVDD_14: "power_in", P23: "output", P22: "output", P21: "output", P20: "output", P19: "output", P18: "output", P17: "output", P16: "output", DVDDIO_23: "power_in", DVDD_24: "power_in", LLC: "output", P15: "output", P14: "output", P13: "output", P12: "output", P11: "output", P10: "output", P9: "output", P8: "output", DVDDIO_34: "power_in", P7: "output", P6: "output", P5: "output", P4: "output", P3: "output", DVDD_40: "power_in", P2: "output", P1: "output", P0: "output", DVDDIO_44: "power_in", DE: "output", HS: "output", "VS/FIELD/ALSB": "bidirectional", AP: "output", "SCLK/INT2": "output", LRCLK: "output", "MCLK/INT2": "output", DVDD_52: "power_in", SCL: "input", SDA: "bidirectional", INT1: "output", "~{RESET}": "input", PVDD: "power_in", XTALP: "input", XTALN: "input", DVDD_60: "power_in", CEC: "bidirectional", DDCA_SCL: "input", DDCA_SDA: "bidirectional", RXA_5V: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_HDMI:ADV7611";
@@ -133,7 +134,8 @@ export class TPD12S520DBT extends Component.withPins({
   "ESD_BYP": "37",
   "NC": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "5V_SUPPLY": "power_in", LV_SUPPLY: "power_in", GND_3: "power_in", "TMDS_D2+_4": "passive", TMDS_GND_5: "passive", "TMDS_D2-_6": "passive", "TMDS_D1+_7": "passive", TMDS_GND_8: "passive", "TMDS_D1-_9": "passive", "TMDS_D0+_10": "passive", TMDS_GND_11: "passive", "TMDS_D0-_12": "passive", "TMDS_CK+_13": "passive", TMDS_GND_14: "passive", "TMDS_CK-_15": "passive", CE_REMOTE_IN: "bidirectional", DDC_CLK_IN: "bidirectional", DDC_DAT_IN: "bidirectional", HOTPLUG_DET_IN: "bidirectional", HOTPLUG_DET_OUT: "bidirectional", DDC_DAT_OUT: "bidirectional", DDC_CLK_OUT: "bidirectional", CE_REMOTE_OUT: "bidirectional", "TMDS_CK-_24": "passive", TMDS_GND_25: "passive", "TMDS_CK+_26": "passive", "TMDS_D0-_27": "passive", TMDS_GND_28: "passive", "TMDS_D0+_29": "passive", "TMDS_D1-_30": "passive", TMDS_GND_31: "passive", "TMDS_D1+_32": "passive", "TMDS_D2-_33": "passive", TMDS_GND_34: "passive", "TMDS_D2+_35": "passive", GND_36: "passive", ESD_BYP: "passive", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_HDMI:TPD12S520DBT";

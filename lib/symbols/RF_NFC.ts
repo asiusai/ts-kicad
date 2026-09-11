@@ -53,7 +53,8 @@ export class PN5321A3HN_C1xx extends Component.withPins({
   "VBAT": "40",
   "AVSS_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", LOADMOD: "output", TVSS1: "power_in", TX1: "output", TVDD: "power_in", TX2: "output", TVSS2: "power_in", AVDD: "power_in", VMID: "output", RX: "input", AVSS_11: "power_in", AUX1: "output", AUX2: "output", OSCIN: "input", OSCOUT: "output", I0: "passive", I1: "passive", TESTEN: "passive", P35: "bidirectional", "N.C._20": "no_connect", "N.C._21": "no_connect", "N.C._22": "no_connect", PVDD: "power_in", "P30/UART_RX": "bidirectional", P70_IRQ: "bidirectional", "~{RSTOUT}": "output", "NSS/P50_SCL/HSU_RX": "bidirectional", "MOSI/SDA/HSU_TX": "bidirectional", "MISO/P71": "bidirectional", "SCK/P72": "bidirectional", "P31/UART_TX": "bidirectional", P32_INT0: "bidirectional", P33_INT1: "bidirectional", "SIC_CLK/P34": "bidirectional", SIGOUT: "output", SIGIN: "input", SVDD: "output", "~{RSTPD}": "input", DVDD: "power_out", VBAT: "power_in", AVSS_41: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:PN5321A3HN_C1xx";
@@ -80,7 +81,8 @@ export class ST25DV04K_IER8C3 extends Component.withPins({
   "VCC": "8",
   "NC": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { V_EH: "power_out", AC0: "passive", AC1: "passive", VSS: "power_in", SDA: "bidirectional", SCL: "input", GPO: "open_collector", VCC: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25DV04K-IER8C3";
@@ -111,7 +113,8 @@ export class ST25DV16K_JFR6D3 extends Component.withPins({
   "VCC": "12",
   "NC_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LPD: "input", NC_2: "no_connect", V_EH: "power_out", AC0: "passive", AC1: "passive", VSS: "power_in", SDA: "bidirectional", SCL: "input", NC_9: "no_connect", VDCG: "power_in", GPO: "output", VCC: "power_in", NC_13: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25DV16K-JFR6D3";
@@ -142,7 +145,8 @@ export class ST25DV04K_JFR6D3 extends Component.withPins({
   "VCC": "12",
   "NC_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LPD: "input", NC_2: "no_connect", V_EH: "power_out", AC0: "passive", AC1: "passive", VSS: "power_in", SDA: "bidirectional", SCL: "input", NC_9: "no_connect", VDCG: "power_in", GPO: "output", VCC: "power_in", NC_13: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25DV04K-JFR6D3";
@@ -169,7 +173,8 @@ export class ST25DV16K_IER8C3 extends Component.withPins({
   "VCC": "8",
   "NC": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { V_EH: "power_out", AC0: "passive", AC1: "passive", VSS: "power_in", SDA: "bidirectional", SCL: "input", GPO: "open_collector", VCC: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25DV16K-IER8C3";
@@ -196,7 +201,8 @@ export class ST25DV64K_IER8C3 extends Component.withPins({
   "VCC": "8",
   "NC": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { V_EH: "power_out", AC0: "passive", AC1: "passive", VSS: "power_in", SDA: "bidirectional", SCL: "input", GPO: "open_collector", VCC: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25DV64K-IER8C3";
@@ -227,7 +233,8 @@ export class ST25DV64K_JFR6D3 extends Component.withPins({
   "VCC": "12",
   "NC_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LPD: "input", NC_2: "no_connect", V_EH: "power_out", AC0: "passive", AC1: "passive", VSS: "power_in", SDA: "bidirectional", SCL: "input", NC_9: "no_connect", VDCG: "power_in", GPO: "output", VCC: "power_in", NC_13: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25DV64K-JFR6D3";
@@ -278,7 +285,8 @@ export class ST25R3911B_AQW extends Component.withPins({
   "/SS": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_IO: "power_in", CSO: "output", VSP_D: "power_out", XTO: "output", XTI: "passive", VSN_D: "power_in", VSP_A: "power_out", VDD: "power_in", VSP_RF: "power_out", RFO1: "output", RFO2: "output", VSN_RF: "power_in", TRIM1_3: "passive", TRIM2_3: "passive", TRIM1_2: "passive", TRIM2_2: "passive", TRIM1_1: "passive", TRIM2_1: "passive", TRIM1_0: "passive", TRIM2_0: "passive", VSS: "power_in", RFI1: "passive", RFI2: "passive", AGD: "passive", CSI: "passive", VSN_A: "power_in", IRQ: "output", MCU_CLK: "output", MISO: "output", MOSI: "input", SCLK: "input", "/SS": "input", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25R3911B-AQW";
@@ -329,7 +337,8 @@ export class ST25R3911B_AQF extends Component.withPins({
   "/SS": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_IO: "power_in", CSO: "output", VSP_D: "power_out", XTO: "output", XTI: "passive", VSN_D: "power_in", VSP_A: "power_out", VDD: "power_in", VSP_RF: "power_out", RFO1: "output", RFO2: "output", VSN_RF: "power_in", TRIM1_3: "passive", TRIM2_3: "passive", TRIM1_2: "passive", TRIM2_2: "passive", TRIM1_1: "passive", TRIM2_1: "passive", TRIM1_0: "passive", TRIM2_0: "passive", VSS: "power_in", RFI1: "passive", RFI2: "passive", AGD: "passive", CSI: "passive", VSN_A: "power_in", IRQ: "output", MCU_CLK: "output", MISO: "output", MOSI: "input", SCLK: "input", "/SS": "input", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_NFC:ST25R3911B-AQF";

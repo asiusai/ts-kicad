@@ -112,7 +112,8 @@ export class PIC32MK1024GPD100_xPT extends Component.withPins({
   "RB13": "99",
   "RA10/TDO": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RG15: "bidirectional", VDD_2: "power_in", "RA7/TCK": "bidirectional", "RB14/VBUSON1": "bidirectional", RB15: "bidirectional", RD1: "bidirectional", RD2: "bidirectional", RD3: "bidirectional", RD4: "bidirectional", "RG6/VBUSON2": "bidirectional", RG7: "bidirectional", RG8: "bidirectional", "~{MCLR}": "input", RG9: "bidirectional", VSS_15: "power_in", VDD_16: "power_in", RG10: "bidirectional", RE8: "bidirectional", RE9: "bidirectional", RA12: "bidirectional", RA11: "bidirectional", RA0: "bidirectional", RA1: "bidirectional", "PGD3/RB0": "bidirectional", "PGC3/RB1": "bidirectional", "PGC1/RB2": "bidirectional", "PGD1/RB3": "bidirectional", RF9: "bidirectional", RF10: "bidirectional", AVDD: "power_in", AVSS: "power_in", RC0: "bidirectional", RC1: "bidirectional", RC2: "bidirectional", RC11: "bidirectional", VSS_36: "passive", VDD_37: "power_in", RG11: "bidirectional", RF13: "bidirectional", RF12: "bidirectional", RE12: "bidirectional", RE13: "bidirectional", RE14: "bidirectional", RE15: "bidirectional", VSS_45: "passive", VDD_46: "power_in", RD14: "bidirectional", RD15: "bidirectional", "RA8/TDI": "bidirectional", RB4: "bidirectional", RA4: "bidirectional", RE0: "bidirectional", RE1: "bidirectional", VBUS1: "input", VUSB3V3: "power_in", "D1-": "bidirectional", "D1+": "bidirectional", VBUS2: "input", "D2-": "bidirectional", "D2+": "bidirectional", RF5: "bidirectional", VDD_62: "power_in", "RC12/OSCI/CLKI": "bidirectional", "RC15/OSCO/CLKO": "bidirectional", VSS_65: "passive", RA14: "bidirectional", RA15: "bidirectional", VBAT: "power_in", "PGD2/RB5": "bidirectional", "PGC2/RB6": "bidirectional", RC10: "bidirectional", RB7: "bidirectional", "RC13/SOSCI": "bidirectional", "SOSCO/RB8": "bidirectional", VSS_75: "passive", "TMS/RB9": "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RD12: "bidirectional", RD13: "bidirectional", RC8: "bidirectional", RD5: "bidirectional", RD6: "bidirectional", RC9: "bidirectional", VSS_85: "passive", VDD_86: "power_in", RF0: "bidirectional", RF1: "bidirectional", RG1: "bidirectional", RG0: "bidirectional", "TRCLK/RF6": "bidirectional", "TRD3/RF7": "bidirectional", RB10: "bidirectional", RB11: "bidirectional", "RG14/TRD2": "bidirectional", RG12: "bidirectional", "RG13/TRD0": "bidirectional", RB12: "bidirectional", RB13: "bidirectional", "RA10/TDO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MK1024GPD100-xPT";
@@ -230,7 +231,8 @@ export class PIC32MK1024GPE100_xPT extends Component.withPins({
   "RB13": "99",
   "RA10/TDO": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RG15: "bidirectional", VDD_2: "power_in", "RA7/TCK": "bidirectional", "RB14/VBUSON1": "bidirectional", RB15: "bidirectional", RD1: "bidirectional", RD2: "bidirectional", RD3: "bidirectional", RD4: "bidirectional", "RG6/VBUSON2": "bidirectional", RG7: "bidirectional", RG8: "bidirectional", "~{MCLR}": "input", RG9: "bidirectional", VSS_15: "power_in", VDD_16: "power_in", RG10: "bidirectional", RE8: "bidirectional", RE9: "bidirectional", RA12: "bidirectional", RA11: "bidirectional", RA0: "bidirectional", RA1: "bidirectional", "PGD3/RB0": "bidirectional", "PGC3/RB1": "bidirectional", "PGC1/RB2": "bidirectional", "PGD1/RB3": "bidirectional", RF9: "bidirectional", RF10: "bidirectional", AVDD: "power_in", AVSS: "power_in", RC0: "bidirectional", RC1: "bidirectional", RC2: "bidirectional", RC11: "bidirectional", VSS_36: "passive", VDD_37: "power_in", RG11: "bidirectional", RF13: "bidirectional", RF12: "bidirectional", RE12: "bidirectional", RE13: "bidirectional", RE14: "bidirectional", RE15: "bidirectional", VSS_45: "passive", VDD_46: "power_in", RD14: "bidirectional", RD15: "bidirectional", "RA8/TDI": "bidirectional", RB4: "bidirectional", RA4: "bidirectional", RE0: "bidirectional", RE1: "bidirectional", VBUS1: "input", VUSB3V3: "power_in", "D1-": "bidirectional", "D1+": "bidirectional", VBUS2: "input", "D2-": "bidirectional", "D2+": "bidirectional", RF5: "bidirectional", VDD_62: "power_in", "RC12/OSCI/CLKI": "bidirectional", "RC15/OSCO/CLKO": "bidirectional", VSS_65: "passive", RA14: "bidirectional", RA15: "bidirectional", VBAT: "power_in", "PGD2/RB5": "bidirectional", "PGC2/RB6": "bidirectional", RC10: "bidirectional", RB7: "bidirectional", "RC13/SOSCI": "bidirectional", "SOSCO/RB8": "bidirectional", VSS_75: "passive", "TMS/RB9": "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RD12: "bidirectional", RD13: "bidirectional", RC8: "bidirectional", RD5: "bidirectional", RD6: "bidirectional", RC9: "bidirectional", VSS_85: "passive", VDD_86: "power_in", RF0: "bidirectional", RF1: "bidirectional", RG1: "bidirectional", RG0: "bidirectional", "TRCLK/RF6": "bidirectional", "TRD3/RF7": "bidirectional", RB10: "bidirectional", RB11: "bidirectional", "RG14/TRD2": "bidirectional", RG12: "bidirectional", "RG13/TRD0": "bidirectional", RB12: "bidirectional", RB13: "bidirectional", "RA10/TDO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MK1024GPE100-xPT";
@@ -277,7 +279,8 @@ export class PIC32MM0064GPL028x_ML extends Component.withPins({
   "RA1": "28",
   "EP": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RBO: "bidirectional", RB1: "bidirectional", RB2: "bidirectional", RB3: "bidirectional", VSS: "power_in", RA2: "bidirectional", RA3: "bidirectional", RB4: "bidirectional", RA4: "bidirectional", VDD: "power_in", RB5: "bidirectional", RB6: "bidirectional", RB7: "bidirectional", RB8: "bidirectional", RB9: "bidirectional", RC9: "bidirectional", VCAP: "power_out", RB10: "bidirectional", RB11: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "bidirectional", RA1: "bidirectional", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MM0064GPL028x-ML";
@@ -339,7 +342,8 @@ export class PIC32MX110F016D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", RB6: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX110F016D-IPT";
@@ -401,7 +405,8 @@ export class PIC32MX120F032D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", RB6: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX120F032D-IPT";
@@ -463,7 +468,8 @@ export class PIC32MX130F064D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", RB6: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX130F064D-IPT";
@@ -525,7 +531,8 @@ export class PIC32MX150F128D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", RB6: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX150F128D-IPT";
@@ -587,7 +594,8 @@ export class PIC32MX170F256D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", RB6: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX170F256D-IPT";
@@ -649,7 +657,8 @@ export class PIC32MX210F016D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", VUSB3V3: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", VBUS: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX210F016D-IPT";
@@ -711,7 +720,8 @@ export class PIC32MX220F032D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", VUSB3V3: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", VBUS: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX220F032D-IPT";
@@ -773,7 +783,8 @@ export class PIC32MX230F064D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", VUSB3V3: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", VBUS: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX230F064D-IPT";
@@ -835,7 +846,8 @@ export class PIC32MX250F128D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", VUSB3V3: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", VBUS: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX250F128D-IPT";
@@ -897,7 +909,8 @@ export class PIC32MX270F256D_IPT extends Component.withPins({
   "RB7": "43",
   "RB8": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RB9: "bidirectional", RC6: "bidirectional", RC7: "bidirectional", RC8: "bidirectional", RC9: "bidirectional", VSS_6: "power_in", VCAP: "power_in", RB10: "bidirectional", RB11: "bidirectional", VUSB3V3: "bidirectional", RB13: "bidirectional", RA10: "bidirectional", RA7: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", AVSS: "power_in", AVDD: "power_in", "~{MCLR}": "input", RA0: "input", RA1: "input", RB0: "input", RB1: "input", RB2: "input", RB3: "input", RC0: "input", RC1: "input", RC2: "input", VDD_28: "power_in", VSS_29: "passive", RA2: "input", RA3: "input", RA8: "input", RB4: "input", RA4: "input", RA9: "input", RC3: "input", RC4: "input", RC5: "input", VSS_39: "passive", VDD_40: "passive", RB5: "input", VBUS: "input", RB7: "input", RB8: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX270F256D-IPT";
@@ -978,7 +991,8 @@ export class PIC32MX575F256H extends Component.withPins({
   "RE3": "63",
   "RE4": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RE5: "bidirectional", RE6: "bidirectional", RE7: "bidirectional", RG6: "bidirectional", RG7: "bidirectional", RG8: "bidirectional", "~{MCLR}": "input", RG9: "bidirectional", VSS_9: "power_in", VDD_10: "power_in", RB5: "bidirectional", RB4: "bidirectional", RB3: "bidirectional", RB2: "bidirectional", RB1: "bidirectional", RB0: "bidirectional", RB6: "bidirectional", RB7: "bidirectional", AVDD: "power_in", AVSS: "power_in", RB8: "bidirectional", RB9: "bidirectional", RB10: "bidirectional", RB11: "bidirectional", VSS_25: "passive", VDD_26: "passive", RB12: "bidirectional", RB13: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", RF4: "bidirectional", RF5: "bidirectional", RF3: "bidirectional", VBUS: "input", VUSB: "power_in", RG3: "bidirectional", RG2: "bidirectional", VDD_38: "passive", RC12: "bidirectional", RC15: "bidirectional", VSS_41: "passive", RD8: "bidirectional", RD9: "bidirectional", RD10: "bidirectional", RD11: "bidirectional", RD0: "bidirectional", RC13: "bidirectional", RC14: "bidirectional", RD1: "bidirectional", RD2: "bidirectional", RD3: "bidirectional", RD4: "bidirectional", RD5: "bidirectional", RD6: "bidirectional", RD7: "bidirectional", VCAP: "power_out", VDD_57: "passive", RF0: "bidirectional", RF1: "bidirectional", RE0: "bidirectional", RE1: "bidirectional", RE2: "bidirectional", RE3: "bidirectional", RE4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX575F256H";
@@ -1059,7 +1073,8 @@ export class PIC32MX575F512H extends Component.withPins({
   "RE3": "63",
   "RE4": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RE5: "bidirectional", RE6: "bidirectional", RE7: "bidirectional", RG6: "bidirectional", RG7: "bidirectional", RG8: "bidirectional", "~{MCLR}": "input", RG9: "bidirectional", VSS_9: "power_in", VDD_10: "power_in", RB5: "bidirectional", RB4: "bidirectional", RB3: "bidirectional", RB2: "bidirectional", RB1: "bidirectional", RB0: "bidirectional", RB6: "bidirectional", RB7: "bidirectional", AVDD: "power_in", AVSS: "power_in", RB8: "bidirectional", RB9: "bidirectional", RB10: "bidirectional", RB11: "bidirectional", VSS_25: "passive", VDD_26: "passive", RB12: "bidirectional", RB13: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", RF4: "bidirectional", RF5: "bidirectional", RF3: "bidirectional", VBUS: "input", VUSB: "power_in", RG3: "bidirectional", RG2: "bidirectional", VDD_38: "passive", RC12: "bidirectional", RC15: "bidirectional", VSS_41: "passive", RD8: "bidirectional", RD9: "bidirectional", RD10: "bidirectional", RD11: "bidirectional", RD0: "bidirectional", RC13: "bidirectional", RC14: "bidirectional", RD1: "bidirectional", RD2: "bidirectional", RD3: "bidirectional", RD4: "bidirectional", RD5: "bidirectional", RD6: "bidirectional", RD7: "bidirectional", VCAP: "power_out", VDD_57: "passive", RF0: "bidirectional", RF1: "bidirectional", RE0: "bidirectional", RE1: "bidirectional", RE2: "bidirectional", RE3: "bidirectional", RE4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX575F512H";
@@ -1177,7 +1192,8 @@ export class PIC32MX795F512L_80x_PF extends Component.withPins({
   "RE3": "99",
   "RE4": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RG15: "bidirectional", VDD_2: "power_in", RE5: "bidirectional", RE6: "bidirectional", RE7: "bidirectional", RC1: "bidirectional", RC2: "bidirectional", RC3: "bidirectional", RC4: "bidirectional", RG6: "bidirectional", RG7: "bidirectional", RG8: "bidirectional", "~{MCLR}": "input", RG9: "bidirectional", VSS_15: "power_in", VDD_16: "power_in", "RA0/TMS": "bidirectional", RE8: "bidirectional", RE9: "bidirectional", RB5: "bidirectional", RB4: "bidirectional", RB3: "bidirectional", RB2: "bidirectional", "PGEC1/RB1": "bidirectional", "PGED1/RB0": "bidirectional", "PGEC2/RB6": "bidirectional", "PGED2/RB7": "bidirectional", RA9: "bidirectional", RA10: "bidirectional", AVDD: "power_in", AVSS: "power_in", RB8: "bidirectional", RB9: "bidirectional", RB10: "bidirectional", RB11: "bidirectional", VSS_36: "passive", VDD_37: "power_in", "RA1/TCK": "bidirectional", RF13: "bidirectional", RF12: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", VSS_45: "passive", VDD_46: "power_in", RD14: "bidirectional", RD15: "bidirectional", RF4: "bidirectional", RF5: "bidirectional", RF3: "bidirectional", RF2: "bidirectional", RF8: "bidirectional", VBUS: "input", VUSB3V3: "power_in", "RG3/D-": "bidirectional", "RG2/D+": "bidirectional", RA2: "bidirectional", RA3: "bidirectional", "RA4/TDI": "bidirectional", "RA5/TDO": "bidirectional", VDD_62: "power_in", "RC12/OSC1/CLK": "bidirectional", "RC15/OSC2/CLKO": "bidirectional", VSS_65: "passive", RA14: "bidirectional", RA15: "bidirectional", RD8: "bidirectional", RD9: "bidirectional", RD10: "bidirectional", RD11: "bidirectional", RD0: "bidirectional", "RC13/SOSCI": "bidirectional", "RC14/SOSCO": "bidirectional", VSS_75: "passive", RD1: "bidirectional", RD2: "bidirectional", RD3: "bidirectional", RD12: "bidirectional", RD13: "bidirectional", RD4: "bidirectional", RD5: "bidirectional", RD6: "bidirectional", RD7: "bidirectional", "VCAP/VDDCORE": "power_out", VDD_86: "power_in", RF0: "bidirectional", RF1: "bidirectional", RG1: "bidirectional", RG0: "bidirectional", "RA6/TRCLK": "bidirectional", "RA7/TRD3": "bidirectional", RE0: "bidirectional", RE1: "bidirectional", "RG14/TRD2": "bidirectional", "RG12/TRD1": "bidirectional", "RG13/TRD0": "bidirectional", RE2: "bidirectional", RE3: "bidirectional", RE4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX795F512L-80x-PF";
@@ -1295,7 +1311,8 @@ export class PIC32MX795F512L_80x_PT extends Component.withPins({
   "RE3": "99",
   "RE4": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RG15: "bidirectional", VDD_2: "power_in", RE5: "bidirectional", RE6: "bidirectional", RE7: "bidirectional", RC1: "bidirectional", RC2: "bidirectional", RC3: "bidirectional", RC4: "bidirectional", RG6: "bidirectional", RG7: "bidirectional", RG8: "bidirectional", "~{MCLR}": "input", RG9: "bidirectional", VSS_15: "power_in", VDD_16: "power_in", "RA0/TMS": "bidirectional", RE8: "bidirectional", RE9: "bidirectional", RB5: "bidirectional", RB4: "bidirectional", RB3: "bidirectional", RB2: "bidirectional", "PGEC1/RB1": "bidirectional", "PGED1/RB0": "bidirectional", "PGEC2/RB6": "bidirectional", "PGED2/RB7": "bidirectional", RA9: "bidirectional", RA10: "bidirectional", AVDD: "power_in", AVSS: "power_in", RB8: "bidirectional", RB9: "bidirectional", RB10: "bidirectional", RB11: "bidirectional", VSS_36: "passive", VDD_37: "power_in", "RA1//TCK": "bidirectional", RF13: "bidirectional", RF12: "bidirectional", RB12: "bidirectional", RB13: "bidirectional", RB14: "bidirectional", RB15: "bidirectional", VSS_45: "passive", VDD_46: "power_in", RD14: "bidirectional", RD15: "bidirectional", RF4: "bidirectional", RF5: "bidirectional", RF3: "bidirectional", RF2: "bidirectional", RF8: "bidirectional", VBUS: "input", VUSB3V3: "power_in", "RG3/D-": "bidirectional", "RG2/D+": "bidirectional", RA2: "bidirectional", RA3: "bidirectional", "RA4/TDI": "bidirectional", "RA5/TDO": "bidirectional", VDD_62: "power_in", "RC12/OSC1/CLK": "bidirectional", "RC15/OSC2/CLKO": "bidirectional", VSS_65: "passive", RA14: "bidirectional", RA15: "bidirectional", RD8: "bidirectional", RD9: "bidirectional", RD10: "bidirectional", RD11: "bidirectional", RD0: "bidirectional", "RC13/SOSCI": "bidirectional", "RC14/SOSCO": "bidirectional", VSS_75: "passive", RD1: "bidirectional", RD2: "bidirectional", RD3: "bidirectional", RD12: "bidirectional", RD13: "bidirectional", RD4: "bidirectional", RD5: "bidirectional", RD6: "bidirectional", RD7: "bidirectional", "VCAP/VDDCORE": "power_out", VDD_86: "power_in", RF0: "bidirectional", RF1: "bidirectional", RG1: "bidirectional", RG0: "bidirectional", "RA6/TRCLK": "bidirectional", "RA7/TRD3": "bidirectional", RE0: "bidirectional", RE1: "bidirectional", "RG14/TRD2": "bidirectional", "RG12/TRD1": "bidirectional", "RG13/TRD0": "bidirectional", RE2: "bidirectional", RE3: "bidirectional", RE4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC32:PIC32MX795F512L-80x-PT";

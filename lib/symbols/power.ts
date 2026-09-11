@@ -11,7 +11,8 @@ import { Component } from "ts-kicad";
 export class _10V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+10V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+10V";
@@ -28,7 +29,8 @@ export class _10V extends Component.withPins({
 export class _12C extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+12C", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+12C";
@@ -45,7 +47,8 @@ export class _12C extends Component.withPins({
 export class _12L extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+12L", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+12L";
@@ -62,7 +65,8 @@ export class _12L extends Component.withPins({
 export class _12LF extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+12LF", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+12LF";
@@ -79,7 +83,8 @@ export class _12LF extends Component.withPins({
 export class _12P extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+12P", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+12P";
@@ -96,7 +101,8 @@ export class _12P extends Component.withPins({
 export class _12V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+12V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+12V";
@@ -113,7 +119,8 @@ export class _12V extends Component.withPins({
 export class _12VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+12VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+12VA";
@@ -130,7 +137,8 @@ export class _12VA extends Component.withPins({
 export class _15V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+15V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+15V";
@@ -147,7 +155,8 @@ export class _15V extends Component.withPins({
 export class _1V0 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+1V0", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+1V0";
@@ -164,7 +173,8 @@ export class _1V0 extends Component.withPins({
 export class _1V1 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+1V1", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+1V1";
@@ -181,7 +191,8 @@ export class _1V1 extends Component.withPins({
 export class _1V2 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+1V2", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+1V2";
@@ -198,7 +209,8 @@ export class _1V2 extends Component.withPins({
 export class _1V35 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+1V35", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+1V35";
@@ -215,7 +227,8 @@ export class _1V35 extends Component.withPins({
 export class _1V5 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+1V5", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+1V5";
@@ -232,7 +245,8 @@ export class _1V5 extends Component.withPins({
 export class _1V8 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+1V8", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+1V8";
@@ -249,7 +263,8 @@ export class _1V8 extends Component.withPins({
 export class _24V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+24V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+24V";
@@ -266,7 +281,8 @@ export class _24V extends Component.withPins({
 export class _28V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+28V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+28V";
@@ -283,7 +299,8 @@ export class _28V extends Component.withPins({
 export class _2V5 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+2V5", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+2V5";
@@ -300,7 +317,8 @@ export class _2V5 extends Component.withPins({
 export class _2V8 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+2V8", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+2V8";
@@ -317,7 +335,8 @@ export class _2V8 extends Component.withPins({
 export class _3_3V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3.3V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3.3V";
@@ -334,7 +353,8 @@ export class _3_3V extends Component.withPins({
 export class _3_3VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3.3VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3.3VA";
@@ -351,7 +371,8 @@ export class _3_3VA extends Component.withPins({
 export class _3_3VADC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3.3VADC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3.3VADC";
@@ -368,7 +389,8 @@ export class _3_3VADC extends Component.withPins({
 export class _3_3VDAC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3.3VDAC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3.3VDAC";
@@ -385,7 +407,8 @@ export class _3_3VDAC extends Component.withPins({
 export class _3_3VP extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3.3VP", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3.3VP";
@@ -402,7 +425,8 @@ export class _3_3VP extends Component.withPins({
 export class _36V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+36V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+36V";
@@ -419,7 +443,8 @@ export class _36V extends Component.withPins({
 export class _3V0 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3V0", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3V0";
@@ -436,7 +461,8 @@ export class _3V0 extends Component.withPins({
 export class _3V3 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3V3", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3V3";
@@ -453,7 +479,8 @@ export class _3V3 extends Component.withPins({
 export class _3V8 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+3V8", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+3V8";
@@ -470,7 +497,8 @@ export class _3V8 extends Component.withPins({
 export class _48V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+48V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+48V";
@@ -487,7 +515,8 @@ export class _48V extends Component.withPins({
 export class _4V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+4V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+4V";
@@ -504,7 +533,8 @@ export class _4V extends Component.withPins({
 export class _5C extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5C", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5C";
@@ -521,7 +551,8 @@ export class _5C extends Component.withPins({
 export class _5F extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5F", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5F";
@@ -538,7 +569,8 @@ export class _5F extends Component.withPins({
 export class _5P extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5P", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5P";
@@ -555,7 +587,8 @@ export class _5P extends Component.withPins({
 export class _5V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5V";
@@ -572,7 +605,8 @@ export class _5V extends Component.withPins({
 export class _5VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5VA";
@@ -589,7 +623,8 @@ export class _5VA extends Component.withPins({
 export class _5VD extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5VD", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5VD";
@@ -606,7 +641,8 @@ export class _5VD extends Component.withPins({
 export class _5VL extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5VL", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5VL";
@@ -623,7 +659,8 @@ export class _5VL extends Component.withPins({
 export class _5VP extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+5VP", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+5VP";
@@ -640,7 +677,8 @@ export class _5VP extends Component.withPins({
 export class _6V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+6V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+6V";
@@ -657,7 +695,8 @@ export class _6V extends Component.withPins({
 export class _7_5V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+7.5V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+7.5V";
@@ -674,7 +713,8 @@ export class _7_5V extends Component.withPins({
 export class _8V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+8V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+8V";
@@ -691,7 +731,8 @@ export class _8V extends Component.withPins({
 export class _9V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+9V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+9V";
@@ -708,7 +749,8 @@ export class _9V extends Component.withPins({
 export class _9VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+9VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+9VA";
@@ -725,7 +767,8 @@ export class _9VA extends Component.withPins({
 export class _BATT extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+BATT", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+BATT";
@@ -742,7 +785,8 @@ export class _BATT extends Component.withPins({
 export class _VDC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+VDC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+VDC";
@@ -759,7 +803,8 @@ export class _VDC extends Component.withPins({
 export class _VSW extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "+VSW", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:+VSW";
@@ -776,7 +821,8 @@ export class _VSW extends Component.withPins({
 export class power__10V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-10V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-10V";
@@ -793,7 +839,8 @@ export class power__10V extends Component.withPins({
 export class power__12V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-12V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-12V";
@@ -810,7 +857,8 @@ export class power__12V extends Component.withPins({
 export class power__12VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-12VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-12VA";
@@ -827,7 +875,8 @@ export class power__12VA extends Component.withPins({
 export class power__15V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-15V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-15V";
@@ -844,7 +893,8 @@ export class power__15V extends Component.withPins({
 export class power__24V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-24V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-24V";
@@ -861,7 +911,8 @@ export class power__24V extends Component.withPins({
 export class power__2V5 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-2V5", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-2V5";
@@ -878,7 +929,8 @@ export class power__2V5 extends Component.withPins({
 export class power__36V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-36V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-36V";
@@ -895,7 +947,8 @@ export class power__36V extends Component.withPins({
 export class power__3V3 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-3V3", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-3V3";
@@ -912,7 +965,8 @@ export class power__3V3 extends Component.withPins({
 export class power__48V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-48V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-48V";
@@ -929,7 +983,8 @@ export class power__48V extends Component.withPins({
 export class power__5V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-5V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-5V";
@@ -946,7 +1001,8 @@ export class power__5V extends Component.withPins({
 export class power__5VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-5VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-5VA";
@@ -963,7 +1019,8 @@ export class power__5VA extends Component.withPins({
 export class power__6V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-6V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-6V";
@@ -980,7 +1037,8 @@ export class power__6V extends Component.withPins({
 export class power__8V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-8V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-8V";
@@ -997,7 +1055,8 @@ export class power__8V extends Component.withPins({
 export class power__9V extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-9V", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-9V";
@@ -1014,7 +1073,8 @@ export class power__9V extends Component.withPins({
 export class power__9VA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-9VA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-9VA";
@@ -1031,7 +1091,8 @@ export class power__9VA extends Component.withPins({
 export class power__BATT extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-BATT", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-BATT";
@@ -1048,7 +1109,8 @@ export class power__BATT extends Component.withPins({
 export class power__VDC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-VDC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-VDC";
@@ -1065,7 +1127,8 @@ export class power__VDC extends Component.withPins({
 export class power__VSW extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "-VSW", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:-VSW";
@@ -1082,7 +1145,8 @@ export class power__VSW extends Component.withPins({
 export class AC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "AC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:AC";
@@ -1099,7 +1163,8 @@ export class AC extends Component.withPins({
 export class Earth extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "Earth", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:Earth";
@@ -1116,7 +1181,8 @@ export class Earth extends Component.withPins({
 export class Earth_Clean extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "Earth_Clean", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:Earth_Clean";
@@ -1133,7 +1199,8 @@ export class Earth_Clean extends Component.withPins({
 export class Earth_Protective extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "Earth_Protective", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:Earth_Protective";
@@ -1150,7 +1217,8 @@ export class Earth_Protective extends Component.withPins({
 export class GND extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GND", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GND";
@@ -1167,7 +1235,8 @@ export class GND extends Component.withPins({
 export class GND1 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GND1", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GND1";
@@ -1184,7 +1253,8 @@ export class GND1 extends Component.withPins({
 export class GND2 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GND2", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GND2";
@@ -1201,7 +1271,8 @@ export class GND2 extends Component.withPins({
 export class GND3 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GND3", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GND3";
@@ -1218,7 +1289,8 @@ export class GND3 extends Component.withPins({
 export class GNDA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GNDA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GNDA";
@@ -1235,7 +1307,8 @@ export class GNDA extends Component.withPins({
 export class GNDD extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GNDD", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GNDD";
@@ -1252,7 +1325,8 @@ export class GNDD extends Component.withPins({
 export class GNDPWR extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GNDPWR", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GNDPWR";
@@ -1269,7 +1343,8 @@ export class GNDPWR extends Component.withPins({
 export class GNDREF extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GNDREF", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GNDREF";
@@ -1286,7 +1361,8 @@ export class GNDREF extends Component.withPins({
 export class GNDS extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "GNDS", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:GNDS";
@@ -1303,7 +1379,8 @@ export class GNDS extends Component.withPins({
 export class HT extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "HT", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:HT";
@@ -1320,7 +1397,8 @@ export class HT extends Component.withPins({
 export class LINE extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "LINE", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:LINE";
@@ -1337,7 +1415,8 @@ export class LINE extends Component.withPins({
 export class NEUT extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "NEUT", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:NEUT";
@@ -1354,7 +1433,8 @@ export class NEUT extends Component.withPins({
 export class PRI_HI extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "PRI_HI", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:PRI_HI";
@@ -1371,7 +1451,8 @@ export class PRI_HI extends Component.withPins({
 export class PRI_LO extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "PRI_LO", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:PRI_LO";
@@ -1388,7 +1469,8 @@ export class PRI_LO extends Component.withPins({
 export class PRI_MID extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "PRI_MID", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:PRI_MID";
@@ -1405,7 +1487,8 @@ export class PRI_MID extends Component.withPins({
 export class PWR_FLAG extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "PWR_FLAG", ...opts, pinTypes: { P1: "power_out", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:PWR_FLAG";
@@ -1422,7 +1505,8 @@ export class PWR_FLAG extends Component.withPins({
 export class VAA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VAA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VAA";
@@ -1439,7 +1523,8 @@ export class VAA extends Component.withPins({
 export class VAC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VAC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VAC";
@@ -1456,7 +1541,8 @@ export class VAC extends Component.withPins({
 export class VBUS extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VBUS", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VBUS";
@@ -1473,7 +1559,8 @@ export class VBUS extends Component.withPins({
 export class VCC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VCC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VCC";
@@ -1490,7 +1577,8 @@ export class VCC extends Component.withPins({
 export class VCCQ extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VCCQ", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VCCQ";
@@ -1507,7 +1595,8 @@ export class VCCQ extends Component.withPins({
 export class VCOM extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VCOM", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VCOM";
@@ -1524,7 +1613,8 @@ export class VCOM extends Component.withPins({
 export class VD extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VD", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VD";
@@ -1541,7 +1631,8 @@ export class VD extends Component.withPins({
 export class VDC extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VDC", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VDC";
@@ -1558,7 +1649,8 @@ export class VDC extends Component.withPins({
 export class VDD extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VDD", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VDD";
@@ -1575,7 +1667,8 @@ export class VDD extends Component.withPins({
 export class VDDA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VDDA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VDDA";
@@ -1592,7 +1685,8 @@ export class VDDA extends Component.withPins({
 export class VDDF extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VDDF", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VDDF";
@@ -1609,7 +1703,8 @@ export class VDDF extends Component.withPins({
 export class VEE extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VEE", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VEE";
@@ -1626,7 +1721,8 @@ export class VEE extends Component.withPins({
 export class VMEM extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VMEM", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VMEM";
@@ -1643,7 +1739,8 @@ export class VMEM extends Component.withPins({
 export class VPP extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VPP", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VPP";
@@ -1660,7 +1757,8 @@ export class VPP extends Component.withPins({
 export class VS extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VS", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VS";
@@ -1677,7 +1775,8 @@ export class VS extends Component.withPins({
 export class VSS extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VSS", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VSS";
@@ -1694,7 +1793,8 @@ export class VSS extends Component.withPins({
 export class VSSA extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "VSSA", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:VSSA";
@@ -1711,7 +1811,8 @@ export class VSSA extends Component.withPins({
 export class Vdrive extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "Vdrive", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "power:Vdrive";

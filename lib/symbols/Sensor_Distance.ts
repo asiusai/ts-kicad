@@ -24,7 +24,8 @@ export class TMF8820 extends Component.withPins({
   "GND_11": "11",
   "VDD_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", GND_2: "power_in", GPIO0: "tri_state", INT: "open_collector", SCL: "input", SDA: "bidirectional", VDD_7: "passive", GND_8: "passive", EN: "input", GPIO1: "tri_state", GND_11: "passive", VDD_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Distance:TMF8820";
@@ -54,7 +55,8 @@ export class TMF8821 extends Component.withPins({
   "GND_11": "11",
   "VDD_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", GND_2: "power_in", GPIO0: "tri_state", INT: "open_collector", SCL: "input", SDA: "bidirectional", VDD_7: "passive", GND_8: "passive", EN: "input", GPIO1: "tri_state", GND_11: "passive", VDD_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Distance:TMF8821";
@@ -84,7 +86,8 @@ export class TMF8828 extends Component.withPins({
   "GND_11": "11",
   "VDD_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", GND_2: "power_in", GPIO0: "tri_state", INT: "open_collector", SCL: "input", SDA: "bidirectional", VDD_7: "passive", GND_8: "passive", EN: "input", GPIO1: "tri_state", GND_11: "passive", VDD_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Distance:TMF8828";
@@ -114,7 +117,8 @@ export class VL53L1CXV0FY1 extends Component.withPins({
   "AVDD": "11",
   "GND_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVDDVCSEL: "power_in", AVSSVCSEL: "power_in", GND_3: "power_in", GND_4: "passive", XSHUT: "input", GND_6: "passive", GPIO1: "open_collector", DNC: "no_connect", SDA: "bidirectional", SCL: "input", AVDD: "power_in", GND_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Distance:VL53L1CXV0FY1";
@@ -144,7 +148,8 @@ export class VL53L0CXV0DH1 extends Component.withPins({
   "AVDD": "11",
   "GND_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVDDVCSEL: "power_in", AVSSVCSEL: "power_in", GND_3: "power_in", GND_4: "passive", XSHUT: "input", GND_6: "passive", GPIO1: "open_collector", DNC: "no_connect", SDA: "bidirectional", SCL: "input", AVDD: "power_in", GND_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Distance:VL53L0CXV0DH1";

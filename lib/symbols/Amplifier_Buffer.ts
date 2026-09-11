@@ -20,7 +20,8 @@ export class BUF602xD extends Component.withPins({
   "NC_7": "7",
   "P8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", NC_2: "no_connect", NC_3: "no_connect", IN: "input", "V-": "power_in", VREF: "output", NC_7: "no_connect", P8: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF602xD";
@@ -43,7 +44,8 @@ export class BUF602xDBV extends Component.withPins({
   "IN": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", VREF: "output", IN: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF602xDBV";
@@ -69,7 +71,8 @@ export class BUF634U extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BW: "input", NC_2: "no_connect", "V_{IN}": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF634U";
@@ -95,7 +98,8 @@ export class BUF634AxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BW: "input", NC_2: "no_connect", "V_{IN}": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF634AxD";
@@ -122,7 +126,8 @@ export class BUF634AxDDA extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { THPAD: "power_in", BW: "input", NC_2: "no_connect", "V_{IN}": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF634AxDDA";
@@ -149,7 +154,8 @@ export class BUF634AxDRB extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { THPAD: "power_in", BW: "input", NC_2: "no_connect", "V_{IN}": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF634AxDRB";
@@ -184,7 +190,8 @@ export class BUF802 extends Component.withPins({
   "P16": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{S+}": "power_in", IN: "input", "IN_{BIAS}": "input", "IN_{AUX}": "input", "V_{S-}_5": "power_in", "AUX_{BIAS}": "input", "R_{BIAS}": "input", "V_{S-}_8": "passive", P9: "no_connect", "V_{SO-}": "power_in", P11: "output", "V_{SO+}": "power_in", P13: "no_connect", CLL: "input", CLH: "input", P16: "no_connect", PAD: "free", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:BUF802";
@@ -210,7 +217,8 @@ export class EL2001CN extends Component.withPins({
   "P7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", IN: "input", NC_3: "no_connect", "V-": "power_in", NC_5: "no_connect", NC_6: "no_connect", P7: "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:EL2001CN";
@@ -236,7 +244,8 @@ export class LH0002H extends Component.withPins({
   "V1-": "7",
   "IN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V1+": "power_in", "V2+": "power_in", E3: "passive", P4: "output", E4: "passive", "V2-": "power_in", "V1-": "power_in", IN: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:LH0002H";
@@ -262,7 +271,8 @@ export class LM6321H extends Component.withPins({
   "NC_7": "7",
   "IN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "V+": "power_in", NC_3: "no_connect", P4: "output", NC_5: "no_connect", "V-": "power_in", NC_7: "no_connect", IN: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:LM6321H";
@@ -294,7 +304,8 @@ export class LM6321M extends Component.withPins({
   "V-_13": "13",
   "V-_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-_1": "passive", "V-_2": "passive", "V-_3": "power_in", NC_4: "no_connect", IN: "input", "V-_6": "passive", "V-_7": "passive", "V-_8": "passive", "V-_9": "passive", NC_10: "no_connect", "V+": "power_in", P12: "output", "V-_13": "passive", "V-_14": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:LM6321M";
@@ -320,7 +331,8 @@ export class LM6321N extends Component.withPins({
   "NC_7": "7",
   "IN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "V+": "power_in", NC_3: "no_connect", P4: "output", NC_5: "no_connect", "V-": "power_in", NC_7: "no_connect", IN: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Buffer:LM6321N";

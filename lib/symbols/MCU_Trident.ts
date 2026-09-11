@@ -53,7 +53,8 @@ export class T32CZ20B20GQ40 extends Component.withPins({
   "DCDC_LX": "40",
   "PAD": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", DCDC_FB: "passive", LDO1OUT: "passive", VDD_PA: "power_in", VSS_RFA: "power_in", RFO: "bidirectional", RFIP: "bidirectional", RFIN: "bidirectional", VSS_RFB: "power_in", VDD_ANA: "power_in", VDD_PLL: "power_in", XI32M: "input", XO32M: "output", GP31: "bidirectional", GP30: "bidirectional", GP29: "bidirectional", GP28: "bidirectional", GP23: "bidirectional", GP22: "bidirectional", GP21: "bidirectional", GP20: "bidirectional", GP17_U0TX: "bidirectional", GP16_U0RX: "bidirectional", GP15: "bidirectional", GP14: "bidirectional", GP11_SWDIO: "bidirectional", GP10_SWCLK: "bidirectional", GP09: "bidirectional", GP08: "bidirectional", GP07: "bidirectional", GP06: "bidirectional", GP05: "bidirectional", GP04: "bidirectional", GP01: "bidirectional", GP00: "bidirectional", RST_N: "input", VDD_IO: "power_in", VDD_DIG: "power_in", VBAT: "power_in", DCDC_LX: "passive", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Trident:T32CZ20B20GQ40";

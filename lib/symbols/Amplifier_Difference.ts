@@ -19,7 +19,8 @@ export class AD628 extends Component.withPins({
   "V+": "7",
   "-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", VREF: "passive", CFILT: "passive", P5: "output", RG: "passive", "V+": "power_in", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:AD628";
@@ -45,7 +46,8 @@ export class AD8207 extends Component.withPins({
   "Vref1": "7",
   "+IN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-IN": "input", GND: "power_in", Vref2: "input", RANGE: "input", OUT: "output", "V+": "power_in", Vref1: "input", "+IN": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:AD8207";
@@ -104,7 +106,8 @@ export class AD8264 extends Component.withPins({
   "IPP1": "40",
   "COMM_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IPN1: "passive", OPP1: "output", OPP2: "output", IPN2: "passive", IPP2: "input", IPP3: "input", IPN3: "passive", OPP3: "output", OPP4: "output", IPN4: "passive", IPP4: "input", COMM_12: "power_in", GNH4: "input", GNH3: "input", VOCM: "input", VPOS_16: "power_in", VNEG_17: "power_in", OSF4: "input", OFS3: "input", VGA4: "output", VOL4: "output", VOH4: "output", VOH3: "output", VOL3: "output", VGA3: "output", VGA2: "output", VOL2: "output", VOH2: "output", VOH1: "output", VOL1: "output", VGA1: "output", OFS2: "input", OFS1: "input", VNEG_34: "passive", VPOS_35: "passive", GNLO: "input", GNH2: "input", GNH1: "input", COMM_39: "passive", IPP1: "input", COMM_41: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:AD8264";
@@ -129,7 +132,8 @@ export class AD8276 extends Component.withPins({
   "V+": "7",
   "P8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "passive", "-": "passive", "+": "passive", "V-": "power_in", SENSE: "passive", P6: "output", "V+": "power_in", P8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:AD8276";
@@ -164,7 +168,8 @@ export class AD8475ACPZ extends Component.withPins({
   "+IN0.4x_16": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+IN0.4x_1": "input", "+IN0.8x": "input", "-IN0.8x": "input", "-IN0.4x_4": "input", "-IN0.4x_5": "input", "+Vs_6": "power_in", "+Vs_7": "passive", "+Vs_8": "passive", VOCM: "power_in", "+": "output", "-": "output", NC: "no_connect", "-Vs_13": "power_in", "-Vs_14": "passive", "-Vs_15": "passive", "+IN0.4x_16": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:AD8475ACPZ";
@@ -192,7 +197,8 @@ export class AD8475xRMZ extends Component.withPins({
   "+IN0.4x": "9",
   "+IN0.8x": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-IN0.8x": "input", "-IN0.4x": "input", "+Vs": "power_in", VOCM: "power_in", "+": "output", "-": "output", NC: "no_connect", "-Vs": "power_in", "+IN0.4x": "input", "+IN0.8x": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:AD8475xRMZ";
@@ -227,7 +233,8 @@ export class ADA4938_1 extends Component.withPins({
   "V-_16": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "FB-": "output", "+": "input", "-": "input", "FB+": "output", "V_{OCM}": "input", P10: "output", P11: "output", "V+_5": "power_in", "V+_6": "passive", "V+_7": "passive", "V+_8": "passive", "~{PD}": "input", "V-_13": "power_in", "V-_14": "passive", "V-_15": "passive", "V-_16": "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:ADA4938-1";
@@ -262,7 +269,8 @@ export class ADA4940_1xCP extends Component.withPins({
   "-Vs_16": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-FB": "input", "+IN": "input", "-IN": "input", "+FB": "input", VOCM: "input", "+OUT": "output", "-OUT": "output", "~{DISABLE}": "input", "+Vs_5": "power_in", "+Vs_6": "passive", "+Vs_7": "passive", "+Vs_8": "passive", "-Vs_13": "power_in", "-Vs_14": "passive", "-Vs_15": "passive", "-Vs_16": "passive", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:ADA4940-1xCP";
@@ -305,7 +313,8 @@ export class ADA4940_2 extends Component.withPins({
   "-FB2_15": "15",
   "-FB2_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-IN1": "input", "+FB1": "input", VOCM1: "input", "+1": "output", "-1": "output", "~{DISABLE1}": "input", "-FB1": "input", "+IN1": "input", "-FB2_5": "input", "+IN2": "input", "-IN2": "input", "+FB2_8": "input", VOCM2: "input", "+2": "output", "-2": "output", "~{DISABLE2}": "input", "+FB2_3": "input", "+FB2_4": "input", "-FB2_21": "input", "-FB2_22": "input", EP: "passive", "+FB2_9": "input", "+FB2_10": "input", "-FB2_15": "input", "-FB2_16": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:ADA4940-2";
@@ -331,7 +340,8 @@ export class INA105KP extends Component.withPins({
   "V+": "7",
   "P8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "passive", "-": "passive", "+": "passive", "V-": "power_in", SENSE: "passive", P6: "output", "V+": "power_in", P8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:INA105KP";
@@ -357,7 +367,8 @@ export class INA105KU extends Component.withPins({
   "V+": "7",
   "P8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "passive", "-": "passive", "+": "passive", "V-": "power_in", SENSE: "passive", P6: "output", "V+": "power_in", P8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:INA105KU";
@@ -385,7 +396,8 @@ export class LM733CH extends Component.withPins({
   "1A": "9",
   "2A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", "2B": "passive", "1B": "passive", "V-": "power_in", P6: "output", P7: "output", "V+": "power_in", "1A": "passive", "2A": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:LM733CH";
@@ -417,7 +429,8 @@ export class LM733CN extends Component.withPins({
   "NC_13": "13",
   "P14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", NC_2: "no_connect", "2B": "passive", "1B": "passive", "V-": "power_in", NC_6: "no_connect", P7: "output", P8: "output", NC_9: "no_connect", "V+": "power_in", "1A": "passive", "2A": "passive", NC_13: "no_connect", P14: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:LM733CN";
@@ -445,7 +458,8 @@ export class LM733H extends Component.withPins({
   "1A": "9",
   "2A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", "2B": "passive", "1B": "passive", "V-": "power_in", P6: "output", P7: "output", "V+": "power_in", "1A": "passive", "2A": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:LM733H";
@@ -471,7 +485,8 @@ export class LTC1992_x_xMS8 extends Component.withPins({
   "V_{Mid}": "7",
   "+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "V_{OCM}": "input", "+V_{S}": "power_in", P4: "output", P5: "output", "-V_{S}": "power_in", "V_{Mid}": "input", "+": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:LTC1992-x-xMS8";
@@ -497,7 +512,8 @@ export class THS4521IDGK extends Component.withPins({
   "~{PD}": "7",
   "+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "V_{OCM}": "input", "V_{S+}": "power_in", P4: "output", P5: "output", "V_{S-}": "power_in", "~{PD}": "input", "+": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:THS4521IDGK";
@@ -523,7 +539,8 @@ export class THS4521ID extends Component.withPins({
   "~{PD}": "7",
   "+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "V_{OCM}": "input", "V_{S+}": "power_in", P4: "output", P5: "output", "V_{S-}": "power_in", "~{PD}": "input", "+": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:THS4521ID";
@@ -558,7 +575,8 @@ export class THS4551xRGT extends Component.withPins({
   "VS-_16": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "FB-": "output", "IN+": "input", "IN-": "input", "FB+": "output", VOCM: "input", "OUT+": "output", "OUT-": "output", "~{PD}": "input", "VS+_5": "power_in", "VS+_6": "passive", "VS+_7": "passive", "VS+_8": "passive", "VS-_13": "power_in", "VS-_14": "passive", "VS-_15": "passive", "VS-_16": "passive", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Difference:THS4551xRGT";

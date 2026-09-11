@@ -16,7 +16,8 @@ export class _74LVC1G00 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G00";
@@ -38,7 +39,8 @@ export class _74AHC1G00 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G00";
@@ -60,7 +62,8 @@ export class _74LVC1G02 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G02";
@@ -82,7 +85,8 @@ export class _74AHC1G02 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G02";
@@ -104,7 +108,8 @@ export class _74LVC1G04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G04";
@@ -126,7 +131,8 @@ export class _74AHC1G04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G04";
@@ -148,7 +154,8 @@ export class _74LVC1G08 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G08";
@@ -170,7 +177,8 @@ export class _74AHC1G08 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G08";
@@ -192,7 +200,8 @@ export class _74LVC1G125 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G125";
@@ -214,7 +223,8 @@ export class _74AHC1G125 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G125";
@@ -236,7 +246,8 @@ export class _74LVC1G126 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G126";
@@ -258,7 +269,8 @@ export class _74AHC1G126 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G126";
@@ -280,7 +292,8 @@ export class _74LVC1G14 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G14";
@@ -302,7 +315,8 @@ export class _74AHC1G14 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G14";
@@ -324,7 +338,8 @@ export class _74LVC1G32 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G32";
@@ -346,7 +361,8 @@ export class _74AHC1G32 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G32";
@@ -369,7 +385,8 @@ export class _74AHC1G4210 extends Component.withPins({
   "Q": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "input", GND: "power_in", Q: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G4210";
@@ -391,7 +408,8 @@ export class _74LVC1G86 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G86";
@@ -413,7 +431,8 @@ export class _74AHC1G86 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1G86";
@@ -435,7 +454,8 @@ export class _74AHC1GU04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC1GU04";
@@ -460,7 +480,8 @@ export class _74LVC2G00 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G00";
@@ -485,7 +506,8 @@ export class _74AHC2G00 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHC2G00";
@@ -507,7 +529,8 @@ export class _74AHCT1G00 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G00";
@@ -529,7 +552,8 @@ export class _74AHCT1G02 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G02";
@@ -551,7 +575,8 @@ export class _74AHCT1G04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G04";
@@ -573,7 +598,8 @@ export class _74AHCT1G08 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G08";
@@ -595,7 +621,8 @@ export class _74AHCT1G125 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G125";
@@ -617,7 +644,8 @@ export class _74AHCT1G126 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G126";
@@ -639,7 +667,8 @@ export class _74AHCT1G14 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G14";
@@ -661,7 +690,8 @@ export class _74AHCT1G32 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G32";
@@ -683,7 +713,8 @@ export class _74AHCT1G86 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1G86";
@@ -705,7 +736,8 @@ export class _74AHCT1GU04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT1GU04";
@@ -730,7 +762,8 @@ export class _74AHCT2G00 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AHCT2G00";
@@ -752,7 +785,8 @@ export class _74AUC1G00 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G00";
@@ -774,7 +808,8 @@ export class _74AUC1G02 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G02";
@@ -796,7 +831,8 @@ export class _74AUC1G04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G04";
@@ -817,7 +853,8 @@ export class _74LVC1G06 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "input", GND: "power_in", P4: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G06";
@@ -838,7 +875,8 @@ export class _74AUC1G06 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "input", GND: "power_in", P4: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G06";
@@ -860,7 +898,8 @@ export class _74LVC1G07 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "free", P2: "input", GND: "power_in", P4: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G07";
@@ -882,7 +921,8 @@ export class _74AUC1G07 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "free", P2: "input", GND: "power_in", P4: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G07";
@@ -904,7 +944,8 @@ export class _74AUC1G08 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G08";
@@ -926,7 +967,8 @@ export class _74AUC1G125 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G125";
@@ -948,7 +990,8 @@ export class _74AUC1G126 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G126";
@@ -970,7 +1013,8 @@ export class _74AUC1G14 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G14";
@@ -992,7 +1036,8 @@ export class _74LVC1G17 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G17";
@@ -1014,7 +1059,8 @@ export class _74AUC1G17 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G17";
@@ -1037,7 +1083,8 @@ export class _74LVC1G18 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P3: "input", P4: "tri_state", P6: "tri_state", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G18";
@@ -1060,7 +1107,8 @@ export class _74AUC1G18 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P3: "input", P4: "tri_state", P6: "tri_state", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G18";
@@ -1083,7 +1131,8 @@ export class _74LVC1G19 extends Component.withPins({
   "VCC": "5",
   "Y0": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", GND: "power_in", "~{E}": "input", Y1: "output", VCC: "power_in", Y0: "output", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G19";
@@ -1106,7 +1155,8 @@ export class _74AUC1G19 extends Component.withPins({
   "VCC": "5",
   "Y0": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", GND: "power_in", "~{E}": "input", Y1: "output", VCC: "power_in", Y0: "output", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G19";
@@ -1128,7 +1178,8 @@ export class _74LVC1G240 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G240";
@@ -1150,7 +1201,8 @@ export class _74AUC1G240 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G240";
@@ -1172,7 +1224,8 @@ export class _74AUC1G32 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G32";
@@ -1194,7 +1247,8 @@ export class _74LVC1G66 extends Component.withPins({
   "GND": "3",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "bidirectional", P4: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G66";
@@ -1216,7 +1270,8 @@ export class _74AUC1G66 extends Component.withPins({
   "GND": "3",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "bidirectional", P4: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G66";
@@ -1241,7 +1296,8 @@ export class _74AUC1G74 extends Component.withPins({
   "~{PRE}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "input", D: "input", "~{Q}": "output", GND: "power_in", Q: "output", "~{CLR}": "input", "~{PRE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G74";
@@ -1263,7 +1319,8 @@ export class _74LVC1G79 extends Component.withPins({
   "Q": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "input", C: "input", GND: "power_in", Q: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G79";
@@ -1285,7 +1342,8 @@ export class _74AUC1G79 extends Component.withPins({
   "Q": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "input", C: "input", GND: "power_in", Q: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G79";
@@ -1307,7 +1365,8 @@ export class _74LVC1G80 extends Component.withPins({
   "~{Q}": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "input", C: "input", GND: "power_in", "~{Q}": "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G80";
@@ -1329,7 +1388,8 @@ export class _74AUC1G80 extends Component.withPins({
   "~{Q}": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "input", C: "input", GND: "power_in", "~{Q}": "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G80";
@@ -1351,7 +1411,8 @@ export class _74AUC1G86 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1G86";
@@ -1373,7 +1434,8 @@ export class _74AUC1GU04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC1GU04";
@@ -1398,7 +1460,8 @@ export class _74AUC2G00 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G00";
@@ -1423,7 +1486,8 @@ export class _74LVC2G02 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G02";
@@ -1448,7 +1512,8 @@ export class _74AUC2G02 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G02";
@@ -1471,7 +1536,8 @@ export class _74LVC2G04 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G04";
@@ -1494,7 +1560,8 @@ export class _74AUC2G04 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G04";
@@ -1517,7 +1584,8 @@ export class _74LVC2G06 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "open_collector", P3: "input", P4: "open_collector", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G06";
@@ -1540,7 +1608,8 @@ export class _74AUC2G06 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "open_collector", P3: "input", P4: "open_collector", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G06";
@@ -1563,7 +1632,8 @@ export class _74LVC2G07 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "open_collector", P3: "input", P4: "open_collector", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G07";
@@ -1586,7 +1656,8 @@ export class _74AUC2G07 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "open_collector", P3: "input", P4: "open_collector", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G07";
@@ -1611,7 +1682,8 @@ export class _74LVC2G08 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G08";
@@ -1636,7 +1708,8 @@ export class _74AUC2G08 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G08";
@@ -1661,7 +1734,8 @@ export class _74LVC2G125 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G125";
@@ -1686,7 +1760,8 @@ export class _74AUC2G125 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G125";
@@ -1711,7 +1786,8 @@ export class _74LVC2G126 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G126";
@@ -1736,7 +1812,8 @@ export class _74AUC2G126 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G126";
@@ -1761,7 +1838,8 @@ export class _74LVC2G240 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G240";
@@ -1786,7 +1864,8 @@ export class _74AUC2G240 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G240";
@@ -1811,7 +1890,8 @@ export class _74LVC2G241 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G241";
@@ -1836,7 +1916,8 @@ export class _74AUC2G241 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P6: "tri_state", P3: "tri_state", P5: "input", P7: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G241";
@@ -1861,7 +1942,8 @@ export class _74LVC2G32 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G32";
@@ -1886,7 +1968,8 @@ export class _74AUC2G32 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G32";
@@ -1909,7 +1992,8 @@ export class _74LVC2G34 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G34";
@@ -1932,7 +2016,8 @@ export class _74AUC2G34 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G34";
@@ -1957,7 +2042,8 @@ export class _74LVC2G53 extends Component.withPins({
   "GND_4": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "input", P5: "input", P6: "bidirectional", P7: "bidirectional", GND_3: "power_in", GND_4: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G53";
@@ -1982,7 +2068,8 @@ export class _74AUC2G53 extends Component.withPins({
   "GND_4": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "input", P5: "input", P6: "bidirectional", P7: "bidirectional", GND_3: "power_in", GND_4: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G53";
@@ -2007,7 +2094,8 @@ export class _74LVC2G66 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "tri_state", P7: "input", P3: "input", P5: "input", P6: "tri_state", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G66";
@@ -2032,7 +2120,8 @@ export class _74AUC2G66 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "tri_state", P7: "input", P3: "input", P5: "input", P6: "tri_state", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G66";
@@ -2057,7 +2146,8 @@ export class _74LVC2G79 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C_1: "input", D_2: "input", Q_7: "output", Q_3: "output", C_5: "input", D_6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G79";
@@ -2082,7 +2172,8 @@ export class _74AUC2G79 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C_1: "input", D_2: "input", Q_7: "output", Q_3: "output", C_5: "input", D_6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G79";
@@ -2107,7 +2198,8 @@ export class _74LVC2G80 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C_1: "input", D_2: "input", "~{Q}_7": "output", "~{Q}_3": "output", C_5: "input", D_6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G80";
@@ -2132,7 +2224,8 @@ export class _74AUC2G80 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C_1: "input", D_2: "input", "~{Q}_7": "output", "~{Q}_3": "output", C_5: "input", D_6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G80";
@@ -2157,7 +2250,8 @@ export class _74LVC2G86 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G86";
@@ -2182,7 +2276,8 @@ export class _74AUC2G86 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "output", P3: "output", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2G86";
@@ -2205,7 +2300,8 @@ export class _74AUC2GU04 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUC2GU04";
@@ -2227,7 +2323,8 @@ export class _74AUP1G00 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G00";
@@ -2249,7 +2346,8 @@ export class _74AUP1G02 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G02";
@@ -2271,7 +2369,8 @@ export class _74AUP1G04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G04";
@@ -2292,7 +2391,8 @@ export class _74AUP1G06 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "input", GND: "power_in", P4: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G06";
@@ -2314,7 +2414,8 @@ export class _74AUP1G07 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "free", P2: "input", GND: "power_in", P4: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G07";
@@ -2336,7 +2437,8 @@ export class _74AUP1G08 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G08";
@@ -2358,7 +2460,8 @@ export class _74AUP1G125 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G125";
@@ -2380,7 +2483,8 @@ export class _74AUP1G126 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G126";
@@ -2402,7 +2506,8 @@ export class _74AUP1G14 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G14";
@@ -2424,7 +2529,8 @@ export class _74AUP1G17 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G17";
@@ -2446,7 +2552,8 @@ export class _74AUP1G240 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G240";
@@ -2468,7 +2575,8 @@ export class _74AUP1G32 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G32";
@@ -2490,7 +2598,8 @@ export class _74LVC1G34 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "free", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G34";
@@ -2512,7 +2621,8 @@ export class _74AUP1G34 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "free", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G34";
@@ -2535,7 +2645,8 @@ export class _74LVC1G57 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", Y: "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G57";
@@ -2558,7 +2669,8 @@ export class _74AUP1G57 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", Y: "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G57";
@@ -2581,7 +2693,8 @@ export class _74LVC1G58 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", "~{Y}": "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G58";
@@ -2604,7 +2717,8 @@ export class _74AUP1G58 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", "~{Y}": "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G58";
@@ -2629,7 +2743,8 @@ export class _74AUP1G74 extends Component.withPins({
   "~{PRE}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "input", D: "input", "~{Q}": "output", GND: "power_in", Q: "output", "~{CLR}": "input", "~{PRE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G74";
@@ -2651,7 +2766,8 @@ export class _74AUP1G79 extends Component.withPins({
   "Q": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "input", C: "input", GND: "power_in", Q: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G79";
@@ -2673,7 +2789,8 @@ export class _74AUP1G80 extends Component.withPins({
   "~{Q}": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "input", C: "input", GND: "power_in", "~{Q}": "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G80";
@@ -2696,7 +2813,8 @@ export class _74AUP1G97 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", Y: "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G97";
@@ -2719,7 +2837,8 @@ export class _74AUP1G98 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", "~{Y}": "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G98";
@@ -2744,7 +2863,8 @@ export class _74LVC1G99 extends Component.withPins({
   "Y": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", B: "input", GND: "power_in", C: "input", D: "input", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G99";
@@ -2769,7 +2889,8 @@ export class _74AUP1G99 extends Component.withPins({
   "Y": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", B: "input", GND: "power_in", C: "input", D: "input", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1G99";
@@ -2791,7 +2912,8 @@ export class _74AUP1GU04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74AUP1GU04";
@@ -2813,7 +2935,8 @@ export class _74CBT1G125 extends Component.withPins({
   "B": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", B: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74CBT1G125";
@@ -2835,7 +2958,8 @@ export class _74CB3T1G125 extends Component.withPins({
   "B": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", B: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74CB3T1G125";
@@ -2857,7 +2981,8 @@ export class _74CBT1G384 extends Component.withPins({
   "~{OE}": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", B: "tri_state", GND: "power_in", "~{OE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74CBT1G384";
@@ -2879,7 +3004,8 @@ export class _74CBTD1G125 extends Component.withPins({
   "B": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", B: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74CBTD1G125";
@@ -2901,7 +3027,8 @@ export class _74CBTD1G384 extends Component.withPins({
   "~{OE}": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", B: "tri_state", GND: "power_in", "~{OE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74CBTD1G384";
@@ -2923,7 +3050,8 @@ export class _74CBTLV1G125 extends Component.withPins({
   "B": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", B: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74CBTLV1G125";
@@ -2946,7 +3074,8 @@ export class _74LVC1G0832 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G0832";
@@ -2969,7 +3098,8 @@ export class _74LVC1G10 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G10";
@@ -2992,7 +3122,8 @@ export class _74LVC1G11 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G11";
@@ -3017,7 +3148,8 @@ export class _74LVC1G123 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{A}": "input", B: "input", "~{CLR}": "input", Q: "output", Cext: "input", RCext: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G123";
@@ -3042,7 +3174,8 @@ export class _74LVC1G139 extends Component.withPins({
   "Y0": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", B: "input", Y3: "output", GND: "power_in", Y2: "output", Y1: "output", Y0: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G139";
@@ -3065,7 +3198,8 @@ export class _74LVC1G175 extends Component.withPins({
   "VCC": "5",
   "~{CLR}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "input", GND: "power_in", D: "input", Q: "output", VCC: "power_in", "~{CLR}": "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G175";
@@ -3088,7 +3222,8 @@ export class _74LVC1G27 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G27";
@@ -3113,7 +3248,8 @@ export class _74LVC1G29 extends Component.withPins({
   "Y0": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{G}": "input", Y1: "output", A2: "input", GND: "power_in", Y2: "output", A1: "input", Y0: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G29";
@@ -3136,7 +3272,8 @@ export class _74LVC1G3157 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P3: "bidirectional", P4: "bidirectional", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G3157";
@@ -3159,7 +3296,8 @@ export class _74LVC1G3208 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G3208";
@@ -3182,7 +3320,8 @@ export class _74LVC1G332 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G332";
@@ -3205,7 +3344,8 @@ export class _74LVC1G373 extends Component.withPins({
   "VCC": "5",
   "~{OE}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LE: "input", GND: "power_in", D: "input", Q: "tri_state", VCC: "power_in", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G373";
@@ -3228,7 +3368,8 @@ export class _74LVC1G374 extends Component.withPins({
   "VCC": "5",
   "~{OE}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", GND: "power_in", D: "input", Q: "tri_state", VCC: "power_in", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G374";
@@ -3250,7 +3391,8 @@ export class _74LVC1G38 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G38";
@@ -3273,7 +3415,8 @@ export class _74LVC1G386 extends Component.withPins({
   "VCC": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "input", P4: "output", VCC: "power_in", P6: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G386";
@@ -3296,7 +3439,8 @@ export class _74LVC1G97 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", Y: "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G97";
@@ -3319,7 +3463,8 @@ export class _74LVC1G98 extends Component.withPins({
   "VCC": "5",
   "IN2": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", GND: "power_in", IN0: "input", "~{Y}": "output", VCC: "power_in", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1G98";
@@ -3341,7 +3486,8 @@ export class _74LVC1GU04 extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1GU04";
@@ -3364,7 +3510,8 @@ export class _74LVC1GU04DRL extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC1GU04DRL";
@@ -3387,7 +3534,8 @@ export class _74LVC2G14 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G14";
@@ -3412,7 +3560,8 @@ export class _74LVC2G157 extends Component.withPins({
   "~{G}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", B: "input", "~{Y}": "output", GND: "power_in", Y: "output", "~{A}/B": "input", "~{G}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G157";
@@ -3435,7 +3584,8 @@ export class _74LVC2G17 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G17";
@@ -3460,7 +3610,8 @@ export class _74LVC2G38 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", P7: "open_collector", P3: "open_collector", P5: "input", P6: "input", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G38";
@@ -3485,7 +3636,8 @@ export class _74LVC2G74 extends Component.withPins({
   "~{PRE}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "input", D: "input", "~{Q}": "output", GND: "power_in", Q: "output", "~{CLR}": "input", "~{PRE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2G74";
@@ -3508,7 +3660,8 @@ export class _74LVC2GU04 extends Component.withPins({
   "GND": "2",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P6: "output", P3: "input", P4: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC2GU04";
@@ -3533,7 +3686,8 @@ export class _74LVC3G04 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "output", P2: "output", P6: "input", P3: "input", P5: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3G04";
@@ -3558,7 +3712,8 @@ export class _74LVC3G06 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "open_collector", P2: "open_collector", P6: "input", P3: "input", P5: "open_collector", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3G06";
@@ -3583,7 +3738,8 @@ export class _74LVC3G07 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "open_collector", P2: "open_collector", P6: "input", P3: "input", P5: "open_collector", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3G07";
@@ -3608,7 +3764,8 @@ export class _74LVC3G14 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "output", P2: "output", P6: "input", P3: "input", P5: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3G14";
@@ -3633,7 +3790,8 @@ export class _74LVC3G17 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "output", P2: "output", P6: "input", P3: "input", P5: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3G17";
@@ -3658,7 +3816,8 @@ export class _74LVC3G34 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "output", P2: "output", P6: "input", P3: "input", P5: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3G34";
@@ -3683,7 +3842,8 @@ export class _74LVC3GU04 extends Component.withPins({
   "GND": "4",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P7: "output", P2: "output", P6: "input", P3: "input", P5: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:74LVC3GU04";
@@ -3705,7 +3865,8 @@ export class Inverter_Schmitt_Dual extends Component.withPins({
   "V_{CC}": "5",
   "1Y": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", GND: "power_in", "2A": "input", "2Y": "output", "V_{CC}": "power_in", "1Y": "output", ...opts.pinTypes } });
   }
   override schema = "74xGxx:Inverter_Schmitt_Dual";
@@ -3728,7 +3889,8 @@ export class NC7SVU04P5X extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:NC7SVU04P5X";
@@ -3751,7 +3913,8 @@ export class NC7SZ125M5X extends Component.withPins({
   "Y": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:NC7SZ125M5X";
@@ -3774,7 +3937,8 @@ export class NC7SZ125P5X extends Component.withPins({
   "Y": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:NC7SZ125P5X";
@@ -3797,7 +3961,8 @@ export class SN74LVC1G00DBV extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G00DBV";
@@ -3820,7 +3985,8 @@ export class SN74LVC1G00DCK extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G00DCK";
@@ -3843,7 +4009,8 @@ export class SN74LVC1G00DRL extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G00DRL";
@@ -3866,7 +4033,8 @@ export class SN74LVC1G125DBV extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G125DBV";
@@ -3889,7 +4057,8 @@ export class SN74LVC1G125DCK extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G125DCK";
@@ -3912,7 +4081,8 @@ export class SN74LVC1G125DRL extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "input", GND: "power_in", P4: "tri_state", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G125DRL";
@@ -3935,7 +4105,8 @@ export class SN74LVC1G14DBV extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G14DBV";
@@ -3958,7 +4129,8 @@ export class SN74LVC1G14DRL extends Component.withPins({
   "P4": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", P2: "input", GND: "power_in", P4: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC1G14DRL";
@@ -3982,7 +4154,8 @@ export class SN74LVC2G14DBV extends Component.withPins({
   "V_{CC}": "5",
   "1Y": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", GND: "power_in", "2A": "input", "2Y": "output", "V_{CC}": "power_in", "1Y": "output", ...opts.pinTypes } });
   }
   override schema = "74xGxx:SN74LVC2G14DBV";
@@ -4006,7 +4179,8 @@ export class TC7PZ14FU extends Component.withPins({
   "V_{CC}": "5",
   "1Y": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", GND: "power_in", "2A": "input", "2Y": "output", "V_{CC}": "power_in", "1Y": "output", ...opts.pinTypes } });
   }
   override schema = "74xGxx:TC7PZ14FU";

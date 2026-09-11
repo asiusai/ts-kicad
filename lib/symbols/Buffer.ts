@@ -20,7 +20,8 @@ export class CDCV304 extends Component.withPins({
   "1Y2": "7",
   "1Y3": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKIN: "input", OE: "input", "1Y0": "output", GND: "power_in", "1Y1": "output", "V_{DD}": "power_in", "1Y2": "output", "1Y3": "output", ...opts.pinTypes } });
   }
   override schema = "Buffer:CDCV304";
@@ -55,7 +56,8 @@ export class PI6C5946002ZH extends Component.withPins({
   "DNC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "Q0+": "output", "Q0-": "output", "Q1+": "output", "Q1-": "output", DNC_5: "no_connect", DNC_6: "no_connect", VDD_7: "power_in", EN: "input", "REF_IN-": "input", "VREF-AC": "output", VTH: "input", "REF_IN+": "input", GND_13: "power_in", VDD_14: "passive", DNC_15: "no_connect", DNC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Buffer:PI6C5946002ZH";

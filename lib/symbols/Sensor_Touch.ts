@@ -21,7 +21,8 @@ export class AT42QT1010_M extends Component.withPins({
   "SNS": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SNSK: "passive", NC_2: "no_connect", NC_3: "no_connect", VSS_4: "power_in", OUT: "output", SYNC: "input", VDD: "power_in", SNS: "passive", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1010-M";
@@ -45,7 +46,8 @@ export class AT42QT1010_TSHR extends Component.withPins({
   "VDD": "5",
   "SYNC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", VSS: "power_in", SNSK: "passive", SNS: "passive", VDD: "power_in", SYNC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1010-TSHR";
@@ -72,7 +74,8 @@ export class AT42QT1011_M extends Component.withPins({
   "SNS": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SNSK: "passive", NC_2: "no_connect", NC_3: "no_connect", VSS_4: "power_in", OUT: "output", SYNC: "input", VDD: "power_in", SNS: "passive", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1011-M";
@@ -96,7 +99,8 @@ export class AT42QT1011_TSHR extends Component.withPins({
   "VDD": "5",
   "SYNC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", VSS: "power_in", SNSK: "passive", SNS: "passive", VDD: "power_in", SYNC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1011-TSHR";
@@ -123,7 +127,8 @@ export class AT42QT1012_M extends Component.withPins({
   "SNS": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SNSK: "passive", NC_2: "no_connect", NC_3: "no_connect", VSS_4: "power_in", OUT: "output", TIME: "input", VDD: "power_in", SNS: "passive", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1012-M";
@@ -147,7 +152,8 @@ export class AT42QT1012_T extends Component.withPins({
   "VDD": "5",
   "TIME": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", VSS: "power_in", SNSK: "passive", SNS: "passive", VDD: "power_in", TIME: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1012-T";
@@ -186,7 +192,8 @@ export class AT42QT1040_M extends Component.withPins({
   "SNSK2": "20",
   "VSS_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SNS2: "passive", SNSK1: "passive", SNS1: "passive", SNSK0: "passive", SNS0: "passive", NC_6: "no_connect", NC_7: "no_connect", VSS_8: "power_in", VDD: "power_in", NC_10: "no_connect", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT3}": "open_collector", "~{OUT2}": "open_collector", SNSK3: "passive", SNS3: "passive", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", SNSK2: "passive", VSS_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1040-M";
@@ -225,7 +232,8 @@ export class AT42QT1050_M extends Component.withPins({
   "NC_20": "20",
   "VSS_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KEY2: "passive", NC_2: "no_connect", KEY1: "passive", KEY0: "passive", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", VSS_8: "power_in", VDD: "power_in", NC_10: "no_connect", ADDR_SEL: "input", SDA: "bidirectional", "~{RESET}": "input", "~{CHANGE}": "open_collector", SCL: "input", KEY4: "passive", KEY3: "passive", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", VSS_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1050-M";
@@ -255,7 +263,8 @@ export class AT42QT1050_U extends Component.withPins({
   "~{RESET}": "D4",
   "ADDR_SEL": "D6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KEY2: "passive", KEY0: "passive", KEY1: "passive", KEY4: "passive", VSS: "power_in", VDD: "power_in", KEY3: "passive", SCL: "input", SDA: "bidirectional", "~{CHANGE}": "open_collector", "~{RESET}": "input", ADDR_SEL: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1050-U";
@@ -302,7 +311,8 @@ export class AT42QT1060_M extends Component.withPins({
   "SNS0K": "28",
   "VSS_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SNS1K: "passive", SNS2K: "passive", VDD_3: "power_in", VSS_4: "power_in", IO5: "bidirectional", IO6: "bidirectional", SNS3K: "passive", SNS4K: "passive", SNS5K: "passive", SNS0: "passive", SNS1: "passive", SNS2: "passive", SNS3: "passive", SNS4: "passive", SNS5: "passive", VDD_16: "passive", VDD_17: "passive", VSS_18: "passive", IO0: "bidirectional", IO1: "bidirectional", IO2: "bidirectional", "~{CHG}": "open_collector", SDA: "bidirectional", SCL: "input", "~{RST}": "input", IO3: "bidirectional", IO4: "bidirectional", SNS0K: "passive", VSS_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1060-M";
@@ -341,7 +351,8 @@ export class AT42QT1070_M extends Component.withPins({
   "NC_20": "20",
   "VSS_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KEY4: "passive", KEY3: "passive", KEY2: "passive", KEY1: "passive", KEY0: "passive", NC_6: "no_connect", NC_7: "no_connect", VSS_8: "power_in", VDD: "power_in", NC_10: "no_connect", MODE: "input", "SDA/OUT0": "bidirectional", "~{RESET}": "input", "~{CHANGE}/OUT4": "open_collector", "SCL/OUT3": "bidirectional", "OUT2/KEY6": "output", "OUT1/KEY5": "output", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", VSS_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1070-M";
@@ -373,7 +384,8 @@ export class AT42QT1070_S extends Component.withPins({
   "KEY0": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", MODE: "input", "SDA/OUT0": "bidirectional", "~{RESET}": "input", "~{CHANGE}/OUT4": "open_collector", "SCL/OUT3": "bidirectional", "OUT2/KEY6": "output", "OUT1/KEY5": "output", KEY4: "passive", KEY3: "passive", KEY2: "passive", KEY1: "passive", KEY0: "passive", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1070-S";
@@ -424,7 +436,8 @@ export class AT42QT1110_M extends Component.withPins({
   "SNS0": "32",
   "VSS_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SNS0K: "passive", SNS1: "passive", SNS1K: "passive", VDD_4: "power_in", VSS_5: "power_in", SNS2K: "passive", SNS2: "passive", SNS3: "passive", SNS3K: "passive", SNS4: "passive", SNS4K: "passive", SNS5: "passive", SNS5K: "passive", "~{SS}": "input", MOSI: "input", MISO: "output", SCK: "input", VDD_18: "passive", SNS6K: "passive", SNS6: "passive", VSS_21: "passive", "DETECT0/SNS7K": "bidirectional", "DETECT1/SNS7": "bidirectional", "DETECT2/SNS8": "bidirectional", "DETECT3/SNS8K": "bidirectional", "DETECT4/SNS9": "bidirectional", "DETECT5/SNS9K": "bidirectional", "~{CHANGE}": "open_collector", "~{RESET}": "input", "DETECT6/SNS10": "bidirectional", "SYNC/SNS10K": "bidirectional", SNS0: "passive", VSS_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:AT42QT1110-M";
@@ -453,7 +466,8 @@ export class CAP1206_x_AIA extends Component.withPins({
   "CS2": "10",
   "GND": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS1: "passive", "ALERT#": "open_collector", SMDATA: "bidirectional", SMCLK: "input", VDD: "power_in", CS6: "passive", CS5: "passive", CS4: "passive", CS3: "passive", CS2: "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CAP1206-x-AIA";
@@ -482,7 +496,8 @@ export class CAP1206_x_SL extends Component.withPins({
   "CS3": "12",
   "CS2": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS1: "passive", "ALERT#": "open_collector", SMDATA: "bidirectional", SMCLK: "input", VDD: "power_in", GND: "power_in", CS6: "passive", CS5: "passive", CS4: "passive", CS3: "passive", CS2: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CAP1206-x-SL";
@@ -508,7 +523,8 @@ export class CY8CMBR3002 extends Component.withPins({
   "CS0": "7",
   "GPO0": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GPO1: "output", CMOD: "passive", VCC: "passive", VDD: "power_in", VSS: "power_in", CS1: "passive", CS0: "passive", GPO0: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CY8CMBR3002";
@@ -534,7 +550,8 @@ export class CY8CMBR3102 extends Component.withPins({
   "CS0": "7",
   "SDA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", CMOD: "passive", VCC: "passive", VDD: "power_in", VSS: "power_in", CS1: "passive", CS0: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CY8CMBR3102";
@@ -577,7 +594,8 @@ export class CY8CMBR3106S extends Component.withPins({
   "~{XRES}": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS0: "passive", CS1: "passive", CS2: "passive", CS3: "passive", CMOD: "passive", VCC: "passive", VDD: "power_in", VSS: "power_in", SLD10: "passive", SLD11: "passive", SLD12: "passive", SLD13: "passive", SLD14: "passive", CS11: "passive", CS12: "passive", CS13: "passive", CS14: "passive", CS15: "passive", CS5: "passive", CS4: "passive", SDA: "bidirectional", SCL: "input", "~{HI}": "bidirectional", "~{XRES}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CY8CMBR3106S";
@@ -612,7 +630,8 @@ export class CY8CMBR3108 extends Component.withPins({
   "~{HI}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS0: "passive", CS1: "passive", CMOD: "passive", VCC: "passive", VDDIO: "power_in", VDD: "power_in", VSS: "power_in", CS4: "passive", CS5: "passive", CS6: "passive", CS7: "passive", CS2: "passive", CS3: "passive", SDA: "bidirectional", SCL: "input", "~{HI}": "bidirectional", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CY8CMBR3108";
@@ -646,7 +665,8 @@ export class CY8CMBR3110 extends Component.withPins({
   "CS3": "15",
   "CS4": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", CS0: "passive", CS1: "passive", CMOD: "passive", VCC: "passive", VDD: "power_in", VSS: "power_in", CS5: "passive", CS6: "passive", CS7: "passive", CS8: "passive", CS2: "passive", CS9: "passive", CS3: "passive", CS4: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CY8CMBR3110";
@@ -689,7 +709,8 @@ export class CY8CMBR3116 extends Component.withPins({
   "~{XRES}": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS0: "passive", CS1: "passive", CS2: "passive", CS3: "passive", CMOD: "passive", VCC: "passive", VDD: "power_in", VSS: "power_in", CS15: "passive", CS14: "passive", CS13: "passive", CS12: "passive", CS11: "passive", CS10: "passive", CS9: "passive", CS8: "passive", CS7: "passive", CS6: "passive", CS5: "passive", CS4: "passive", SDA: "bidirectional", SCL: "input", "~{HI}": "bidirectional", "~{XRES}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:CY8CMBR3116";
@@ -727,7 +748,8 @@ export class MPR121QR2 extends Component.withPins({
   "LED7/ELE11": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{IRQ}": "open_collector", SCL: "input", SDA: "bidirectional", ADDR: "input", VREG: "passive", VSS: "power_in", REXT: "passive", ELE0: "passive", ELE1: "passive", ELE2: "passive", ELE3: "passive", "LED0/ELE4": "passive", "LED1/ELE5": "passive", "LED2/ELE6": "passive", "LED3/ELE7": "passive", "LED4/ELE8": "passive", "LED5/ELE9": "passive", "LED6/ELE10": "passive", "LED7/ELE11": "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:MPR121QR2";
@@ -761,7 +783,8 @@ export class PCA8886 extends Component.withPins({
   "CLIN2": "11",
   "VDD(int)2": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", TYPE1: "input", CPC1: "bidirectional", VSS1: "power_in", VDD1: "power_in", OUT1: "output", CLIN1: "bidirectional", "VDD(int)1": "power_out", IN2: "input", TYPE2: "input", CPC2: "bidirectional", VSS2: "power_in", VDD2: "power_in", OUT2: "output", CLIN2: "bidirectional", "VDD(int)2": "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:PCA8886";
@@ -786,7 +809,8 @@ export class PCF8883 extends Component.withPins({
   "CLIN": "7",
   "VDD(int)": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", TYPE: "input", CPC: "bidirectional", VSS: "power_in", VDD: "power_in", OUT: "output", CLIN: "bidirectional", "VDD(int)": "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Touch:PCF8883";

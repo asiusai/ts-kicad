@@ -17,7 +17,8 @@ export class LV25_P extends Component.withPins({
   "V+": "5",
   "V-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "HV+": "input", "HV-": "input", M: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Voltage:LV25-P";

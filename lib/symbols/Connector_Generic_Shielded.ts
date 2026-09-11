@@ -12,7 +12,8 @@ export class Conn_01x01_Shielded extends Component.withPins({
   "Pin_1": "1",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x01_Shielded";
@@ -31,7 +32,8 @@ export class Conn_01x02_Shielded extends Component.withPins({
   "Pin_2": "2",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x02_Shielded";
@@ -51,7 +53,8 @@ export class Conn_01x03_Shielded extends Component.withPins({
   "Pin_3": "3",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x03_Shielded";
@@ -72,7 +75,8 @@ export class Conn_01x04_Shielded extends Component.withPins({
   "Pin_4": "4",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x04_Shielded";
@@ -94,7 +98,8 @@ export class Conn_01x05_Shielded extends Component.withPins({
   "Pin_5": "5",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x05_Shielded";
@@ -117,7 +122,8 @@ export class Conn_01x06_Shielded extends Component.withPins({
   "Pin_6": "6",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x06_Shielded";
@@ -141,7 +147,8 @@ export class Conn_01x07_Shielded extends Component.withPins({
   "Pin_7": "7",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x07_Shielded";
@@ -166,7 +173,8 @@ export class Conn_01x08_Shielded extends Component.withPins({
   "Pin_8": "8",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x08_Shielded";
@@ -192,7 +200,8 @@ export class Conn_01x09_Shielded extends Component.withPins({
   "Pin_9": "9",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x09_Shielded";
@@ -219,7 +228,8 @@ export class Conn_01x10_Shielded extends Component.withPins({
   "Pin_10": "10",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x10_Shielded";
@@ -247,7 +257,8 @@ export class Conn_01x11_Shielded extends Component.withPins({
   "Pin_11": "11",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x11_Shielded";
@@ -276,7 +287,8 @@ export class Conn_01x12_Shielded extends Component.withPins({
   "Pin_12": "12",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x12_Shielded";
@@ -306,7 +318,8 @@ export class Conn_01x13_Shielded extends Component.withPins({
   "Pin_13": "13",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x13_Shielded";
@@ -337,7 +350,8 @@ export class Conn_01x14_Shielded extends Component.withPins({
   "Pin_14": "14",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x14_Shielded";
@@ -369,7 +383,8 @@ export class Conn_01x15_Shielded extends Component.withPins({
   "Pin_15": "15",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x15_Shielded";
@@ -402,7 +417,8 @@ export class Conn_01x16_Shielded extends Component.withPins({
   "Pin_16": "16",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x16_Shielded";
@@ -436,7 +452,8 @@ export class Conn_01x17_Shielded extends Component.withPins({
   "Pin_17": "17",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x17_Shielded";
@@ -471,7 +488,8 @@ export class Conn_01x18_Shielded extends Component.withPins({
   "Pin_18": "18",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x18_Shielded";
@@ -507,7 +525,8 @@ export class Conn_01x19_Shielded extends Component.withPins({
   "Pin_19": "19",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x19_Shielded";
@@ -544,7 +563,8 @@ export class Conn_01x20_Shielded extends Component.withPins({
   "Pin_20": "20",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x20_Shielded";
@@ -582,7 +602,8 @@ export class Conn_01x21_Shielded extends Component.withPins({
   "Pin_21": "21",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x21_Shielded";
@@ -621,7 +642,8 @@ export class Conn_01x22_Shielded extends Component.withPins({
   "Pin_22": "22",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x22_Shielded";
@@ -661,7 +683,8 @@ export class Conn_01x23_Shielded extends Component.withPins({
   "Pin_23": "23",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x23_Shielded";
@@ -702,7 +725,8 @@ export class Conn_01x24_Shielded extends Component.withPins({
   "Pin_24": "24",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x24_Shielded";
@@ -744,7 +768,8 @@ export class Conn_01x25_Shielded extends Component.withPins({
   "Pin_25": "25",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x25_Shielded";
@@ -787,7 +812,8 @@ export class Conn_01x26_Shielded extends Component.withPins({
   "Pin_26": "26",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x26_Shielded";
@@ -831,7 +857,8 @@ export class Conn_01x27_Shielded extends Component.withPins({
   "Pin_27": "27",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x27_Shielded";
@@ -876,7 +903,8 @@ export class Conn_01x28_Shielded extends Component.withPins({
   "Pin_28": "28",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x28_Shielded";
@@ -922,7 +950,8 @@ export class Conn_01x29_Shielded extends Component.withPins({
   "Pin_29": "29",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x29_Shielded";
@@ -969,7 +998,8 @@ export class Conn_01x30_Shielded extends Component.withPins({
   "Pin_30": "30",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x30_Shielded";
@@ -1017,7 +1047,8 @@ export class Conn_01x31_Shielded extends Component.withPins({
   "Pin_31": "31",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x31_Shielded";
@@ -1066,7 +1097,8 @@ export class Conn_01x32_Shielded extends Component.withPins({
   "Pin_32": "32",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x32_Shielded";
@@ -1116,7 +1148,8 @@ export class Conn_01x33_Shielded extends Component.withPins({
   "Pin_33": "33",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x33_Shielded";
@@ -1167,7 +1200,8 @@ export class Conn_01x34_Shielded extends Component.withPins({
   "Pin_34": "34",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x34_Shielded";
@@ -1219,7 +1253,8 @@ export class Conn_01x35_Shielded extends Component.withPins({
   "Pin_35": "35",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x35_Shielded";
@@ -1272,7 +1307,8 @@ export class Conn_01x36_Shielded extends Component.withPins({
   "Pin_36": "36",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x36_Shielded";
@@ -1326,7 +1362,8 @@ export class Conn_01x37_Shielded extends Component.withPins({
   "Pin_37": "37",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x37_Shielded";
@@ -1381,7 +1418,8 @@ export class Conn_01x38_Shielded extends Component.withPins({
   "Pin_38": "38",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x38_Shielded";
@@ -1437,7 +1475,8 @@ export class Conn_01x39_Shielded extends Component.withPins({
   "Pin_39": "39",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x39_Shielded";
@@ -1494,7 +1533,8 @@ export class Conn_01x40_Shielded extends Component.withPins({
   "Pin_40": "40",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x40_Shielded";
@@ -1552,7 +1592,8 @@ export class Conn_01x41_Shielded extends Component.withPins({
   "Pin_41": "41",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x41_Shielded";
@@ -1611,7 +1652,8 @@ export class Conn_01x42_Shielded extends Component.withPins({
   "Pin_42": "42",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x42_Shielded";
@@ -1671,7 +1713,8 @@ export class Conn_01x43_Shielded extends Component.withPins({
   "Pin_43": "43",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x43_Shielded";
@@ -1732,7 +1775,8 @@ export class Conn_01x44_Shielded extends Component.withPins({
   "Pin_44": "44",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x44_Shielded";
@@ -1794,7 +1838,8 @@ export class Conn_01x45_Shielded extends Component.withPins({
   "Pin_45": "45",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x45_Shielded";
@@ -1857,7 +1902,8 @@ export class Conn_01x46_Shielded extends Component.withPins({
   "Pin_46": "46",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x46_Shielded";
@@ -1921,7 +1967,8 @@ export class Conn_01x47_Shielded extends Component.withPins({
   "Pin_47": "47",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x47_Shielded";
@@ -1986,7 +2033,8 @@ export class Conn_01x48_Shielded extends Component.withPins({
   "Pin_48": "48",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x48_Shielded";
@@ -2052,7 +2100,8 @@ export class Conn_01x49_Shielded extends Component.withPins({
   "Pin_49": "49",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x49_Shielded";
@@ -2119,7 +2168,8 @@ export class Conn_01x50_Shielded extends Component.withPins({
   "Pin_50": "50",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x50_Shielded";
@@ -2187,7 +2237,8 @@ export class Conn_01x51_Shielded extends Component.withPins({
   "Pin_51": "51",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x51_Shielded";
@@ -2256,7 +2307,8 @@ export class Conn_01x52_Shielded extends Component.withPins({
   "Pin_52": "52",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x52_Shielded";
@@ -2326,7 +2378,8 @@ export class Conn_01x53_Shielded extends Component.withPins({
   "Pin_53": "53",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x53_Shielded";
@@ -2397,7 +2450,8 @@ export class Conn_01x54_Shielded extends Component.withPins({
   "Pin_54": "54",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x54_Shielded";
@@ -2469,7 +2523,8 @@ export class Conn_01x55_Shielded extends Component.withPins({
   "Pin_55": "55",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x55_Shielded";
@@ -2542,7 +2597,8 @@ export class Conn_01x56_Shielded extends Component.withPins({
   "Pin_56": "56",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x56_Shielded";
@@ -2616,7 +2672,8 @@ export class Conn_01x57_Shielded extends Component.withPins({
   "Pin_57": "57",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x57_Shielded";
@@ -2691,7 +2748,8 @@ export class Conn_01x58_Shielded extends Component.withPins({
   "Pin_58": "58",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x58_Shielded";
@@ -2767,7 +2825,8 @@ export class Conn_01x59_Shielded extends Component.withPins({
   "Pin_59": "59",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x59_Shielded";
@@ -2844,7 +2903,8 @@ export class Conn_01x60_Shielded extends Component.withPins({
   "Pin_60": "60",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_01x60_Shielded";
@@ -2863,7 +2923,8 @@ export class Conn_02x01_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_a1": "a1",
   "Pin_b1": "b1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_b1: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x01_Row_Letter_First_Shielded";
@@ -2882,7 +2943,8 @@ export class Conn_02x01_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_1b": "1b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x01_Row_Letter_Last_Shielded";
@@ -2901,7 +2963,8 @@ export class Conn_02x01_Shielded extends Component.withPins({
   "Pin_2": "2",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x01_Shielded";
@@ -2922,7 +2985,8 @@ export class Conn_02x02_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_4": "4",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x02_Counter_Clockwise_Shielded";
@@ -2943,7 +3007,8 @@ export class Conn_02x02_Odd_Even_Shielded extends Component.withPins({
   "Pin_4": "4",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x02_Odd_Even_Shielded";
@@ -2964,7 +3029,8 @@ export class Conn_02x02_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b1": "b1",
   "Pin_b2": "b2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_b1: "passive", Pin_b2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x02_Row_Letter_First_Shielded";
@@ -2985,7 +3051,8 @@ export class Conn_02x02_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_2b": "2b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x02_Row_Letter_Last_Shielded";
@@ -3006,7 +3073,8 @@ export class Conn_02x02_Top_Bottom_Shielded extends Component.withPins({
   "Pin_4": "4",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x02_Top_Bottom_Shielded";
@@ -3029,7 +3097,8 @@ export class Conn_02x03_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_6": "6",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x03_Counter_Clockwise_Shielded";
@@ -3052,7 +3121,8 @@ export class Conn_02x03_Odd_Even_Shielded extends Component.withPins({
   "Pin_6": "6",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x03_Odd_Even_Shielded";
@@ -3075,7 +3145,8 @@ export class Conn_02x03_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b2": "b2",
   "Pin_b3": "b3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x03_Row_Letter_First_Shielded";
@@ -3098,7 +3169,8 @@ export class Conn_02x03_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_3b": "3b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x03_Row_Letter_Last_Shielded";
@@ -3121,7 +3193,8 @@ export class Conn_02x03_Top_Bottom_Shielded extends Component.withPins({
   "Pin_6": "6",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x03_Top_Bottom_Shielded";
@@ -3146,7 +3219,8 @@ export class Conn_02x04_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_8": "8",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x04_Counter_Clockwise_Shielded";
@@ -3171,7 +3245,8 @@ export class Conn_02x04_Odd_Even_Shielded extends Component.withPins({
   "Pin_8": "8",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x04_Odd_Even_Shielded";
@@ -3196,7 +3271,8 @@ export class Conn_02x04_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b3": "b3",
   "Pin_b4": "b4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x04_Row_Letter_First_Shielded";
@@ -3221,7 +3297,8 @@ export class Conn_02x04_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_4b": "4b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x04_Row_Letter_Last_Shielded";
@@ -3246,7 +3323,8 @@ export class Conn_02x04_Top_Bottom_Shielded extends Component.withPins({
   "Pin_8": "8",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x04_Top_Bottom_Shielded";
@@ -3273,7 +3351,8 @@ export class Conn_02x05_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_10": "10",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x05_Counter_Clockwise_Shielded";
@@ -3300,7 +3379,8 @@ export class Conn_02x05_Odd_Even_Shielded extends Component.withPins({
   "Pin_10": "10",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x05_Odd_Even_Shielded";
@@ -3327,7 +3407,8 @@ export class Conn_02x05_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b4": "b4",
   "Pin_b5": "b5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x05_Row_Letter_First_Shielded";
@@ -3354,7 +3435,8 @@ export class Conn_02x05_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_5b": "5b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x05_Row_Letter_Last_Shielded";
@@ -3381,7 +3463,8 @@ export class Conn_02x05_Top_Bottom_Shielded extends Component.withPins({
   "Pin_10": "10",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x05_Top_Bottom_Shielded";
@@ -3410,7 +3493,8 @@ export class Conn_02x06_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_12": "12",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x06_Counter_Clockwise_Shielded";
@@ -3439,7 +3523,8 @@ export class Conn_02x06_Odd_Even_Shielded extends Component.withPins({
   "Pin_12": "12",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x06_Odd_Even_Shielded";
@@ -3468,7 +3553,8 @@ export class Conn_02x06_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b5": "b5",
   "Pin_b6": "b6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x06_Row_Letter_First_Shielded";
@@ -3497,7 +3583,8 @@ export class Conn_02x06_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_6b": "6b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x06_Row_Letter_Last_Shielded";
@@ -3526,7 +3613,8 @@ export class Conn_02x06_Top_Bottom_Shielded extends Component.withPins({
   "Pin_12": "12",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x06_Top_Bottom_Shielded";
@@ -3557,7 +3645,8 @@ export class Conn_02x07_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_14": "14",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x07_Counter_Clockwise_Shielded";
@@ -3588,7 +3677,8 @@ export class Conn_02x07_Odd_Even_Shielded extends Component.withPins({
   "Pin_14": "14",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x07_Odd_Even_Shielded";
@@ -3619,7 +3709,8 @@ export class Conn_02x07_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b6": "b6",
   "Pin_b7": "b7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x07_Row_Letter_First_Shielded";
@@ -3650,7 +3741,8 @@ export class Conn_02x07_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_7b": "7b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x07_Row_Letter_Last_Shielded";
@@ -3681,7 +3773,8 @@ export class Conn_02x07_Top_Bottom_Shielded extends Component.withPins({
   "Pin_14": "14",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x07_Top_Bottom_Shielded";
@@ -3714,7 +3807,8 @@ export class Conn_02x08_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_16": "16",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x08_Counter_Clockwise_Shielded";
@@ -3747,7 +3841,8 @@ export class Conn_02x08_Odd_Even_Shielded extends Component.withPins({
   "Pin_16": "16",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x08_Odd_Even_Shielded";
@@ -3780,7 +3875,8 @@ export class Conn_02x08_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b7": "b7",
   "Pin_b8": "b8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x08_Row_Letter_First_Shielded";
@@ -3813,7 +3909,8 @@ export class Conn_02x08_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_8b": "8b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x08_Row_Letter_Last_Shielded";
@@ -3846,7 +3943,8 @@ export class Conn_02x08_Top_Bottom_Shielded extends Component.withPins({
   "Pin_16": "16",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x08_Top_Bottom_Shielded";
@@ -3881,7 +3979,8 @@ export class Conn_02x09_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_18": "18",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x09_Counter_Clockwise_Shielded";
@@ -3916,7 +4015,8 @@ export class Conn_02x09_Odd_Even_Shielded extends Component.withPins({
   "Pin_18": "18",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x09_Odd_Even_Shielded";
@@ -3951,7 +4051,8 @@ export class Conn_02x09_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b8": "b8",
   "Pin_b9": "b9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x09_Row_Letter_First_Shielded";
@@ -3986,7 +4087,8 @@ export class Conn_02x09_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_9b": "9b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x09_Row_Letter_Last_Shielded";
@@ -4021,7 +4123,8 @@ export class Conn_02x09_Top_Bottom_Shielded extends Component.withPins({
   "Pin_18": "18",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x09_Top_Bottom_Shielded";
@@ -4058,7 +4161,8 @@ export class Conn_02x10_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_20": "20",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x10_Counter_Clockwise_Shielded";
@@ -4095,7 +4199,8 @@ export class Conn_02x10_Odd_Even_Shielded extends Component.withPins({
   "Pin_20": "20",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x10_Odd_Even_Shielded";
@@ -4132,7 +4237,8 @@ export class Conn_02x10_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b9": "b9",
   "Pin_b10": "b10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x10_Row_Letter_First_Shielded";
@@ -4169,7 +4275,8 @@ export class Conn_02x10_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_10b": "10b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x10_Row_Letter_Last_Shielded";
@@ -4206,7 +4313,8 @@ export class Conn_02x10_Top_Bottom_Shielded extends Component.withPins({
   "Pin_20": "20",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x10_Top_Bottom_Shielded";
@@ -4245,7 +4353,8 @@ export class Conn_02x11_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_22": "22",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x11_Counter_Clockwise_Shielded";
@@ -4284,7 +4393,8 @@ export class Conn_02x11_Odd_Even_Shielded extends Component.withPins({
   "Pin_22": "22",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x11_Odd_Even_Shielded";
@@ -4323,7 +4433,8 @@ export class Conn_02x11_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b10": "b10",
   "Pin_b11": "b11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x11_Row_Letter_First_Shielded";
@@ -4362,7 +4473,8 @@ export class Conn_02x11_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_11b": "11b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x11_Row_Letter_Last_Shielded";
@@ -4401,7 +4513,8 @@ export class Conn_02x11_Top_Bottom_Shielded extends Component.withPins({
   "Pin_22": "22",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x11_Top_Bottom_Shielded";
@@ -4442,7 +4555,8 @@ export class Conn_02x12_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_24": "24",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x12_Counter_Clockwise_Shielded";
@@ -4483,7 +4597,8 @@ export class Conn_02x12_Odd_Even_Shielded extends Component.withPins({
   "Pin_24": "24",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x12_Odd_Even_Shielded";
@@ -4524,7 +4639,8 @@ export class Conn_02x12_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b11": "b11",
   "Pin_b12": "b12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x12_Row_Letter_First_Shielded";
@@ -4565,7 +4681,8 @@ export class Conn_02x12_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_12b": "12b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x12_Row_Letter_Last_Shielded";
@@ -4606,7 +4723,8 @@ export class Conn_02x12_Top_Bottom_Shielded extends Component.withPins({
   "Pin_24": "24",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x12_Top_Bottom_Shielded";
@@ -4649,7 +4767,8 @@ export class Conn_02x13_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_26": "26",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x13_Counter_Clockwise_Shielded";
@@ -4692,7 +4811,8 @@ export class Conn_02x13_Odd_Even_Shielded extends Component.withPins({
   "Pin_26": "26",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x13_Odd_Even_Shielded";
@@ -4735,7 +4855,8 @@ export class Conn_02x13_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b12": "b12",
   "Pin_b13": "b13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x13_Row_Letter_First_Shielded";
@@ -4778,7 +4899,8 @@ export class Conn_02x13_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_13b": "13b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x13_Row_Letter_Last_Shielded";
@@ -4821,7 +4943,8 @@ export class Conn_02x13_Top_Bottom_Shielded extends Component.withPins({
   "Pin_26": "26",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x13_Top_Bottom_Shielded";
@@ -4866,7 +4989,8 @@ export class Conn_02x14_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_28": "28",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x14_Counter_Clockwise_Shielded";
@@ -4911,7 +5035,8 @@ export class Conn_02x14_Odd_Even_Shielded extends Component.withPins({
   "Pin_28": "28",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x14_Odd_Even_Shielded";
@@ -4956,7 +5081,8 @@ export class Conn_02x14_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b13": "b13",
   "Pin_b14": "b14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x14_Row_Letter_First_Shielded";
@@ -5001,7 +5127,8 @@ export class Conn_02x14_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_14b": "14b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x14_Row_Letter_Last_Shielded";
@@ -5046,7 +5173,8 @@ export class Conn_02x14_Top_Bottom_Shielded extends Component.withPins({
   "Pin_28": "28",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x14_Top_Bottom_Shielded";
@@ -5093,7 +5221,8 @@ export class Conn_02x15_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_30": "30",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x15_Counter_Clockwise_Shielded";
@@ -5140,7 +5269,8 @@ export class Conn_02x15_Odd_Even_Shielded extends Component.withPins({
   "Pin_30": "30",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x15_Odd_Even_Shielded";
@@ -5187,7 +5317,8 @@ export class Conn_02x15_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b14": "b14",
   "Pin_b15": "b15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x15_Row_Letter_First_Shielded";
@@ -5234,7 +5365,8 @@ export class Conn_02x15_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_15b": "15b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x15_Row_Letter_Last_Shielded";
@@ -5281,7 +5413,8 @@ export class Conn_02x15_Top_Bottom_Shielded extends Component.withPins({
   "Pin_30": "30",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x15_Top_Bottom_Shielded";
@@ -5330,7 +5463,8 @@ export class Conn_02x16_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_32": "32",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x16_Counter_Clockwise_Shielded";
@@ -5379,7 +5513,8 @@ export class Conn_02x16_Odd_Even_Shielded extends Component.withPins({
   "Pin_32": "32",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x16_Odd_Even_Shielded";
@@ -5428,7 +5563,8 @@ export class Conn_02x16_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b15": "b15",
   "Pin_b16": "b16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x16_Row_Letter_First_Shielded";
@@ -5477,7 +5613,8 @@ export class Conn_02x16_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_16b": "16b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x16_Row_Letter_Last_Shielded";
@@ -5526,7 +5663,8 @@ export class Conn_02x16_Top_Bottom_Shielded extends Component.withPins({
   "Pin_32": "32",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x16_Top_Bottom_Shielded";
@@ -5577,7 +5715,8 @@ export class Conn_02x17_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_34": "34",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x17_Counter_Clockwise_Shielded";
@@ -5628,7 +5767,8 @@ export class Conn_02x17_Odd_Even_Shielded extends Component.withPins({
   "Pin_34": "34",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x17_Odd_Even_Shielded";
@@ -5679,7 +5819,8 @@ export class Conn_02x17_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b16": "b16",
   "Pin_b17": "b17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x17_Row_Letter_First_Shielded";
@@ -5730,7 +5871,8 @@ export class Conn_02x17_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_17b": "17b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x17_Row_Letter_Last_Shielded";
@@ -5781,7 +5923,8 @@ export class Conn_02x17_Top_Bottom_Shielded extends Component.withPins({
   "Pin_34": "34",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x17_Top_Bottom_Shielded";
@@ -5834,7 +5977,8 @@ export class Conn_02x18_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_36": "36",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x18_Counter_Clockwise_Shielded";
@@ -5887,7 +6031,8 @@ export class Conn_02x18_Odd_Even_Shielded extends Component.withPins({
   "Pin_36": "36",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x18_Odd_Even_Shielded";
@@ -5940,7 +6085,8 @@ export class Conn_02x18_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b17": "b17",
   "Pin_b18": "b18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x18_Row_Letter_First_Shielded";
@@ -5993,7 +6139,8 @@ export class Conn_02x18_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_18b": "18b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x18_Row_Letter_Last_Shielded";
@@ -6046,7 +6193,8 @@ export class Conn_02x18_Top_Bottom_Shielded extends Component.withPins({
   "Pin_36": "36",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x18_Top_Bottom_Shielded";
@@ -6101,7 +6249,8 @@ export class Conn_02x19_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_38": "38",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x19_Counter_Clockwise_Shielded";
@@ -6156,7 +6305,8 @@ export class Conn_02x19_Odd_Even_Shielded extends Component.withPins({
   "Pin_38": "38",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x19_Odd_Even_Shielded";
@@ -6211,7 +6361,8 @@ export class Conn_02x19_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b18": "b18",
   "Pin_b19": "b19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x19_Row_Letter_First_Shielded";
@@ -6266,7 +6417,8 @@ export class Conn_02x19_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_19b": "19b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x19_Row_Letter_Last_Shielded";
@@ -6321,7 +6473,8 @@ export class Conn_02x19_Top_Bottom_Shielded extends Component.withPins({
   "Pin_38": "38",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x19_Top_Bottom_Shielded";
@@ -6378,7 +6531,8 @@ export class Conn_02x20_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_40": "40",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x20_Counter_Clockwise_Shielded";
@@ -6435,7 +6589,8 @@ export class Conn_02x20_Odd_Even_Shielded extends Component.withPins({
   "Pin_40": "40",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x20_Odd_Even_Shielded";
@@ -6492,7 +6647,8 @@ export class Conn_02x20_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b19": "b19",
   "Pin_b20": "b20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x20_Row_Letter_First_Shielded";
@@ -6549,7 +6705,8 @@ export class Conn_02x20_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_20b": "20b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x20_Row_Letter_Last_Shielded";
@@ -6606,7 +6763,8 @@ export class Conn_02x20_Top_Bottom_Shielded extends Component.withPins({
   "Pin_40": "40",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x20_Top_Bottom_Shielded";
@@ -6665,7 +6823,8 @@ export class Conn_02x21_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_42": "42",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x21_Counter_Clockwise_Shielded";
@@ -6724,7 +6883,8 @@ export class Conn_02x21_Odd_Even_Shielded extends Component.withPins({
   "Pin_42": "42",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x21_Odd_Even_Shielded";
@@ -6783,7 +6943,8 @@ export class Conn_02x21_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b20": "b20",
   "Pin_b21": "b21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x21_Row_Letter_First_Shielded";
@@ -6842,7 +7003,8 @@ export class Conn_02x21_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_21b": "21b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x21_Row_Letter_Last_Shielded";
@@ -6901,7 +7063,8 @@ export class Conn_02x21_Top_Bottom_Shielded extends Component.withPins({
   "Pin_42": "42",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x21_Top_Bottom_Shielded";
@@ -6962,7 +7125,8 @@ export class Conn_02x22_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_44": "44",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x22_Counter_Clockwise_Shielded";
@@ -7023,7 +7187,8 @@ export class Conn_02x22_Odd_Even_Shielded extends Component.withPins({
   "Pin_44": "44",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x22_Odd_Even_Shielded";
@@ -7084,7 +7249,8 @@ export class Conn_02x22_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b21": "b21",
   "Pin_b22": "b22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x22_Row_Letter_First_Shielded";
@@ -7145,7 +7311,8 @@ export class Conn_02x22_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_22b": "22b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x22_Row_Letter_Last_Shielded";
@@ -7206,7 +7373,8 @@ export class Conn_02x22_Top_Bottom_Shielded extends Component.withPins({
   "Pin_44": "44",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x22_Top_Bottom_Shielded";
@@ -7269,7 +7437,8 @@ export class Conn_02x23_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_46": "46",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x23_Counter_Clockwise_Shielded";
@@ -7332,7 +7501,8 @@ export class Conn_02x23_Odd_Even_Shielded extends Component.withPins({
   "Pin_46": "46",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x23_Odd_Even_Shielded";
@@ -7395,7 +7565,8 @@ export class Conn_02x23_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b22": "b22",
   "Pin_b23": "b23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x23_Row_Letter_First_Shielded";
@@ -7458,7 +7629,8 @@ export class Conn_02x23_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_23b": "23b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x23_Row_Letter_Last_Shielded";
@@ -7521,7 +7693,8 @@ export class Conn_02x23_Top_Bottom_Shielded extends Component.withPins({
   "Pin_46": "46",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x23_Top_Bottom_Shielded";
@@ -7586,7 +7759,8 @@ export class Conn_02x24_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_48": "48",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x24_Counter_Clockwise_Shielded";
@@ -7651,7 +7825,8 @@ export class Conn_02x24_Odd_Even_Shielded extends Component.withPins({
   "Pin_48": "48",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x24_Odd_Even_Shielded";
@@ -7716,7 +7891,8 @@ export class Conn_02x24_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b23": "b23",
   "Pin_b24": "b24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x24_Row_Letter_First_Shielded";
@@ -7781,7 +7957,8 @@ export class Conn_02x24_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_24b": "24b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x24_Row_Letter_Last_Shielded";
@@ -7846,7 +8023,8 @@ export class Conn_02x24_Top_Bottom_Shielded extends Component.withPins({
   "Pin_48": "48",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x24_Top_Bottom_Shielded";
@@ -7913,7 +8091,8 @@ export class Conn_02x25_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_50": "50",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x25_Counter_Clockwise_Shielded";
@@ -7980,7 +8159,8 @@ export class Conn_02x25_Odd_Even_Shielded extends Component.withPins({
   "Pin_50": "50",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x25_Odd_Even_Shielded";
@@ -8047,7 +8227,8 @@ export class Conn_02x25_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b24": "b24",
   "Pin_b25": "b25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x25_Row_Letter_First_Shielded";
@@ -8114,7 +8295,8 @@ export class Conn_02x25_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_25b": "25b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x25_Row_Letter_Last_Shielded";
@@ -8181,7 +8363,8 @@ export class Conn_02x25_Top_Bottom_Shielded extends Component.withPins({
   "Pin_50": "50",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x25_Top_Bottom_Shielded";
@@ -8250,7 +8433,8 @@ export class Conn_02x26_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_52": "52",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x26_Counter_Clockwise_Shielded";
@@ -8319,7 +8503,8 @@ export class Conn_02x26_Odd_Even_Shielded extends Component.withPins({
   "Pin_52": "52",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x26_Odd_Even_Shielded";
@@ -8388,7 +8573,8 @@ export class Conn_02x26_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b25": "b25",
   "Pin_b26": "b26",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x26_Row_Letter_First_Shielded";
@@ -8457,7 +8643,8 @@ export class Conn_02x26_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_26b": "26b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x26_Row_Letter_Last_Shielded";
@@ -8526,7 +8713,8 @@ export class Conn_02x26_Top_Bottom_Shielded extends Component.withPins({
   "Pin_52": "52",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x26_Top_Bottom_Shielded";
@@ -8597,7 +8785,8 @@ export class Conn_02x27_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_54": "54",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x27_Counter_Clockwise_Shielded";
@@ -8668,7 +8857,8 @@ export class Conn_02x27_Odd_Even_Shielded extends Component.withPins({
   "Pin_54": "54",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x27_Odd_Even_Shielded";
@@ -8739,7 +8929,8 @@ export class Conn_02x27_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b26": "b26",
   "Pin_b27": "b27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x27_Row_Letter_First_Shielded";
@@ -8810,7 +9001,8 @@ export class Conn_02x27_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_27b": "27b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x27_Row_Letter_Last_Shielded";
@@ -8881,7 +9073,8 @@ export class Conn_02x27_Top_Bottom_Shielded extends Component.withPins({
   "Pin_54": "54",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x27_Top_Bottom_Shielded";
@@ -8954,7 +9147,8 @@ export class Conn_02x28_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_56": "56",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x28_Counter_Clockwise_Shielded";
@@ -9027,7 +9221,8 @@ export class Conn_02x28_Odd_Even_Shielded extends Component.withPins({
   "Pin_56": "56",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x28_Odd_Even_Shielded";
@@ -9100,7 +9295,8 @@ export class Conn_02x28_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b27": "b27",
   "Pin_b28": "b28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x28_Row_Letter_First_Shielded";
@@ -9173,7 +9369,8 @@ export class Conn_02x28_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_28b": "28b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x28_Row_Letter_Last_Shielded";
@@ -9246,7 +9443,8 @@ export class Conn_02x28_Top_Bottom_Shielded extends Component.withPins({
   "Pin_56": "56",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x28_Top_Bottom_Shielded";
@@ -9321,7 +9519,8 @@ export class Conn_02x29_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_58": "58",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x29_Counter_Clockwise_Shielded";
@@ -9396,7 +9595,8 @@ export class Conn_02x29_Odd_Even_Shielded extends Component.withPins({
   "Pin_58": "58",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x29_Odd_Even_Shielded";
@@ -9471,7 +9671,8 @@ export class Conn_02x29_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b28": "b28",
   "Pin_b29": "b29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x29_Row_Letter_First_Shielded";
@@ -9546,7 +9747,8 @@ export class Conn_02x29_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_29b": "29b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x29_Row_Letter_Last_Shielded";
@@ -9621,7 +9823,8 @@ export class Conn_02x29_Top_Bottom_Shielded extends Component.withPins({
   "Pin_58": "58",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x29_Top_Bottom_Shielded";
@@ -9698,7 +9901,8 @@ export class Conn_02x30_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_60": "60",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x30_Counter_Clockwise_Shielded";
@@ -9775,7 +9979,8 @@ export class Conn_02x30_Odd_Even_Shielded extends Component.withPins({
   "Pin_60": "60",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x30_Odd_Even_Shielded";
@@ -9852,7 +10057,8 @@ export class Conn_02x30_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b29": "b29",
   "Pin_b30": "b30",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x30_Row_Letter_First_Shielded";
@@ -9929,7 +10135,8 @@ export class Conn_02x30_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_30b": "30b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x30_Row_Letter_Last_Shielded";
@@ -10006,7 +10213,8 @@ export class Conn_02x30_Top_Bottom_Shielded extends Component.withPins({
   "Pin_60": "60",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x30_Top_Bottom_Shielded";
@@ -10085,7 +10293,8 @@ export class Conn_02x31_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_62": "62",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x31_Counter_Clockwise_Shielded";
@@ -10164,7 +10373,8 @@ export class Conn_02x31_Odd_Even_Shielded extends Component.withPins({
   "Pin_62": "62",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x31_Odd_Even_Shielded";
@@ -10243,7 +10453,8 @@ export class Conn_02x31_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b30": "b30",
   "Pin_b31": "b31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x31_Row_Letter_First_Shielded";
@@ -10322,7 +10533,8 @@ export class Conn_02x31_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_31b": "31b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x31_Row_Letter_Last_Shielded";
@@ -10401,7 +10613,8 @@ export class Conn_02x31_Top_Bottom_Shielded extends Component.withPins({
   "Pin_62": "62",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x31_Top_Bottom_Shielded";
@@ -10482,7 +10695,8 @@ export class Conn_02x32_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_64": "64",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x32_Counter_Clockwise_Shielded";
@@ -10563,7 +10777,8 @@ export class Conn_02x32_Odd_Even_Shielded extends Component.withPins({
   "Pin_64": "64",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x32_Odd_Even_Shielded";
@@ -10644,7 +10859,8 @@ export class Conn_02x32_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b31": "b31",
   "Pin_b32": "b32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x32_Row_Letter_First_Shielded";
@@ -10725,7 +10941,8 @@ export class Conn_02x32_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_32b": "32b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x32_Row_Letter_Last_Shielded";
@@ -10806,7 +11023,8 @@ export class Conn_02x32_Top_Bottom_Shielded extends Component.withPins({
   "Pin_64": "64",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x32_Top_Bottom_Shielded";
@@ -10889,7 +11107,8 @@ export class Conn_02x33_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_66": "66",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x33_Counter_Clockwise_Shielded";
@@ -10972,7 +11191,8 @@ export class Conn_02x33_Odd_Even_Shielded extends Component.withPins({
   "Pin_66": "66",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x33_Odd_Even_Shielded";
@@ -11055,7 +11275,8 @@ export class Conn_02x33_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b32": "b32",
   "Pin_b33": "b33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x33_Row_Letter_First_Shielded";
@@ -11138,7 +11359,8 @@ export class Conn_02x33_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_33b": "33b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x33_Row_Letter_Last_Shielded";
@@ -11221,7 +11443,8 @@ export class Conn_02x33_Top_Bottom_Shielded extends Component.withPins({
   "Pin_66": "66",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x33_Top_Bottom_Shielded";
@@ -11306,7 +11529,8 @@ export class Conn_02x34_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_68": "68",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x34_Counter_Clockwise_Shielded";
@@ -11391,7 +11615,8 @@ export class Conn_02x34_Odd_Even_Shielded extends Component.withPins({
   "Pin_68": "68",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x34_Odd_Even_Shielded";
@@ -11476,7 +11701,8 @@ export class Conn_02x34_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b33": "b33",
   "Pin_b34": "b34",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x34_Row_Letter_First_Shielded";
@@ -11561,7 +11787,8 @@ export class Conn_02x34_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_34b": "34b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x34_Row_Letter_Last_Shielded";
@@ -11646,7 +11873,8 @@ export class Conn_02x34_Top_Bottom_Shielded extends Component.withPins({
   "Pin_68": "68",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x34_Top_Bottom_Shielded";
@@ -11733,7 +11961,8 @@ export class Conn_02x35_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_70": "70",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x35_Counter_Clockwise_Shielded";
@@ -11820,7 +12049,8 @@ export class Conn_02x35_Odd_Even_Shielded extends Component.withPins({
   "Pin_70": "70",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x35_Odd_Even_Shielded";
@@ -11907,7 +12137,8 @@ export class Conn_02x35_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b34": "b34",
   "Pin_b35": "b35",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x35_Row_Letter_First_Shielded";
@@ -11994,7 +12225,8 @@ export class Conn_02x35_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_35b": "35b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x35_Row_Letter_Last_Shielded";
@@ -12081,7 +12313,8 @@ export class Conn_02x35_Top_Bottom_Shielded extends Component.withPins({
   "Pin_70": "70",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x35_Top_Bottom_Shielded";
@@ -12170,7 +12403,8 @@ export class Conn_02x36_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_72": "72",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x36_Counter_Clockwise_Shielded";
@@ -12259,7 +12493,8 @@ export class Conn_02x36_Odd_Even_Shielded extends Component.withPins({
   "Pin_72": "72",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x36_Odd_Even_Shielded";
@@ -12348,7 +12583,8 @@ export class Conn_02x36_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b35": "b35",
   "Pin_b36": "b36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x36_Row_Letter_First_Shielded";
@@ -12437,7 +12673,8 @@ export class Conn_02x36_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_36b": "36b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x36_Row_Letter_Last_Shielded";
@@ -12526,7 +12763,8 @@ export class Conn_02x36_Top_Bottom_Shielded extends Component.withPins({
   "Pin_72": "72",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x36_Top_Bottom_Shielded";
@@ -12617,7 +12855,8 @@ export class Conn_02x37_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_74": "74",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x37_Counter_Clockwise_Shielded";
@@ -12708,7 +12947,8 @@ export class Conn_02x37_Odd_Even_Shielded extends Component.withPins({
   "Pin_74": "74",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x37_Odd_Even_Shielded";
@@ -12799,7 +13039,8 @@ export class Conn_02x37_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b36": "b36",
   "Pin_b37": "b37",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x37_Row_Letter_First_Shielded";
@@ -12890,7 +13131,8 @@ export class Conn_02x37_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_37b": "37b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x37_Row_Letter_Last_Shielded";
@@ -12981,7 +13223,8 @@ export class Conn_02x37_Top_Bottom_Shielded extends Component.withPins({
   "Pin_74": "74",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x37_Top_Bottom_Shielded";
@@ -13074,7 +13317,8 @@ export class Conn_02x38_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_76": "76",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x38_Counter_Clockwise_Shielded";
@@ -13167,7 +13411,8 @@ export class Conn_02x38_Odd_Even_Shielded extends Component.withPins({
   "Pin_76": "76",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x38_Odd_Even_Shielded";
@@ -13260,7 +13505,8 @@ export class Conn_02x38_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b37": "b37",
   "Pin_b38": "b38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x38_Row_Letter_First_Shielded";
@@ -13353,7 +13599,8 @@ export class Conn_02x38_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_38b": "38b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x38_Row_Letter_Last_Shielded";
@@ -13446,7 +13693,8 @@ export class Conn_02x38_Top_Bottom_Shielded extends Component.withPins({
   "Pin_76": "76",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x38_Top_Bottom_Shielded";
@@ -13541,7 +13789,8 @@ export class Conn_02x39_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_78": "78",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x39_Counter_Clockwise_Shielded";
@@ -13636,7 +13885,8 @@ export class Conn_02x39_Odd_Even_Shielded extends Component.withPins({
   "Pin_78": "78",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x39_Odd_Even_Shielded";
@@ -13731,7 +13981,8 @@ export class Conn_02x39_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b38": "b38",
   "Pin_b39": "b39",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x39_Row_Letter_First_Shielded";
@@ -13826,7 +14077,8 @@ export class Conn_02x39_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_39b": "39b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x39_Row_Letter_Last_Shielded";
@@ -13921,7 +14173,8 @@ export class Conn_02x39_Top_Bottom_Shielded extends Component.withPins({
   "Pin_78": "78",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x39_Top_Bottom_Shielded";
@@ -14018,7 +14271,8 @@ export class Conn_02x40_Counter_Clockwise_Shielded extends Component.withPins({
   "Pin_80": "80",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Pin_79: "passive", Pin_80: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x40_Counter_Clockwise_Shielded";
@@ -14115,7 +14369,8 @@ export class Conn_02x40_Odd_Even_Shielded extends Component.withPins({
   "Pin_80": "80",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Pin_79: "passive", Pin_80: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x40_Odd_Even_Shielded";
@@ -14212,7 +14467,8 @@ export class Conn_02x40_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b39": "b39",
   "Pin_b40": "b40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x40_Row_Letter_First_Shielded";
@@ -14309,7 +14565,8 @@ export class Conn_02x40_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_40b": "40b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x40_Row_Letter_Last_Shielded";
@@ -14406,7 +14663,8 @@ export class Conn_02x40_Top_Bottom_Shielded extends Component.withPins({
   "Pin_80": "80",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Pin_79: "passive", Pin_80: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x40_Top_Bottom_Shielded";
@@ -14503,7 +14761,8 @@ export class Conn_02x40_Top_Bottom_Shielded_1 extends Component.withPins({
   "Pin_80": "80",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Pin_76: "passive", Pin_77: "passive", Pin_78: "passive", Pin_79: "passive", Pin_80: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x40_Top_Bottom_Shielded_1";
@@ -14602,7 +14861,8 @@ export class Conn_02x41_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b40": "b40",
   "Pin_b41": "b41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x41_Row_Letter_First_Shielded";
@@ -14701,7 +14961,8 @@ export class Conn_02x41_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_41b": "41b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x41_Row_Letter_Last_Shielded";
@@ -14802,7 +15063,8 @@ export class Conn_02x42_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b41": "b41",
   "Pin_b42": "b42",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x42_Row_Letter_First_Shielded";
@@ -14903,7 +15165,8 @@ export class Conn_02x42_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_42b": "42b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x42_Row_Letter_Last_Shielded";
@@ -15006,7 +15269,8 @@ export class Conn_02x43_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b42": "b42",
   "Pin_b43": "b43",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x43_Row_Letter_First_Shielded";
@@ -15109,7 +15373,8 @@ export class Conn_02x43_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_43b": "43b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x43_Row_Letter_Last_Shielded";
@@ -15214,7 +15479,8 @@ export class Conn_02x44_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b43": "b43",
   "Pin_b44": "b44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x44_Row_Letter_First_Shielded";
@@ -15319,7 +15585,8 @@ export class Conn_02x44_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_44b": "44b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x44_Row_Letter_Last_Shielded";
@@ -15426,7 +15693,8 @@ export class Conn_02x45_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b44": "b44",
   "Pin_b45": "b45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x45_Row_Letter_First_Shielded";
@@ -15533,7 +15801,8 @@ export class Conn_02x45_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_45b": "45b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x45_Row_Letter_Last_Shielded";
@@ -15642,7 +15911,8 @@ export class Conn_02x46_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b45": "b45",
   "Pin_b46": "b46",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x46_Row_Letter_First_Shielded";
@@ -15751,7 +16021,8 @@ export class Conn_02x46_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_46b": "46b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x46_Row_Letter_Last_Shielded";
@@ -15862,7 +16133,8 @@ export class Conn_02x47_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b46": "b46",
   "Pin_b47": "b47",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x47_Row_Letter_First_Shielded";
@@ -15973,7 +16245,8 @@ export class Conn_02x47_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_47b": "47b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x47_Row_Letter_Last_Shielded";
@@ -16086,7 +16359,8 @@ export class Conn_02x48_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b47": "b47",
   "Pin_b48": "b48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x48_Row_Letter_First_Shielded";
@@ -16199,7 +16473,8 @@ export class Conn_02x48_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_48b": "48b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x48_Row_Letter_Last_Shielded";
@@ -16314,7 +16589,8 @@ export class Conn_02x49_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b48": "b48",
   "Pin_b49": "b49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x49_Row_Letter_First_Shielded";
@@ -16429,7 +16705,8 @@ export class Conn_02x49_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_49b": "49b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x49_Row_Letter_Last_Shielded";
@@ -16546,7 +16823,8 @@ export class Conn_02x50_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b49": "b49",
   "Pin_b50": "b50",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x50_Row_Letter_First_Shielded";
@@ -16663,7 +16941,8 @@ export class Conn_02x50_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_50b": "50b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x50_Row_Letter_Last_Shielded";
@@ -16782,7 +17061,8 @@ export class Conn_02x51_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b50": "b50",
   "Pin_b51": "b51",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x51_Row_Letter_First_Shielded";
@@ -16901,7 +17181,8 @@ export class Conn_02x51_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_51b": "51b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x51_Row_Letter_Last_Shielded";
@@ -17022,7 +17303,8 @@ export class Conn_02x52_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b51": "b51",
   "Pin_b52": "b52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x52_Row_Letter_First_Shielded";
@@ -17143,7 +17425,8 @@ export class Conn_02x52_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_52b": "52b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x52_Row_Letter_Last_Shielded";
@@ -17266,7 +17549,8 @@ export class Conn_02x53_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b52": "b52",
   "Pin_b53": "b53",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x53_Row_Letter_First_Shielded";
@@ -17389,7 +17673,8 @@ export class Conn_02x53_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_53b": "53b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x53_Row_Letter_Last_Shielded";
@@ -17514,7 +17799,8 @@ export class Conn_02x54_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b53": "b53",
   "Pin_b54": "b54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x54_Row_Letter_First_Shielded";
@@ -17639,7 +17925,8 @@ export class Conn_02x54_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_54b": "54b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x54_Row_Letter_Last_Shielded";
@@ -17766,7 +18053,8 @@ export class Conn_02x55_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b54": "b54",
   "Pin_b55": "b55",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_a55: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", Pin_b55: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x55_Row_Letter_First_Shielded";
@@ -17893,7 +18181,8 @@ export class Conn_02x55_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_55b": "55b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Pin_55a: "passive", Pin_55b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x55_Row_Letter_Last_Shielded";
@@ -18022,7 +18311,8 @@ export class Conn_02x56_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b55": "b55",
   "Pin_b56": "b56",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_a55: "passive", Pin_a56: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", Pin_b55: "passive", Pin_b56: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x56_Row_Letter_First_Shielded";
@@ -18151,7 +18441,8 @@ export class Conn_02x56_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_56b": "56b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Pin_55a: "passive", Pin_55b: "passive", Pin_56a: "passive", Pin_56b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x56_Row_Letter_Last_Shielded";
@@ -18282,7 +18573,8 @@ export class Conn_02x57_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b56": "b56",
   "Pin_b57": "b57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_a55: "passive", Pin_a56: "passive", Pin_a57: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", Pin_b55: "passive", Pin_b56: "passive", Pin_b57: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x57_Row_Letter_First_Shielded";
@@ -18413,7 +18705,8 @@ export class Conn_02x57_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_57b": "57b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Pin_55a: "passive", Pin_55b: "passive", Pin_56a: "passive", Pin_56b: "passive", Pin_57a: "passive", Pin_57b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x57_Row_Letter_Last_Shielded";
@@ -18546,7 +18839,8 @@ export class Conn_02x58_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b57": "b57",
   "Pin_b58": "b58",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_a55: "passive", Pin_a56: "passive", Pin_a57: "passive", Pin_a58: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", Pin_b55: "passive", Pin_b56: "passive", Pin_b57: "passive", Pin_b58: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x58_Row_Letter_First_Shielded";
@@ -18679,7 +18973,8 @@ export class Conn_02x58_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_58b": "58b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Pin_55a: "passive", Pin_55b: "passive", Pin_56a: "passive", Pin_56b: "passive", Pin_57a: "passive", Pin_57b: "passive", Pin_58a: "passive", Pin_58b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x58_Row_Letter_Last_Shielded";
@@ -18814,7 +19109,8 @@ export class Conn_02x59_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b58": "b58",
   "Pin_b59": "b59",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_a55: "passive", Pin_a56: "passive", Pin_a57: "passive", Pin_a58: "passive", Pin_a59: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", Pin_b55: "passive", Pin_b56: "passive", Pin_b57: "passive", Pin_b58: "passive", Pin_b59: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x59_Row_Letter_First_Shielded";
@@ -18949,7 +19245,8 @@ export class Conn_02x59_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_59b": "59b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Pin_55a: "passive", Pin_55b: "passive", Pin_56a: "passive", Pin_56b: "passive", Pin_57a: "passive", Pin_57b: "passive", Pin_58a: "passive", Pin_58b: "passive", Pin_59a: "passive", Pin_59b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x59_Row_Letter_Last_Shielded";
@@ -19086,7 +19383,8 @@ export class Conn_02x60_Row_Letter_First_Shielded extends Component.withPins({
   "Pin_b59": "b59",
   "Pin_b60": "b60",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Shield: "passive", Pin_a1: "passive", Pin_a2: "passive", Pin_a3: "passive", Pin_a4: "passive", Pin_a5: "passive", Pin_a6: "passive", Pin_a7: "passive", Pin_a8: "passive", Pin_a9: "passive", Pin_a10: "passive", Pin_a11: "passive", Pin_a12: "passive", Pin_a13: "passive", Pin_a14: "passive", Pin_a15: "passive", Pin_a16: "passive", Pin_a17: "passive", Pin_a18: "passive", Pin_a19: "passive", Pin_a20: "passive", Pin_a21: "passive", Pin_a22: "passive", Pin_a23: "passive", Pin_a24: "passive", Pin_a25: "passive", Pin_a26: "passive", Pin_a27: "passive", Pin_a28: "passive", Pin_a29: "passive", Pin_a30: "passive", Pin_a31: "passive", Pin_a32: "passive", Pin_a33: "passive", Pin_a34: "passive", Pin_a35: "passive", Pin_a36: "passive", Pin_a37: "passive", Pin_a38: "passive", Pin_a39: "passive", Pin_a40: "passive", Pin_a41: "passive", Pin_a42: "passive", Pin_a43: "passive", Pin_a44: "passive", Pin_a45: "passive", Pin_a46: "passive", Pin_a47: "passive", Pin_a48: "passive", Pin_a49: "passive", Pin_a50: "passive", Pin_a51: "passive", Pin_a52: "passive", Pin_a53: "passive", Pin_a54: "passive", Pin_a55: "passive", Pin_a56: "passive", Pin_a57: "passive", Pin_a58: "passive", Pin_a59: "passive", Pin_a60: "passive", Pin_b1: "passive", Pin_b2: "passive", Pin_b3: "passive", Pin_b4: "passive", Pin_b5: "passive", Pin_b6: "passive", Pin_b7: "passive", Pin_b8: "passive", Pin_b9: "passive", Pin_b10: "passive", Pin_b11: "passive", Pin_b12: "passive", Pin_b13: "passive", Pin_b14: "passive", Pin_b15: "passive", Pin_b16: "passive", Pin_b17: "passive", Pin_b18: "passive", Pin_b19: "passive", Pin_b20: "passive", Pin_b21: "passive", Pin_b22: "passive", Pin_b23: "passive", Pin_b24: "passive", Pin_b25: "passive", Pin_b26: "passive", Pin_b27: "passive", Pin_b28: "passive", Pin_b29: "passive", Pin_b30: "passive", Pin_b31: "passive", Pin_b32: "passive", Pin_b33: "passive", Pin_b34: "passive", Pin_b35: "passive", Pin_b36: "passive", Pin_b37: "passive", Pin_b38: "passive", Pin_b39: "passive", Pin_b40: "passive", Pin_b41: "passive", Pin_b42: "passive", Pin_b43: "passive", Pin_b44: "passive", Pin_b45: "passive", Pin_b46: "passive", Pin_b47: "passive", Pin_b48: "passive", Pin_b49: "passive", Pin_b50: "passive", Pin_b51: "passive", Pin_b52: "passive", Pin_b53: "passive", Pin_b54: "passive", Pin_b55: "passive", Pin_b56: "passive", Pin_b57: "passive", Pin_b58: "passive", Pin_b59: "passive", Pin_b60: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x60_Row_Letter_First_Shielded";
@@ -19223,7 +19521,8 @@ export class Conn_02x60_Row_Letter_Last_Shielded extends Component.withPins({
   "Pin_60b": "60b",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1a: "passive", Pin_1b: "passive", Pin_2a: "passive", Pin_2b: "passive", Pin_3a: "passive", Pin_3b: "passive", Pin_4a: "passive", Pin_4b: "passive", Pin_5a: "passive", Pin_5b: "passive", Pin_6a: "passive", Pin_6b: "passive", Pin_7a: "passive", Pin_7b: "passive", Pin_8a: "passive", Pin_8b: "passive", Pin_9a: "passive", Pin_9b: "passive", Pin_10a: "passive", Pin_10b: "passive", Pin_11a: "passive", Pin_11b: "passive", Pin_12a: "passive", Pin_12b: "passive", Pin_13a: "passive", Pin_13b: "passive", Pin_14a: "passive", Pin_14b: "passive", Pin_15a: "passive", Pin_15b: "passive", Pin_16a: "passive", Pin_16b: "passive", Pin_17a: "passive", Pin_17b: "passive", Pin_18a: "passive", Pin_18b: "passive", Pin_19a: "passive", Pin_19b: "passive", Pin_20a: "passive", Pin_20b: "passive", Pin_21a: "passive", Pin_21b: "passive", Pin_22a: "passive", Pin_22b: "passive", Pin_23a: "passive", Pin_23b: "passive", Pin_24a: "passive", Pin_24b: "passive", Pin_25a: "passive", Pin_25b: "passive", Pin_26a: "passive", Pin_26b: "passive", Pin_27a: "passive", Pin_27b: "passive", Pin_28a: "passive", Pin_28b: "passive", Pin_29a: "passive", Pin_29b: "passive", Pin_30a: "passive", Pin_30b: "passive", Pin_31a: "passive", Pin_31b: "passive", Pin_32a: "passive", Pin_32b: "passive", Pin_33a: "passive", Pin_33b: "passive", Pin_34a: "passive", Pin_34b: "passive", Pin_35a: "passive", Pin_35b: "passive", Pin_36a: "passive", Pin_36b: "passive", Pin_37a: "passive", Pin_37b: "passive", Pin_38a: "passive", Pin_38b: "passive", Pin_39a: "passive", Pin_39b: "passive", Pin_40a: "passive", Pin_40b: "passive", Pin_41a: "passive", Pin_41b: "passive", Pin_42a: "passive", Pin_42b: "passive", Pin_43a: "passive", Pin_43b: "passive", Pin_44a: "passive", Pin_44b: "passive", Pin_45a: "passive", Pin_45b: "passive", Pin_46a: "passive", Pin_46b: "passive", Pin_47a: "passive", Pin_47b: "passive", Pin_48a: "passive", Pin_48b: "passive", Pin_49a: "passive", Pin_49b: "passive", Pin_50a: "passive", Pin_50b: "passive", Pin_51a: "passive", Pin_51b: "passive", Pin_52a: "passive", Pin_52b: "passive", Pin_53a: "passive", Pin_53b: "passive", Pin_54a: "passive", Pin_54b: "passive", Pin_55a: "passive", Pin_55b: "passive", Pin_56a: "passive", Pin_56b: "passive", Pin_57a: "passive", Pin_57b: "passive", Pin_58a: "passive", Pin_58b: "passive", Pin_59a: "passive", Pin_59b: "passive", Pin_60a: "passive", Pin_60b: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_02x60_Row_Letter_Last_Shielded";
@@ -19245,7 +19544,8 @@ export class Conn_2Rows_05Pins_Shielded extends Component.withPins({
   "Pin_5": "5",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-05Pins_Shielded";
@@ -19269,7 +19569,8 @@ export class Conn_2Rows_07Pins_Shielded extends Component.withPins({
   "Pin_7": "7",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-07Pins_Shielded";
@@ -19295,7 +19596,8 @@ export class Conn_2Rows_09Pins_Shielded extends Component.withPins({
   "Pin_9": "9",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-09Pins_Shielded";
@@ -19323,7 +19625,8 @@ export class Conn_2Rows_11Pins_Shielded extends Component.withPins({
   "Pin_11": "11",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-11Pins_Shielded";
@@ -19353,7 +19656,8 @@ export class Conn_2Rows_13Pins_Shielded extends Component.withPins({
   "Pin_13": "13",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-13Pins_Shielded";
@@ -19385,7 +19689,8 @@ export class Conn_2Rows_15Pins_Shielded extends Component.withPins({
   "Pin_15": "15",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-15Pins_Shielded";
@@ -19419,7 +19724,8 @@ export class Conn_2Rows_17Pins_Shielded extends Component.withPins({
   "Pin_17": "17",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-17Pins_Shielded";
@@ -19455,7 +19761,8 @@ export class Conn_2Rows_19Pins_Shielded extends Component.withPins({
   "Pin_19": "19",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-19Pins_Shielded";
@@ -19493,7 +19800,8 @@ export class Conn_2Rows_21Pins_Shielded extends Component.withPins({
   "Pin_21": "21",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-21Pins_Shielded";
@@ -19533,7 +19841,8 @@ export class Conn_2Rows_23Pins_Shielded extends Component.withPins({
   "Pin_23": "23",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-23Pins_Shielded";
@@ -19575,7 +19884,8 @@ export class Conn_2Rows_25Pins_Shielded extends Component.withPins({
   "Pin_25": "25",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-25Pins_Shielded";
@@ -19619,7 +19929,8 @@ export class Conn_2Rows_27Pins_Shielded extends Component.withPins({
   "Pin_27": "27",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-27Pins_Shielded";
@@ -19665,7 +19976,8 @@ export class Conn_2Rows_29Pins_Shielded extends Component.withPins({
   "Pin_29": "29",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-29Pins_Shielded";
@@ -19713,7 +20025,8 @@ export class Conn_2Rows_31Pins_Shielded extends Component.withPins({
   "Pin_31": "31",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-31Pins_Shielded";
@@ -19763,7 +20076,8 @@ export class Conn_2Rows_33Pins_Shielded extends Component.withPins({
   "Pin_33": "33",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-33Pins_Shielded";
@@ -19815,7 +20129,8 @@ export class Conn_2Rows_35Pins_Shielded extends Component.withPins({
   "Pin_35": "35",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-35Pins_Shielded";
@@ -19869,7 +20184,8 @@ export class Conn_2Rows_37Pins_Shielded extends Component.withPins({
   "Pin_37": "37",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-37Pins_Shielded";
@@ -19925,7 +20241,8 @@ export class Conn_2Rows_39Pins_Shielded extends Component.withPins({
   "Pin_39": "39",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-39Pins_Shielded";
@@ -19983,7 +20300,8 @@ export class Conn_2Rows_41Pins_Shielded extends Component.withPins({
   "Pin_41": "41",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-41Pins_Shielded";
@@ -20043,7 +20361,8 @@ export class Conn_2Rows_43Pins_Shielded extends Component.withPins({
   "Pin_43": "43",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-43Pins_Shielded";
@@ -20105,7 +20424,8 @@ export class Conn_2Rows_45Pins_Shielded extends Component.withPins({
   "Pin_45": "45",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-45Pins_Shielded";
@@ -20169,7 +20489,8 @@ export class Conn_2Rows_47Pins_Shielded extends Component.withPins({
   "Pin_47": "47",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-47Pins_Shielded";
@@ -20235,7 +20556,8 @@ export class Conn_2Rows_49Pins_Shielded extends Component.withPins({
   "Pin_49": "49",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-49Pins_Shielded";
@@ -20303,7 +20625,8 @@ export class Conn_2Rows_51Pins_Shielded extends Component.withPins({
   "Pin_51": "51",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-51Pins_Shielded";
@@ -20373,7 +20696,8 @@ export class Conn_2Rows_53Pins_Shielded extends Component.withPins({
   "Pin_53": "53",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-53Pins_Shielded";
@@ -20445,7 +20769,8 @@ export class Conn_2Rows_55Pins_Shielded extends Component.withPins({
   "Pin_55": "55",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-55Pins_Shielded";
@@ -20519,7 +20844,8 @@ export class Conn_2Rows_57Pins_Shielded extends Component.withPins({
   "Pin_57": "57",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-57Pins_Shielded";
@@ -20595,7 +20921,8 @@ export class Conn_2Rows_59Pins_Shielded extends Component.withPins({
   "Pin_59": "59",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-59Pins_Shielded";
@@ -20673,7 +21000,8 @@ export class Conn_2Rows_61Pins_Shielded extends Component.withPins({
   "Pin_61": "61",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-61Pins_Shielded";
@@ -20753,7 +21081,8 @@ export class Conn_2Rows_63Pins_Shielded extends Component.withPins({
   "Pin_63": "63",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-63Pins_Shielded";
@@ -20835,7 +21164,8 @@ export class Conn_2Rows_65Pins_Shielded extends Component.withPins({
   "Pin_65": "65",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-65Pins_Shielded";
@@ -20919,7 +21249,8 @@ export class Conn_2Rows_67Pins_Shielded extends Component.withPins({
   "Pin_67": "67",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-67Pins_Shielded";
@@ -21005,7 +21336,8 @@ export class Conn_2Rows_69Pins_Shielded extends Component.withPins({
   "Pin_69": "69",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-69Pins_Shielded";
@@ -21093,7 +21425,8 @@ export class Conn_2Rows_71Pins_Shielded extends Component.withPins({
   "Pin_71": "71",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-71Pins_Shielded";
@@ -21183,7 +21516,8 @@ export class Conn_2Rows_73Pins_Shielded extends Component.withPins({
   "Pin_73": "73",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-73Pins_Shielded";
@@ -21275,7 +21609,8 @@ export class Conn_2Rows_75Pins_Shielded extends Component.withPins({
   "Pin_75": "75",
   "Shield": "SH",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Pin_1: "passive", Pin_2: "passive", Pin_3: "passive", Pin_4: "passive", Pin_5: "passive", Pin_6: "passive", Pin_7: "passive", Pin_8: "passive", Pin_9: "passive", Pin_10: "passive", Pin_11: "passive", Pin_12: "passive", Pin_13: "passive", Pin_14: "passive", Pin_15: "passive", Pin_16: "passive", Pin_17: "passive", Pin_18: "passive", Pin_19: "passive", Pin_20: "passive", Pin_21: "passive", Pin_22: "passive", Pin_23: "passive", Pin_24: "passive", Pin_25: "passive", Pin_26: "passive", Pin_27: "passive", Pin_28: "passive", Pin_29: "passive", Pin_30: "passive", Pin_31: "passive", Pin_32: "passive", Pin_33: "passive", Pin_34: "passive", Pin_35: "passive", Pin_36: "passive", Pin_37: "passive", Pin_38: "passive", Pin_39: "passive", Pin_40: "passive", Pin_41: "passive", Pin_42: "passive", Pin_43: "passive", Pin_44: "passive", Pin_45: "passive", Pin_46: "passive", Pin_47: "passive", Pin_48: "passive", Pin_49: "passive", Pin_50: "passive", Pin_51: "passive", Pin_52: "passive", Pin_53: "passive", Pin_54: "passive", Pin_55: "passive", Pin_56: "passive", Pin_57: "passive", Pin_58: "passive", Pin_59: "passive", Pin_60: "passive", Pin_61: "passive", Pin_62: "passive", Pin_63: "passive", Pin_64: "passive", Pin_65: "passive", Pin_66: "passive", Pin_67: "passive", Pin_68: "passive", Pin_69: "passive", Pin_70: "passive", Pin_71: "passive", Pin_72: "passive", Pin_73: "passive", Pin_74: "passive", Pin_75: "passive", Shield: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Generic_Shielded:Conn_2Rows-75Pins_Shielded";

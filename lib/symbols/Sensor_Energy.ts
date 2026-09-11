@@ -40,7 +40,8 @@ export class ATM90E26_YU extends Component.withPins({
   "SDI/URX": "27",
   "MMD0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MMD1: "input", DGND_2: "power_in", DVDD: "power_in", "~{Reset}": "input", AVDD: "power_in", AGND_6: "power_in", I2P: "input", I2N: "input", DGND_9: "passive", I1P: "input", I1N: "input", USEL: "input", Vref: "output", AGND_14: "passive", VN: "input", VP: "input", WarnOut: "output", CF1: "output", CF2: "output", IRQ: "output", ZX: "output", OSCI: "input", OSCO: "output", "~{CS}": "input", SCLK: "input", "SDO/UTX": "output", "SDI/URX": "input", MMD0: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:ATM90E26-YU";
@@ -66,7 +67,8 @@ export class INA219AxD extends Component.withPins({
   "IN-": "7",
   "IN+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", "IN-": "input", "IN+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA219AxD";
@@ -92,7 +94,8 @@ export class INA219AxDCN extends Component.withPins({
   "A0": "7",
   "A1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IN+": "input", "IN-": "input", GND: "power_in", VS: "power_in", SCL: "input", SDA: "bidirectional", A0: "input", A1: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA219AxDCN";
@@ -118,7 +121,8 @@ export class INA219BxD extends Component.withPins({
   "IN-": "7",
   "IN+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", "IN-": "input", "IN+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA219BxD";
@@ -144,7 +148,8 @@ export class INA219BxDCN extends Component.withPins({
   "A0": "7",
   "A1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IN+": "input", "IN-": "input", GND: "power_in", VS: "power_in", SCL: "input", SDA: "bidirectional", A0: "input", A1: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA219BxDCN";
@@ -172,7 +177,8 @@ export class INA226 extends Component.withPins({
   "Vin-": "9",
   "Vin+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", "~{Alert}": "open_collector", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", Vbus: "input", "Vin-": "input", "Vin+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA226";
@@ -200,7 +206,8 @@ export class INA228 extends Component.withPins({
   "Vin-": "9",
   "Vin+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", "~{Alert}": "open_collector", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", Vbus: "input", "Vin-": "input", "Vin+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA228";
@@ -228,7 +235,8 @@ export class INA229 extends Component.withPins({
   "IN-": "9",
   "IN+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MOSI: "input", "~{ALERT}": "open_collector", MISO: "tri_state", SCLK: "input", VS: "power_in", GND: "power_in", VBUS: "input", "IN-": "input", "IN+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA229";
@@ -256,7 +264,8 @@ export class INA233 extends Component.withPins({
   "Vin-": "9",
   "Vin+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", "~{Alert}": "open_collector", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", Vbus: "input", "Vin-": "input", "Vin+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA233";
@@ -282,7 +291,8 @@ export class INA234AxYBJ extends Component.withPins({
   "SCL": "D1",
   "VS": "D2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{ALERT}": "open_collector", "IN+": "input", A0: "input", "IN-": "input", SDA: "bidirectional", GND: "power_in", SCL: "input", VS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA234AxYBJ";
@@ -310,7 +320,8 @@ export class INA237 extends Component.withPins({
   "Vin-": "9",
   "Vin+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", "~{Alert}": "open_collector", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", Vbus: "input", "Vin-": "input", "Vin+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA237";
@@ -338,7 +349,8 @@ export class INA238 extends Component.withPins({
   "Vin-": "9",
   "Vin+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", A0: "input", "~{Alert}": "open_collector", SDA: "bidirectional", SCL: "input", VS: "power_in", GND: "power_in", Vbus: "input", "Vin-": "input", "Vin+": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA238";
@@ -372,7 +384,8 @@ export class INA260 extends Component.withPins({
   "IN-_15": "15",
   "IN-_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IN+_1": "passive", "IN+_2": "passive", "IN+_3": "passive", A1: "input", A0: "input", GND_6: "power_in", ALERT: "open_collector", SDA: "bidirectional", SCL: "input", VS: "power_in", GND_11: "passive", VBUS: "passive", NC: "no_connect", "IN-_14": "passive", "IN-_15": "passive", "IN-_16": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:INA260";
@@ -400,7 +413,8 @@ export class LTC4151xMS extends Component.withPins({
   "GND": "9",
   "SENSE-": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE+": "input", VIN: "power_in", ADR1: "input", ADR0: "input", ADIN: "input", SCL: "input", SDA: "bidirectional", "~{SHDN}": "input", GND: "power_in", "SENSE-": "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:LTC4151xMS";
@@ -447,7 +461,8 @@ export class MCP39F521 extends Component.withPins({
   "~{DR}": "28",
   "DGND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EVENT: "output", NC_2: "no_connect", NC_3: "no_connect", COMMON_B: "passive", COMMON_A: "passive", OSCI: "input", OSCO: "passive", NC_8: "no_connect", NC_9: "no_connect", "~{RESET}": "input", AVDD: "power_in", A0: "input", SCL: "input", SDA: "bidirectional", A1: "input", "I1+": "input", "I1-": "input", "V1-": "input", "V1+": "input", AN_IN: "input", AGND: "power_in", ZCD: "output", "REFIN+/OUT": "bidirectional", DGND_24: "power_in", DVDD: "power_in", "~{MCLR}": "input", DGND_27: "passive", "~{DR}": "output", DGND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:MCP39F521";
@@ -481,7 +496,8 @@ export class PAC1931x_xJ6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "passive", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", GND_B1: "passive", "V_{DD}IO": "input", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1931x-xJ6CX";
@@ -515,7 +531,8 @@ export class PAC1932x_xJ6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", "V_{DD}IO": "input", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1932x-xJ6CX";
@@ -550,7 +567,8 @@ export class PAC1932x_xJQ extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", "V_{DD}IO": "input", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1932x-xJQ";
@@ -584,7 +602,8 @@ export class PAC1933x_xJ6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", "V_{DD}IO": "input", "~{PWRDN}": "input", GND_B4: "power_in", "SENSE3-": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "SENSE3+": "input", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1933x-xJ6CX";
@@ -619,7 +638,8 @@ export class PAC1933x_xJQ extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "SENSE3-": "input", "SENSE3+": "input", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", "V_{DD}IO": "input", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1933x-xJQ";
@@ -653,7 +673,8 @@ export class PAC1934x_xJ6CX extends Component.withPins({
   "SENSE4+": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", "V_{DD}IO": "input", "~{PWRDN}": "input", GND: "power_in", "SENSE3-": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "SENSE3+": "input", "SENSE4-": "input", "SENSE4+": "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1934x-xJ6CX";
@@ -688,7 +709,8 @@ export class PAC1934x_xJQ extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "SENSE3-": "input", "SENSE3+": "input", "SENSE4-": "input", "SENSE4+": "input", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", "V_{DD}IO": "input", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1934x-xJQ";
@@ -723,7 +745,8 @@ export class PAC1951x_1x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", GND_13: "passive", GND_14: "passive", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1951x-1x-4MX";
@@ -758,7 +781,8 @@ export class PAC1941x_1x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", GND_13: "passive", GND_14: "passive", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1941x-1x-4MX";
@@ -792,7 +816,8 @@ export class PAC1951x_1x_J6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "passive", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", GND_B1: "passive", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1951x-1x-J6CX";
@@ -826,7 +851,8 @@ export class PAC1941x_1x_J6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "passive", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", GND_B1: "passive", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1941x-1x-J6CX";
@@ -861,7 +887,8 @@ export class PAC1951x_2x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "V_{BUS1+}": "input", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1951x-2x-4MX";
@@ -896,7 +923,8 @@ export class PAC1941x_2x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "V_{BUS1+}": "input", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1941x-2x-4MX";
@@ -930,7 +958,8 @@ export class PAC1951x_2x_J6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{BUS1+}": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1951x-2x-J6CX";
@@ -964,7 +993,8 @@ export class PAC1941x_2x_J6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{BUS1+}": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1941x-2x-J6CX";
@@ -999,7 +1029,8 @@ export class PAC1952x_1x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1952x-1x-4MX";
@@ -1034,7 +1065,8 @@ export class PAC1942x_1x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1942x-1x-4MX";
@@ -1068,7 +1100,8 @@ export class PAC1952x_1x_J6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1952x-1x-J6CX";
@@ -1102,7 +1135,8 @@ export class PAC1942x_1x_J6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", GND_C1: "passive", ADDRSEL: "passive", SLOW: "input", SCL: "input", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1942x-1x-J6CX";
@@ -1137,7 +1171,8 @@ export class PAC1952x_2x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "V_{BUS2-}": "input", "V_{BUS2+}": "input", "SENSE2-": "input", "SENSE2+": "input", "SENSE1+": "input", "SENSE1-": "input", "V_{BUS1+}": "input", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1952x-2x-4MX";
@@ -1172,7 +1207,8 @@ export class PAC1942x_2x_4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "V_{BUS2-}": "input", "V_{BUS2+}": "input", "SENSE2-": "input", "SENSE2+": "input", "SENSE1+": "input", "SENSE1-": "input", "V_{BUS1+}": "input", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1942x-2x-4MX";
@@ -1206,7 +1242,8 @@ export class PAC1952x_2x_J6CX extends Component.withPins({
   "SENSE2+": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{BUS1+}": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND: "power_in", "V_{BUS2-}": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "V_{BUS2+}": "input", "SENSE2-": "input", "SENSE2+": "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1952x-2x-J6CX";
@@ -1240,7 +1277,8 @@ export class PAC1942x_2x_J6CX extends Component.withPins({
   "SENSE2+": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{BUS1+}": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "V_{BUS1-}": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND: "power_in", "V_{BUS2-}": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "V_{BUS2+}": "input", "SENSE2-": "input", "SENSE2+": "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1942x-2x-J6CX";
@@ -1275,7 +1313,8 @@ export class PAC1953x_x4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "SENSE3-": "input", "SENSE3+": "input", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1953x-x4MX";
@@ -1310,7 +1349,8 @@ export class PAC1943x_x4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND_3: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "SENSE3-": "input", "SENSE3+": "input", GND_9: "passive", GND_10: "passive", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1943x-x4MX";
@@ -1344,7 +1384,8 @@ export class PAC1953x_xJ6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", "SENSE3-": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "SENSE3+": "input", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1953x-xJ6CX";
@@ -1378,7 +1419,8 @@ export class PAC1943x_xJ6CX extends Component.withPins({
   "GND_D3": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND_B4: "power_in", "SENSE3-": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "SENSE3+": "input", GND_D2: "passive", GND_D3: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1943x-xJ6CX";
@@ -1413,7 +1455,8 @@ export class PAC1954x_x4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "SENSE3-": "input", "SENSE3+": "input", "SENSE4-": "input", "SENSE4+": "input", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1954x-x4MX";
@@ -1448,7 +1491,8 @@ export class PAC1944x_x4MX extends Component.withPins({
   "~{PWRDN}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SLOW: "input", "V_{DD}": "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", ADDRSEL: "passive", "SENSE3-": "input", "SENSE3+": "input", "SENSE4-": "input", "SENSE4+": "input", "SENSE1+": "input", "SENSE1-": "input", "SENSE2+": "input", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1944x-x4MX";
@@ -1482,7 +1526,8 @@ export class PAC1954x_xJ6CX extends Component.withPins({
   "SENSE4+": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND: "power_in", "SENSE3-": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "SENSE3+": "input", "SENSE4-": "input", "SENSE4+": "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1954x-xJ6CX";
@@ -1516,7 +1561,8 @@ export class PAC1944x_xJ6CX extends Component.withPins({
   "SENSE4+": "D3",
   "SDA": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE2+": "input", "SENSE1-": "input", "SENSE1+": "input", "V_{DD}": "power_in", "SENSE2-": "input", GPIO: "bidirectional", "~{PWRDN}": "input", GND: "power_in", "SENSE3-": "input", ADDRSEL: "passive", SLOW: "input", SCL: "input", "SENSE3+": "input", "SENSE4-": "input", "SENSE4+": "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Energy:PAC1944x-xJ6CX";

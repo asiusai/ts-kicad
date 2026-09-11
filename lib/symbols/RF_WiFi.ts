@@ -34,7 +34,8 @@ export class HF_A11_SMT extends Component.withPins({
   "RF": "25",
   "GND_26": "26",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "3.3V_1": "power_in", "3.3V_2": "power_in", GND_3: "power_in", UART_TXD: "output", UART_RXD: "input", UART_RTS: "output", UART_CTS: "input", "TX+": "passive", "TX-": "passive", "RX+": "passive", "RX-": "passive", "~{LINK}": "output", "~{RESET}": "input", "~{READY}": "output", "~{RELOAD}": "input", GND_18: "power_in", GND_19: "power_in", GND_20: "power_in", UART1_RXD: "input", UART1_TXD: "output", "1.8VOUT": "power_out", GND_24: "power_in", RF: "passive", GND_26: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_WiFi:HF-A11-SMT";
@@ -96,7 +97,8 @@ export class USR_C322 extends Component.withPins({
   "NC_43": "43",
   "GND_44": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GPIO0: "bidirectional", GPIO1: "bidirectional", "~{RESET}": "input", SOP2: "passive", SOP1: "passive", SOP0: "passive", "ANA_DC-DC": "passive", NC_9: "no_connect", NC_10: "no_connect", GND_11: "passive", GND_12: "passive", VBT_CC: "power_in", VDD_ANA2: "power_in", GPIO2: "bidirectional", NC_16: "no_connect", GND_17: "passive", GPIO3: "bidirectional", UART0_TX: "output", UART0_RX: "input", "~{RELOAD}": "input", "~{READY}": "open_collector", "~{LINK}": "open_collector", UART0_CTS: "input", UART0_RTS: "output", GPIO4: "bidirectional", GPIO5: "bidirectional", GND_28: "passive", GND_29: "passive", UART1_TX: "output", UART1_RX: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", GPIO8: "bidirectional", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", GPIO12: "bidirectional", NC_39: "no_connect", NC_40: "no_connect", GPIO13: "bidirectional", NC_42: "no_connect", NC_43: "no_connect", GND_44: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_WiFi:USR-C322";

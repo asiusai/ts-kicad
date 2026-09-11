@@ -80,7 +80,8 @@ export class MC68000FN extends Component.withPins({
   "D6": "67",
   "D5": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{AS}": "tri_state", "~{UDS}": "tri_state", "~{LDS}": "tri_state", "R/~{W}": "tri_state", "~{DTACK}": "input", "~{BG}": "output", "~{BGACK}": "input", "~{BR}": "input", "V_{CC}_14": "power_in", CLK: "input", GND_16: "power_in", GND_17: "passive", NC_18: "no_connect", "~{HALT}": "bidirectional", "~{RESET}": "bidirectional", "~{VMA}": "tri_state", E: "output", "~{VPA}": "input", "~{BERR}": "input", "~{IPL2}": "input", "~{IPL1}": "input", "~{IPL0}": "input", FC2: "tri_state", FC1: "tri_state", FC0: "tri_state", NC_31: "no_connect", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", A5: "tri_state", A6: "tri_state", A7: "tri_state", A8: "tri_state", A9: "tri_state", A10: "tri_state", A11: "tri_state", A12: "tri_state", A13: "tri_state", A14: "tri_state", A15: "tri_state", A16: "tri_state", A17: "tri_state", A18: "tri_state", A19: "tri_state", A20: "tri_state", "V_{CC}_52": "passive", A21: "tri_state", A22: "tri_state", A23: "tri_state", GND_56: "passive", GND_57: "passive", D15: "bidirectional", D14: "bidirectional", D13: "bidirectional", D12: "bidirectional", D11: "bidirectional", D10: "bidirectional", D9: "bidirectional", D8: "bidirectional", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_68000:MC68000FN";
@@ -162,7 +163,8 @@ export class MC68000P extends Component.withPins({
   "D6": "63",
   "D5": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{AS}": "tri_state", "~{UDS}": "tri_state", "~{LDS}": "tri_state", "R/~{W}": "tri_state", "~{DTACK}": "input", "~{BG}": "output", "~{BGACK}": "input", "~{BR}": "input", "V_{CC}_14": "power_in", CLK: "input", GND_16: "power_in", "~{HALT}": "bidirectional", "~{RESET}": "bidirectional", "~{VMA}": "tri_state", E: "output", "~{VPA}": "input", "~{BERR}": "input", "~{IPL2}": "input", "~{IPL1}": "input", "~{IPL0}": "input", FC2: "tri_state", FC1: "tri_state", FC0: "tri_state", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", A5: "tri_state", A6: "tri_state", A7: "tri_state", A8: "tri_state", A9: "tri_state", A10: "tri_state", A11: "tri_state", A12: "tri_state", A13: "tri_state", A14: "tri_state", A15: "tri_state", A16: "tri_state", A17: "tri_state", A18: "tri_state", A19: "tri_state", A20: "tri_state", "V_{CC}_49": "passive", A21: "tri_state", A22: "tri_state", A23: "tri_state", GND_53: "passive", D15: "bidirectional", D14: "bidirectional", D13: "bidirectional", D12: "bidirectional", D11: "bidirectional", D10: "bidirectional", D9: "bidirectional", D8: "bidirectional", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_68000:MC68000P";
@@ -232,7 +234,8 @@ export class MC68008FN extends Component.withPins({
   "A0": "51",
   "A1": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2: "tri_state", A3: "tri_state", A4: "tri_state", A5: "tri_state", A6: "tri_state", A7: "tri_state", A8: "tri_state", A9: "tri_state", A10: "tri_state", A11: "tri_state", A12: "tri_state", A13: "tri_state", A21: "tri_state", A14: "tri_state", "V_{CC}": "power_in", A15: "tri_state", GND_17: "power_in", A16: "tri_state", A17: "tri_state", A18: "tri_state", A19: "tri_state", A20: "tri_state", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{AS}": "tri_state", "~{DS}": "tri_state", "R/~{W}": "tri_state", "~{DTACK}": "input", "~{BG}": "output", "~{BGACK}": "input", "~{BR}": "input", CLK: "input", GND_39: "passive", "~{HALT}": "bidirectional", "~{RESET}": "bidirectional", E: "output", "~{VPA}": "input", "~{BERR}": "input", "~{IPL1}": "input", "~{IPL2}": "input", "~{IPL0}": "input", FC2: "tri_state", FC1: "tri_state", FC0: "tri_state", A0: "tri_state", A1: "tri_state", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_68000:MC68008FN";
@@ -298,7 +301,8 @@ export class MC68008P extends Component.withPins({
   "A1": "47",
   "A2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A3: "tri_state", A4: "tri_state", A5: "tri_state", A6: "tri_state", A7: "tri_state", A8: "tri_state", A9: "tri_state", A10: "tri_state", A11: "tri_state", A12: "tri_state", A13: "tri_state", A14: "tri_state", "V_{CC}": "power_in", A15: "tri_state", GND_15: "power_in", A16: "tri_state", A17: "tri_state", A18: "tri_state", A19: "tri_state", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{AS}": "tri_state", "~{DS}": "tri_state", "R/~{W}": "tri_state", "~{DTACK}": "input", "~{BG}": "output", "~{BR}": "input", CLK: "input", GND_35: "passive", "~{HALT}": "bidirectional", "~{RESET}": "bidirectional", E: "output", "~{VPA}": "input", "~{BERR}": "input", "~{IPL1}": "input", "~{IPL2}/~{IPL0}": "input", FC2: "tri_state", FC1: "tri_state", FC0: "tri_state", A0: "tri_state", A1: "tri_state", A2: "tri_state", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_68000:MC68008P";
@@ -380,7 +384,8 @@ export class MC68010P extends Component.withPins({
   "D6": "63",
   "D5": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{AS}": "tri_state", "~{UDS}": "tri_state", "~{LDS}": "tri_state", "R/~{W}": "tri_state", "~{DTACK}": "input", "~{BG}": "output", "~{BGACK}": "input", "~{BR}": "input", "V_{CC}_14": "power_in", CLK: "input", GND_16: "power_in", "~{HALT}": "bidirectional", "~{RESET}": "bidirectional", "~{VMA}": "tri_state", E: "output", "~{VPA}": "input", "~{BERR}": "input", "~{IPL2}": "input", "~{IPL1}": "input", "~{IPL0}": "input", FC2: "tri_state", FC1: "tri_state", FC0: "tri_state", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", A5: "tri_state", A6: "tri_state", A7: "tri_state", A8: "tri_state", A9: "tri_state", A10: "tri_state", A11: "tri_state", A12: "tri_state", A13: "tri_state", A14: "tri_state", A15: "tri_state", A16: "tri_state", A17: "tri_state", A18: "tri_state", A19: "tri_state", A20: "tri_state", "V_{CC}_49": "passive", A21: "tri_state", A22: "tri_state", A23: "tri_state", GND_53: "passive", D15: "bidirectional", D14: "bidirectional", D13: "bidirectional", D12: "bidirectional", D11: "bidirectional", D10: "bidirectional", D9: "bidirectional", D8: "bidirectional", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_68000:MC68010P";
@@ -530,7 +535,8 @@ export class MC68332 extends Component.withPins({
   "TP13": "131",
   "TP12": "132",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_2: "power_in", VDD_1: "power_in", TP11: "input", TP10: "input", TP9: "input", TP8: "input", VDD_7: "power_in", VSS_8: "power_in", TP7: "input", TP6: "input", TP5: "input", TP4: "input", TP3: "input", TP2: "input", TP1: "input", TP0: "input", VSS_17: "power_in", VDD_18: "power_in", VSTBY: "input", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", VDD_28: "power_in", VSS_29: "power_in", A9: "output", A10: "output", A11: "output", A12: "output", VSS_34: "power_in", A13: "output", A14: "output", A15: "output", A16: "output", VDD_39: "power_in", VSS_40: "power_in", A17: "output", A18: "output", MISO: "input", MOSI: "input", SCK: "input", "PSCO/SS": "input", PCS1: "input", PCS2: "input", PCS3: "input", VDD_50: "power_in", VSS_51: "power_in", TXD: "input", RXD: "input", "IPIPE/DSO": "output", "IFETCH/DSI": "input", "BKPT/DSCLK": "input", "TSTME/TSC": "input", "FREEZE/QUOT": "output", VSS_59: "power_in", XTAL: "output", VDDSYN: "input", EXTAL: "input", VDD_63: "power_in", XFC: "input", VDD_65: "power_in", CLKOUT: "output", VSS_67: "power_in", RESET: "input", HALT: "input", BERR: "input", IRQ7: "input", IRQ6: "input", IRQ5: "input", IRQ4: "input", IRQ3: "input", IRQ2: "input", IRQ1: "input", MODCK: "input", "R/W": "input", SIZ1: "input", SIZ0: "input", AS: "input", VSS_83: "power_in", VDD_84: "power_in", DS: "input", RMC: "input", AVEC: "input", DSACK1: "input", DSACK0: "input", A0: "output", D15: "input", D14: "input", D13: "input", D12: "input", VSS_95: "power_in", VDD_96: "power_in", D11: "input", D10: "input", D9: "input", D8: "input", VSS_101: "power_in", D7: "input", D6: "input", D5: "input", D4: "input", VSS_106: "power_in", VDD_107: "power_in", D3: "input", D2: "input", D1: "input", D0: "input", CSBOOT: "output", "BR/CS0": "input", "BG/CS1": "output", "BGACK/CS2": "input", VDD_116: "power_in", VSS_117: "power_in", "FC0/CS3": "output", "FC1/CS4": "output", "FC2/CS5": "output", "A19/CS6": "output", "A20/CS7": "output", "A21/CS8": "output", "A22/CS9": "output", "A23/CS10": "output", VDD_126: "power_in", VSS_127: "power_in", T2CLK: "input", TP15: "input", TP14: "input", TP13: "input", TP12: "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_68000:MC68332";

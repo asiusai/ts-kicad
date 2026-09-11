@@ -64,7 +64,8 @@ export class ADUC816BSZ extends Component.withPins({
   "AD6/P0.6": "51",
   "AD7/P0.7": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.0/T2": "bidirectional", "P1.1/T2EX": "bidirectional", "P1.2/DAC/IEXC1": "bidirectional", "P1.3/AIN5/IEXC2": "bidirectional", "AV_{DD}": "power_in", AGND: "power_in", "REFIN(-)": "passive", "REFIN(+)": "passive", "P1.4/AIN1": "input", "P1.5/AIN2": "input", "P1.6/AIN3": "input", "P1.7/AIN4/DAC": "bidirectional", "~{SS}": "input", MISO: "input", RESET: "input", "RXD/P3.0": "bidirectional", "TXD/P3.1": "bidirectional", "~{INT0}/P3.2": "bidirectional", "~{INT1}/P3.3": "bidirectional", "DV_{DD}_20": "power_in", DGND_21: "power_in", "T0/P3.4": "bidirectional", "T1/P3.5": "bidirectional", "~{WR}/P3.6": "bidirectional", "~{RD}/P3.7": "bidirectional", SCLOCK: "bidirectional", "SDATA/MOSI": "bidirectional", "A8/P2.0": "bidirectional", "A9/P2.1": "bidirectional", "A10/P2.2": "bidirectional", "A11/P2.3": "bidirectional", XTAL1: "input", XTAL2: "output", "DV_{DD}_34": "passive", DGND_35: "passive", "A12/P2.4": "bidirectional", "A13/P2.5": "bidirectional", "A14/P2.6": "bidirectional", "A15/P2.7": "bidirectional", "~{EA}": "bidirectional", "~{PSEN}": "output", ALE: "output", "AD0/P0.0": "bidirectional", "AD1/P0.1": "bidirectional", "AD2/P0.2": "bidirectional", "AD3/P0.3": "bidirectional", DGND_47: "passive", "DV_{DD}_48": "passive", "AD4/P0.4": "bidirectional", "AD5/P0.5": "bidirectional", "AD6/P0.6": "bidirectional", "AD7/P0.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_AnalogDevices:ADUC816BSZ";
@@ -103,7 +104,8 @@ export class MAX32660GTP extends Component.withPins({
   "P0.2": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", "P0.13": "bidirectional", "P0.12": "bidirectional", "~{RSTN}": "input", "V_{SS}_6": "power_in", "32KOUT": "output", "32KIN": "input", VDD: "power_in", VCORE: "passive", "P0.9": "bidirectional", "P0.8": "bidirectional", "P0.11": "bidirectional", "P0.10": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_AnalogDevices:MAX32660GTP";
@@ -162,7 +164,8 @@ export class MAX32670GTL extends Component.withPins({
   "VCORE": "40",
   "V_{SS}_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.20": "bidirectional", "P0.21": "bidirectional", "P0.22": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P0.23": "bidirectional", "P0.24": "bidirectional", "P0.25": "bidirectional", "P0.26": "bidirectional", "P0.27": "bidirectional", "P0.28": "bidirectional", "P0.29": "bidirectional", "P0.30": "bidirectional", "P0.8": "bidirectional", "P0.9": "bidirectional", "P0.10": "bidirectional", "P0.11": "bidirectional", "P0.12": "bidirectional", "P0.13": "bidirectional", "P0.14": "bidirectional", "P0.15": "bidirectional", "P0.16": "bidirectional", "P0.17": "bidirectional", "P0.18": "bidirectional", "P0.19": "bidirectional", VREG1: "passive", HFXIN: "input", HFXOUT: "output", "~{RSTN}": "input", "V_{SS}_36": "power_in", VDD: "power_in", "32KOUT": "output", "32KIN": "input", VCORE: "passive", "V_{SS}_41": "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_AnalogDevices:MAX32670GTL";

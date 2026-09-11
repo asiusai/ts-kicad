@@ -15,7 +15,8 @@ export class A1101xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1101xLH";
@@ -36,7 +37,8 @@ export class A1101xUA extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1101xUA";
@@ -57,7 +59,8 @@ export class A1102xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1102xLH";
@@ -78,7 +81,8 @@ export class A1103xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1103xLH";
@@ -99,7 +103,8 @@ export class A1104xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1104xLH";
@@ -120,7 +125,8 @@ export class A1106xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1106xLH";
@@ -141,7 +147,8 @@ export class A1301xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1301xLH";
@@ -162,7 +169,8 @@ export class A1301xUA extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1301xUA";
@@ -183,7 +191,8 @@ export class A1302xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1302xLH";
@@ -204,7 +213,8 @@ export class A1302xUA extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1302xUA";
@@ -225,7 +235,8 @@ export class A1308xLHxx_1 extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1308xLHxx-1";
@@ -246,7 +257,8 @@ export class A1308xLHxx_2 extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1308xLHxx-2";
@@ -267,7 +279,8 @@ export class A1309xLHxx_9 extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1309xLHxx-9";
@@ -288,7 +301,8 @@ export class A1369xUA_10 extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1369xUA-10";
@@ -309,7 +323,8 @@ export class A1369xUA_24 extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A1369xUA-24";
@@ -330,7 +345,8 @@ export class A3214xLH extends Component.withPins({
   "V_{OUT}": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", "V_{OUT}": "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:A3214xLH";
@@ -351,7 +367,8 @@ export class ACS73369xUAA_010B5 extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:ACS73369xUAA-010B5";
@@ -371,7 +388,8 @@ export class AH1806_P extends Component.withPins({
   "GND": "2",
   "OUTPUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", OUTPUT: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AH1806-P";
@@ -392,7 +410,8 @@ export class AH1806_W extends Component.withPins({
   "OUTPUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OUTPUT: "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AH1806-W";
@@ -415,7 +434,8 @@ export class AH1806_Z extends Component.withPins({
   "VDD": "4",
   "OUTPUT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", GND: "power_in", NC_3: "no_connect", VDD: "power_in", OUTPUT: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AH1806-Z";
@@ -436,7 +456,8 @@ export class AH452UA extends Component.withPins({
   "GND": "2",
   "V_{OUT}": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", "V_{OUT}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AH452UA";
@@ -470,7 +491,8 @@ export class AK7452 extends Component.withPins({
   "B": "15",
   "A": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { U: "output", V: "output", W: "output", NC_4: "no_connect", MISO: "output", MOSI: "input", SCLK: "input", "~{CSN}": "input", VDD: "power_in", NC_10: "no_connect", TESTE: "passive", VSS: "power_in", ERROR: "output", Z: "output", B: "output", A: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AK7452";
@@ -504,7 +526,8 @@ export class AS5045B extends Component.withPins({
   "VDD3V3": "15",
   "VDD5V": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{MagINC}": "open_collector", "~{MagDEC}": "open_collector", A: "output", B: "output", NC_5: "no_connect", I: "output", VSS: "power_in", PDIO: "input", DO: "output", CLK: "input", "~{CS}": "input", PWM: "output", NC_13: "no_connect", NC_14: "no_connect", VDD3V3: "power_in", VDD5V: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5045B";
@@ -536,7 +559,8 @@ export class AS5047D extends Component.withPins({
   "GND": "13",
   "I/PWM": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", CLK: "input", MISO: "output", MOSI: "input", TST: "input", B: "output", A: "output", "W/PWM": "output", V: "output", U: "output", VDD: "power_in", VDD3V3: "power_out", GND: "power_in", "I/PWM": "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5047D";
@@ -568,7 +592,8 @@ export class AS5048A extends Component.withPins({
   "GND": "13",
   "PWM": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CSn}": "input", CLK: "input", MISO: "output", MOSI: "input", TEST_5: "passive", TEST_6: "passive", TEST_7: "passive", TEST_8: "passive", TEST_9: "passive", TEST_10: "passive", VDD5V: "power_in", VDD3V: "power_in", GND: "power_in", PWM: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5048A";
@@ -600,7 +625,8 @@ export class AS5048B extends Component.withPins({
   "GND": "13",
   "PWM": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", A2: "input", A1: "input", TEST_5: "passive", TEST_6: "passive", TEST_7: "passive", TEST_8: "passive", TEST_9: "passive", TEST_10: "passive", VDD5V: "power_in", VDD3V: "power_in", GND: "power_in", PWM: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5048B";
@@ -635,7 +661,8 @@ export class AS5055A extends Component.withPins({
   "NC_16": "16",
   "NC_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MOSI: "input", MISO: "output", SCK: "input", "~{SS}": "input", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", TEST: "passive", "~{EN_INT}": "input", VDDp: "power_in", VDD: "power_in", VSS: "power_in", WM: "input", "~{INT}": "output", NC_16: "no_connect", NC_17: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5055A";
@@ -670,7 +697,8 @@ export class AS5050A extends Component.withPins({
   "NC_16": "16",
   "NC_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MOSI: "input", MISO: "output", SCK: "input", "~{SS}": "input", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", TEST: "passive", "~{EN_INT}": "input", VDDp: "power_in", VDD: "power_in", VSS: "power_in", WM: "input", "~{INT}": "output", NC_16: "no_connect", NC_17: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5050A";
@@ -696,7 +724,8 @@ export class AS5510_DSO extends Component.withPins({
   "SCL": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", VSS: "power_in", ADR: "passive", VDD: "power_in", Test: "input", SDA: "bidirectional", SCL: "input", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5510-DSO";
@@ -720,7 +749,8 @@ export class AS5510_DWL extends Component.withPins({
   "SCL": "B2",
   "Test": "B3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", ADR: "passive", VDD: "power_in", SDA: "bidirectional", SCL: "input", Test: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:AS5510-DWL";
@@ -748,7 +778,8 @@ export class BM1422AGMV extends Component.withPins({
   "ADDR": "9",
   "DVDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVDD: "power_in", GND: "power_in", VREG: "passive", TEST1: "no_connect", SDA: "bidirectional", TEST2: "no_connect", SCL: "input", DRDY: "output", ADDR: "input", DVDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:BM1422AGMV";
@@ -778,7 +809,8 @@ export class BMM150 extends Component.withPins({
   "GND_E3": "E3",
   "VDD": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "input", SCK: "bidirectional", CSB: "input", VDDIO: "power_in", SDI: "bidirectional", SDO: "bidirectional", GND_C5: "power_in", INT: "output", DRDY: "output", GND_E1: "passive", GND_E3: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:BMM150";
@@ -799,7 +831,8 @@ export class DRV5055A1xDBZxQ1 extends Component.withPins({
   "OUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A1xDBZxQ1";
@@ -820,7 +853,8 @@ export class DRV5033AJxDBZ extends Component.withPins({
   "OUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5033AJxDBZ";
@@ -841,7 +875,8 @@ export class DRV5055A1xLPGxQ1 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A1xLPGxQ1";
@@ -862,7 +897,8 @@ export class DRV5033AJxLPG extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5033AJxLPG";
@@ -883,7 +919,8 @@ export class DRV5033FAxDBZ extends Component.withPins({
   "OUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5033FAxDBZ";
@@ -904,7 +941,8 @@ export class DRV5033FAxLPG extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5033FAxLPG";
@@ -925,7 +963,8 @@ export class DRV5055A2xDBZxQ1 extends Component.withPins({
   "OUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A2xDBZxQ1";
@@ -946,7 +985,8 @@ export class DRV5055A2xLPGxQ1 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A2xLPGxQ1";
@@ -967,7 +1007,8 @@ export class DRV5055A3xDBZxQ1 extends Component.withPins({
   "OUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A3xDBZxQ1";
@@ -988,7 +1029,8 @@ export class DRV5055A3xLPGxQ1 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A3xLPGxQ1";
@@ -1009,7 +1051,8 @@ export class DRV5055A4xDBZxQ1 extends Component.withPins({
   "OUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A4xDBZxQ1";
@@ -1030,7 +1073,8 @@ export class DRV5055A4xLPGxQ1 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:DRV5055A4xLPGxQ1";
@@ -1064,7 +1108,8 @@ export class IST8310 extends Component.withPins({
   "DRDY": "15",
   "SDA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", AVDD: "power_in", NC_3: "no_connect", NC_4: "no_connect", CAD0: "input", CAD1: "input", VPP: "passive", NC_8: "no_connect", VSS_9: "power_in", C1: "passive", VSS_11: "passive", NC_12: "no_connect", DVDD: "power_in", "~{RST}": "input", DRDY: "output", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:IST8310";
@@ -1098,7 +1143,8 @@ export class IST8308 extends Component.withPins({
   "DRDY": "15",
   "SDA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", AVDD: "power_in", NC_3: "no_connect", NC_4: "no_connect", CAD0: "input", CAD1: "input", VPP: "passive", NC_8: "no_connect", VSS_9: "power_in", C1: "passive", VSS_11: "passive", NC_12: "no_connect", DVDD: "power_in", "~{RST}": "input", DRDY: "output", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:IST8308";
@@ -1128,7 +1174,8 @@ export class LIS2MDL extends Component.withPins({
   "NC_11": "11",
   "NC_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SCL/SPC": "input", NC_2: "no_connect", "~{CS}": "input", "SDA/SDI/SDO": "bidirectional", C1: "power_out", GND_6: "power_in", DRDY: "output", GND_8: "passive", Vdd: "power_in", Vdd_IO: "power_in", NC_11: "no_connect", NC_12: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:LIS2MDL";
@@ -1158,7 +1205,8 @@ export class LIS3MDL extends Component.withPins({
   "SDA/SDI/SDO": "11",
   "GND_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SCL/SPC": "input", GND_2: "passive", GND_3: "power_in", C1: "power_out", Vdd: "power_in", Vdd_IO: "power_in", INT: "output", DRDY: "output", "SDO/SA1": "bidirectional", "~{CS}": "input", "SDA/SDI/SDO": "bidirectional", GND_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:LIS3MDL";
@@ -1193,7 +1241,8 @@ export class MA730 extends Component.withPins({
   "MGH": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SSD: "output", A: "output", Z: "output", MOSI: "input", "~{CS}": "input", B: "output", MISO: "output", GND: "power_in", PWM: "output", TEST: "passive", MGL: "output", SCLK: "input", VDD: "power_in", NC: "no_connect", SSCK: "input", MGH: "output", PAD: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MA730";
@@ -1228,7 +1277,8 @@ export class MLX90395xLW extends Component.withPins({
   "V_{SS}_16": "16",
   "V_{SS}_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INT: "output", "~{CS}": "input", SCLK: "input", "V_{SS}_4": "passive", MOSI: "input", MISO: "output", "INT/TRG": "bidirectional", "V_{SS}_8": "passive", "V_{SS}_9": "passive", "V_{SS}_10": "passive", A1: "input", A0: "input", "V_{SS}_13": "power_in", "V_{SS}_14": "passive", "V_{DD}": "power_in", "V_{SS}_16": "passive", "V_{SS}_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MLX90395xLW";
@@ -1250,7 +1300,8 @@ export class MMC5633NJL extends Component.withPins({
   "VDD": "B1",
   "SDA": "B2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSA: "power_in", SCL: "input", VDD: "power_in", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MMC5633NJL";
@@ -1284,7 +1335,8 @@ export class MMC5883MA extends Component.withPins({
   "INT": "15",
   "SDA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", VDD: "power_in", NC_3: "no_connect", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", GND_9: "power_in", CAP: "passive", GND_11: "passive", NC_12: "no_connect", VDDIO: "power_in", NC_14: "no_connect", INT: "output", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MMC5883MA";
@@ -1310,7 +1362,8 @@ export class MT6701CT extends Component.withPins({
   "B": "7",
   "Z": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", MODE: "input", OUT: "output", GND: "power_in", PUSH: "output", A: "output", B: "output", Z: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MT6701CT";
@@ -1345,7 +1398,8 @@ export class MT6701QT extends Component.withPins({
   "GND_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", NC_4: "no_connect", PUSH: "output", A: "output", B: "output", Z: "output", W: "output", NC_10: "no_connect", U: "output", V: "output", VDD: "power_in", MODE: "input", OUT: "output", GND_16: "power_in", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MT6701QT";
@@ -1371,7 +1425,8 @@ export class MT6816CT extends Component.withPins({
   "Z/W": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", HVPP: "input", OUT: "output", VDD: "power_in", "A/U": "output", "B/V": "output", "Z/W": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:MT6816CT";
@@ -1392,7 +1447,8 @@ export class SM351LT extends Component.withPins({
   "OUTPUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUTPUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:SM351LT";
@@ -1413,7 +1469,8 @@ export class SM353LT extends Component.withPins({
   "OUTPUT": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUTPUT: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:SM353LT";
@@ -1437,7 +1494,8 @@ export class Si7210_B_xx_IM2 extends Component.withPins({
   "Out": "6",
   "V_{DD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SCL: "input", SDA: "bidirectional", GND_5: "power_in", Out: "bidirectional", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:Si7210-B-xx-IM2";
@@ -1460,7 +1518,8 @@ export class Si7210_B_xx_IV extends Component.withPins({
   "V_{DD}": "4",
   "ALERT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND: "power_in", SCL: "input", "V_{DD}": "power_in", ALERT: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:Si7210-B-xx-IV";
@@ -1486,7 +1545,8 @@ export class TLE5012B extends Component.withPins({
   "GND": "7",
   "IFB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IFC: "bidirectional", SCK: "input", CSQ: "input", DATA: "bidirectional", IFA: "bidirectional", VDD: "power_in", GND: "power_in", IFB: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TLE5012B";
@@ -1510,7 +1570,8 @@ export class TLV493D extends Component.withPins({
   "GND_5": "5",
   "SDA/ADDR": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SCL/INT": "bidirectional", GND_2: "power_in", GND_3: "power_in", VDD: "power_in", GND_5: "power_in", "SDA/ADDR": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TLV493D";
@@ -1533,7 +1594,8 @@ export class TMAG5110A2xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5110A2xxDBV";
@@ -1556,7 +1618,8 @@ export class TMAG5110A4xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5110A4xxDBV";
@@ -1579,7 +1642,8 @@ export class TMAG5110B2xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5110B2xxDBV";
@@ -1602,7 +1666,8 @@ export class TMAG5110B4xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5110B4xxDBV";
@@ -1625,7 +1690,8 @@ export class TMAG5110C2xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5110C2xxDBV";
@@ -1648,7 +1714,8 @@ export class TMAG5110C4xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5110C4xxDBV";
@@ -1671,7 +1738,8 @@ export class TMAG5111A2xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5111A2xxDBV";
@@ -1694,7 +1762,8 @@ export class TMAG5111A4xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5111A4xxDBV";
@@ -1717,7 +1786,8 @@ export class TMAG5111B2xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5111B2xxDBV";
@@ -1740,7 +1810,8 @@ export class TMAG5111B4xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5111B4xxDBV";
@@ -1763,7 +1834,8 @@ export class TMAG5111C2xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5111C2xxDBV";
@@ -1786,7 +1858,8 @@ export class TMAG5111C4xxDBV extends Component.withPins({
   "GND": "2",
   "OUT1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "passive", OUT2: "open_collector", VCC: "power_in", GND: "power_in", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5111C4xxDBV";
@@ -1812,7 +1885,8 @@ export class TMAG5170_Q1 extends Component.withPins({
   "TEST": "7",
   "~{ALERT}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCLK: "input", MOSI: "input", MISO: "output", "~{CS}": "input", VCC: "power_in", GND: "power_in", TEST: "passive", "~{ALERT}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Magnetic:TMAG5170-Q1";

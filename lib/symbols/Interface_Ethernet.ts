@@ -37,7 +37,8 @@ export class DP83825I extends Component.withPins({
   "TX_D1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "50MHzOut/LED2/S(RX_DV_EN)": "bidirectional", "INTR/~{PWRDN}": "input", TX_EN: "input", "LED0/S(ANEG_Dis)": "bidirectional", "~{RST}": "input", VDDA3V3: "power_in", "RD-": "input", "RD+": "input", GND_9: "power_in", "TD-": "input", "TD+": "input", XO: "output", "XI/50MHzIn": "input", RBIAS: "input", MDIO: "bidirectional", MDC: "input", "RX_D1/S(Master/Slave)": "output", "RX_D0/S(PhyAdd[0])": "output", VDDIO: "power_in", "CRS_DV/S(PhyAdd[1])": "input", GND_21: "passive", "RX_ER/S(A-MDIX)": "output", TX_D0: "input", TX_D1: "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:DP83825I";
@@ -98,7 +99,8 @@ export class DP83848C extends Component.withPins({
   "IOGND_47": "47",
   "IOVDD33_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TX_CLK: "output", TX_EN: "input", TXD_0: "input", TXD_1: "input", TXD_2: "input", "TXD_3/SNI_MODE": "input", "PWR_DOWN/INT": "input", "RD-": "passive", "RD+": "passive", AGND_15: "power_in", "TD-": "passive", "TD+": "passive", PFBIN1: "passive", AGND_19: "passive", RESERVED_20: "passive", RESERVED_21: "passive", AVDD33: "power_in", PFBOUT: "passive", RBIAS: "passive", "25M_OUT": "output", "AN_EN/LED_ACT/COL": "output", "AN1/LED_SPEED": "output", "AN0/LED_LINK": "output", "~{RESET}": "input", MDIO: "bidirectional", MDC: "input", IOVDD33_32: "power_in", X2: "output", X1: "input", IOGND_35: "power_in", DGND: "power_in", PFBIN2: "passive", RX_CLK: "output", "RX_DV/MII_MODE": "output", "CRS/CRS_DV/LED_CFG": "output", "RX_ER/MDIX_EN": "output", "COL/PHY_AD0": "output", "RXD_0/PHY_AD1": "output", "RXD_1/PHY_AD2": "output", "RXD_2/PHY_AD3": "output", "RXD_3/PHY_AD4": "output", IOGND_47: "passive", IOVDD33_48: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:DP83848C";
@@ -159,7 +161,8 @@ export class DP83848I extends Component.withPins({
   "IOGND_47": "47",
   "IOVDD33_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TX_CLK: "output", TX_EN: "input", TXD_0: "input", TXD_1: "input", TXD_2: "input", "TXD_3/SNI_MODE": "input", "PWR_DOWN/INT": "input", "RD-": "passive", "RD+": "passive", AGND_15: "power_in", "TD-": "passive", "TD+": "passive", PFBIN1: "passive", AGND_19: "passive", RESERVED_20: "passive", RESERVED_21: "passive", AVDD33: "power_in", PFBOUT: "passive", RBIAS: "passive", "25M_OUT": "output", "AN_EN/LED_ACT/COL": "output", "AN1/LED_SPEED": "output", "AN0/LED_LINK": "output", "~{RESET}": "input", MDIO: "bidirectional", MDC: "input", IOVDD33_32: "power_in", X2: "output", X1: "input", IOGND_35: "power_in", DGND: "power_in", PFBIN2: "passive", RX_CLK: "output", "RX_DV/MII_MODE": "output", "CRS/CRS_DV/LED_CFG": "output", "RX_ER/MDIX_EN": "output", "COL/PHY_AD0": "output", "RXD_0/PHY_AD1": "output", "RXD_1/PHY_AD2": "output", "RXD_2/PHY_AD3": "output", "RXD_3/PHY_AD4": "output", IOGND_47: "passive", IOVDD33_48: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:DP83848I";
@@ -205,7 +208,8 @@ export class ENC28J60x_ML extends Component.withPins({
   "CLKOUT": "27",
   "~{INT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{WOL}": "output", SO: "output", SI: "input", SCK: "input", "~{CS}": "input", "~{RESET}": "input", VSSRX: "power_out", "TPIN-": "input", "TPIN+": "input", RBIAS: "input", VDDTX: "power_in", "TPOUT-": "output", "TPOUT+": "output", VSSTX: "power_out", VDDRX: "power_in", VDDPLL: "power_in", VSSPLL: "power_in", VSSOSC: "power_in", OSC1: "input", OSC2: "output", VDDOSC: "power_in", LEDB: "output", LEDA: "output", VDD: "power_in", VCAP: "input", VSS: "power_in", CLKOUT: "output", "~{INT}": "output", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:ENC28J60x-ML";
@@ -251,7 +255,8 @@ export class ENC28J60x_SO extends Component.withPins({
   "LEDA": "27",
   "VDD": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCAP: "input", VSS: "power_in", CLKOUT: "output", "~{INT}": "output", "~{WOL}": "output", SO: "output", SI: "input", SCK: "input", "~{CS}": "input", "~{RESET}": "input", VSSRX: "power_in", "TPIN-": "input", "TPIN+": "input", RBIAS: "input", VDDTX: "power_in", "TPOUT-": "output", "TPOUT+": "output", VSSTX: "power_in", VDDRX: "power_in", VDDPLL: "power_in", VSSPLL: "power_in", VSSOSC: "power_in", OSC1: "input", OSC2: "input", VDDOSC: "power_in", LEDB: "output", LEDA: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:ENC28J60x-SO";
@@ -297,7 +302,8 @@ export class ENC28J60x_SP extends Component.withPins({
   "LEDA": "27",
   "VDD": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCAP: "input", VSS: "power_in", CLKOUT: "output", "~{INT}": "output", "~{WOL}": "output", SO: "output", SI: "input", SCK: "input", "~{CS}": "input", "~{RESET}": "input", VSSRX: "power_in", "TPIN-": "input", "TPIN+": "input", RBIAS: "input", VDDTX: "power_in", "TPOUT-": "output", "TPOUT+": "output", VSSTX: "power_in", VDDRX: "power_in", VDDPLL: "power_in", VSSPLL: "power_in", VSSOSC: "power_in", OSC1: "input", OSC2: "input", VDDOSC: "power_in", LEDB: "output", LEDA: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:ENC28J60x-SP";
@@ -343,7 +349,8 @@ export class ENC28J60x_SS extends Component.withPins({
   "LEDA": "27",
   "VDD": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCAP: "input", VSS: "power_in", CLKOUT: "output", "~{INT}": "output", "~{WOL}": "output", SO: "output", SI: "input", SCK: "input", "~{CS}": "input", "~{RESET}": "input", VSSRX: "power_in", "TPIN-": "input", "TPIN+": "input", RBIAS: "input", VDDTX: "power_in", "TPOUT-": "output", "TPOUT+": "output", VSSTX: "power_in", VDDRX: "power_in", VDDPLL: "power_in", VSSPLL: "power_in", VSSOSC: "power_in", OSC1: "input", OSC2: "input", VDDOSC: "power_in", LEDB: "output", LEDA: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:ENC28J60x-SS";
@@ -406,7 +413,8 @@ export class ENC424J600_ML extends Component.withPins({
   "VDD": "44",
   "EP": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSOSC: "power_in", OSC2: "output", OSC1: "input", VDDOSC: "power_in", AD4: "bidirectional", AD5: "bidirectional", AD6: "bidirectional", AD7: "bidirectional", LEDB: "output", LEDA: "output", RBIAS: "input", VDDPLL: "power_in", VSSPLL: "power_in", VSSRX: "power_in", VDDRX: "power_in", "TPIN+": "input", "TPIN-": "input", VDDTX: "power_in", VSSTX_19: "power_in", "TPOUT+": "output", "TPOUT-": "output", VSSTX_22: "passive", CLKOUT: "output", "~{INT}/SPISEL": "bidirectional", AD8: "bidirectional", AD9: "bidirectional", AD10: "bidirectional", AD11: "bidirectional", AD12: "bidirectional", AD13: "bidirectional", AD14: "bidirectional", PSPCFG0: "input", VSS_33: "power_in", "~{CS}/CS": "input", "SO/WR/EN": "bidirectional", "SI/RD/R~{W}": "input", "SCK/AL": "input", AD0: "bidirectional", AD1: "input", AD2: "bidirectional", AD3: "bidirectional", VSS_42: "passive", VCAP: "input", VDD: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:ENC424J600-ML";
@@ -468,7 +476,8 @@ export class ENC424J600_PT extends Component.withPins({
   "VCAP": "43",
   "VDD": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSOSC: "power_in", OSC2: "output", OSC1: "input", VDDOSC: "power_in", AD4: "bidirectional", AD5: "bidirectional", AD6: "bidirectional", AD7: "bidirectional", LEDB: "output", LEDA: "output", RBIAS: "input", VDDPLL: "power_in", VSSPLL: "power_in", VSSRX: "power_in", VDDRX: "power_in", "TPIN+": "input", "TPIN-": "input", VDDTX: "power_in", VSSTX_19: "power_in", "TPOUT+": "output", "TPOUT-": "output", VSSTX_22: "passive", CLKOUT: "output", "~{INT}/SPISEL": "bidirectional", AD8: "bidirectional", AD9: "bidirectional", AD10: "bidirectional", AD11: "bidirectional", AD12: "bidirectional", AD13: "bidirectional", AD14: "bidirectional", PSPCFG0: "input", VSS_33: "power_in", "~{CS}/CS": "input", "SO/WR/EN": "bidirectional", "SI/RD/R~{W}": "input", "SCK/AL": "input", AD0: "bidirectional", AD1: "input", AD2: "bidirectional", AD3: "bidirectional", VSS_42: "passive", VCAP: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:ENC424J600-PT";
@@ -533,7 +542,8 @@ export class KSZ8081MLX extends Component.withPins({
   "NC_46": "46",
   "~{RST}": "47",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", GND_3: "passive", "VDD_1.2_4": "power_out", NC_5: "no_connect", NC_6: "no_connect", "VDDA_3.3": "power_in", NC_8: "no_connect", RXM: "passive", RXP: "passive", TXM: "passive", TXP: "passive", GND_13: "passive", XO: "output", XI: "input", REXT: "passive", GND_17: "passive", MDIO: "bidirectional", MDC: "input", "RXD3/PHYAD0": "output", "RXD2/PHYAD1": "output", "RXD1/PHYAD2": "output", "RXD0/DUPLEX": "output", GND_24: "passive", VDDIO: "power_in", NC_26: "no_connect", "RXDV/CONFIG2": "bidirectional", "RXC/B-CAST_OFF": "bidirectional", "RXER/ISO": "output", GND_30: "passive", "VDD_1.2_31": "power_in", "INTRP/NAND_Tree#": "bidirectional", TXC: "bidirectional", TXEN: "input", TXD0: "input", TXD1: "input", GND_37: "passive", TXD2: "input", TXD3: "input", "COL/CONFIG0": "bidirectional", "CRS/CONFIG1": "bidirectional", "LED0/NWAYEN": "bidirectional", "LED1/SPEED": "output", "TEST/NC": "no_connect", NC_45: "no_connect", NC_46: "no_connect", "~{RST}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:KSZ8081MLX";
@@ -576,7 +586,8 @@ export class KSZ8081RNA extends Component.withPins({
   "~{RST}": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "VDD_1.2": "power_out", "VDDA_3.3": "power_in", RXM: "bidirectional", RXP: "bidirectional", TXM: "bidirectional", TXP: "bidirectional", XO: "output", XI: "input", REXT: "passive", MDIO: "bidirectional", MDC: "input", RXD1: "output", RXD0: "output", VDDIO: "power_in", "CRS_DV/PHYAD[1:0]": "output", REF_CLK: "output", RXER: "output", INTRP: "bidirectional", TXEN: "input", TXD0: "input", TXD1: "bidirectional", GND_22: "power_in", "LED0/ANEN_SPEED": "output", "~{RST}": "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:KSZ8081RNA";
@@ -619,7 +630,8 @@ export class KSZ8081RND extends Component.withPins({
   "~{RST}": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "VDD_1.2": "power_out", "VDDA_3.3": "power_in", RXM: "bidirectional", RXP: "bidirectional", TXM: "bidirectional", TXP: "bidirectional", XO: "output", XI: "input", REXT: "passive", MDIO: "bidirectional", MDC: "input", RXD1: "output", RXD0: "output", VDDIO: "power_in", "CRS_DV/PHYAD[1:0]": "output", REF_CLK: "output", RXER: "output", INTRP: "bidirectional", TXEN: "input", TXD0: "input", TXD1: "bidirectional", GND_22: "power_in", "LED0/ANEN_SPEED": "output", "~{RST}": "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:KSZ8081RND";
@@ -686,7 +698,8 @@ export class KSZ9031RNXCA extends Component.withPins({
   "ISET": "48",
   "PAD_GND": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVDDH_1: "power_in", TXRXP_A: "input", TXRXM_A: "input", AVDDL_4: "power_in", TXRXP_B: "input", TXRXM_B: "input", TXRXP_C: "input", TXRXM_C: "input", AVDDL_9: "power_in", TXRXP_D: "input", TXRXM_D: "input", AVDDH_12: "power_in", NC_13: "no_connect", DVDDL_14: "power_in", "LED2/PHYAD1": "bidirectional", DVDDH_16: "power_in", "LED1/PHAD0/PME_N1": "bidirectional", DVDDL_18: "power_in", TXD0: "input", TXD1: "input", TXD2: "input", TXD3: "input", DVDDL_23: "power_in", GTX_CLK: "input", TX_EN: "input", DVDDL_26: "power_in", "RXD3/MODE3": "input", "RXD2/MODE2": "input", VSS: "power_in", DVDDL_30: "power_in", "RXD1/MODE1": "input", "RXD0/MODE0": "input", "RX_DV/CLK125_EN": "input", DVDDH_34: "power_in", "RX_CLK/PHYAD2": "input", MDC: "input", MDIO: "input", "INT_N/PME_N2": "input", DVDDL_39: "power_in", DVDDH_40: "power_in", "CLK125_NDO/LED_MODE": "input", RESET_N: "input", LDO_O: "input", AVDDL_PLL: "power_in", XO: "input", XI: "input", NC_47: "no_connect", ISET: "output", PAD_GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:KSZ9031RNXCA";
@@ -769,7 +782,8 @@ export class KSZ9563RNX extends Component.withPins({
   "AVDDL_64": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXRX1P_B: "passive", TXRX1M_B: "passive", TXRX1P_C: "passive", TXRX1M_C: "passive", AVDDL_5: "power_in", TXRX1P_D: "passive", TXRX1M_D: "passive", AVDDH_8: "power_in", TXRX2P_A: "passive", TXRX2M_A: "passive", AVDDL_11: "power_in", TXRX2P_B: "passive", TXRX2M_B: "passive", TXRX2P_C: "passive", TXRX2M_C: "passive", AVDDL_16: "power_in", TXRX2P_D: "passive", TXRX2M_D: "passive", AVDDH_19: "power_in", DVDDL_20: "power_in", RXD3: "output", RXD2: "output", RXD1: "output", RXD0: "output", "RX_CLK/REFCLKO": "bidirectional", VDDIO_26: "power_in", "RX_DV/CRS_DV/RX_CTL": "output", RX_ER: "output", TXD3: "input", TXD2: "input", TXD1: "input", TXD0: "input", "TX_CLK/REFCLKI": "bidirectional", DVDDL_34: "power_in", "TX_EN/TX_CTL": "input", TX_ER: "input", DVDDL_37: "power_in", VDDIO_38: "power_in", GPIO_1: "bidirectional", GPIO_2: "bidirectional", DVDDL_41: "power_in", LED2_0: "output", LED2_1: "output", "~{PME}": "output", "~{INTRP}": "open_collector", "~{RESET}": "input", SDO: "output", "SDI/SDA/MDIO": "bidirectional", "~{SCS}": "input", "SCL/MDC": "input", DVDDL_51: "power_in", LED1_0: "output", LED1_1: "output", VDDIO_54: "power_in", DVDDL_55: "power_in", AVDDL_56: "power_in", XO: "output", XI: "input", GND_59: "power_in", ISET: "passive", AVDDH_61: "power_in", TXRX1P_A: "passive", TXRX1M_A: "passive", AVDDL_64: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:KSZ9563RNX";
@@ -852,7 +866,8 @@ export class KSZ9893RNX extends Component.withPins({
   "AVDDL_64": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXRX1P_B: "passive", TXRX1M_B: "passive", TXRX1P_C: "passive", TXRX1M_C: "passive", AVDDL_5: "power_in", TXRX1P_D: "passive", TXRX1M_D: "passive", AVDDH_8: "power_in", TXRX2P_A: "passive", TXRX2M_A: "passive", AVDDL_11: "power_in", TXRX2P_B: "passive", TXRX2M_B: "passive", TXRX2P_C: "passive", TXRX2M_C: "passive", AVDDL_16: "power_in", TXRX2P_D: "passive", TXRX2M_D: "passive", AVDDH_19: "power_in", DVDDL_20: "power_in", RXD3: "output", RXD2: "output", RXD1: "output", RXD0: "output", "RX_CLK/REFCLKO": "output", VDDIO_26: "power_in", "RX_DV/CRS_DV/RX_CTL": "output", RX_ER: "output", TXD3: "input", TXD2: "input", TXD1: "input", TXD0: "input", "TX_CLK/REFCLKI": "input", DVDDL_34: "power_in", "TX_EN/TX_CTL": "input", TX_ER: "input", DVDDL_37: "power_in", VDDIO_38: "power_in", NC_39: "no_connect", NC_40: "no_connect", DVDDL_41: "power_in", LED2_0: "output", LED2_1: "output", "~{PME}": "output", "~{INTRP}": "output", "~{RESET}": "input", SDO: "output", "SDI/SDA/MDIO": "bidirectional", "~{SCS}": "input", "SCL/MDC": "input", DVDDL_51: "power_in", LED1_0: "output", LED1_1: "output", VDDIO_54: "power_in", DVDDL_55: "power_in", AVDDL_56: "power_in", XO: "output", XI: "input", GND_59: "power_in", ISET: "passive", AVDDH_61: "power_in", TXRX1P_A: "passive", TXRX1M_A: "passive", AVDDL_64: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:KSZ9893RNX";
@@ -927,7 +942,8 @@ export class LAN7500_ABJZ extends Component.withPins({
   "TR3N": "54",
   "TR3P": "55",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TDI: "input", TCK: "input", TMS: "input", TDO: "output", XI: "input", XO: "output", VDDVARIO_7: "power_in", VDD12CORE_8: "power_in", SW_MODE: "output", GPIO7: "bidirectional", VDD12CORE_11: "passive", VDD33A: "power_in", VDD12USBPLL: "power_in", GPIO8: "bidirectional", VDDVARIO_19: "passive", VDD12CORE_20: "passive", GPIO9: "bidirectional", GPIO10: "bidirectional", VDD12CORE_23: "passive", VDDVARIO_24: "passive", GPIO11: "bidirectional", EECLK: "output", EEDI: "input", EEDO: "output", EECS: "output", VDD12CORE_30: "passive", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", GPIO4: "bidirectional", VDD12CORE_36: "passive", VDDVARIO_37: "passive", GPIO5: "bidirectional", TEST: "input", GPIO6: "bidirectional", "~{RESET}": "input", VDD12A_45: "power_in", VDD12A_48: "passive", VDD12BIAS: "power_in", VDD12PLL: "power_in", VDD12A_53: "passive", VDD12A_56: "passive", GND: "power_in", USBDM: "bidirectional", USBDP: "bidirectional", VBUS_DET: "input", USBRBIAS: "passive", ETHRBIAS: "passive", TR0N: "bidirectional", TR0P: "bidirectional", TR1N: "bidirectional", TR1P: "bidirectional", TR2N: "bidirectional", TR2P: "bidirectional", TR3N: "bidirectional", TR3P: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN7500-ABJZ";
@@ -978,7 +994,8 @@ export class LAN8710A extends Component.withPins({
   "RBIAS": "32",
   "VSS": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD2A: "power_in", "LED2/~{INTSEL}": "bidirectional", "LED1/~{REGOFF}": "bidirectional", XTAL2: "output", "XTAL1/CLKIN": "input", VDDCR: "power_in", "RXCLK/~{PHYAD1}": "bidirectional", "RXD3/~{PHYAD2}": "bidirectional", "RXD2/~{RMIISEL}": "bidirectional", "RXD1/~{MODE1}": "bidirectional", "RXD0/~{MODE0}": "bidirectional", VDDIO: "power_in", "RXER/RXD4/~{PHYAD0}": "bidirectional", CRS: "output", "COL/CRS_DV/~{MODE2}": "bidirectional", MDIO: "bidirectional", MDC: "input", "~{INT}/TXER/TXD4": "bidirectional", "~{RST}": "input", TXCLK: "output", TXEN: "input", TXD0: "input", TXD1: "input", TXD2: "input", TXD3: "input", RXDV: "output", VDD1A: "power_in", TXN: "bidirectional", TXP: "bidirectional", RXN: "bidirectional", RXP: "bidirectional", RBIAS: "passive", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN8710A";
@@ -1021,7 +1038,8 @@ export class LAN8720A extends Component.withPins({
   "RBIAS": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD2A: "power_in", "LED2/~{INTSEL}": "bidirectional", "LED1/REGOFF": "bidirectional", XTAL2: "output", "XTAL1/CLKIN": "input", VDDCR: "power_in", "RXD1/MODE1": "bidirectional", "RXD0/MODE0": "bidirectional", VDDIO: "power_in", "RXER/PHYAD0": "output", "CRS_DV/MODE2": "bidirectional", MDIO: "bidirectional", MDC: "input", "~{INT}/REFCLKO": "output", "~{RST}": "input", TXEN: "input", TXD0: "input", TXD1: "input", VDD1A: "power_in", TXN: "bidirectional", TXP: "bidirectional", RXN: "bidirectional", RXP: "bidirectional", RBIAS: "passive", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN8720A";
@@ -1064,7 +1082,8 @@ export class LAN8742A extends Component.withPins({
   "RBIAS": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD2A: "power_in", "LED2/~{INTSEL}": "bidirectional", "LED1/REGOFF": "bidirectional", XTAL2: "output", "XTAL1/CLKIN": "input", VDDCR: "power_in", "RXD1/MODE1": "bidirectional", "RXD0/MODE0": "bidirectional", VDDIO: "power_in", "RXER/PHYAD0": "output", "CRS_DV/MODE2": "bidirectional", MDIO: "bidirectional", MDC: "input", "~{INT}/REFCLKO": "output", "~{RST}": "input", TXEN: "input", TXD0: "input", TXD1: "input", VDD1A: "power_in", TXN: "passive", TXP: "passive", RXN: "passive", RXP: "passive", RBIAS: "passive", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN8742A";
@@ -1139,7 +1158,8 @@ export class LAN9303 extends Component.withPins({
   "TXP2": "56",
   "VSS_57": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXN2: "bidirectional", P0_IND3: "passive", P0_IND2: "passive", P0_IND1: "input", P0_IND0: "input", P0_INDV: "input", P0_INER: "passive", P0_INCLK: "passive", VDD33IO_9: "power_in", VDD18CORE_10: "output", "P0_OUTD3/~{DUPLEX_POL_0}": "passive", "P0_OUTD2/~{P0_MODE2}": "passive", "P0_OUTD1/~{P0_MODE1}": "bidirectional", "P0_OUTD0/~{P0_MODE0}": "bidirectional", VDD33IO_15: "passive", P0_OUTDV: "output", P0_OUTCLK: "bidirectional", P0_COL: "passive", P0_CRS: "passive", P0_DUPLEX: "input", MDIO: "bidirectional", MDC: "bidirectional", VDD33IO_23: "passive", "LED5/GPIO5/~{PHYADDR}": "passive", "LED4/GPIO4/~{MNGT1}": "passive", "LED3/GPIO3/~{MNGT0}": "passive", "LED2/GPIO2/~{E2PSIZE}": "passive", "LED1/GPIO1/~{AMDIX2}": "passive", "LED0/GPIO0/~{AMDIX1}": "passive", VDD33IO_30: "passive", VDD18CORE_31: "passive", VDD33IO_32: "passive", VDD33IO_33: "passive", VSS_34: "power_in", "EE_SDA/SDA": "bidirectional", "EE_SCL/SCL": "bidirectional", "~{RST}": "passive", IRQ: "passive", XI: "input", XO: "passive", VDD18PLL: "output", TXN1: "bidirectional", TXP1: "bidirectional", VDD33A1_44: "power_in", RXN1: "bidirectional", RXP1: "bidirectional", VDD33A1_47: "passive", VDD18TX1: "input", EXRES: "passive", VDD33BIAS: "power_in", VDD18TX2: "output", VDD33A2_52: "power_in", RXP2: "bidirectional", RXN2: "bidirectional", VDD33A2_55: "passive", TXP2: "bidirectional", VSS_57: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9303";
@@ -1214,7 +1234,8 @@ export class LAN9303i extends Component.withPins({
   "TXP2": "56",
   "VSS_57": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXN2: "bidirectional", P0_IND3: "passive", P0_IND2: "passive", P0_IND1: "input", P0_IND0: "input", P0_INDV: "input", P0_INER: "passive", P0_INCLK: "passive", VDD33IO_9: "power_in", VDD18CORE_10: "output", "P0_OUTD3/~{DUPLEX_POL_0}": "passive", "P0_OUTD2/~{P0_MODE2}": "passive", "P0_OUTD1/~{P0_MODE1}": "bidirectional", "P0_OUTD0/~{P0_MODE0}": "bidirectional", VDD33IO_15: "passive", P0_OUTDV: "output", P0_OUTCLK: "bidirectional", P0_COL: "passive", P0_CRS: "passive", P0_DUPLEX: "input", MDIO: "bidirectional", MDC: "bidirectional", VDD33IO_23: "passive", "LED5/GPIO5/~{PHYADDR}": "passive", "LED4/GPIO4/~{MNGT1}": "passive", "LED3/GPIO3/~{MNGT0}": "passive", "LED2/GPIO2/~{E2PSIZE}": "passive", "LED1/GPIO1/~{AMDIX2}": "passive", "LED0/GPIO0/~{AMDIX1}": "passive", VDD33IO_30: "passive", VDD18CORE_31: "passive", VDD33IO_32: "passive", VDD33IO_33: "passive", VSS_34: "power_in", "EE_SDA/SDA": "bidirectional", "EE_SCL/SCL": "bidirectional", "~{RST}": "passive", IRQ: "passive", XI: "input", XO: "passive", VDD18PLL: "output", TXN1: "bidirectional", TXP1: "bidirectional", VDD33A1_44: "power_in", RXN1: "bidirectional", RXP1: "bidirectional", VDD33A1_47: "passive", VDD18TX1: "input", EXRES: "passive", VDD33BIAS: "power_in", VDD18TX2: "output", VDD33A2_52: "power_in", RXP2: "bidirectional", RXN2: "bidirectional", VDD33A2_55: "passive", TXP2: "bidirectional", VSS_57: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9303i";
@@ -1297,7 +1318,8 @@ export class LAN9512 extends Component.withPins({
   "USBDP0": "59",
   "USBRBIAS": "63",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD33A_5: "power_in", VDD33A_10: "passive", "~{RESET}": "input", TEST1: "input", VDD18CORE_15: "power_in", VDD33IO_19: "power_in", "~{FDX_LED}/GPIO0": "bidirectional", "~{LNKA_LED}/GPIO1": "bidirectional", "~{SPD_LED}/GPIO2": "bidirectional", EECLK: "output", EECS: "output", EEDO: "output", EEDI: "input", VDD33IO_27: "passive", "~{TRST}": "input", TMS: "input", TDI: "input", TDO: "output", TCK: "input", VDD33IO_33: "passive", TEST2: "input", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", VDD18CORE_38: "passive", VDD33IO_39: "passive", TEST3: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", CLK24_EN: "input", CLK24_OUT: "output", VDD33IO_46: "passive", TEST4: "input", VDD18ETHPLL: "power_in", VDD33A_49: "passive", VDD33A_51: "passive", VDD33A_54: "passive", VDD33A_57: "passive", XO: "input", XI: "input", VDD18USBPLL: "power_in", VDD33A_64: "passive", GND: "power_in", USBDM2: "bidirectional", USBDP2: "bidirectional", USBDM3: "bidirectional", USBDP3: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", NC_9: "no_connect", VBUS_DET: "input", PRTCTL2: "bidirectional", PRTCTL3: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", AUTOMDIX_EN: "input", EXRES: "input", RXP: "input", RXN: "input", TXP: "output", TXN: "output", USBDM0: "bidirectional", USBDP0: "bidirectional", USBRBIAS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9512";
@@ -1380,7 +1402,8 @@ export class LAN9512i extends Component.withPins({
   "USBDP0": "59",
   "USBRBIAS": "63",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD33A_5: "power_in", VDD33A_10: "passive", "~{RESET}": "input", TEST1: "input", VDD18CORE_15: "power_in", VDD33IO_19: "power_in", "~{FDX_LED}/GPIO0": "bidirectional", "~{LNKA_LED}/GPIO1": "bidirectional", "~{SPD_LED}/GPIO2": "bidirectional", EECLK: "output", EECS: "output", EEDO: "output", EEDI: "input", VDD33IO_27: "passive", "~{TRST}": "input", TMS: "input", TDI: "input", TDO: "output", TCK: "input", VDD33IO_33: "passive", TEST2: "input", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", VDD18CORE_38: "passive", VDD33IO_39: "passive", TEST3: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", CLK24_EN: "input", CLK24_OUT: "output", VDD33IO_46: "passive", TEST4: "input", VDD18ETHPLL: "power_in", VDD33A_49: "passive", VDD33A_51: "passive", VDD33A_54: "passive", VDD33A_57: "passive", XO: "input", XI: "input", VDD18USBPLL: "power_in", VDD33A_64: "passive", GND: "power_in", USBDM2: "bidirectional", USBDP2: "bidirectional", USBDM3: "bidirectional", USBDP3: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", NC_9: "no_connect", VBUS_DET: "input", PRTCTL2: "bidirectional", PRTCTL3: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", AUTOMDIX_EN: "input", EXRES: "input", RXP: "input", RXN: "input", TXP: "output", TXN: "output", USBDM0: "bidirectional", USBDP0: "bidirectional", USBRBIAS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9512i";
@@ -1463,7 +1486,8 @@ export class LAN9513 extends Component.withPins({
   "USBDP0": "59",
   "USBRBIAS": "63",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD33A_5: "power_in", VDD33A_10: "passive", "~{RESET}": "input", TEST1: "input", VDD18CORE_15: "power_in", VDD33IO_19: "power_in", "~{FDX_LED}/GPIO0": "bidirectional", "~{LNKA_LED}/GPIO1": "bidirectional", "~{SPD_LED}/GPIO2": "bidirectional", EECLK: "output", EECS: "output", EEDO: "output", EEDI: "input", VDD33IO_27: "passive", "~{TRST}": "input", TMS: "input", TDI: "input", TDO: "output", TCK: "input", VDD33IO_33: "passive", TEST2: "input", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", VDD18CORE_38: "passive", VDD33IO_39: "passive", TEST3: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", CLK24_EN: "input", CLK24_OUT: "output", VDD33IO_46: "passive", TEST4: "input", VDD18ETHPLL: "power_in", VDD33A_49: "passive", VDD33A_51: "passive", VDD33A_54: "passive", VDD33A_57: "passive", XO: "input", XI: "input", VDD18USBPLL: "power_in", VDD33A_64: "passive", GND: "power_in", USBDM2: "bidirectional", USBDP2: "bidirectional", USBDM3: "bidirectional", USBDP3: "bidirectional", USBDM4: "bidirectional", USBDP4: "bidirectional", NC_8: "no_connect", NC_9: "no_connect", VBUS_DET: "input", PRTCTL2: "bidirectional", PRTCTL3: "bidirectional", PRTCTL4: "bidirectional", NC_18: "no_connect", AUTOMDIX_EN: "input", EXRES: "input", RXP: "input", RXN: "input", TXP: "output", TXN: "output", USBDM0: "bidirectional", USBDP0: "bidirectional", USBRBIAS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9513";
@@ -1546,7 +1570,8 @@ export class LAN9513i extends Component.withPins({
   "USBDP0": "59",
   "USBRBIAS": "63",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD33A_5: "power_in", VDD33A_10: "passive", "~{RESET}": "input", TEST1: "input", VDD18CORE_15: "power_in", VDD33IO_19: "power_in", "~{FDX_LED}/GPIO0": "bidirectional", "~{LNKA_LED}/GPIO1": "bidirectional", "~{SPD_LED}/GPIO2": "bidirectional", EECLK: "output", EECS: "output", EEDO: "output", EEDI: "input", VDD33IO_27: "passive", "~{TRST}": "input", TMS: "input", TDI: "input", TDO: "output", TCK: "input", VDD33IO_33: "passive", TEST2: "input", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", VDD18CORE_38: "passive", VDD33IO_39: "passive", TEST3: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", CLK24_EN: "input", CLK24_OUT: "output", VDD33IO_46: "passive", TEST4: "input", VDD18ETHPLL: "power_in", VDD33A_49: "passive", VDD33A_51: "passive", VDD33A_54: "passive", VDD33A_57: "passive", XO: "input", XI: "input", VDD18USBPLL: "power_in", VDD33A_64: "passive", GND: "power_in", USBDM2: "bidirectional", USBDP2: "bidirectional", USBDM3: "bidirectional", USBDP3: "bidirectional", USBDM4: "bidirectional", USBDP4: "bidirectional", NC_8: "no_connect", NC_9: "no_connect", VBUS_DET: "input", PRTCTL2: "bidirectional", PRTCTL3: "bidirectional", PRTCTL4: "bidirectional", NC_18: "no_connect", AUTOMDIX_EN: "input", EXRES: "input", RXP: "input", RXN: "input", TXP: "output", TXN: "output", USBDM0: "bidirectional", USBDP0: "bidirectional", USBRBIAS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9513i";
@@ -1629,7 +1654,8 @@ export class LAN9514 extends Component.withPins({
   "USBDP0": "59",
   "USBRBIAS": "63",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD33A_5: "power_in", VDD33A_10: "passive", "~{RESET}": "input", TEST1: "input", VDD18CORE_15: "power_in", VDD33IO_19: "power_in", "~{FDX_LED}/GPIO0": "bidirectional", "~{LNKA_LED}/GPIO1": "bidirectional", "~{SPD_LED}/GPIO2": "bidirectional", EECLK: "output", EECS: "output", EEDO: "output", EEDI: "input", VDD33IO_27: "passive", "~{TRST}": "input", TMS: "input", TDI: "input", TDO: "output", TCK: "input", VDD33IO_33: "passive", TEST2: "input", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", VDD18CORE_38: "passive", VDD33IO_39: "passive", TEST3: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", CLK24_EN: "input", CLK24_OUT: "output", VDD33IO_46: "passive", TEST4: "input", VDD18ETHPLL: "power_in", VDD33A_49: "passive", VDD33A_51: "passive", VDD33A_54: "passive", VDD33A_57: "passive", XO: "input", XI: "input", VDD18USBPLL: "power_in", VDD33A_64: "passive", GND: "power_in", USBDM2: "bidirectional", USBDP2: "bidirectional", USBDM3: "bidirectional", USBDP3: "bidirectional", USBDM4: "bidirectional", USBDP4: "bidirectional", USBDM5: "bidirectional", USBDP5: "bidirectional", VBUS_DET: "input", PRTCTL2: "bidirectional", PRTCTL3: "bidirectional", PRTCTL4: "bidirectional", PRTCTL5: "bidirectional", AUTOMDIX_EN: "input", EXRES: "input", RXP: "input", RXN: "input", TXP: "output", TXN: "output", USBDM0: "bidirectional", USBDP0: "bidirectional", USBRBIAS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9514";
@@ -1712,7 +1738,8 @@ export class LAN9514i extends Component.withPins({
   "USBDP0": "59",
   "USBRBIAS": "63",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD33A_5: "power_in", VDD33A_10: "passive", "~{RESET}": "input", TEST1: "input", VDD18CORE_15: "power_in", VDD33IO_19: "power_in", "~{FDX_LED}/GPIO0": "bidirectional", "~{LNKA_LED}/GPIO1": "bidirectional", "~{SPD_LED}/GPIO2": "bidirectional", EECLK: "output", EECS: "output", EEDO: "output", EEDI: "input", VDD33IO_27: "passive", "~{TRST}": "input", TMS: "input", TDI: "input", TDO: "output", TCK: "input", VDD33IO_33: "passive", TEST2: "input", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", VDD18CORE_38: "passive", VDD33IO_39: "passive", TEST3: "input", GPIO6: "bidirectional", GPIO7: "bidirectional", CLK24_EN: "input", CLK24_OUT: "output", VDD33IO_46: "passive", TEST4: "input", VDD18ETHPLL: "power_in", VDD33A_49: "passive", VDD33A_51: "passive", VDD33A_54: "passive", VDD33A_57: "passive", XO: "input", XI: "input", VDD18USBPLL: "power_in", VDD33A_64: "passive", GND: "power_in", USBDM2: "bidirectional", USBDP2: "bidirectional", USBDM3: "bidirectional", USBDP3: "bidirectional", USBDM4: "bidirectional", USBDP4: "bidirectional", USBDM5: "bidirectional", USBDP5: "bidirectional", VBUS_DET: "input", PRTCTL2: "bidirectional", PRTCTL3: "bidirectional", PRTCTL4: "bidirectional", PRTCTL5: "bidirectional", AUTOMDIX_EN: "input", EXRES: "input", RXP: "input", RXN: "input", TXP: "output", TXN: "output", USBDM0: "bidirectional", USBDP0: "bidirectional", USBRBIAS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:LAN9514i";
@@ -1795,7 +1822,8 @@ export class RTL8211EG_VB_CG extends Component.withPins({
   "VDDREG": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK125: "output", GND_2: "power_in", REG_OUT: "power_out", GND_4: "passive", "MDI[0]+": "bidirectional", "MDI[0]-": "bidirectional", AVDD10_7: "power_in", "MDI[1]+": "bidirectional", "MDI[1]-": "bidirectional", AVDD33_10: "power_in", "MDI[2]+": "bidirectional", "MDI[2]-": "bidirectional", AVDD10_13: "power_in", "MDI[3]+": "bidirectional", "MDI[3]-": "bidirectional", NC_16: "no_connect", NC_17: "no_connect", "RXDV/PHY_AD2": "bidirectional", RXD0: "output", DVDD33_20: "power_in", RXD1: "output", RXD2: "output", RXD3: "output", RXC: "output", "RXD4/SELRGV": "bidirectional", DVDD33_26: "power_in", "RXD5/TXDLY": "bidirectional", "RXD6/RXDLY": "bidirectional", "RXD7/AN0": "bidirectional", "RXER/AN1": "bidirectional", "COL/MODE": "bidirectional", CRS: "output", DVDD10_33: "power_in", GTX_CLK: "input", TXEN: "input", TXD0: "input", DVDD33_37: "power_in", "~{PHYRST}": "input", TXD1: "input", TXD2: "input", TXD3: "input", TXCLK: "output", TXD4: "input", TXD5: "input", TXD6: "input", TXD7: "input", TXER: "input", DVDD10_48: "power_in", DVDD33_49: "power_in", "LED0/PHY_AD0": "bidirectional", "LED1/PHY_AD1": "bidirectional", LED2: "bidirectional", MDC: "input", MDIO: "bidirectional", "~{PME}": "open_collector", "~{INT}": "open_collector", ENSWREG: "input", RSET: "passive", AVDD10_59: "power_in", AVDD33_60: "power_in", CKXTAL1: "input", CKXTAL2: "output", GND_63: "passive", VDDREG: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:RTL8211EG-VB-CG";
@@ -1882,7 +1910,8 @@ export class VSC8541XMV_0x extends Component.withPins({
   "VDD1A_68": "68",
   "VSS": "69",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF_REXT: "passive", VDD25A_2: "power_in", P0_D3N: "passive", P0_D3P: "passive", VDD1A_5: "power_in", P0_D2N: "passive", P0_D2P: "passive", VDD25A_8: "power_in", P0_D1N: "passive", P0_D1P: "passive", VDD25A_11: "power_in", P0_D0N: "passive", P0_D0P: "passive", VDD1A_14: "power_in", THERMDA: "passive", THERMDC_VSS: "passive", VDD1_17: "power_in", COL: "bidirectional", CRS: "bidirectional", RXD7: "bidirectional", RXD6: "bidirectional", VDDMAC_22: "power_in", RXD5: "bidirectional", RXD4: "bidirectional", RXD3: "bidirectional", RXD2: "bidirectional", RXD1: "bidirectional", VDDMAC_28: "passive", RXD0: "bidirectional", "RX_DV/RX_CTL": "bidirectional", RX_ER: "bidirectional", RX_CLK: "bidirectional", "TX_EN/TX_CTL": "input", VDD1_34: "passive", TX_ER: "input", MII_TXCLK: "bidirectional", GTX_CLK: "input", TXD0: "input", VDDMAC_39: "passive", TXD1: "input", TXD2: "input", TXD3: "input", TXD4: "input", VDDMAC_44: "passive", TXD5: "input", TXD6: "input", TXD7: "input", MDC: "input", VDDMDIO: "power_in", MDIO: "bidirectional", MDINT: "output", FASTLINK_FAIL: "output", NRESET: "input", CLKOUT: "bidirectional", RCVRD_CLK: "output", COMA_MODE: "bidirectional", CLK_SQUELCH_IN: "input", VDDIO: "power_in", LED1: "output", LED0: "output", REFCLK_SEL_1: "input", REFCLK_SEL_0: "input", XTAL1: "input", XTAL2: "output", RESERVED_1: "no_connect", RESERVED_0: "no_connect", REF_FILT: "passive", VDD1A_68: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:VSC8541XMV-0x";
@@ -1980,7 +2009,8 @@ export class W5100 extends Component.withPins({
   "NC_79": "79",
   "NC_80": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RSET_BG: "output", VCC3V3A: "power_in", NC_3: "no_connect", GNDA_4: "power_in", RXIP: "input", RXIN: "input", VCC1V8A_7: "power_in", TXOP: "output", TXON: "output", GNDA_10: "passive", "1V8_OUT": "power_out", VCC3V3D_12: "power_in", GNDD_13: "power_in", GNDD_14: "passive", VCC1V8D_15: "power_in", VCC1V8D_16: "passive", GNDD_17: "passive", VCC3V3D_18: "passive", DATA7: "bidirectional", DATA6: "bidirectional", DATA5: "bidirectional", DATA4: "bidirectional", DATA3: "bidirectional", DATA2: "bidirectional", DATA1: "bidirectional", DATA0: "bidirectional", MISO: "output", MOSI: "input", "~{SCS}": "input", SCLK: "input", SEN: "input", GNDD_32: "passive", VCC1V8D_33: "passive", TEST_MODE3: "input", TEST_MODE2: "input", TEST_MODE1: "input", TEST_MODE0: "input", ADDR14: "input", ADDR13: "input", ADDR12: "input", ADDR11: "input", ADDR10: "input", GNDD_43: "passive", VCC3V3D_44: "passive", ADDR9: "input", ADDR8: "input", ADDR7: "input", ADDR6: "input", ADDR5: "input", ADDR4: "input", ADDR3: "input", ADDR2: "input", ADDR1: "input", ADDR0: "input", "~{CS}": "input", "~{INT}": "output", "~{WR}": "input", "~{RD}": "input", "~{RESET}": "input", NC_60: "no_connect", NC_61: "no_connect", NC_62: "no_connect", OPMODE0: "input", OPMODE1: "input", OPMODE2: "input", LINKLED: "output", SPDLED: "output", GNDD_68: "passive", VCC1V8D_69: "passive", FDXLED: "output", COLLED: "output", RXLED: "output", TXLED: "output", VCC1V8A_74: "passive", XTLN: "input", XTLP: "output", GNDA_77: "passive", NC_78: "no_connect", NC_79: "no_connect", NC_80: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:W5100";
@@ -2046,7 +2076,8 @@ export class W5100S_L extends Component.withPins({
   "GND_46": "46",
   "~{INT}": "47",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", GNDA_1: "power_in", TXON: "output", TXOP: "output", "1V2A": "power_in", RXIN: "input", RXIP: "input", GNDA_7: "passive", "3V3A_8": "power_in", RSET_BG: "output", GND_10: "power_in", XSCO: "output", XSCI: "input", "1V2D_13": "power_in", "1V2O": "power_out", "3V3A_15": "passive", GNDA_16: "passive", "~{LNK}": "output", "~{SPD}": "output", "~{DPX}": "output", "~{ACT}": "output", "~{COL}": "output", "1V2D_22": "passive", GND_23: "passive", "3V3D_24": "power_in", "MOD[0]": "input", "MOD[1]": "input", "MOD[2]": "input", "MOD[3]": "input", "~{CS}": "input", SCLK: "input", "1V2D_31": "passive", MOSI: "input", MISO: "output", "~{RD}": "input", "~{WR}": "input", "3V3D_36": "passive", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", "1V2D_45": "passive", GND_46: "passive", "~{INT}": "output", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:W5100S-L";
@@ -2113,7 +2144,8 @@ export class W5100S_Q extends Component.withPins({
   "~{INT}": "47",
   "EP": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", GNDA_1: "power_in", TXON: "output", TXOP: "output", "1V2A": "power_in", RXIN: "input", RXIP: "input", GNDA_7: "passive", "3V3A_8": "power_in", RSET_BG: "output", GND_10: "power_in", XSCO: "output", XSCI: "input", "1V2D_13": "power_in", "1V2O": "power_out", "3V3A_15": "passive", GNDA_16: "passive", "~{LNK}": "output", "~{SPD}": "output", "~{DPX}": "output", "~{ACT}": "output", "~{COL}": "output", "1V2D_22": "passive", GND_23: "passive", "3V3D_24": "power_in", "MOD[0]": "input", "MOD[1]": "input", "MOD[2]": "input", "MOD[3]": "input", "~{CS}": "input", SCLK: "input", "1V2D_31": "passive", MOSI: "input", MISO: "output", "~{RD}": "input", "~{WR}": "input", "3V3D_36": "passive", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", "1V2D_45": "passive", GND_46: "passive", "~{INT}": "output", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:W5100S-Q";
@@ -2179,7 +2211,8 @@ export class W5500 extends Component.withPins({
   "NC_47": "47",
   "AGND_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXN: "output", TXP: "output", AGND_3: "power_in", AVDD_4: "power_in", RXN: "input", RXP: "input", DNC: "no_connect", AVDD_8: "passive", AGND_9: "passive", EXRES1: "passive", AVDD_11: "passive", NC_12: "no_connect", NC_13: "no_connect", AGND_14: "passive", AVDD_15: "passive", AGND_16: "passive", AVDD_17: "passive", VBG: "passive", AGND_19: "passive", TOCAP: "passive", AVDD_21: "passive", "1V2O": "output", RSVD_23: "input", SPDLED: "output", LINKLED: "output", DUPLED: "output", ACTLED: "output", VDD: "power_in", GND: "power_in", "XI/CLKIN": "input", XO: "output", "~{SCS}": "input", SCLK: "input", MISO: "output", MOSI: "input", "~{INT}": "input", "~{RST}": "input", RSVD_38: "input", RSVD_39: "input", RSVD_40: "input", RSVD_41: "input", RSVD_42: "input", PMODE2: "input", PMODE1: "input", PMODE0: "input", NC_46: "no_connect", NC_47: "no_connect", AGND_48: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:W5500";
@@ -2245,7 +2278,8 @@ export class W6100_L extends Component.withPins({
   "GND_46": "46",
   "~{INT}": "47",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", GNDA_1: "power_in", TXON: "output", TXOP: "output", "1V2A": "power_in", RXIN: "input", RXIP: "input", GNDA_7: "passive", "3V3A_8": "power_in", RSET_BG: "output", GND_10: "power_in", XSCO: "output", XSCI: "input", "1V2D_13": "power_in", "1V2O": "power_out", "3V3A_15": "passive", GNDA_16: "passive", "~{LNK}": "output", "~{SPD}": "output", "~{DPX}": "output", "~{ACT}": "output", "~{COL}": "output", "1V2D_22": "passive", GND_23: "passive", "3V3D_24": "power_in", "MOD[0]": "input", "MOD[1]": "input", "MOD[2]": "input", "MOD[3]": "input", "~{CS}": "input", SCLK: "input", "1V2D_31": "passive", MOSI: "input", MISO: "output", "~{RD}": "input", "~{WR}": "input", "3V3D_36": "passive", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", "1V2D_45": "passive", GND_46: "passive", "~{INT}": "output", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:W6100-L";
@@ -2312,7 +2346,8 @@ export class W6100_Q extends Component.withPins({
   "~{INT}": "47",
   "EP": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", GNDA_1: "power_in", TXON: "output", TXOP: "output", "1V2A": "power_in", RXIN: "input", RXIP: "input", GNDA_7: "passive", "3V3A_8": "power_in", RSET_BG: "output", GND_10: "power_in", XSCO: "output", XSCI: "input", "1V2D_13": "power_in", "1V2O": "power_out", "3V3A_15": "passive", GNDA_16: "passive", "~{LNK}": "output", "~{SPD}": "output", "~{DPX}": "output", "~{ACT}": "output", "~{COL}": "output", "1V2D_22": "passive", GND_23: "passive", "3V3D_24": "power_in", "MOD[0]": "input", "MOD[1]": "input", "MOD[2]": "input", "MOD[3]": "input", "~{CS}": "input", SCLK: "input", "1V2D_31": "passive", MOSI: "input", MISO: "output", "~{RD}": "input", "~{WR}": "input", "3V3D_36": "passive", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", "1V2D_45": "passive", GND_46: "passive", "~{INT}": "output", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:W6100-Q";
@@ -2395,7 +2430,8 @@ export class WGI210AT extends Component.withPins({
   "VDD3p3_64": "64",
   "GND": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LAN_PWR_GOOD: "input", NC_SI_CLK_IN: "input", NC_SI_CRS_DV: "output", JTAG_TDO: "output", NC_SI_RXD1: "output", NC_SI_RXD0: "output", NC_SI_TX_EN: "input", NC_SI_TXD1: "input", NC_SI_TXD0: "input", VDD3p3_10: "power_in", VDD0p9_11: "power_in", NVM_SI: "output", NVM_SK: "output", NVM_SO: "input", "~{NVM_CS}": "output", "~{PE_WAKE}": "bidirectional", "~{PE_RST}": "input", JTAG_TMS: "input", JTAG_CLK: "input", PE_Tn: "output", PE_Tp: "output", "NC/Vext": "power_in", PE_Rn: "input", PE_Rp: "input", PECLKn: "input", PECLKp: "input", VDD3p3_27: "passive", "~{DEV_OFF}": "input", JTAG_TDI: "input", LED1: "output", LED0: "output", VDD0p9_32: "power_in", LED2: "output", SMB_CLK: "bidirectional", "~{SMB_ALRT}": "output", SMB_DATA: "bidirectional", CBOT: "passive", VDD0p9_OUT: "power_out", VDD1p5_OUT: "power_out", CTOP: "passive", VDD3p3_41: "passive", VDD0p9_42: "power_in", NC_SI_ARB_IN: "input", NC_SI_ARB_OUT: "output", XTAL2: "output", XTAL1: "input", VDD1p5_47: "power_in", RSET: "passive", "MDI_MINUS[3]/SER_N": "bidirectional", "MDI_PLUS[3]/SER_P": "bidirectional", VDD3p3_51: "power_in", "MDI_MINUS[2]/SET_N": "bidirectional", "MDI_PLUS[2]": "bidirectional", "MDI_MINUS[1]/SRDS_SIG_DET": "bidirectional", "MDI_PLUS[1]/SFP_I2C_CLK": "bidirectional", VDD1p5_56: "power_in", "MDI_MINUS[0]/SFP_I2C_DATA": "bidirectional", "MDI_PLUS[0]/NC": "bidirectional", VDD0p9_59: "power_in", SDP3: "bidirectional", SDP1: "bidirectional", SDP2: "bidirectional", SDP0: "bidirectional", VDD3p3_64: "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Ethernet:WGI210AT";

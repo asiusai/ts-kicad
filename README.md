@@ -7,6 +7,14 @@ TypeScript schematics, BOMs and KiCad settings. Requires Bun and KiCad 10 with i
 3. Run `ts-kicad sync` to generate the schematic and project settings. Open KiCad, update the PCB from the schematic, then place and route the board there.
 4. Run `ts-kicad export` to write BOM, PDF, fabrication files, positions and mechanical models into `outputs/`. ERC/DRC findings and schematic/PCB mismatches are logged without blocking export; check reports are saved there too.
 
+Generated labels for unnamed nets use component and pin names, such as
+`Net-(Q2-G)` or `Net-(R10-Pad2)`. Explicit signal and power names remain unchanged.
+
+Components accept a reference first: `r("R27", { value: "100R" })` or
+`new R("R27", { value: "100R" })`. Options are optional, so `new PWR_FLAG("#FLG01")`
+also works. The object-only form `r({ ref: "R27", value: "100R" })` remains supported.
+When both arguments specify a reference, the first argument takes precedence.
+
 Run commands from the project directory. Separate part numbers or folder names with spaces; quote names containing spaces. The two `internal-*` commands regenerate this package's builtins during development.
 
 ```text

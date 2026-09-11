@@ -23,7 +23,8 @@ export class XTR111AxDGQ extends Component.withPins({
   "GND_10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSP: "power_in", IS: "output", VG: "output", REGS: "input", REGF: "output", VIN: "input", SET: "passive", "~{EF}": "open_collector", OD: "input", GND_10: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_CurrentLoop:XTR111AxDGQ";
@@ -49,7 +50,8 @@ export class XTR115U extends Component.withPins({
   "V+": "7",
   "VREG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", IIN: "input", IRET: "input", IO: "passive", E: "passive", B: "output", "V+": "output", VREG: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_CurrentLoop:XTR115U";
@@ -75,7 +77,8 @@ export class XTR116U extends Component.withPins({
   "V+": "7",
   "VREG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", IIN: "input", IRET: "input", IO: "passive", E: "passive", B: "output", "V+": "output", VREG: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_CurrentLoop:XTR116U";

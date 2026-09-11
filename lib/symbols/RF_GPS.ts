@@ -30,7 +30,8 @@ export class L70_R extends Component.withPins({
   "RESERVED_17": "17",
   "RESERVED_18": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD1: "output", RXD1: "input", "1PPS": "output", STANDBY: "input", V_BCKP: "power_in", NC_7: "no_connect", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", ANTON: "output", VCC_RF: "power_out", NC_15: "no_connect", RESERVED_16: "passive", RESERVED_17: "passive", RESERVED_18: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:L70-R";
@@ -60,7 +61,8 @@ export class L80_R extends Component.withPins({
   "RESERVED_11": "11",
   "GND_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RXD1: "input", TXD1: "output", GND_3: "power_in", VCC: "power_in", V_BCKP: "power_in", "1PPS": "output", RESERVED_7: "passive", RESERVED_8: "passive", NC: "no_connect", "~{RESET}": "input", RESERVED_11: "passive", GND_12: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:L80-R";
@@ -106,7 +108,8 @@ export class LEA_M8F extends Component.withPins({
   "FREQ_PHASE_IN0": "27",
   "TIMEPULSE/TP2/~{SAFEBOOT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SDA2/~{SPI_CS}": "bidirectional", "SCL2/SPI_CLK": "input", "TxD1/SPI_MISO": "output", "RxD1/SPI_MOSI": "input", D_SEL: "input", VCC: "power_in", GND_7: "power_in", VCC_OUT: "power_out", REF_FREQ_OUT: "output", "~{RESET}": "input", V_BCKP: "power_in", "~{SAFEBOOT}": "input", GND_13: "passive", GND_14: "passive", GND_15: "passive", RF_IN: "input", GND_17: "passive", VCC_RF: "power_out", V_ANT: "power_in", RESERVED: "no_connect", FREQ_PHASE_IN1: "input", SDA_DAC: "bidirectional", SCL_DAC: "output", VDD_USB: "power_in", USB_DM: "bidirectional", USB_DP: "bidirectional", FREQ_PHASE_IN0: "input", "TIMEPULSE/TP2/~{SAFEBOOT}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:LEA-M8F";
@@ -152,7 +155,8 @@ export class LEA_M8S extends Component.withPins({
   "EXTINT0": "27",
   "TIMEPULSE": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", TXD: "output", RXD: "input", RESERVED_5: "no_connect", VCC: "power_in", GND_7: "power_in", VCC_OUT: "power_out", RESERVED_9: "no_connect", "~{RESET}": "input", V_BCKP: "power_in", "~{SAFEBOOT}": "input", GND_13: "passive", GND_14: "passive", GND_15: "passive", RF_IN: "input", GND_17: "passive", VCC_RF: "power_out", V_ANT: "power_in", EXTINT1: "input", RESERVED_21: "no_connect", RESERVED_22: "no_connect", RESERVED_23: "no_connect", VDD_USB: "power_in", USB_DM: "bidirectional", USB_DP: "bidirectional", EXTINT0: "input", TIMEPULSE: "output", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:LEA-M8S";
@@ -198,7 +202,8 @@ export class LEA_M8T extends Component.withPins({
   "EXTINT0": "27",
   "TIMEPULSE": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", D_SEL: "input", VCC: "power_in", GND_7: "power_in", VCC_OUT: "power_out", RESERVED_9: "no_connect", "~{RESET}": "input", V_BCKP: "power_in", "TP2/~{SAFEBOOT}": "bidirectional", GND_13: "passive", GND_14: "passive", GND_15: "passive", RF_IN: "input", GND_17: "passive", VCC_RF: "power_out", V_ANT: "power_in", EXTINT1: "input", RESERVED_21: "no_connect", RESERVED_22: "no_connect", RESERVED_23: "no_connect", VDD_USB: "power_in", USB_DM: "bidirectional", USB_DP: "bidirectional", EXTINT0: "input", TIMEPULSE: "output", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:LEA-M8T";
@@ -234,7 +239,8 @@ export class MAX_8C extends Component.withPins({
   "SCL": "17",
   "~{SAFEBOOT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD: "output", RXD: "input", TIMEPULSE: "output", EXTINT: "input", V_BCKP: "power_in", VCC_IO: "power_in", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", LNA_EN: "output", VCC_RF: "power_out", Reserved: "no_connect", SDA: "bidirectional", SCL: "input", "~{SAFEBOOT}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MAX-8C";
@@ -270,7 +276,8 @@ export class MAX_8Q extends Component.withPins({
   "SCL": "17",
   "~{SAFEBOOT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD: "output", RXD: "input", TIMEPULSE: "output", EXTINT: "input", V_BCKP: "power_in", VCC_IO: "power_in", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", LNA_EN: "output", VCC_RF: "power_out", Reserved: "no_connect", SDA: "bidirectional", SCL: "input", "~{SAFEBOOT}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MAX-8Q";
@@ -306,7 +313,8 @@ export class MAX_M10S extends Component.withPins({
   "SCL": "17",
   "~{SAFEBOOT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD: "output", RXD: "input", TIMEPULSE: "output", EXTINT: "input", V_BCKP: "power_in", VCC_IO: "power_in", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", LNA_EN: "output", VCC_RF: "power_out", VIO_SEL: "input", SDA: "bidirectional", SCL: "input", "~{SAFEBOOT}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MAX-M10S";
@@ -342,7 +350,8 @@ export class MAX_M8C extends Component.withPins({
   "SCL": "17",
   "~{SAFEBOOT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD: "output", RXD: "input", TIMEPULSE: "output", EXTINT: "input", V_BCKP: "power_in", VCC_IO: "power_in", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", LNA_EN: "output", VCC_RF: "power_out", Reserved: "no_connect", SDA: "bidirectional", SCL: "input", "~{SAFEBOOT}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MAX-M8C";
@@ -378,7 +387,8 @@ export class MAX_M8Q extends Component.withPins({
   "SCL": "17",
   "~{SAFEBOOT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD: "output", RXD: "input", TIMEPULSE: "output", EXTINT: "input", V_BCKP: "power_in", VCC_IO: "power_in", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", LNA_EN: "output", VCC_RF: "power_out", Reserved: "no_connect", SDA: "bidirectional", SCL: "input", "~{SAFEBOOT}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MAX-M8Q";
@@ -414,7 +424,8 @@ export class MAX_M8W extends Component.withPins({
   "SCL": "17",
   "~{SAFEBOOT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD: "output", RXD: "input", TIMEPULSE: "output", EXTINT: "input", V_BCKP: "power_in", VCC_IO: "power_in", VCC: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", Reserved: "no_connect", VCC_RF: "power_out", V_ANT: "power_in", SDA: "bidirectional", SCL: "input", "~{SAFEBOOT}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MAX-M8W";
@@ -485,7 +496,8 @@ export class MIA_M10Q extends Component.withPins({
   "GND_J8": "J8",
   "GND_J9": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "power_in", GND_A2: "passive", GND_A3: "passive", RTC_I: "input", RTC_O: "output", EXTINT: "bidirectional", TIMEPULSE: "output", GND_A8: "passive", GND_A9: "passive", VCC: "power_in", GND_B2: "passive", GND_B8: "passive", RF_IN: "input", Reserved_C1: "no_connect", GND_C3: "passive", "~{RESET}": "input", Reserved_C5: "no_connect", VCC_RF: "power_out", "~{SAFEBOOT}": "input", GND_C9: "passive", SDA: "bidirectional", Reserved_D2: "passive", Reserved_D9: "no_connect", SCL: "input", Reserved_E2: "passive", GND_E3: "passive", GND_E4: "passive", Reserved_E7: "no_connect", GND_E9: "passive", GND_F1: "passive", GND_F3: "passive", GND_F4: "passive", PIO6: "bidirectional", Reserved_F9: "passive", TX: "output", GND_G3: "passive", GND_G4: "passive", GND_G5: "passive", GND_G6: "passive", Reserved_G7: "passive", Reserved_G9: "no_connect", RX: "input", GND_H8: "passive", LNA_EN: "output", Reserved_J1: "no_connect", Reserved_J2: "no_connect", Reserved_J3: "no_connect", V_IO: "power_in", V_BCKP: "power_in", VIO_SEL: "input", Reserved_J7: "no_connect", GND_J8: "passive", GND_J9: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:MIA-M10Q";
@@ -527,7 +539,8 @@ export class NEO_M8N extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SAFEBOOT}": "input", D_SEL: "input", TIMEPULSE: "output", EXTINT: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", LNA_EN: "output", RESERVED_15: "no_connect", RESERVED_16: "no_connect", RESERVED_17: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-M8N";
@@ -569,7 +582,8 @@ export class NEO_8Q extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SAFEBOOT}": "input", D_SEL: "input", TIMEPULSE: "output", EXTINT: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", LNA_EN: "output", RESERVED_15: "no_connect", RESERVED_16: "no_connect", RESERVED_17: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-8Q";
@@ -611,7 +625,8 @@ export class NEO_M8M extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SAFEBOOT}": "input", D_SEL: "input", TIMEPULSE: "output", EXTINT: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", RESERVED_14: "no_connect", RESERVED_15: "no_connect", RESERVED_16: "no_connect", RESERVED_17: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-M8M";
@@ -653,7 +668,8 @@ export class NEO_M8P extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SAFEBOOT}": "input", D_SEL: "input", TIMEPULSE: "output", EXTINT: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", LNA_EN: "output", RTK_STAT: "output", GEOFENCE_STAT: "output", RESERVED: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-M8P";
@@ -695,7 +711,8 @@ export class NEO_M8Q extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SAFEBOOT}": "input", D_SEL: "input", TIMEPULSE: "output", EXTINT: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", LNA_EN: "output", RESERVED_15: "no_connect", RESERVED_16: "no_connect", RESERVED_17: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-M8Q";
@@ -737,7 +754,8 @@ export class NEO_M8T extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TP2/~{SAFEBOOT}": "bidirectional", D_SEL: "input", TIMEPULSE: "output", EXTINT0: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", LNA_EN: "output", EXTINT1: "input", RESERVED_16: "no_connect", RESERVED_17: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-M8T";
@@ -779,7 +797,8 @@ export class NEO_M9N extends Component.withPins({
   "VCC": "23",
   "GND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SAFEBOOT}": "input", D_SEL: "input", TIMEPULSE: "output", EXTINT: "input", USB_DM: "bidirectional", USB_DP: "bidirectional", VDD_USB: "power_in", "~{RESET}": "input", VCC_RF: "power_out", GND_10: "power_in", RF_IN: "input", GND_12: "passive", GND_13: "passive", LNA_EN: "output", RESERVED_15: "no_connect", RESERVED_16: "no_connect", RESERVED_17: "no_connect", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "input", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", V_BCKP: "power_in", VCC: "power_in", GND_24: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:NEO-M9N";
@@ -818,7 +837,8 @@ export class RXM_GPS_RM extends Component.withPins({
   "GND_21": "21",
   "GND_22": "22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", "1PPS": "output", TX: "output", RX: "input", NC_6: "no_connect", NC_7: "no_connect", "~{RESET}": "input", NC_9: "no_connect", NC_10: "no_connect", VBCKUP: "power_in", VCC: "power_in", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", NC_16: "no_connect", GND_18: "power_in", RFIN: "input", GND_20: "passive", GND_21: "passive", GND_22: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:RXM-GPS-RM";
@@ -857,7 +877,8 @@ export class RXM_GPS_FM extends Component.withPins({
   "GND_21": "21",
   "GND_22": "22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", "1PPS": "output", TX: "output", RX: "input", NC_6: "no_connect", NC_7: "no_connect", "~{RESET}": "input", NC_9: "no_connect", NC_10: "no_connect", VBCKUP: "power_in", VCC: "power_in", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", NC_16: "no_connect", GND_18: "power_in", RFIN: "input", GND_20: "passive", GND_21: "passive", GND_22: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:RXM-GPS-FM";
@@ -895,7 +916,8 @@ export class SAM_M8Q extends Component.withPins({
   "EXTINT": "19",
   "GND_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VCC_IO: "power_in", V_BCKP: "power_in", GND_4: "passive", GND_5: "passive", GND_6: "passive", TIMEPULSE: "output", "~{SAFEBOOT}": "input", SDA: "bidirectional", GND_10: "passive", GND_11: "passive", SCL: "input", TXD: "output", RXD: "input", GND_15: "passive", GND_16: "passive", VCC: "power_in", "~{RESET}": "input", EXTINT: "input", GND_20: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:SAM-M8Q";
@@ -931,7 +953,8 @@ export class SIM28ML extends Component.withPins({
   "RXD1/SCL": "17",
   "NC_18": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", TXD0: "output", RXD0: "input", TIMEMARK: "output", EXTINT: "input", V_BACKUP: "power_in", NC_7: "no_connect", Vcc: "power_in", "~{RESET}": "input", GND_10: "passive", RF_IN: "input", GND_12: "passive", ANTON: "power_out", Vcc_RF: "power_out", NC_15: "no_connect", "TXD1/SDA": "bidirectional", "RXD1/SCL": "input", NC_18: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:SIM28ML";
@@ -1004,7 +1027,8 @@ export class ZED_F9P extends Component.withPins({
   "Reserved_54": "54",
   "GND_55": "55",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "passive", RF_IN: "input", GND_3: "passive", ANT_DETECT: "input", ANT_OFF: "output", "~{ANT_SHORT}": "input", VCC_RF: "power_out", Reserved_8: "no_connect", Reserved_9: "no_connect", Reserved_10: "no_connect", Reserved_11: "no_connect", GND_12: "passive", Reserved_13: "no_connect", GND_14: "passive", Reserved_15: "no_connect", Reserved_16: "no_connect", Reserved_17: "no_connect", Reserved_18: "no_connect", GEOFENCE_STAT: "output", RTK_STAT: "output", Reserved_21: "no_connect", Reserved_22: "no_connect", Reserved_23: "no_connect", Reserved_24: "no_connect", Reserved_25: "no_connect", RXD2: "input", TXD2: "output", Reserved_28: "no_connect", Reserved_29: "no_connect", Reserved_30: "no_connect", Reserved_31: "no_connect", GND_32: "passive", VCC_33: "passive", VCC_34: "power_in", Reserved_35: "no_connect", V_BCKP: "power_in", GND_37: "passive", V_USB: "power_in", USB_DM: "bidirectional", USB_DP: "bidirectional", GND_41: "passive", "TXD/SPI_MISO": "output", "RXD/SPI_MOSI": "input", "SDA/~{SPI_CS}": "bidirectional", "SCL/SPI_CLK": "bidirectional", TX_READY: "output", D_SEL: "input", GND_48: "power_in", "~{RESET}": "input", "~{SAFEBOOT}": "input", EXTINT: "input", Reserved_52: "no_connect", TIMEPULSE: "output", Reserved_54: "no_connect", GND_55: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:ZED-F9P";
@@ -1073,7 +1097,8 @@ export class ZOE_M8G extends Component.withPins({
   "RTC_O": "J8",
   "GND_J9": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "power_in", "SDA/~{SPI_CS}": "bidirectional", GND_A3: "passive", RF_IN: "input", GND_A5: "passive", Reserved_A6: "no_connect", GND_A7: "passive", GND_A8: "passive", GND_A9: "passive", "SCL/SPI_CLK": "input", GND_B9: "passive", SQI_D1: "input", TIMEPULSE: "output", "~{SAFEBOOT}": "input", LNA_EN: "output", PIO15: "bidirectional", GND_C7: "passive", GND_C9: "passive", SQI_D0: "bidirectional", "~{SQI_CS}": "bidirectional", D_SEL: "input", GND_D6: "passive", GND_D9: "passive", SQI_CLK: "bidirectional", SQI_D2: "bidirectional", GND_E7: "passive", Reserved_E9: "no_connect", Reserved_F1: "no_connect", SQI_D3: "bidirectional", Reserved_F4: "no_connect", PIO14: "bidirectional", GND_F7: "passive", Reserved_F9: "no_connect", VCC_G1: "power_in", GND_G3: "passive", "PIO13/EXTINT": "input", Reserved_G5: "no_connect", GND_G6: "passive", GND_G7: "passive", Reserved_G9: "no_connect", VCC_H1: "power_in", V_BCKP: "power_in", VCC_J1: "power_in", VCC_J2: "passive", GND_J3: "passive", "RXD/SPI_MOSI": "input", "TXD/SPI_MISO": "output", "~{RESET}": "input", RTC_I: "input", RTC_O: "output", GND_J9: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:ZOE-M8G";
@@ -1142,7 +1167,8 @@ export class ZOE_M8Q extends Component.withPins({
   "RTC_O": "J8",
   "GND_J9": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "power_in", "SDA/~{SPI_CS}": "bidirectional", GND_A3: "passive", RF_IN: "input", GND_A5: "passive", Reserved_A6: "no_connect", GND_A7: "passive", GND_A8: "passive", GND_A9: "passive", "SCL/SPI_CLK": "input", GND_B9: "passive", SQI_D1: "input", TIMEPULSE: "output", "~{SAFEBOOT}": "input", LNA_EN: "output", PIO15: "bidirectional", GND_C7: "passive", GND_C9: "passive", SQI_D0: "bidirectional", "~{SQI_CS}": "bidirectional", D_SEL: "input", GND_D6: "passive", GND_D9: "passive", SQI_CLK: "bidirectional", SQI_D2: "bidirectional", GND_E7: "passive", Reserved_E9: "no_connect", Reserved_F1: "no_connect", SQI_D3: "bidirectional", Reserved_F4: "no_connect", PIO14: "bidirectional", GND_F7: "passive", Reserved_F9: "no_connect", V_CORE: "power_in", GND_G3: "passive", "PIO13/EXTINT": "input", Reserved_G5: "no_connect", GND_G6: "passive", GND_G7: "passive", Reserved_G9: "no_connect", V_DCDC_OUT: "power_out", V_BCKP: "power_in", VCC_J1: "power_in", VCC_J2: "passive", GND_J3: "passive", "RXD/SPI_MOSI": "input", "TXD/SPI_MISO": "output", "~{RESET}": "input", RTC_I: "input", RTC_O: "output", GND_J9: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_GPS:ZOE-M8Q";

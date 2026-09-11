@@ -76,7 +76,8 @@ export class AT90CAN32_16A extends Component.withPins({
   "AGND": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PG3: "bidirectional", PG4: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PG0: "bidirectional", PG1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PG2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", AGND: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90CAN32-16A";
@@ -158,7 +159,8 @@ export class AT90CAN128_16A extends Component.withPins({
   "AGND": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PG3: "bidirectional", PG4: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PG0: "bidirectional", PG1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PG2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", AGND: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90CAN128-16A";
@@ -241,7 +243,8 @@ export class AT90CAN32_16M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PG3: "bidirectional", PG4: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PG0: "bidirectional", PG1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PG2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", AGND: "power_in", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90CAN32-16M";
@@ -324,7 +327,8 @@ export class AT90CAN128_16M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PG3: "bidirectional", PG4: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PG0: "bidirectional", PG1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PG2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", AGND: "power_in", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90CAN128-16M";
@@ -406,7 +410,8 @@ export class AT90CAN64_16A extends Component.withPins({
   "AGND": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PG3: "bidirectional", PG4: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PG0: "bidirectional", PG1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PG2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", AGND: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90CAN64-16A";
@@ -489,7 +494,8 @@ export class AT90CAN64_16M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PG3: "bidirectional", PG4: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PG0: "bidirectional", PG1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PG2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", AGND: "power_in", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90CAN64-16M";
@@ -540,7 +546,8 @@ export class AT90PWM1_16M extends Component.withPins({
   "PD1": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD2: "bidirectional", PD3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", NC_7: "no_connect", PB0: "bidirectional", PB1: "bidirectional", "XTAL1/PE1": "bidirectional", "XTAL2/PE2": "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB2: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", AVCC: "power_in", AGND: "power_in", AREF: "passive", NC_22: "no_connect", PB3: "bidirectional", PB4: "bidirectional", NC_25: "no_connect", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD0: "bidirectional", NC_30: "no_connect", "~{RESET}/PE0": "bidirectional", PD1: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90PWM1-16M";
@@ -582,7 +589,8 @@ export class AT90PWM1_16S extends Component.withPins({
   "PB6": "23",
   "PB7": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD0: "bidirectional", "~{RESET}/PE0": "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", VCC: "power_in", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", "XTAL1/PE1": "bidirectional", "XTAL2/PE2": "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB2: "bidirectional", AVCC: "power_in", AGND: "power_in", AREF: "passive", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90PWM1-16S";
@@ -664,7 +672,8 @@ export class AT90USB646_A extends Component.withPins({
   "GND_63": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB646-A";
@@ -746,7 +755,8 @@ export class AT90USB1286_A extends Component.withPins({
   "GND_63": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB1286-A";
@@ -829,7 +839,8 @@ export class AT90USB646_M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB646-M";
@@ -912,7 +923,8 @@ export class AT90USB1286_M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB1286-M";
@@ -994,7 +1006,8 @@ export class AT90USB1287_A extends Component.withPins({
   "GND_63": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB1287-A";
@@ -1077,7 +1090,8 @@ export class AT90USB1287_M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB1287-M";
@@ -1127,7 +1141,8 @@ export class AT90USB162_16A extends Component.withPins({
   "UVCC": "31",
   "AVCC": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { XTAL1: "input", "PC0/XTAL2": "bidirectional", GND: "power_in", VCC: "power_in", PC2: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "~{HWB}/PD7": "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC7: "bidirectional", PC6: "bidirectional", "PC1/~{RESET}": "bidirectional", PC5: "bidirectional", PC4: "bidirectional", UCAP: "passive", UGND: "power_in", "D+": "bidirectional", "D-": "bidirectional", UVCC: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB162-16A";
@@ -1178,7 +1193,8 @@ export class AT90USB82_16M extends Component.withPins({
   "AVCC": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { XTAL1: "input", "PC0/XTAL2": "bidirectional", GND_3: "power_in", VCC: "power_in", PC2: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "~{HWB}/PD7": "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC7: "bidirectional", PC6: "bidirectional", "PC1/~{RESET}": "bidirectional", PC5: "bidirectional", PC4: "bidirectional", UCAP: "passive", UGND: "power_in", "D+": "bidirectional", "D-": "bidirectional", UVCC: "power_in", AVCC: "power_in", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB82-16M";
@@ -1229,7 +1245,8 @@ export class AT90USB162_16M extends Component.withPins({
   "AVCC": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { XTAL1: "input", "PC0/XTAL2": "bidirectional", GND_3: "power_in", VCC: "power_in", PC2: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "~{HWB}/PD7": "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC7: "bidirectional", PC6: "bidirectional", "PC1/~{RESET}": "bidirectional", PC5: "bidirectional", PC4: "bidirectional", UCAP: "passive", UGND: "power_in", "D+": "bidirectional", "D-": "bidirectional", UVCC: "power_in", AVCC: "power_in", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB162-16M";
@@ -1311,7 +1328,8 @@ export class AT90USB647_A extends Component.withPins({
   "GND_63": "63",
   "AVCC": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB647-A";
@@ -1394,7 +1412,8 @@ export class AT90USB647_M extends Component.withPins({
   "AVCC": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PE6: "bidirectional", PE7: "bidirectional", UVCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", UGND: "power_in", UCAP: "passive", VBUS: "input", PE3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", "~{RESET}": "input", VCC_21: "power_in", GND_22: "power_in", XTAL2: "output", XTAL1: "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", "PE2/~{HWB}": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", VCC_52: "passive", GND_53: "passive", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", AREF: "passive", GND_63: "passive", AVCC: "power_in", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR:AT90USB647-M";

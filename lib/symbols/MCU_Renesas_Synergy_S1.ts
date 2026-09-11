@@ -60,7 +60,8 @@ export class R7FS12878xA01CFL extends Component.withPins({
   "P001": "47",
   "P000": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P400: "bidirectional", P401: "bidirectional", VCL: "passive", "P215/XCIN": "bidirectional", "P214/XCOUT": "bidirectional", VSS_6: "power_in", "P213/XTAL": "bidirectional", "P212/EXTAL": "bidirectional", VCC_9: "power_in", P409: "bidirectional", P408: "bidirectional", P407: "bidirectional", VSS_USB: "power_in", "USB_DM/P915": "bidirectional", "USB_DP/P914": "bidirectional", VCC_USB: "power_in", VCC_USB_LDO: "power_in", P206: "bidirectional", RES: "input", "P201/MD": "bidirectional", P200: "bidirectional", P302: "bidirectional", P301: "bidirectional", "SWCLK/P300": "bidirectional", "SWDIO/P108": "bidirectional", P109: "bidirectional", P110: "bidirectional", P111: "bidirectional", P112: "bidirectional", VCC_30: "power_in", VSS_31: "passive", P104: "bidirectional", P103: "bidirectional", P102: "bidirectional", P101: "bidirectional", P100: "bidirectional", P500: "bidirectional", P015: "bidirectional", P014: "bidirectional", P013: "bidirectional", P012: "bidirectional", AVCC0: "power_in", AVSS0: "power_in", "P011/VREFL0": "bidirectional", "P010/VREFH0": "bidirectional", P002: "bidirectional", P001: "bidirectional", P000: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Renesas_Synergy_S1:R7FS12878xA01CFL";

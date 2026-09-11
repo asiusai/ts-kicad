@@ -20,7 +20,8 @@ export class PIC12C508_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508-xP";
@@ -46,7 +47,8 @@ export class PIC12C508_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508-xJW";
@@ -72,7 +74,8 @@ export class PIC12C508_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508-xSM";
@@ -98,7 +101,8 @@ export class PIC12C508A_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508A-xP";
@@ -124,7 +128,8 @@ export class PIC12C508A_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508A-xJW";
@@ -150,7 +155,8 @@ export class PIC12C508A_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508A-xSM";
@@ -176,7 +182,8 @@ export class PIC12C508A_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C508A-xSN";
@@ -202,7 +209,8 @@ export class PIC12C509_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509-xP";
@@ -228,7 +236,8 @@ export class PIC12C509_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509-xJW";
@@ -254,7 +263,8 @@ export class PIC12C509_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509-xSM";
@@ -280,7 +290,8 @@ export class PIC12C509A_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509A-xP";
@@ -306,7 +317,8 @@ export class PIC12C509A_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509A-xJW";
@@ -332,7 +344,8 @@ export class PIC12C509A_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509A-xSM";
@@ -358,7 +371,8 @@ export class PIC12C509A_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C509A-xSN";
@@ -384,7 +398,8 @@ export class PIC12C671_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C671-xP";
@@ -410,7 +425,8 @@ export class PIC12C671_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C671-xJW";
@@ -436,7 +452,8 @@ export class PIC12C671_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C671-xSN";
@@ -462,7 +479,8 @@ export class PIC12C672_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C672-xP";
@@ -488,7 +506,8 @@ export class PIC12C672_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C672-xJW";
@@ -514,7 +533,8 @@ export class PIC12C672_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12C672-xSN";
@@ -540,7 +560,8 @@ export class PIC12CE518_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE518-xP";
@@ -566,7 +587,8 @@ export class PIC12CE518_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE518-xJW";
@@ -592,7 +614,8 @@ export class PIC12CE518_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE518-xSM";
@@ -618,7 +641,8 @@ export class PIC12CE518_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE518-xSN";
@@ -644,7 +668,8 @@ export class PIC12CE519_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE519-xP";
@@ -670,7 +695,8 @@ export class PIC12CE519_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE519-xJW";
@@ -696,7 +722,8 @@ export class PIC12CE519_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE519-xSM";
@@ -722,7 +749,8 @@ export class PIC12CE519_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE519-xSN";
@@ -748,7 +776,8 @@ export class PIC12CE673_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE673-xP";
@@ -774,7 +803,8 @@ export class PIC12CE673_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE673-xJW";
@@ -800,7 +830,8 @@ export class PIC12CE674_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE674-xP";
@@ -826,7 +857,8 @@ export class PIC12CE674_xJW extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CE674-xJW";
@@ -852,7 +884,8 @@ export class PIC12CR509A_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CR509A-xP";
@@ -878,7 +911,8 @@ export class PIC12CR509A_xSM extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CR509A-xSM";
@@ -904,7 +938,8 @@ export class PIC12CR509A_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12CR509A-xSN";
@@ -930,7 +965,8 @@ export class PIC12F1501_xP extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1501-xP";
@@ -956,7 +992,8 @@ export class PIC12F1501_xMC extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1501-xMC";
@@ -982,7 +1019,8 @@ export class PIC12F1501_xMS extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1501-xMS";
@@ -1008,7 +1046,8 @@ export class PIC12F1501_xSN extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1501-xSN";
@@ -1034,7 +1073,8 @@ export class PIC12F1822_xP extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1822-xP";
@@ -1060,7 +1100,8 @@ export class PIC12F1822_xMC extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1822-xMC";
@@ -1086,7 +1127,8 @@ export class PIC12F1822_xSN extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1822-xSN";
@@ -1112,7 +1154,8 @@ export class PIC12F1840_xP extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1840-xP";
@@ -1138,7 +1181,8 @@ export class PIC12F1840_xMC extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1840-xMC";
@@ -1164,7 +1208,8 @@ export class PIC12F1840_xSN extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F1840-xSN";
@@ -1190,7 +1235,8 @@ export class PIC12F508_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F508-xP";
@@ -1216,7 +1262,8 @@ export class PIC12F508_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F508-xMC";
@@ -1242,7 +1289,8 @@ export class PIC12F508_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F508-xMS";
@@ -1268,7 +1316,8 @@ export class PIC12F508_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F508-xSN";
@@ -1294,7 +1343,8 @@ export class PIC12F509_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F509-xP";
@@ -1320,7 +1370,8 @@ export class PIC12F509_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F509-xMC";
@@ -1346,7 +1397,8 @@ export class PIC12F509_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F509-xMS";
@@ -1372,7 +1424,8 @@ export class PIC12F509_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F509-xSN";
@@ -1398,7 +1451,8 @@ export class PIC12F510_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F510-xP";
@@ -1424,7 +1478,8 @@ export class PIC12F510_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F510-xMC";
@@ -1450,7 +1505,8 @@ export class PIC12F510_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F510-xMS";
@@ -1476,7 +1532,8 @@ export class PIC12F510_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F510-xSN";
@@ -1502,7 +1559,8 @@ export class PIC12F519_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F519-xP";
@@ -1528,7 +1586,8 @@ export class PIC12F519_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F519-xMC";
@@ -1554,7 +1613,8 @@ export class PIC12F519_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F519-xMS";
@@ -1580,7 +1640,8 @@ export class PIC12F519_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F519-xSN";
@@ -1606,7 +1667,8 @@ export class PIC12F609_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F609-xP";
@@ -1632,7 +1694,8 @@ export class PIC12F609_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F609-xMC";
@@ -1658,7 +1721,8 @@ export class PIC12F609_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F609-xMS";
@@ -1684,7 +1748,8 @@ export class PIC12F609_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F609-xSN";
@@ -1710,7 +1775,8 @@ export class PIC12F615_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F615-xP";
@@ -1736,7 +1802,8 @@ export class PIC12F615_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F615-xMC";
@@ -1762,7 +1829,8 @@ export class PIC12F615_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F615-xMS";
@@ -1788,7 +1856,8 @@ export class PIC12F615_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F615-xSN";
@@ -1814,7 +1883,8 @@ export class PIC12F617_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F617-xP";
@@ -1840,7 +1910,8 @@ export class PIC12F617_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F617-xMC";
@@ -1866,7 +1937,8 @@ export class PIC12F617_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F617-xMS";
@@ -1892,7 +1964,8 @@ export class PIC12F617_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F617-xSN";
@@ -1918,7 +1991,8 @@ export class PIC12F629_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F629-xP";
@@ -1944,7 +2018,8 @@ export class PIC12F629_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F629-xMC";
@@ -1970,7 +2045,8 @@ export class PIC12F629_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F629-xMS";
@@ -1996,7 +2072,8 @@ export class PIC12F629_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F629-xSN";
@@ -2022,7 +2099,8 @@ export class PIC12F635_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F635-xP";
@@ -2048,7 +2126,8 @@ export class PIC12F635_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F635-xMC";
@@ -2074,7 +2153,8 @@ export class PIC12F635_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F635-xMS";
@@ -2100,7 +2180,8 @@ export class PIC12F635_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F635-xSN";
@@ -2126,7 +2207,8 @@ export class PIC12F675_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F675-xP";
@@ -2152,7 +2234,8 @@ export class PIC12F675_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F675-xMC";
@@ -2178,7 +2261,8 @@ export class PIC12F675_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F675-xMS";
@@ -2204,7 +2288,8 @@ export class PIC12F675_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F675-xSN";
@@ -2230,7 +2315,8 @@ export class PIC12F683_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F683-xP";
@@ -2256,7 +2342,8 @@ export class PIC12F683_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F683-xMC";
@@ -2282,7 +2369,8 @@ export class PIC12F683_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F683-xMS";
@@ -2308,7 +2396,8 @@ export class PIC12F683_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F683-xSN";
@@ -2334,7 +2423,8 @@ export class PIC12F752_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F752-xP";
@@ -2360,7 +2450,8 @@ export class PIC12F752_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F752-xMC";
@@ -2386,7 +2477,8 @@ export class PIC12F752_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12F752-xSN";
@@ -2412,7 +2504,8 @@ export class PIC12HV609_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV609-xP";
@@ -2438,7 +2531,8 @@ export class PIC12HV609_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV609-xMC";
@@ -2464,7 +2558,8 @@ export class PIC12HV609_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV609-xMS";
@@ -2490,7 +2585,8 @@ export class PIC12HV609_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV609-xSN";
@@ -2516,7 +2612,8 @@ export class PIC12HV615_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV615-xP";
@@ -2542,7 +2639,8 @@ export class PIC12HV615_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV615-xMC";
@@ -2568,7 +2666,8 @@ export class PIC12HV615_xMS extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV615-xMS";
@@ -2594,7 +2693,8 @@ export class PIC12HV615_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV615-xSN";
@@ -2620,7 +2720,8 @@ export class PIC12HV752_xP extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV752-xP";
@@ -2646,7 +2747,8 @@ export class PIC12HV752_xMC extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV752-xMC";
@@ -2672,7 +2774,8 @@ export class PIC12HV752_xSN extends Component.withPins({
   "GP0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP5: "bidirectional", GP4: "bidirectional", GP3: "input", GP2: "bidirectional", GP1: "bidirectional", GP0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12HV752-xSN";
@@ -2698,7 +2801,8 @@ export class PIC12LF1501_xMC extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1501-xMC";
@@ -2724,7 +2828,8 @@ export class PIC12LF1501_xMS extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1501-xMS";
@@ -2750,7 +2855,8 @@ export class PIC12LF1501_xP extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1501-xP";
@@ -2776,7 +2882,8 @@ export class PIC12LF1501_xSN extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1501-xSN";
@@ -2802,7 +2909,8 @@ export class PIC12LF1822_xMC extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1822-xMC";
@@ -2828,7 +2936,8 @@ export class PIC12LF1822_xP extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1822-xP";
@@ -2854,7 +2963,8 @@ export class PIC12LF1822_xSN extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1822-xSN";
@@ -2880,7 +2990,8 @@ export class PIC12LF1840_xMC extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1840-xMC";
@@ -2906,7 +3017,8 @@ export class PIC12LF1840_xP extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1840-xP";
@@ -2932,7 +3044,8 @@ export class PIC12LF1840_xSN extends Component.withPins({
   "RA0": "7",
   "VSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1840-xSN";
@@ -2964,7 +3077,8 @@ export class PIC12LF1840T48_xST extends Component.withPins({
   "RA0": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", RA5: "bidirectional", RA4: "bidirectional", RA3: "input", VDDRF: "power_in", CTRL: "input", RFOUT: "input", VSSRF: "power_in", DATA: "input", XTAL: "input", RA2: "bidirectional", RA1: "bidirectional", RA0: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_PIC12:PIC12LF1840T48-xST";

@@ -16,7 +16,8 @@ export class A1363xKTTN_1 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1363xKTTN-1";
@@ -38,7 +39,8 @@ export class A1363xKTTN_10 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1363xKTTN-10";
@@ -60,7 +62,8 @@ export class A1363xKTTN_2 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1363xKTTN-2";
@@ -82,7 +85,8 @@ export class A1363xKTTN_5 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1363xKTTN-5";
@@ -104,7 +108,8 @@ export class A1365xKTTN_1 extends Component.withPins({
   "~{FAULT}": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", "~{FAULT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1365xKTTN-1";
@@ -126,7 +131,8 @@ export class A1365xKTTN_10 extends Component.withPins({
   "~{FAULT}": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", "~{FAULT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1365xKTTN-10";
@@ -148,7 +154,8 @@ export class A1365xKTTN_2 extends Component.withPins({
   "~{FAULT}": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", "~{FAULT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1365xKTTN-2";
@@ -170,7 +177,8 @@ export class A1365xKTTN_5 extends Component.withPins({
   "~{FAULT}": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", "~{FAULT}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1365xKTTN-5";
@@ -192,7 +200,8 @@ export class A1366xKTTN_1 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1366xKTTN-1";
@@ -214,7 +223,8 @@ export class A1366xKTTN_10 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1366xKTTN-10";
@@ -236,7 +246,8 @@ export class A1366xKTTN_2 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1366xKTTN-2";
@@ -258,7 +269,8 @@ export class A1366xKTTN_5 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1366xKTTN-5";
@@ -280,7 +292,8 @@ export class A1367xKTTN_1 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1367xKTTN-1";
@@ -302,7 +315,8 @@ export class A1367xKTTN_10 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1367xKTTN-10";
@@ -324,7 +338,8 @@ export class A1367xKTTN_2 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1367xKTTN-2";
@@ -346,7 +361,8 @@ export class A1367xKTTN_5 extends Component.withPins({
   "NC": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VOUT: "output", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:A1367xKTTN-5";
@@ -372,7 +388,8 @@ export class ACS706xLC_05C extends Component.withPins({
   "VOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", NC: "no_connect", VOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS706xLC-05C";
@@ -414,7 +431,8 @@ export class ACS709xLFTR_6BB extends Component.withPins({
   "NC_23": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP+_5": "passive", "IP+_6": "passive", "IP-_7": "passive", "IP-_8": "passive", "IP-_9": "passive", "IP-_10": "passive", "IP-_11": "passive", "IP-_12": "passive", NC_13: "no_connect", NC_14: "no_connect", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", NC_23: "no_connect", NC_24: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS709xLFTR-6BB";
@@ -456,7 +474,8 @@ export class ACS709xLFTR_10BB extends Component.withPins({
   "NC_23": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP+_5": "passive", "IP+_6": "passive", "IP-_7": "passive", "IP-_8": "passive", "IP-_9": "passive", "IP-_10": "passive", "IP-_11": "passive", "IP-_12": "passive", NC_13: "no_connect", NC_14: "no_connect", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", NC_23: "no_connect", NC_24: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS709xLFTR-10BB";
@@ -498,7 +517,8 @@ export class ACS709xLFTR_20BB extends Component.withPins({
   "NC_23": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP+_5": "passive", "IP+_6": "passive", "IP-_7": "passive", "IP-_8": "passive", "IP-_9": "passive", "IP-_10": "passive", "IP-_11": "passive", "IP-_12": "passive", NC_13: "no_connect", NC_14: "no_connect", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", NC_23: "no_connect", NC_24: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS709xLFTR-20BB";
@@ -540,7 +560,8 @@ export class ACS709xLFTR_35BB extends Component.withPins({
   "NC_23": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP+_5": "passive", "IP+_6": "passive", "IP-_7": "passive", "IP-_8": "passive", "IP-_9": "passive", "IP-_10": "passive", "IP-_11": "passive", "IP-_12": "passive", NC_13: "no_connect", NC_14: "no_connect", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", NC_23: "no_connect", NC_24: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS709xLFTR-35BB";
@@ -574,7 +595,8 @@ export class ACS710xLATR_6BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-6BB";
@@ -608,7 +630,8 @@ export class ACS710xLATR_10BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-10BB";
@@ -642,7 +665,8 @@ export class ACS710xLATR_10BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-10BB-NL";
@@ -676,7 +700,8 @@ export class ACS710xLATR_12BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-12BB";
@@ -710,7 +735,8 @@ export class ACS710xLATR_12BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-12BB-NL";
@@ -744,7 +770,8 @@ export class ACS710xLATR_25BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-25BB";
@@ -778,7 +805,8 @@ export class ACS710xLATR_25BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-25BB-NL";
@@ -812,7 +840,8 @@ export class ACS710xLATR_6BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS710xLATR-6BB-NL";
@@ -840,7 +869,8 @@ export class ACS711xEXLT_15AB extends Component.withPins({
   "VIOUT": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+": "passive", "IP-": "passive", GND: "power_in", "~{FAULT}": "output", NC_5: "passive", NC_6: "passive", NC_7: "passive", NC_8: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS711xEXLT-15AB";
@@ -868,7 +898,8 @@ export class ACS711xEXLT_31AB extends Component.withPins({
   "VIOUT": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+": "passive", "IP-": "passive", GND: "power_in", "~{FAULT}": "output", NC_5: "passive", NC_6: "passive", NC_7: "passive", NC_8: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS711xEXLT-31AB";
@@ -894,7 +925,8 @@ export class ACS711xLCTR_12AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", "~{FAULT}": "output", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS711xLCTR-12AB";
@@ -920,7 +952,8 @@ export class ACS711xLCTR_25AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", "~{FAULT}": "output", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS711xLCTR-25AB";
@@ -946,7 +979,8 @@ export class ACS712xLCTR_05B extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS712xLCTR-05B";
@@ -972,7 +1006,8 @@ export class ACS712xLCTR_20A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS712xLCTR-20A";
@@ -998,7 +1033,8 @@ export class ACS712xLCTR_30A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS712xLCTR-30A";
@@ -1024,7 +1060,8 @@ export class ACS713xLCTR_20A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS713xLCTR-20A";
@@ -1050,7 +1087,8 @@ export class ACS713xLCTR_30A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS713xLCTR-30A";
@@ -1076,7 +1114,8 @@ export class ACS714xLCTR_05B extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS714xLCTR-05B";
@@ -1102,7 +1141,8 @@ export class ACS714xLCTR_20A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS714xLCTR-20A";
@@ -1128,7 +1168,8 @@ export class ACS714xLCTR_30A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS714xLCTR-30A";
@@ -1154,7 +1195,8 @@ export class ACS714xLCTR_50A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS714xLCTR-50A";
@@ -1180,7 +1222,8 @@ export class ACS715xLCTR_20A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS715xLCTR-20A";
@@ -1206,7 +1249,8 @@ export class ACS715xLCTR_30A extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS715xLCTR-30A";
@@ -1240,7 +1284,8 @@ export class ACS716xLATR_12BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS716xLATR-12BB";
@@ -1274,7 +1319,8 @@ export class ACS716xLATR_12BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS716xLATR-12BB-NL";
@@ -1308,7 +1354,8 @@ export class ACS716xLATR_25BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS716xLATR-25BB";
@@ -1342,7 +1389,8 @@ export class ACS716xLATR_25BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS716xLATR-25BB-NL";
@@ -1376,7 +1424,8 @@ export class ACS716xLATR_6BB extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS716xLATR-6BB";
@@ -1410,7 +1459,8 @@ export class ACS716xLATR_6BB_NL extends Component.withPins({
   "VOC": "15",
   "FAULT_EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", VZCR: "passive", FILTER: "passive", VIOUT: "output", "~{FAULT}": "output", VCC: "power_in", VOC: "input", FAULT_EN: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS716xLATR-6BB-NL";
@@ -1444,7 +1494,8 @@ export class ACS717xMATR_10B extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", NC_13: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS717xMATR-10B";
@@ -1478,7 +1529,8 @@ export class ACS717xMATR_20B extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", NC_13: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS717xMATR-20B";
@@ -1512,7 +1564,8 @@ export class ACS718xMATR_10B extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", NC_13: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS718xMATR-10B";
@@ -1546,7 +1599,8 @@ export class ACS718xMATR_20B extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", NC_13: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS718xMATR-20B";
@@ -1580,7 +1634,8 @@ export class ACS720xMATR_15B extends Component.withPins({
   "VOC_F": "15",
   "VOC_S": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", "~{FAULT_S}": "open_collector", FILTER: "passive", VIOUT: "output", "~{FAULT_F}": "open_collector", VCC: "power_in", VOC_F: "input", VOC_S: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS720xMATR-15B";
@@ -1614,7 +1669,8 @@ export class ACS720xMATR_35B extends Component.withPins({
   "VOC_F": "15",
   "VOC_S": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", "~{FAULT_S}": "open_collector", FILTER: "passive", VIOUT: "output", "~{FAULT_F}": "open_collector", VCC: "power_in", VOC_F: "input", VOC_S: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS720xMATR-35B";
@@ -1648,7 +1704,8 @@ export class ACS720xMATR_65B extends Component.withPins({
   "VOC_F": "15",
   "VOC_S": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND: "power_in", "~{FAULT_S}": "open_collector", FILTER: "passive", VIOUT: "output", "~{FAULT_F}": "open_collector", VCC: "power_in", VOC_F: "input", VOC_S: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS720xMATR-65B";
@@ -1674,7 +1731,8 @@ export class ACS722xLCTR_05AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-05AB";
@@ -1700,7 +1758,8 @@ export class ACS722xLCTR_10AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-10AB";
@@ -1726,7 +1785,8 @@ export class ACS722xLCTR_10AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-10AU";
@@ -1752,7 +1812,8 @@ export class ACS722xLCTR_20AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-20AB";
@@ -1778,7 +1839,8 @@ export class ACS722xLCTR_20AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-20AU";
@@ -1804,7 +1866,8 @@ export class ACS722xLCTR_40AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-40AB";
@@ -1830,7 +1893,8 @@ export class ACS722xLCTR_40AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xLCTR-40AU";
@@ -1864,7 +1928,8 @@ export class ACS722xMATR_10AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", BW_SEL: "input", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xMATR-10AB";
@@ -1898,7 +1963,8 @@ export class ACS722xMATR_20AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", BW_SEL: "input", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xMATR-20AB";
@@ -1932,7 +1998,8 @@ export class ACS722xMATR_40AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", BW_SEL: "input", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS722xMATR-40AB";
@@ -1958,7 +2025,8 @@ export class ACS723xLCTR_05AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-05AB";
@@ -1984,7 +2052,8 @@ export class ACS723xLCTR_10AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-10AB";
@@ -2010,7 +2079,8 @@ export class ACS723xLCTR_10AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-10AU";
@@ -2036,7 +2106,8 @@ export class ACS723xLCTR_20AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-20AB";
@@ -2062,7 +2133,8 @@ export class ACS723xLCTR_20AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-20AU";
@@ -2088,7 +2160,8 @@ export class ACS723xLCTR_40AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-40AB";
@@ -2114,7 +2187,8 @@ export class ACS723xLCTR_40AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", BW_SEL: "input", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xLCTR-40AU";
@@ -2148,7 +2222,8 @@ export class ACS723xMATR_10AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", BW_SEL: "input", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xMATR-10AB";
@@ -2182,7 +2257,8 @@ export class ACS723xMATR_20AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", BW_SEL: "input", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xMATR-20AB";
@@ -2216,7 +2292,8 @@ export class ACS723xMATR_40AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", BW_SEL: "input", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS723xMATR-40AB";
@@ -2242,7 +2319,8 @@ export class ACS724xLCTR_05AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-05AB";
@@ -2268,7 +2346,8 @@ export class ACS724xLCTR_10AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-10AB";
@@ -2294,7 +2373,8 @@ export class ACS724xLCTR_10AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-10AU";
@@ -2320,7 +2400,8 @@ export class ACS724xLCTR_20AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-20AB";
@@ -2346,7 +2427,8 @@ export class ACS724xLCTR_20AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-20AU";
@@ -2372,7 +2454,8 @@ export class ACS724xLCTR_30AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-30AB";
@@ -2398,7 +2481,8 @@ export class ACS724xLCTR_30AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-30AU";
@@ -2424,7 +2508,8 @@ export class ACS724xLCTR_50AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xLCTR-50AB";
@@ -2458,7 +2543,8 @@ export class ACS724xMATR_12AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xMATR-12AB";
@@ -2492,7 +2578,8 @@ export class ACS724xMATR_20AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xMATR-20AB";
@@ -2526,7 +2613,8 @@ export class ACS724xMATR_30AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xMATR-30AB";
@@ -2560,7 +2648,8 @@ export class ACS724xMATR_30AU extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xMATR-30AU";
@@ -2594,7 +2683,8 @@ export class ACS724xMATR_65AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS724xMATR-65AB";
@@ -2620,7 +2710,8 @@ export class ACS725xLCTR_10AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-10AU";
@@ -2646,7 +2737,8 @@ export class ACS725xLCTR_20AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-20AB";
@@ -2672,7 +2764,8 @@ export class ACS725xLCTR_20AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-20AU";
@@ -2698,7 +2791,8 @@ export class ACS725xLCTR_30AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-30AB";
@@ -2724,7 +2818,8 @@ export class ACS725xLCTR_30AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-30AU";
@@ -2750,7 +2845,8 @@ export class ACS725xLCTR_40AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-40AB";
@@ -2776,7 +2872,8 @@ export class ACS725xLCTR_50AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", FILTER: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xLCTR-50AB";
@@ -2810,7 +2907,8 @@ export class ACS725xMATR_20AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xMATR-20AB";
@@ -2844,7 +2942,8 @@ export class ACS725xMATR_30AB extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xMATR-30AB";
@@ -2878,7 +2977,8 @@ export class ACS725xMATR_30AU extends Component.withPins({
   "GND": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", NC_9: "no_connect", VCC: "power_in", NC_11: "passive", VIOUT: "output", FILTER: "passive", NC_14: "passive", GND: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS725xMATR-30AU";
@@ -2920,7 +3020,8 @@ export class ACS726xLFTR_20B extends Component.withPins({
   "NC_23": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP+_5": "passive", "IP+_6": "passive", "IP-_7": "passive", "IP-_8": "passive", "IP-_9": "passive", "IP-_10": "passive", "IP-_11": "passive", "IP-_12": "passive", NC_13: "passive", NC_14: "passive", GND: "power_in", VOUTN: "output", VOUTP: "output", VINGP: "input", VINGN: "input", VOUTGN: "output", VOUTGP: "output", VCC: "power_in", NC_23: "passive", NC_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS726xLFTR-20B";
@@ -2962,7 +3063,8 @@ export class ACS726xLFTR_40B extends Component.withPins({
   "NC_23": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP+_5": "passive", "IP+_6": "passive", "IP-_7": "passive", "IP-_8": "passive", "IP-_9": "passive", "IP-_10": "passive", "IP-_11": "passive", "IP-_12": "passive", NC_13: "passive", NC_14: "passive", GND: "power_in", VOUTN: "output", VOUTP: "output", VINGP: "input", VINGN: "input", VOUTGN: "output", VOUTGP: "output", VCC: "power_in", NC_23: "passive", NC_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS726xLFTR-40B";
@@ -2988,7 +3090,8 @@ export class ACS730xLCTR_20AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", VZCR: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS730xLCTR-20AB";
@@ -3014,7 +3117,8 @@ export class ACS730xLCTR_40AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", VZCR: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS730xLCTR-40AB";
@@ -3040,7 +3144,8 @@ export class ACS730xLCTR_40AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", VZCR: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS730xLCTR-40AU";
@@ -3066,7 +3171,8 @@ export class ACS730xLCTR_50AB extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", VZCR: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS730xLCTR-50AB";
@@ -3092,7 +3198,8 @@ export class ACS730xLCTR_80AU extends Component.withPins({
   "VIOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP-_3": "passive", "IP-_4": "passive", GND: "power_in", VZCR: "passive", VIOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS730xLCTR-80AU";
@@ -3126,7 +3233,8 @@ export class ACS732xLATR_40AB extends Component.withPins({
   "VCC_15": "15",
   "VCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND_9: "power_in", GND_10: "passive", PROGRAM: "passive", VIOUT: "output", "~{FAULT}": "output", VOC: "input", VCC_15: "power_in", VCC_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS732xLATR-40AB";
@@ -3160,7 +3268,8 @@ export class ACS733xLATR_20AB extends Component.withPins({
   "VCC_15": "15",
   "VCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND_9: "power_in", GND_10: "passive", PROGRAM: "passive", VIOUT: "output", "~{FAULT}": "output", VOC: "input", VCC_15: "power_in", VCC_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS733xLATR-20AB";
@@ -3194,7 +3303,8 @@ export class ACS733xLATR_40AB extends Component.withPins({
   "VCC_15": "15",
   "VCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND_9: "power_in", GND_10: "passive", PROGRAM: "passive", VIOUT: "output", "~{FAULT}": "output", VOC: "input", VCC_15: "power_in", VCC_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS733xLATR-40AB";
@@ -3228,7 +3338,8 @@ export class ACS733xLATR_40AU extends Component.withPins({
   "VCC_15": "15",
   "VCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND_9: "power_in", GND_10: "passive", PROGRAM: "passive", VIOUT: "output", "~{FAULT}": "output", VOC: "input", VCC_15: "power_in", VCC_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS733xLATR-40AU";
@@ -3262,7 +3373,8 @@ export class ACS733xLATR_65AB extends Component.withPins({
   "VCC_15": "15",
   "VCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "passive", "IP+_2": "passive", "IP+_3": "passive", "IP+_4": "passive", "IP-_5": "passive", "IP-_6": "passive", "IP-_7": "passive", "IP-_8": "passive", GND_9: "power_in", GND_10: "passive", PROGRAM: "passive", VIOUT: "output", "~{FAULT}": "output", VOC: "input", VCC_15: "power_in", VCC_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS733xLATR-65AB";
@@ -3285,7 +3397,8 @@ export class ACS756xCB_050B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS756xCB-050B-PFF";
@@ -3308,7 +3421,8 @@ export class ACS756xCB_100B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS756xCB-100B-PFF";
@@ -3331,7 +3445,8 @@ export class ACS758xCB_050B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-050B-PFF";
@@ -3354,7 +3469,8 @@ export class ACS758xCB_050U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-050U-PFF";
@@ -3377,7 +3493,8 @@ export class ACS758xCB_100B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-100B-PFF";
@@ -3400,7 +3517,8 @@ export class ACS758xCB_100B_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-100B-PSF";
@@ -3423,7 +3541,8 @@ export class ACS758xCB_100U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-100U-PFF";
@@ -3446,7 +3565,8 @@ export class ACS758xCB_150B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-150B-PFF";
@@ -3469,7 +3589,8 @@ export class ACS758xCB_150B_PSS extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-150B-PSS";
@@ -3492,7 +3613,8 @@ export class ACS758xCB_150U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-150U-PFF";
@@ -3515,7 +3637,8 @@ export class ACS758xCB_150U_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-150U-PSF";
@@ -3538,7 +3661,8 @@ export class ACS758xCB_200B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-200B-PFF";
@@ -3561,7 +3685,8 @@ export class ACS758xCB_200B_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-200B-PSF";
@@ -3584,7 +3709,8 @@ export class ACS758xCB_200B_PSS extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-200B-PSS";
@@ -3607,7 +3733,8 @@ export class ACS758xCB_200U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-200U-PFF";
@@ -3630,7 +3757,8 @@ export class ACS758xCB_200U_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS758xCB-200U-PSF";
@@ -3653,7 +3781,8 @@ export class ACS759xCB_050B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS759xCB-050B-PFF";
@@ -3676,7 +3805,8 @@ export class ACS759xCB_100B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS759xCB-100B-PFF";
@@ -3699,7 +3829,8 @@ export class ACS759xCB_150B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS759xCB-150B-PFF";
@@ -3722,7 +3853,8 @@ export class ACS759xCB_150B_PSS extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS759xCB-150B-PSS";
@@ -3745,7 +3877,8 @@ export class ACS759xCB_200B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS759xCB-200B-PFF";
@@ -3768,7 +3901,8 @@ export class ACS759xCB_200B_PSS extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS759xCB-200B-PSS";
@@ -3791,7 +3925,8 @@ export class ACS770xCB_050B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-050B-PFF";
@@ -3814,7 +3949,8 @@ export class ACS770xCB_050U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-050U-PFF";
@@ -3837,7 +3973,8 @@ export class ACS770xCB_100B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-100B-PFF";
@@ -3860,7 +3997,8 @@ export class ACS770xCB_100U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-100U-PFF";
@@ -3883,7 +4021,8 @@ export class ACS770xCB_100U_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-100U-PSF";
@@ -3906,7 +4045,8 @@ export class ACS770xCB_150B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-150B-PFF";
@@ -3929,7 +4069,8 @@ export class ACS770xCB_150B_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-150B-PSF";
@@ -3952,7 +4093,8 @@ export class ACS770xCB_150U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-150U-PFF";
@@ -3975,7 +4117,8 @@ export class ACS770xCB_150U_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-150U-PSF";
@@ -3998,7 +4141,8 @@ export class ACS770xCB_200B_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-200B-PFF";
@@ -4021,7 +4165,8 @@ export class ACS770xCB_200B_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-200B-PSF";
@@ -4044,7 +4189,8 @@ export class ACS770xCB_200U_PFF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-200U-PFF";
@@ -4067,7 +4213,8 @@ export class ACS770xCB_200U_PSF extends Component.withPins({
   "IP+": "4",
   "IP-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VIOUT: "output", "IP+": "passive", "IP-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS770xCB-200U-PSF";
@@ -4092,7 +4239,8 @@ export class ACS780xLRTR_050B extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS780xLRTR-050B";
@@ -4117,7 +4265,8 @@ export class ACS780xLRTR_050U extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS780xLRTR-050U";
@@ -4142,7 +4291,8 @@ export class ACS780xLRTR_100B extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS780xLRTR-100B";
@@ -4167,7 +4317,8 @@ export class ACS780xLRTR_100U extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS780xLRTR-100U";
@@ -4192,7 +4343,8 @@ export class ACS780xLRTR_150B extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS780xLRTR-150B";
@@ -4217,7 +4369,8 @@ export class ACS780xLRTR_150U extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS780xLRTR-150U";
@@ -4242,7 +4395,8 @@ export class ACS781xLRTR_050B extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS781xLRTR-050B";
@@ -4267,7 +4421,8 @@ export class ACS781xLRTR_050U extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS781xLRTR-050U";
@@ -4292,7 +4447,8 @@ export class ACS781xLRTR_100B extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS781xLRTR-100B";
@@ -4317,7 +4473,8 @@ export class ACS781xLRTR_100U extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS781xLRTR-100U";
@@ -4342,7 +4499,8 @@ export class ACS781xLRTR_150B extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS781xLRTR-150B";
@@ -4367,7 +4525,8 @@ export class ACS781xLRTR_150U extends Component.withPins({
   "IP-": "6",
   "NC_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VOUT: "output", NC_4: "passive", "IP+": "passive", "IP-": "passive", NC_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:ACS781xLRTR-150U";
@@ -4397,7 +4556,8 @@ export class CKSR_15_NP extends Component.withPins({
   "GND": "13",
   "U_{c}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", "U_{ref}": "bidirectional", "U_{out}": "output", GND: "power_in", "U_{c}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CKSR_15-NP";
@@ -4427,7 +4587,8 @@ export class CKSR_25_NP extends Component.withPins({
   "GND": "13",
   "U_{c}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", "U_{ref}": "bidirectional", "U_{out}": "output", GND: "power_in", "U_{c}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CKSR_25-NP";
@@ -4457,7 +4618,8 @@ export class CKSR_50_NP extends Component.withPins({
   "GND": "13",
   "U_{c}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", "U_{ref}": "bidirectional", "U_{out}": "output", GND: "power_in", "U_{c}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CKSR_50-NP";
@@ -4485,7 +4647,8 @@ export class CKSR_50_NP_SP1 extends Component.withPins({
   "GND": "13",
   "U_{c}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", "U_{ref}": "bidirectional", "U_{out}": "output", GND: "power_in", "U_{c}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CKSR_50-NP-SP1";
@@ -4515,7 +4678,8 @@ export class CKSR_6_NP extends Component.withPins({
   "GND": "13",
   "U_{c}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", "U_{ref}": "bidirectional", "U_{out}": "output", GND: "power_in", "U_{c}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CKSR_6-NP";
@@ -4547,7 +4711,8 @@ export class CKSR_75_NP extends Component.withPins({
   "GND": "13",
   "U_{c}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", IN5: "passive", OUT5: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", "U_{ref}": "bidirectional", "U_{out}": "output", GND: "power_in", "U_{c}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CKSR_75-NP";
@@ -4572,7 +4737,8 @@ export class CQ_2063 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2063";
@@ -4597,7 +4763,8 @@ export class CQ_2064 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2064";
@@ -4622,7 +4789,8 @@ export class CQ_2065 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2065";
@@ -4647,7 +4815,8 @@ export class CQ_206A extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-206A";
@@ -4672,7 +4841,8 @@ export class CQ_206B extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-206B";
@@ -4697,7 +4867,8 @@ export class CQ_2092 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2092";
@@ -4722,7 +4893,8 @@ export class CQ_2093 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2093";
@@ -4747,7 +4919,8 @@ export class CQ_209A extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-209A";
@@ -4772,7 +4945,8 @@ export class CQ_209B extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-209B";
@@ -4797,7 +4971,8 @@ export class CQ_209D extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-209D";
@@ -4822,7 +4997,8 @@ export class CQ_2232 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2232";
@@ -4847,7 +5023,8 @@ export class CQ_2233 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2233";
@@ -4872,7 +5049,8 @@ export class CQ_2234 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2234";
@@ -4897,7 +5075,8 @@ export class CQ_2235 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2235";
@@ -4922,7 +5101,8 @@ export class CQ_2332 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2332";
@@ -4947,7 +5127,8 @@ export class CQ_2333 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2333";
@@ -4972,7 +5153,8 @@ export class CQ_2334 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2334";
@@ -4997,7 +5179,8 @@ export class CQ_2335 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2335";
@@ -5022,7 +5205,8 @@ export class CQ_2336 extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-2336";
@@ -5047,7 +5231,8 @@ export class CQ_236B extends Component.withPins({
   "P": "6",
   "N": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA_IO: "power_in", VDD: "power_in", VSS: "power_in", VOUT: "output", SCLK: "power_in", P: "passive", N: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-236B";
@@ -5075,7 +5260,8 @@ export class CQ_3200 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3200";
@@ -5103,7 +5289,8 @@ export class CQ_3201 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3201";
@@ -5131,7 +5318,8 @@ export class CQ_3202 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3202";
@@ -5159,7 +5347,8 @@ export class CQ_3203 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3203";
@@ -5187,7 +5376,8 @@ export class CQ_3204 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3204";
@@ -5215,7 +5405,8 @@ export class CQ_320A extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-320A";
@@ -5243,7 +5434,8 @@ export class CQ_320B extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-320B";
@@ -5271,7 +5463,8 @@ export class CQ_3300 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3300";
@@ -5299,7 +5492,8 @@ export class CQ_3301 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3301";
@@ -5327,7 +5521,8 @@ export class CQ_3302 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3302";
@@ -5355,7 +5550,8 @@ export class CQ_3303 extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-3303";
@@ -5383,7 +5579,8 @@ export class CQ_330A extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330A";
@@ -5411,7 +5608,8 @@ export class CQ_330B extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330B";
@@ -5439,7 +5637,8 @@ export class CQ_330E extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330E";
@@ -5467,7 +5666,8 @@ export class CQ_330F extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330F";
@@ -5495,7 +5695,8 @@ export class CQ_330G extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330G";
@@ -5523,7 +5724,8 @@ export class CQ_330H extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330H";
@@ -5551,7 +5753,8 @@ export class CQ_330J extends Component.withPins({
   "N": "9",
   "P": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TAB_1: "power_in", TEST1: "power_in", VDD: "power_in", TEST2: "power_in", VSS: "power_in", VOUT: "output", TEST3: "power_in", TAB_8: "passive", N: "passive", P: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CQ-330J";
@@ -5574,7 +5777,8 @@ export class CSLW6B1 extends Component.withPins({
   "Iout": "4",
   "Iin": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VS: "power_in", GND: "power_in", OUT: "output", Iout: "passive", Iin: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CSLW6B1";
@@ -5597,7 +5801,8 @@ export class CSLW6B200M extends Component.withPins({
   "Iout": "4",
   "Iin": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VS: "power_in", GND: "power_in", OUT: "output", Iout: "passive", Iin: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CSLW6B200M";
@@ -5620,7 +5825,8 @@ export class CSLW6B40M extends Component.withPins({
   "Iout": "4",
   "Iin": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VS: "power_in", GND: "power_in", OUT: "output", Iout: "passive", Iin: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CSLW6B40M";
@@ -5643,7 +5849,8 @@ export class CSLW6B5 extends Component.withPins({
   "Iout": "4",
   "Iin": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VS: "power_in", GND: "power_in", OUT: "output", Iout: "passive", Iin: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CSLW6B5";
@@ -5671,7 +5878,8 @@ export class CZ_3813 extends Component.withPins({
   "IN": "9",
   "IP": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", OCD: "output", VDD: "power_in", CS: "input", VOUT: "output", DIO: "bidirectional", SCLK: "input", VSS_8: "passive", IN: "passive", IP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CZ-3813";
@@ -5699,7 +5907,8 @@ export class CZ_3814 extends Component.withPins({
   "IN": "9",
   "IP": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", OCD: "output", VDD: "power_in", CS: "input", VOUT: "output", DIO: "bidirectional", SCLK: "input", VSS_8: "passive", IN: "passive", IP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CZ-3814";
@@ -5727,7 +5936,8 @@ export class CZ_3815 extends Component.withPins({
   "IN": "9",
   "IP": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", OCD: "output", VDD: "power_in", CS: "input", VOUT: "output", DIO: "bidirectional", SCLK: "input", VSS_8: "passive", IN: "passive", IP: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:CZ-3815";
@@ -5758,7 +5968,8 @@ export class HO40_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO40-NP";
@@ -5789,7 +6000,8 @@ export class HO120_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO120-NP";
@@ -5820,7 +6032,8 @@ export class HO128_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO128-NP";
@@ -5851,7 +6064,8 @@ export class HO8_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO8-NP";
@@ -5882,7 +6096,8 @@ export class HO15_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO15-NP";
@@ -5913,7 +6128,8 @@ export class HO8_NPxSP33 extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO8-NPxSP33";
@@ -5944,7 +6160,8 @@ export class HO15_NPxSP33 extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO15-NPxSP33";
@@ -5975,7 +6192,8 @@ export class HO15_NSM extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO15-NSM";
@@ -6006,7 +6224,8 @@ export class HO150_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO150-NP";
@@ -6037,7 +6256,8 @@ export class HO25_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO25-NP";
@@ -6068,7 +6288,8 @@ export class HO25_NPxSP33 extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO25-NPxSP33";
@@ -6099,7 +6320,8 @@ export class HO25_NSM extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO25-NSM";
@@ -6130,7 +6352,8 @@ export class HO60_NP extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", IN1: "passive", IN2: "passive", IN3: "passive", IN4: "passive", OUT4: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO60-NP";
@@ -6161,7 +6384,8 @@ export class HO8_NSM extends Component.withPins({
   "OUT2": "12",
   "OUT1": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+U_{c}": "power_in", "0V": "power_in", "U_{out}": "output", "U_{ref}": "bidirectional", OCD: "open_collector", Standby: "input", NA: "passive", IN1: "passive", IN2: "passive", IN3: "passive", OUT3: "passive", OUT2: "passive", OUT1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HO8-NSM";
@@ -6183,7 +6407,8 @@ export class HTFS200_P extends Component.withPins({
   "Vout": "3",
   "Vref": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+Vc": "power_in", GND: "power_in", Vout: "output", Vref: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HTFS200-P";
@@ -6205,7 +6430,8 @@ export class HTFS400_P extends Component.withPins({
   "Vout": "3",
   "Vref": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+Vc": "power_in", GND: "power_in", Vout: "output", Vref: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HTFS400-P";
@@ -6227,7 +6453,8 @@ export class HTFS600_P extends Component.withPins({
   "Vout": "3",
   "Vref": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+Vc": "power_in", GND: "power_in", Vout: "output", Vref: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HTFS600-P";
@@ -6249,7 +6476,8 @@ export class HTFS800_P extends Component.withPins({
   "Vout": "3",
   "Vref": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+Vc": "power_in", GND: "power_in", Vout: "output", Vref: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HTFS800-P";
@@ -6273,7 +6501,8 @@ export class HX02_P extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "power_in", GND: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX02-P";
@@ -6297,7 +6526,8 @@ export class HX03_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX03-P-SP2";
@@ -6321,7 +6551,8 @@ export class HX04_P extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "power_in", GND: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX04-P";
@@ -6347,7 +6578,8 @@ export class HX05_NP extends Component.withPins({
   "IN1+": "7",
   "IN2+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "power_in", GND: "power_in", "+": "power_in", OUT: "output", "IN1-": "passive", "IN2-": "passive", "IN1+": "passive", "IN2+": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX05-NP";
@@ -6371,7 +6603,8 @@ export class HX05_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX05-P-SP2";
@@ -6395,7 +6628,8 @@ export class HX06_P extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "power_in", GND: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX06-P";
@@ -6421,7 +6655,8 @@ export class HX10_NP extends Component.withPins({
   "IN1+": "7",
   "IN2+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "power_in", GND: "power_in", "+": "power_in", OUT: "output", "IN1-": "passive", "IN2-": "passive", "IN1+": "passive", "IN2+": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX10-NP";
@@ -6445,7 +6680,8 @@ export class HX10_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX10-P-SP2";
@@ -6471,7 +6707,8 @@ export class HX15_NP extends Component.withPins({
   "IN1+": "7",
   "IN2+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "power_in", GND: "power_in", "+": "power_in", OUT: "output", "IN1-": "passive", "IN2-": "passive", "IN1+": "passive", "IN2+": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX15-NP";
@@ -6495,7 +6732,8 @@ export class HX15_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX15-P-SP2";
@@ -6519,7 +6757,8 @@ export class HX20_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX20-P-SP2";
@@ -6543,7 +6782,8 @@ export class HX25_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX25-P-SP2";
@@ -6567,7 +6807,8 @@ export class HX50_P_SP2 extends Component.withPins({
   "IN+": "5",
   "IN-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", "+": "power_in", OUT: "output", "IN+": "passive", "IN-": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:HX50-P-SP2";
@@ -6592,7 +6833,8 @@ export class IR2175 extends Component.withPins({
   "VS": "7",
   "VIN+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PO: "output", COM: "power_in", "~{OC}": "output", NC: "no_connect", VB: "passive", VS: "passive", "VIN+": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:IR2175";
@@ -6626,7 +6868,8 @@ export class IR21771S extends Component.withPins({
   "VIN+": "15",
   "VB": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", NC_2: "no_connect", VSS: "power_in", NC_4: "no_connect", NC_5: "no_connect", OC: "open_collector", PO: "open_collector", SYNC: "input", NC_9: "no_connect", NC_10: "no_connect", G0: "input", G1: "input", VS: "passive", "VIN-": "passive", "VIN+": "passive", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:IR21771S";
@@ -6660,7 +6903,8 @@ export class IR2177S extends Component.withPins({
   "VIN+": "15",
   "VB": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", VSS: "power_in", VRL: "input", VRH: "input", OC: "open_collector", PO: "open_collector", SYNC: "input", NC_9: "no_connect", NC_10: "no_connect", G0: "input", G1: "input", VS: "passive", "VIN-": "passive", "VIN+": "passive", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:IR2177S";
@@ -6694,7 +6938,8 @@ export class IR22771S extends Component.withPins({
   "VIN+": "15",
   "VB": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", NC_2: "no_connect", VSS: "power_in", NC_4: "no_connect", NC_5: "no_connect", OC: "open_collector", PO: "open_collector", SYNC: "input", NC_9: "no_connect", NC_10: "no_connect", G0: "input", G1: "input", VS: "passive", "VIN-": "passive", "VIN+": "passive", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:IR22771S";
@@ -6728,7 +6973,8 @@ export class IR2277S extends Component.withPins({
   "VIN+": "15",
   "VB": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT: "output", VSS: "power_in", VRL: "input", VRH: "input", OC: "open_collector", PO: "open_collector", SYNC: "input", NC_9: "no_connect", NC_10: "no_connect", G0: "input", G1: "input", VS: "passive", "VIN-": "passive", "VIN+": "passive", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:IR2277S";
@@ -6751,7 +6997,8 @@ export class IR25750L extends Component.withPins({
   "COM": "4",
   "VS": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "output", NC: "no_connect", GATE: "input", COM: "power_in", VS: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:IR25750L";
@@ -6772,7 +7019,8 @@ export class LA25_P extends Component.withPins({
   "-": "2",
   "+": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { M: "output", "-": "power_in", "+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LA25-P";
@@ -6793,7 +7041,8 @@ export class LA100_P extends Component.withPins({
   "-": "2",
   "+": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { M: "output", "-": "power_in", "+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LA100-P";
@@ -6824,7 +7073,8 @@ export class LA25_NP extends Component.withPins({
   "+": "12",
   "M": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN_1: "input", IN_2: "input", IN_3: "input", IN_4: "input", IN_5: "input", OUT_6: "input", OUT_7: "input", OUT_8: "input", OUT_9: "input", OUT_10: "input", "-": "power_in", "+": "power_in", M: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LA25-NP";
@@ -6845,7 +7095,8 @@ export class LA55_P extends Component.withPins({
   "-": "2",
   "+": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { M: "output", "-": "power_in", "+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LA55-P";
@@ -6873,7 +7124,8 @@ export class LTSR6_NP extends Component.withPins({
   "0V": "9",
   "+5V": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", OUT4: "passive", OUT5: "passive", OUT6: "passive", Ref: "passive", Out: "output", "0V": "power_in", "+5V": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LTSR6-NP";
@@ -6901,7 +7153,8 @@ export class LTSR15_NP extends Component.withPins({
   "0V": "9",
   "+5V": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", OUT4: "passive", OUT5: "passive", OUT6: "passive", Ref: "passive", Out: "output", "0V": "power_in", "+5V": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LTSR15-NP";
@@ -6929,7 +7182,8 @@ export class LTSR25_NP extends Component.withPins({
   "0V": "9",
   "+5V": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "passive", IN2: "passive", IN3: "passive", OUT4: "passive", OUT5: "passive", OUT6: "passive", Ref: "passive", Out: "output", "0V": "power_in", "+5V": "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:LTSR25-NP";
@@ -6963,7 +7217,8 @@ export class MCA1101_65_5 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-65-5";
@@ -6997,7 +7252,8 @@ export class MCA1101_20_3 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-20-3";
@@ -7031,7 +7287,8 @@ export class MCA1101_20_5 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-20-5";
@@ -7065,7 +7322,8 @@ export class MCA1101_5_3 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-5-3";
@@ -7099,7 +7357,8 @@ export class MCA1101_5_5 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-5-5";
@@ -7133,7 +7392,8 @@ export class MCA1101_50_3 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-50-3";
@@ -7167,7 +7427,8 @@ export class MCA1101_50_5 extends Component.withPins({
   "GND_15": "15",
   "VOC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IP+_1": "input", "IP+_2": "input", "IP+_3": "input", "IP+_4": "input", "IP-_5": "input", "IP-_6": "input", "IP-_7": "input", "IP-_8": "input", "~{FAULTB}": "open_collector", VCC: "power_in", GND_11: "power_in", Vout: "output", Vref: "passive", GND_14: "passive", GND_15: "passive", VOC: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Current:MCA1101-50-5";

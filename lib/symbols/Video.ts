@@ -28,7 +28,8 @@ export class AD725 extends Component.withPins({
   "VSYNC": "15",
   "HSYNC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "NTSC/PAL": "input", AGND: "power_in", "4FSC_CLK": "input", AVCC: "power_in", CE: "power_in", RED: "input", GREEN: "input", BLUE: "input", CHROM_OUT: "output", CVBS_OUT: "output", LUM_OUT: "output", TRAP: "input", DGND: "power_in", DVCC: "power_in", VSYNC: "input", HSYNC: "input", ...opts.pinTypes } });
   }
   override schema = "Video:AD725";
@@ -65,7 +66,8 @@ export class AD9708AR extends Component.withPins({
   "DVDD": "27",
   "Clock": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", SLEEP: "input", REFLO: "power_in", REFIO: "bidirectional", FS_ADJ: "output", COMP1: "bidirectional", ACOM: "power_in", IOUTB: "output", IOUTA: "output", COMP2: "bidirectional", AVDD: "power_in", DCOM: "power_in", DVDD: "power_in", Clock: "input", ...opts.pinTypes } });
   }
   override schema = "Video:AD9708AR";
@@ -145,7 +147,8 @@ export class AD9891 extends Component.withPins({
   "VSG5": "K9",
   "VSG7": "K10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VD: "bidirectional", DVDD: "power_in", MSHUT: "output", SDI: "input", REFT: "output", REFB: "output", BYP3: "output", "CDD-IN": "input", BYP1: "output", AVDD1: "power_in", HD: "bidirectional", DVSS: "power_in", STROBE: "output", SCK: "input", SL: "input", AVSS2: "power_in", AVDD2: "power_in", BYP2: "output", AVSS1: "power_in", TCVDD: "power_in", SYNC: "input", "LD/FD": "output", TCVSS: "power_in", CLI: "input", DCLK: "output", "PBLK/CLPOB": "output", RG: "output", CLO: "output", RGVSS: "power_in", RGVDD: "power_in", D1: "output", "D0/SD0": "output", H4: "output", H3: "output", D3: "output", D2: "output", HVSS: "power_in", HVDD: "power_in", D5: "output", D4: "output", H2: "output", H1: "output", D7: "output", D6: "output", VSUB: "output", SUBCK: "output", V2: "output", V4: "output", "VSG2/V6": "output", "VSG4/V8": "output", VSG6: "output", VSG8: "output", D9: "input", D8: "output", DRVDD: "power_out", DRVSS: "power_out", V1: "output", V3: "output", "VSG1/V5": "output", "VSG3/V7": "output", VSG5: "output", VSG7: "output", ...opts.pinTypes } });
   }
   override schema = "Video:AD9891";
@@ -227,7 +230,8 @@ export class AD9895 extends Component.withPins({
   "VSG5": "K9",
   "VSG7": "K10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VD: "bidirectional", DVDD: "power_in", MSHUT: "output", SDI: "input", REFT: "output", REFB: "output", BYP3: "output", "CDD-IN": "input", BYP1: "output", AVDD1: "power_in", HD: "bidirectional", DVSS: "power_in", STROBE: "output", SCK: "input", SL: "input", AVSS2: "power_in", AVDD2: "power_in", BYP2: "output", AVSS1: "power_in", TCVDD: "power_in", SYNC: "input", "LD/FD": "output", TCVSS: "power_in", CLI: "input", DCLK: "output", "PBLK/CLPOB": "output", RG: "output", CLO: "output", D1: "output", D0: "output", RGVSS: "power_in", RGVDD: "power_in", D3: "output", "D2/SD0": "output", H4: "output", H3: "output", D5: "output", D4: "output", HVSS: "power_in", HVDD: "power_in", D7: "output", D6: "output", H2: "output", H1: "output", D9: "output", D8: "output", VSUB: "output", SUBCK: "output", V2: "output", V4: "output", "VSG2/V6": "output", "VSG4/V8": "output", VSG6: "output", VSG8: "output", D11: "input", D10: "output", DRVDD: "power_out", DRVSS: "power_out", V1: "output", V3: "output", "VSG1/V5": "output", "VSG3/V7": "output", VSG5: "output", VSG7: "output", ...opts.pinTypes } });
   }
   override schema = "Video:AD9895";
@@ -325,7 +329,8 @@ export class AD9984AKST extends Component.withPins({
   "PV_D_79": "79",
   "GND_80": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VD_1: "power_in", B_AIN0: "input", GND_3: "power_in", B_AIN1: "input", VD_5: "passive", G_AIN0: "input", GND_7: "passive", SOGIN0: "input", VD_9: "passive", G_AIN1: "input", GND_11: "passive", SOGIN1: "input", VD_13: "passive", R_AIN0: "input", GND_15: "passive", R_AIN1: "input", PWR_DN: "input", REF_LO: "input", NC: "no_connect", REF_HI: "input", "O/E_FIELD": "output", "VSOUT/A0": "bidirectional", HSOUT: "output", SOGOUT: "output", DATACK: "output", VDD_26: "power_in", GND_27: "passive", RED_9: "output", RED_8: "output", RED_7: "output", RED_6: "output", RED_5: "output", RED_4: "output", RED_3: "output", RED_2: "output", RED_1: "output", RED_0: "output", VDD_38: "passive", GND_39: "passive", GND_40: "passive", DAV_DD: "power_in", GREEN_9: "output", GREEN_8: "output", GREEN_7: "output", GREEN_6: "output", GREEN_5: "output", GREEN_4: "output", GREEN_3: "output", GREEN_2: "output", GREEN_1: "output", GREEN_0: "output", VDD_52: "passive", GND_53: "passive", BLUE_9: "output", BLUE_8: "output", BLUE_7: "output", BLUE_6: "output", BLUE_5: "output", BLUE_4: "output", BLUE_3: "output", BLUE_2: "output", BLUE_1: "output", BLUE_0: "output", VDD_64: "passive", GND_65: "passive", SDA: "bidirectional", SCL: "input", HSYNC1: "input", VSYNC1: "input", HSYNC0: "input", VSYNC0: "input", "EXTCK/COAST": "input", CLAMP: "input", PV_D_74: "power_in", GND_75: "passive", PV_D_76: "passive", GND_77: "passive", FILT: "input", PV_D_79: "passive", GND_80: "passive", ...opts.pinTypes } });
   }
   override schema = "Video:AD9984AKST";
@@ -349,7 +354,8 @@ export class ADA4430_1YKSZ extends Component.withPins({
   "~{DIS}": "5",
   "V_{S}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{IN}": "input", GND: "power_in", SAG: "input", "V_{OUT}": "output", "~{DIS}": "input", "V_{S}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:ADA4430-1YKSZ";
@@ -373,7 +379,8 @@ export class ADA4430_1WYRTZ extends Component.withPins({
   "~{DIS}": "5",
   "V_{S}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{IN}": "input", GND: "power_in", SAG: "input", "V_{OUT}": "output", "~{DIS}": "input", "V_{S}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:ADA4430-1WYRTZ";
@@ -424,7 +431,8 @@ export class ADV7280xCP extends Component.withPins({
   "LLC": "32",
   "DGND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DGND_1: "power_in", DVDDIO: "power_in", DVDD_3: "power_in", DGND_4: "passive", P7: "output", P6: "output", P5: "output", P4: "output", P3: "output", P2: "output", P1: "output", P0: "output", DVDD_13: "power_in", XTALP: "output", XTALN: "input", PVDD: "power_in", AIN1: "input", AIN2_18: "input", VREFP: "output", VREFN: "output", AVDD: "power_in", AIN2_22: "input", AIN3: "input", "~INTRQ": "output", "~RESET": "input", ALSB: "input", SDATA: "bidirectional", SCLK: "input", "VS/FIELD/SFL": "output", HS: "output", "~PWRDWN": "input", LLC: "output", DGND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Video:ADV7280xCP";
@@ -475,7 +483,8 @@ export class ADV7390BCPZ extends Component.withPins({
   "GND_IO": "32",
   "AGND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD_IO}": "power_in", P2: "input", P3: "input", P4: "input", "V_{DD}_5": "power_in", DGND_6: "power_in", P5: "input", P6: "input", P7: "input", ALSB: "input", SDA: "bidirectional", SCL: "input", CLKIN: "input", "~{RESET}": "input", PGND: "power_in", EXT_LF: "passive", "P_{VDD}": "power_in", AGND_18: "power_in", "V_{AA}": "power_in", DAC3: "output", DAC2: "output", DAC1: "output", COMP: "output", "R_{SET}": "input", SFL: "input", "~{VSYNC}": "bidirectional", "~{HSYNC}": "bidirectional", "V_{DD}_28": "passive", DGND_29: "passive", P0: "input", P1: "input", GND_IO: "power_in", AGND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Video:ADV7390BCPZ";
@@ -526,7 +535,8 @@ export class ADV7391BCPZ extends Component.withPins({
   "GND_IO": "32",
   "AGND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD_IO}": "power_in", P2: "input", P3: "input", P4: "input", "V_{DD}_5": "power_in", DGND_6: "power_in", P5: "input", P6: "input", P7: "input", ALSB: "input", SDA: "bidirectional", SCL: "input", CLKIN: "input", "~{RESET}": "input", PGND: "power_in", EXT_LF: "passive", "P_{VDD}": "power_in", AGND_18: "power_in", "V_{AA}": "power_in", DAC3: "output", DAC2: "output", DAC1: "output", COMP: "output", "R_{SET}": "input", SFL: "input", "~{VSYNC}": "bidirectional", "~{HSYNC}": "bidirectional", "V_{DD}_28": "passive", DGND_29: "passive", P0: "input", P1: "input", GND_IO: "power_in", AGND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Video:ADV7391BCPZ";
@@ -550,7 +560,8 @@ export class AV9173 extends Component.withPins({
   "VCC": "7",
   "CLK/2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FSIGIN: "input", FREFIN: "input", GND: "input", FS0: "input", OE: "input", CKKOUT: "tri_state", VCC: "input", "CLK/2": "tri_state", ...opts.pinTypes } });
   }
   override schema = "Video:AV9173";
@@ -588,7 +599,8 @@ export class CX7930 extends Component.withPins({
   "OFH": "27",
   "VDD": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VRI: "input", OFLD1: "output", OBF: "output", OSYNC: "output", OFLD: "output", OBLK: "output", OLALT: "output", OHD: "output", "4FSCO": "output", "4FSCI": "input", OVD: "output", VSS: "input", LALTRI: "input", TEST: "input", OSC: "output", EXT: "input", MODE1: "input", MODE2: "input", HRI: "input", HCOMO: "output", CLOUT: "output", CLIN: "input", OFH: "output", VDD: "input", ...opts.pinTypes } });
   }
   override schema = "Video:CX7930";
@@ -630,7 +642,8 @@ export class CXA1145P extends Component.withPins({
   "R_OUT": "23",
   "GND_2": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", R_IN: "input", G_IN: "input", B_IN: "input", XO_OUT: "output", XO_IN: "input", "NTSC/~{PAL}_IN": "input", AUDIO_IN: "input", AUDIO_OUT: "output", C_SYNC_IN: "input", C_SYNC_OUT: "output", "V_{CC}_1": "power_in", I_REF: "input", V_REF: "output", C_OUT: "output", Y_OUT: "output", C_IN: "input", Y_IN: "input", "V_{CC}_2": "power_in", C_VIDEO_OUT: "output", B_OUT: "output", G_OUT: "output", R_OUT: "output", GND_2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:CXA1145P";
@@ -667,7 +680,8 @@ export class CXD3400N extends Component.withPins({
   "V3B": "19",
   "SHT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", XSHT: "input", XV3: "input", XSG3B: "input", XSG3A: "input", XV1: "input", XSG1B: "input", XSG1A: "input", XV4: "input", XV2: "input", GND: "power_in", V2: "output", V4: "output", V1A: "output", VH: "power_in", V1B: "output", V3A: "output", VL: "power_in", V3B: "output", SHT: "output", ...opts.pinTypes } });
   }
   override schema = "Video:CXD3400N";
@@ -749,7 +763,8 @@ export class HD63484P extends Component.withPins({
   "~{DISP1}": "63",
   "LPSTB": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CUD1}": "output", "~{CUD2}": "output", "R/~{W}": "input", "~{CS}": "input", RS: "input", "~{RES}": "input", "~{DONE}": "bidirectional", "~{DREQ}": "output", "~{DACK}": "input", "~{DTACK}": "tri_state", "~{IRQ}": "open_collector", "~{HSYNC}": "output", "~{VSYNC}": "output", VCC_14: "power_in", "~{EXTSYNC}": "bidirectional", VSS_16: "power_in", D0: "bidirectional", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", D8: "bidirectional", D9: "bidirectional", D10: "bidirectional", D11: "bidirectional", D12: "bidirectional", D13: "bidirectional", D14: "bidirectional", D15: "bidirectional", RA4: "output", "MA19/RA3": "output", "MA18/RA2": "output", "MA17/RA1": "output", "MA16/RA0": "output", MAD15: "bidirectional", MAD14: "bidirectional", MAD13: "bidirectional", MAD12: "bidirectional", MAD11: "bidirectional", MAD10: "bidirectional", MAD9: "bidirectional", MAD8: "bidirectional", MAD7: "bidirectional", MAD6: "bidirectional", MAD5: "bidirectional", VCC_49: "passive", "2CLK": "input", VSS_51: "passive", MCYC: "output", "~{AS}": "output", "~{DRAW}": "output", MRD: "output", CHR: "output", MAD4: "bidirectional", MAD3: "bidirectional", MAD2: "bidirectional", MAD1: "bidirectional", MAD0: "bidirectional", "~{DISP2}": "output", "~{DISP1}": "output", LPSTB: "input", ...opts.pinTypes } });
   }
   override schema = "Video:HD63484P";
@@ -831,7 +846,8 @@ export class HD63484_PLCC extends Component.withPins({
   "DISP1": "67",
   "LPSTB": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC_1: "input", CUD1: "output", CUD2: "output", "R/W": "input", CS: "input", RS: "input", RESET: "input", DONE: "input", DREQ: "output", DACK: "input", DTACK: "output", IRQ: "output", HSYNC: "output", VSYNC: "output", VCC_15: "input", EXTSYNC: "input", GND_17: "input", GND_18: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", D8: "tri_state", D9: "tri_state", D10: "tri_state", D11: "tri_state", D12: "tri_state", D13: "tri_state", D14: "tri_state", D15: "tri_state", GND_35: "input", RA4: "output", "MA19/RA3": "output", "MA18/RA2": "output", "MA17/RA1": "output", "MA16/RA0": "output", MAD15: "tri_state", MAD14: "tri_state", MAD13: "tri_state", MAD12: "tri_state", MAD11: "tri_state", MAD10: "tri_state", MAD9: "tri_state", MAD8: "tri_state", MAD7: "tri_state", MAD6: "tri_state", MAD5: "tri_state", VCC_52: "input", "2CLK": "input", GND_54: "input", GND_55: "input", MCYC: "output", AS: "output", DRAW: "output", MRD: "output", CHR: "output", MAD4: "tri_state", MAD3: "tri_state", MAD2: "tri_state", MAD1: "tri_state", MAD0: "tri_state", DISP2: "output", DISP1: "output", LPSTB: "input", ...opts.pinTypes } });
   }
   override schema = "Video:HD63484_PLCC";
@@ -860,7 +876,8 @@ export class ICX415AQ extends Component.withPins({
   "CSUB": "20",
   "SUBCIR": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { V3: "input", V2: "input", V1: "input", GND: "power_in", VOUT: "output", CGG: "input", VDD: "power_in", RG: "input", VL: "power_in", SUB: "input", H1: "input", H2: "input", CSUB: "input", SUBCIR: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:ICX415AQ";
@@ -886,7 +903,8 @@ export class ISL59885 extends Component.withPins({
   "HSYNC": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CSYNC: "output", CVBS: "input", VSYNC: "output", GND: "power_in", "~{HD}": "output", CSET: "passive", HSYNC: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:ISL59885";
@@ -911,7 +929,8 @@ export class LM1881 extends Component.withPins({
   "OEOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CSOUT: "output", CVIN: "input", VSOUT: "output", GND: "power_in", BPOUT: "output", RSET: "input", OEOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:LM1881";
@@ -943,7 +962,8 @@ export class MAX310 extends Component.withPins({
   "A2": "15",
   "GND": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S1: "input", S2: "input", S3: "input", S4: "input", S5: "input", S6: "input", S7: "input", S8: "input", "V-": "input", OUT: "input", "V+": "input", EN: "input", A0: "input", A1: "input", A2: "input", GND: "input", ...opts.pinTypes } });
   }
   override schema = "Video:MAX310";
@@ -975,7 +995,8 @@ export class MAX311 extends Component.withPins({
   "GND": "15",
   "OUTA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S1A: "input", S2A: "input", S3A: "input", S4A: "input", S1B: "input", S2B: "input", S3B: "input", S4B: "input", "V-": "input", OUTB: "input", "V+": "input", EN: "input", A0: "input", A1: "input", GND: "input", OUTA: "output", ...opts.pinTypes } });
   }
   override schema = "Video:MAX311";
@@ -1008,7 +1029,8 @@ export class MB88303P extends Component.withPins({
   "DA7": "21",
   "VCC": "22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RESET: "input", VOW: "output", VOB: "output", VSYNC: "input", HSYNC: "input", "EX/RC": "input", "X/R": "output", GND: "power_in", LDI: "input", ADM: "input", DA0: "input", DA1: "input", DA2: "input", DA3: "input", DA4: "input", DA5: "input", DA6: "input", DA7: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:MB88303P";
@@ -1049,7 +1071,8 @@ export class S178 extends Component.withPins({
   "VD": "27",
   "SUP_28": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VCC": "input", "2.9": "input", "2.8": "input", "2.7": "input", "2.6": "input", "2.5": "input", "2.4": "input", "2.3": "input", "2.2": "input", "2.1": "input", "2.0": "input", VR: "input", SV: "input", "-VCC": "input", H2: "output", CP: "input", V: "input", SH: "input", HD: "output", CS: "output", CLAMP: "output", "N.C": "input", "N.B": "input", "N.A": "input", SUP_26: "output", VD: "output", SUP_28: "output", ...opts.pinTypes } });
   }
   override schema = "Video:S178";
@@ -1138,7 +1161,8 @@ export class SAA7182 extends Component.withPins({
   "SCL": "83",
   "SDA": "84",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~RESN~": "input", VSS_3: "power_in", SA: "input", VDD_5: "power_in", OVL2: "input", OVL1: "input", OVL0: "input", KEY: "input", DP0: "input", DP1: "input", DP2: "input", DP3: "input", VDD_14: "power_in", VSS_15: "power_in", DP4: "input", DP5: "input", DP6: "input", DP7: "input", TTXRQ: "output", TTX: "input", VDD_22: "power_in", VSS_24: "power_in", MP7: "input", MP6: "input", MP5: "input", MP4: "input", VDD_29: "power_in", VSS_30: "power_in", MP3: "input", MP2: "input", MP1: "input", MP0: "input", RCV1: "bidirectional", RCV2: "bidirectional", VDD_38: "power_in", VSS_39: "power_in", VDD_41: "power_in", VSS_42: "power_in", XTALI: "input", XTAL: "output", CREF: "bidirectional", LCC: "bidirectional", VDD_49: "power_in", CDIR: "input", VSS_51: "power_in", VREFL_52: "passive", VREFH_53: "passive", VDDA_54: "power_in", B: "output", VDDA_57: "power_in", G: "output", VDDA_60: "power_in", R: "output", CUR_63: "input", VDDA_64: "power_in", VSSA: "power_in", CUR_68: "input", C: "output", VDDA_70: "power_in", Y: "output", VDDA_72: "power_in", CVBS: "output", VDDA_74: "power_in", VREFH_75: "passive", VREFL_76: "passive", AP: "input", SP: "input", VSS_79: "power_in", VDD_80: "power_in", VSS_81: "power_in", VDD_82: "power_in", SCL: "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Video:SAA7182";
@@ -1159,7 +1183,8 @@ export class SI582 extends Component.withPins({
   "V+": "7",
   "DIS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OFS: "input", "IN-": "input", "IN+": "input", "V-": "power_in", OUT: "input", "V+": "power_in", DIS: "input", ...opts.pinTypes } });
   }
   override schema = "Video:SI582";
@@ -1190,7 +1215,8 @@ export class TDA1950 extends Component.withPins({
   "PHASE": "17",
   "FLYV": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "input", HD: "output", FLYH: "input", SANDCASTLE: "output", VR: "input", SW: "output", MUTE: "output", NIVSEP: "input", CS: "output", NIVV: "output", VIDEO: "input", NIVH: "output", PHCMP: "output", C: "output", R: "output", PHASE: "input", FLYV: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA1950";
@@ -1221,7 +1247,8 @@ export class TDA1950F extends Component.withPins({
   "PHASE": "17",
   "FLYV": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "input", HD: "output", FLYH: "input", SANDCASTLE: "output", VR: "input", SW: "output", MUTE: "output", NIVSEP: "input", CS: "output", NIVV: "output", VIDEO: "input", NIVH: "output", PHCMP: "output", C: "output", R: "output", PHASE: "input", FLYV: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA1950F";
@@ -1251,7 +1278,8 @@ export class TDA2593 extends Component.withPins({
   "R": "15",
   "GND": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "input", V0: "input", HD: "output", PD: "input", P5: "input", FW: "input", SANDC: "output", VD: "output", VIDEO: "input", NS: "input", VCR: "input", F_12: "input", F_13: "input", C: "input", R: "input", GND: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA2593";
@@ -1285,7 +1313,8 @@ export class TDA7260 extends Component.withPins({
   "VP+": "19",
   "MUTE": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SI: "output", "I-": "input", "I+": "input", S0: "output", "E-": "input", "E+": "input", LIM: "output", GNDA: "power_in", "+10": "output", CD: "input", GND: "power_in", G4: "output", POMPE2: "input", G3: "output", G2: "output", POMPE1: "input", G1: "output", CL: "input", "VP+": "input", MUTE: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA7260";
@@ -1326,7 +1355,8 @@ export class TDA8501 extends Component.withPins({
   "OSC": "23",
   "CS": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-R.Y": "input", MCTR: "input", "-B.Y": "input", "H/2": "bidirectional", Y: "input", UOFF: "output", R: "input", VCC: "power_in", G: "input", VSS: "power_in", B: "input", VOFF: "output", VREF: "passive", "C/OUT": "output", FLT: "passive", CVBS: "output", "NTSC/PAL": "input", NOTCH: "input", "Y/OUT": "output", "Y+SIN": "input", "B/ADJ": "passive", "Y+SOUT": "output", OSC: "output", CS: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA8501";
@@ -1359,7 +1389,8 @@ export class TDA8702 extends Component.withPins({
   "~VOUT~": "15",
   "VCCA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "bidirectional", AGND: "power_in", DB2: "input", DB3: "input", CLK: "input", DGND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB1: "input", DB0: "input", VCCD: "power_in", VOUT: "output", "~VOUT~": "output", VCCA: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:TDA8702";
@@ -1392,7 +1423,8 @@ export class TDA8702T extends Component.withPins({
   "~VOUT~": "15",
   "VCCA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "bidirectional", AGND: "power_in", DB2: "input", DB3: "input", CLK: "input", DGND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB1: "input", DB0: "input", VCCD: "power_in", VOUT: "output", "~VOUT~": "output", VCCA: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:TDA8702T";
@@ -1453,7 +1485,8 @@ export class TDA8772 extends Component.withPins({
   "VCCA_43": "43",
   "RED": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R7: "input", R6: "input", R5: "input", R4: "input", R3: "input", R2: "input", R1: "input", R0: "input", GND_9: "power_in", VCC_10: "power_in", SYNC: "input", BLANK: "input", G7: "input", G6: "input", G5: "input", G4: "input", G3: "input", G2: "input", G1: "input", G0: "input", CLKR: "input", CLKG: "input", CLKB: "input", B7: "input", B6: "input", B5: "input", B4: "input", B3: "input", B2: "input", B1: "input", B0: "input", VCC_32: "power_in", GND_33: "power_in", VRD: "input", VCCA_35: "power_in", BLU: "output", GNDA_37: "power_in", IRFA: "passive", VCCA_39: "power_in", GRE: "output", IRFB: "passive", GNDA_42: "power_in", VCCA_43: "power_in", RED: "output", ...opts.pinTypes } });
   }
   override schema = "Video:TDA8772";
@@ -1482,7 +1515,8 @@ export class TDA9500 extends Component.withPins({
   "C": "15",
   "R": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SH: "output", VCC: "power_in", SANDC: "output", VIN: "power_in", CS: "output", TOPV: "output", P9: "passive", P10: "passive", FW: "input", P12: "passive", P13: "passive", COM: "passive", C: "input", R: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA9500";
@@ -1511,7 +1545,8 @@ export class TDA9503 extends Component.withPins({
   "C": "15",
   "R": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SH: "output", VCC: "power_in", SANDC: "output", VIN: "power_in", CS: "output", TOPV: "output", P9: "passive", P10: "passive", FW: "input", P12: "passive", P13: "passive", COM: "passive", C: "input", R: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA9503";
@@ -1540,7 +1575,8 @@ export class TDA9513 extends Component.withPins({
   "C": "15",
   "R": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SH: "output", VCC: "power_in", SANDC: "output", VIN: "power_in", CS: "output", TOPV: "output", P9: "passive", P10: "passive", FW: "input", P12: "passive", P13: "passive", COM: "passive", C: "input", R: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TDA9513";
@@ -1566,7 +1602,8 @@ export class TEA2014 extends Component.withPins({
   "VCC": "7",
   "EVI": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VO: "output", IVI: "input", NC: "no_connect", "2/1": "input", SVO: "output", VCC: "power_in", EVI: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TEA2014";
@@ -1598,7 +1635,8 @@ export class TEA5115 extends Component.withPins({
   "ES1": "17",
   "EV1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ES2: "input", EV2: "input", "SEL1/2": "input", VOUT: "output", GND: "power_in", BOUT: "output", VSP: "input", EB2: "input", EFB2: "input", EB1: "input", EFB1: "input", ER1: "input", FBOUT: "output", ROUT: "output", SYOUT: "output", ER2: "input", ES1: "input", EV1: "input", ...opts.pinTypes } });
   }
   override schema = "Video:TEA5115";
@@ -1681,7 +1719,8 @@ export class TFP410PAP extends Component.withPins({
   "DGND_64": "64",
   "EP": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVDD_1: "power_in", DE: "input", VREF: "input", HSYNC: "input", VSYNC: "input", "CTL3/A3/DK3": "input", "CTL2/A2/DK2": "input", "CTL1/A1/DK1": "input", "EDGE/HTPLG": "input", "~PD": "input", "MSEN/PO1": "output", DVDD_12: "passive", "ISEL/~RST": "input", "DSEL/SDA": "bidirectional", "BSEL/SCL": "input", DGND_16: "power_in", PGND: "power_in", PVDD: "power_in", TFADJ: "input", TGND_20: "power_in", "TXC-": "output", "TXC+": "output", TVDD_23: "power_in", "TX0-": "output", "TX0+": "output", TGND_26: "passive", "TX1-": "output", "TX1+": "output", TVDD_29: "passive", "TX2-": "output", "TX2+": "output", TGND_32: "passive", DVDD_33: "passive", RESERVED: "input", DKEN: "input", DATA23: "input", DATA22: "input", DATA21: "input", DATA20: "input", DATA19: "input", DATA18: "input", DATA17: "input", DATA16: "input", DATA15: "input", DATA14: "input", DATA13: "input", DATA12: "input", DGND_48: "passive", NC: "no_connect", DATA11: "input", DATA10: "input", DATA9: "input", DATA8: "input", DATA7: "input", DATA6: "input", "IDCK-": "input", "IDCK+": "input", DATA5: "input", DATA4: "input", DATA3: "input", DATA2: "input", DATA1: "input", DATA0: "input", DGND_64: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Video:TFP410PAP";

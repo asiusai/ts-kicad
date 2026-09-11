@@ -9,7 +9,8 @@ import { Component } from "ts-kicad";
  */
 export class Logo_Open_Hardware_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:Logo_Open_Hardware_Large";
@@ -24,7 +25,8 @@ export class Logo_Open_Hardware_Large extends Component.withPins({
  */
 export class Logo_Open_Hardware_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:Logo_Open_Hardware_Small";
@@ -39,7 +41,8 @@ export class Logo_Open_Hardware_Small extends Component.withPins({
  */
 export class SYM_Arrow45_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow45_Large";
@@ -54,7 +57,8 @@ export class SYM_Arrow45_Large extends Component.withPins({
  */
 export class SYM_Arrow45_Normal extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow45_Normal";
@@ -69,7 +73,8 @@ export class SYM_Arrow45_Normal extends Component.withPins({
  */
 export class SYM_Arrow45_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow45_Small";
@@ -84,7 +89,8 @@ export class SYM_Arrow45_Small extends Component.withPins({
  */
 export class SYM_Arrow45_Tiny extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow45_Tiny";
@@ -99,7 +105,8 @@ export class SYM_Arrow45_Tiny extends Component.withPins({
  */
 export class SYM_Arrow45_XLarge extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow45_XLarge";
@@ -114,7 +121,8 @@ export class SYM_Arrow45_XLarge extends Component.withPins({
  */
 export class SYM_Arrow_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow_Large";
@@ -129,7 +137,8 @@ export class SYM_Arrow_Large extends Component.withPins({
  */
 export class SYM_Arrow_Normal extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow_Normal";
@@ -144,7 +153,8 @@ export class SYM_Arrow_Normal extends Component.withPins({
  */
 export class SYM_Arrow_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow_Small";
@@ -159,7 +169,8 @@ export class SYM_Arrow_Small extends Component.withPins({
  */
 export class SYM_Arrow_Tiny extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow_Tiny";
@@ -174,7 +185,8 @@ export class SYM_Arrow_Tiny extends Component.withPins({
  */
 export class SYM_Arrow_XLarge extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Arrow_XLarge";
@@ -189,7 +201,8 @@ export class SYM_Arrow_XLarge extends Component.withPins({
  */
 export class SYM_ESD_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_ESD_Large";
@@ -204,7 +217,8 @@ export class SYM_ESD_Large extends Component.withPins({
  */
 export class SYM_ESD_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_ESD_Small";
@@ -219,7 +233,8 @@ export class SYM_ESD_Small extends Component.withPins({
  */
 export class SYM_Earth_Protective_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Earth_Protective_Large";
@@ -234,7 +249,8 @@ export class SYM_Earth_Protective_Large extends Component.withPins({
  */
 export class SYM_Earth_Protective_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Earth_Protective_Small";
@@ -252,7 +268,8 @@ export class SYM_Earth_Protective_Small extends Component.withPins({
  */
 export class SYM_EasterEgg_42x60mm extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_EasterEgg_42x60mm";
@@ -267,7 +284,8 @@ export class SYM_EasterEgg_42x60mm extends Component.withPins({
  */
 export class SYM_Flash_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Flash_Large";
@@ -282,7 +300,8 @@ export class SYM_Flash_Large extends Component.withPins({
  */
 export class SYM_Flash_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Flash_Small";
@@ -297,7 +316,8 @@ export class SYM_Flash_Small extends Component.withPins({
  */
 export class SYM_Flash_XLarge extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Flash_XLarge";
@@ -312,7 +332,8 @@ export class SYM_Flash_XLarge extends Component.withPins({
  */
 export class SYM_Hot_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Hot_Large";
@@ -327,7 +348,8 @@ export class SYM_Hot_Large extends Component.withPins({
  */
 export class SYM_Hot_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Hot_Small";
@@ -342,7 +364,8 @@ export class SYM_Hot_Small extends Component.withPins({
  */
 export class SYM_LASER_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_LASER_Large";
@@ -357,7 +380,8 @@ export class SYM_LASER_Large extends Component.withPins({
  */
 export class SYM_LASER_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_LASER_Small";
@@ -372,7 +396,8 @@ export class SYM_LASER_Small extends Component.withPins({
  */
 export class SYM_Magnet_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Magnet_Large";
@@ -387,7 +412,8 @@ export class SYM_Magnet_Large extends Component.withPins({
  */
 export class SYM_Magnet_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Magnet_Small";
@@ -402,7 +428,8 @@ export class SYM_Magnet_Small extends Component.withPins({
  */
 export class SYM_Radio_Waves_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Radio_Waves_Large";
@@ -417,7 +444,8 @@ export class SYM_Radio_Waves_Large extends Component.withPins({
  */
 export class SYM_Radio_Waves_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Radio_Waves_Small";
@@ -432,7 +460,8 @@ export class SYM_Radio_Waves_Small extends Component.withPins({
  */
 export class SYM_Radioactive_Large extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Radioactive_Large";
@@ -447,7 +476,8 @@ export class SYM_Radioactive_Large extends Component.withPins({
  */
 export class SYM_Radioactive_Radiation_Small extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Graphic:SYM_Radioactive_Radiation_Small";

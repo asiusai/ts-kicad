@@ -44,7 +44,8 @@ export class C8051F381_GQ extends Component.withPins({
   "P0.3": "31",
   "P0.2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F381-GQ";
@@ -94,7 +95,8 @@ export class C8051F320_GQ extends Component.withPins({
   "P0.3": "31",
   "P0.2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F320-GQ";
@@ -141,7 +143,8 @@ export class C8051F321_GM extends Component.withPins({
   "P0.2": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F321-GM";
@@ -207,7 +210,8 @@ export class C8051F380_GQ extends Component.withPins({
   "P0.7": "47",
   "P0.6": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", C2D: "bidirectional", "P4.7": "bidirectional", "P4.6": "bidirectional", "P4.5": "bidirectional", "P4.4": "bidirectional", "P4.3": "bidirectional", "P4.2": "bidirectional", "P4.1": "bidirectional", "P4.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F380-GQ";
@@ -258,7 +262,8 @@ export class C8051F381_GM extends Component.withPins({
   "P0.2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F381-GM";
@@ -324,7 +329,8 @@ export class C8051F382_GQ extends Component.withPins({
   "P0.7": "47",
   "P0.6": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", C2D: "bidirectional", "P4.7": "bidirectional", "P4.6": "bidirectional", "P4.5": "bidirectional", "P4.4": "bidirectional", "P4.3": "bidirectional", "P4.2": "bidirectional", "P4.1": "bidirectional", "P4.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F382-GQ";
@@ -375,7 +381,8 @@ export class C8051F383_GM extends Component.withPins({
   "P0.2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F383-GM";
@@ -425,7 +432,8 @@ export class C8051F383_GQ extends Component.withPins({
   "P0.3": "31",
   "P0.2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F383-GQ";
@@ -491,7 +499,8 @@ export class C8051F384_GQ extends Component.withPins({
   "P0.7": "47",
   "P0.6": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", C2D: "bidirectional", "P4.7": "bidirectional", "P4.6": "bidirectional", "P4.5": "bidirectional", "P4.4": "bidirectional", "P4.3": "bidirectional", "P4.2": "bidirectional", "P4.1": "bidirectional", "P4.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F384-GQ";
@@ -542,7 +551,8 @@ export class C8051F385_GM extends Component.withPins({
   "P0.2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F385-GM";
@@ -592,7 +602,8 @@ export class C8051F385_GQ extends Component.withPins({
   "P0.3": "31",
   "P0.2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F385-GQ";
@@ -658,7 +669,8 @@ export class C8051F386_GQ extends Component.withPins({
   "P0.7": "47",
   "P0.6": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", C2D: "bidirectional", "P4.7": "bidirectional", "P4.6": "bidirectional", "P4.5": "bidirectional", "P4.4": "bidirectional", "P4.3": "bidirectional", "P4.2": "bidirectional", "P4.1": "bidirectional", "P4.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F386-GQ";
@@ -709,7 +721,8 @@ export class C8051F387_GM extends Component.withPins({
   "P0.2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F387-GM";
@@ -759,7 +772,8 @@ export class C8051F387_GQ extends Component.withPins({
   "P0.3": "31",
   "P0.2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F387-GQ";
@@ -810,7 +824,8 @@ export class C8051F38C_GM extends Component.withPins({
   "P0.2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F38C-GM";
@@ -860,7 +875,8 @@ export class C8051F38C_GQ extends Component.withPins({
   "P0.3": "31",
   "P0.2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}/C2CK": "input", "P3.0/C2D": "bidirectional", "P2.7": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:C8051F38C-GQ";
@@ -943,7 +959,8 @@ export class EFM32G230F128G_E_QFN64 extends Component.withPins({
   "PA15": "64",
   "VSS": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", IOVDD_8: "power_in", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", PA10: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", PB12: "bidirectional", AVDD_23: "power_in", PB13: "bidirectional", PB14: "bidirectional", IOVDD_26: "passive", AVDD_27: "passive", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PD8: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC8: "bidirectional", PC9: "bidirectional", PC10: "bidirectional", PC11: "bidirectional", PC12: "bidirectional", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", IOVDD_55: "passive", PE8: "bidirectional", PE9: "bidirectional", PE10: "bidirectional", PE11: "bidirectional", PE12: "bidirectional", PE13: "bidirectional", PE14: "bidirectional", PE15: "bidirectional", PA15: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32G230F128G-E-QFN64";
@@ -986,7 +1003,8 @@ export class EFM32HG108F32G_C_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32HG108F32G-C-QFN24";
@@ -1029,7 +1047,8 @@ export class EFM32HG108F64G_C_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32HG108F64G-C-QFN24";
@@ -1072,7 +1091,8 @@ export class EFM32HG308F32G_C_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_0: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_2: "power_in", PB13: "bidirectional", PB14: "bidirectional", AVDD_0: "power_in", VDD_DREG: "power_in", DECOUPLE: "passive", USB_VREGI: "power_in", USB_VREGO: "power_out", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_5: "power_in", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32HG308F32G-C-QFN24";
@@ -1115,7 +1135,8 @@ export class EFM32HG308F64G_C_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_0: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_2: "power_in", PB13: "bidirectional", PB14: "bidirectional", AVDD_0: "power_in", VDD_DREG: "power_in", DECOUPLE: "passive", USB_VREGI: "power_in", USB_VREGO: "power_out", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_5: "power_in", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32HG308F64G-C-QFN24";
@@ -1158,7 +1179,8 @@ export class EFM32ZG108F16_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG108F16-B-QFN24";
@@ -1201,7 +1223,8 @@ export class EFM32ZG108F32_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG108F32-B-QFN24";
@@ -1244,7 +1267,8 @@ export class EFM32ZG108F4_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG108F4-B-QFN24";
@@ -1287,7 +1311,8 @@ export class EFM32ZG108F8_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG108F8-B-QFN24";
@@ -1330,7 +1355,8 @@ export class EFM32ZG110F16_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG110F16-B-QFN24";
@@ -1373,7 +1399,8 @@ export class EFM32ZG110F32_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG110F32-B-QFN24";
@@ -1416,7 +1443,8 @@ export class EFM32ZG110F4_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG110F4-B-QFN24";
@@ -1459,7 +1487,8 @@ export class EFM32ZG110F8_B_QFN24 extends Component.withPins({
   "PE13": "24",
   "VSS": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", IOVDD_2: "power_in", PC0: "bidirectional", PC1: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", "~{RESET}": "input", PB11: "bidirectional", AVDD_9: "passive", PB13: "bidirectional", PB14: "bidirectional", AVDD_12: "power_in", PD6: "bidirectional", PD7: "bidirectional", VDD_DREG: "power_in", DECOUPLE: "passive", PC14: "bidirectional", PC15: "bidirectional", PF0: "bidirectional", PF1: "bidirectional", PF2: "bidirectional", IOVDD_22: "passive", PE12: "bidirectional", PE13: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM32ZG110F8-B-QFN24";
@@ -1498,7 +1527,8 @@ export class EFM8BB10F8G_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8G-A-QFN20";
@@ -1537,7 +1567,8 @@ export class EFM8BB10F2A_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F2A-A-QFN20";
@@ -1576,7 +1607,8 @@ export class EFM8BB10F2G_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F2G-A-QFN20";
@@ -1615,7 +1647,8 @@ export class EFM8BB10F2I_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F2I-A-QFN20";
@@ -1654,7 +1687,8 @@ export class EFM8BB10F4A_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F4A-A-QFN20";
@@ -1693,7 +1727,8 @@ export class EFM8BB10F4G_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F4G-A-QFN20";
@@ -1732,7 +1767,8 @@ export class EFM8BB10F4I_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F4I-A-QFN20";
@@ -1771,7 +1807,8 @@ export class EFM8BB10F8A_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8A-A-QFN20";
@@ -1813,7 +1850,8 @@ export class EFM8BB10F8G_A_QSOP24 extends Component.withPins({
   "P0.3": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P2.1": "bidirectional", NC_13: "no_connect", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", NC_24: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8G-A-QSOP24";
@@ -1847,7 +1885,8 @@ export class EFM8BB10F8G_A_SOIC16 extends Component.withPins({
   "P0.4": "15",
   "P0.3": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8G-A-SOIC16";
@@ -1886,7 +1925,8 @@ export class EFM8BB10F8I_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8I-A-QFN20";
@@ -1928,7 +1968,8 @@ export class EFM8BB10F8I_A_QSOP24 extends Component.withPins({
   "P0.3": "23",
   "NC_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P2.1": "bidirectional", NC_13: "no_connect", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", NC_24: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8I-A-QSOP24";
@@ -1962,7 +2003,8 @@ export class EFM8BB10F8I_A_SOIC16 extends Component.withPins({
   "P0.4": "15",
   "P0.3": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", VDD: "power_in", "RSTb/C2CK": "input", "P2.0/C2D": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8BB10F8I-A-SOIC16";
@@ -2012,7 +2054,8 @@ export class EFM8LB12F32E_C_QFP32 extends Component.withPins({
   "P0.2": "31",
   "P0.1": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.0": "bidirectional", GND: "power_in", VIO: "power_in", VDD: "power_in", "~{RST}": "input", "P3.7": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8LB12F32E-C-QFP32";
@@ -2062,7 +2105,8 @@ export class EFM8LB12F64E_C_QFP32 extends Component.withPins({
   "P0.2": "31",
   "P0.1": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.0": "bidirectional", GND: "power_in", VIO: "power_in", VDD: "power_in", "~{RST}": "input", "P3.7": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", "P2.6": "bidirectional", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8LB12F64E-C-QFP32";
@@ -2101,7 +2145,8 @@ export class EFM8UB30F40G_A_QFN20 extends Component.withPins({
   "P0.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.1": "bidirectional", "P0.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", VREGIN: "power_in", "P2.1/VBUS": "bidirectional", "~{RST}/C2CK": "bidirectional", "P2.0/C2D": "bidirectional", "P1.2": "bidirectional", GND_12: "passive", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8UB30F40G-A-QFN20";
@@ -2144,7 +2189,8 @@ export class EFM8UB31F40G_A_QFN24 extends Component.withPins({
   "P0.1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.0": "bidirectional", GND_2: "power_in", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", VDD: "power_in", VREGIN: "power_in", "P2.1/VBUS": "bidirectional", "~{RST}/C2CK": "bidirectional", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", "P0.2": "bidirectional", "P0.1": "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8UB31F40G-A-QFN24";
@@ -2186,7 +2232,8 @@ export class EFM8UB31F40G_A_QSOP24 extends Component.withPins({
   "P0.4": "23",
   "P0.3": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0.2": "bidirectional", "P0.1": "bidirectional", "P0.0": "bidirectional", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", VDD: "power_in", VREGIN: "power_in", "P2.1/VBUS": "bidirectional", "~{RST}/C2CK": "bidirectional", "P2.0/C2D": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P0.7": "bidirectional", "P0.6": "bidirectional", "P0.5": "bidirectional", "P0.4": "bidirectional", "P0.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFM8UB31F40G-A-QSOP24";
@@ -2253,7 +2300,8 @@ export class EFR32xG23xxxxF512xM48 extends Component.withPins({
   "PD00_LFXO": "48",
   "PAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PC00: "bidirectional", PC01: "bidirectional", PC02: "bidirectional", PC03: "bidirectional", PC04: "bidirectional", PC05: "bidirectional", PC06: "bidirectional", PC07: "bidirectional", PC08: "bidirectional", PC09: "bidirectional", HFXTAL_I: "input", HFXTAL_O: "output", "~{RESET}": "input", RFVDD: "power_in", RFVSS: "power_in", SUBG_I1: "bidirectional", SUBG_I0: "bidirectional", SUBG_O1: "bidirectional", SUBG_O0: "bidirectional", PAVDD: "power_in", PB03: "bidirectional", PB02: "bidirectional", PB01: "bidirectional", PB00: "bidirectional", PA00: "bidirectional", PA01_SWCLK: "bidirectional", PA02_SWDIO: "bidirectional", PA03_SWO: "bidirectional", PA04_TCLK: "bidirectional", PA05_TD1: "bidirectional", PA06_TD2: "bidirectional", PA07_TD3: "bidirectional", PA08_UTX: "bidirectional", PA09_URX: "bidirectional", PA10: "bidirectional", DECOUPLE: "passive", VREGSW: "passive", VREGVDD: "power_in", VREGVSS: "power_in", DVDD: "power_in", AVDD: "power_in", IOVDD: "power_in", PD05_PSYNC: "bidirectional", PD04_PDATA: "bidirectional", PD03: "bidirectional", PD02: "bidirectional", PD01_LFXI: "bidirectional", PD00_LFXO: "bidirectional", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_SiliconLabs:EFR32xG23xxxxF512xM48";

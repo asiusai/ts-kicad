@@ -20,7 +20,8 @@ export class ATAES132A_SH extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SO: "output", NC_3: "no_connect", VSS: "power_in", "SI/SDA": "bidirectional", SCK: "input", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Security:ATAES132A-SH";
@@ -47,7 +48,8 @@ export class ATECC608A_MAHDA extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", VCC: "power_in", EP: "input", ...opts.pinTypes } });
   }
   override schema = "Security:ATECC608A-MAHDA";
@@ -74,7 +76,8 @@ export class ATECC508A_MAHDA extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", VCC: "power_in", EP: "input", ...opts.pinTypes } });
   }
   override schema = "Security:ATECC508A-MAHDA";
@@ -100,7 +103,8 @@ export class ATECC608A_SSHDA extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Security:ATECC608A-SSHDA";
@@ -126,7 +130,8 @@ export class ATECC508A_SSHDA extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Security:ATECC508A-SSHDA";
@@ -153,7 +158,8 @@ export class ATECC608B_MAHDA extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", VCC: "power_in", EP: "input", ...opts.pinTypes } });
   }
   override schema = "Security:ATECC608B-MAHDA";
@@ -179,7 +185,8 @@ export class ATECC608B_SSHDA extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Security:ATECC608B-SSHDA";

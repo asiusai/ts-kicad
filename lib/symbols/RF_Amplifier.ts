@@ -20,7 +20,8 @@ export class AD8313xRM extends Component.withPins({
   "VSET": "7",
   "VOUT": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VPOS_1: "power_in", INHI: "input", INLO: "input", VPOS_4: "power_in", PWDN: "input", COMM: "power_in", VSET: "input", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:AD8313xRM";
@@ -43,7 +44,8 @@ export class ADL5542 extends Component.withPins({
   "V+": "5",
   "P8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", G: "power_in", CB: "passive", "V+": "power_in", P8: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:ADL5542";
@@ -66,7 +68,8 @@ export class ADL5541 extends Component.withPins({
   "V+": "5",
   "P8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", G: "power_in", CB: "passive", "V+": "power_in", P8: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:ADL5541";
@@ -87,7 +90,8 @@ export class SPF5189Z extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:SPF5189Z";
@@ -108,7 +112,8 @@ export class ADL5610 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:ADL5610";
@@ -132,7 +137,8 @@ export class BGA2866 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2866";
@@ -156,7 +162,8 @@ export class BGA2800 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2800";
@@ -180,7 +187,8 @@ export class BGA2801 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2801";
@@ -204,7 +212,8 @@ export class BGA2803 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2803";
@@ -228,7 +237,8 @@ export class BGA2815 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2815";
@@ -252,7 +262,8 @@ export class BGA2817 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2817";
@@ -276,7 +287,8 @@ export class BGA2818 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2818";
@@ -300,7 +312,8 @@ export class BGA2850 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2850";
@@ -324,7 +337,8 @@ export class BGA2851 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2851";
@@ -348,7 +362,8 @@ export class BGA2865 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2865";
@@ -372,7 +387,8 @@ export class BGA2867 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2867";
@@ -396,7 +412,8 @@ export class BGA2869 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2869";
@@ -420,7 +437,8 @@ export class BGA2870 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2870";
@@ -444,7 +462,8 @@ export class BGA2874 extends Component.withPins({
   "G_5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", G_2: "power_in", P3: "output", G_4: "passive", G_5: "passive", P6: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:BGA2874";
@@ -491,7 +510,8 @@ export class CMX901 extends Component.withPins({
   "VDD2": "26",
   "VGS2": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_2: "power_in", GND_4: "passive", GND_6: "passive", GND_7: "passive", GND_9: "passive", GND_10: "passive", GND_11: "passive", GND_12: "passive", GND_13: "passive", GND_15: "passive", GND_21: "passive", GND_22: "passive", GND_23: "passive", GND_25: "passive", GND_27: "passive", GND_29: "passive", VDD1: "power_in", RFIN_3: "input", RFIN_5: "input", VGS1: "input", VA: "power_in", RFOUT_16: "output", RFOUT_17: "output", RFOUT_18: "output", RFOUT_19: "output", RFOUT_20: "output", VGS3: "input", VDD2: "power_in", VGS2: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:CMX901";
@@ -512,7 +532,8 @@ export class GALI_1 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-1";
@@ -533,7 +554,8 @@ export class GALI_19 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-19";
@@ -554,7 +576,8 @@ export class GALI_2 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-2";
@@ -575,7 +598,8 @@ export class GALI_21 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-21";
@@ -596,7 +620,8 @@ export class GALI_24 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-24";
@@ -617,7 +642,8 @@ export class GALI_29 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-29";
@@ -638,7 +664,8 @@ export class GALI_3 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-3";
@@ -659,7 +686,8 @@ export class GALI_33 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-33";
@@ -680,7 +708,8 @@ export class GALI_39 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-39";
@@ -701,7 +730,8 @@ export class GALI_4 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-4";
@@ -722,7 +752,8 @@ export class GALI_49 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-49";
@@ -743,7 +774,8 @@ export class GALI_4F extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-4F";
@@ -764,7 +796,8 @@ export class GALI_5 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-5";
@@ -785,7 +818,8 @@ export class GALI_51 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-51";
@@ -806,7 +840,8 @@ export class GALI_51F extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-51F";
@@ -827,7 +862,8 @@ export class GALI_52 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-52";
@@ -848,7 +884,8 @@ export class GALI_55 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-55";
@@ -869,7 +906,8 @@ export class GALI_59 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-59";
@@ -890,7 +928,8 @@ export class GALI_5F extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-5F";
@@ -911,7 +950,8 @@ export class GALI_6 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-6";
@@ -932,7 +972,8 @@ export class GALI_6F extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-6F";
@@ -953,7 +994,8 @@ export class GALI_74 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-74";
@@ -974,7 +1016,8 @@ export class GALI_84 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-84";
@@ -995,7 +1038,8 @@ export class GALI_S66 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GALI-S66";
@@ -1016,7 +1060,8 @@ export class GVA_123 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-123";
@@ -1037,7 +1082,8 @@ export class GVA_60 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-60";
@@ -1058,7 +1104,8 @@ export class GVA_62 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-62";
@@ -1079,7 +1126,8 @@ export class GVA_63 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-63";
@@ -1100,7 +1148,8 @@ export class GVA_81 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-81";
@@ -1121,7 +1170,8 @@ export class GVA_82 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-82";
@@ -1142,7 +1192,8 @@ export class GVA_83 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-83";
@@ -1163,7 +1214,8 @@ export class GVA_84 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-84";
@@ -1184,7 +1236,8 @@ export class GVA_93 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:GVA-93";
@@ -1235,7 +1288,8 @@ export class HMC1099PM5E extends Component.withPins({
   "GND_32": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", GND_3: "passive", P4: "input", P5: "input", GND_6: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", GND_11: "passive", GND_12: "passive", GND_13: "passive", GND_14: "passive", GND_15: "passive", GND_16: "passive", GND_17: "passive", GND_18: "passive", GND_19: "passive", P20: "output", P21: "passive", GND_22: "passive", GND_23: "passive", GND_24: "passive", GND_25: "passive", GND_26: "passive", GND_27: "passive", GND_28: "passive", GND_29: "passive", GND_30: "passive", GND_31: "passive", GND_32: "passive", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:HMC1099PM5E";
@@ -1286,7 +1340,8 @@ export class HMC8500PM5E extends Component.withPins({
   "GND_32": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", GND_3: "passive", P4: "input", P5: "input", GND_6: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", GND_11: "passive", GND_12: "passive", GND_13: "passive", GND_14: "passive", GND_15: "passive", GND_16: "passive", GND_17: "passive", GND_18: "passive", GND_19: "passive", P20: "output", P21: "passive", GND_22: "passive", GND_23: "passive", GND_24: "passive", GND_25: "passive", GND_26: "passive", GND_27: "passive", GND_28: "passive", GND_29: "passive", GND_30: "passive", GND_31: "passive", GND_32: "passive", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:HMC8500PM5E";
@@ -1308,7 +1363,8 @@ export class MAX2679 extends Component.withPins({
   "PB1": "B1",
   "G": "B2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", PA2: "output", PB1: "input", G: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:MAX2679";
@@ -1330,7 +1386,8 @@ export class MAX2679B extends Component.withPins({
   "PB1": "B1",
   "G": "B2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", PA2: "output", PB1: "input", G: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:MAX2679B";
@@ -1361,7 +1418,8 @@ export class MMZ09332BT1 extends Component.withPins({
   "VBA2": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBA1: "input", VBIAS: "power_in", RF_IN: "input", NC_4: "no_connect", NC_5: "no_connect", PDET: "output", "VCC2/RFOUT_7": "input", "VCC2/RFOUT_8": "input", "VCC2/RFOUT_9": "input", POWER_DOWN: "input", VCC1: "power_in", VBA2: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:MMZ09332BT1";
@@ -1382,7 +1440,8 @@ export class PGA_102 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-102";
@@ -1403,7 +1462,8 @@ export class PGA_1021 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-1021";
@@ -1424,7 +1484,8 @@ export class PGA_103 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-103";
@@ -1445,7 +1506,8 @@ export class PGA_105 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-105";
@@ -1466,7 +1528,8 @@ export class PGA_106_75 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-106-75";
@@ -1487,7 +1550,8 @@ export class PGA_106R_75 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-106R-75";
@@ -1508,7 +1572,8 @@ export class PGA_122_75 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-122-75";
@@ -1529,7 +1594,8 @@ export class PGA_32_75 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PGA-32-75";
@@ -1550,7 +1616,8 @@ export class PHA_1 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-1";
@@ -1571,7 +1638,8 @@ export class PHA_101 extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-101";
@@ -1592,7 +1660,8 @@ export class PHA_13HLN extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-13HLN";
@@ -1613,7 +1682,8 @@ export class PHA_13LN extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-13LN";
@@ -1634,7 +1704,8 @@ export class PHA_1H extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-1H";
@@ -1655,7 +1726,8 @@ export class PHA_23HLN extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-23HLN";
@@ -1676,7 +1748,8 @@ export class PHA_23LN extends Component.withPins({
   "GND": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", GND: "power_in", P3: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:PHA-23LN";
@@ -1703,7 +1776,8 @@ export class QPL9547 extends Component.withPins({
   "GND_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vb: "power_in", P2: "input", GND_3: "power_in", GND_4: "passive", GND_5: "passive", "~{EN}": "passive", P7: "output", GND_8: "passive", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:QPL9547";
@@ -1730,7 +1804,8 @@ export class SGL0622Z extends Component.withPins({
   "GND_7": "7",
   "GND_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_9: "passive", P1: "output", GND_2: "power_in", GND_3: "passive", P4: "input", GND_5: "passive", GND_6: "passive", GND_7: "passive", GND_8: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:SGL0622Z";
@@ -1755,7 +1830,8 @@ export class SKY65404 extends Component.withPins({
   "VCC": "6",
   "EP": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VENABLE: "input", GND_2: "power_in", RFIN: "input", RFOUT: "output", GND_5: "passive", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:SKY65404";
@@ -1782,7 +1858,8 @@ export class TRF37A73 extends Component.withPins({
   "NC_8": "8",
   "GND": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RFIN: "input", NC_3: "no_connect", NC_4: "no_connect", PWDN: "passive", NC_6: "no_connect", RFOUT: "output", NC_8: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Amplifier:TRF37A73";

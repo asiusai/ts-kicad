@@ -32,7 +32,8 @@ export class ATF16V8Bxx_xxPU extends Component.withPins({
   "I/O_18": "18",
   "I/O_19": "19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", I: "input", I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", I9: "input", "I/O_12": "bidirectional", "I/O_13": "bidirectional", "I/O_14": "bidirectional", "I/O_15": "bidirectional", "I/O_16": "bidirectional", "I/O_17": "bidirectional", "I/O_18": "bidirectional", "I/O_19": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:ATF16V8Bxx-xxPU";
@@ -69,7 +70,8 @@ export class GAL16V8 extends Component.withPins({
   "F_{6}": "18",
   "F_{7}": "19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "F_{0}": "bidirectional", "F_{1}": "bidirectional", "F_{2}": "bidirectional", "F_{3}": "bidirectional", "F_{4}": "bidirectional", "F_{5}": "bidirectional", "F_{6}": "bidirectional", "F_{7}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:GAL16V8";
@@ -106,7 +108,8 @@ export class PAL16L8 extends Component.withPins({
   "I/~{O_{7}}": "18",
   "~{O_{8}}": "19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "~{O_{1}}": "tri_state", "I/~{O_{2}}": "bidirectional", "I/~{O_{3}}": "bidirectional", "I/~{O_{4}}": "bidirectional", "I/~{O_{5}}": "bidirectional", "I/~{O_{6}}": "bidirectional", "I/~{O_{7}}": "bidirectional", "~{O_{8}}": "tri_state", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL16L8";
@@ -143,7 +146,8 @@ export class PAL16R8 extends Component.withPins({
   "~{O_{7}}": "18",
   "~{O_{8}}": "19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", CLK: "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "~{OE}": "input", "~{O_{1}}": "tri_state", "~{O_{2}}": "tri_state", "~{O_{3}}": "tri_state", "~{O_{4}}": "tri_state", "~{O_{5}}": "tri_state", "~{O_{6}}": "tri_state", "~{O_{7}}": "tri_state", "~{O_{8}}": "tri_state", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL16R8";
@@ -180,7 +184,8 @@ export class PAL16RP8A extends Component.withPins({
   "O_{8}": "19",
   "V_{CC}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", GND: "power_in", "~{OE}": "input", "O_{1}": "tri_state", "O_{2}": "tri_state", "O_{3}": "tri_state", "O_{4}": "tri_state", "O_{5}": "tri_state", "O_{6}": "tri_state", "O_{7}": "tri_state", "O_{8}": "tri_state", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL16RP8A";
@@ -217,7 +222,8 @@ export class PAL16RP8A_Programming extends Component.withPins({
   "L/R": "19",
   "V_{CC}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", GND: "power_in", OD: "input", "O_{3}": "tri_state", "O_{2}": "tri_state", "O_{1}": "tri_state", "O_{0}": "tri_state", "A_{2}": "input", "A_{1}": "input", "A_{0}": "input", "L/R": "input", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL16RP8A_Programming";
@@ -259,7 +265,8 @@ export class PAL20L10xxNS extends Component.withPins({
   "I/~{O_{9}}": "22",
   "~{O_{10}}": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I_{10}": "input", "I_{11}": "input", "~{O_{1}}": "tri_state", "I/~{O_{2}}": "bidirectional", "I/~{O_{3}}": "bidirectional", "I/~{O_{4}}": "bidirectional", "I/~{O_{5}}": "bidirectional", "I/~{O_{6}}": "bidirectional", "I/~{O_{7}}": "bidirectional", "I/~{O_{8}}": "bidirectional", "I/~{O_{9}}": "bidirectional", "~{O_{10}}": "tri_state", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL20L10xxNS";
@@ -301,7 +308,8 @@ export class PAL20L8 extends Component.withPins({
   "~{O_{8}}": "22",
   "I_{12}": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I_{10}": "input", "I_{13}": "input", "I_{11}": "input", "~{O_{1}}": "tri_state", "I/~{O_{2}}": "bidirectional", "I/~{O_{3}}": "bidirectional", "I/~{O_{4}}": "bidirectional", "I/~{O_{5}}": "bidirectional", "I/~{O_{6}}": "bidirectional", "I/~{O_{7}}": "bidirectional", "~{O_{8}}": "tri_state", "I_{12}": "input", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL20L8";
@@ -343,7 +351,8 @@ export class PAL20R8xx_P extends Component.withPins({
   "~{O_{8}}": "22",
   "I_{12}": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", CLK: "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I_{10}": "input", "~{OE}": "input", "I_{11}": "input", "~{O_{1}}": "tri_state", "~{O_{2}}": "tri_state", "~{O_{3}}": "tri_state", "~{O_{4}}": "tri_state", "~{O_{5}}": "tri_state", "~{O_{6}}": "tri_state", "~{O_{7}}": "tri_state", "~{O_{8}}": "tri_state", "I_{12}": "input", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL20R8xx-P";
@@ -385,7 +394,8 @@ export class PAL20RS10xNS extends Component.withPins({
   "I/~{O_{10}}": "23",
   "V_{CC}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I_{10}": "input", GND: "power_in", "~{OE}": "input", "I/~{O_{1}}": "bidirectional", "I/~{O_{2}}": "bidirectional", "I/~{O_{3}}": "bidirectional", "I/~{O_{4}}": "bidirectional", "I/~{O_{5}}": "bidirectional", "I/~{O_{6}}": "bidirectional", "I/~{O_{7}}": "bidirectional", "I/~{O_{8}}": "bidirectional", "I/~{O_{9}}": "bidirectional", "I/~{O_{10}}": "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL20RS10xNS";
@@ -427,7 +437,8 @@ export class PAL22V10_xxP extends Component.withPins({
   "I/O_{9}": "23",
   "V_{CC}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I_{10}": "input", GND: "power_in", "I_{11}": "input", "I/O_{0}": "bidirectional", "I/O_{1}": "bidirectional", "I/O_{2}": "bidirectional", "I/O_{3}": "bidirectional", "I/O_{4}": "bidirectional", "I/O_{5}": "bidirectional", "I/O_{6}": "bidirectional", "I/O_{7}": "bidirectional", "I/O_{8}": "bidirectional", "I/O_{9}": "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PAL22V10-xxP";
@@ -464,7 +475,8 @@ export class PALCE16V8 extends Component.withPins({
   "I/~{O_{6}}": "18",
   "I/~{O_{7}}": "19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I/~{O_{0}}": "bidirectional", "I/~{O_{1}}": "bidirectional", "I/~{O_{2}}": "bidirectional", "I/~{O_{3}}": "bidirectional", "I/~{O_{4}}": "bidirectional", "I/~{O_{5}}": "bidirectional", "I/~{O_{6}}": "bidirectional", "I/~{O_{7}}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PALCE16V8";
@@ -506,7 +518,8 @@ export class PALCE22V10x_xxP extends Component.withPins({
   "I/O_{9}": "23",
   "V_{CC}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "I_{0}": "input", "I_{1}": "input", "I_{2}": "input", "I_{3}": "input", "I_{4}": "input", "I_{5}": "input", "I_{6}": "input", "I_{7}": "input", "I_{8}": "input", "I_{9}": "input", "I_{10}": "input", GND: "power_in", "I_{11}": "input", "I/O_{0}": "bidirectional", "I/O_{1}": "bidirectional", "I/O_{2}": "bidirectional", "I/O_{3}": "bidirectional", "I/O_{4}": "bidirectional", "I/O_{5}": "bidirectional", "I/O_{6}": "bidirectional", "I/O_{7}": "bidirectional", "I/O_{8}": "bidirectional", "I/O_{9}": "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PALCE22V10x-xxP";
@@ -548,7 +561,8 @@ export class PEEL22CV10AP extends Component.withPins({
   "IO22": "22",
   "IO23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", "I1/CLK": "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", I9: "input", I10: "input", I11: "input", I13: "input", IO14: "tri_state", IO15: "tri_state", IO16: "tri_state", IO17: "tri_state", IO18: "tri_state", IO19: "tri_state", IO20: "tri_state", IO21: "tri_state", IO22: "tri_state", IO23: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PEEL22CV10AP";
@@ -590,7 +604,8 @@ export class PEEL22CV10AS extends Component.withPins({
   "IO22": "22",
   "IO23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", "I1/CLK": "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", I9: "input", I10: "input", I11: "input", I13: "input", IO14: "tri_state", IO15: "tri_state", IO16: "tri_state", IO17: "tri_state", IO18: "tri_state", IO19: "tri_state", IO20: "tri_state", IO21: "tri_state", IO22: "tri_state", IO23: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Logic_Programmable:PEEL22CV10AS";

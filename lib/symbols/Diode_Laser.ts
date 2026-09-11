@@ -15,7 +15,8 @@ export class PLT5_450B extends Component.withPins({
   "NC": "2",
   "C": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", NC: "no_connect", C: "passive", ...opts.pinTypes } });
   }
   override schema = "Diode_Laser:PLT5_450B";
@@ -36,7 +37,8 @@ export class PL520 extends Component.withPins({
   "NC": "2",
   "C": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", NC: "no_connect", C: "passive", ...opts.pinTypes } });
   }
   override schema = "Diode_Laser:PL520";
@@ -57,7 +59,8 @@ export class PLT5_488 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Diode_Laser:PLT5_488";
@@ -78,7 +81,8 @@ export class PLT5_510 extends Component.withPins({
   "NC": "2",
   "C": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", NC: "no_connect", C: "passive", ...opts.pinTypes } });
   }
   override schema = "Diode_Laser:PLT5_510";
@@ -98,7 +102,8 @@ export class SPL_PL90 extends Component.withPins({
   "C": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Diode_Laser:SPL_PL90";

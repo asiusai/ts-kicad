@@ -18,7 +18,8 @@ export class AL5819W6 extends Component.withPins({
   "NC_5": "5",
   "LED": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", GND: "power_in", "R_{SET}": "input", "V_{IN}": "power_in", NC_5: "no_connect", LED: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:AL5819W6";
@@ -45,7 +46,8 @@ export class AL8860MP extends Component.withPins({
   "VIN": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SET: "input", GND_2: "power_in", GND_3: "passive", CTRL: "input", SW_5: "open_collector", SW_6: "open_collector", NC: "no_connect", VIN: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:AL8860MP";
@@ -68,7 +70,8 @@ export class AL8860WT extends Component.withPins({
   "SET": "4",
   "VIN": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "open_collector", GND: "power_in", CTRL: "input", SET: "input", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:AL8860WT";
@@ -92,7 +95,8 @@ export class AP3019AKTR extends Component.withPins({
   "V_{OUT}": "5",
   "V_{IN}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "input", GND: "power_in", FB: "input", CTRL: "input", "V_{OUT}": "power_out", "V_{IN}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:AP3019AKTR";
@@ -116,7 +120,8 @@ export class AP3019AKTTR extends Component.withPins({
   "V_{OUT}": "5",
   "V_{IN}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "input", GND: "power_in", FB: "input", CTRL: "input", "V_{OUT}": "power_out", "V_{IN}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:AP3019AKTTR";
@@ -140,7 +145,8 @@ export class BCR430UW6 extends Component.withPins({
   "NC_5": "5",
   "OUT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", GND: "power_in", REXT: "passive", VS: "power_in", NC_5: "no_connect", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:BCR430UW6";
@@ -174,7 +180,8 @@ export class CH455G extends Component.withPins({
   "SEG2": "15",
   "SEG3": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SEG4: "tri_state", SEG5: "tri_state", SEG6: "tri_state", SEG7: "tri_state", DIG0: "output", SCL: "input", SDA: "bidirectional", GND: "power_in", DIG1: "output", DIG2: "output", DIG3: "output", SEG0: "tri_state", SEG1: "tri_state", VCC: "power_in", SEG2: "tri_state", SEG3: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:CH455G";
@@ -210,7 +217,8 @@ export class CH455K extends Component.withPins({
   "ISET": "8",
   "~{INT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG0: "output", SCL: "input", SDA: "bidirectional", GND: "power_in", DIG1: "output", DIG2: "output", DIG3: "output", SEG0: "tri_state", SEG1: "tri_state", VCC: "power_in", SEG2: "tri_state", SEG3: "tri_state", SEG4: "tri_state", SEG5: "tri_state", SEG6: "tri_state", SEG7: "tri_state", ISET: "input", "~{INT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:CH455K";
@@ -246,7 +254,8 @@ export class CH455H extends Component.withPins({
   "ISET": "8",
   "~{INT}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG0: "output", SCL: "input", SDA: "bidirectional", GND: "power_in", DIG1: "output", DIG2: "output", DIG3: "output", SEG0: "tri_state", SEG1: "tri_state", VCC: "power_in", SEG2: "tri_state", SEG3: "tri_state", SEG4: "tri_state", SEG5: "tri_state", SEG6: "tri_state", SEG7: "tri_state", ISET: "input", "~{INT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:CH455H";
@@ -267,7 +276,8 @@ export class CL220K4_G extends Component.withPins({
   "VB": "2",
   "NC": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VA: "input", VB: "input", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:CL220K4-G";
@@ -287,7 +297,8 @@ export class CL220N5_G extends Component.withPins({
   "VA": "1",
   "VB": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VA: "input", VB: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:CL220N5-G";
@@ -312,7 +323,8 @@ export class DIO5661CD6 extends Component.withPins({
   "VIN": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "input", P2: "no_connect", GND_3: "power_in", LX: "open_collector", EN: "input", VIN: "power_in", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:DIO5661CD6";
@@ -336,7 +348,8 @@ export class DIO5661ST6 extends Component.withPins({
   "P5": "5",
   "VIN": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LX: "open_collector", GND: "power_in", FB: "input", EN: "input", P5: "no_connect", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:DIO5661ST6";
@@ -360,7 +373,8 @@ export class DIO5661TST6 extends Component.withPins({
   "P5": "5",
   "VIN": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LX: "open_collector", GND: "power_in", FB: "input", EN: "input", P5: "no_connect", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:DIO5661TST6";
@@ -430,7 +444,8 @@ export class HT1632C_52LQFP extends Component.withPins({
   "ROW13": "51",
   "ROW12": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ROW11: "output", ROW10: "output", ROW9: "output", ROW8: "output", ROW7: "output", ROW6: "output", VDD_7: "power_in", ROW5: "output", ROW4: "output", ROW3: "output", ROW2: "output", ROW1: "output", ROW0: "output", VSS_14: "power_in", OSC: "bidirectional", DATA: "bidirectional", "~{WR}": "input", "~{RD}": "input", "~{CS}": "input", SYNC: "bidirectional", VDD_21: "power_in", COM0: "output", COM1: "output", COM2: "output", VSS_25: "passive", COM3: "output", COM4: "output", COM5: "output", COM6: "output", COM7: "output", "ROW31/COM8": "output", "ROW30/COM9": "output", "ROW29/COM10": "output", "ROW28/COM11": "output", "ROW27/COM12": "output", VSS_36: "passive", "ROW26/COM13": "output", VDD_38: "power_in", "ROW25/COM14": "output", "ROW24/COM15": "output", ROW23: "output", ROW22: "output", ROW21: "output", ROW20: "output", ROW19: "output", ROW18: "output", ROW17: "output", ROW16: "output", ROW15: "output", ROW14: "output", ROW13: "output", ROW12: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HT1632C-52LQFP";
@@ -451,7 +466,8 @@ export class HV9921N8_G extends Component.withPins({
   "GND": "2",
   "VDD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", GND: "power_in", VDD: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9921N8-G";
@@ -472,7 +488,8 @@ export class HV9922N8_G extends Component.withPins({
   "GND": "2",
   "VDD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", GND: "power_in", VDD: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9922N8-G";
@@ -493,7 +510,8 @@ export class HV9923N8_G extends Component.withPins({
   "GND": "2",
   "VDD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", GND: "power_in", VDD: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9923N8-G";
@@ -519,7 +537,8 @@ export class HV9925SG_G extends Component.withPins({
   "D_7": "7",
   "D_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Rs: "passive", GND: "power_in", PWMD: "input", VDD: "power_out", NC: "no_connect", D_6: "input", D_7: "input", D_8: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9925SG-G";
@@ -545,7 +564,8 @@ export class HV9930LG_G extends Component.withPins({
   "CS2": "7",
   "REF": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", CS1: "input", GND: "power_in", GATE: "output", PWMD: "output", VDD: "power_out", CS2: "input", REF: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9930LG-G";
@@ -571,7 +591,8 @@ export class HV9931LG_G extends Component.withPins({
   "CS2": "7",
   "REF": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", CS1: "input", GND: "power_in", GATE: "output", PWMD: "output", VDD: "power_out", CS2: "input", REF: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9931LG-G";
@@ -597,7 +618,8 @@ export class HV9961LG_G extends Component.withPins({
   "LD": "7",
   "RT": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", CS: "input", GND: "power_in", GATE: "output", PWMD: "input", VDD: "power_out", LD: "input", RT: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9961LG-G";
@@ -631,7 +653,8 @@ export class HV9961NG_G extends Component.withPins({
   "NC_15": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", NC_2: "no_connect", NC_3: "no_connect", CS: "input", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", GATE: "output", PWMD: "input", NC_10: "no_connect", NC_11: "no_connect", VDD: "power_out", LD: "input", RT: "input", NC_15: "no_connect", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9961NG-G";
@@ -657,7 +680,8 @@ export class HV9967BK7_G extends Component.withPins({
   "VDD": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "output", Rs: "input", GND_3: "power_in", PWMD: "output", RT: "input", GND_7: "passive", VDD: "power_out", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9967BK7-G";
@@ -682,7 +706,8 @@ export class HV9967BMG_G extends Component.withPins({
   "GND_7": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "output", Rs: "input", GND_3: "power_in", PWMD: "output", RT: "input", GND_7: "passive", VDD: "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9967BMG-G";
@@ -708,7 +733,8 @@ export class HV9972LG_G extends Component.withPins({
   "GATE": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BIAS: "passive", VIN: "input", VD: "input", PWMD: "output", CS: "input", GND: "power_in", GATE: "output", VDD: "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:HV9972LG-G";
@@ -755,7 +781,8 @@ export class IS31FL3216 extends Component.withPins({
   "R_EXT": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "bidirectional", IN: "input", OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", GND_7: "power_in", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", "GPIO9/OUT9": "bidirectional", "GPIO10/OUT10": "bidirectional", "GPIO11/OUT11": "bidirectional", "GPIO12/OUT12": "bidirectional", GND_16: "passive", "GPIO13/OUT13": "bidirectional", "GPIO14/OUT14": "bidirectional", "GPIO15/OUT15": "bidirectional", "GPIO16/OUT16": "bidirectional", "~{INTB}": "output", "~{SDB}": "input", SCL: "input", SDA: "bidirectional", AD: "input", VCC: "power_in", C_FILT: "passive", R_EXT: "passive", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3216";
@@ -802,7 +829,8 @@ export class IS31FL3216A extends Component.withPins({
   "R_EXT": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "bidirectional", IN: "input", OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", GND_7: "power_in", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", "GPIO9/OUT9": "bidirectional", "GPIO10/OUT10": "bidirectional", "GPIO11/OUT11": "bidirectional", "GPIO12/OUT12": "bidirectional", GND_16: "passive", "GPIO13/OUT13": "bidirectional", "GPIO14/OUT14": "bidirectional", "GPIO15/OUT15": "bidirectional", "GPIO16/OUT16": "bidirectional", "~{INTB}": "output", "~{SDB}": "input", SCL: "input", SDA: "bidirectional", AD: "input", VCC: "power_in", C_FILT: "passive", R_EXT: "passive", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3216A";
@@ -844,7 +872,8 @@ export class IS31FL3218_GR extends Component.withPins({
   "OUT17": "23",
   "~{SDB}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT18: "open_collector", R_EXT: "passive", VCC: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", OUT9: "open_collector", OUT10: "open_collector", OUT11: "open_collector", OUT12: "open_collector", OUT13: "open_collector", OUT14: "open_collector", OUT15: "open_collector", OUT16: "open_collector", OUT17: "open_collector", "~{SDB}": "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3218-GR";
@@ -887,7 +916,8 @@ export class IS31FL3218_QF extends Component.withPins({
   "~{SDB}": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT18: "open_collector", R_EXT: "passive", VCC: "power_in", GND_4: "power_in", SDA: "bidirectional", SCL: "input", OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", OUT9: "open_collector", OUT10: "open_collector", OUT11: "open_collector", OUT12: "open_collector", OUT13: "open_collector", OUT14: "open_collector", OUT15: "open_collector", OUT16: "open_collector", OUT17: "open_collector", "~{SDB}": "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3218-QF";
@@ -954,7 +984,8 @@ export class IS31FL3236_TQ extends Component.withPins({
   "OUT2": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT3: "output", OUT4: "output", OUT5: "output", GND_4: "power_in", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", OUT16: "output", OUT17: "output", OUT18: "output", GND_18: "passive", GND_19: "passive", OUT19: "output", OUT20: "output", OUT21: "output", OUT22: "output", OUT23: "output", OUT24: "output", OUT25: "output", OUT26: "output", OUT27: "output", OUT28: "output", OUT29: "output", OUT30: "output", OUT31: "output", GND_33: "passive", OUT32: "output", OUT33: "output", OUT34: "output", OUT35: "output", OUT36: "output", "~{SDB}": "input", AD: "input", VCC: "power_in", GND_42: "passive", GND_43: "passive", R_EXT: "passive", SDA: "open_collector", SCL: "input", OUT1: "output", OUT2: "output", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3236-TQ";
@@ -1021,7 +1052,8 @@ export class IS31FL3236A_TQ extends Component.withPins({
   "OUT2": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT3: "output", OUT4: "output", OUT5: "output", GND_4: "power_in", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", OUT16: "output", OUT17: "output", OUT18: "output", GND_18: "passive", GND_19: "passive", OUT19: "output", OUT20: "output", OUT21: "output", OUT22: "output", OUT23: "output", OUT24: "output", OUT25: "output", OUT26: "output", OUT27: "output", OUT28: "output", OUT29: "output", OUT30: "output", OUT31: "output", GND_33: "passive", OUT32: "output", OUT33: "output", OUT34: "output", OUT35: "output", OUT36: "output", "~{SDB}": "input", AD: "input", VCC: "power_in", GND_42: "passive", GND_43: "passive", R_EXT: "passive", SDA: "open_collector", SCL: "input", OUT1: "output", OUT2: "output", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3236A-TQ";
@@ -1059,7 +1091,8 @@ export class IS31FL3242 extends Component.withPins({
   "VCC": "19",
   "GND": "[20,21]",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", OUT5: "open_collector", OUT6: "open_collector", AD: "input", SDA: "bidirectional", SCL: "input", "~{SDB}": "input", OUT7: "open_collector", OUT8: "open_collector", OUT9: "open_collector", OUT10: "open_collector", OUT11: "open_collector", OUT12: "open_collector", NC_17: "no_connect", NC_18: "no_connect", VCC: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3242";
@@ -1106,7 +1139,8 @@ export class IS31FL3731_QF extends Component.withPins({
   "CA8": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA9: "bidirectional", VCC: "power_in", "~{SDB}": "input", "~{INTB}": "open_collector", GND_5: "power_in", R_EXT: "passive", CB1: "bidirectional", CB2: "bidirectional", CB3: "bidirectional", CB4: "bidirectional", CB5: "bidirectional", CB6: "bidirectional", CB7: "bidirectional", CB8: "bidirectional", CB9: "bidirectional", C_FILT: "passive", IN: "input", AD: "input", SDA: "bidirectional", SCL: "input", CA1: "bidirectional", CA2: "bidirectional", CA3: "bidirectional", CA4: "bidirectional", CA5: "bidirectional", CA6: "bidirectional", CA7: "bidirectional", CA8: "bidirectional", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3731-QF";
@@ -1152,7 +1186,8 @@ export class IS31FL3731_SA extends Component.withPins({
   "CA7": "27",
   "CA8": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA9: "bidirectional", VCC: "power_in", "~{SDB}": "input", "~{INTB}": "open_collector", GND: "power_in", R_EXT: "passive", CB1: "bidirectional", CB2: "bidirectional", CB3: "bidirectional", CB4: "bidirectional", CB5: "bidirectional", CB6: "bidirectional", CB7: "bidirectional", CB8: "bidirectional", CB9: "bidirectional", C_FILT: "passive", IN: "input", AD: "input", SDA: "bidirectional", SCL: "input", CA1: "bidirectional", CA2: "bidirectional", CA3: "bidirectional", CA4: "bidirectional", CA5: "bidirectional", CA6: "bidirectional", CA7: "bidirectional", CA8: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3731-SA";
@@ -1219,7 +1254,8 @@ export class IS31FL3733_QF extends Component.withPins({
   "GND_48": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", SW1: "input", SW2: "input", SW3: "input", PGND_5: "power_in", SW4: "input", SW5: "input", SW6: "input", SW7: "input", SW8: "input", SW9: "input", PGND_12: "passive", SW10: "input", SW11: "input", SW12: "input", CS1: "output", CS2: "output", CS3: "output", CS4: "output", PVCC_20: "power_in", CS5: "output", CS6: "output", CS7: "output", CS8: "output", CS9: "output", CS10: "output", CS11: "output", CS12: "output", PVCC_29: "power_in", CS13: "output", CS14: "output", CS15: "output", CS16: "output", AGND: "power_in", RSET: "passive", NC_36: "no_connect", AVCC: "power_in", DVCC: "power_in", VIO: "input", SYNC: "input", SDA: "bidirectional", SCL: "input", ADDR1: "input", ADDR2: "input", "~{INTB}": "open_collector", "~{SDB}": "input", IICRST: "input", GND_48: "power_in", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3733-QF";
@@ -1286,7 +1322,8 @@ export class IS31FL3733_TQ extends Component.withPins({
   "GND_48": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", SW1: "input", SW2: "input", SW3: "input", PGND_5: "power_in", SW4: "input", SW5: "input", SW6: "input", SW7: "input", SW8: "input", SW9: "input", PGND_12: "passive", SW10: "input", SW11: "input", SW12: "input", CS1: "output", CS2: "output", CS3: "output", CS4: "output", PVCC_20: "power_in", CS5: "output", CS6: "output", CS7: "output", CS8: "output", CS9: "output", CS10: "output", CS11: "output", CS12: "output", PVCC_29: "power_in", CS13: "output", CS14: "output", CS15: "output", CS16: "output", AGND: "power_in", RSET: "passive", NC_36: "no_connect", AVCC: "power_in", DVCC: "power_in", VIO: "input", SYNC: "input", SDA: "bidirectional", SCL: "input", ADDR1: "input", ADDR2: "input", "~{INTB}": "open_collector", "~{SDB}": "input", IICRST: "input", GND_48: "power_in", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3733-TQ";
@@ -1345,7 +1382,8 @@ export class IS31FL3736 extends Component.withPins({
   "GND_40": "40",
   "GND_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW1: "input", SW2: "input", SW3: "input", PGND_4: "power_in", SW4: "input", SW5: "input", SW6: "input", SW7: "input", SW8: "input", SW9: "input", PGND_11: "passive", SW10: "input", SW11: "input", SW12: "input", CS1: "output", CS2: "output", PVCC_17: "power_in", CS3: "output", CS4: "output", NC_20: "no_connect", CS5: "output", CS6: "output", PVCC_23: "power_in", CS7: "output", CS8: "output", AGND: "power_in", DVCC: "power_in", AVCC: "power_in", NC_29: "no_connect", RSET: "passive", VIO: "input", SYNC: "input", SDA: "bidirectional", SCL: "input", ADDR1: "input", ADDR2: "input", "~{INTB}": "open_collector", "~{SDB}": "input", IICRST: "input", GND_40: "power_in", GND_41: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3736";
@@ -1404,7 +1442,8 @@ export class IS31FL3737 extends Component.withPins({
   "GND_40": "40",
   "GND_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW1: "input", SW2: "input", SW3: "input", PGND_4: "power_in", SW4: "input", SW5: "input", SW6: "input", SW7: "input", SW8: "input", SW9: "input", PGND_11: "passive", SW10: "input", SW11: "input", SW12: "input", CS1: "output", CS2: "output", CS3: "output", CS4: "output", PVCC_19: "power_in", CS5: "output", CS6: "output", CS7: "output", CS8: "output", CS9: "output", CS10: "output", PVCC_26: "power_in", CS11: "output", CS12: "output", AGND: "power_in", RSET: "passive", VCC: "power_in", VIO: "input", SYNC: "input", SDA: "bidirectional", SCL: "input", ADDR: "input", "~{INTB}": "open_collector", "~{SDB}": "input", IICRST: "input", GND_40: "power_in", GND_41: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31FL3737";
@@ -1427,7 +1466,8 @@ export class IS31LT3360 extends Component.withPins({
   "ISENSE": "4",
   "VIN": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LX: "open_collector", GND: "power_in", ADJ: "input", ISENSE: "input", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:IS31LT3360";
@@ -1454,7 +1494,8 @@ export class KTD2026 extends Component.withPins({
   "GND_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ST: "open_collector", D3: "output", D2: "output", D1: "output", VIN: "power_in", SCL: "input", SDA: "bidirectional", GND_8: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:KTD2026";
@@ -1481,7 +1522,8 @@ export class KTD2027 extends Component.withPins({
   "GND_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D4: "output", D3: "output", D2: "output", D1: "output", VIN: "power_in", SCL: "bidirectional", SDA: "bidirectional", GND_8: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:KTD2027";
@@ -1520,7 +1562,8 @@ export class KTD2061xxUAC extends Component.withPins({
   "LEDC4": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_1: "power_in", VIN_2: "passive", VCC: "power_in", SCL: "input", SDA: "bidirectional", LEDA1: "output", LEDA2: "output", GND_8: "power_in", LEDA3: "output", LEDA4: "output", LEDB1: "output", LEDB2: "output", GND_13: "passive", LEDB3: "output", LEDB4: "output", LEDC1: "output", LEDC2: "output", GND_18: "passive", LEDC3: "output", LEDC4: "output", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:KTD2061xxUAC";
@@ -1562,7 +1605,8 @@ export class LED1642GWPTR extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", PWCLK: "input", SDO: "output", "R-EXT": "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LED1642GWPTR";
@@ -1605,7 +1649,8 @@ export class LED1642GWQTR extends Component.withPins({
   "CLK": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LE: "input", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", PWCLK: "input", SDO: "output", "R-EXT": "passive", VDD: "power_in", GND: "power_in", SDI: "input", CLK: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LED1642GWQTR";
@@ -1647,7 +1692,8 @@ export class LED1642GWTTR extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", PWCLK: "input", SDO: "output", "R-EXT": "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LED1642GWTTR";
@@ -1690,7 +1736,8 @@ export class LED1642GWXTTR extends Component.withPins({
   "VDD": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", PWCLK: "input", SDO: "output", "R-EXT": "passive", VDD: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LED1642GWXTTR";
@@ -1717,7 +1764,8 @@ export class LED5000 extends Component.withPins({
   "SW": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOT: "passive", DIM: "input", INH: "input", COMP: "passive", FB: "input", GND_6: "power_in", VIN: "power_in", SW: "output", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LED5000";
@@ -1753,7 +1801,8 @@ export class LM3914N extends Component.withPins({
   "LED3": "17",
   "LED2": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LED1: "open_collector", "V-": "power_in", "V+": "power_in", RLO: "input", SIG: "input", RHI: "input", REFOUT: "output", REFADJ: "input", MODE: "input", LED10: "open_collector", LED9: "open_collector", LED8: "open_collector", LED7: "open_collector", LED6: "open_collector", LED5: "open_collector", LED4: "open_collector", LED3: "open_collector", LED2: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LM3914N";
@@ -1791,7 +1840,8 @@ export class LM3914V extends Component.withPins({
   "LED3": "19",
   "LED2": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LED1: "open_collector", "V-": "power_in", "V+": "power_in", RLO: "input", SIG: "input", RHI: "input", NC_7: "no_connect", REFOUT: "output", NC_9: "no_connect", REFADJ: "input", MODE: "input", LED10: "open_collector", LED9: "open_collector", LED8: "open_collector", LED7: "open_collector", LED6: "open_collector", LED5: "open_collector", LED4: "open_collector", LED3: "open_collector", LED2: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LM3914V";
@@ -1856,7 +1906,8 @@ export class LP5036 extends Component.withPins({
   "GND_46": "46",
   "GND_47": "47",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT0: "power_out", OUT1: "power_out", OUT2: "power_out", OUT3: "power_out", OUT4: "power_out", OUT5: "power_out", OUT6: "power_out", OUT7: "power_out", OUT8: "power_out", OUT9: "power_out", OUT10: "power_out", OUT11: "power_out", OUT12: "power_out", OUT13: "power_out", OUT14: "power_out", OUT15: "power_out", OUT16: "power_out", OUT17: "power_out", OUT18: "power_out", OUT19: "power_out", OUT20: "power_out", OUT21: "power_out", OUT22: "power_out", OUT23: "power_out", OUT24: "power_out", OUT25: "power_out", OUT26: "power_out", OUT27: "power_out", OUT28: "power_out", OUT29: "power_out", OUT30: "power_out", OUT31: "power_out", OUT32: "power_out", OUT33: "power_out", OUT34: "power_out", OUT35: "power_out", GND_37: "power_in", ADDR0: "input", ADDR1: "input", VCC: "power_in", SDA: "bidirectional", SCL: "input", EN: "input", IREF: "passive", VCAP: "passive", GND_46: "passive", GND_47: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LP5036";
@@ -1889,7 +1940,8 @@ export class LP8868XQDMT extends Component.withPins({
   "SW": "14",
   "PGND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND_1: "power_in", AGND: "power_in", VIN: "power_in", VCC: "power_in", "ADIM/HD": "input", "PWM/EN": "input", FAULT: "output", TEMP: "bidirectional", FSET: "bidirectional", COMP: "bidirectional", OVP: "input", CSN: "input", CSP: "input", SW: "power_out", PGND_15: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LP8868XQDMT";
@@ -1913,7 +1965,8 @@ export class LT3465 extends Component.withPins({
   "VIN": "5",
   "SW": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", FB: "input", CTRL: "input", VIN: "power_in", SW: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3465";
@@ -1937,7 +1990,8 @@ export class LT3465A extends Component.withPins({
   "VIN": "5",
   "SW": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", FB: "input", CTRL: "input", VIN: "power_in", SW: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3465A";
@@ -1972,7 +2026,8 @@ export class LT3755xMSE extends Component.withPins({
   "GATE": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", VREF: "output", PWM: "input", "~{OPENLED}": "open_collector", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3755xMSE";
@@ -2007,7 +2062,8 @@ export class LT3755xMSE_1 extends Component.withPins({
   "GATE": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", VREF: "output", PWM: "input", SYNC: "input", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3755xMSE-1";
@@ -2042,7 +2098,8 @@ export class LT3755xMSE_2 extends Component.withPins({
   "GATE": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", VREF: "output", PWM: "input", "~{OPENLED}": "open_collector", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3755xMSE-2";
@@ -2077,7 +2134,8 @@ export class LT3755xUD extends Component.withPins({
   "CTRL": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", PWM: "input", "~{OPENLED}": "input", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3755xUD";
@@ -2112,7 +2170,8 @@ export class LT3755xUD_1 extends Component.withPins({
   "CTRL": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", PWM: "input", SYNC: "input", SS: "input", RT: "input", "SHDN/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3755xUD-1";
@@ -2147,7 +2206,8 @@ export class LT3755xUD_2 extends Component.withPins({
   "CTRL": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", PWM: "input", "~{OPENLED}": "input", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3755xUD-2";
@@ -2182,7 +2242,8 @@ export class LT3756xMSE extends Component.withPins({
   "GATE": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", VREF: "output", PWM: "input", "~{OPENLED}": "open_collector", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3756xMSE";
@@ -2217,7 +2278,8 @@ export class LT3756xMSE_1 extends Component.withPins({
   "GATE": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", VREF: "output", PWM: "input", SYNC: "input", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3756xMSE-1";
@@ -2252,7 +2314,8 @@ export class LT3756xMSE_2 extends Component.withPins({
   "GATE": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", VREF: "output", PWM: "input", "~{OPENLED}": "open_collector", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3756xMSE-2";
@@ -2287,7 +2350,8 @@ export class LT3756xUD extends Component.withPins({
   "CTRL": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", PWM: "input", "~{OPENLED}": "input", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3756xUD";
@@ -2322,7 +2386,8 @@ export class LT3756xUD_1 extends Component.withPins({
   "CTRL": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", PWM: "input", SYNC: "input", SS: "input", RT: "input", "SHDN/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3756xUD-1";
@@ -2357,7 +2422,8 @@ export class LT3756xUD_2 extends Component.withPins({
   "CTRL": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "output", PWM: "input", "~{OPENLED}": "input", SS: "input", RT: "input", "~{SHDN}/UVLO": "input", INTVCC: "power_out", VIN: "power_in", SENSE: "input", GATE: "output", PWMOUT: "output", FB: "input", ISN: "input", ISP: "input", VC: "output", CTRL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT3756xUD-2";
@@ -2404,7 +2470,8 @@ export class LT8391xFE extends Component.withPins({
   "BG2": "28",
   "GND": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BG1: "output", BST1: "passive", SW1: "passive", TG1: "output", LSP: "input", LSN: "input", VIN: "power_in", INTVCC: "power_out", "EN/UVLO": "input", RP: "input", PWM: "input", VREF: "power_out", CTRL1: "input", ISP: "input", ISN: "input", CTRL2: "input", "~{FAULT}": "open_collector", SS: "passive", FB: "input", VC: "passive", RT: "passive", "SYNC/SPRD": "input", PWMTG: "output", VOUT: "power_in", TG2: "output", SW2: "passive", BST2: "passive", BG2: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:LT8391xFE";
@@ -2445,7 +2512,8 @@ export class MAX7219 extends Component.withPins({
   "SEG_D": "23",
   "DOUT": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIN: "input", DIG_0: "output", DIG_4: "output", GND_4: "power_in", DIG_6: "output", DIG_2: "output", DIG_3: "output", DIG_7: "output", GND_9: "passive", DIG_5: "output", DIG_1: "output", LOAD: "input", CLK: "input", SEG_A: "output", SEG_F: "output", SEG_B: "output", SEG_G: "output", ISET: "input", "V+": "power_in", SEG_C: "output", SEG_E: "output", SEG_DP: "output", SEG_D: "output", DOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MAX7219";
@@ -2487,7 +2555,8 @@ export class MAX7221xNG extends Component.withPins({
   "SEG_D": "23",
   "DOUT": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIN: "input", DIG_0: "open_collector", DIG_4: "open_collector", GND_4: "power_in", DIG_6: "open_collector", DIG_2: "open_collector", DIG_3: "open_collector", DIG_7: "open_collector", GND_9: "passive", DIG_5: "open_collector", DIG_1: "open_collector", "~{CS}": "input", CLK: "input", SEG_A: "open_emitter", SEG_F: "open_emitter", SEG_B: "open_emitter", SEG_G: "open_emitter", ISET: "input", "V+": "power_in", SEG_C: "open_emitter", SEG_E: "open_emitter", SEG_DP: "open_emitter", SEG_D: "open_emitter", DOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MAX7221xNG";
@@ -2529,7 +2598,8 @@ export class MAX7221xRG extends Component.withPins({
   "SEG_D": "23",
   "DOUT": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIN: "input", DIG_0: "open_collector", DIG_4: "open_collector", GND_4: "power_in", DIG_6: "open_collector", DIG_2: "open_collector", DIG_3: "open_collector", DIG_7: "open_collector", GND_9: "passive", DIG_5: "open_collector", DIG_1: "open_collector", "~{CS}": "input", CLK: "input", SEG_A: "open_emitter", SEG_F: "open_emitter", SEG_B: "open_emitter", SEG_G: "open_emitter", ISET: "input", "V+": "power_in", SEG_C: "open_emitter", SEG_E: "open_emitter", SEG_DP: "open_emitter", SEG_D: "open_emitter", DOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MAX7221xRG";
@@ -2571,7 +2641,8 @@ export class MAX7221xWG extends Component.withPins({
   "SEG_D": "23",
   "DOUT": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIN: "input", DIG_0: "open_collector", DIG_4: "open_collector", GND_4: "power_in", DIG_6: "open_collector", DIG_2: "open_collector", DIG_3: "open_collector", DIG_7: "open_collector", GND_9: "passive", DIG_5: "open_collector", DIG_1: "open_collector", "~{CS}": "input", CLK: "input", SEG_A: "open_emitter", SEG_F: "open_emitter", SEG_B: "open_emitter", SEG_G: "open_emitter", ISET: "input", "V+": "power_in", SEG_C: "open_emitter", SEG_E: "open_emitter", SEG_DP: "open_emitter", SEG_D: "open_emitter", DOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MAX7221xWG";
@@ -2614,7 +2685,8 @@ export class MBI5252GFN extends Component.withPins({
   "DCLK": "24",
   "PAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", GND: "power_in", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", SDO: "output", GCLK: "input", "R-EXT": "passive", VDD: "power_in", SDI: "input", DCLK: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MBI5252GFN";
@@ -2656,7 +2728,8 @@ export class MBI5252GP extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", DCLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", GCLK: "input", SDO: "output", "R-EXT": "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MBI5252GP";
@@ -2690,7 +2763,8 @@ export class MC14495P extends Component.withPins({
   "d": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "output", f: "output", g: "output", "h+i": "output", A: "input", B: "input", "~{CLK}": "input", GND: "power_in", C: "input", D: "input", "~{VCR}": "input", a: "output", b: "output", c: "output", d: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MC14495P";
@@ -2716,7 +2790,8 @@ export class MCP1643xMS extends Component.withPins({
   "SGND": "7",
   "VIN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", VFB: "input", NC: "no_connect", VOUT: "power_out", SW: "passive", PGND: "power_in", SGND: "power_in", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MCP1643xMS";
@@ -2739,7 +2814,8 @@ export class MCP1662_xOT extends Component.withPins({
   "EN": "4",
   "V_{IN}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "power_out", GND: "power_in", "V_{FB}": "input", EN: "input", "V_{IN}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MCP1662-xOT";
@@ -2765,7 +2841,8 @@ export class MP3362GJ extends Component.withPins({
   "OVP": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "passive", VIN: "power_in", COMP: "passive", EN: "input", OSC: "input", FB: "passive", OVP: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MP3362GJ";
@@ -2794,7 +2871,8 @@ export class MPQ2483DQ extends Component.withPins({
   "SW": "10",
   "VSS_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS_2: "power_in", OVP: "input", FB: "input", COMP: "input", RSET: "input", "EN/DIM": "input", INGND: "power_in", BST: "output", SW: "output", VSS_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MPQ2483DQ";
@@ -2820,7 +2898,8 @@ export class MPQ3362GJ_AEC1 extends Component.withPins({
   "OVP": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "passive", VIN: "power_in", COMP: "passive", EN: "input", OSC: "input", FB: "passive", OVP: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:MPQ3362GJ-AEC1";
@@ -2852,7 +2931,8 @@ export class NCP5623DTBR2G extends Component.withPins({
   "V_{BAT}": "13",
   "IC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IC_1: "passive", GND_2: "power_in", LED3: "open_collector", LED2: "open_collector", LED1: "open_collector", GND_6: "passive", NC_7: "no_connect", NC_8: "no_connect", SDA: "bidirectional", "I_{REF}": "passive", SCL: "input", "V_{DET}": "input", "V_{BAT}": "power_in", IC_14: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:NCP5623DTBR2G";
@@ -2876,7 +2956,8 @@ export class NCR401U extends Component.withPins({
   "IOUT_5": "5",
   "REXT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IOUT_2: "output", IOUT_3: "passive", VS: "power_in", IOUT_5: "passive", REXT: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:NCR401U";
@@ -2903,7 +2984,8 @@ export class PAM2841G extends Component.withPins({
   "SW": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND: "power_in", VIN: "power_in", ENA: "input", Comp: "passive", GND_5: "power_in", FB: "input", OVP: "input", SW: "power_out", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PAM2841G";
@@ -2929,7 +3011,8 @@ export class PAM2841S extends Component.withPins({
   "OVP": "7",
   "SW": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND: "power_in", VIN: "power_in", ENA: "input", Comp: "passive", GND: "power_in", FB: "input", OVP: "input", SW: "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PAM2841S";
@@ -2963,7 +3046,8 @@ export class PCA9531PW extends Component.withPins({
   "SDA": "15",
   "V_{DD}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", LED0: "open_collector", LED1: "open_collector", LED2: "open_collector", LED3: "open_collector", "V_{SS}": "power_in", LED4: "open_collector", LED5: "open_collector", LED6: "open_collector", LED7: "open_collector", "~{RESET}": "input", SCL: "input", SDA: "bidirectional", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PCA9531PW";
@@ -3009,7 +3093,8 @@ export class PCA9635 extends Component.withPins({
   "SDA": "27",
   "VDD": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", LED0: "output", LED1: "output", LED2: "output", LED3: "output", LED4: "output", LED5: "output", LED6: "output", LED7: "output", VSS: "power_in", LED8: "output", LED9: "output", LED10: "output", LED11: "output", LED12: "output", LED13: "output", LED14: "output", LED15: "output", "~{OE}": "input", A5: "input", A6: "input", SCL: "input", SDA: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PCA9635";
@@ -3056,7 +3141,8 @@ export class PCA9685BS extends Component.withPins({
   "A2": "28",
   "VSS_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A3: "input", A4: "input", LED0: "output", LED1: "output", LED2: "output", LED3: "output", LED4: "output", LED5: "output", LED6: "output", LED7: "output", VSS_11: "power_in", LED8: "output", LED9: "output", LED10: "output", LED11: "output", LED12: "output", LED13: "output", LED14: "output", LED15: "output", "~{OE}": "input", A5: "input", EXTCLK: "input", SCL: "input", SDA: "bidirectional", VDD: "power_in", A0: "input", A1: "input", A2: "input", VSS_29: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PCA9685BS";
@@ -3102,7 +3188,8 @@ export class PCA9685PW extends Component.withPins({
   "SDA": "27",
   "VDD": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", LED0: "output", LED1: "output", LED2: "output", LED3: "output", LED4: "output", LED5: "output", LED6: "output", LED7: "output", VSS: "power_in", LED8: "output", LED9: "output", LED10: "output", LED11: "output", LED12: "output", LED13: "output", LED14: "output", LED15: "output", "~{OE}": "input", A5: "input", EXTCLK: "input", SCL: "input", SDA: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PCA9685PW";
@@ -3149,7 +3236,8 @@ export class PCA9745BTW extends Component.withPins({
   "V_{DD}": "28",
   "V_{SS}_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REXT: "input", "V_{SS}_2": "power_in", SDO: "output", "~{CS}": "input", "~{OE}": "input", LED0: "open_collector", LED1: "open_collector", LED2: "open_collector", LED3: "open_collector", "V_{SS}_10": "passive", LED4: "open_collector", LED5: "open_collector", LED6: "open_collector", LED7: "open_collector", LED8: "open_collector", LED9: "open_collector", LED10: "open_collector", LED11: "open_collector", "V_{SS}_19": "passive", LED12: "open_collector", LED13: "open_collector", LED14: "open_collector", LED15: "open_collector", "V_{SS}_24": "passive", "~{RESET}": "input", SCLK: "input", SDI: "input", "V_{DD}": "power_in", "V_{SS}_29": "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:PCA9745BTW";
@@ -3173,7 +3261,8 @@ export class RCD_24 extends Component.withPins({
   "-Vout": "5",
   "+Vout": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+Vin": "power_in", Analogue_Dimming: "passive", "PWM/ON/OFF": "passive", GND: "power_in", "-Vout": "power_out", "+Vout": "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:RCD-24";
@@ -3199,7 +3288,8 @@ export class ST1CC40DR extends Component.withPins({
   "GND": "7",
   "VINSW": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "output", PGND: "power_out", VINA: "power_in", INH: "input", FB: "input", AGND: "power_in", GND: "power_in", VINSW: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:ST1CC40DR";
@@ -3226,7 +3316,8 @@ export class ST1CC40PUR extends Component.withPins({
   "PGND": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VINA: "power_in", INH: "input", FB: "input", AGND: "power_in", NC: "no_connect", VINSW: "power_in", SW: "output", PGND: "power_out", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:ST1CC40PUR";
@@ -3260,7 +3351,8 @@ export class STP08CP05B extends Component.withPins({
   "R-EXT": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP08CP05B";
@@ -3294,7 +3386,8 @@ export class STP08CP05M extends Component.withPins({
   "R-EXT": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP08CP05M";
@@ -3328,7 +3421,8 @@ export class STP08CP05T extends Component.withPins({
   "R-EXT": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP08CP05T";
@@ -3363,7 +3457,8 @@ export class STP08CP05XT extends Component.withPins({
   "VDD": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP08CP05XT";
@@ -3405,7 +3500,8 @@ export class STP16CP05M extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", "LE/DM1": "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE/DM2}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CP05M";
@@ -3447,7 +3543,8 @@ export class STP16CP05P extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", "LE/DM1": "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE/DM2}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CP05P";
@@ -3489,7 +3586,8 @@ export class STP16CP05T extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", "LE/DM1": "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE/DM2}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CP05T";
@@ -3532,7 +3630,8 @@ export class STP16CP05XT extends Component.withPins({
   "VDD": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", "LE/DM1": "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE/DM2}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CP05XT";
@@ -3574,7 +3673,8 @@ export class STP16CPC26T extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CPC26T";
@@ -3616,7 +3716,8 @@ export class STP16CPC26M extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CPC26M";
@@ -3658,7 +3759,8 @@ export class STP16CPC26P extends Component.withPins({
   "R-EXT": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CPC26P";
@@ -3701,7 +3803,8 @@ export class STP16CPC26X extends Component.withPins({
   "VDD": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", LE: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OUT8}": "open_collector", "~{OUT9}": "open_collector", "~{OUT10}": "open_collector", "~{OUT11}": "open_collector", "~{OUT12}": "open_collector", "~{OUT13}": "open_collector", "~{OUT14}": "open_collector", "~{OUT15}": "open_collector", "~{OE}": "input", SDO: "output", "R-EXT": "output", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:STP16CPC26X";
@@ -3731,7 +3834,8 @@ export class TCA6507RUE extends Component.withPins({
   "P5": "11",
   "P6": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", SCL: "input", SDA: "bidirectional", EN: "input", GND: "power_in", P0: "open_collector", P1: "open_collector", P2: "open_collector", P3: "open_collector", P4: "open_collector", P5: "open_collector", P6: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TCA6507RUE";
@@ -3769,7 +3873,8 @@ export class TLC59108xPW extends Component.withPins({
   "SDA": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REXT: "passive", A0: "input", A1: "input", A2: "input", A3: "input", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", GND_8: "power_in", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", GND_13: "passive", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", GND_16: "passive", "~{RESET}": "input", SCL: "input", SDA: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC59108xPW";
@@ -3802,7 +3907,8 @@ export class TLC5916 extends Component.withPins({
   "R-EXT": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", "LE(ED1)": "passive", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OE}(ED2)": "passive", SDO: "output", "R-EXT": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5916";
@@ -3835,7 +3941,8 @@ export class TLC5917 extends Component.withPins({
   "R-EXT": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDI: "input", CLK: "input", "LE(ED1)": "passive", "~{OUT0}": "open_collector", "~{OUT1}": "open_collector", "~{OUT2}": "open_collector", "~{OUT3}": "open_collector", "~{OUT4}": "open_collector", "~{OUT5}": "open_collector", "~{OUT6}": "open_collector", "~{OUT7}": "open_collector", "~{OE}(ED2)": "passive", SDO: "output", "R-EXT": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5917";
@@ -3881,7 +3988,8 @@ export class TLC5940NT extends Component.withPins({
   "VPRG": "27",
   "OUT0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", OUT9: "open_collector", OUT10: "open_collector", OUT11: "open_collector", OUT12: "open_collector", OUT13: "open_collector", OUT14: "open_collector", OUT15: "open_collector", XERR: "open_collector", SOUT: "output", GSCLK: "input", DCPRG: "input", IREF: "input", VCC: "power_in", GND: "power_in", BLANK: "input", XLAT: "input", SCLK: "input", SIN: "input", VPRG: "input", OUT0: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5940NT";
@@ -3928,7 +4036,8 @@ export class TLC5940PWP extends Component.withPins({
   "VCC": "28",
   "PAD": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", BLANK: "input", XLAT: "input", SCLK: "input", SIN: "input", VPRG: "input", OUT0: "open_collector", OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", OUT9: "open_collector", OUT10: "open_collector", OUT11: "open_collector", OUT12: "open_collector", OUT13: "open_collector", OUT14: "open_collector", OUT15: "open_collector", XERR: "open_collector", SOUT: "output", GSCLK: "input", DCPRG: "input", IREF: "input", VCC: "power_in", PAD: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5940PWP";
@@ -3979,7 +4088,8 @@ export class TLC5947DAP extends Component.withPins({
   "VCC": "32",
   "PowerPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", BLANK: "input", SCLK: "input", SIN: "input", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", OUT16: "output", OUT17: "output", OUT18: "output", OUT19: "output", OUT20: "output", OUT21: "output", OUT22: "output", OUT23: "output", SOUT: "output", XLAT: "input", IREF: "input", VCC: "power_in", PowerPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5947DAP";
@@ -4030,7 +4140,8 @@ export class TLC5947RHB extends Component.withPins({
   "SIN": "32",
   "PowerPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", OUT9: "output", OUT10: "output", OUT11: "output", OUT12: "output", OUT13: "output", OUT14: "output", OUT15: "output", OUT16: "output", OUT17: "output", OUT18: "output", OUT19: "output", OUT20: "output", OUT21: "output", OUT22: "output", OUT23: "output", SOUT: "output", XLAT: "input", IREF: "input", VCC: "power_in", GND: "power_in", BLANK: "input", SCLK: "input", SIN: "input", PowerPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5947RHB";
@@ -4073,7 +4184,8 @@ export class TLC5949PWP extends Component.withPins({
   "VCC": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SIN: "input", SCLK: "input", LAT: "input", OUT0: "open_collector", OUT1: "open_collector", OUT2: "open_collector", OUT3: "open_collector", OUT4: "open_collector", OUT5: "open_collector", OUT6: "open_collector", OUT7: "open_collector", OUT8: "open_collector", OUT9: "open_collector", OUT10: "open_collector", OUT11: "open_collector", OUT12: "open_collector", OUT13: "open_collector", OUT14: "open_collector", OUT15: "open_collector", GSCLK: "input", SOUT: "output", IREF: "input", VCC: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5949PWP";
@@ -4130,7 +4242,8 @@ export class TLC5951DAP extends Component.withPins({
   "GSSOUT": "19",
   "DCSOUT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GSSIN: "input", GSSCK: "input", GSLAT: "input", GSCKG: "input", GSCKR: "input", GSCKB: "input", OUTG0: "open_collector", OUTR0: "open_collector", OUTB0: "open_collector", OUTG1: "open_collector", OUTR1: "open_collector", OUTB1: "open_collector", OUTG2: "open_collector", OUTR2: "open_collector", OUTB2: "open_collector", OUTG3: "open_collector", OUTR3: "open_collector", OUTB3: "open_collector", OUTB4: "open_collector", OUTR4: "open_collector", OUTG4: "open_collector", OUTB5: "open_collector", OUTR5: "open_collector", OUTG5: "open_collector", OUTB6: "open_collector", OUTR6: "open_collector", OUTG6: "open_collector", OUTB7: "open_collector", OUTR7: "open_collector", OUTG7: "open_collector", GND_33: "power_in", IREF: "passive", VCC: "power_in", XBLNK: "input", DCSCK: "input", DCSIN: "input", GND_39: "passive", GSSOUT: "output", DCSOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5951DAP";
@@ -4189,7 +4302,8 @@ export class TLC5951RHA extends Component.withPins({
   "GSSOUT": "5",
   "DCSOUT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTG3: "open_collector", OUTR3: "open_collector", OUTB3: "open_collector", NC_4: "no_connect", NC_7: "no_connect", OUTB4: "open_collector", OUTR4: "open_collector", OUTG4: "open_collector", OUTB5: "open_collector", OUTR5: "open_collector", OUTG5: "open_collector", OUTB6: "open_collector", OUTR6: "open_collector", OUTG6: "open_collector", OUTB7: "open_collector", OUTR7: "open_collector", OUTG7: "open_collector", GND_20: "power_in", IREF: "passive", VCC: "power_in", XBLNK: "input", DCSCK: "input", DCSIN: "input", GSSIN: "input", GSSCK: "input", GSLAT: "input", GSCKG: "input", GSCKR: "input", GSCKB: "input", OUTG0: "open_collector", OUTR0: "open_collector", OUTB0: "open_collector", OUTG1: "open_collector", OUTR1: "open_collector", OUTB1: "open_collector", OUTG2: "open_collector", OUTR2: "open_collector", OUTB2: "open_collector", GND_41: "passive", GSSOUT: "output", DCSOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5951RHA";
@@ -4248,7 +4362,8 @@ export class TLC5951RTA extends Component.withPins({
   "GSSOUT": "5",
   "DCSOUT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTG3: "open_collector", OUTR3: "open_collector", OUTB3: "open_collector", NC_4: "no_connect", NC_7: "no_connect", OUTB4: "open_collector", OUTR4: "open_collector", OUTG4: "open_collector", OUTB5: "open_collector", OUTR5: "open_collector", OUTG5: "open_collector", OUTB6: "open_collector", OUTR6: "open_collector", OUTG6: "open_collector", OUTB7: "open_collector", OUTR7: "open_collector", OUTG7: "open_collector", GND_20: "power_in", IREF: "passive", VCC: "power_in", XBLNK: "input", DCSCK: "input", DCSIN: "input", GSSIN: "input", GSSCK: "input", GSLAT: "input", GSCKG: "input", GSCKR: "input", GSCKB: "input", OUTG0: "open_collector", OUTR0: "open_collector", OUTB0: "open_collector", OUTG1: "open_collector", OUTR1: "open_collector", OUTB1: "open_collector", OUTG2: "open_collector", OUTR2: "open_collector", OUTB2: "open_collector", GND_41: "passive", GSSOUT: "output", DCSOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5951RTA";
@@ -4323,7 +4438,8 @@ export class TLC5957RTQ extends Component.withPins({
   "GND": "57",
   "SOUT": "42",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IREF: "passive", OUTR14: "open_collector", OUTG14: "open_collector", OUTB14: "open_collector", OUTR15: "open_collector", OUTG15: "open_collector", OUTB15: "open_collector", OUTR0: "open_collector", OUTG0: "open_collector", OUTB0: "open_collector", OUTR1: "open_collector", OUTG1: "open_collector", OUTB1: "open_collector", OUTR2: "open_collector", OUTG2: "open_collector", OUTB2: "open_collector", OUTR3: "open_collector", OUTG3: "open_collector", OUTB3: "open_collector", OUTR4: "open_collector", OUTG4: "open_collector", OUTB4: "open_collector", OUTR5: "open_collector", OUTG5: "open_collector", OUTB5: "open_collector", SIN: "input", LAT: "input", SCLK: "input", GCLK: "input", OUTR6: "open_collector", OUTG6: "open_collector", OUTB6: "open_collector", OUTR7: "open_collector", OUTG7: "open_collector", OUTB7: "open_collector", OUTR8: "open_collector", OUTG8: "open_collector", OUTB8: "open_collector", OUTR9: "open_collector", OUTG9: "open_collector", OUTB9: "open_collector", VCC: "power_in", OUTR10: "open_collector", OUTG10: "open_collector", OUTB10: "open_collector", OUTR11: "open_collector", OUTG11: "open_collector", OUTB11: "open_collector", OUTR12: "open_collector", OUTG12: "open_collector", OUTB12: "open_collector", OUTR13: "open_collector", OUTG13: "open_collector", OUTB13: "open_collector", IREFGND: "power_in", GND: "power_in", SOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5957RTQ";
@@ -4362,7 +4478,8 @@ export class TLC5971PWP extends Component.withPins({
   "SCKO": "11",
   "SDTO": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_2: "power_in", OUTR0: "open_collector", OUTG0: "open_collector", OUTB0: "open_collector", OUTR1: "open_collector", OUTG1: "open_collector", OUTB1: "open_collector", SDTI: "input", SCKI: "input", OUTR2: "open_collector", OUTG2: "open_collector", OUTB2: "open_collector", OUTR3: "open_collector", OUTG3: "open_collector", OUTB3: "open_collector", VCC: "power_in", VREG: "passive", GND_21: "passive", IREF: "passive", SCKO: "output", SDTO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5971PWP";
@@ -4405,7 +4522,8 @@ export class TLC5971RGE extends Component.withPins({
   "VREG": "15",
   "IREF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDTI: "input", SCKI: "input", NC_3: "no_connect", NC_4: "no_connect", SDTO: "output", OUTR2: "open_collector", OUTG2: "open_collector", OUTB2: "open_collector", OUTR3: "open_collector", OUTG3: "open_collector", OUTB3: "open_collector", VCC: "power_in", NC_14: "no_connect", NC_17: "no_connect", GND_18: "power_in", OUTR0: "open_collector", OUTG0: "open_collector", OUTB0: "open_collector", OUTR1: "open_collector", OUTG1: "open_collector", OUTB1: "open_collector", GND_25: "passive", SCKO: "output", VREG: "passive", IREF: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5971RGE";
@@ -4431,7 +4549,8 @@ export class TLC5973 extends Component.withPins({
   "IREF": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT0: "output", OUT1: "output", OUT2: "output", GND: "power_in", SDO: "output", SDI: "input", IREF: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TLC5973";
@@ -4455,7 +4574,8 @@ export class TPS61165DBV extends Component.withPins({
   "COMP": "5",
   "FB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", CTRL: "input", SW: "power_out", GND: "power_in", COMP: "output", FB: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS61165DBV";
@@ -4480,7 +4600,8 @@ export class TPS61165DRV extends Component.withPins({
   "VIN": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "input", COMP: "output", GND_3: "power_in", SW: "power_out", CTRL: "input", VIN: "power_in", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS61165DRV";
@@ -4504,7 +4625,8 @@ export class TPS92200D1DDC extends Component.withPins({
   "SW": "5",
   "BOOT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "input", DIM: "input", GND: "power_in", VIN: "power_in", SW: "power_out", BOOT: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS92200D1DDC";
@@ -4528,7 +4650,8 @@ export class TPS92200D2DDC extends Component.withPins({
   "SW": "5",
   "BOOT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "input", DIM: "input", GND: "power_in", VIN: "power_in", SW: "power_out", BOOT: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS92200D2DDC";
@@ -4555,7 +4678,8 @@ export class TPS92511DDA extends Component.withPins({
   "LX": "7",
   "VIN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_9: "passive", VCC: "power_out", PGND: "power_in", IADJ: "input", GND_4: "power_in", FS: "input", DIM: "input", LX: "open_collector", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS92511DDA";
@@ -4578,7 +4702,8 @@ export class TPS92612DBV extends Component.withPins({
   "IN": "4",
   "OUT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", PWM: "input", SUPPLY: "power_in", IN: "input", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS92612DBV";
@@ -4617,7 +4742,8 @@ export class TPS92692PWP extends Component.withPins({
   "VCC": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", VREF: "power_out", "~{FLT}": "open_collector", SS: "passive", DM: "passive", RT: "passive", COMP: "passive", IMON: "output", IADJ: "input", "DIM/PWM": "input", RAMP: "passive", PDRV: "output", CSN: "input", CSP: "input", OV: "input", SLOPE: "passive", GND_17: "power_in", IS: "input", GATE: "output", VCC: "power_out", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:TPS92692PWP";
@@ -4642,7 +4768,8 @@ export class WS2811 extends Component.withPins({
   "SET": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTR: "output", OUTG: "output", OUTB: "output", GND: "power_in", DO: "output", DIN: "input", SET: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:WS2811";
@@ -4665,7 +4792,8 @@ export class ZXLD383 extends Component.withPins({
   "V_{OUT}": "4",
   "V_{CC}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", GND: "power_in", NC: "no_connect", "V_{OUT}": "output", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:ZXLD383";
@@ -4688,7 +4816,8 @@ export class ZXSC310 extends Component.withPins({
   "I_{SENSE}": "4",
   "V_{DRIVE}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", STND: "input", "I_{SENSE}": "input", "V_{DRIVE}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:ZXSC310";
@@ -4712,7 +4841,8 @@ export class ZXSC400 extends Component.withPins({
   "V_{FB}": "5",
   "V_{DRIVE}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", STND: "input", "I_{SENSE}": "input", "V_{FB}": "input", "V_{DRIVE}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:ZXSC400";
@@ -4755,7 +4885,8 @@ export class iC_HTG extends Component.withPins({
   "VDD": "23",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ID: "input", EC: "input", "MISO/SDA": "bidirectional", ANIN: "bidirectional", MCH: "input", MCL: "input", MOD: "input", CI: "input", CIL: "input", VBL: "power_in", MD: "input", MR: "input", GND_20: "power_in", DCO: "passive", VB: "power_in", "~{CHK}": "open_collector", "~{STBY}": "passive", "~{CS}/A1": "input", "MOSI/A0": "passive", "SCLK/SCL": "input", VRN: "output", VRP: "output", INS: "passive", VDD: "output", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_LED:iC-HTG";

@@ -61,7 +61,8 @@ export class CC1312R1F3RGZ extends Component.withPins({
   "VDDR_RF": "48",
   "GND": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RF_P: "passive", RF_N: "passive", RX_TX: "passive", X32K_Q1: "input", X32K_Q2: "input", DIO_1: "bidirectional", DIO_2: "bidirectional", DIO_3: "bidirectional", DIO_4: "bidirectional", DIO_5: "bidirectional", DIO_6: "bidirectional", DIO_7: "bidirectional", VDDS2: "power_in", DIO_8: "bidirectional", DIO_9: "bidirectional", DIO_10: "bidirectional", DIO_11: "bidirectional", DIO_12: "bidirectional", DIO_13: "bidirectional", DIO_14: "bidirectional", DIO_15: "bidirectional", VDDS3: "power_in", DCOUPL: "power_out", JTAG_TMSC: "bidirectional", JTAG_TCKC: "input", "DIO_16/JTAG_TDO": "bidirectional", "DIO_17/JTAG_TDI": "bidirectional", DIO_18: "bidirectional", DIO_19: "bidirectional", DIO_20: "bidirectional", DIO_21: "bidirectional", DIO_22: "bidirectional", DCDC_SW: "power_out", VDDS_DCDC: "power_in", "~{RESET}": "input", DIO_23: "bidirectional", DIO_24: "bidirectional", DIO_25: "bidirectional", DIO_26: "bidirectional", DIO_27: "bidirectional", DIO_28: "bidirectional", DIO_29: "bidirectional", DIO_30: "bidirectional", VDDS: "power_in", VDDR: "power_in", X48M_N: "input", X48M_P: "input", VDDR_RF: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_SimpleLink:CC1312R1F3RGZ";

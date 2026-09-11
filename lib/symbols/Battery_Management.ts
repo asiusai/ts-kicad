@@ -33,7 +33,8 @@ export class ADP5063 extends Component.withPins({
   "GND": "20",
   "EP": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", D_IO3: "bidirectional", D_IO2: "bidirectional", BAT_SNS: "passive", D_IO1: "bidirectional", VINx_6: "input", VINx_7: "input", VINx_8: "input", ISO_Sx_9: "passive", ISO_Sx_10: "power_out", ISO_Sx_11: "passive", ISO_Bx_12: "passive", ISO_Bx_13: "passive", ISO_Bx_14: "passive", ILED: "open_collector", SYS_EN: "open_collector", SDA: "bidirectional", THR: "passive", CBP: "passive", GND: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:ADP5063";
@@ -68,7 +69,8 @@ export class ADP5090ACP extends Component.withPins({
   "SETPG": "16",
   "AGND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SETSD: "input", TERM: "input", AGND_3: "power_in", MINOP: "passive", MPPT: "input", CBP: "passive", VIN: "power_in", PGND: "power_in", SW: "input", BAT: "power_out", SYS: "power_out", BACKUP: "passive", PGOOD: "output", DIS_SW: "input", REF: "output", SETPG: "input", AGND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:ADP5090ACP";
@@ -111,7 +113,8 @@ export class ADP5091 extends Component.withPins({
   "REG_D0": "24",
   "AGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "passive", SETSD: "passive", SETBK: "passive", TERM: "passive", SETPG: "passive", SETHYST: "passive", AGND_7: "power_in", CBP: "passive", MPPT: "input", VIN: "power_in", LLD: "output", PGND: "power_in", SW: "power_in", REG_OUT: "power_out", REG_FB: "power_out", SYS: "power_out", BAT: "power_out", BACK_UP: "power_in", PGOOD: "output", VID: "input", MINOP: "passive", DIS_SW: "input", REG_D1: "input", REG_D0: "input", AGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:ADP5091";
@@ -154,7 +157,8 @@ export class ADP5092 extends Component.withPins({
   "REG_D0": "24",
   "AGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "passive", SETSD: "passive", SETBK: "passive", TERM: "passive", SETPG: "passive", SETHYST: "passive", AGND_7: "power_in", CBP: "passive", MPPT: "input", VIN: "power_in", REG_GOOD: "output", PGND: "power_in", SW: "power_in", REG_OUT: "power_out", REG_FB: "power_out", SYS: "power_out", BAT: "power_out", BACK_UP: "power_in", PGOOD: "output", VID: "input", MINOP: "passive", DIS_SW: "input", REG_D1: "input", REG_D0: "input", AGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:ADP5092";
@@ -177,7 +181,8 @@ export class AP9101CK extends Component.withPins({
   "DO": "4",
   "CO": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "passive", VDD: "power_in", VSS: "power_in", DO: "output", CO: "output", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:AP9101CK";
@@ -201,7 +206,8 @@ export class AP9101CK6 extends Component.withPins({
   "VDD": "5",
   "VSS": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "output", VM: "passive", CO: "output", NC: "no_connect", VDD: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:AP9101CK6";
@@ -239,7 +245,8 @@ export class APW7261 extends Component.withPins({
   "REGN": "E3",
   "CSOUT": "E4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBUS_A1: "power_in", VBUS_A2: "passive", BOOT: "input", SCL: "input", PMID_B1: "input", PMID_B2: "input", PMID_B3: "input", SDA: "bidirectional", SW_C1: "power_out", SW_C2: "passive", SW_C3: "passive", STAT: "open_collector", PGND_D1: "power_in", PGND_D2: "passive", PGND_D3: "passive", OTG: "input", CSIN: "input", CD: "input", REGN: "power_out", CSOUT: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:APW7261";
@@ -298,7 +305,8 @@ export class AS8506C extends Component.withPins({
   "VREF_H": "40",
   "PAD": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TSECH: "input", TSECL: "input", VC7: "input", VC6: "input", VS5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", CGND: "input", NC: "no_connect", VREF_IN: "input", GND: "power_in", TRIG_IN: "input", CLK_IN: "input", CVT_NOK_OUT: "input", BD_OUT: "input", FD_OUT: "input", WAKE_IN: "input", NC_T: "no_connect", SDO: "output", SDI: "input", SCKL: "input", "~{CS}": "input", CELL_THU: "input", CELL_THL: "input", TEMP_IN2: "input", TEMP_IN1: "input", REF_T: "input", V5V: "input", V5V_IN: "input", WAKE_OUT: "input", FD_IN: "input", BD_IN: "input", CVT_NOK_IN: "input", CLK_OUT: "input", TRIG_OUT: "input", VSUP: "power_in", MS_SL: "input", VREF_H: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:AS8506C";
@@ -331,7 +339,8 @@ export class BQ2003 extends Component.withPins({
   "DIS": "15",
   "V_{CC}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CCMD: "input", DCMD: "input", DVEN: "input", "TM_{1}": "input", "TM_{2}": "input", TS: "input", BAT: "input", "V_{SS}": "power_in", SNS: "input", TCO: "input", MCV: "input", TEMP: "output", CHG: "output", MOD: "output", DIS: "output", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ2003";
@@ -355,7 +364,8 @@ export class BQ21040DBV extends Component.withPins({
   "GND": "5",
   "VIN": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS: "input", OUT: "power_out", "~{CHG}": "open_collector", ISET: "input", GND: "power_in", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ21040DBV";
@@ -394,7 +404,8 @@ export class BQ24004 extends Component.withPins({
   "N/C_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N/C_1": "no_connect", IN_2: "input", IN_3: "input", VCC: "power_in", ISNS: "input", "N/C_6": "no_connect", "APG/THERM": "input", EN: "input", VSEL: "input", GND_10: "power_in", "N/C_11": "no_connect", CR: "input", TMR_SEL: "input", STAT1: "output", "N/C_15": "no_connect", AGND: "power_in", VSENSE: "input", OUT_18: "output", OUT_19: "passive", "N/C_20": "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24004";
@@ -433,7 +444,8 @@ export class BQ24005 extends Component.withPins({
   "N/C_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N/C_1": "no_connect", IN_2: "input", IN_3: "input", VCC: "power_in", ISNS: "input", "N/C_6": "no_connect", "APG/THERM": "input", EN: "input", VSEL: "input", GND_10: "power_in", "N/C_11": "no_connect", CR: "input", TMR_SEL: "input", STAT1: "open_collector", STAT2: "open_collector", AGND: "power_in", VSENSE: "input", OUT_18: "output", OUT_19: "passive", "N/C_20": "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24005";
@@ -472,7 +484,8 @@ export class BQ24006 extends Component.withPins({
   "N/C_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N/C_1": "no_connect", IN_2: "input", IN_3: "input", VCC: "power_in", ISNS: "input", "N/C_6": "no_connect", "APG/THERM": "input", EN: "input", VSEL: "input", GND_10: "power_in", "N/C_11": "no_connect", CR: "input", TMR_SEL: "input", STAT1: "output", STAT2: "output", AGND: "power_in", VSENSE: "input", OUT_18: "output", OUT_19: "passive", "N/C_20": "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24006";
@@ -501,7 +514,8 @@ export class BQ24012 extends Component.withPins({
   "OUT": "10",
   "1EP": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", VCC: "power_in", STAT1: "open_collector", STAT2: "open_collector", VSS: "power_in", ISET: "output", "~{PG}": "open_collector", "~{CE}": "input", BAT: "input", OUT: "power_out", "1EP": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24012";
@@ -530,7 +544,8 @@ export class BQ24013 extends Component.withPins({
   "OUT": "10",
   "VSS_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", VCC: "power_in", STAT1: "open_collector", STAT2: "open_collector", VSS_5: "power_in", ISET: "output", "~{CE}": "input", "~{TTE}": "input", BAT: "input", OUT: "power_out", VSS_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24013";
@@ -565,7 +580,8 @@ export class BQ24072RGT extends Component.withPins({
   "ISET": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS: "passive", BAT_2: "power_out", BAT_3: "passive", "~{CE}": "input", EN2: "input", EN1: "input", "~{PGOOD}": "open_collector", VSS_8: "power_in", "~{CHG}": "open_collector", OUT_10: "power_out", OUT_11: "passive", ILIM: "passive", IN: "power_in", TMR: "input", TD: "input", ISET: "passive", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24072RGT";
@@ -600,7 +616,8 @@ export class BQ24073RGT extends Component.withPins({
   "ISET": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS: "passive", BAT_2: "power_out", BAT_3: "passive", "~{CE}": "input", EN2: "input", EN1: "input", "~{PGOOD}": "open_collector", VSS_8: "power_in", "~{CHG}": "open_collector", OUT_10: "power_out", OUT_11: "passive", ILIM: "passive", IN: "power_in", TMR: "input", TD: "input", ISET: "passive", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24073RGT";
@@ -635,7 +652,8 @@ export class BQ24074RGT extends Component.withPins({
   "ISET": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS: "passive", BAT_2: "power_out", BAT_3: "passive", "~{CE}": "input", EN2: "input", EN1: "input", "~{PGOOD}": "open_collector", VSS_8: "power_in", "~{CHG}": "open_collector", OUT_10: "power_out", OUT_11: "passive", ILIM: "passive", IN: "power_in", TMR: "input", ITERM: "input", ISET: "passive", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24074RGT";
@@ -670,7 +688,8 @@ export class BQ24075RGT extends Component.withPins({
   "ISET": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS: "passive", BAT_2: "power_out", BAT_3: "passive", "~{CE}": "input", EN2: "input", EN1: "input", "~{PGOOD}": "open_collector", VSS_8: "power_in", "~{CHG}": "open_collector", OUT_10: "power_out", OUT_11: "passive", ILIM: "passive", IN: "power_in", TMR: "input", SYSOFF: "input", ISET: "passive", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24075RGT";
@@ -705,7 +724,8 @@ export class BQ24079RGT extends Component.withPins({
   "ISET": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS: "passive", BAT_2: "power_out", BAT_3: "passive", "~{CE}": "input", EN2: "input", EN1: "input", "~{PGOOD}": "open_collector", VSS_8: "power_in", "~{CHG}": "open_collector", OUT_10: "power_out", OUT_11: "passive", ILIM: "passive", IN: "power_in", TMR: "input", SYSOFF: "input", ISET: "passive", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24079RGT";
@@ -734,7 +754,8 @@ export class BQ24090DGQ extends Component.withPins({
   "OUT": "10",
   "VSS_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", ISET: "passive", VSS_3: "power_in", PRETERM: "passive", "~{PG}": "open_collector", NC: "no_connect", ISET2: "passive", "~{CHG}": "open_collector", TS: "passive", OUT: "power_out", VSS_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24090DGQ";
@@ -777,7 +798,8 @@ export class BQ24133RGY extends Component.withPins({
   "SW_24": "24",
   "AGND": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW_1: "power_out", PVCC_2: "power_in", PVCC_3: "passive", AVCC: "power_in", ACN: "input", ACP: "input", CMSRC: "output", ACDRV: "output", STAT: "open_collector", TS: "input", TTC: "passive", VREF: "power_out", ISET: "input", CELL: "passive", SRN: "input", SRP: "input", ACSET: "input", OVPSET: "input", "~{BATDRV}": "output", REGN: "passive", BTST: "passive", PGND_22: "power_in", PGND_23: "passive", SW_24: "passive", AGND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24133RGY";
@@ -820,7 +842,8 @@ export class BQ24166RGE extends Component.withPins({
   "~{CE}": "24",
   "PGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDPM: "input", IUSB3: "passive", IUSB2: "passive", IUSB1: "passive", ISET: "passive", DRV: "output", "~{PG}": "open_collector", "~{CHG}": "open_collector", TS: "passive", BGATE: "output", BAT_11: "passive", BAT_12: "passive", SYS_13: "power_out", SYS_14: "passive", ILIM: "passive", PGND_16: "power_in", PGND_17: "passive", SW: "passive", BOOT: "passive", PMIDI: "passive", IN: "input", USB: "power_in", PMIDU: "passive", "~{CE}": "input", PGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24166RGE";
@@ -863,7 +886,8 @@ export class BQ24167RGE extends Component.withPins({
   "~{CE}": "24",
   "PGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDPM: "input", IUSB3: "passive", IUSB2: "passive", IUSB1: "passive", ISET: "passive", DRV: "output", "~{PG}": "open_collector", "~{CHG}": "open_collector", TS: "passive", BGATE: "output", BAT_11: "passive", BAT_12: "passive", SYS_13: "power_out", SYS_14: "passive", ILIM: "passive", PGND_16: "power_in", PGND_17: "passive", SW: "passive", BOOT: "passive", PMIDI: "passive", IN: "input", USB: "power_in", PMIDU: "passive", "~{CE}": "input", PGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24167RGE";
@@ -906,7 +930,8 @@ export class BQ24610 extends Component.withPins({
   "VCC": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ACN: "input", ACP: "input", "~{ACDRV}": "output", CE: "input", STAT1: "open_collector", TS: "input", TTC: "input", "~{PG}": "open_collector", STAT2: "open_collector", VREF: "power_out", ISET1: "input", VFB: "output", SRN: "input", SRP: "input", ISET2: "input", ACSET: "input", GND_17: "power_in", REGN: "output", LODRV: "output", PH: "power_in", HIDRV: "output", BTST: "power_in", "~{BATDRV}": "output", VCC: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24610";
@@ -949,7 +974,8 @@ export class BQ24617 extends Component.withPins({
   "VCC": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ACN: "input", ACP: "input", "~{ACDRV}": "output", CE: "input", STAT1: "open_collector", TS: "input", TTC: "input", "~{PG}": "open_collector", STAT2: "open_collector", VREF: "power_out", ISET1: "input", VFB: "output", SRN: "input", SRP: "input", ISET2: "input", ACSET: "input", GND_17: "power_in", REGN: "output", LODRV: "output", PH: "power_in", HIDRV: "output", BTST: "power_in", "~{BATDRV}": "output", VCC: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24617";
@@ -984,7 +1010,8 @@ export class BQ24650 extends Component.withPins({
   "BTST": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", MPPSET: "input", STAT1: "open_collector", TS: "input", STAT2: "open_collector", VREF: "input", TERM_EN: "input", VFB: "input", SRN: "input", SRP: "input", GND_11: "power_in", REGN: "output", LODRV: "output", PH: "input", HIDRV: "output", BTST: "output", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ24650";
@@ -1023,7 +1050,8 @@ export class BQ2501x extends Component.withPins({
   "FPWM": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", FB: "input", GND_3: "passive", EN: "input", AC: "power_in", USB: "power_in", STAT1: "open_collector", STAT2: "open_collector", GND_9: "passive", NC_10: "no_connect", NC_11: "no_connect", ISET1: "input", ISET2: "input", "~{PG}": "output", "~{CE}": "input", "BAT/OUT_16": "power_out", "BAT/OUT_17": "power_in", GND_18: "power_in", SW: "power_out", FPWM: "input", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ2501x";
@@ -1052,7 +1080,8 @@ export class BQ25040 extends Component.withPins({
   "BAT": "10",
   "VSS_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", ISET: "input", VSS_3: "power_in", LDO: "power_out", IFULL: "input", "EN/SET": "input", VSS_7: "passive", "~{CHG}": "open_collector", "~{PG}": "open_collector", BAT: "power_out", VSS_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25040";
@@ -1079,7 +1108,8 @@ export class BQ25173DSG extends Component.withPins({
   "OUT": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", ISET: "input", "~{CE}": "input", GND_4: "power_in", STAT: "open_collector", "~{PG}": "open_collector", "~{FB}": "input", OUT: "power_out", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25173DSG";
@@ -1114,7 +1144,8 @@ export class BQ25504 extends Component.withPins({
   "LBST": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", VIN_DC: "power_in", VOC_SAMP: "input", VREF_SAMP: "bidirectional", OT_PROG: "input", VBAT_OV: "input", VRDIV: "output", VBAT_UV: "input", OK_HYST: "input", OK_PROG: "input", VBAT_OK: "output", AVSS: "power_in", VSS_13: "passive", VBAT: "power_out", VSTOR: "bidirectional", LBST: "bidirectional", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25504";
@@ -1153,7 +1184,8 @@ export class BQ25570 extends Component.withPins({
   "LBOOST": "20",
   "VSS_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", VIN_DC: "power_in", VOC_SAMP: "input", VREF_SAMP: "passive", "~{EN}": "input", VOUT_EN: "input", VBAT_OV: "input", VRDIV: "output", VSS_9: "passive", OK_HYST: "input", OK_PROG: "input", VOUT_SET: "input", VBAT_OK: "output", VOUT: "input", VSS_15: "passive", LBUCK: "passive", VSS_17: "passive", VBAT: "power_in", VSTOR: "power_out", LBOOST: "passive", VSS_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25570";
@@ -1196,7 +1228,8 @@ export class BQ25601 extends Component.withPins({
   "VBUS": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VAC: "input", PSEL: "input", "~{PG}": "open_collector", STAT: "open_collector", SCL: "input", SDA: "bidirectional", "~{INT}": "open_collector", NC_8: "no_connect", "~{CE}": "input", NC_10: "no_connect", TS: "passive", "~{QON}": "input", BAT_13: "power_in", BAT_14: "passive", SYS_15: "passive", SYS_16: "passive", GND_17: "power_in", GND_18: "passive", SW_19: "passive", SW_20: "passive", BTST: "input", REGN: "passive", PMID: "passive", VBUS: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25601";
@@ -1243,7 +1276,8 @@ export class BQ25798 extends Component.withPins({
   "SW1": "28",
   "PMID": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "open_collector", VBUS_2: "power_in", VBUS_3: "passive", BTST1: "passive", REGN: "power_out", "D+": "bidirectional", "D-": "bidirectional", VAC2: "input", VAC1: "input", ACDRV2: "passive", ACDRV1: "passive", "~{QON}": "input", "~{CE}": "input", SCL: "input", SDA: "bidirectional", TS: "input", ILIM_HIZ: "input", BATP: "input", BTST2: "passive", PROG: "input", "~{INT}": "open_collector", BAT_22: "power_out", BAT_23: "passive", SDRV: "output", SYS: "power_out", SW2: "power_out", GND: "power_in", SW1: "power_out", PMID: "power_out", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25798";
@@ -1286,7 +1320,8 @@ export class BQ25886RGE extends Component.withPins({
   "D+": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "D-": "bidirectional", STAT: "open_collector", "~{CE}": "input", GND_4: "power_in", OTG: "input", VSET: "passive", TS: "input", ILIM: "passive", "~{PG}": "open_collector", ICHGSET: "passive", REGN: "power_out", BTST: "passive", BAT_13: "passive", BAT_14: "passive", SYS_15: "power_out", SYS_16: "passive", SW_17: "power_in", SW_18: "passive", GND_19: "passive", GND_20: "passive", PMID_21: "power_out", PMID_22: "passive", VBUS: "power_in", "D+": "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25886RGE";
@@ -1329,7 +1364,8 @@ export class BQ25887RGE extends Component.withPins({
   "PSEL": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{PG}": "open_collector", STAT: "open_collector", CD: "input", SDA: "bidirectional", SCL: "input", "~{INT}": "open_collector", TS: "input", ILIM: "passive", MID: "input", CBSET: "power_out", REGN: "power_out", BTST: "passive", BAT_13: "power_out", BAT_14: "passive", SNS_15: "output", SNS_16: "passive", SW_17: "power_out", SW_18: "passive", GND_19: "power_in", GND_20: "passive", PMID_21: "power_out", PMID_22: "passive", VBUS: "power_in", PSEL: "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25887RGE";
@@ -1372,7 +1408,8 @@ export class BQ25895RTW extends Component.withPins({
   "DSEL": "24",
   "PGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBUS: "power_in", "D+": "bidirectional", "D-": "bidirectional", STAT: "open_collector", SCL: "input", SDA: "bidirectional", "~{INT}": "open_collector", OTG: "input", "~{CE}": "input", ILIM: "passive", TS: "passive", "~{QON}": "input", BAT_13: "passive", BAT_14: "passive", SYS_15: "passive", SYS_16: "passive", PGND_17: "power_in", PGND_18: "passive", SW_19: "power_out", SW_20: "passive", BTST: "passive", REGN: "power_out", PMID: "power_out", DSEL: "open_collector", PGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ25895RTW";
@@ -1403,7 +1440,8 @@ export class BQ27441_G1 extends Component.withPins({
   "GPOUT": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", "V_{SS}": "power_in", NC_4: "no_connect", "V_{DD}": "power_out", BAT: "power_in", SRN: "input", SRP: "input", NC_9: "no_connect", BIN: "input", NC_11: "no_connect", GPOUT: "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ27441-G1";
@@ -1434,7 +1472,8 @@ export class BQ27441DRZR_G1A extends Component.withPins({
   "GPOUT": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", "V_{SS}": "power_in", NC_4: "no_connect", "V_{DD}": "power_out", BAT: "power_in", SRN: "input", SRP: "input", NC_9: "no_connect", BIN: "input", NC_11: "no_connect", GPOUT: "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ27441DRZR-G1A";
@@ -1465,7 +1504,8 @@ export class BQ27441DRZR_G1B extends Component.withPins({
   "GPOUT": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", "V_{SS}": "power_in", NC_4: "no_connect", "V_{DD}": "power_out", BAT: "power_in", SRN: "input", SRP: "input", NC_9: "no_connect", BIN: "input", NC_11: "no_connect", GPOUT: "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ27441DRZR-G1B";
@@ -1496,7 +1536,8 @@ export class BQ27441DRZT_G1A extends Component.withPins({
   "GPOUT": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", "V_{SS}": "power_in", NC_4: "no_connect", "V_{DD}": "power_out", BAT: "power_in", SRN: "input", SRP: "input", NC_9: "no_connect", BIN: "input", NC_11: "no_connect", GPOUT: "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ27441DRZT-G1A";
@@ -1527,7 +1568,8 @@ export class BQ27441DRZT_G1B extends Component.withPins({
   "GPOUT": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", "V_{SS}": "power_in", NC_4: "no_connect", "V_{DD}": "power_out", BAT: "power_in", SRN: "input", SRP: "input", NC_9: "no_connect", BIN: "input", NC_11: "no_connect", GPOUT: "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ27441DRZT-G1B";
@@ -1558,7 +1600,8 @@ export class BQ27750 extends Component.withPins({
   "VCELL/INT": "12",
   "VSS_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", SRN: "input", SRP: "input", TS1: "input", SCL: "input", SDA: "bidirectional", DSG: "output", PACK: "input", CHG: "output", PBI: "passive", BAT: "input", "VCELL/INT": "bidirectional", VSS_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ27750";
@@ -1606,7 +1649,8 @@ export class BQ29330DBT extends Component.withPins({
   "NC_27": "27",
   "~{XALERT}": "30",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "CELL-": "output", "CELL+": "output", REG: "output", VSS_4: "power_in", SRN: "input", SRP: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", BAT: "power_in", CHG: "output", DSG: "output", PACK: "power_in", VCC: "power_in", ZVCHG: "output", PMS: "input", LEDOUT: "output", TOUT: "output", WDI: "input", SCLK: "input", SDATA: "bidirectional", "~{XRST}": "output", NC_15: "no_connect", NC_18: "no_connect", GPOD: "open_collector", VSS_23: "passive", NC_27: "no_connect", "~{XALERT}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ29330DBT";
@@ -1630,7 +1674,8 @@ export class BQ297xy extends Component.withPins({
   "BAT": "5",
   "V-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", Cout: "output", Dout: "output", VSS: "power_in", BAT: "input", "V-": "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ297xy";
@@ -1669,7 +1714,8 @@ export class BQ51050BRHL extends Component.withPins({
   "PGND_20": "20",
   "PGND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND_1: "power_in", AC1: "input", BOOT1: "passive", BAT: "power_out", CLAMP1: "open_collector", COMM1: "open_collector", "~{CHG}": "open_collector", "~{AD-EN}": "output", AD: "input", TERM: "input", EN2: "input", ILIM: "passive", "TS/CTRL": "input", FOD: "input", COMM2: "open_collector", CLAMP2: "open_collector", BOOT2: "passive", RECT: "passive", AC2: "input", PGND_20: "passive", PGND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ51050BRHL";
@@ -1715,7 +1761,8 @@ export class BQ51050BYFP extends Component.withPins({
   "TERM": "G3",
   "AD": "G4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND_A1: "power_in", PGND_A2: "passive", PGND_A3: "passive", PGND_A4: "passive", AC2_B1: "input", AC2_B2: "input", AC1_B3: "input", AC1_B4: "input", BOOT2: "passive", RECT_C2: "passive", RECT_C3: "passive", BOOT1: "passive", BAT_D1: "power_out", BAT_D2: "passive", BAT_D3: "passive", BAT_D4: "passive", COMM2: "open_collector", CLAMP2: "open_collector", CLAMP1: "open_collector", COMM1: "open_collector", "TS/CTRL": "input", FOD: "input", "~{AD-EN}": "output", "~{CHG}": "open_collector", ILIM: "passive", EN2: "input", TERM: "input", AD: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ51050BYFP";
@@ -1754,7 +1801,8 @@ export class BQ51051BRHL extends Component.withPins({
   "PGND_20": "20",
   "PGND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND_1: "power_in", AC1: "input", BOOT1: "passive", BAT: "power_out", CLAMP1: "open_collector", COMM1: "open_collector", "~{CHG}": "open_collector", "~{AD-EN}": "output", AD: "input", TERM: "input", EN2: "input", ILIM: "passive", "TS/CTRL": "input", FOD: "input", COMM2: "open_collector", CLAMP2: "open_collector", BOOT2: "passive", RECT: "passive", AC2: "input", PGND_20: "passive", PGND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ51051BRHL";
@@ -1800,7 +1848,8 @@ export class BQ51051BYFP extends Component.withPins({
   "TERM": "G3",
   "AD": "G4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND_A1: "power_in", PGND_A2: "passive", PGND_A3: "passive", PGND_A4: "passive", AC2_B1: "input", AC2_B2: "input", AC1_B3: "input", AC1_B4: "input", BOOT2: "passive", RECT_C2: "passive", RECT_C3: "passive", BOOT1: "passive", BAT_D1: "power_out", BAT_D2: "passive", BAT_D3: "passive", BAT_D4: "passive", COMM2: "open_collector", CLAMP2: "open_collector", CLAMP1: "open_collector", COMM1: "open_collector", "TS/CTRL": "input", FOD: "input", "~{AD-EN}": "output", "~{CHG}": "open_collector", ILIM: "passive", EN2: "input", TERM: "input", AD: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ51051BYFP";
@@ -1846,7 +1895,8 @@ export class BQ51052BYFP extends Component.withPins({
   "TERM": "G3",
   "AD": "G4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGND_A1: "power_in", PGND_A2: "passive", PGND_A3: "passive", PGND_A4: "passive", AC2_B1: "input", AC2_B2: "input", AC1_B3: "input", AC1_B4: "input", BOOT2: "passive", RECT_C2: "passive", RECT_C3: "passive", BOOT1: "passive", BAT_D1: "power_out", BAT_D2: "passive", BAT_D3: "passive", BAT_D4: "passive", COMM2: "open_collector", CLAMP2: "open_collector", CLAMP1: "open_collector", COMM1: "open_collector", "TS/CTRL": "input", FOD: "input", "~{AD-EN}": "output", "~{CHG}": "open_collector", ILIM: "passive", EN2: "input", TERM: "input", AD: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ51052BYFP";
@@ -1880,7 +1930,8 @@ export class BQ76200PW extends Component.withPins({
   "NC_15": "15",
   "CHG": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDCP: "output", BAT: "power_in", NC_3: "no_connect", CHG_EN: "input", CP_EN: "input", DSG_EN: "input", PMON_EN: "input", PCHG_EN: "input", VSS: "power_in", PACKDIV: "output", PACK: "power_in", DSG: "output", NC_13: "no_connect", PCHG: "output", NC_15: "no_connect", CHG: "output", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ76200PW";
@@ -1918,7 +1969,8 @@ export class BQ76920PW extends Component.withPins({
   "SDA": "4",
   "SCL": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS1: "passive", CAP1: "passive", REGOUT: "power_out", REGSRC: "power_in", BAT: "input", NC: "no_connect", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", SRP: "input", SRN: "input", ALERT: "bidirectional", DSG: "output", CHG: "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ76920PW";
@@ -1966,7 +2018,8 @@ export class BQ76930DBT extends Component.withPins({
   "SDA": "4",
   "SCL": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS1: "passive", CAP1: "passive", REGOUT: "power_out", REGSRC: "power_in", VC5X: "passive", "NC(CAP2)_11": "passive", "NC(CAP2)_12": "passive", TS2: "passive", CAP2: "passive", BAT: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5B: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", SRP: "input", SRN: "input", ALERT: "bidirectional", DSG: "output", CHG: "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ76930DBT";
@@ -2028,7 +2081,8 @@ export class BQ76940DBT extends Component.withPins({
   "SDA": "4",
   "SCL": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TS1: "passive", CAP1: "passive", REGOUT: "power_out", REGSRC: "power_in", VC5X: "passive", "NC(CAP2)_11": "passive", "NC(CAP2)_12": "passive", TS2: "passive", CAP2: "passive", VC10X: "passive", "NC(CAP3)_16": "passive", "NC(CAP3)_17": "passive", TS3: "passive", CAP3: "passive", BAT: "input", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", VC15: "input", VC14: "input", VC13: "input", VC12: "input", VC11: "input", VC10B: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5B: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", SRP: "input", SRN: "input", ALERT: "bidirectional", DSG: "output", CHG: "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ76940DBT";
@@ -2094,7 +2148,8 @@ export class BQ76952PFB extends Component.withPins({
   "BAT": "47",
   "VC16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VC15: "input", VC14: "input", VC13: "input", VC12: "input", VC11: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", VSS: "power_in", SRP: "input", NC_19: "no_connect", SRN: "input", TS1: "input", "TS2/WAKE": "input", TS3: "input", REG18: "power_out", "HDQ_IO/ALERT": "bidirectional", "SCL/SPI_CLK": "input", "SDA/SPI_MISO": "bidirectional", "HDQ_IO/SPI_MOSI": "bidirectional", "CFETOFF/SPI_CS": "bidirectional", "DFETOFF/BOTHOFF": "bidirectional", DCHG: "bidirectional", DDSG: "bidirectional", RST_SHUT: "input", REG2: "power_out", REG1: "power_out", REGIN: "input", BREG: "output", FUSE: "bidirectional", PDSG: "output", PCHG: "output", LD: "passive", PACK: "input", DSG: "output", NC_44: "no_connect", CHG: "output", CP1: "power_out", BAT: "power_in", VC16: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ76952PFB";
@@ -2160,7 +2215,8 @@ export class BQ7695201PFB extends Component.withPins({
   "BAT": "47",
   "VC16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VC15: "input", VC14: "input", VC13: "input", VC12: "input", VC11: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", VSS: "power_in", SRP: "input", NC_19: "no_connect", SRN: "input", TS1: "input", "TS2/WAKE": "input", TS3: "input", REG18: "power_out", "HDQ_IO/ALERT": "bidirectional", "SCL/SPI_CLK": "input", "SDA/SPI_MISO": "bidirectional", "HDQ_IO/SPI_MOSI": "bidirectional", "CFETOFF/SPI_CS": "bidirectional", "DFETOFF/BOTHOFF": "bidirectional", DCHG: "bidirectional", DDSG: "bidirectional", RST_SHUT: "input", REG2: "power_out", REG1: "power_out", REGIN: "input", BREG: "output", FUSE: "bidirectional", PDSG: "output", PCHG: "output", LD: "passive", PACK: "input", DSG: "output", NC_44: "no_connect", CHG: "output", CP1: "power_out", BAT: "power_in", VC16: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ7695201PFB";
@@ -2226,7 +2282,8 @@ export class BQ7695202PFB extends Component.withPins({
   "BAT": "47",
   "VC16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VC15: "input", VC14: "input", VC13: "input", VC12: "input", VC11: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", VSS: "power_in", SRP: "input", NC_19: "no_connect", SRN: "input", TS1: "input", "TS2/WAKE": "input", TS3: "input", REG18: "power_out", "HDQ_IO/ALERT": "bidirectional", "SCL/SPI_CLK": "input", "SDA/SPI_MISO": "bidirectional", "HDQ_IO/SPI_MOSI": "bidirectional", "CFETOFF/SPI_CS": "bidirectional", "DFETOFF/BOTHOFF": "bidirectional", DCHG: "bidirectional", DDSG: "bidirectional", RST_SHUT: "input", REG2: "power_out", REG1: "power_out", REGIN: "input", BREG: "output", FUSE: "bidirectional", PDSG: "output", PCHG: "output", LD: "passive", PACK: "input", DSG: "output", NC_44: "no_connect", CHG: "output", CP1: "power_out", BAT: "power_in", VC16: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ7695202PFB";
@@ -2292,7 +2349,8 @@ export class BQ7695203PFB extends Component.withPins({
   "BAT": "47",
   "VC16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VC15: "input", VC14: "input", VC13: "input", VC12: "input", VC11: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", VSS: "power_in", SRP: "input", NC_19: "no_connect", SRN: "input", TS1: "input", "TS2/WAKE": "input", TS3: "input", REG18: "power_out", "HDQ_IO/ALERT": "bidirectional", "SCL/SPI_CLK": "input", "SDA/SPI_MISO": "bidirectional", "HDQ_IO/SPI_MOSI": "bidirectional", "CFETOFF/SPI_CS": "bidirectional", "DFETOFF/BOTHOFF": "bidirectional", DCHG: "bidirectional", DDSG: "bidirectional", RST_SHUT: "input", REG2: "power_out", REG1: "power_out", REGIN: "input", BREG: "output", FUSE: "bidirectional", PDSG: "output", PCHG: "output", LD: "passive", PACK: "input", DSG: "output", NC_44: "no_connect", CHG: "output", CP1: "power_out", BAT: "power_in", VC16: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ7695203PFB";
@@ -2358,7 +2416,8 @@ export class BQ7695204PFB extends Component.withPins({
   "BAT": "47",
   "VC16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VC15: "input", VC14: "input", VC13: "input", VC12: "input", VC11: "input", VC10: "input", VC9: "input", VC8: "input", VC7: "input", VC6: "input", VC5: "input", VC4: "input", VC3: "input", VC2: "input", VC1: "input", VC0: "input", VSS: "power_in", SRP: "input", NC_19: "no_connect", SRN: "input", TS1: "input", "TS2/WAKE": "input", TS3: "input", REG18: "power_out", "HDQ_IO/ALERT": "bidirectional", "SCL/SPI_CLK": "input", "SDA/SPI_MISO": "bidirectional", "HDQ_IO/SPI_MOSI": "bidirectional", "CFETOFF/SPI_CS": "bidirectional", "DFETOFF/BOTHOFF": "bidirectional", DCHG: "bidirectional", DDSG: "bidirectional", RST_SHUT: "input", REG2: "power_out", REG1: "power_out", REGIN: "input", BREG: "output", FUSE: "bidirectional", PDSG: "output", PCHG: "output", LD: "passive", PACK: "input", DSG: "output", NC_44: "no_connect", CHG: "output", CP1: "power_out", BAT: "power_in", VC16: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ7695204PFB";
@@ -2406,7 +2465,8 @@ export class BQ78350DBT extends Component.withPins({
   "ADREN": "29",
   "SMBA": "30",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COM: "open_collector", ALERT: "bidirectional", SDA: "bidirectional", SCL: "output", "~{PRECHG}": "output", VAUX: "input", BAT: "input", "~{PRES}": "input", "~{KEYIN}": "input", SAFE: "output", SMBD: "bidirectional", VEN: "open_collector", SMBC: "bidirectional", "~{DISP}": "input", PWRM: "open_collector", LED1: "output", LED2: "output", LED3: "output", LED4: "output", LED5: "output", GPIO_A: "bidirectional", VSS_22: "passive", VSS_23: "power_in", "~{MRST}": "input", VSS_25: "passive", VCC: "power_in", RBI: "passive", GPIO_B: "bidirectional", ADREN: "output", SMBA: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ78350DBT";
@@ -2454,7 +2514,8 @@ export class BQ78350DBT_R1 extends Component.withPins({
   "ADREN": "29",
   "SMBA": "30",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COM: "open_collector", ALERT: "bidirectional", SDA: "bidirectional", SCL: "output", "~{PRECHG}": "output", VAUX: "input", BAT: "input", "~{PRES}": "input", "~{KEYIN}": "input", SAFE: "output", SMBD: "bidirectional", VEN: "open_collector", SMBC: "bidirectional", "~{DISP}": "input", PWRM: "open_collector", LED1: "output", LED2: "output", LED3: "output", LED4: "output", LED5: "output", GPIO_A: "bidirectional", VSS_22: "passive", VSS_23: "power_in", "~{MRST}": "input", VSS_25: "passive", VCC: "power_in", RBI: "passive", GPIO_B: "bidirectional", ADREN: "output", SMBA: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:BQ78350DBT-R1";
@@ -2481,7 +2542,8 @@ export class CN3163 extends Component.withPins({
   "FB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEMP: "input", ISET: "input", GND_3: "power_in", VIN: "power_in", BAT: "power_out", "~{DONE}": "open_collector", "~{CHRG}": "open_collector", FB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:CN3163";
@@ -2508,7 +2570,8 @@ export class CN3063 extends Component.withPins({
   "FB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEMP: "input", ISET: "input", GND_3: "power_in", VIN: "power_in", BAT: "power_out", "~{DONE}": "open_collector", "~{CHRG}": "open_collector", FB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:CN3063";
@@ -2535,7 +2598,8 @@ export class CN3158 extends Component.withPins({
   "FB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEMP: "input", ISET: "input", GND_3: "power_in", VIN: "power_in", BAT: "power_out", "~{DONE}": "open_collector", "~{CHRG}": "open_collector", FB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:CN3158";
@@ -2562,7 +2626,8 @@ export class CN3170 extends Component.withPins({
   "FB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEMP: "input", ISET: "input", GND_3: "power_in", VIN: "power_in", BAT: "power_out", "~{DONE}": "open_collector", "~{CHRG}": "open_collector", FB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:CN3170";
@@ -2588,7 +2653,8 @@ export class DS2745U extends Component.withPins({
   "VIN": "7",
   "V_{DD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", SDA: "bidirectional", PIO: "open_collector", SNS: "input", "V_{SS}": "power_in", CTG: "input", VIN: "input", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:DS2745U";
@@ -2612,7 +2678,8 @@ export class DW01A extends Component.withPins({
   "GND": "6",
   "TD": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OD: "output", CS: "input", OC: "output", VCC: "power_in", GND: "power_in", TD: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:DW01A";
@@ -2639,7 +2706,8 @@ export class LC709203FQH_01TWG extends Component.withPins({
   "SCL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", "~{ALARMB}": "open_collector", "T_{SW}": "output", "T_{SENSE}": "input", SDA: "bidirectional", SCL: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LC709203FQH-01TWG";
@@ -2666,7 +2734,8 @@ export class LC709203FQH_02TWG extends Component.withPins({
   "SCL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", "~{ALARMB}": "open_collector", "T_{SW}": "output", "T_{SENSE}": "input", SDA: "bidirectional", SCL: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LC709203FQH-02TWG";
@@ -2693,7 +2762,8 @@ export class LC709203FQH_03TWG extends Component.withPins({
   "SCL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", "~{ALARMB}": "open_collector", "T_{SW}": "output", "T_{SENSE}": "input", SDA: "bidirectional", SCL: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LC709203FQH-03TWG";
@@ -2720,7 +2790,8 @@ export class LC709203FQH_04TWG extends Component.withPins({
   "SCL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", "~{ALARMB}": "open_collector", "T_{SW}": "output", "T_{SENSE}": "input", SDA: "bidirectional", SCL: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LC709203FQH-04TWG";
@@ -2747,7 +2818,8 @@ export class LGS5500EP extends Component.withPins({
   "NTC": "8",
   "GND": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ISET: "passive", VIN: "power_in", VL: "input", LX: "input", VH: "power_out", NC: "no_connect", "VSET/LED": "output", NTC: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LGS5500EP";
@@ -2780,7 +2852,8 @@ export class LP3947 extends Component.withPins({
   "CHG_IN": "14",
   "EP": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", SCL: "input", SDA: "bidirectional", BATT: "power_out", "V_{T}": "power_out", "VB_{SENSE}": "input", MODE: "input", DIFF_AMP: "output", Ts: "input", EOC: "open_collector", GND: "power_in", CHG: "open_collector", ISEL: "input", CHG_IN: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LP3947";
@@ -2811,7 +2884,8 @@ export class LT3652EDD extends Component.withPins({
   "SW": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{IN}": "power_in", "V_{IN_REG}": "input", "~{SHDN}": "input", "~{CHRG}": "open_collector", "~{FAULT}": "open_collector", TIMER: "output", "V_{FB}": "input", NTC: "input", BAT: "output", SENSE: "input", BOOST: "input", SW: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LT3652EDD";
@@ -2842,7 +2916,8 @@ export class LT3652EMSE extends Component.withPins({
   "SW": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{IN}": "power_in", "V_{IN_REG}": "input", "~{SHDN}": "input", "~{CHRG}": "open_collector", "~{FAULT}": "open_collector", TIMER: "output", "V_{FB}": "input", NTC: "input", BAT: "output", SENSE: "input", BOOST: "input", SW: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LT3652EMSE";
@@ -2873,7 +2948,8 @@ export class LT3652IDD extends Component.withPins({
   "SW": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{IN}": "power_in", "V_{IN_REG}": "input", "~{SHDN}": "input", "~{CHRG}": "open_collector", "~{FAULT}": "open_collector", TIMER: "output", "V_{FB}": "input", NTC: "input", BAT: "output", SENSE: "input", BOOST: "input", SW: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LT3652IDD";
@@ -2904,7 +2980,8 @@ export class LT3652IMSE extends Component.withPins({
   "SW": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{IN}": "power_in", "V_{IN_REG}": "input", "~{SHDN}": "input", "~{CHRG}": "open_collector", "~{FAULT}": "open_collector", TIMER: "output", "V_{FB}": "input", NTC: "input", BAT: "output", SENSE: "input", BOOST: "input", SW: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LT3652IMSE";
@@ -2928,7 +3005,8 @@ export class LTC2942 extends Component.withPins({
   "~{AL}/CC": "5",
   "SENSE-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE+": "passive", GND: "power_in", SCL: "input", SDA: "bidirectional", "~{AL}/CC": "bidirectional", "SENSE-": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC2942";
@@ -2952,7 +3030,8 @@ export class LTC2942_1 extends Component.withPins({
   "~{AL}/CC": "5",
   "SENSE-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SENSE+": "passive", GND: "power_in", SCL: "input", SDA: "bidirectional", "~{AL}/CC": "bidirectional", "SENSE-": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC2942-1";
@@ -2981,7 +3060,8 @@ export class LTC2959 extends Component.withPins({
   "GND": "10",
   "EP": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", SENSEP: "passive", CFP: "passive", CFN: "passive", SENSEN: "passive", SCL: "input", SDA: "bidirectional", GPIO: "bidirectional", "V_{REG}": "power_out", GND: "power_in", EP: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC2959";
@@ -3020,7 +3100,8 @@ export class LTC3553 extends Component.withPins({
   "VBUS": "20",
   "GND": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HPWR: "input", SEQ: "input", PBSTAT: "output", "~{ON}": "input", LDO_ON: "input", STBY: "input", BUCK_ON: "input", BUCK_FB: "input", LDO_FB: "input", LDO: "power_out", VINLDO: "power_in", BVIN: "power_in", SW: "power_out", "~{CHRG}": "open_collector", NTC: "passive", PROG: "passive", BAT: "power_out", VOUT: "power_out", SUSP: "input", VBUS: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC3553";
@@ -3067,7 +3148,8 @@ export class LTC3555 extends Component.withPins({
   "I_{LIM1}": "28",
   "GND": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LDO3V3: "power_out", CLPROG: "passive", NTC: "passive", FB2: "input", "V_{IN2}": "power_in", SW2: "power_out", EN2: "input", "DV_{CC}": "power_in", SCL: "input", SDA: "bidirectional", "V_{IN3}": "power_in", SW3: "power_out", EN3: "input", FB3: "input", "~{RST3}": "open_collector", EN1: "input", SW1: "power_out", "V_{IN1}": "power_in", FB1: "input", PROG: "passive", "~{CHRG}": "open_collector", GATE: "output", BAT: "power_out", "V_{OUT}": "power_out", VBUS: "power_in", SW: "power_out", "I_{LIM0}": "input", "I_{LIM1}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC3555";
@@ -3114,7 +3196,8 @@ export class LTC3555_1 extends Component.withPins({
   "I_{LIM1}": "28",
   "GND": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LDO3V3: "power_out", CLPROG: "passive", NTC: "passive", FB2: "input", "V_{IN2}": "power_in", SW2: "power_out", EN2: "input", "DV_{CC}": "power_in", SCL: "input", SDA: "bidirectional", "V_{IN3}": "power_in", SW3: "power_out", EN3: "input", FB3: "input", "~{RST3}": "open_collector", EN1: "input", SW1: "power_out", "V_{IN1}": "power_in", FB1: "input", PROG: "passive", "~{CHRG}": "open_collector", GATE: "output", BAT: "power_out", "V_{OUT}": "power_out", VBUS: "power_in", SW: "power_out", "I_{LIM0}": "input", "I_{LIM1}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC3555-1";
@@ -3161,7 +3244,8 @@ export class LTC3555_3 extends Component.withPins({
   "I_{LIM1}": "28",
   "GND": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LDO3V3: "power_out", CLPROG: "passive", NTC: "passive", FB2: "input", "V_{IN2}": "power_in", SW2: "power_out", EN2: "input", "DV_{CC}": "power_in", SCL: "input", SDA: "bidirectional", "V_{IN3}": "power_in", SW3: "power_out", EN3: "input", FB3: "input", "~{RST3}": "open_collector", EN1: "input", SW1: "power_out", "V_{IN1}": "power_in", FB1: "input", PROG: "passive", "~{CHRG}": "open_collector", GATE: "output", BAT: "power_out", "V_{OUT}": "power_out", VBUS: "power_in", SW: "power_out", "I_{LIM0}": "input", "I_{LIM1}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC3555-3";
@@ -3196,7 +3280,8 @@ export class LTC4001 extends Component.withPins({
   "BATSENS": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAT: "output", SENSE: "input", PGND: "power_in", GNDSENS: "power_in", SW: "output", "~{EN}": "input", "~{CHRG}": "open_collector", "P_{VIN}": "power_in", "V_{INSENSE}": "power_in", FAULT: "output", NTC: "input", PROG: "input", IDET: "input", SS: "input", TIMER: "input", BATSENS: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4001";
@@ -3231,7 +3316,8 @@ export class LTC4001_1 extends Component.withPins({
   "BATSENS": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAT: "output", SENSE: "input", PGND: "power_in", GNDSENS: "power_in", SW: "output", "~{EN}": "input", "~{CHRG}": "open_collector", "P_{VIN}": "power_in", "V_{INSENSE}": "power_in", FAULT: "output", NTC: "input", PROG: "input", IDET: "input", SS: "input", TIMER: "input", BATSENS: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4001-1";
@@ -3260,7 +3346,8 @@ export class LTC4002EDD_4_2 extends Component.withPins({
   "NC": "10",
   "GND": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COMP: "input", "V_{CC}": "power_in", GATE: "output", PGND: "power_in", SGND: "power_in", "~{CHRG}": "open_collector", BAT: "input", SENSE: "input", NTC: "input", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4002EDD-4.2";
@@ -3289,7 +3376,8 @@ export class LTC4002EDD_8_4 extends Component.withPins({
   "NC": "10",
   "GND": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COMP: "input", "V_{CC}": "power_in", GATE: "output", PGND: "power_in", SGND: "power_in", "~{CHRG}": "open_collector", BAT: "input", SENSE: "input", NTC: "input", NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4002EDD-8.4";
@@ -3315,7 +3403,8 @@ export class LTC4002ES8_4_2 extends Component.withPins({
   "SENSE": "7",
   "NTC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COMP: "input", "V_{CC}": "power_in", GATE: "output", GND: "power_in", "~{CHRG}": "open_collector", BAT: "input", SENSE: "input", NTC: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4002ES8-4.2";
@@ -3341,7 +3430,8 @@ export class LTC4002ES8_8_4 extends Component.withPins({
   "SENSE": "7",
   "NTC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COMP: "input", "V_{CC}": "power_in", GATE: "output", GND: "power_in", "~{CHRG}": "open_collector", BAT: "input", SENSE: "input", NTC: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4002ES8-8.4";
@@ -3383,7 +3473,8 @@ export class LTC4007 extends Component.withPins({
   "INFET": "23",
   "SHDN": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DCIN: "input", "~{CHG}": "output", ACP: "open_collector", "R_{T}": "passive", "~{FAULT}": "open_collector", GND: "power_in", "3C4C": "input", "~{LOBAT}": "output", NTC: "input", ITH: "passive", PROG: "bidirectional", NC: "no_connect", "~{ICL}": "output", CSP: "input", BAT: "input", CHEM: "input", "~{FLAG}": "open_collector", CLP: "input", CLN: "input", TGATE: "output", PGND: "power_in", BGATE: "output", INFET: "output", SHDN: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4007";
@@ -3422,7 +3513,8 @@ export class LTC4011CFE extends Component.withPins({
   "INFET": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DCIN: "input", "~{FAULT}": "open_collector", "~{CHRG}": "open_collector", CHEM: "passive", GND_5: "power_in", "V_{RT}": "output", "V_{TEMP}": "input", "V_{CELL}": "input", "V_{CDIV}": "output", TIMER: "passive", SENSE: "input", BAT: "power_out", "~{TOC}": "open_collector", INTVDD: "power_out", BGATE: "output", PGND: "power_in", TGATE: "output", "V_{CC}": "power_in", "~{READY}": "open_collector", INFET: "output", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4011CFE";
@@ -3445,7 +3537,8 @@ export class LTC4054ES5_4_2 extends Component.withPins({
   "V_{CC}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CHRG}": "open_collector", GND: "power_in", BAT: "power_out", "V_{CC}": "power_in", PROG: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4054ES5-4.2";
@@ -3468,7 +3561,8 @@ export class LTC4054XES5_4_2 extends Component.withPins({
   "V_{CC}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CHRG}": "open_collector", GND: "power_in", BAT: "power_out", "V_{CC}": "power_in", PROG: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4054XES5-4.2";
@@ -3503,7 +3597,8 @@ export class LTC4055 extends Component.withPins({
   "NTC": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN_1: "passive", BAT: "passive", OUT: "passive", IN_4: "power_in", WALL: "input", SHDN: "input", SUSP: "input", HPWR: "input", CLPROG: "passive", GND_10: "power_in", PROG: "passive", TIMER: "passive", "~{ACPR}": "open_collector", "~{CHRG}": "open_collector", VNTC: "output", NTC: "input", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4055";
@@ -3538,7 +3633,8 @@ export class LTC4055_1 extends Component.withPins({
   "NTC": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN_1: "passive", BAT: "passive", OUT: "passive", IN_4: "power_in", WALL: "input", SHDN: "input", SUSP: "input", HPWR: "input", CLPROG: "passive", GND_10: "power_in", PROG: "passive", TIMER: "passive", "~{ACPR}": "open_collector", "~{CHRG}": "open_collector", VNTC: "output", NTC: "input", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4055-1";
@@ -3573,7 +3669,8 @@ export class LTC4060EDHC extends Component.withPins({
   "GND": "16",
   "GNDPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DRIVE: "output", BAT: "input", SENSE: "input", TIMER: "input", "~{SHDN}": "input", PAUSE: "input", PROG: "input", ARCT: "input", SEL0: "input", SEL1: "input", NTC: "input", CHEM: "input", "~{ACP}": "open_collector", "V_{CC}": "power_in", "~{CHRG}": "open_collector", GND: "power_in", GNDPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4060EDHC";
@@ -3608,7 +3705,8 @@ export class LTC4060EFE extends Component.withPins({
   "GND": "16",
   "GNDPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DRIVE: "output", BAT: "input", SENSE: "input", TIMER: "input", "~{SHDN}": "input", PAUSE: "input", PROG: "input", ARCT: "input", SEL0: "input", SEL1: "input", NTC: "input", CHEM: "input", "~{ACP}": "open_collector", "V_{CC}": "power_in", "~{CHRG}": "open_collector", GND: "power_in", GNDPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4060EFE";
@@ -3639,7 +3737,8 @@ export class LTC4067EDE extends Component.withPins({
   "IN": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLPROG: "input", "~{CHRG}": "open_collector", NTC: "input", ILIM0: "input", ILIM1: "input", OVI: "input", OVP: "output", PROG: "input", GATE: "output", BAT: "input", OUT: "power_out", IN: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4067EDE";
@@ -3686,7 +3785,8 @@ export class LTC4156 extends Component.withPins({
   "SCL": "28",
   "GND": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", DVCC: "power_in", "~{IRQ}": "open_collector", ID: "input", CLPROG1: "passive", CLPROG2: "passive", WALLSNS: "input", USBSNS: "input", USBGT: "output", OVGCAP: "passive", WALLGT: "output", "V_{C}": "passive", "V_{OUTSNS}": "input", NTCBIAS: "output", NTC: "input", BATSNS: "input", BATGATE: "output", PROG: "passive", CHGSNS_19: "passive", CHGSNS_20: "passive", "V_{OUT}_21": "passive", "V_{OUT}_22": "passive", "V_{BUS}_23": "passive", "V_{BUS}_24": "passive", "V_{BUS}_25": "passive", SW_26: "passive", SW_27: "passive", SCL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC4156";
@@ -3748,7 +3848,8 @@ export class LTC6803_2 extends Component.withPins({
   "SDO": "43",
   "~{CSBI}": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V^{+}": "input", C12: "input", S12: "input", C11: "input", S11: "input", C10: "input", S10: "input", C9: "input", S9: "input", C8: "input", S8: "input", C7: "input", S7: "input", C6: "input", S6: "input", C5: "input", S5: "input", C4: "input", S4: "input", C3: "input", S3: "input", C2: "input", S2: "input", C1: "input", S1: "input", "V^{-}": "input", NC_27: "no_connect", "V_{TEMP1}": "input", "V_{TEMP2}": "input", "V_{REF}": "input", "V_{REG}": "input", TOS: "input", NC_33: "no_connect", "~{WDTB}": "open_collector", GPIO1: "input", GPIO2: "input", A0: "input", A1: "input", A2: "input", A3: "input", SCKI: "input", SDI: "input", SDO: "open_collector", "~{CSBI}": "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC6803-2";
@@ -3810,7 +3911,8 @@ export class LTC6803_4 extends Component.withPins({
   "SDO": "43",
   "~{CSBI}": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V^{+}": "input", C12: "input", S12: "input", C11: "input", S11: "input", C10: "input", S10: "input", C9: "input", S9: "input", C8: "input", S8: "input", C7: "input", S7: "input", C6: "input", S6: "input", C5: "input", S5: "input", C4: "input", S4: "input", C3: "input", S3: "input", C2: "input", S2: "input", C1: "input", S1: "input", C0: "input", "V^{-}": "input", NC: "no_connect", "V_{TEMP1}": "input", "V_{TEMP2}": "input", "V_{REF}": "input", "V_{REG}": "input", TOS: "input", "~{WDTB}": "open_collector", GPIO1: "input", GPIO2: "input", A0: "input", A1: "input", A2: "input", A3: "input", SCKI: "input", SDI: "input", SDO: "open_collector", "~{CSBI}": "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC6803-4";
@@ -3876,7 +3978,8 @@ export class LTC6804_1 extends Component.withPins({
   "IMB": "47",
   "IPB": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", C12: "input", S12: "bidirectional", C11: "input", S11: "bidirectional", C10: "input", S10: "bidirectional", C9: "input", S9: "bidirectional", C8: "input", S8: "bidirectional", C7: "input", S7: "bidirectional", C6: "input", S6: "bidirectional", C5: "input", S5: "bidirectional", C4: "input", S4: "bidirectional", C3: "input", S3: "bidirectional", C2: "input", S2: "bidirectional", C1: "input", S1: "bidirectional", C0: "input", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", "V-_30": "passive", "V-_31": "passive", GPIO4: "bidirectional", GPIO5: "bidirectional", VREF2: "output", VREF1: "output", SWTEN: "input", VREG: "input", DRIVE: "output", WDT: "output", ISOMD: "input", "CSB(IMA)": "bidirectional", "SCK(IPA)": "bidirectional", "SDI(NC)": "input", "SDO(NC)": "open_collector", IBIAS: "passive", ICMP: "passive", IMB: "bidirectional", IPB: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:LTC6804-1";
@@ -3914,7 +4017,8 @@ export class MAX1647 extends Component.withPins({
   "LX": "19",
   "BST": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IOUT: "output", DCIN: "power_in", VL: "power_out", CCV: "passive", CCI: "passive", SEL: "input", CS: "input", BATT: "input", REF: "bidirectional", AGND: "power_in", "~{INT}": "open_collector", THM: "input", SCLK: "input", SDA: "bidirectional", DACV: "output", PGND: "power_in", DLO: "output", DHI: "output", LX: "input", BST: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX1647";
@@ -3948,7 +4052,8 @@ export class MAX1648 extends Component.withPins({
   "LX": "15",
   "BST": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DCIN: "power_in", VL: "power_out", CCV: "passive", CCI: "passive", CS: "input", BATT: "input", REF: "bidirectional", AGND: "power_in", THM: "input", SETI: "input", SETV: "input", PGND: "power_in", DLO: "output", DHI: "output", LX: "input", BST: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX1648";
@@ -3981,7 +4086,8 @@ export class MAX17261xxTD extends Component.withPins({
   "SCL": "14",
   "GND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TH: "passive", NC_2: "no_connect", SW: "output", NC_4: "no_connect", NC_5: "no_connect", BATT: "power_in", CSN: "passive", GND_8: "power_in", CSPL: "passive", CELLX: "input", REG: "power_out", ALRT: "open_collector", SDA: "bidirectional", SCL: "input", GND_15: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX17261xxTD";
@@ -4008,7 +4114,8 @@ export class MAX17261xxWL extends Component.withPins({
   "CELLX": "C2",
   "GND/CSPL": "C3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TH: "passive", SCL: "input", CSN: "passive", BATT: "power_in", ALRT: "open_collector", REG: "power_out", SDA: "bidirectional", CELLX: "input", "GND/CSPL": "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX17261xxWL";
@@ -4041,7 +4148,8 @@ export class MAX17263xxTE extends Component.withPins({
   "SCL": "14",
   "EP": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TH: "passive", L1: "bidirectional", L2: "output", L3: "output", L4: "output", BATT: "power_in", CSN: "input", GND: "power_in", CSPL: "input", "CELLX/CSPH": "input", REG: "power_out", ALRT: "open_collector", SDA: "bidirectional", SCL: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX17263xxTE";
@@ -4067,7 +4175,8 @@ export class MAX1811 extends Component.withPins({
   "EN": "7",
   "~{CHG}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SELV: "input", SELI: "input", GND_3: "power_in", IN: "power_in", BATT: "power_out", GND_6: "passive", EN: "input", "~{CHG}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX1811";
@@ -4101,7 +4210,8 @@ export class MAX1873REEE extends Component.withPins({
   "DCIN": "15",
   "VL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CSSN: "input", CSSP: "input", CCS: "input", CCV: "input", CCI: "input", "ICHG/EN": "input", IOUT: "output", VADJ: "input", REF: "output", BATT: "input", CSB: "input", GND: "power_in", VH: "input", EXT: "output", DCIN: "power_in", VL: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX1873REEE";
@@ -4135,7 +4245,8 @@ export class MAX1873SEEE extends Component.withPins({
   "DCIN": "15",
   "VL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CSSN: "input", CSSP: "input", CCS: "input", CCV: "input", CCI: "input", "ICHG/EN": "input", IOUT: "output", VADJ: "input", REF: "output", BATT: "input", CSB: "input", GND: "power_in", VH: "input", EXT: "output", DCIN: "power_in", VL: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX1873SEEE";
@@ -4169,7 +4280,8 @@ export class MAX1873TEEE extends Component.withPins({
   "DCIN": "15",
   "VL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CSSN: "input", CSSP: "input", CCS: "input", CCV: "input", CCI: "input", "ICHG/EN": "input", IOUT: "output", VADJ: "input", REF: "output", BATT: "input", CSB: "input", GND: "power_in", VH: "input", EXT: "output", DCIN: "power_in", VL: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX1873TEEE";
@@ -4203,7 +4315,8 @@ export class MAX712CPE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "input", PGM0: "input", PGM1: "input", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX712CPE";
@@ -4237,7 +4350,8 @@ export class MAX712CSE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "power_out", PGM0: "power_out", PGM1: "power_out", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX712CSE";
@@ -4271,7 +4385,8 @@ export class MAX712EPE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "input", PGM0: "input", PGM1: "input", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX712EPE";
@@ -4305,7 +4420,8 @@ export class MAX712ESE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "power_out", PGM0: "power_out", PGM1: "power_out", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX712ESE";
@@ -4339,7 +4455,8 @@ export class MAX712MJE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "input", PGM0: "input", PGM1: "input", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX712MJE";
@@ -4373,7 +4490,8 @@ export class MAX713CPE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "input", PGM0: "input", PGM1: "input", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX713CPE";
@@ -4407,7 +4525,8 @@ export class MAX713CSE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "power_out", PGM0: "power_out", PGM1: "power_out", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX713CSE";
@@ -4441,7 +4560,8 @@ export class MAX713EPE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "input", PGM0: "input", PGM1: "input", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX713EPE";
@@ -4475,7 +4595,8 @@ export class MAX713ESE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "power_out", PGM0: "power_out", PGM1: "power_out", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX713ESE";
@@ -4509,7 +4630,8 @@ export class MAX713MJE extends Component.withPins({
   "V+": "15",
   "REF": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLIMIT: "input", "BATT+": "input", PGM0: "input", PGM1: "input", THI: "input", TLO: "input", TEMP: "input", "~{FASTCHG}": "open_collector", PGM2: "input", PGM3: "input", CC: "input", "BATT-": "input", GND: "power_in", DRV: "output", "V+": "power_in", REF: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MAX713MJE";
@@ -4536,7 +4658,8 @@ export class MC34673 extends Component.withPins({
   "BAT": "8",
   "EPAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", "~{PPR}": "open_collector", "~{CHG}": "open_collector", "~{EN}": "input", GND: "power_in", "~{FAST}": "open_collector", ISET: "output", BAT: "power_out", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MC34673";
@@ -4559,7 +4682,8 @@ export class MCP73812T_420I_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CE: "input", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73812T-420I-OT";
@@ -4582,7 +4706,8 @@ export class MCP73811T_420I_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CE: "input", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73811T-420I-OT";
@@ -4605,7 +4730,8 @@ export class MCP73811T_435I_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CE: "input", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73811T-435I-OT";
@@ -4628,7 +4754,8 @@ export class MCP73812T_435I_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CE: "input", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73812T-435I-OT";
@@ -4654,7 +4781,8 @@ export class MCP73831_2_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "tri_state", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-2-MC";
@@ -4677,7 +4805,8 @@ export class MCP73831_2_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "tri_state", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-2-OT";
@@ -4703,7 +4832,8 @@ export class MCP73831_3_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "tri_state", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-3-MC";
@@ -4726,7 +4856,8 @@ export class MCP73831_3_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "tri_state", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-3-OT";
@@ -4752,7 +4883,8 @@ export class MCP73831_4_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "tri_state", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-4-MC";
@@ -4775,7 +4907,8 @@ export class MCP73831_4_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "tri_state", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-4-OT";
@@ -4801,7 +4934,8 @@ export class MCP73831_5_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "tri_state", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-5-MC";
@@ -4824,7 +4958,8 @@ export class MCP73831_5_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "tri_state", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73831-5-OT";
@@ -4850,7 +4985,8 @@ export class MCP73832_2_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "open_collector", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-2-MC";
@@ -4873,7 +5009,8 @@ export class MCP73832_2_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "open_collector", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-2-OT";
@@ -4899,7 +5036,8 @@ export class MCP73832_3_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "open_collector", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-3-MC";
@@ -4922,7 +5060,8 @@ export class MCP73832_3_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "open_collector", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-3-OT";
@@ -4948,7 +5087,8 @@ export class MCP73832_4_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "open_collector", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-4-MC";
@@ -4971,7 +5111,8 @@ export class MCP73832_4_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "open_collector", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-4-OT";
@@ -4997,7 +5138,8 @@ export class MCP73832_5_MC extends Component.withPins({
   "NC": "7",
   "PROG": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "passive", "V_{DD}_2": "power_in", "V_{BAT}_3": "power_out", "V_{BAT}_4": "passive", STAT: "open_collector", "V_{SS}": "power_in", NC: "no_connect", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-5-MC";
@@ -5020,7 +5162,8 @@ export class MCP73832_5_OT extends Component.withPins({
   "V_{DD}": "4",
   "PROG": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { STAT: "open_collector", "V_{SS}": "power_in", "V_{BAT}": "power_out", "V_{DD}": "power_in", PROG: "input", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73832-5-OT";
@@ -5049,7 +5192,8 @@ export class MCP73833_xxx_MF extends Component.withPins({
   "V_{BAT}_10": "10",
   "EP": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "power_in", "V_{DD}_2": "passive", STAT1: "open_collector", STAT2: "open_collector", "V_{SS}": "power_in", PROG: "input", "~{PG}": "open_collector", THERM: "passive", "V_{BAT}_9": "power_out", "V_{BAT}_10": "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73833-xxx-MF";
@@ -5077,7 +5221,8 @@ export class MCP73833_xxx_UN extends Component.withPins({
   "V_{BAT}_9": "9",
   "V_{BAT}_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "power_in", "V_{DD}_2": "passive", STAT1: "open_collector", STAT2: "open_collector", "V_{SS}": "power_in", PROG: "input", "~{PG}": "open_collector", THERM: "passive", "V_{BAT}_9": "power_out", "V_{BAT}_10": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73833-xxx-UN";
@@ -5116,7 +5261,8 @@ export class MCP73871 extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871";
@@ -5155,7 +5301,8 @@ export class MCP73871_1AA extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-1AA";
@@ -5194,7 +5341,8 @@ export class MCP73871_1CA extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-1CA";
@@ -5233,7 +5381,8 @@ export class MCP73871_1CC extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-1CC";
@@ -5272,7 +5421,8 @@ export class MCP73871_2AA extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-2AA";
@@ -5311,7 +5461,8 @@ export class MCP73871_2CA extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-2CA";
@@ -5350,7 +5501,8 @@ export class MCP73871_2CC extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-2CC";
@@ -5389,7 +5541,8 @@ export class MCP73871_3CA extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-3CA";
@@ -5428,7 +5581,8 @@ export class MCP73871_3CC extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-3CC";
@@ -5467,7 +5621,8 @@ export class MCP73871_4CA extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-4CA";
@@ -5506,7 +5661,8 @@ export class MCP73871_4CC extends Component.withPins({
   "OUT_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "power_out", VPCC: "input", SEL: "input", PROG2: "input", THERM: "bidirectional", "~{PG}": "open_collector", STAT2: "open_collector", "STAT1/~{LBO}": "open_collector", "~{TE}": "input", "V_{SS}_10": "power_in", "V_{SS}_11": "passive", PROG3: "bidirectional", PROG1: "bidirectional", "V_{BAT}_14": "power_out", "V_{BAT}_15": "passive", "V_{BAT_SENSE}": "input", CE: "input", IN_18: "power_in", IN_19: "passive", OUT_20: "passive", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:MCP73871-4CC";
@@ -5541,7 +5697,8 @@ export class SLM6800 extends Component.withPins({
   "EN": "16",
   "PGND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CHRG}": "open_collector", "~{STBY}": "open_collector", NTC: "input", VIN: "power_in", BST: "input", PGND_4: "power_in", LX_5: "output", LX_6: "passive", VSYS_7: "output", VSYS_8: "passive", BAT: "power_out", ILIM: "input", ISET: "input", TM: "input", SGND: "power_in", EN: "input", PGND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:SLM6800";
@@ -5568,7 +5725,8 @@ export class TP4056_42_ESOP8 extends Component.withPins({
   "CE": "8",
   "EPAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEMP: "input", PROG: "passive", GND: "power_in", "V_{CC}": "power_in", BAT: "power_out", "~{STDBY}": "open_collector", "~{CHRG}": "open_collector", CE: "input", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:TP4056-42-ESOP8";
@@ -5592,7 +5750,8 @@ export class TP4057 extends Component.withPins({
   "STDBY": "5",
   "PROG": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CHRG}": "open_collector", GND: "power_in", BAT: "power_out", "V_{CC}": "power_in", STDBY: "open_collector", PROG: "passive", ...opts.pinTypes } });
   }
   override schema = "Battery_Management:TP4057";

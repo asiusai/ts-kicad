@@ -20,7 +20,8 @@ export class CAT3200 extends Component.withPins({
   "FB": "7",
   "VOUT": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CPOS: "passive", VIN: "power_in", CNEG: "passive", PGND: "power_in", SGND: "power_in", "~{SHDN}": "input", FB: "input", VOUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:CAT3200";
@@ -44,7 +45,8 @@ export class CAT3200_5 extends Component.withPins({
   "VIN": "5",
   "CPOS": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", "~{SHDN}": "input", CNEG: "passive", VIN: "power_in", CPOS: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:CAT3200-5";
@@ -69,7 +71,8 @@ export class MAX1044 extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "CAP+": "input", GND: "power_in", "CAP-": "input", VOUT: "power_out", LV: "input", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:MAX1044";
@@ -94,7 +97,8 @@ export class ICL7660 extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "CAP+": "input", GND: "power_in", "CAP-": "input", VOUT: "power_out", LV: "input", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:ICL7660";
@@ -118,7 +122,8 @@ export class LM2665M6 extends Component.withPins({
   "OUT": "5",
   "CAP+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "passive", GND: "power_in", "CAP-": "passive", SD: "input", OUT: "passive", "CAP+": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LM2665M6";
@@ -145,7 +150,8 @@ export class LM2775DSG extends Component.withPins({
   "GND_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PFM: "input", "C1-": "passive", "C1+": "passive", OUTDIS: "input", EN: "input", VOUT: "power_out", VIN: "power_in", GND_8: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LM2775DSG";
@@ -169,7 +175,8 @@ export class LM2776 extends Component.withPins({
   "C1+": "5",
   "C1-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", VIN: "power_in", EN: "input", "C1+": "passive", "C1-": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LM2776";
@@ -196,7 +203,8 @@ export class LM27761 extends Component.withPins({
   "C+": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", GND: "power_in", CPOUT: "power_out", VOUT: "power_out", VFB: "input", EN: "input", "C-": "passive", "C+": "passive", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LM27761";
@@ -227,7 +235,8 @@ export class LM27762 extends Component.withPins({
   "EN+": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PGOOD: "open_collector", "FB+": "input", VIN: "power_in", GND: "power_in", CP: "passive", "OUT-": "power_out", "FB-": "input", "EN-": "input", "C-": "passive", "C+": "passive", "OUT+": "power_out", "EN+": "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LM27762";
@@ -253,7 +262,8 @@ export class LM7705 extends Component.withPins({
   "CRES": "7",
   "CF-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "CF+": "passive", GND_2: "power_in", SD: "input", VDD: "power_in", GND_5: "passive", VOUT: "power_out", CRES: "passive", "CF-": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LM7705";
@@ -278,7 +288,8 @@ export class LMC7660 extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "CAP+": "input", GND: "power_in", "CAP-": "input", VOUT: "power_out", LV: "input", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LMC7660";
@@ -303,7 +314,8 @@ export class LT1054 extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "FB/SHDN": "input", "CAP+": "input", GND: "power_in", "CAP-": "input", "-VOUT": "power_out", VREF: "output", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LT1054";
@@ -328,7 +340,8 @@ export class LT1054L extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "FB/SHDN": "input", "CAP+": "input", GND: "power_in", "CAP-": "input", "-VOUT": "power_out", VREF: "output", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LT1054L";
@@ -354,7 +367,8 @@ export class LT1054xSW extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "FB/SHDN": "input", "CAP+": "input", GND: "power_in", "CAP-": "input", "-VOUT": "power_out", VREF: "output", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LT1054xSW";
@@ -379,7 +393,8 @@ export class LTC1044 extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOST: "input", "CAP+": "input", GND: "power_in", "CAP-": "input", VOUT: "power_out", LV: "input", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1044";
@@ -405,7 +420,8 @@ export class LTC1502xS8_3_3 extends Component.withPins({
   "C3^{+}": "7",
   "V_{OUT}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C2: "passive", "C1^{+}": "passive", "C1^{-}/~{SHDN}": "output", GND: "power_in", "V_{IN}": "power_in", "C3^{-}": "passive", "C3^{+}": "passive", "V_{OUT}": "power_out", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1502xS8-3.3";
@@ -431,7 +447,8 @@ export class LTC1502xMS8_3_3 extends Component.withPins({
   "C3^{+}": "7",
   "V_{OUT}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C2: "passive", "C1^{+}": "passive", "C1^{-}/~{SHDN}": "output", GND: "power_in", "V_{IN}": "power_in", "C3^{-}": "passive", "C3^{+}": "passive", "V_{OUT}": "power_out", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1502xMS8-3.3";
@@ -457,7 +474,8 @@ export class LTC1503CMS8_2 extends Component.withPins({
   "GND": "7",
   "C2-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", "C1-": "input", "C1+": "input", VIN: "power_in", "~{SHDN}/SS": "input", "C2+": "input", GND: "power_in", "C2-": "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1503CMS8-2";
@@ -483,7 +501,8 @@ export class LTC1503CMS8_1_8 extends Component.withPins({
   "GND": "7",
   "C2-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", "C1-": "input", "C1+": "input", VIN: "power_in", "~{SHDN}/SS": "input", "C2+": "input", GND: "power_in", "C2-": "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1503CMS8-1.8";
@@ -509,7 +528,8 @@ export class LTC1503xS8_1_8 extends Component.withPins({
   "GND": "7",
   "C2-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", "C1-": "input", "C1+": "input", VIN: "power_in", "~{SHDN}/SS": "input", "C2+": "input", GND: "power_in", "C2-": "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1503xS8-1.8";
@@ -535,7 +555,8 @@ export class LTC1503xS8_2 extends Component.withPins({
   "GND": "7",
   "C2-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", "C1-": "input", "C1+": "input", VIN: "power_in", "~{SHDN}/SS": "input", "C2+": "input", GND: "power_in", "C2-": "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1503xS8-2";
@@ -561,7 +582,8 @@ export class LTC1751 extends Component.withPins({
   "~{SHDN}": "7",
   "SS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PGOOD/FB": "output", VOUT: "power_out", VIN: "power_in", GND: "power_in", "C-": "input", "C+": "input", "~{SHDN}": "input", SS: "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1751";
@@ -585,7 +607,8 @@ export class LTC1754 extends Component.withPins({
   "VIN": "5",
   "CP+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", "~{SHDN}": "input", "CP-": "passive", VIN: "power_in", "CP+": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC1754";
@@ -610,7 +633,8 @@ export class LTC3221EDC extends Component.withPins({
   "V_{OUT}": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C^{+}": "passive", "C^{-}": "passive", FB: "input", GND_4: "power_in", "V_{IN}": "power_in", "V_{OUT}": "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC3221EDC";
@@ -635,7 +659,8 @@ export class LTC3221EDC_3_3 extends Component.withPins({
   "V_{OUT}": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C^{+}": "passive", "C^{-}": "passive", "~{SHDN}": "input", GND_4: "power_in", "V_{IN}": "power_in", "V_{OUT}": "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC3221EDC-3.3";
@@ -660,7 +685,8 @@ export class LTC3221EDC_5 extends Component.withPins({
   "V_{OUT}": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C^{+}": "passive", "C^{-}": "passive", "~{SHDN}": "input", GND_4: "power_in", "V_{IN}": "power_in", "V_{OUT}": "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC3221EDC-5";
@@ -693,7 +719,8 @@ export class LTC3260xDE extends Component.withPins({
   "BYP^{+}": "14",
   "GND": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "EN^{+}": "input", RT: "input", "BYP^{-}": "passive", "ADJ^{-}": "input", "LDO^{-}": "power_out", "V_{OUT}": "passive", "C^{-}": "passive", "C^{+}": "passive", "V_{IN}": "power_in", "LDO^{+}": "power_out", "EN^{-}": "input", MODE: "input", "ADJ^{+}": "input", "BYP^{+}": "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC3260xDE";
@@ -728,7 +755,8 @@ export class LTC3260xMSE extends Component.withPins({
   "BYP^{+}": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "EN^{+}": "input", RT: "input", "BYP^{-}": "passive", "ADJ^{-}": "input", "LDO^{-}": "power_out", "V_{OUT}": "passive", "C^{-}": "passive", NC_8: "no_connect", NC_9: "no_connect", "C^{+}": "passive", "V_{IN}": "power_in", "LDO^{+}": "power_out", "EN^{-}": "input", MODE: "input", "ADJ^{+}": "input", "BYP^{+}": "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC3260xMSE";
@@ -753,7 +781,8 @@ export class LTC660 extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOST: "input", "CAP+": "input", GND: "power_in", "CAP-": "input", VOUT: "power_out", LV: "input", OSC: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:LTC660";
@@ -777,7 +806,8 @@ export class RT9361AxE extends Component.withPins({
   "VIN": "5",
   "CP": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", EN: "input", CN: "passive", VIN: "power_in", CP: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:RT9361AxE";
@@ -801,7 +831,8 @@ export class RT9361BxE extends Component.withPins({
   "VIN": "5",
   "CP": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "power_out", GND: "power_in", EN: "input", CN: "passive", VIN: "power_in", CP: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:RT9361BxE";
@@ -826,7 +857,8 @@ export class TPS60151DRV extends Component.withPins({
   "ENA": "6",
   "EP": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VIN: "power_in", VOUT: "power_out", "CP+": "passive", "CP-": "passive", ENA: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60151DRV";
@@ -849,7 +881,8 @@ export class TPS60400DBV extends Component.withPins({
   "GND": "4",
   "C_{FLY+}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "power_out", IN: "power_in", "C_{FLY-}": "passive", GND: "power_in", "C_{FLY+}": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60400DBV";
@@ -872,7 +905,8 @@ export class TPS60401DBV extends Component.withPins({
   "GND": "4",
   "C_{FLY+}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "power_out", IN: "power_in", "C_{FLY-}": "passive", GND: "power_in", "C_{FLY+}": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60401DBV";
@@ -895,7 +929,8 @@ export class TPS60402DBV extends Component.withPins({
   "GND": "4",
   "C_{FLY+}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "power_out", IN: "power_in", "C_{FLY-}": "passive", GND: "power_in", "C_{FLY+}": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60402DBV";
@@ -918,7 +953,8 @@ export class TPS60403DBV extends Component.withPins({
   "GND": "4",
   "C_{FLY+}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "power_out", IN: "power_in", "C_{FLY-}": "passive", GND: "power_in", "C_{FLY+}": "passive", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60403DBV";
@@ -946,7 +982,8 @@ export class TPS60500DGS extends Component.withPins({
   "GND": "9",
   "FB": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{EN}": "input", PG: "open_collector", "C2-": "passive", "C2+": "passive", VIN: "power_in", "C1+": "passive", VOUT: "power_out", "C1-": "passive", GND: "power_in", FB: "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60500DGS";
@@ -974,7 +1011,8 @@ export class TPS60501DGS extends Component.withPins({
   "GND": "9",
   "FB": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{EN}": "input", PG: "open_collector", "C2-": "passive", "C2+": "passive", VIN: "power_in", "C1+": "passive", VOUT: "power_out", "C1-": "passive", GND: "power_in", FB: "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60501DGS";
@@ -1002,7 +1040,8 @@ export class TPS60502DGS extends Component.withPins({
   "GND": "9",
   "FB": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{EN}": "input", PG: "open_collector", "C2-": "passive", "C2+": "passive", VIN: "power_in", "C1+": "passive", VOUT: "power_out", "C1-": "passive", GND: "power_in", FB: "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60502DGS";
@@ -1030,7 +1069,8 @@ export class TPS60503DGS extends Component.withPins({
   "GND": "9",
   "FB": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{EN}": "input", PG: "open_collector", "C2-": "passive", "C2+": "passive", VIN: "power_in", "C1+": "passive", VOUT: "power_out", "C1-": "passive", GND: "power_in", FB: "input", ...opts.pinTypes } });
   }
   override schema = "Regulator_SwitchedCapacitor:TPS60503DGS";

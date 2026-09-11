@@ -21,7 +21,8 @@ export class LA1185 extends Component.withPins({
   "OSC": "8",
   "VCC": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RF_IN: "input", RF_BYPASS: "passive", RF_OUT: "output", MIX_IN: "input", GND: "power_in", MIX_OUT: "output", OSC_MON: "passive", OSC: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:LA1185";
@@ -59,7 +60,8 @@ export class MCS3142 extends Component.withPins({
   "SW0": "19",
   "VSS_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", SOSCI: "input", SOSCO: "output", SW3: "input", PGC: "input", PGD: "bidirectional", VSS_7: "power_in", VDD_8: "passive", CTRL_IN: "input", RF_OUT: "output", VSS_11: "passive", DATA_IN: "input", XTAL: "input", CTRL_OUT: "output", DATA_OUT: "output", "~{LED}": "output", SW2: "input", SW1: "input", SW0: "input", VSS_20: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:MCS3142";
@@ -97,7 +99,8 @@ export class SA605D extends Component.withPins({
   "IF_AMP_DECOUPL_19": "19",
   "MIXER_OUT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RF_IN: "input", RF_BYPASS: "input", OSC_OUT: "output", OSC_IN: "input", MUTE_INPUT: "input", VCC: "power_in", RSSI_OUT: "output", MUTED_AUD_OUTP: "output", UNMUTED_AUD_OUTP: "output", QUADRATURE_IN: "input", LIMITER_OUT: "output", LIMITER_DECOUPL_12: "input", LIMITER_DECOUPL_13: "input", LIMITER_IN: "input", GND: "power_in", IF_AMP_OUT: "output", IF_AMP_DECOUPL_17: "input", IF_AMP_IN: "input", IF_AMP_DECOUPL_19: "input", MIXER_OUT: "output", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:SA605D";
@@ -135,7 +138,8 @@ export class SA605DK extends Component.withPins({
   "IF_AMP_DECOUPL_19": "19",
   "MIXER_OUT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RF_IN: "input", RF_BYPASS: "input", OSC_OUT: "output", OSC_IN: "input", MUTE_INPUT: "input", VCC: "power_in", RSSI_OUT: "output", MUTED_AUD_OUTP: "output", UNMUTED_AUD_OUTP: "output", QUADRATURE_IN: "input", LIMITER_OUT: "output", LIMITER_DECOUPL_12: "input", LIMITER_DECOUPL_13: "input", LIMITER_IN: "input", GND: "power_in", IF_AMP_OUT: "output", IF_AMP_DECOUPL_17: "input", IF_AMP_IN: "input", IF_AMP_DECOUPL_19: "input", MIXER_OUT: "output", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:SA605DK";
@@ -173,7 +177,8 @@ export class SA636DK extends Component.withPins({
   "IF_AMP_DECOUPL_19": "19",
   "MIXER_OUT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RF_IN: "input", RF_IN_DECOUPL: "passive", OSC_OUT: "output", OSC_IN: "input", VCC: "power_in", RSSI_FEEDBACK: "input", RSSI_OUT: "output", POWER_DOWN_CTRL: "input", DATA_OUT: "output", QUADRATURE_IN: "input", LIMITER_OUT: "output", LIMITER_DECOUPL_12: "passive", LIMITER_DECOUPL_13: "passive", LIMITER_IN: "input", GND: "power_in", IF_AMP_OUT: "output", IF_AMP_DECOUPL_17: "passive", IF_AMP_IN: "input", IF_AMP_DECOUPL_19: "passive", MIXER_OUT: "output", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:SA636DK";
@@ -212,7 +217,8 @@ export class Si4362 extends Component.withPins({
   "GPIO3": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDN: "input", RXp: "input", RXn: "input", NC_4: "no_connect", NC_5: "no_connect", VDD_6: "power_in", NC_7: "no_connect", VDD_8: "power_in", GPIO0: "bidirectional", GPIO1: "bidirectional", "~{IRQ}": "output", SCLK: "input", SDO: "output", SDI: "input", "~{SEL}": "input", XOUT: "output", XIN: "input", GND_18: "power_in", GPIO2: "bidirectional", GPIO3: "bidirectional", GND_21: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:Si4362";
@@ -254,7 +260,8 @@ export class Si4735_D60_GU extends Component.withPins({
   "ROUT/[DOUT]": "23",
   "LOUT/[DFS]": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", DFS: "input", "GPO3/[DCLK]": "bidirectional", "GPO2/[~{INT}]": "output", GPO1: "output", NC_6: "no_connect", NC_7: "no_connect", FMI: "input", RFGND: "power_in", NC_10: "no_connect", NC_11: "no_connect", AMI: "input", GND_13: "power_in", GND_14: "power_in", "~{RST}": "input", "~{SEN}": "input", SCLK: "input", SDIO: "bidirectional", RCLK: "input", VD: "power_in", VA: "power_in", DBYP: "passive", "ROUT/[DOUT]": "output", "LOUT/[DFS]": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:Si4735-D60-GU";
@@ -296,7 +303,8 @@ export class Si4730_D60_GU extends Component.withPins({
   "ROUT/[DOUT]": "23",
   "LOUT/[DFS]": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", DFS: "input", "GPO3/[DCLK]": "bidirectional", "GPO2/[~{INT}]": "output", GPO1: "output", NC_6: "no_connect", NC_7: "no_connect", FMI: "input", RFGND: "power_in", NC_10: "no_connect", NC_11: "no_connect", AMI: "input", GND_13: "power_in", GND_14: "power_in", "~{RST}": "input", "~{SEN}": "input", SCLK: "input", SDIO: "bidirectional", RCLK: "input", VD: "power_in", VA: "power_in", DBYP: "passive", "ROUT/[DOUT]": "output", "LOUT/[DFS]": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:Si4730-D60-GU";
@@ -338,7 +346,8 @@ export class Si4731_D60_GU extends Component.withPins({
   "ROUT/[DOUT]": "23",
   "LOUT/[DFS]": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", DFS: "input", "GPO3/[DCLK]": "bidirectional", "GPO2/[~{INT}]": "output", GPO1: "output", NC_6: "no_connect", NC_7: "no_connect", FMI: "input", RFGND: "power_in", NC_10: "no_connect", NC_11: "no_connect", AMI: "input", GND_13: "power_in", GND_14: "power_in", "~{RST}": "input", "~{SEN}": "input", SCLK: "input", SDIO: "bidirectional", RCLK: "input", VD: "power_in", VA: "power_in", DBYP: "passive", "ROUT/[DOUT]": "output", "LOUT/[DFS]": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:Si4731-D60-GU";
@@ -380,7 +389,8 @@ export class Si4734_D60_GU extends Component.withPins({
   "ROUT/[DOUT]": "23",
   "LOUT/[DFS]": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", DFS: "input", "GPO3/[DCLK]": "bidirectional", "GPO2/[~{INT}]": "output", GPO1: "output", NC_6: "no_connect", NC_7: "no_connect", FMI: "input", RFGND: "power_in", NC_10: "no_connect", NC_11: "no_connect", AMI: "input", GND_13: "power_in", GND_14: "power_in", "~{RST}": "input", "~{SEN}": "input", SCLK: "input", SDIO: "bidirectional", RCLK: "input", VD: "power_in", VA: "power_in", DBYP: "passive", "ROUT/[DOUT]": "output", "LOUT/[DFS]": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:Si4734-D60-GU";
@@ -409,7 +419,8 @@ export class ZETA_433_SO extends Component.withPins({
   "SDO": "11",
   "SEL": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ANT: "bidirectional", GND: "power_in", SDN: "input", VCC: "power_in", "~{IRQ}": "output", NC: "no_connect", GPIO1: "bidirectional", GPIO2: "bidirectional", SCLK: "input", SDI: "input", SDO: "output", SEL: "input", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:ZETA-433-SO";
@@ -438,7 +449,8 @@ export class ZETA_868_SO extends Component.withPins({
   "SDO": "11",
   "SEL": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ANT: "bidirectional", GND: "power_in", SDN: "input", VCC: "power_in", "~{IRQ}": "output", NC: "no_connect", GPIO1: "bidirectional", GPIO2: "bidirectional", SCLK: "input", SDI: "input", SDO: "output", SEL: "input", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:ZETA-868-SO";
@@ -467,7 +479,8 @@ export class ZETA_915_SO extends Component.withPins({
   "SDO": "11",
   "SEL": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ANT: "bidirectional", GND: "power_in", SDN: "input", VCC: "power_in", "~{IRQ}": "output", NC: "no_connect", GPIO1: "bidirectional", GPIO2: "bidirectional", SCLK: "input", SDI: "input", SDO: "output", SEL: "input", ...opts.pinTypes } });
   }
   override schema = "RF_AM_FM:ZETA-915-SO";

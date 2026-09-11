@@ -45,7 +45,8 @@ export class ESP32_C3 extends Component.withPins({
   "VDDA_32": "32",
   "GND": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LNA_IN: "bidirectional", VDD3P3_2: "power_in", VDD3P3_3: "passive", XTAL_32K_P: "bidirectional", XTAL_32K_N: "bidirectional", GPIO2: "bidirectional", CHIP_EN: "bidirectional", GPIO3: "bidirectional", MTMS: "bidirectional", MTDI: "bidirectional", VDD3P3_RTC: "power_in", MTCK: "bidirectional", MTDO: "bidirectional", GPIO8: "bidirectional", GPIO9: "bidirectional", GPIO10: "bidirectional", VDD3P3_CPU: "power_in", VDD_SPI: "power_out", SPIHD: "bidirectional", SPIWP: "bidirectional", SPICS0: "bidirectional", SPICLK: "bidirectional", SPID: "bidirectional", SPIQ: "bidirectional", GPIO18: "bidirectional", GPIO19: "bidirectional", U0RXD: "bidirectional", U0TXD: "bidirectional", XTAL_N: "bidirectional", XTAL_P: "bidirectional", VDDA_31: "power_in", VDDA_32: "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP32-C3";
@@ -112,7 +113,8 @@ export class ESP32_PICO_D4 extends Component.withPins({
   "CAP1_NC": "48",
   "GND": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDA_1: "power_in", LNA_IN: "bidirectional", VDDA3P3_3: "power_in", VDDA3P3_4: "passive", SENSOR_VP: "input", SENSOR_CAPP: "input", SENSOR_CAPN: "input", SENSOR_VN: "input", EN: "input", IO34: "input", IO35: "input", IO32: "bidirectional", IO33: "bidirectional", IO25: "bidirectional", IO26: "bidirectional", IO27: "bidirectional", IO14: "bidirectional", IO12: "bidirectional", VDD3P3_RTC: "power_in", IO13: "bidirectional", IO15: "bidirectional", IO2: "bidirectional", IO0: "bidirectional", IO4: "bidirectional", IO16: "bidirectional", VDD_SDIO: "power_out", IO17: "bidirectional", "SD2/IO9": "bidirectional", "SD3/IO10": "bidirectional", CMD: "bidirectional", CLK: "bidirectional", SD0: "bidirectional", SD1: "bidirectional", IO5: "bidirectional", IO18: "bidirectional", IO23: "bidirectional", VDD3P3_CPU: "power_in", IO19: "bidirectional", IO22: "bidirectional", "U0RXD/IO3": "bidirectional", "U0TXD/IO1": "bidirectional", IO21: "bidirectional", VDDA_43: "passive", XTAL_N_NC: "no_connect", XTAL_P_NC: "no_connect", VDDA_46: "passive", CAP2_NC: "no_connect", CAP1_NC: "no_connect", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP32-PICO-D4";
@@ -179,7 +181,8 @@ export class ESP32_PICO_V3 extends Component.withPins({
   "NC_35": "35",
   "NC_36": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDA_1: "power_in", LNA_IN: "bidirectional", VDDA3P3_3: "power_in", VDDA3P3_4: "passive", SENSOR_VP: "input", SENSOR_CAPP: "input", SENSOR_CAPN: "input", SENSOR_VN: "input", EN: "input", IO34: "input", IO35: "input", IO32: "bidirectional", IO33: "bidirectional", IO25: "bidirectional", IO26: "bidirectional", IO27: "bidirectional", IO14: "bidirectional", IO12: "bidirectional", VDD3P3_RTC: "power_in", IO13: "bidirectional", IO15: "bidirectional", IO2: "bidirectional", IO0: "bidirectional", IO4: "bidirectional", VDD_SDIO: "power_out", "SD2/IO9": "bidirectional", "SD3/IO10": "bidirectional", CMD: "bidirectional", CLK: "bidirectional", IO5: "bidirectional", VDD3P3_CPU: "power_in", IO19: "bidirectional", IO22: "bidirectional", "U0RXD/IO3": "bidirectional", "U0TXD/IO1": "bidirectional", IO21: "bidirectional", VDDA_43: "passive", XTAL_N_NC: "no_connect", XTAL_P_NC: "no_connect", VDDA_46: "passive", CAP2_NC: "no_connect", CAP1_NC: "no_connect", GND: "power_in", NC_25: "no_connect", IO20: "bidirectional", "SD0/IO7": "bidirectional", IO8: "bidirectional", NC_35: "no_connect", NC_36: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP32-PICO-V3";
@@ -246,7 +249,8 @@ export class ESP32_PICO_V3_02 extends Component.withPins({
   "NC_35": "35",
   "NC_36": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDA_1: "power_in", LNA_IN: "bidirectional", VDDA3P3_3: "power_in", VDDA3P3_4: "passive", SENSOR_VP: "input", SENSOR_CAPP: "input", SENSOR_CAPN: "input", SENSOR_VN: "input", EN: "input", IO34: "input", IO35: "input", IO32: "bidirectional", IO33: "bidirectional", IO25: "bidirectional", IO26: "bidirectional", IO27: "bidirectional", IO14: "bidirectional", IO12: "bidirectional", VDD3P3_RTC: "power_in", IO13: "bidirectional", IO15: "bidirectional", IO2: "bidirectional", IO0: "bidirectional", IO4: "bidirectional", VDD_SDIO: "power_out", CMD: "bidirectional", CLK: "bidirectional", IO5: "bidirectional", VDD3P3_CPU: "power_in", IO19: "bidirectional", IO22: "bidirectional", "U0RXD/IO3": "bidirectional", "U0TXD/IO1": "bidirectional", IO21: "bidirectional", VDDA_43: "passive", XTAL_N_NC: "no_connect", XTAL_P_NC: "no_connect", VDDA_46: "passive", CAP2_NC: "no_connect", CAP1_NC: "no_connect", GND: "power_in", NC_25: "no_connect", IO20: "bidirectional", "IO9/PSRAM-~{CS}": "bidirectional", "IO10/PSRAM-CLK": "bidirectional", "SD0/IO7": "bidirectional", IO8: "bidirectional", NC_35: "no_connect", NC_36: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP32-PICO-V3-02";
@@ -321,7 +325,8 @@ export class ESP32_S2 extends Component.withPins({
   "CHIP_PU": "56",
   "GND": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDA_1: "power_in", LNA_IN: "bidirectional", VDD3P3_3: "power_in", VDD3P3_4: "passive", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", GPIO6: "bidirectional", GPIO7: "bidirectional", GPIO8: "bidirectional", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", GPIO12: "bidirectional", GPIO13: "bidirectional", GPIO14: "bidirectional", VDD3P3_RTC: "power_in", XTAL_32K_P: "passive", XTAL_32K_N: "passive", DAC_1: "bidirectional", DAC_2: "bidirectional", "GPIO19/USB_D-": "bidirectional", "GPIO20/USB_D+": "bidirectional", VDD3P3_RTC_IO: "power_in", GPIO21: "bidirectional", SPICS1: "bidirectional", VDD_SPI: "power_out", SPIHD: "bidirectional", SPIWP: "bidirectional", SPICS0: "bidirectional", SPICLK: "bidirectional", SPIQ: "bidirectional", SPID: "bidirectional", GPIO33: "bidirectional", GPIO34: "bidirectional", GPIO35: "bidirectional", GPIO36: "bidirectional", GPIO37: "bidirectional", GPIO38: "bidirectional", MTCK: "bidirectional", MTD0: "bidirectional", VDD3P3_CPU: "power_in", MDTI: "bidirectional", MTMS: "bidirectional", U0TXD: "bidirectional", U0RXD: "bidirectional", GPIO45: "bidirectional", VDDA_51: "passive", XTAL_N: "output", XTAL_P: "input", VDDA_54: "passive", GPIO46: "input", CHIP_PU: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP32-S2";
@@ -396,7 +401,8 @@ export class ESP32_S3 extends Component.withPins({
   "VDDA_55": "55",
   "GND": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SPICLK_N: "bidirectional", MTDO: "bidirectional", GPIO45: "bidirectional", VDDA_56: "passive", LNA_IN: "bidirectional", VDD3P3_2: "power_in", VDD3P3_3: "passive", CHIP_PU: "input", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", GPIO6: "bidirectional", GPIO7: "bidirectional", GPIO8: "bidirectional", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", GPIO12: "bidirectional", GPIO13: "bidirectional", GPIO14: "bidirectional", VDD3P3_RTC: "power_in", XTAL_32K_P: "passive", XTAL_32K_N: "passive", GPIO17: "bidirectional", GPIO18: "bidirectional", "GPIO19/USB_D-": "bidirectional", "GPIO20/USB_D+": "bidirectional", GPIO21: "bidirectional", SPICS1: "bidirectional", VDD_SPI: "power_in", SPIHD: "bidirectional", SPIWP: "bidirectional", SPICS0: "bidirectional", SPICLK: "bidirectional", SPIQ: "bidirectional", SPID: "bidirectional", SPICLK_P: "bidirectional", GPIO33: "bidirectional", GPIO34: "bidirectional", GPIO35: "bidirectional", GPIO36: "bidirectional", GPIO37: "bidirectional", GPIO38: "bidirectional", MTCK: "bidirectional", VDD3P3_CPU: "power_in", MTDI: "bidirectional", MTMS: "bidirectional", U0TXD: "bidirectional", U0RXD: "bidirectional", GPIO46: "bidirectional", XTAL_N: "output", XTAL_P: "input", VDDA_55: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP32-S3";
@@ -447,7 +453,8 @@ export class ESP8266EX extends Component.withPins({
   "~{EXT_RSTB}": "32",
   "GND": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDA_1: "power_in", LNA: "bidirectional", VDD3P3_3: "power_in", VDD3P3_4: "power_in", VDD_RTC: "power_in", TOUT: "input", CHIP_PU: "input", XPD_DCDC: "bidirectional", MTMS: "bidirectional", MTDI: "bidirectional", VDDPST_11: "power_in", MTCK: "bidirectional", MTDO: "bidirectional", GPIO2: "bidirectional", GPIO0: "bidirectional", GPIO4: "bidirectional", VDDPST_17: "power_in", SDIO_DATA_2: "bidirectional", SDIO_DATA_3: "bidirectional", SDIO_CMD: "bidirectional", SDIO_CLK: "bidirectional", SDIO_DATA_0: "bidirectional", SDIO_DATA_1: "bidirectional", GPIO5: "bidirectional", U0RXD: "bidirectional", U0TXD: "bidirectional", XTAL_OUT: "bidirectional", XTAL_IN: "bidirectional", VDDD: "power_in", VDDA_30: "power_in", RES12K: "input", "~{EXT_RSTB}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Espressif:ESP8266EX";

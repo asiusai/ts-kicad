@@ -152,7 +152,7 @@ export class Component<T extends string> {
     class PinnedComponent extends Component<Name> {
       static override pinMap = pinMap as Record<string, string>
     }
-    return PinnedComponent as unknown as { new (opts?: ComponentOptions): Component<Name> & Record<Name, Pin<Name>>; pinMap: Record<string, string> }
+    return PinnedComponent as unknown as { new (ref: string, opts?: ComponentOptions): Component<Name> & Record<Name, Pin<Name>>; new (opts?: ComponentOptions): Component<Name> & Record<Name, Pin<Name>>; pinMap: Record<string, string> }
   }
 
   readonly pinTypes: Record<string, ElectricalPinType>
@@ -172,7 +172,10 @@ export class Component<T extends string> {
   datasheet: string
   readonly properties: Record<string, string | null>
 
-  constructor(opts: ComponentOptions = {}) {
+  constructor(ref: string, opts?: ComponentOptions)
+  constructor(opts?: ComponentOptions)
+  constructor(refOrOpts: string | ComponentOptions = {}, options: ComponentOptions = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts
     this.pinTypes = opts.pinTypes ?? {}
     this.ref = opts.ref
     this.value = opts.value ?? ''

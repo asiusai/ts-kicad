@@ -52,7 +52,8 @@ export class MC6845 extends Component.withPins({
   "HS": "39",
   "VS": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{RESET}": "input", LPSTB: "input", MA0: "output", MA1: "output", MA2: "output", MA3: "output", MA4: "output", MA5: "output", MA6: "output", MA7: "output", MA8: "output", MA9: "output", MA10: "output", MA11: "output", MA12: "output", MA13: "output", DE: "output", CURSOR: "output", VCC: "power_in", CLK: "input", "R/~{W}": "input", E: "input", RS: "input", "~{CS}": "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RA4: "output", RA3: "output", RA2: "output", RA1: "output", RA0: "output", HS: "output", VS: "output", ...opts.pinTypes } });
   }
   override schema = "GPU:MC6845";
@@ -110,7 +111,8 @@ export class MC68A45 extends Component.withPins({
   "HS": "39",
   "VS": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{RESET}": "input", LPSTB: "input", MA0: "output", MA1: "output", MA2: "output", MA3: "output", MA4: "output", MA5: "output", MA6: "output", MA7: "output", MA8: "output", MA9: "output", MA10: "output", MA11: "output", MA12: "output", MA13: "output", DE: "output", CURSOR: "output", VCC: "power_in", CLK: "input", "R/~{W}": "input", E: "input", RS: "input", "~{CS}": "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RA4: "output", RA3: "output", RA2: "output", RA1: "output", RA0: "output", HS: "output", VS: "output", ...opts.pinTypes } });
   }
   override schema = "GPU:MC68A45";
@@ -168,7 +170,8 @@ export class MC68B45 extends Component.withPins({
   "HS": "39",
   "VS": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{RESET}": "input", LPSTB: "input", MA0: "output", MA1: "output", MA2: "output", MA3: "output", MA4: "output", MA5: "output", MA6: "output", MA7: "output", MA8: "output", MA9: "output", MA10: "output", MA11: "output", MA12: "output", MA13: "output", DE: "output", CURSOR: "output", VCC: "power_in", CLK: "input", "R/~{W}": "input", E: "input", RS: "input", "~{CS}": "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RA4: "output", RA3: "output", RA2: "output", RA1: "output", RA0: "output", HS: "output", VS: "output", ...opts.pinTypes } });
   }
   override schema = "GPU:MC68B45";

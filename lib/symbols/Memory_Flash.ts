@@ -56,7 +56,8 @@ export class _28F400 extends Component.withPins({
   "WE": "43",
   "PR": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VPP: "power_in", DU: "no_connect", A17: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", CE: "input", GND_13: "power_in", OE: "input", D0: "tri_state", D8: "tri_state", D1: "tri_state", D9: "tri_state", D2: "tri_state", D10: "tri_state", D3: "tri_state", D11: "tri_state", VCC: "power_in", D4: "tri_state", D12: "tri_state", D5: "tri_state", D13: "tri_state", D6: "tri_state", D14: "tri_state", D7: "tri_state", "A-1/D15": "tri_state", GND_32: "power_in", BYTE: "input", A16: "input", A15: "input", A14: "input", A13: "input", A12: "input", A11: "input", A10: "input", A9: "input", A8: "input", WE: "input", PR: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:28F400";
@@ -101,7 +102,8 @@ export class _29F010_TSOP_SP extends Component.withPins({
   "A10": "31",
   "OE": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A11: "input", A9: "input", A8: "input", A13: "input", A14: "input", WE: "input", VCC: "input", A16: "input", A15: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", GND: "input", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", CE: "input", A10: "input", OE: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:29F010-TSOP-SP";
@@ -148,7 +150,8 @@ export class _29W040 extends Component.withPins({
   "A10": "31",
   "OE": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A11: "input", A9: "input", A8: "input", A13: "input", A14: "input", A17: "input", WE: "input", VCC: "power_in", A18: "input", A16: "input", A15: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", GND: "power_in", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", CE: "input", A10: "input", OE: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:29W040";
@@ -210,7 +213,8 @@ export class AM29F400Bx_xxSx extends Component.withPins({
   "~{WE}": "43",
   "~{RESET}": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "RY/~{BY}": "open_collector", A17: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "~{CE}": "input", VSS_13: "power_in", "~{OE}": "input", DQ0: "tri_state", DQ8: "tri_state", DQ1: "tri_state", DQ9: "tri_state", DQ2: "tri_state", DQ10: "tri_state", DQ3: "tri_state", DQ11: "tri_state", VCC: "power_in", DQ4: "tri_state", DQ12: "tri_state", DQ5: "tri_state", DQ13: "tri_state", DQ6: "tri_state", DQ14: "tri_state", DQ7: "tri_state", "DQ15/A-1": "tri_state", VSS_32: "passive", "~{BYTE}": "input", A16: "input", A15: "input", A14: "input", A13: "input", A12: "input", A11: "input", A10: "input", A9: "input", A8: "input", "~{WE}": "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AM29F400Bx-xxSx";
@@ -272,7 +276,8 @@ export class AM29F400BB_90SC extends Component.withPins({
   "~{WE}": "43",
   "~{RESET}": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "RY/~{BY}": "open_collector", A17: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "~{CE}": "input", VSS_13: "power_in", "~{OE}": "input", DQ0: "tri_state", DQ8: "tri_state", DQ1: "tri_state", DQ9: "tri_state", DQ2: "tri_state", DQ10: "tri_state", DQ3: "tri_state", DQ11: "tri_state", VCC: "power_in", DQ4: "tri_state", DQ12: "tri_state", DQ5: "tri_state", DQ13: "tri_state", DQ6: "tri_state", DQ14: "tri_state", DQ7: "tri_state", "DQ15/A-1": "tri_state", VSS_32: "passive", "~{BYTE}": "input", A16: "input", A15: "input", A14: "input", A13: "input", A12: "input", A11: "input", A10: "input", A9: "input", A8: "input", "~{WE}": "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AM29F400BB-90SC";
@@ -338,7 +343,8 @@ export class AM29F400Bx_xxEx extends Component.withPins({
   "~{BYTE}": "47",
   "A16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A11: "input", A15: "input", A14: "input", A13: "input", A12: "input", A10: "input", A9: "input", A8: "input", NC_9: "no_connect", NC_10: "no_connect", "~{WE}": "input", "~{RESET}": "input", NC_13: "no_connect", NC_14: "no_connect", "RY/~{BY}": "open_collector", NC_16: "no_connect", A17: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "~{CE}": "input", VSS_27: "power_in", "~{OE}": "input", DQ0: "tri_state", DQ8: "tri_state", DQ1: "tri_state", DQ9: "tri_state", DQ2: "tri_state", DQ10: "tri_state", DQ3: "tri_state", DQ11: "tri_state", VCC: "power_in", DQ4: "tri_state", DQ12: "tri_state", DQ5: "tri_state", DQ13: "tri_state", DQ6: "tri_state", DQ14: "tri_state", DQ7: "tri_state", "DQ15/A-1": "tri_state", VSS_46: "passive", "~{BYTE}": "input", A16: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AM29F400Bx-xxEx";
@@ -427,7 +433,8 @@ export class AM29PDL128G extends Component.withPins({
   "A17": "K7",
   "A18": "K8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A5: "input", A4: "input", A2: "input", "RY/BY#": "output", A21: "input", "WORD#": "input", "OE#": "input", DQ0: "bidirectional", VCC_B2: "power_in", A3: "input", A0: "input", "WP#": "input", A20: "input", "CE#": "input", VSS_B8: "power_in", DQ17: "bidirectional", DQ1: "bidirectional", DQ16: "bidirectional", A1: "input", "WE#": "input", "DQ31/A-1": "bidirectional", DQ15: "bidirectional", DQ30: "bidirectional", DQ2: "bidirectional", VIO_D2: "input", VSS_D3: "power_in", DQ18: "bidirectional", DQ29: "bidirectional", DQ14: "bidirectional", VSS_D7: "power_in", VIO_D8: "input", DQ19: "bidirectional", DQ3: "bidirectional", DQ4: "bidirectional", "RST#": "input", ACC: "input", DQ12: "bidirectional", DQ13: "bidirectional", DQ28: "bidirectional", DQ5: "bidirectional", DQ21: "bidirectional", DQ20: "bidirectional", DQ27: "bidirectional", DQ26: "bidirectional", DQ11: "bidirectional", VIO_G1: "input", DQ6: "bidirectional", DQ22: "bidirectional", VSS_G4: "passive", DQ10: "bidirectional", DQ25: "bidirectional", VIO_G7: "input", VSS_G8: "power_in", DQ7: "bidirectional", DQ23: "bidirectional", VSS_H3: "power_in", A12: "input", A14: "input", DQ8: "bidirectional", DQ24: "bidirectional", DQ9: "bidirectional", A6: "input", A7: "input", A10: "input", A13: "input", A16: "input", A19: "input", VCC_J8: "power_in", A8: "input", A9: "input", A11: "input", A15: "input", A17: "input", A18: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AM29PDL128G";
@@ -453,7 +460,8 @@ export class AT25DF041x_UxN_x extends Component.withPins({
   "SCK": "E1",
   "~{WP}": "E3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "~{CS}": "input", GND: "power_in", "~{HOLD}": "bidirectional", "SO/IO1": "bidirectional", "SI/IO0": "bidirectional", SCK: "input", "~{WP}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25DF041x-UxN-x";
@@ -479,7 +487,8 @@ export class AT25SF081_SSHD_X extends Component.withPins({
   "~{HOLD}/IO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", "SI/IO0": "bidirectional", SCK: "input", "~{HOLD}/IO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25SF081-SSHD-X";
@@ -504,7 +513,8 @@ export class AT25SF041B_SSHD_X extends Component.withPins({
   "~{HOLD}/IO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", "SI/IO0": "bidirectional", SCK: "input", "~{HOLD}/IO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25SF041B-SSHD-X";
@@ -530,7 +540,8 @@ export class AT25SF081_SSHF_X extends Component.withPins({
   "~{HOLD}/IO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", "SI/IO0": "bidirectional", SCK: "input", "~{HOLD}/IO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25SF081-SSHF-X";
@@ -556,7 +567,8 @@ export class AT25SF081_XMHD_X extends Component.withPins({
   "~{HOLD}/IO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", "SI/IO0": "bidirectional", SCK: "input", "~{HOLD}/IO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25SF081-XMHD-X";
@@ -582,7 +594,8 @@ export class AT25SF081_XMHF_X extends Component.withPins({
   "~{HOLD}/IO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", "SI/IO0": "bidirectional", SCK: "input", "~{HOLD}/IO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25SF081-XMHF-X";
@@ -608,7 +621,8 @@ export class AT25SL321_U extends Component.withPins({
   "SI/IO0": "D1",
   "GND": "D2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "~{CS}": "input", "~{HOLD}/IO3": "bidirectional", "SO/IO1": "bidirectional", SCK: "input", "~{WP}/IO2": "bidirectional", "SI/IO0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT25SL321-U";
@@ -635,7 +649,8 @@ export class AT45DB161_JC extends Component.withPins({
   "~{WP}": "29",
   "VCC": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161-JC";
@@ -662,7 +677,8 @@ export class AT45DB161_RC extends Component.withPins({
   "~{WP}": "25",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161-RC";
@@ -689,7 +705,8 @@ export class AT45DB161_TC extends Component.withPins({
   "SI": "13",
   "SO": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161-TC";
@@ -716,7 +733,8 @@ export class AT45DB161B_RC extends Component.withPins({
   "~{WP}": "25",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161B-RC";
@@ -743,7 +761,8 @@ export class AT45DB161B_RC_2_5 extends Component.withPins({
   "~{WP}": "25",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161B-RC-2.5";
@@ -770,7 +789,8 @@ export class AT45DB161B_TC extends Component.withPins({
   "SI": "13",
   "SO": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161B-TC";
@@ -797,7 +817,8 @@ export class AT45DB161B_TC_2_5 extends Component.withPins({
   "SI": "13",
   "SO": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RDY/~{BUSY}": "output", "~{RESET}": "input", "~{WP}": "input", VCC: "power_in", GND: "power_in", "~{CS}": "input", SCK: "input", SI: "input", SO: "output", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161B-TC-2.5";
@@ -823,7 +844,8 @@ export class AT45DB161D_SU extends Component.withPins({
   "GND": "7",
   "SO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SI: "input", SCK: "input", "~{RESET}": "bidirectional", "~{CS}": "input", "~{WP}": "input", VCC: "power_in", GND: "power_in", SO: "output", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:AT45DB161D-SU";
@@ -861,7 +883,8 @@ export class EPC2Lx20 extends Component.withPins({
   "OE": "8",
   "~{CS}": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TDO: "output", GND: "power_in", TDI: "input", "~{CASC}": "output", "~{INIT_CONF}": "bidirectional", VPPSEL: "input", NC_15: "no_connect", NC_16: "no_connect", NC_17: "no_connect", VPP: "power_in", TMS: "input", VCC: "power_in", DATA: "output", TCK: "input", DCLK: "bidirectional", VCCSEL: "input", NC_6: "no_connect", NC_7: "no_connect", OE: "bidirectional", "~{CS}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:EPC2Lx20";
@@ -887,7 +910,8 @@ export class EPCQ16ASI8N extends Component.withPins({
   "DATA3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", DATA1: "bidirectional", DATA2: "bidirectional", GND: "power_in", DATA0: "bidirectional", DCLK: "input", DATA3: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:EPCQ16ASI8N";
@@ -913,7 +937,8 @@ export class EPCQ32ASI8N extends Component.withPins({
   "DATA3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", DATA1: "bidirectional", DATA2: "bidirectional", GND: "power_in", DATA0: "bidirectional", DCLK: "input", DATA3: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:EPCQ32ASI8N";
@@ -939,7 +964,8 @@ export class GD25D10CT extends Component.withPins({
   "NC": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "O1/SO": "output", "~{WP}": "input", VSS: "power_in", "SI/IO0": "bidirectional", SCLK: "input", NC: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:GD25D10CT";
@@ -965,7 +991,8 @@ export class GD25D05CT extends Component.withPins({
   "NC": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "O1/SO": "output", "~{WP}": "input", VSS: "power_in", "SI/IO0": "bidirectional", SCLK: "input", NC: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:GD25D05CT";
@@ -992,7 +1019,8 @@ export class GD25QxxxEY extends Component.withPins({
   "VCC": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", VSS: "power_in", "SI/IO0": "bidirectional", SCLK: "input", "~{HOLD}/~{RESET}/IO3": "bidirectional", VCC: "power_in", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:GD25QxxxEY";
@@ -1026,7 +1054,8 @@ export class IS25WP256D_xM extends Component.withPins({
   "SI/IO0": "15",
   "SCK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{HOLD}/IO3": "bidirectional", VCC: "power_in", "~{RESET}/NC": "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", "~{CE}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", "SI/IO0": "bidirectional", SCK: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:IS25WP256D-xM";
@@ -1053,7 +1082,8 @@ export class M25PX32_VMP extends Component.withPins({
   "V_{CC}": "8",
   "PAD/V_{SS}": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{S}": "input", DQ1: "bidirectional", "~{W}/V_{PP}": "input", "V_{SS}": "power_in", DQ0: "bidirectional", C: "input", "~{HOLD}": "input", "V_{CC}": "power_in", "PAD/V_{SS}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:M25PX32-VMP";
@@ -1079,7 +1109,8 @@ export class M25PX32_VMW extends Component.withPins({
   "~{HOLD}": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{S}": "input", DQ1: "bidirectional", "~{W}/V_{PP}": "input", "V_{SS}": "power_in", DQ0: "bidirectional", C: "input", "~{HOLD}": "input", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:M25PX32-VMW";
@@ -1130,7 +1161,8 @@ export class M29W004 extends Component.withPins({
   "GND_39": "39",
   "A17": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A16: "input", A15: "input", A14: "input", A13: "input", A12: "input", A11: "input", A9: "input", A8: "input", WE: "input", "Rst/B": "input", Busy: "output", A18: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", CE: "input", GND_23: "power_in", OE: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", VCC_30: "power_in", VCC_31: "power_in", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", A10: "input", GND_39: "power_in", A17: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:M29W004";
@@ -1182,7 +1214,8 @@ export class M29W008 extends Component.withPins({
   "GND_39": "39",
   "A17": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A16: "input", A15: "input", A14: "input", A13: "input", A12: "input", A11: "input", A9: "input", A8: "input", WE: "input", "Rst/B": "input", Busy: "output", A18: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", CE: "input", GND_23: "power_in", OE: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", VCC_30: "power_in", VCC_31: "power_in", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", A10: "input", A19: "input", GND_39: "power_in", A17: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:M29W008";
@@ -1209,7 +1242,8 @@ export class MT25QUxxxxxx1xW7 extends Component.withPins({
   "VCC": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{S}": "input", DQ1: "bidirectional", "~{W}/DQ2": "input", VSS: "power_in", DQ0: "bidirectional", C: "input", "~{RESET}/DQ3": "input", VCC: "power_in", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MT25QUxxxxxx1xW7";
@@ -1235,7 +1269,8 @@ export class MX25L3233FM extends Component.withPins({
   "SI/SIO0": "15",
   "SCLK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25L3233FM";
@@ -1261,7 +1296,8 @@ export class MX25R3235FM2xx1 extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25R3235FM2xx1";
@@ -1287,7 +1323,8 @@ export class MX25L3233FM1 extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25L3233FM1";
@@ -1313,7 +1350,8 @@ export class MX25L3233FM2 extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25L3233FM2";
@@ -1340,7 +1378,8 @@ export class MX25L3233FZN extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25L3233FZN";
@@ -1366,7 +1405,8 @@ export class MX25R3235FM1xx0 extends Component.withPins({
   "~{RESET}/SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{RESET}/SIO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25R3235FM1xx0";
@@ -1392,7 +1432,8 @@ export class MX25R3235FM1xx1 extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25R3235FM1xx1";
@@ -1418,7 +1459,8 @@ export class MX25R3235FM2xx0 extends Component.withPins({
   "~{RESET}/SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{RESET}/SIO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25R3235FM2xx0";
@@ -1445,7 +1487,8 @@ export class MX25R3235FZNxx0 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND_4: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{RESET}/SIO3": "bidirectional", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25R3235FZNxx0";
@@ -1472,7 +1515,8 @@ export class MX25R3235FZNxx1 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", "~{WP}/SIO2": "bidirectional", GND_4: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", "~{HOLD}/SIO3": "bidirectional", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:MX25R3235FZNxx1";
@@ -1498,7 +1542,8 @@ export class SST25VF080B_50_4x_S2Ax extends Component.withPins({
   "~{HOLD}": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", SO: "output", "~{WP}": "input", VSS: "power_in", SI: "input", SCK: "input", "~{HOLD}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:SST25VF080B-50-4x-S2Ax";
@@ -1524,7 +1569,8 @@ export class SST26VF064Bxx_xxxx_MF extends Component.withPins({
   "~{HOLD}/IO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/IO1": "bidirectional", "~{WP}/IO2": "bidirectional", GND: "power_in", "SI/IO0": "bidirectional", SCK: "input", "~{HOLD}/IO3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:SST26VF064Bxx-xxxx-MF";
@@ -1572,7 +1618,8 @@ export class SST39SF010 extends Component.withPins({
   "NC_30": "30",
   "PGM": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC_1: "input", A16: "input", A15: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", CE: "input", A10: "input", OE: "input", A11: "input", A9: "input", A8: "input", A13: "input", A14: "input", NC_30: "input", PGM: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:SST39SF010";
@@ -1620,7 +1667,8 @@ export class SST39SF020 extends Component.withPins({
   "A17": "30",
   "PGM": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "input", A16: "input", A15: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", CE: "input", A10: "input", OE: "input", A11: "input", A9: "input", A8: "input", A13: "input", A14: "input", A17: "input", PGM: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:SST39SF020";
@@ -1668,7 +1716,8 @@ export class SST39SF040 extends Component.withPins({
   "A17": "30",
   "PGM": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", A18: "input", A16: "input", A15: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", CE: "input", A10: "input", OE: "input", A11: "input", A9: "input", A8: "input", A13: "input", A14: "input", A17: "input", PGM: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:SST39SF040";
@@ -1695,7 +1744,8 @@ export class W25Q32JVZP extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}/IO_{2}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}/~{RESET}/IO_{3}": "bidirectional", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25Q32JVZP";
@@ -1722,7 +1772,8 @@ export class W25Q128JVE extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}/IO_{2}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}/~{RESET}/IO_{3}": "bidirectional", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25Q128JVE";
@@ -1749,7 +1800,8 @@ export class W25Q128JVP extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}/IO_{2}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}/~{RESET}/IO_{3}": "bidirectional", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25Q128JVP";
@@ -1775,7 +1827,8 @@ export class W25Q32JVSS extends Component.withPins({
   "~{HOLD}/~{RESET}/IO_{3}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}/IO_{2}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}/~{RESET}/IO_{3}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25Q32JVSS";
@@ -1801,7 +1854,8 @@ export class W25Q128JVS extends Component.withPins({
   "~{HOLD}/~{RESET}/IO_{3}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}/IO_{2}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}/~{RESET}/IO_{3}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25Q128JVS";
@@ -1827,7 +1881,8 @@ export class W25Q16JVSS extends Component.withPins({
   "~{HOLD}/~{RESET}/IO_{3}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}/IO_{2}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}/~{RESET}/IO_{3}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25Q16JVSS";
@@ -1853,7 +1908,8 @@ export class W25X40CLSN extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25X40CLSN";
@@ -1879,7 +1935,8 @@ export class W25X20CLSN extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25X20CLSN";
@@ -1906,7 +1963,8 @@ export class W25X20CLZP extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}": "bidirectional", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25X20CLZP";
@@ -1932,7 +1990,8 @@ export class W25X40CLSS extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25X40CLSS";
@@ -1958,7 +2017,8 @@ export class W25X40CLSV extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "DO/IO_{1}": "bidirectional", "~{WP}": "bidirectional", GND: "power_in", "DI/IO_{0}": "bidirectional", CLK: "input", "~{HOLD}": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:W25X40CLSV";
@@ -1984,7 +2044,8 @@ export class XTSD01G extends Component.withPins({
   "SD1": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SD2: "bidirectional", "SD3/~{CS}": "bidirectional", CLK: "input", VSS: "power_in", "CMD/DI": "input", "SD0/DO": "bidirectional", SD1: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:XTSD01G";
@@ -2010,7 +2071,8 @@ export class XTSD02G extends Component.withPins({
   "SD1": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SD2: "bidirectional", "SD3/~{CS}": "bidirectional", CLK: "input", VSS: "power_in", "CMD/DI": "input", "SD0/DO": "bidirectional", SD1: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:XTSD02G";
@@ -2036,7 +2098,8 @@ export class XTSD04G extends Component.withPins({
   "SD1": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SD2: "bidirectional", "SD3/~{CS}": "bidirectional", CLK: "input", VSS: "power_in", "CMD/DI": "input", "SD0/DO": "bidirectional", SD1: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:XTSD04G";
@@ -2062,7 +2125,8 @@ export class XTSD08G extends Component.withPins({
   "SD1": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SD2: "bidirectional", "SD3/~{CS}": "bidirectional", CLK: "input", VSS: "power_in", "CMD/DI": "input", "SD0/DO": "bidirectional", SD1: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_Flash:XTSD08G";

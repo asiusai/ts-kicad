@@ -16,7 +16,8 @@ export class BSP75N extends Component.withPins({
   "SOURCE_3": "3",
   "SOURCE_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", DRAIN: "passive", SOURCE_3: "passive", SOURCE_4: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:BSP75N";
@@ -38,7 +39,8 @@ export class BSP76 extends Component.withPins({
   "SOURCE_3": "3",
   "SOURCE_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", DRAIN: "passive", SOURCE_3: "passive", SOURCE_4: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:BSP76";
@@ -60,7 +62,8 @@ export class BTS4140N extends Component.withPins({
   "OUT": "3",
   "V_{bb}_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", "V_{bb}_2": "passive", OUT: "passive", "V_{bb}_4": "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:BTS4140N";
@@ -81,7 +84,8 @@ export class DN2540N3_G extends Component.withPins({
   "G": "2",
   "D": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S: "passive", G: "input", D: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:DN2540N3-G";
@@ -102,7 +106,8 @@ export class DN2540N5_G extends Component.withPins({
   "D": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", D: "passive", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:DN2540N5-G";
@@ -123,7 +128,8 @@ export class DN2540N8_G extends Component.withPins({
   "D": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", D: "passive", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:DN2540N8-G";
@@ -145,7 +151,8 @@ export class NCV8402xST extends Component.withPins({
   "S": "3",
   "D_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", D_2: "passive", S: "passive", D_4: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:NCV8402xST";
@@ -163,7 +170,8 @@ export class Q_NMOS_Depletion_DGS extends Component.withPins({
   "G": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:Q_NMOS_Depletion_DGS";
@@ -181,7 +189,8 @@ export class Q_NMOS_Depletion_DSG extends Component.withPins({
   "S": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", S: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:Q_NMOS_Depletion_DSG";
@@ -199,7 +208,8 @@ export class Q_NMOS_Depletion_GDS extends Component.withPins({
   "D": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", D: "passive", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:Q_NMOS_Depletion_GDS";
@@ -217,7 +227,8 @@ export class Q_NMOS_Depletion_GSD extends Component.withPins({
   "S": "2",
   "D": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", S: "passive", D: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:Q_NMOS_Depletion_GSD";
@@ -235,7 +246,8 @@ export class Q_NMOS_Depletion_SDG extends Component.withPins({
   "D": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S: "passive", D: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:Q_NMOS_Depletion_SDG";
@@ -253,7 +265,8 @@ export class Q_NMOS_Depletion_SGD extends Component.withPins({
   "G": "2",
   "D": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S: "passive", G: "input", D: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:Q_NMOS_Depletion_SGD";
@@ -274,7 +287,8 @@ export class SP010N70T8 extends Component.withPins({
   "D": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", D: "passive", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:SP010N70T8";
@@ -295,7 +309,8 @@ export class VNP35N07xx_E extends Component.withPins({
   "DRAIN": "2",
   "SOURCE": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPUT: "bidirectional", DRAIN: "passive", SOURCE: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:VNP35N07xx-E";
@@ -316,7 +331,8 @@ export class VNB35N07xx_E extends Component.withPins({
   "DRAIN": "2",
   "SOURCE": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPUT: "bidirectional", DRAIN: "passive", SOURCE: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:VNB35N07xx-E";
@@ -337,7 +353,8 @@ export class VNP10N07 extends Component.withPins({
   "DRAIN": "2",
   "SOURCE": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPUT: "bidirectional", DRAIN: "passive", SOURCE: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_FET_Other:VNP10N07";

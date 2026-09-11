@@ -51,7 +51,8 @@ export class BL652 extends Component.withPins({
   "SIO_25": "38",
   "GND_39": "39",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SIO_24: "bidirectional", SIO_23: "bidirectional", SIO_22: "bidirectional", SWDIO: "bidirectional", SWDCLK: "bidirectional", SIO_21: "bidirectional", SIO_20: "bidirectional", SIO_18: "bidirectional", SIO_16: "bidirectional", SIO_14: "bidirectional", SIO_12: "bidirectional", SIO_11: "bidirectional", "SIO_10/NFC2": "bidirectional", "SIO_09/NFC1": "bidirectional", GND_16: "power_in", SIO_08: "bidirectional", SIO_07: "bidirectional", SIO_06: "bidirectional", "SIO_05/AIN3": "bidirectional", "SIO_04/AIN2": "bidirectional", "SIO_03/AIN1": "bidirectional", "SIO_02/AIN0": "bidirectional", SIO_01: "bidirectional", SIO_00: "bidirectional", VDD: "power_in", GND_27: "power_in", SIO_13: "bidirectional", SIO_15: "bidirectional", SIO_17: "bidirectional", SIO_19: "bidirectional", "SIO_31/AIN7": "bidirectional", "SIO_30/AIN6": "bidirectional", "SIO_29/AIN5": "bidirectional", "SIO_28/AIN4": "bidirectional", SIO_27: "bidirectional", SIO_26: "bidirectional", SIO_25: "bidirectional", GND_39: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:BL652";
@@ -102,7 +103,8 @@ export class BM78SPPS5MC2 extends Component.withPins({
   "GND_32": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", GND_3: "passive", BAT_IN: "power_in", SW_BTN: "input", LDO33_O: "power_out", VDD_IO: "power_in", LDO18_O: "power_out", WAKE_UP: "input", PMULDO_O: "passive", P0_4: "output", P1_5: "output", "SCL/P1_2": "output", "SDA/P1_3": "bidirectional", P1_7: "bidirectional", P0_5: "bidirectional", P0_0: "bidirectional", P2_0: "input", P2_4: "input", EAN: "input", "~{RST}": "input", HCI_RXD: "input", HCI_TXD: "output", P3_1: "bidirectional", P3_2: "bidirectional", P3_3: "bidirectional", P3_4: "bidirectional", P3_6: "bidirectional", P3_7: "bidirectional", LED1: "output", GND_31: "passive", GND_32: "passive", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:BM78SPPS5MC2";
@@ -153,7 +155,8 @@ export class BM78SPPS5NC2 extends Component.withPins({
   "GND_32": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", GND_3: "passive", BAT_IN: "power_in", SW_BTN: "input", LDO33_O: "power_out", VDD_IO: "power_in", LDO18_O: "power_out", WAKE_UP: "input", PMULDO_O: "passive", P0_4: "output", P1_5: "output", "SCL/P1_2": "output", "SDA/P1_3": "bidirectional", P1_7: "bidirectional", P0_5: "bidirectional", P0_0: "bidirectional", P2_0: "input", P2_4: "input", EAN: "input", "~{RST}": "input", HCI_RXD: "input", HCI_TXD: "output", P3_1: "bidirectional", P3_2: "bidirectional", P3_3: "bidirectional", P3_4: "bidirectional", P3_6: "bidirectional", P3_7: "bidirectional", LED1: "output", GND_31: "passive", GND_32: "passive", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:BM78SPPS5NC2";
@@ -203,7 +206,8 @@ export class BTM112 extends Component.withPins({
   "RF": "33",
   "GND_34": "34",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PIO8: "bidirectional", PIO9: "bidirectional", PIO10: "bidirectional", AIO0: "passive", AIO1: "passive", RESET: "input", SPI_MISO: "output", "~{SPI_CSB}": "input", SPI_CLK: "input", SPI_MOSI: "input", "~{UART_CTS}": "input", UART_TX: "output", "~{UART_RTS}": "output", UART_RX: "input", PIO11: "bidirectional", VCC: "power_in", GND_17: "power_in", PCM_OUT: "output", PCM_SYNC: "bidirectional", PCM_IN: "input", PCM_CLK: "bidirectional", "USB_D+": "bidirectional", "USB_D-": "bidirectional", "~{LINK}/PIO7": "bidirectional", "CONN/PIO6": "bidirectional", PIO5: "bidirectional", "BTN/PIO4": "bidirectional", PIO3: "bidirectional", PIO2: "bidirectional", PIO1: "bidirectional", PIO0: "bidirectional", GND_32: "power_in", RF: "passive", GND_34: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:BTM112";
@@ -257,7 +261,8 @@ export class BTM222 extends Component.withPins({
   "RF": "37",
   "GND_38": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", PVCC: "power_in", "AIO0/SLEEPCLK": "bidirectional", AIO1: "bidirectional", "PIO0/RXEN": "bidirectional", "PIO1/TXEN": "bidirectional", "PIO2/USB_PU/CLK_REQ_OUT": "bidirectional", "PIO3/USB_WKUP/CLK_REQ_IN": "bidirectional", "PIO4/USB_ON/BT_PRIOR": "bidirectional", GND_10: "power_in", "PIO5/USB_DETACH/BT_ACT": "bidirectional", "PIO6/CLK_REQ/WAN_ACT": "bidirectional", PIO7: "bidirectional", PIO8: "bidirectional", PIO9: "bidirectional", "~{RESET}": "input", VCC: "power_in", GND_18: "power_in", GND_19: "power_in", "USB_D+": "bidirectional", "USB_D-": "bidirectional", PCM_SYNC: "bidirectional", PCM_IN: "input", PCM_OUT: "output", PCM_CLK: "bidirectional", UART_RX: "input", UART_TX: "output", UART_RTS: "output", GND_29: "power_in", UART_CTS: "input", SPI_MOSI: "input", "~{SPI_CSB}": "input", SPI_CLK: "input", SPI_MISO: "output", PIO11: "bidirectional", PIO10: "bidirectional", RF: "passive", GND_38: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:BTM222";
@@ -286,7 +291,8 @@ export class MOD_nRF8001 extends Component.withPins({
   "RDYN": "10",
   "ACTIVE": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "3V3": "power_in", GND: "power_in", RST: "input", RXD: "input", TXD: "output", SCK: "input", REQN: "input", MOSI: "input", MISO: "output", RDYN: "output", ACTIVE: "output", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:MOD-nRF8001";
@@ -356,7 +362,8 @@ export class Microchip_BM83 extends Component.withPins({
   "GND_56": "56",
   "GND_57": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DR1: "input", RFS1: "bidirectional", SCLK1: "bidirectional", DT1: "output", MCLK1: "output", AOHPR: "output", AOHPM: "output", AOHPL: "output", MICN2: "input", MICP2: "input", AIR: "input", AIL: "input", MICN1: "input", MICP1: "input", MICBIAS: "passive", GND_16: "power_in", DMIC_CLK: "output", DMIC1_R: "output", DMIC1_L: "output", P3_2: "bidirectional", P2_6: "bidirectional", ADAP_IN: "power_in", BAT_IN: "power_in", SYS_PWR: "power_out", VDD_IO: "no_connect", "PWR(MFB)": "input", SK1_AMB_DET: "input", SK2_KEY_AD: "input", "P8_6/UART_RXD": "bidirectional", "P8_5/UART_TXD": "bidirectional", "P3_4/UART_RTS": "bidirectional", LED1: "input", P0_2: "bidirectional", LED2: "input", P0_6: "bidirectional", DM: "bidirectional", DP: "bidirectional", P0_3: "bidirectional", P2_7: "bidirectional", P0_5: "bidirectional", "P1_6/PWM1": "bidirectional", P2_3: "bidirectional", "~{RST}": "input", P0_1: "bidirectional", P0_7: "bidirectional", "P1_2/TDI_CPU/SCL": "bidirectional", "P1_3/TCK_CPU/SDA": "bidirectional", "P3_7/UART_CTS": "bidirectional", "P0_0/UART_TX_IND": "bidirectional", GND_50: "passive", GND_56: "passive", GND_57: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:Microchip_BM83";
@@ -419,7 +426,8 @@ export class RFD77101 extends Component.withPins({
   "GND_44": "44",
   "GND_45": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", NC_3: "no_connect", GND_4: "power_in", NC_5: "no_connect", GND_6: "power_in", VDD: "power_in", "RESET/SWDIO": "bidirectional", "FACTORY/SWDCLK": "input", NC_10: "no_connect", "P0.19": "bidirectional", "P0.17": "bidirectional", "P0.18": "bidirectional", "P0.16": "bidirectional", "P0.15": "bidirectional", "P0.12": "bidirectional", "P0.11": "bidirectional", "P0.09": "bidirectional", GND_19: "power_in", "P0.08": "bidirectional", "P0.05/AIN6": "bidirectional", "P0.03/AIN4": "bidirectional", "P0.01/AIN2": "bidirectional", "P0.02/AIN3": "bidirectional", "P0.00/AREF0": "bidirectional", "P0.07": "bidirectional", "P0.10": "bidirectional", "P0.13": "bidirectional", "P0.14": "bidirectional", GND_30: "power_in", "P0.06/AREF1/AIN7": "bidirectional", "P0.04/AIN5": "bidirectional", "P0.20": "bidirectional", "P0.23": "bidirectional", "P0.24": "bidirectional", "P0.21": "bidirectional", "P0.22": "bidirectional", "P0.25": "bidirectional", "P0.28": "bidirectional", "P0.29": "bidirectional", "P0.30": "bidirectional", GND_42: "power_in", GND_43: "power_in", GND_44: "power_in", GND_45: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:RFD77101";
@@ -470,7 +478,8 @@ export class RN42 extends Component.withPins({
   "AIO1": "35",
   "SHIELD": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SPI_MOSI: "input", GPIO6: "input", GPIO7: "bidirectional", RESET: "input", SPI_CLK: "input", PCM_CLK: "bidirectional", PCM_SYNC: "bidirectional", PCM_IN: "input", PCM_OUT: "output", VDD: "power_in", GND_12: "power_in", UART_RX: "input", UART_TX: "output", UART_RTS: "output", UART_CTS: "input", "USB_D+": "bidirectional", "USB_D-": "bidirectional", GPIO2: "bidirectional", GPIO3: "input", GPIO5: "bidirectional", GPIO4: "bidirectional", SPI_CSB: "input", SPI_MISO: "output", GND_28: "power_in", GND_29: "power_in", AIO0: "input", GPIO8: "output", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", AIO1: "input", SHIELD: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:RN42";
@@ -524,7 +533,8 @@ export class RN42N extends Component.withPins({
   "AIO1": "35",
   "SHIELD": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SPI_MOSI: "input", GPIO6: "input", GPIO7: "bidirectional", RESET: "input", SPI_CLK: "input", PCM_CLK: "bidirectional", PCM_SYNC: "bidirectional", PCM_IN: "input", PCM_OUT: "output", VDD: "power_in", GND_12: "power_in", UART_RX: "input", UART_TX: "output", UART_RTS: "output", UART_CTS: "input", "USB_D+": "bidirectional", "USB_D-": "bidirectional", GPIO2: "bidirectional", GPIO3: "input", GPIO5: "bidirectional", GPIO4: "bidirectional", SPI_CSB: "input", SPI_MISO: "output", GND_25: "power_in", RF_ANT: "bidirectional", GND_27: "power_in", GND_28: "power_in", GND_29: "power_in", AIO0: "input", GPIO8: "output", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", AIO1: "input", SHIELD: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:RN42N";
@@ -558,7 +568,8 @@ export class RN4871 extends Component.withPins({
   "P2_7": "15",
   "P2_0": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BT_RF: "output", GND_2: "power_in", P1_2: "bidirectional", P1_3: "bidirectional", P1_7: "bidirectional", P1_6: "bidirectional", UART_RX: "input", UART_TX: "output", P3_6: "bidirectional", RST: "input", P0_0: "bidirectional", P0_2: "bidirectional", GND_13: "power_in", VBAT: "power_in", P2_7: "bidirectional", P2_0: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:RN4871";
@@ -587,7 +598,8 @@ export class SPBTLE_RF extends Component.withPins({
   "SPI_~{CS}": "10",
   "~{BT_RESET}": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "NC/EXT_LPCLK": "input", "NC/GPIO2": "bidirectional", "NC/ANA_TEST": "input", SPI_IRQ: "output", VIN: "power_in", GND: "power_in", SPI_CLK: "input", SPI_MISO: "output", SPI_MOSI: "input", "SPI_~{CS}": "input", "~{BT_RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:SPBTLE-RF";
@@ -616,7 +628,8 @@ export class SPBTLE_RF0 extends Component.withPins({
   "SPI_~{CS}": "10",
   "~{BT_RESET}": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "NC/EXT_LPCLK": "input", "NC/GPIO2": "bidirectional", "NC/ANA_TEST": "input", SPI_IRQ: "output", VIN: "power_in", GND: "power_in", SPI_CLK: "input", SPI_MISO: "output", SPI_MOSI: "input", "SPI_~{CS}": "input", "~{BT_RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:SPBTLE-RF0";
@@ -667,7 +680,8 @@ export class nRF8001 extends Component.withPins({
   "DCC": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DEC1: "bidirectional", DEC2: "bidirectional", XL2: "bidirectional", XL1: "bidirectional", ACTIVE: "bidirectional", TXD: "output", VSS_8: "power_in", VDD_9: "power_in", RXD: "input", SCK: "input", REQN: "bidirectional", MOSI: "input", MISO: "output", "N/C": "no_connect", RDYN: "bidirectional", VSS_17: "power_in", VSS_18: "power_in", RESET: "input", VDD_PA: "output", ANT1: "bidirectional", ANT2: "bidirectional", VSS_23: "power_in", AVDD_24: "power_in", IREF: "input", AVDD_26: "power_in", XC2: "bidirectional", XC1: "bidirectional", AVDD_29: "power_in", VSS_30: "power_in", VSS_31: "power_in", DCC: "bidirectional", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Bluetooth:nRF8001";

@@ -69,7 +69,8 @@ export class CY7C68013A_56LTX extends Component.withPins({
   "GND_56": "56",
   "EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RDY0/SLRD": "input", "RDY1/SLWR": "input", AVCC_3: "power_in", XTALOUT: "output", XTALIN: "input", AGND_6: "power_in", AVCC_7: "passive", "D+": "bidirectional", "D-": "bidirectional", AGND_10: "passive", VCC_11: "power_in", GND_12: "power_in", IFCLK: "bidirectional", RESERVED: "input", SCL: "input", SDA: "bidirectional", VCC_17: "passive", "PB0/FD0": "bidirectional", "PB1/FD1": "bidirectional", "PB2/FD2": "bidirectional", "PB3/FD3": "bidirectional", "PB4/FD4": "bidirectional", "PB5/FD5": "bidirectional", "PB6/FD6": "bidirectional", "PB7/FD7": "bidirectional", GND_26: "passive", VCC_27: "passive", GND_28: "passive", "CTL0/FLAGA": "output", "CTL1/FLAGB": "output", "CTL2/FLAGC": "output", VCC_32: "passive", "PA0/~{INT0}": "bidirectional", "PA1/~{INT1}": "bidirectional", "PA2/SLOE": "bidirectional", "PA3/WU2": "bidirectional", "PA4/FIOADDR0": "bidirectional", "PA5/FIOADDR1": "bidirectional", "PA6/PKTEND": "bidirectional", "PA7/FLAGD/~{SLCS}": "bidirectional", GND_41: "passive", "~{RESET}": "input", VCC_43: "passive", WAKEUP: "input", "PD0/FD8": "bidirectional", "PD1/FD9": "bidirectional", "PD2/FD10": "bidirectional", "PD3/FD11": "bidirectional", "PD4/FD12": "bidirectional", "PD5/FD13": "bidirectional", "PD6/FD14": "bidirectional", "PD7/FD15": "bidirectional", GND_53: "passive", CLKOUT: "output", VCC_55: "passive", GND_56: "passive", EP: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY7C68013A-56LTX";
@@ -143,7 +144,8 @@ export class CY7C68013A_56PVX extends Component.withPins({
   "PD3/FD11": "55",
   "PD4/FD12": "56",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PD5/FD13": "bidirectional", "PD6/FD14": "bidirectional", "PD7/FD15": "bidirectional", GND_4: "passive", CLKOUT: "output", VCC_6: "power_in", GND_7: "power_in", "RDY0/SLRD": "input", "RDY1/SLWR": "input", AVCC_10: "power_in", XTALOUT: "output", XTALIN: "input", AGND_13: "power_in", AVCC_14: "passive", "D+": "bidirectional", "D-": "bidirectional", AGND_17: "passive", VCC_18: "passive", GND_19: "passive", IFCLK: "bidirectional", RESERVED: "input", SCL: "input", SDA: "bidirectional", VCC_24: "passive", "PB0/FD0": "bidirectional", "PB1/FD1": "bidirectional", "PB2/FD2": "bidirectional", "PB3/FD3": "bidirectional", "PB4/FD4": "bidirectional", "PB5/FD5": "bidirectional", "PB6/FD6": "bidirectional", "PB7/FD7": "bidirectional", GND_33: "passive", VCC_34: "passive", GND_35: "passive", "CTL0/FLAGA": "output", "CTL1/FLAGB": "output", "CTL2/FLAGC": "output", VCC_39: "passive", "PA0/~{INT0}": "bidirectional", "PA1/~{INT1}": "bidirectional", "PA2/SLOE": "bidirectional", "PA3/WU2": "bidirectional", "PA4/FIOADDR0": "bidirectional", "PA5/FIOADDR1": "bidirectional", "PA6/PKTEND": "bidirectional", "PA7/FLAGD/~{SLCS}": "bidirectional", GND_48: "passive", "~{RESET}": "input", VCC_50: "passive", WAKEUP: "input", "PD0/FD8": "bidirectional", "PD1/FD9": "bidirectional", "PD2/FD10": "bidirectional", "PD3/FD11": "bidirectional", "PD4/FD12": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY7C68013A-56PVX";
@@ -218,7 +220,8 @@ export class CY7C68014A_56LTX extends Component.withPins({
   "GND_56": "56",
   "EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RDY0/SLRD": "input", "RDY1/SLWR": "input", AVCC_3: "power_in", XTALOUT: "output", XTALIN: "input", AGND_6: "power_in", AVCC_7: "passive", "D+": "bidirectional", "D-": "bidirectional", AGND_10: "passive", VCC_11: "power_in", GND_12: "power_in", IFCLK: "bidirectional", RESERVED: "input", SCL: "input", SDA: "bidirectional", VCC_17: "passive", "PB0/FD0": "bidirectional", "PB1/FD1": "bidirectional", "PB2/FD2": "bidirectional", "PB3/FD3": "bidirectional", "PB4/FD4": "bidirectional", "PB5/FD5": "bidirectional", "PB6/FD6": "bidirectional", "PB7/FD7": "bidirectional", GND_26: "passive", VCC_27: "passive", GND_28: "passive", "CTL0/FLAGA": "output", "CTL1/FLAGB": "output", "CTL2/FLAGC": "output", VCC_32: "passive", "PA0/~{INT0}": "bidirectional", "PA1/~{INT1}": "bidirectional", "PA2/SLOE": "bidirectional", "PA3/WU2": "bidirectional", "PA4/FIOADDR0": "bidirectional", "PA5/FIOADDR1": "bidirectional", "PA6/PKTEND": "bidirectional", "PA7/FLAGD/~{SLCS}": "bidirectional", GND_41: "passive", "~{RESET}": "input", VCC_43: "passive", WAKEUP: "input", "PD0/FD8": "bidirectional", "PD1/FD9": "bidirectional", "PD2/FD10": "bidirectional", "PD3/FD11": "bidirectional", "PD4/FD12": "bidirectional", "PD5/FD13": "bidirectional", "PD6/FD14": "bidirectional", "PD7/FD15": "bidirectional", GND_53: "passive", CLKOUT: "output", VCC_55: "passive", GND_56: "passive", EP: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY7C68014A-56LTX";
@@ -292,7 +295,8 @@ export class CY7C68014A_56PVX extends Component.withPins({
   "PD3/FD11": "55",
   "PD4/FD12": "56",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PD5/FD13": "bidirectional", "PD6/FD14": "bidirectional", "PD7/FD15": "bidirectional", GND_4: "passive", CLKOUT: "output", VCC_6: "power_in", GND_7: "power_in", "RDY0/SLRD": "input", "RDY1/SLWR": "input", AVCC_10: "power_in", XTALOUT: "output", XTALIN: "input", AGND_13: "power_in", AVCC_14: "passive", "D+": "bidirectional", "D-": "bidirectional", AGND_17: "passive", VCC_18: "passive", GND_19: "passive", IFCLK: "bidirectional", RESERVED: "input", SCL: "input", SDA: "bidirectional", VCC_24: "passive", "PB0/FD0": "bidirectional", "PB1/FD1": "bidirectional", "PB2/FD2": "bidirectional", "PB3/FD3": "bidirectional", "PB4/FD4": "bidirectional", "PB5/FD5": "bidirectional", "PB6/FD6": "bidirectional", "PB7/FD7": "bidirectional", GND_33: "passive", VCC_34: "passive", GND_35: "passive", "CTL0/FLAGA": "output", "CTL1/FLAGB": "output", "CTL2/FLAGC": "output", VCC_39: "passive", "PA0/~{INT0}": "bidirectional", "PA1/~{INT1}": "bidirectional", "PA2/SLOE": "bidirectional", "PA3/WU2": "bidirectional", "PA4/FIOADDR0": "bidirectional", "PA5/FIOADDR1": "bidirectional", "PA6/PKTEND": "bidirectional", "PA7/FLAGD/~{SLCS}": "bidirectional", GND_48: "passive", "~{RESET}": "input", VCC_50: "passive", WAKEUP: "input", "PD0/FD8": "bidirectional", "PD1/FD9": "bidirectional", "PD2/FD10": "bidirectional", "PD3/FD11": "bidirectional", "PD4/FD12": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY7C68014A-56PVX";
@@ -367,7 +371,8 @@ export class CY8C4xx7LQI_4xx extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4xx7LQI-4xx";
@@ -442,7 +447,8 @@ export class CY8C4127LQI_BL453 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4127LQI-BL453";
@@ -517,7 +523,8 @@ export class CY8C4127LQI_BL473 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4127LQI-BL473";
@@ -592,7 +599,8 @@ export class CY8C4127LQI_BL483 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4127LQI-BL483";
@@ -667,7 +675,8 @@ export class CY8C4127LQI_BL493 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4127LQI-BL493";
@@ -746,7 +755,8 @@ export class CY8C4245AXI_M445 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4245AXI-M445";
@@ -825,7 +835,8 @@ export class CY8C4245AZI_M445 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4245AZI-M445";
@@ -904,7 +915,8 @@ export class CY8C4246AXI_M445 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4246AXI-M445";
@@ -983,7 +995,8 @@ export class CY8C4246AZI_M445 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4246AZI-M445";
@@ -1062,7 +1075,8 @@ export class CY8C4246AZI_M475 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4246AZI-M475";
@@ -1141,7 +1155,8 @@ export class CY8C4247AXI_M485 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247AXI-M485";
@@ -1220,7 +1235,8 @@ export class CY8C4247AZI_M475 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247AZI-M475";
@@ -1299,7 +1315,8 @@ export class CY8C4247AZI_M485 extends Component.withPins({
   "P1.5": "63",
   "P1.6": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.7/VREF": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VSSA_10: "power_in", VDDA_11: "power_in", "P6.0": "bidirectional", "P6.1": "bidirectional", "P6.2": "bidirectional", "P6.4": "bidirectional", "P6.5": "bidirectional", VSSIO: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VDDIO: "power_in", "P4.0": "bidirectional", "P4.1": "bidirectional", "P4.2": "bidirectional", "P4.3": "bidirectional", "P4.4": "bidirectional", "P4.5": "bidirectional", "P4.6": "bidirectional", "P7.0": "bidirectional", "P7.1": "bidirectional", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", XRES: "input", VCCD: "power_out", VSSD: "power_in", VDDD: "power_in", "P5.0": "bidirectional", "P5.1": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P5.5": "bidirectional", VDDA_56: "power_in", VSSA_57: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247AZI-M485";
@@ -1374,7 +1391,8 @@ export class CY8C4247LQI_BL453 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247LQI-BL453";
@@ -1449,7 +1467,8 @@ export class CY8C4247LQI_BL463 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247LQI-BL463";
@@ -1524,7 +1543,8 @@ export class CY8C4247LQI_BL473 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247LQI-BL473";
@@ -1599,7 +1619,8 @@ export class CY8C4247LQI_BL483 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247LQI-BL483";
@@ -1674,7 +1695,8 @@ export class CY8C4247LQI_BL493 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247LQI-BL493";
@@ -1749,7 +1771,8 @@ export class CY8C4247LQQ_BL483 extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CY8C4247LQQ-BL483";
@@ -1824,7 +1847,8 @@ export class CYBL10x6x_56LQxx extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10x6x-56LQxx";
@@ -1899,7 +1923,8 @@ export class CYBL10161_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10161-56LQXI";
@@ -1974,7 +1999,8 @@ export class CYBL10162_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10162-56LQXI";
@@ -2049,7 +2075,8 @@ export class CYBL10163_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10163-56LQXI";
@@ -2124,7 +2151,8 @@ export class CYBL10461_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10461-56LQXI";
@@ -2199,7 +2227,8 @@ export class CYBL10462_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10462-56LQXI";
@@ -2274,7 +2303,8 @@ export class CYBL10463_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10463-56LQXI";
@@ -2349,7 +2379,8 @@ export class CYBL10561_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10561-56LQXI";
@@ -2424,7 +2455,8 @@ export class CYBL10562_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10562-56LQXI";
@@ -2499,7 +2531,8 @@ export class CYBL10563_56LQXI extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10563-56LQXI";
@@ -2574,7 +2607,8 @@ export class CYBL10563_56LQXQ extends Component.withPins({
   "VCCD": "56",
   "GND_EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "XTAL32O/P6.0": "bidirectional", "XTAL32I/P6.1": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P4.1": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", VSSD: "power_in", VDDR_10: "power_in", GANT1: "power_in", ANT: "output", GANT2: "power_in", VDDR_14: "power_in", VDDR_15: "power_in", XTAL24I: "input", XTAL24O: "output", VDDR_18: "power_in", "P0.0": "bidirectional", "P0.1": "bidirectional", "P0.2": "bidirectional", "P0.3": "bidirectional", VDDD_23: "power_in", "P0.4": "bidirectional", "P0.5": "bidirectional", "P0.6": "bidirectional", "P0.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VDDA_36: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", VREF: "passive", VDDA_46: "power_in", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", VSSA: "power_in", VCCD: "power_out", GND_EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10563-56LQXQ";
@@ -2662,7 +2696,8 @@ export class CYBL10563_68FNXIT extends Component.withPins({
   "VDDR_J4": "J4",
   "NC": "J7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GANT1: "power_in", VDDA_36: "power_in", GND_EP: "power_in", VREF: "passive", VSSA_A2: "power_in", "P3.3": "bidirectional", "P3.7": "bidirectional", VSSD_A5: "power_in", VSSA_A6: "power_in", VCCD: "power_out", VDDD_A8: "power_in", "P2.3": "bidirectional", VSSA_B2: "bidirectional", "P2.7": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "XTAL32I/P6.1": "bidirectional", "XTAL32O/P6.0": "bidirectional", VSSA_C1: "power_in", "P2.2": "bidirectional", "P2.6": "bidirectional", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P1.7": "bidirectional", VDDA_D2: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.5": "bidirectional", VSSD_D6: "power_in", "P4.1": "bidirectional", "P5.0": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P2.4": "bidirectional", "P5.1": "bidirectional", VSSD_E8: "power_in", VSSD_F1: "power_in", "P0.7": "bidirectional", "P0.3": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", VSSR_F6: "power_in", VSSR_F7: "power_in", VDDR_F8: "power_in", "P0.6": "bidirectional", VDDD_G2: "power_in", "P0.2": "bidirectional", VSSD_G4: "power_in", VSSR_G5: "power_in", VSSR_G6: "power_in", GANT2: "power_in", VSSR_G8: "power_in", "P0.5": "bidirectional", "P0.1": "bidirectional", XTAL24O: "output", XTAL24I: "input", VSSR_H5: "power_in", VSSR_H6: "power_in", ANT: "output", "P0.4": "bidirectional", "P0.0": "bidirectional", VDDR_J3: "power_in", VDDR_J4: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10563-68FNXIT";
@@ -2750,7 +2785,8 @@ export class CYBL10563_68FLXIT extends Component.withPins({
   "VDDR_J4": "J4",
   "NC": "J7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GANT1: "power_in", VDDA_36: "power_in", GND_EP: "power_in", VREF: "passive", VSSA_A2: "power_in", "P3.3": "bidirectional", "P3.7": "bidirectional", VSSD_A5: "power_in", VSSA_A6: "power_in", VCCD: "power_out", VDDD_A8: "power_in", "P2.3": "bidirectional", VSSA_B2: "bidirectional", "P2.7": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "XTAL32I/P6.1": "bidirectional", "XTAL32O/P6.0": "bidirectional", VSSA_C1: "power_in", "P2.2": "bidirectional", "P2.6": "bidirectional", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", XRES: "input", "P4.0": "bidirectional", "P1.7": "bidirectional", VDDA_D2: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.5": "bidirectional", VSSD_D6: "power_in", "P4.1": "bidirectional", "P5.0": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P2.4": "bidirectional", "P5.1": "bidirectional", VSSD_E8: "power_in", VSSD_F1: "power_in", "P0.7": "bidirectional", "P0.3": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", VSSR_F6: "power_in", VSSR_F7: "power_in", VDDR_F8: "power_in", "P0.6": "bidirectional", VDDD_G2: "power_in", "P0.2": "bidirectional", VSSD_G4: "power_in", VSSR_G5: "power_in", VSSR_G6: "power_in", GANT2: "power_in", VSSR_G8: "power_in", "P0.5": "bidirectional", "P0.1": "bidirectional", XTAL24O: "output", XTAL24I: "input", VSSR_H5: "power_in", VSSR_H6: "power_in", ANT: "output", "P0.4": "bidirectional", "P0.0": "bidirectional", VDDR_J3: "power_in", VDDR_J4: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_Cypress:CYBL10563-68FLXIT";

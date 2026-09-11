@@ -19,7 +19,8 @@ export class NE5534 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NE5534";
@@ -44,7 +45,8 @@ export class AD797 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD797";
@@ -70,7 +72,8 @@ export class MCP601_xP extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP601-xP";
@@ -96,7 +99,8 @@ export class AD8001AN extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8001AN";
@@ -122,7 +126,8 @@ export class OPA333xxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA333xxD";
@@ -148,7 +153,8 @@ export class AD8001AR extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8001AR";
@@ -174,7 +180,8 @@ export class AD8015 extends Component.withPins({
   "+": "7",
   "+V": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", Iin: "input", NC_3: "no_connect", Vbyp: "input", "-V": "power_in", "-": "output", "+": "output", "+V": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8015";
@@ -200,7 +207,8 @@ export class AD8021AR extends Component.withPins({
   "V+": "7",
   "~{DISABLE}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LOGIC_REFERENCE: "input", "-": "input", "+": "input", "V-": "power_in", "C_{COMP}": "passive", P6: "output", "V+": "power_in", "~{DISABLE}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8021AR";
@@ -226,7 +234,8 @@ export class AD8021ARM extends Component.withPins({
   "V+": "7",
   "~{DISABLE}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LOGIC_REFERENCE: "input", "-": "input", "+": "input", "V-": "power_in", "C_{COMP}": "passive", P6: "output", "V+": "power_in", "~{DISABLE}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8021ARM";
@@ -251,7 +260,8 @@ export class AD817 extends Component.withPins({
   "V+": "7",
   "NULL_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NC: "no_connect", P6: "output", "V+": "power_in", NULL_8: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD817";
@@ -274,7 +284,8 @@ export class AD8603 extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8603";
@@ -299,7 +310,8 @@ export class LM2904 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM2904";
@@ -325,7 +337,8 @@ export class AD8606ARM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8606ARM";
@@ -351,7 +364,8 @@ export class AD8606ARZ extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8606ARZ";
@@ -376,7 +390,8 @@ export class LM741 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM741";
@@ -402,7 +417,8 @@ export class AD8610xR extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8610xR";
@@ -428,7 +444,8 @@ export class AD8610xRM extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8610xRM";
@@ -454,7 +471,8 @@ export class AD8620 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8620";
@@ -480,7 +498,8 @@ export class AD8620xRM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8620xRM";
@@ -505,7 +524,8 @@ export class AD8655 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8655";
@@ -530,7 +550,8 @@ export class AD8656 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8656";
@@ -556,7 +577,8 @@ export class NCS2325D extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS2325D";
@@ -582,7 +604,8 @@ export class AD8676xR extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AD8676xR";
@@ -607,7 +630,8 @@ export class ADA4075_2 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4075-2";
@@ -633,7 +657,8 @@ export class ADA4077_1xR extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4077-1xR";
@@ -659,7 +684,8 @@ export class ADA4077_1xRM extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4077-1xRM";
@@ -694,7 +720,8 @@ export class ADA4610_4xCP extends Component.withPins({
   "V-_10": "10",
   "V-_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", NIC_13: "no_connect", P15: "output", NIC_16: "no_connect", "+_4": "input", "-_5": "input", P6: "output", P7: "output", "-_8": "input", "+_9": "input", "+_11": "input", "-_12": "input", P14: "output", "V+": "power_in", "V-_10": "power_in", "V-_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-4xCP";
@@ -729,7 +756,8 @@ export class ADA4084_4xCP extends Component.withPins({
   "V-_10": "10",
   "V-_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", NIC_13: "no_connect", P15: "output", NIC_16: "no_connect", "+_4": "input", "-_5": "input", P6: "output", P7: "output", "-_8": "input", "+_9": "input", "+_11": "input", "-_12": "input", P14: "output", "V+": "power_in", "V-_10": "power_in", "V-_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4084-4xCP";
@@ -753,7 +781,8 @@ export class ADA4099_1xUJ extends Component.withPins({
   "SHDN": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", SHDN: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4099-1xUJ";
@@ -782,7 +811,8 @@ export class ADA4099_2xCP extends Component.withPins({
   "V+": "10",
   "V-_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", SHDN_5: "input", SHDN_6: "input", "+_7": "input", "-_8": "input", P9: "output", "V-_4": "power_in", "V+": "power_in", "V-_11": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4099-2xCP";
@@ -808,7 +838,8 @@ export class NCS2325DM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS2325DM";
@@ -834,7 +865,8 @@ export class ADA4099_2xR extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4099-2xR";
@@ -860,7 +892,8 @@ export class ADA4099_2xRM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4099-2xRM";
@@ -885,7 +918,8 @@ export class ADA4522_1 extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4522-1";
@@ -910,7 +944,8 @@ export class ADA4522_2 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4522-2";
@@ -941,7 +976,8 @@ export class LM2902 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM2902";
@@ -972,7 +1008,8 @@ export class ADA4522_4 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4522-4";
@@ -998,7 +1035,8 @@ export class ADA4530_1 extends Component.withPins({
   "P7": "7",
   "-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", P2: "passive", IC: "passive", "V-": "power_in", "V+": "power_in", P6: "output", P7: "passive", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4530-1";
@@ -1024,7 +1062,8 @@ export class ADA4610_1xR extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-1xR";
@@ -1047,7 +1086,8 @@ export class MCP6L91T_EOT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L91T-EOT";
@@ -1070,7 +1110,8 @@ export class ADA4610_1xRJ extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-1xRJ";
@@ -1097,7 +1138,8 @@ export class ADA4610_2xCP extends Component.withPins({
   "V+": "8",
   "V-_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-_4": "power_in", "V+": "power_in", "V-_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-2xCP";
@@ -1123,7 +1165,8 @@ export class ADA4610_2xR extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-2xR";
@@ -1149,7 +1192,8 @@ export class ADA4610_2xRM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-2xRM";
@@ -1181,7 +1225,8 @@ export class OPA4197xD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4197xD";
@@ -1213,7 +1258,8 @@ export class ADA4610_4xR extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4610-4xR";
@@ -1240,7 +1286,8 @@ export class ADA4622_2xCP extends Component.withPins({
   "V+_8": "8",
   "V+_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+_8": "power_in", "V+_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4622-2xCP";
@@ -1275,7 +1322,8 @@ export class ADA4622_4xCP extends Component.withPins({
   "NIC_16": "16",
   "V+_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", P15: "output", "+_4": "input", "-_5": "input", P6: "output", P7: "output", "-_8": "input", "+_9": "input", "+_11": "input", "-_12": "input", P14: "output", "V+_3": "power_in", "V-": "power_in", NIC_13: "free", NIC_16: "free", "V+_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4622-4xCP";
@@ -1302,7 +1350,8 @@ export class ADA4625_1ARDZ extends Component.withPins({
   "NC_8": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", NC_1: "no_connect", "-": "input", "+": "input", NC_5: "no_connect", P6: "output", NC_8: "no_connect", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4625-1ARDZ";
@@ -1329,7 +1378,8 @@ export class ADA4898_2 extends Component.withPins({
   "V+": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4898-2";
@@ -1356,7 +1406,8 @@ export class ADA4625_2ARDZ extends Component.withPins({
   "V+": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4625-2ARDZ";
@@ -1383,7 +1434,8 @@ export class ADA4691_2ACBZ extends Component.withPins({
   "V+": "A2",
   "V-": "C2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "output", "~{SD_A/B}": "input", "-_B3": "input", "+_C3": "input", PA1: "output", "-_B1": "input", "+_C1": "input", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4691-2ACBZ";
@@ -1411,7 +1463,8 @@ export class ADA4691_2ACPZ extends Component.withPins({
   "V-": "3",
   "V+": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", "~{SD_A}": "input", P10: "output", "~{SD_B}": "input", "+_6": "input", "-_7": "input", P8: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4691-2ACPZ";
@@ -1446,7 +1499,8 @@ export class ADA4691_4ACPZ extends Component.withPins({
   "V-_11": "11",
   "V-_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+_1": "input", "~{SD_A/B}": "input", P15: "output", "-_16": "input", "+_3": "input", "-_4": "input", P5: "output", "~{SD_C/D}": "input", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-_11": "power_in", "V-_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4691-4ACPZ";
@@ -1472,7 +1526,8 @@ export class ADA4692_2ACPZ extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4692-2ACPZ";
@@ -1498,7 +1553,8 @@ export class ADA4692_2ARZ extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4692-2ARZ";
@@ -1530,7 +1586,8 @@ export class ADA4692_4ARUZ extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4692-4ARUZ";
@@ -1553,7 +1610,8 @@ export class ADA4807_1 extends Component.withPins({
   "~{DISABLE}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{DISABLE}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4807-1";
@@ -1582,7 +1640,8 @@ export class ADA4807_2ACP extends Component.withPins({
   "V+": "10",
   "EPAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "~{DISABLE1}": "input", "~{DISABLE2}": "input", "+_7": "input", "-_8": "input", P9: "output", "V-": "power_in", "V+": "power_in", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4807-2ACP";
@@ -1608,7 +1667,8 @@ export class ADA4807_2ARM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4807-2ARM";
@@ -1640,7 +1700,8 @@ export class ADA4807_4ARUZ extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4807-4ARUZ";
@@ -1667,7 +1728,8 @@ export class ADA4817_1ACP extends Component.withPins({
   "P7": "7",
   "+V_{S}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "output", P6: "no_connect", EP: "power_in", "~{PD}": "input", "-": "input", "+": "input", "-V_{S}": "power_in", P7: "output", "+V_{S}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4817-1ACP";
@@ -1694,7 +1756,8 @@ export class ADA4817_1ARD extends Component.withPins({
   "+V_{S}": "7",
   "~{PD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "output", P5: "no_connect", EP: "power_in", "-": "input", "+": "input", "-V_{S}": "power_in", P6: "output", "+V_{S}": "power_in", "~{PD}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4817-1ARD";
@@ -1729,7 +1792,8 @@ export class ADA4817_2ACP extends Component.withPins({
   "-_9": "9",
   "+_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P11: "no_connect", FB_16: "output", EP: "power_in", "-_1": "input", "+_2": "input", "-V_{S}_12": "power_in", P13: "output", "+V_{S}_14": "power_in", "~{PD}_15": "input", P3: "no_connect", FB_8: "output", "-V_{S}_4": "power_in", P5: "output", "+V_{S}_6": "power_in", "~{PD}_7": "input", "-_9": "input", "+_10": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4817-2ACP";
@@ -1753,7 +1817,8 @@ export class ADA4841_1YRJ extends Component.withPins({
   "~{PD}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{PD}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4841-1YRJ";
@@ -1792,7 +1857,8 @@ export class ADA4870ARRZ extends Component.withPins({
   "V+_20": "20",
   "PAD": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+_1": "power_in", TFL: "passive", "~{SD}": "input", "~{ON}": "input", NC_5: "no_connect", "+": "input", "-": "input", P8: "output", NC_9: "no_connect", "V-_10": "power_in", "V-_11": "passive", "V-_12": "passive", "V-_13": "passive", P14: "passive", P15: "passive", P16: "passive", P17: "passive", "V+_18": "passive", "V+_19": "passive", "V+_20": "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4870ARRZ";
@@ -1817,7 +1883,8 @@ export class ADA4898_1YRDZ extends Component.withPins({
   "~{PD}": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "+": "input", "V-": "power_in", P6: "output", "V+": "power_in", "~{PD}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADA4898-1YRDZ";
@@ -1852,7 +1919,8 @@ export class ADL5303ACP extends Component.withPins({
   "~{PWDN}": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPT: "input", VREF: "output", ACOM: "power_in", VLOG: "output", VOUT: "output", BFNG: "input", GND_14: "power_in", NC: "passive", VSUM_2: "output", VSUM_4: "passive", VPDB: "output", BFIN: "input", VPS2: "power_in", VPS1: "power_in", GND_15: "passive", "~{PWDN}": "input", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:ADL5303ACP";
@@ -1894,7 +1962,8 @@ export class AS13704 extends Component.withPins({
   "V-": "6",
   "V+": "19",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", DIODE_BIAS_2: "input", "+_3": "input", "-_4": "input", P5: "output", NC_7: "no_connect", NC_18: "no_connect", P8: "output", "-_9": "input", "+_10": "input", DIODE_BIAS_11: "input", P12: "input", P13: "input", DIODE_BIAS_14: "input", "+_15": "input", "-_16": "input", P17: "output", P20: "output", "-_21": "input", "+_22": "input", DIODE_BIAS_23: "input", P24: "input", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:AS13704";
@@ -1919,7 +1988,8 @@ export class CA3080 extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", BIAS: "passive", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:CA3080";
@@ -1944,7 +2014,8 @@ export class CA3080A extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", BIAS: "passive", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:CA3080A";
@@ -1969,7 +2040,8 @@ export class CA3130 extends Component.withPins({
   "V+": "7",
   "STRB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "passive", "-": "input", "+": "input", "V-": "power_in", NULL_5: "passive", P6: "output", "V+": "power_in", STRB: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:CA3130";
@@ -1994,7 +2066,8 @@ export class CA3140 extends Component.withPins({
   "V+": "7",
   "STRB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "passive", "-": "input", "+": "input", "V-": "power_in", NULL_5: "passive", P6: "output", "V+": "power_in", STRB: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:CA3140";
@@ -2029,7 +2102,8 @@ export class HMC799LP3E extends Component.withPins({
   "P10": "10",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", NC_9: "no_connect", NC_11: "no_connect", VCC_12: "passive", NC_13: "no_connect", VCC_14: "passive", NC_15: "no_connect", NC_16: "no_connect", VCC_1: "power_in", CFILT: "passive", IN: "input", CEXT: "passive", P10: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:HMC799LP3E";
@@ -2063,7 +2137,8 @@ export class L272 extends Component.withPins({
   "GND_15": "15",
   "GND_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "+_7": "input", "-_8": "input", P3: "output", "-_5": "input", "+_6": "input", Vs: "power_in", GND_4: "power_in", GND_9: "passive", GND_10: "passive", GND_11: "passive", GND_12: "passive", GND_13: "passive", GND_14: "passive", GND_15: "passive", GND_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:L272";
@@ -2097,7 +2172,8 @@ export class L272D extends Component.withPins({
   "V+": "4",
   "V-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", P3: "output", NC_7: "no_connect", NC_8: "no_connect", "+_13": "input", "-_14": "input", P5: "output", NC_9: "no_connect", NC_10: "no_connect", "-_11": "input", "+_12": "input", NC_15: "no_connect", NC_16: "no_connect", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:L272D";
@@ -2123,7 +2199,8 @@ export class L272M extends Component.withPins({
   "V+": "2",
   "V-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "+_7": "input", "-_8": "input", P3: "output", "-_5": "input", "+_6": "input", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:L272M";
@@ -2148,7 +2225,8 @@ export class LF155 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF155";
@@ -2173,7 +2251,8 @@ export class LF156 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF156";
@@ -2198,7 +2277,8 @@ export class LF256 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF256";
@@ -2223,7 +2303,8 @@ export class LF257 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF257";
@@ -2248,7 +2329,8 @@ export class LF351D extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF351D";
@@ -2273,7 +2355,8 @@ export class LF351N extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF351N";
@@ -2298,7 +2381,8 @@ export class LF355 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF355";
@@ -2323,7 +2407,8 @@ export class LF356 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF356";
@@ -2348,7 +2433,8 @@ export class LF357 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LF357";
@@ -2373,7 +2459,8 @@ export class LM101 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM101";
@@ -2406,7 +2493,8 @@ export class LM13700 extends Component.withPins({
   "V-": "6",
   "V+": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P12: "output", "-_13": "input", "+_14": "input", DIODE_BIAS_15: "input", P16: "input", P9: "output", P10: "input", P1: "input", DIODE_BIAS_2: "input", "+_3": "input", "-_4": "input", P5: "output", P7: "input", P8: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM13700";
@@ -2439,7 +2527,8 @@ export class LM13600 extends Component.withPins({
   "V-": "6",
   "V+": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P12: "output", "-_13": "input", "+_14": "input", DIODE_BIAS_15: "input", P16: "input", P9: "output", P10: "input", P1: "input", DIODE_BIAS_2: "input", "+_3": "input", "-_4": "input", P5: "output", P7: "input", P8: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM13600";
@@ -2464,7 +2553,8 @@ export class LM201 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM201";
@@ -2489,7 +2579,8 @@ export class LM301 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM301";
@@ -2514,7 +2605,8 @@ export class LM318M extends Component.withPins({
   "V+": "7",
   "BAL2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL1: "passive", "-": "input", "+": "input", "V-": "power_in", BAL3: "passive", P6: "output", "V+": "power_in", BAL2: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM318M";
@@ -2539,7 +2631,8 @@ export class LM318H extends Component.withPins({
   "V+": "7",
   "BAL2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL1: "passive", "-": "input", "+": "input", "V-": "power_in", BAL3: "passive", P6: "output", "V+": "power_in", BAL2: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM318H";
@@ -2571,7 +2664,8 @@ export class LM318J extends Component.withPins({
   "NC_13": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", BAL1: "passive", "-": "input", "+": "input", "V-": "power_in", NC_7: "no_connect", NC_8: "no_connect", BAL3: "passive", P10: "output", "V+": "power_in", BAL2: "passive", NC_13: "no_connect", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM318J";
@@ -2596,7 +2690,8 @@ export class LM318N extends Component.withPins({
   "V+": "7",
   "BAL2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL1: "passive", "-": "input", "+": "input", "V-": "power_in", BAL3: "passive", P6: "output", "V+": "power_in", BAL2: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM318N";
@@ -2619,7 +2714,8 @@ export class LM321 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM321";
@@ -2650,7 +2746,8 @@ export class LM324 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM324";
@@ -2681,7 +2778,8 @@ export class LM324A extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM324A";
@@ -2716,7 +2814,8 @@ export class TSV524xIQ4T extends Component.withPins({
   "V-": "11",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+_1": "input", P15: "output", "-_16": "input", "+_4": "input", "-_5": "input", P6: "output", P7: "output", "-_8": "input", "+_9": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", NC_3: "no_connect", NC_10: "no_connect", "V-": "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV524xIQ4T";
@@ -2751,7 +2850,8 @@ export class LM324Q extends Component.withPins({
   "V-": "11",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+_1": "input", P15: "output", "-_16": "input", "+_4": "input", "-_5": "input", P6: "output", P7: "output", "-_8": "input", "+_9": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", NC_3: "no_connect", NC_10: "no_connect", "V-": "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM324Q";
@@ -2776,7 +2876,8 @@ export class LM358 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM358";
@@ -2803,7 +2904,8 @@ export class TSV912IQ2T extends Component.withPins({
   "V+": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV912IQ2T";
@@ -2830,7 +2932,8 @@ export class LM358_DFN extends Component.withPins({
   "V+": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM358_DFN";
@@ -2855,7 +2958,8 @@ export class LM4250 extends Component.withPins({
   "V+": "7",
   "IQ": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", IQ: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM4250";
@@ -2880,7 +2984,8 @@ export class LM4562 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM4562";
@@ -2905,7 +3010,8 @@ export class LM6142xIx extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM6142xIx";
@@ -2936,7 +3042,8 @@ export class LM6144xIx extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM6144xIx";
@@ -2962,7 +3069,8 @@ export class LM6171D extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM6171D";
@@ -2988,7 +3096,8 @@ export class LM6171xxN extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM6171xxN";
@@ -3013,7 +3122,8 @@ export class LM6172 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM6172";
@@ -3038,7 +3148,8 @@ export class LM6361 extends Component.withPins({
   "V+": "7",
   "VOS_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", VOS_1: "passive", "-": "input", "+": "input", "V-": "power_in", P6: "output", "V+": "power_in", VOS_8: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM6361";
@@ -3061,7 +3172,8 @@ export class LM675 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "-": "input", "V-": "power_in", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM675";
@@ -3087,7 +3199,8 @@ export class LM7171xIM extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM7171xIM";
@@ -3113,7 +3226,8 @@ export class LM7171xIN extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM7171xIN";
@@ -3138,7 +3252,8 @@ export class LM7332 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM7332";
@@ -3161,7 +3276,8 @@ export class LM8261 extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LM8261";
@@ -3186,7 +3302,8 @@ export class LMC6062 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMC6062";
@@ -3211,7 +3328,8 @@ export class LMC6082 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMC6082";
@@ -3236,7 +3354,8 @@ export class LMC6482 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMC6482";
@@ -3267,7 +3386,8 @@ export class LMC6484 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMC6484";
@@ -3293,7 +3413,8 @@ export class LMH6551MA extends Component.withPins({
   "NC": "7",
   "+_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", VCM: "input", "V+": "power_in", "+_4": "output", "-_5": "output", "V-": "power_in", NC: "no_connect", "+_8": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6551MA";
@@ -3319,7 +3440,8 @@ export class LMH6551MM extends Component.withPins({
   "NC": "7",
   "+_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", VCM: "input", "V+": "power_in", "+_4": "output", "-_5": "output", "V-": "power_in", NC: "no_connect", "+_8": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6551MM";
@@ -3345,7 +3467,8 @@ export class LMH6609MA extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6609MA";
@@ -3368,7 +3491,8 @@ export class LMH6609MF extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6609MF";
@@ -3392,7 +3516,8 @@ export class LMH6611 extends Component.withPins({
   "~{DISABLE}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{DISABLE}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6611";
@@ -3418,7 +3543,8 @@ export class LMH6702MA extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6702MA";
@@ -3441,7 +3567,8 @@ export class LMH6702MF extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6702MF";
@@ -3475,7 +3602,8 @@ export class LMH6733 extends Component.withPins({
   "-VS_13": "13",
   "+VS_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", P14: "output", "~{DIS}_16": "input", "~{DIS}_3": "input", "-_4": "input", "+_5": "input", P12: "output", "~{DIS}_6": "input", "-_7": "input", "+_8": "input", P10: "output", "-VS_9": "power_in", "+VS_11": "power_in", "-VS_13": "passive", "+VS_15": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMH6733";
@@ -3497,7 +3625,8 @@ export class LMV321 extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMV321";
@@ -3528,7 +3657,8 @@ export class LMV324 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMV324";
@@ -3553,7 +3683,8 @@ export class LMV358 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMV358";
@@ -3577,7 +3708,8 @@ export class LMV601 extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LMV601";
@@ -3612,7 +3744,8 @@ export class LOG114AxRGV extends Component.withPins({
   "NC": "2",
   "V-_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{REFGND}": "power_in", "I_{2}": "input", "I_{1}": "input", "V_{CMIN}": "input", "V-_6": "power_in", COM: "power_in", "V+": "power_in", "V_{LOGOUT}": "output", "+IN_{4}": "input", "-IN_{4}": "input", "V_{O4}": "output", "+IN_{5}": "input", "-IN_{5}": "input", "V_{O5}": "output", "V_{REF}": "output", NC: "no_connect", "V-_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LOG114AxRGV";
@@ -3635,7 +3768,8 @@ export class LPV811DBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LPV811DBV";
@@ -3661,7 +3795,8 @@ export class OPA2197xDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2197xDGK";
@@ -3687,7 +3822,8 @@ export class LPV812DGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LPV812DGK";
@@ -3712,7 +3848,8 @@ export class LT1012 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT1012";
@@ -3745,7 +3882,8 @@ export class LTC6082xGN extends Component.withPins({
   "V+": "4",
   "V-": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", NC_8: "no_connect", NC_9: "no_connect", "+_5": "input", "-_6": "input", P7: "output", P10: "output", "-_11": "input", "+_12": "input", "+_14": "input", "-_15": "input", P16: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6082xGN";
@@ -3779,7 +3917,8 @@ export class LT1014xSW extends Component.withPins({
   "V+": "4",
   "V-": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", NC_8: "no_connect", NC_9: "no_connect", "+_5": "input", "-_6": "input", P7: "output", P10: "output", "-_11": "input", "+_12": "input", "+_14": "input", "-_15": "input", P16: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT1014xSW";
@@ -3804,7 +3943,8 @@ export class OP07 extends Component.withPins({
   "V+": "7",
   "VOS_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOS_1: "input", "-": "input", "+": "input", "V-": "power_in", NC: "no_connect", P6: "output", "V+": "power_in", VOS_8: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP07";
@@ -3829,7 +3969,8 @@ export class LT1363 extends Component.withPins({
   "V+": "7",
   "VOS_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOS_1: "input", "-": "input", "+": "input", "V-": "power_in", NC: "no_connect", P6: "output", "V+": "power_in", VOS_8: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT1363";
@@ -3854,7 +3995,8 @@ export class LT1492 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT1492";
@@ -3887,7 +4029,8 @@ export class LT1493 extends Component.withPins({
   "V+": "4",
   "V-": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", NC_8: "no_connect", NC_9: "no_connect", "+_5": "input", "-_6": "input", P7: "output", P10: "output", "-_11": "input", "+_12": "input", "+_14": "input", "-_15": "input", P16: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT1493";
@@ -3910,7 +4053,8 @@ export class LT6015xS5 extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT6015xS5";
@@ -3934,7 +4078,8 @@ export class LT6230xS6 extends Component.withPins({
   "~{ENABLE}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{ENABLE}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT6230xS6";
@@ -3959,7 +4104,8 @@ export class LT6234 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT6234";
@@ -3984,7 +4130,8 @@ export class LT6237 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LT6237";
@@ -4010,7 +4157,8 @@ export class LTC1151CN8 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC1151CN8";
@@ -4044,7 +4192,8 @@ export class LTC1151CSW extends Component.withPins({
   "V-": "6",
   "V+": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", P3: "output", "-_4": "input", "+_5": "input", NC_7: "no_connect", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", "+_11": "input", "-_12": "input", P13: "output", NC_15: "no_connect", NC_16: "no_connect", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC1151CSW";
@@ -4069,7 +4218,8 @@ export class LTC1152 extends Component.withPins({
   "V+": "7",
   "CP": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SHDN: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", CP: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC1152";
@@ -4098,7 +4248,8 @@ export class LTC6081xDD extends Component.withPins({
   "V+": "10",
   "V-_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "~{SHDN_A}": "input", "~{SHDN_B}": "input", "+_7": "input", "-_8": "input", P9: "output", "V-_4": "power_in", "V+": "power_in", "V-_11": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6081xDD";
@@ -4123,7 +4274,8 @@ export class LTC6081xMS8 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6081xMS8";
@@ -4158,7 +4310,8 @@ export class LTC6082xDHC extends Component.withPins({
   "V-_13": "13",
   "V-_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", NC_8: "no_connect", NC_9: "no_connect", "+_5": "input", "-_6": "input", P7: "output", P10: "output", "-_11": "input", "+_12": "input", "+_14": "input", "-_15": "input", P16: "output", "V+": "power_in", "V-_13": "power_in", "V-_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6082xDHC";
@@ -4183,7 +4336,8 @@ export class LTC6228xDC extends Component.withPins({
   "P6": "6",
   "V-_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "V-_3": "power_in", "~{SHDN}": "input", "-": "input", P6: "output", "V-_7": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6228xDC";
@@ -4208,7 +4362,8 @@ export class LTC6226xDC extends Component.withPins({
   "P6": "6",
   "V-_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "V-_3": "power_in", "~{SHDN}": "input", "-": "input", P6: "output", "V-_7": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6226xDC";
@@ -4232,7 +4387,8 @@ export class LTC6228xS6 extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6228xS6";
@@ -4258,7 +4414,8 @@ export class LTC6228xS8 extends Component.withPins({
   "V+": "7",
   "~{SHDN}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "output", "-": "input", "+": "input", "V-_4": "power_in", "V-_5": "passive", P6: "output", "V+": "power_in", "~{SHDN}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6228xS8";
@@ -4287,7 +4444,8 @@ export class LTC6229xDD extends Component.withPins({
   "V+": "10",
   "V-_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "~{SHDN}_5": "input", "~{SHDN}_6": "input", "+_7": "input", "-_8": "input", P9: "output", "V-_4": "power_in", "V+": "power_in", "V-_11": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6229xDD";
@@ -4314,7 +4472,8 @@ export class LTC6229xMS8E extends Component.withPins({
   "V+": "8",
   "V-_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-_4": "power_in", "V+": "power_in", "V-_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6229xMS8E";
@@ -4340,7 +4499,8 @@ export class LTC6253xMS8 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6253xMS8";
@@ -4364,7 +4524,8 @@ export class LTC6268xS6_10 extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6268xS6-10";
@@ -4390,7 +4551,8 @@ export class LTC6268xS8_10 extends Component.withPins({
   "V+": "7",
   "~{SHDN}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", NC_4: "no_connect", "V-": "power_in", P6: "output", "V+": "power_in", "~{SHDN}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6268xS8-10";
@@ -4419,7 +4581,8 @@ export class LTC6269xDD extends Component.withPins({
   "V+": "10",
   "V-_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "~{SHDN}_5": "input", "~{SHDN}_6": "input", "+_7": "input", "-_8": "input", P9: "output", "V-_4": "power_in", "V+": "power_in", "V-_11": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6269xDD";
@@ -4446,7 +4609,8 @@ export class LTC6269xMS8E extends Component.withPins({
   "V+": "8",
   "V-_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-_4": "power_in", "V+": "power_in", "V-_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6269xMS8E";
@@ -4473,7 +4637,8 @@ export class LTC6362xDD extends Component.withPins({
   "+_8": "8",
   "V-_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", VOCM: "input", "V+": "power_in", "+_4": "output", "-_5": "output", "V-_6": "power_in", "~{SHDN}": "input", "+_8": "input", "V-_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6362xDD";
@@ -4499,7 +4664,8 @@ export class LTC6362xMS8 extends Component.withPins({
   "~{SHDN}": "7",
   "+_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", VOCM: "input", "V+": "power_in", "+_4": "output", "-_5": "output", "V-": "power_in", "~{SHDN}": "input", "+_8": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:LTC6362xMS8";
@@ -4525,7 +4691,8 @@ export class MAX4238ASA extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SHDN}": "input", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MAX4238ASA";
@@ -4549,7 +4716,8 @@ export class MAX4238AUT extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MAX4238AUT";
@@ -4575,7 +4743,8 @@ export class MAX4239ASA extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SHDN}": "input", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MAX4239ASA";
@@ -4599,7 +4768,8 @@ export class MAX4239AUT extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MAX4239AUT";
@@ -4631,7 +4801,8 @@ export class MAX4395ESD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MAX4395ESD";
@@ -4663,7 +4834,8 @@ export class MAX4395EUD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MAX4395EUD";
@@ -4688,7 +4860,8 @@ export class MC33078 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MC33078";
@@ -4719,7 +4892,8 @@ export class MC33079 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MC33079";
@@ -4744,7 +4918,8 @@ export class MC33172 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MC33172";
@@ -4775,7 +4950,8 @@ export class MC33174 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MC33174";
@@ -4800,7 +4976,8 @@ export class MC33178 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MC33178";
@@ -4831,7 +5008,8 @@ export class MC33179 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MC33179";
@@ -4854,7 +5032,8 @@ export class MCP6001_OT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6001-OT";
@@ -4877,7 +5056,8 @@ export class MCP6001R extends Component.withPins({
   "-": "4",
   "V-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6001R";
@@ -4899,7 +5079,8 @@ export class MCP6001U extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6001U";
@@ -4922,7 +5103,8 @@ export class MCP6001x_LT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6001x-LT";
@@ -4949,7 +5131,8 @@ export class MCP6002_xMC extends Component.withPins({
   "V+": "8",
   "V-_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-_4": "power_in", "V+": "power_in", "V-_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6002-xMC";
@@ -4974,7 +5157,8 @@ export class MCP6002_xMS extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6002-xMS";
@@ -4999,7 +5183,8 @@ export class MCP6002_xP extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6002-xP";
@@ -5024,7 +5209,8 @@ export class MCP6002_xSN extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6002-xSN";
@@ -5055,7 +5241,8 @@ export class MCP6004 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6004";
@@ -5078,7 +5265,8 @@ export class MCP601_xOT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP601-xOT";
@@ -5104,7 +5292,8 @@ export class MCP601_xSN extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP601-xSN";
@@ -5130,7 +5319,8 @@ export class MCP601_xST extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP601-xST";
@@ -5153,7 +5343,8 @@ export class MCP601R extends Component.withPins({
   "-": "4",
   "V-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP601R";
@@ -5178,7 +5369,8 @@ export class MCP602 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP602";
@@ -5203,7 +5395,8 @@ export class MCP6022 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6022";
@@ -5227,7 +5420,8 @@ export class MCP603_xCH extends Component.withPins({
   "~{CS}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{CS}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP603-xCH";
@@ -5252,7 +5446,8 @@ export class MCP603_xP extends Component.withPins({
   "V+": "7",
   "~{CS}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", "~{CS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP603-xP";
@@ -5277,7 +5472,8 @@ export class MCP603_xSN extends Component.withPins({
   "V+": "7",
   "~{CS}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", "~{CS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP603-xSN";
@@ -5302,7 +5498,8 @@ export class MCP603_xST extends Component.withPins({
   "V+": "7",
   "~{CS}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", "~{CS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP603-xST";
@@ -5333,7 +5530,8 @@ export class MCP604 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP604";
@@ -5356,7 +5554,8 @@ export class MCP6401RT_xOT extends Component.withPins({
   "-": "4",
   "V-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6401RT-xOT";
@@ -5379,7 +5578,8 @@ export class MCP6401T_xLT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6401T-xLT";
@@ -5402,7 +5602,8 @@ export class MCP6401T_xOT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6401T-xOT";
@@ -5424,7 +5625,8 @@ export class MCP6401UT_xOT extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6401UT-xOT";
@@ -5447,7 +5649,8 @@ export class MCP6L01Rx_xOT extends Component.withPins({
   "-": "4",
   "V-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L01Rx-xOT";
@@ -5470,7 +5673,8 @@ export class MCP6L01Ux_xOT extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L01Ux-xOT";
@@ -5493,7 +5697,8 @@ export class MCP6L01x_xLT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L01x-xLT";
@@ -5516,7 +5721,8 @@ export class MCP6L01x_xOT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L01x-xOT";
@@ -5542,7 +5748,8 @@ export class MCP6L02x_xMS extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L02x-xMS";
@@ -5568,7 +5775,8 @@ export class MCP6L02x_xSN extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L02x-xSN";
@@ -5600,7 +5808,8 @@ export class OPA4197xPW extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4197xPW";
@@ -5632,7 +5841,8 @@ export class MCP6L04_xST extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L04-xST";
@@ -5664,7 +5874,8 @@ export class MCP6L04x_xSL extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L04x-xSL";
@@ -5687,7 +5898,8 @@ export class MCP6L91RT_EOT extends Component.withPins({
   "-": "4",
   "V-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L91RT-EOT";
@@ -5712,7 +5924,8 @@ export class MCP6L92 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L92";
@@ -5743,7 +5956,8 @@ export class MCP6L94 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6L94";
@@ -5768,7 +5982,8 @@ export class MCP6V67EMS extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6V67EMS";
@@ -5795,7 +6010,8 @@ export class MCP6V67xMNY extends Component.withPins({
   "V+": "8",
   "V-_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-_4": "power_in", "V+": "power_in", "V-_9": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:MCP6V67xMNY";
@@ -5818,7 +6034,8 @@ export class NCS20071SN extends Component.withPins({
   "-": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20071SN";
@@ -5841,7 +6058,8 @@ export class NCS20071XV extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20071XV";
@@ -5867,7 +6085,8 @@ export class NCS20072D extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20072D";
@@ -5893,7 +6112,8 @@ export class NCS20072DM extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20072DM";
@@ -5919,7 +6139,8 @@ export class NCS20072DTB extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20072DTB";
@@ -5951,7 +6172,8 @@ export class NCS4325 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS4325";
@@ -5983,7 +6205,8 @@ export class NCS20074D extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20074D";
@@ -6015,7 +6238,8 @@ export class NCS20074DTB extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS20074DTB";
@@ -6038,7 +6262,8 @@ export class NCS325 extends Component.withPins({
   "-": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NCS325";
@@ -6063,7 +6288,8 @@ export class NE5532 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NE5532";
@@ -6088,7 +6314,8 @@ export class NJM2043 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM2043";
@@ -6113,7 +6340,8 @@ export class NJM2114 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM2114";
@@ -6138,7 +6366,8 @@ export class NJM4556A extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM4556A";
@@ -6163,7 +6392,8 @@ export class NJM4558 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM4558";
@@ -6188,7 +6418,8 @@ export class NJM4559 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM4559";
@@ -6213,7 +6444,8 @@ export class NJM4560 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM4560";
@@ -6238,7 +6470,8 @@ export class NJM4580 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM4580";
@@ -6263,7 +6496,8 @@ export class NJM5532 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:NJM5532";
@@ -6289,7 +6523,8 @@ export class OP1177AR extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP1177AR";
@@ -6315,7 +6550,8 @@ export class OP1177ARM extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP1177ARM";
@@ -6338,7 +6574,8 @@ export class OP179GRT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "V-": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP179GRT";
@@ -6364,7 +6601,8 @@ export class OP179GS extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP179GS";
@@ -6389,7 +6627,8 @@ export class OP249 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP249";
@@ -6415,7 +6654,8 @@ export class OP249GS extends Component.withPins({
   "V-": "2",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+_1": "input", P7: "output", "-_8": "input", "+_3": "input", "-_4": "input", P5: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP249GS";
@@ -6440,7 +6680,8 @@ export class OP275 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP275";
@@ -6465,7 +6706,8 @@ export class OP279 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP279";
@@ -6490,7 +6732,8 @@ export class OP77 extends Component.withPins({
   "V+": "7",
   "VOS_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOS_1: "input", "-": "input", "+": "input", "V-": "power_in", NC: "no_connect", P6: "output", "V+": "power_in", VOS_8: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OP77";
@@ -6516,7 +6759,8 @@ export class OPA121KU extends Component.withPins({
   "V+": "7",
   "Subst.": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", "Subst.": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA121KU";
@@ -6542,7 +6786,8 @@ export class OPA121KM extends Component.withPins({
   "V+": "7",
   "Subst.": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", "Subst.": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA121KM";
@@ -6568,7 +6813,8 @@ export class OPA121KP extends Component.withPins({
   "V+": "7",
   "Subst.": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", "Subst.": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA121KP";
@@ -6593,7 +6839,8 @@ export class OPA134 extends Component.withPins({
   "V+": "7",
   "VOS_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOS_1: "input", "-": "input", "+": "input", "V-": "power_in", NC: "no_connect", P6: "output", "V+": "power_in", VOS_8: "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA134";
@@ -6618,7 +6865,8 @@ export class OPA1602 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1602";
@@ -6649,7 +6897,8 @@ export class OPA1604 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1604";
@@ -6674,7 +6923,8 @@ export class OPA1612AxD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1612AxD";
@@ -6699,7 +6949,8 @@ export class OPA1641 extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1641";
@@ -6725,7 +6976,8 @@ export class OPA1655D extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1655D";
@@ -6748,7 +7000,8 @@ export class OPA1655DBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1655DBV";
@@ -6774,7 +7027,8 @@ export class OPA1656ID extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1656ID";
@@ -6800,7 +7054,8 @@ export class OPA1662D extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1662D";
@@ -6826,7 +7081,8 @@ export class OPA1662DGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1662DGK";
@@ -6858,7 +7114,8 @@ export class OPA1664D extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1664D";
@@ -6890,7 +7147,8 @@ export class OPA1664PW extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1664PW";
@@ -6915,7 +7173,8 @@ export class OPA1678 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1678";
@@ -6946,7 +7205,8 @@ export class OPA1679 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1679";
@@ -6972,7 +7232,8 @@ export class OPA1692xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1692xD";
@@ -6998,7 +7259,8 @@ export class OPA1692xDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA1692xDGK";
@@ -7024,7 +7286,8 @@ export class OPA188xxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA188xxD";
@@ -7047,7 +7310,8 @@ export class OPA188xxDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA188xxDBV";
@@ -7073,7 +7337,8 @@ export class OPA196xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA196xD";
@@ -7099,7 +7364,8 @@ export class OPA189xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA189xD";
@@ -7122,7 +7388,8 @@ export class OPA196xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA196xDBV";
@@ -7145,7 +7412,8 @@ export class OPA189xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA189xDBV";
@@ -7171,7 +7439,8 @@ export class OPA197xDGK extends Component.withPins({
   "+": "3",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "V-": "power_in", NC_5: "no_connect", "V+": "power_in", NC_8: "no_connect", "-": "input", "+": "input", P6: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA197xDGK";
@@ -7197,7 +7466,8 @@ export class OPA196xDGK extends Component.withPins({
   "+": "3",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "V-": "power_in", NC_5: "no_connect", "V+": "power_in", NC_8: "no_connect", "-": "input", "+": "input", P6: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA196xDGK";
@@ -7223,7 +7493,8 @@ export class OPA189xDGK extends Component.withPins({
   "+": "3",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "V-": "power_in", NC_5: "no_connect", "V+": "power_in", NC_8: "no_connect", "-": "input", "+": "input", P6: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA189xDGK";
@@ -7249,7 +7520,8 @@ export class OPA197xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA197xD";
@@ -7272,7 +7544,8 @@ export class OPA197xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA197xDBV";
@@ -7297,7 +7570,8 @@ export class OPA2134 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2134";
@@ -7323,7 +7597,8 @@ export class OPA2156xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2156xD";
@@ -7349,7 +7624,8 @@ export class OPA2156xDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2156xDGK";
@@ -7375,7 +7651,8 @@ export class OPA2196xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2196xD";
@@ -7401,7 +7678,8 @@ export class OPA2189xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2189xD";
@@ -7427,7 +7705,8 @@ export class OPA2196xDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2196xDGK";
@@ -7453,7 +7732,8 @@ export class OPA2189xDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2189xDGK";
@@ -7479,7 +7759,8 @@ export class OPA2197xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2197xD";
@@ -7504,7 +7785,8 @@ export class OPA2277 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2277";
@@ -7530,7 +7812,8 @@ export class OPA2325 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2325";
@@ -7555,7 +7838,8 @@ export class OPA2333xxD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2333xxD";
@@ -7580,7 +7864,8 @@ export class OPA2333xxDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2333xxDGK";
@@ -7607,7 +7892,8 @@ export class OPA2333xxDRB extends Component.withPins({
   "V+": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2333xxDRB";
@@ -7632,7 +7918,8 @@ export class OPA2340 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2340";
@@ -7657,7 +7944,8 @@ export class OPA2356xxD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2356xxD";
@@ -7682,7 +7970,8 @@ export class OPA2356xxDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2356xxDGK";
@@ -7707,7 +7996,8 @@ export class OPA2376xxD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2376xxD";
@@ -7732,7 +8022,8 @@ export class OPA2376xxDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2376xxDGK";
@@ -7758,7 +8049,8 @@ export class OPA2376xxYZD extends Component.withPins({
   "V+": "A2",
   "V-": "D1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA1: "output", "-_B1": "input", "+_C1": "input", PB2: "output", "-_C2": "input", "+_D2": "input", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2376xxYZD";
@@ -7784,7 +8076,8 @@ export class OPA2604AP extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2604AP";
@@ -7809,7 +8102,8 @@ export class OPA2691 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2691";
@@ -7841,7 +8135,8 @@ export class OPA2691_14 extends Component.withPins({
   "V-": "4",
   "V+": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", "~{DIS_A}": "input", NC_9: "no_connect", NC_10: "no_connect", P14: "output", "~{DIS_B}": "input", "+_6": "input", "-_7": "input", P8: "output", NC_12: "no_connect", NC_13: "no_connect", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2691-14";
@@ -7867,7 +8162,8 @@ export class OPA2695xD extends Component.withPins({
   "V+": "6",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", P8: "output", "+_3": "input", "-_4": "input", P5: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2695xD";
@@ -7901,7 +8197,8 @@ export class OPA2695xRGT extends Component.withPins({
   "V+_11": "11",
   "V-_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{DIS_A}": "input", "+_2": "input", NC_5: "no_connect", P13: "output", NC_14: "no_connect", "-_15": "input", "+_3": "input", "~{DIS_B}": "input", "-_6": "input", NC_7: "no_connect", P8: "output", NC_16: "no_connect", "V-_9": "power_in", "V+_10": "power_in", "V+_11": "passive", "V-_12": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2695xRGT";
@@ -7927,7 +8224,8 @@ export class OPA2890ID extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2890ID";
@@ -7955,7 +8253,8 @@ export class OPA2890IDGS extends Component.withPins({
   "-VS": "3",
   "+VS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+_1": "input", "~{DIS}_2": "input", P9: "output", "-_10": "input", "~{DIS}_4": "input", "+_5": "input", "-_6": "input", P7: "output", "-VS": "power_in", "+VS": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2890IDGS";
@@ -7981,7 +8280,8 @@ export class OPA2994xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA2994xD";
@@ -8005,7 +8305,8 @@ export class OPA310SxDBV extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA310SxDBV";
@@ -8029,7 +8330,8 @@ export class OPA310SxDCK extends Component.withPins({
   "~{SHDN}": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "~{SHDN}": "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA310SxDCK";
@@ -8052,7 +8354,8 @@ export class OPA310xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA310xDBV";
@@ -8075,7 +8378,8 @@ export class OPA310xDCK extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA310xDCK";
@@ -8101,7 +8405,8 @@ export class OPA330xxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA330xxD";
@@ -8124,7 +8429,8 @@ export class OPA330xxDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA330xxDBV";
@@ -8146,7 +8452,8 @@ export class OPA330xxDCK extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA330xxDCK";
@@ -8169,7 +8476,8 @@ export class OPA330xxYFF extends Component.withPins({
   "-": "C1",
   "PC3": "C3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "V-": "power_in", "+": "input", "-": "input", PC3: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA330xxYFF";
@@ -8192,7 +8500,8 @@ export class OPA333xxDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA333xxDBV";
@@ -8215,7 +8524,8 @@ export class OPA333xxDCK extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA333xxDCK";
@@ -8238,7 +8548,8 @@ export class OPA336Nx extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA336Nx";
@@ -8264,7 +8575,8 @@ export class OPA336Ux extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA336Ux";
@@ -8287,7 +8599,8 @@ export class OPA340NA extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA340NA";
@@ -8313,7 +8626,8 @@ export class OPA340P extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA340P";
@@ -8339,7 +8653,8 @@ export class OPA340UA extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA340UA";
@@ -8363,7 +8678,8 @@ export class OPA355NA extends Component.withPins({
   "ENABLE": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", ENABLE: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA355NA";
@@ -8389,7 +8705,8 @@ export class OPA356xxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA356xxD";
@@ -8412,7 +8729,8 @@ export class OPA356xxDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA356xxDBV";
@@ -8438,7 +8756,8 @@ export class OPA365xxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA365xxD";
@@ -8461,7 +8780,8 @@ export class OPA365xxDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA365xxDBV";
@@ -8487,7 +8807,8 @@ export class OPA376xxD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA376xxD";
@@ -8510,7 +8831,8 @@ export class OPA376xxDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA376xxDBV";
@@ -8532,7 +8854,8 @@ export class OPA376xxDCK extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA376xxDCK";
@@ -8563,7 +8886,8 @@ export class OPA4134 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4134";
@@ -8595,7 +8919,8 @@ export class OPA4196xD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4196xD";
@@ -8627,7 +8952,8 @@ export class OPA4189xD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4189xD";
@@ -8659,7 +8985,8 @@ export class OPA4196xPW extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4196xPW";
@@ -8691,7 +9018,8 @@ export class OPA4189xPW extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4189xPW";
@@ -8724,7 +9052,8 @@ export class OPA4340EA extends Component.withPins({
   "V+": "4",
   "V-": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", NC_8: "no_connect", NC_9: "no_connect", "+_5": "input", "-_6": "input", P7: "output", P10: "output", "-_11": "input", "+_12": "input", "+_14": "input", "-_15": "input", P16: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4340EA";
@@ -8755,7 +9084,8 @@ export class OPA4340UA extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4340UA";
@@ -8786,7 +9116,8 @@ export class OPA4376 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA4376";
@@ -8812,7 +9143,8 @@ export class OPA551P extends Component.withPins({
   "V+": "7",
   "Flag": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", Flag: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA551P";
@@ -8838,7 +9170,8 @@ export class OPA551U extends Component.withPins({
   "V+": "7",
   "Flag": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-_1": "power_in", "-": "input", "+": "input", "V-_4": "passive", "V-_5": "passive", P6: "output", "V+": "power_in", Flag: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA551U";
@@ -8864,7 +9197,8 @@ export class OPA552P extends Component.withPins({
   "V+": "7",
   "Flag": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", Flag: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA552P";
@@ -8890,7 +9224,8 @@ export class OPA552U extends Component.withPins({
   "V+": "7",
   "Flag": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-_1": "power_in", "-": "input", "+": "input", "V-_4": "passive", "V-_5": "passive", P6: "output", "V+": "power_in", Flag: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA552U";
@@ -8929,7 +9264,8 @@ export class OPA569DWP extends Component.withPins({
   "IMON": "19",
   "PAD_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", PAD_21: "passive", PAD_1: "power_in", POUT1: "output", ISET: "output", "~{IFLAG}": "output", "-IN": "input", "+IN": "input", "~{TFLAG}": "output", ENA: "input", POUT2: "output", PAD_10: "passive", PAD_11: "passive", "V+_12": "power_in", "V+_13": "passive", OUT_14: "output", OUT_15: "passive", "V-_17": "power_in", "V-_18": "passive", IMON: "output", PAD_20: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA569DWP";
@@ -8955,7 +9291,8 @@ export class OPA890xD extends Component.withPins({
   "P6": "6",
   "~{DIS}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", NC_1: "no_connect", "-": "input", "+": "input", NC_5: "no_connect", P6: "output", "~{DIS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA890xD";
@@ -8981,7 +9318,8 @@ export class OPA690xD extends Component.withPins({
   "P6": "6",
   "~{DIS}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", NC_1: "no_connect", "-": "input", "+": "input", NC_5: "no_connect", P6: "output", "~{DIS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA690xD";
@@ -9005,7 +9343,8 @@ export class OPA890xDBV extends Component.withPins({
   "-": "4",
   "~{DIS}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", "~{DIS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA890xDBV";
@@ -9029,7 +9368,8 @@ export class OPA690xDBV extends Component.withPins({
   "-": "4",
   "~{DIS}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", "~{DIS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA690xDBV";
@@ -9055,7 +9395,8 @@ export class OPA810xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA810xD";
@@ -9078,7 +9419,8 @@ export class OPA810xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA810xDBV";
@@ -9101,7 +9443,8 @@ export class OPA810xDCK extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA810xDCK";
@@ -9128,7 +9471,8 @@ export class OPA818xDRG extends Component.withPins({
   "+": "4",
   "V-": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{PD}": "input", "V+": "power_in", EP: "passive", NC: "no_connect", P7: "output", FB: "output", "-": "input", "+": "input", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA818xDRG";
@@ -9154,7 +9498,8 @@ export class OPA842xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA842xD";
@@ -9177,7 +9522,8 @@ export class OPA842xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA842xDBV";
@@ -9203,7 +9549,8 @@ export class OPA843xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA843xD";
@@ -9226,7 +9573,8 @@ export class OPA843xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA843xDBV";
@@ -9252,7 +9600,8 @@ export class OPA846xD extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA846xD";
@@ -9275,7 +9624,8 @@ export class OPA846xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA846xDBV";
@@ -9301,7 +9651,8 @@ export class OPA847xD extends Component.withPins({
   "P6": "6",
   "~{DIS}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", NC_1: "no_connect", "-": "input", "+": "input", NC_5: "no_connect", P6: "output", "~{DIS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA847xD";
@@ -9325,7 +9676,8 @@ export class OPA847xDBV extends Component.withPins({
   "-": "4",
   "~{DIS}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", "~{DIS}": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA847xDBV";
@@ -9352,7 +9704,8 @@ export class OPA858xDSG extends Component.withPins({
   "+": "4",
   "V-_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "~{PD}": "input", "V-_9": "passive", NC: "no_connect", P6: "output", FB: "output", "-": "input", "+": "input", "V-_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA858xDSG";
@@ -9379,7 +9732,8 @@ export class OPA855xDSG extends Component.withPins({
   "+": "4",
   "V-_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "~{PD}": "input", "V-_9": "passive", NC: "no_connect", P6: "output", FB: "output", "-": "input", "+": "input", "V-_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA855xDSG";
@@ -9406,7 +9760,8 @@ export class OPA859xDSG extends Component.withPins({
   "+": "4",
   "V-_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "~{PD}": "input", "V-_9": "passive", NC: "no_connect", P6: "output", FB: "output", "-": "input", "+": "input", "V-_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:OPA859xDSG";
@@ -9430,7 +9785,8 @@ export class Opamp_Dual extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:Opamp_Dual";
@@ -9460,7 +9816,8 @@ export class Opamp_Quad extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:Opamp_Quad";
@@ -9485,7 +9842,8 @@ export class RC4558 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:RC4558";
@@ -9510,7 +9868,8 @@ export class RC4560 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:RC4560";
@@ -9535,7 +9894,8 @@ export class RC4580 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:RC4580";
@@ -9560,7 +9920,8 @@ export class SA5532 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:SA5532";
@@ -9585,7 +9946,8 @@ export class SA5534 extends Component.withPins({
   "V+": "7",
   "C/B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BAL: "input", "-": "input", "+": "input", "V-": "power_in", COMP: "input", P6: "output", "V+": "power_in", "C/B": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:SA5534";
@@ -9612,7 +9974,8 @@ export class THS3491xDDA extends Component.withPins({
   "~{PD}": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "input", "-": "input", "+": "input", "V-": "power_in", NC: "no_connect", P6: "output", "V+": "power_in", "~{PD}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:THS3491xDDA";
@@ -9641,7 +10004,8 @@ export class THS4226DGQ extends Component.withPins({
   "V_{S}+": "10",
   "PAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "~{PD}_5": "input", "~{PD}_6": "input", "+_7": "input", "-_8": "input", P9: "output", "V_{S}-": "power_in", "V_{S}+": "power_in", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:THS4226DGQ";
@@ -9667,7 +10031,8 @@ export class THS4631D extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:THS4631D";
@@ -9693,7 +10058,8 @@ export class THS4631DDA extends Component.withPins({
   "NC_8": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:THS4631DDA";
@@ -9719,7 +10085,8 @@ export class THS4631DGN extends Component.withPins({
   "NC_8": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:THS4631DGN";
@@ -9744,7 +10111,8 @@ export class TL061 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL061";
@@ -9769,7 +10137,8 @@ export class TL062 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL062";
@@ -9800,7 +10169,8 @@ export class TL064 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL064";
@@ -9825,7 +10195,8 @@ export class TL071 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL071";
@@ -9850,7 +10221,8 @@ export class TL072 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL072";
@@ -9881,7 +10253,8 @@ export class TL074 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL074";
@@ -9906,7 +10279,8 @@ export class TL081 extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL081";
@@ -9931,7 +10305,8 @@ export class TL082 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL082";
@@ -9962,7 +10337,8 @@ export class TL084 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TL084";
@@ -9987,7 +10363,8 @@ export class TLC272 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC272";
@@ -10018,7 +10395,8 @@ export class TLC274 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC274";
@@ -10043,7 +10421,8 @@ export class TLC277 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC277";
@@ -10074,7 +10453,8 @@ export class TLC279 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC279";
@@ -10100,7 +10480,8 @@ export class TLC27M2xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC27M2xD";
@@ -10126,7 +10507,8 @@ export class TLC27M2xPS extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC27M2xPS";
@@ -10152,7 +10534,8 @@ export class TLC27M2xPW extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC27M2xPW";
@@ -10178,7 +10561,8 @@ export class TLC27M7xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC27M7xD";
@@ -10204,7 +10588,8 @@ export class TLC27M7xPS extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLC27M7xPS";
@@ -10230,7 +10615,8 @@ export class TLE2141ACD extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141ACD";
@@ -10256,7 +10642,8 @@ export class TLE2141ACP extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141ACP";
@@ -10282,7 +10669,8 @@ export class TLE2141AID extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141AID";
@@ -10308,7 +10696,8 @@ export class TLE2141AIP extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141AIP";
@@ -10334,7 +10723,8 @@ export class TLE2141CD extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141CD";
@@ -10360,7 +10750,8 @@ export class TLE2141CP extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141CP";
@@ -10386,7 +10777,8 @@ export class TLE2141ID extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141ID";
@@ -10412,7 +10804,8 @@ export class TLE2141IP extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141IP";
@@ -10438,7 +10831,8 @@ export class TLE2141MD extends Component.withPins({
   "V+": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NULL_1: "input", "-": "input", "+": "input", "V-": "power_in", NULL_5: "input", P6: "output", "V+": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLE2141MD";
@@ -10461,7 +10855,8 @@ export class TLV172IDCK extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV172IDCK";
@@ -10487,7 +10882,8 @@ export class TLV2371D extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV2371D";
@@ -10510,7 +10906,8 @@ export class TLV2371DBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV2371DBV";
@@ -10536,7 +10933,8 @@ export class TLV2371P extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV2371P";
@@ -10561,7 +10959,8 @@ export class TLV2372 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV2372";
@@ -10584,7 +10983,8 @@ export class TLV3541xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV3541xDBV";
@@ -10607,7 +11007,8 @@ export class TLV365DBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV365DBV";
@@ -10630,7 +11031,8 @@ export class TLV6001DCK extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV6001DCK";
@@ -10653,7 +11055,8 @@ export class TLV9001IDCK extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9001IDCK";
@@ -10685,7 +11088,8 @@ export class TLV9004xRUCR extends Component.withPins({
   "V+": "3",
   "V-": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-_1": "input", "+_2": "input", P14: "output", "+_4": "input", "-_5": "input", P6: "output", P7: "output", "-_8": "input", "+_9": "input", "+_11": "input", "-_12": "input", P13: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9004xRUCR";
@@ -10717,7 +11121,8 @@ export class TLV9054xD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9054xD";
@@ -10749,7 +11154,8 @@ export class TLV9054xPW extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9054xPW";
@@ -10772,7 +11178,8 @@ export class TLV9061xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9061xDBV";
@@ -10795,7 +11202,8 @@ export class TLV9061xDCK extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9061xDCK";
@@ -10818,7 +11226,8 @@ export class TLV9061xDPW extends Component.withPins({
   "-": "2",
   "+": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "-": "input", "+": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9061xDPW";
@@ -10843,7 +11252,8 @@ export class TLV9062 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9062";
@@ -10869,7 +11279,8 @@ export class TLV9062xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9062xD";
@@ -10896,7 +11307,8 @@ export class TLV9062xDSG extends Component.withPins({
   "V+": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9062xDSG";
@@ -10927,7 +11339,8 @@ export class TLV9064 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9064";
@@ -10962,7 +11375,8 @@ export class TLV9064xRTE extends Component.withPins({
   "V-_11": "11",
   "V-_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+_1": "input", "~{SHDN_12}": "input", P15: "output", "-_16": "input", "+_3": "input", "-_4": "input", P5: "output", "~{SHDN_34}": "input", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-_11": "power_in", "V-_17": "passive", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9064xRTE";
@@ -10985,7 +11399,8 @@ export class TLV9301xDBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9301xDBV";
@@ -11008,7 +11423,8 @@ export class TLV9301xDCK extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9301xDCK";
@@ -11034,7 +11450,8 @@ export class TLV9302xD extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9302xD";
@@ -11060,7 +11477,8 @@ export class TLV9302xDDF extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9302xDDF";
@@ -11086,7 +11504,8 @@ export class TLV9302xDGK extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9302xDGK";
@@ -11112,7 +11531,8 @@ export class TLV9302xPW extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9302xPW";
@@ -11144,7 +11564,8 @@ export class TLV9304xD extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9304xD";
@@ -11176,7 +11597,8 @@ export class TLV9304xPW extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TLV9304xPW";
@@ -11199,7 +11621,8 @@ export class TS881xCx extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TS881xCx";
@@ -11222,7 +11645,8 @@ export class TS881xLx extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TS881xLx";
@@ -11247,7 +11671,8 @@ export class TS912 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TS912";
@@ -11273,7 +11698,8 @@ export class TSV911IDT extends Component.withPins({
   "V+": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV911IDT";
@@ -11296,7 +11722,8 @@ export class TSV911RILT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "V-": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV911RILT";
@@ -11319,7 +11746,8 @@ export class TSV911xxLx extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV911xxLx";
@@ -11344,7 +11772,8 @@ export class TSV912IDT extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV912IDT";
@@ -11369,7 +11798,8 @@ export class TSV912IST extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV912IST";
@@ -11400,7 +11830,8 @@ export class TSV914 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV914";
@@ -11423,7 +11854,8 @@ export class TSV991AILT extends Component.withPins({
   "V-": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "+": "input", "-": "input", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV991AILT";
@@ -11446,7 +11878,8 @@ export class TSV991AIQ1T extends Component.withPins({
   "V-": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "+": "input", P4: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV991AIQ1T";
@@ -11477,7 +11910,8 @@ export class TSV994 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", P8: "output", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "output", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Operational:TSV994";

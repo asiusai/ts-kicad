@@ -12,7 +12,8 @@ export class AudioJack2 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2";
@@ -37,7 +38,8 @@ export class AudioJack2_Dual_Ground_Switch extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_Dual_Ground_Switch";
@@ -61,7 +63,8 @@ export class AudioJack2_Dual_Switch extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_Dual_Switch";
@@ -80,7 +83,8 @@ export class AudioJack2_Ground extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_Ground";
@@ -101,7 +105,8 @@ export class AudioJack2_Ground_Switch extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_Ground_Switch";
@@ -121,7 +126,8 @@ export class AudioJack2_Ground_SwitchT extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_Ground_SwitchT";
@@ -141,7 +147,8 @@ export class AudioJack2_Switch extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_Switch";
@@ -160,7 +167,8 @@ export class AudioJack2_SwitchT extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack2_SwitchT";
@@ -179,7 +187,8 @@ export class AudioJack3 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3";
@@ -208,7 +217,8 @@ export class AudioJack3_Dual_Ground_Switch extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PRN1: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PR2: "passive", PRN2: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_Dual_Ground_Switch";
@@ -236,7 +246,8 @@ export class AudioJack3_Dual_Switch extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR1: "passive", PRN1: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PR2: "passive", PRN2: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_Dual_Switch";
@@ -256,7 +267,8 @@ export class AudioJack3_Ground extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_Ground";
@@ -279,7 +291,8 @@ export class AudioJack3_Ground_Switch extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_Ground_Switch";
@@ -301,7 +314,8 @@ export class AudioJack3_Ground_SwitchTR extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_Ground_SwitchTR";
@@ -323,7 +337,8 @@ export class AudioJack3_Switch extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_Switch";
@@ -343,7 +358,8 @@ export class AudioJack3_SwitchT extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_SwitchT";
@@ -364,7 +380,8 @@ export class AudioJack3_SwitchTR extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack3_SwitchTR";
@@ -384,7 +401,8 @@ export class AudioJack4 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR1: "passive", PR2: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack4";
@@ -405,7 +423,8 @@ export class AudioJack4_Ground extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PR2: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack4_Ground";
@@ -428,7 +447,8 @@ export class AudioJack4_Ground_SwitchTR1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PR1N: "passive", PR2: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack4_Ground_SwitchTR1";
@@ -449,7 +469,8 @@ export class AudioJack4_SwitchT1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR1: "passive", PR2: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack4_SwitchT1";
@@ -471,7 +492,8 @@ export class AudioJack4_SwitchTR1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR1: "passive", PR1N: "passive", PR2: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack4_SwitchTR1";
@@ -492,7 +514,8 @@ export class AudioJack5 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR1: "passive", PR2: "passive", PR3: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack5";
@@ -514,7 +537,8 @@ export class AudioJack5_Ground extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PR2: "passive", PR3: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioJack5_Ground";
@@ -532,7 +556,8 @@ export class AudioPlug2 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioPlug2";
@@ -551,7 +576,8 @@ export class AudioPlug3 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioPlug3";
@@ -571,7 +597,8 @@ export class AudioPlug4 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR1: "passive", PR2: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:AudioPlug4";
@@ -590,7 +617,8 @@ export class XLR3 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3";
@@ -611,7 +639,8 @@ export class NC3FAAH extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH";
@@ -632,7 +661,8 @@ export class NC3FAAH_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH-0";
@@ -653,7 +683,8 @@ export class NC3FAAH1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH1";
@@ -674,7 +705,8 @@ export class NC3FAAH1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH1-0";
@@ -695,7 +727,8 @@ export class NC3FAAH1_DA extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH1-DA";
@@ -715,7 +748,8 @@ export class XLR3_Ground extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_Ground";
@@ -737,7 +771,8 @@ export class NC3FAAH2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH2";
@@ -759,7 +794,8 @@ export class NC3FAAH2_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAH2-0";
@@ -780,7 +816,8 @@ export class NC3FAAV extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV";
@@ -801,7 +838,8 @@ export class NC3FAAV_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV-0";
@@ -822,7 +860,8 @@ export class NC3FAAV1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV1";
@@ -843,7 +882,8 @@ export class NC3FAAV1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV1-0";
@@ -864,7 +904,8 @@ export class NC3FAAV1_DA extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV1-DA";
@@ -886,7 +927,8 @@ export class NC3FAAV2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV2";
@@ -908,7 +950,8 @@ export class NC3FAAV2_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAAV2-0";
@@ -929,7 +972,8 @@ export class NC3FAH extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH";
@@ -950,7 +994,8 @@ export class NC3FAH_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH-0";
@@ -971,7 +1016,8 @@ export class NC3FAH1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH1";
@@ -992,7 +1038,8 @@ export class NC3FAH1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH1-0";
@@ -1013,7 +1060,8 @@ export class NC3FAH1_DA extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH1-DA";
@@ -1035,7 +1083,8 @@ export class NC3FAH2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH2";
@@ -1057,7 +1106,8 @@ export class NC3FAH2_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH2-0";
@@ -1079,7 +1129,8 @@ export class NC3FAH2_DA extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAH2-DA";
@@ -1100,7 +1151,8 @@ export class NC3FAHL_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHL-0";
@@ -1121,7 +1173,8 @@ export class NC3FAHL1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHL1";
@@ -1142,7 +1195,8 @@ export class NC3FAHL1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHL1-0";
@@ -1163,7 +1217,8 @@ export class NC3FAHR_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHR-0";
@@ -1184,7 +1239,8 @@ export class NC3FAHR1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHR1";
@@ -1205,7 +1261,8 @@ export class NC3FAHR1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHR1-0";
@@ -1227,7 +1284,8 @@ export class NC3FAHR2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHR2";
@@ -1249,7 +1307,8 @@ export class NC3FAHR2_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAHR2-0";
@@ -1270,7 +1329,8 @@ export class NC3FAV extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV";
@@ -1291,7 +1351,8 @@ export class NC3FAV_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV-0";
@@ -1312,7 +1373,8 @@ export class NC3FAV1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV1";
@@ -1333,7 +1395,8 @@ export class NC3FAV1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV1-0";
@@ -1354,7 +1417,8 @@ export class NC3FAV1_DA extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV1-DA";
@@ -1376,7 +1440,8 @@ export class NC3FAV2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV2";
@@ -1398,7 +1463,8 @@ export class NC3FAV2_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV2-0";
@@ -1420,7 +1486,8 @@ export class NC3FAV2_DA extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FAV2-DA";
@@ -1441,7 +1508,8 @@ export class NC3FBH1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH1";
@@ -1462,7 +1530,8 @@ export class NC3FBH1_B extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH1-B";
@@ -1483,7 +1552,8 @@ export class NC3FBH1_DA extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH1-DA";
@@ -1504,7 +1574,8 @@ export class NC3FBH1_E extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH1-E";
@@ -1526,7 +1597,8 @@ export class NC3FBH2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH2";
@@ -1548,7 +1620,8 @@ export class NC3FBH2_B extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH2-B";
@@ -1570,7 +1643,8 @@ export class NC3FBH2_DA extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH2-DA";
@@ -1592,7 +1666,8 @@ export class NC3FBH2_E extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBH2-E";
@@ -1613,7 +1688,8 @@ export class NC3FBHL1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBHL1";
@@ -1634,7 +1710,8 @@ export class NC3FBV1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV1";
@@ -1655,7 +1732,8 @@ export class NC3FBV1_0 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV1-0";
@@ -1676,7 +1754,8 @@ export class NC3FBV1_B extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV1-B";
@@ -1697,7 +1776,8 @@ export class NC3FBV1_DA extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV1-DA";
@@ -1719,7 +1799,8 @@ export class NC3FBV2 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV2";
@@ -1741,7 +1822,8 @@ export class NC3FBV2_B extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV2-B";
@@ -1763,7 +1845,8 @@ export class NC3FBV2_DA extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV2-DA";
@@ -1786,7 +1869,8 @@ export class XLR3_Ground_Switched extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_Ground_Switched";
@@ -1811,7 +1895,8 @@ export class NC3FBV2_SW extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3FBV2-SW";
@@ -1833,7 +1918,8 @@ export class NC3MAAH extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAAH";
@@ -1855,7 +1941,8 @@ export class NC3MAAH_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAAH-0";
@@ -1876,7 +1963,8 @@ export class NC3MAAH_1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAAH-1";
@@ -1898,7 +1986,8 @@ export class NC3MAAV extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAAV";
@@ -1920,7 +2009,8 @@ export class NC3MAAV_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAAV-0";
@@ -1941,7 +2031,8 @@ export class NC3MAAV_1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAAV-1";
@@ -1962,7 +2053,8 @@ export class NC3MAFH_PH extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAFH-PH";
@@ -1984,7 +2076,8 @@ export class NC3MAH extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAH";
@@ -2006,7 +2099,8 @@ export class NC3MAH_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAH-0";
@@ -2028,7 +2122,8 @@ export class NC3MAHL extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAHL";
@@ -2050,7 +2145,8 @@ export class NC3MAHR extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAHR";
@@ -2071,7 +2167,8 @@ export class NC3MAMH_PH extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAMH-PH";
@@ -2093,7 +2190,8 @@ export class NC3MAV extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAV";
@@ -2115,7 +2213,8 @@ export class NC3MAV_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MAV-0";
@@ -2137,7 +2236,8 @@ export class NC3MBH extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBH";
@@ -2159,7 +2259,8 @@ export class NC3MBH_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBH-0";
@@ -2180,7 +2281,8 @@ export class NC3MBH_1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBH-1";
@@ -2202,7 +2304,8 @@ export class NC3MBH_B extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBH-B";
@@ -2224,7 +2327,8 @@ export class NC3MBH_E extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBH-E";
@@ -2246,7 +2350,8 @@ export class NC3MBHL extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBHL";
@@ -2268,7 +2373,8 @@ export class NC3MBHL_B extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBHL-B";
@@ -2290,7 +2396,8 @@ export class NC3MBHR extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBHR";
@@ -2312,7 +2419,8 @@ export class NC3MBHR_B extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBHR-B";
@@ -2334,7 +2442,8 @@ export class NC3MBV extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBV";
@@ -2356,7 +2465,8 @@ export class NC3MBV_0 extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBV-0";
@@ -2377,7 +2487,8 @@ export class NC3MBV_1 extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBV-1";
@@ -2399,7 +2510,8 @@ export class NC3MBV_B extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBV-B";
@@ -2421,7 +2533,8 @@ export class NC3MBV_E extends Component.withPins({
   "P3": "3",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBV-E";
@@ -2446,7 +2559,8 @@ export class NC3MBV_SW extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC3MBV-SW";
@@ -2467,7 +2581,8 @@ export class XLR4_Ground extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR4_Ground";
@@ -2490,7 +2605,8 @@ export class NC4FAH extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4FAH";
@@ -2513,7 +2629,8 @@ export class NC4FAH_0 extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4FAH-0";
@@ -2536,7 +2653,8 @@ export class NC4FAV extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4FAV";
@@ -2559,7 +2677,8 @@ export class NC4FAV_0 extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4FAV-0";
@@ -2582,7 +2701,8 @@ export class NC4FBH extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4FBH";
@@ -2605,7 +2725,8 @@ export class NC4FBV extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4FBV";
@@ -2628,7 +2749,8 @@ export class NC4MAH extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4MAH";
@@ -2651,7 +2773,8 @@ export class NC4MAV extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4MAV";
@@ -2674,7 +2797,8 @@ export class NC4MBH extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4MBH";
@@ -2697,7 +2821,8 @@ export class NC4MBV extends Component.withPins({
   "P4": "4",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC4MBV";
@@ -2719,7 +2844,8 @@ export class XLR5_Ground extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR5_Ground";
@@ -2743,7 +2869,8 @@ export class NC5FAH extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FAH";
@@ -2767,7 +2894,8 @@ export class NC5FAH_0 extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FAH-0";
@@ -2791,7 +2919,8 @@ export class NC5FAH_DA extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FAH-DA";
@@ -2815,7 +2944,8 @@ export class NC5FAV extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FAV";
@@ -2839,7 +2969,8 @@ export class NC5FAV_DA extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FAV-DA";
@@ -2864,7 +2995,8 @@ export class XLR5_Ground_Switched extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR5_Ground_Switched";
@@ -2891,7 +3023,8 @@ export class NC5FAV_SW extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FAV-SW";
@@ -2915,7 +3048,8 @@ export class NC5FBH extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FBH";
@@ -2939,7 +3073,8 @@ export class NC5FBH_B extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FBH-B";
@@ -2963,7 +3098,8 @@ export class NC5FBV extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FBV";
@@ -2987,7 +3123,8 @@ export class NC5FBV_B extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FBV-B";
@@ -3014,7 +3151,8 @@ export class NC5FBV_SW extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5FBV-SW";
@@ -3038,7 +3176,8 @@ export class NC5MAH extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MAH";
@@ -3062,7 +3201,8 @@ export class NC5MAV extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MAV";
@@ -3089,7 +3229,8 @@ export class NC5MAV_SW extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MAV-SW";
@@ -3113,7 +3254,8 @@ export class NC5MBH extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MBH";
@@ -3137,7 +3279,8 @@ export class NC5MBH_B extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MBH-B";
@@ -3161,7 +3304,8 @@ export class NC5MBV extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MBV";
@@ -3185,7 +3329,8 @@ export class NC5MBV_B extends Component.withPins({
   "P5": "5",
   "PG": "G",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MBV-B";
@@ -3212,7 +3357,8 @@ export class NC5MBV_SW extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", PG: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NC5MBV-SW";
@@ -3239,7 +3385,8 @@ export class XLR3_AudioJack3_Combo_GroundSwitch_Switch extends Component.withPin
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PGN: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack3_Combo_GroundSwitch_Switch";
@@ -3268,7 +3415,8 @@ export class NCJ10FI_H extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PGN: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ10FI-H";
@@ -3297,7 +3445,8 @@ export class NCJ10FI_H_0 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PGN: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ10FI-H-0";
@@ -3326,7 +3475,8 @@ export class NCJ10FI_V extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PGN: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ10FI-V";
@@ -3355,7 +3505,8 @@ export class NCJ10FI_V_0 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PGN: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ10FI-V-0";
@@ -3377,7 +3528,8 @@ export class XLR3_AudioJack2_Combo_Ground extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack2_Combo_Ground";
@@ -3401,7 +3553,8 @@ export class NCJ5FI_H extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ5FI-H";
@@ -3425,7 +3578,8 @@ export class NCJ5FI_H_0 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ5FI-H-0";
@@ -3449,7 +3603,8 @@ export class NCJ5FI_V extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ5FI-V";
@@ -3473,7 +3628,8 @@ export class NCJ5FI_V_0 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ5FI-V-0";
@@ -3496,7 +3652,8 @@ export class XLR3_AudioJack3_Combo_Ground extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack3_Combo_Ground";
@@ -3521,7 +3678,8 @@ export class NCJ6FA_H extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FA-H";
@@ -3546,7 +3704,8 @@ export class NCJ6FA_H_0 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FA-H-0";
@@ -3571,7 +3730,8 @@ export class NCJ6FA_H_DA extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FA-H-DA";
@@ -3596,7 +3756,8 @@ export class NCJ6FA_V extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FA-V";
@@ -3621,7 +3782,8 @@ export class NCJ6FA_V_0 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FA-V-0";
@@ -3646,7 +3808,8 @@ export class NCJ6FA_V_DA extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FA-V-DA";
@@ -3671,7 +3834,8 @@ export class NCJ6FI_H extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FI-H";
@@ -3696,7 +3860,8 @@ export class NCJ6FI_H_0 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FI-H-0";
@@ -3721,7 +3886,8 @@ export class NCJ6FI_V extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FI-V";
@@ -3746,7 +3912,8 @@ export class NCJ6FI_V_0 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ6FI-V-0";
@@ -3772,7 +3939,8 @@ export class XLR3_AudioJack3_Combo_Ground_Switch extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack3_Combo_Ground_Switch";
@@ -3800,7 +3968,8 @@ export class NCJ9FI_H extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ9FI-H";
@@ -3828,7 +3997,8 @@ export class NCJ9FI_H_0 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ9FI-H-0";
@@ -3856,7 +4026,8 @@ export class NCJ9FI_V extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ9FI-V";
@@ -3884,7 +4055,8 @@ export class NCJ9FI_V_0 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NCJ9FI-V-0";
@@ -3904,7 +4076,8 @@ export class NJ2FD_V extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NJ2FD-V";
@@ -3925,7 +4098,8 @@ export class NJ3FD_V extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NJ3FD-V";
@@ -3948,7 +4122,8 @@ export class NJ5FD_V extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NJ5FD-V";
@@ -3972,7 +4147,8 @@ export class NJ6FD_V extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NJ6FD-V";
@@ -3996,7 +4172,8 @@ export class NJ6TB_V extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NJ6TB-V";
@@ -4015,7 +4192,8 @@ export class SpeakON_NL2 extends Component.withPins({
   "P1__1-": "1-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:SpeakON_NL2";
@@ -4035,7 +4213,8 @@ export class NL2MDXX_H_3 extends Component.withPins({
   "P1__1-": "1-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL2MDXX-H-3";
@@ -4055,7 +4234,8 @@ export class NL2MDXX_V extends Component.withPins({
   "P1__1-": "1-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL2MDXX-V";
@@ -4076,7 +4256,8 @@ export class SpeakON_NL4 extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:SpeakON_NL4";
@@ -4098,7 +4279,8 @@ export class NL4MDXX_H_2 extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL4MDXX-H-2";
@@ -4120,7 +4302,8 @@ export class NL4MDXX_H_3 extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL4MDXX-H-3";
@@ -4142,7 +4325,8 @@ export class NL4MDXX_V extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL4MDXX-V";
@@ -4164,7 +4348,8 @@ export class NL4MDXX_V_2 extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL4MDXX-V-2";
@@ -4186,7 +4371,8 @@ export class NL4MDXX_V_3 extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL4MDXX-V-3";
@@ -4211,7 +4397,8 @@ export class SpeakON_NL8 extends Component.withPins({
   "P4__4-": "4-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P3__3+": "passive", "P3__3-": "passive", "P4__4+": "passive", "P4__4-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:SpeakON_NL8";
@@ -4237,7 +4424,8 @@ export class NL8MDXX_V extends Component.withPins({
   "P4__4-": "4-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P3__3+": "passive", "P3__3-": "passive", "P4__4+": "passive", "P4__4-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL8MDXX-V";
@@ -4263,7 +4451,8 @@ export class NL8MDXX_V_3 extends Component.withPins({
   "P4__4-": "4-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P3__3+": "passive", "P3__3-": "passive", "P4__4+": "passive", "P4__4-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NL8MDXX-V-3";
@@ -4282,7 +4471,8 @@ export class SpeakON_NL2_AudioJack2_Combo extends Component.withPins({
   "P1__1-": "1-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:SpeakON_NL2_AudioJack2_Combo";
@@ -4302,7 +4492,8 @@ export class NLJ2MDXX_H extends Component.withPins({
   "P1__1-": "1-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NLJ2MDXX-H";
@@ -4322,7 +4513,8 @@ export class NLJ2MDXX_V extends Component.withPins({
   "P1__1-": "1-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NLJ2MDXX-V";
@@ -4344,7 +4536,8 @@ export class NLT4MD_V extends Component.withPins({
   "P2__2-": "2-",
   "P1__1+": "1+",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P2__2+": "passive", "P2__2-": "passive", "P1__1+": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NLT4MD-V";
@@ -4366,7 +4559,8 @@ export class NMJ4HCD2 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ4HCD2";
@@ -4388,7 +4582,8 @@ export class NMJ4HFD2 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ4HFD2";
@@ -4410,7 +4605,8 @@ export class NMJ4HFD3 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ4HFD3";
@@ -4432,7 +4628,8 @@ export class NMJ4HHD2 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ4HHD2";
@@ -4456,7 +4653,8 @@ export class NMJ6HCD2 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HCD2";
@@ -4480,7 +4678,8 @@ export class NMJ6HCD3 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HCD3";
@@ -4504,7 +4703,8 @@ export class NMJ6HFD2 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HFD2";
@@ -4528,7 +4728,8 @@ export class NMJ6HFD2_AU extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HFD2-AU";
@@ -4552,7 +4753,8 @@ export class NMJ6HFD3 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HFD3";
@@ -4576,7 +4778,8 @@ export class NMJ6HFD4 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HFD4";
@@ -4600,7 +4803,8 @@ export class NMJ6HHD2 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NMJ6HHD2";
@@ -4622,7 +4826,8 @@ export class NRJ3HF_1 extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ3HF-1";
@@ -4644,7 +4849,8 @@ export class NRJ4HF extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ4HF";
@@ -4666,7 +4872,8 @@ export class NRJ4HF_1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ4HF-1";
@@ -4688,7 +4895,8 @@ export class NRJ4HH extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ4HH";
@@ -4710,7 +4918,8 @@ export class NRJ4HH_1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ4HH-1";
@@ -4734,7 +4943,8 @@ export class NRJ6HF extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HF";
@@ -4758,7 +4968,8 @@ export class NRJ6HF_1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HF-1";
@@ -4782,7 +4993,8 @@ export class NRJ6HF_1_AU extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HF-1-AU";
@@ -4806,7 +5018,8 @@ export class NRJ6HF_AU extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HF-AU";
@@ -4830,7 +5043,8 @@ export class NRJ6HH extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HH";
@@ -4854,7 +5068,8 @@ export class NRJ6HH_1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HH-1";
@@ -4878,7 +5093,8 @@ export class NRJ6HH_AU extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HH-AU";
@@ -4902,7 +5118,8 @@ export class NRJ6HM_1 extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HM-1";
@@ -4926,7 +5143,8 @@ export class NRJ6HM_1_AU extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HM-1-AU";
@@ -4949,7 +5167,8 @@ export class NRJ6HM_1_PRE extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PR: "passive", PRN: "passive", PS: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NRJ6HM-1-PRE";
@@ -4980,7 +5199,8 @@ export class NSJ12HC extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PRN1: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PR2: "passive", PRN2: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NSJ12HC";
@@ -5011,7 +5231,8 @@ export class NSJ12HF_1 extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PRN1: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PR2: "passive", PRN2: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NSJ12HF-1";
@@ -5042,7 +5263,8 @@ export class NSJ12HH_1 extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PRN1: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PR2: "passive", PRN2: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NSJ12HH-1";
@@ -5073,7 +5295,8 @@ export class NSJ12HL extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PR1: "passive", PRN1: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PR2: "passive", PRN2: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NSJ12HL";
@@ -5100,7 +5323,8 @@ export class NSJ8HC extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NSJ8HC";
@@ -5127,7 +5351,8 @@ export class NSJ8HL extends Component.withPins({
   "PT2": "T2",
   "PTN2": "TN2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "passive", PS1: "passive", PSN1: "passive", PT1: "passive", PTN1: "passive", PS2: "passive", PSN2: "passive", PT2: "passive", PTN2: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:NSJ8HL";
@@ -5152,7 +5377,8 @@ export class SpeakON_NL4_Switch extends Component.withPins({
   "P1_N_1+N": "1+N",
   "P2_N_2-N": "2-N",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1__1-": "passive", "P1_N_1-N": "passive", "P2__2+": "passive", "P2_N_2+N": "passive", "P2__2-": "passive", "P1__1+": "passive", "P1_N_1+N": "passive", "P2_N_2-N": "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:SpeakON_NL4_Switch";
@@ -5173,7 +5399,8 @@ export class XLR3_AudioJack2_Combo extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack2_Combo";
@@ -5195,7 +5422,8 @@ export class XLR3_AudioJack3_Combo extends Component.withPins({
   "PS": "S",
   "PT": "T",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PR: "passive", PS: "passive", PT: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack3_Combo";
@@ -5220,7 +5448,8 @@ export class XLR3_AudioJack3_Combo_Switch extends Component.withPins({
   "PT": "T",
   "PTN": "TN",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PR: "passive", PRN: "passive", PS: "passive", PSN: "passive", PT: "passive", PTN: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_AudioJack3_Combo_Switch";
@@ -5242,7 +5471,8 @@ export class XLR3_Switched extends Component.withPins({
   "PNC": "NC",
   "PNO": "NO",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", PN: "passive", PNC: "passive", PNO: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR3_Switched";
@@ -5262,7 +5492,8 @@ export class XLR4 extends Component.withPins({
   "P3": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR4";
@@ -5283,7 +5514,8 @@ export class XLR5 extends Component.withPins({
   "P3_4": "4",
   "P5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR5";
@@ -5305,7 +5537,8 @@ export class XLR6 extends Component.withPins({
   "P5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3_3: "passive", P3_4: "passive", P5: "passive", P6: "passive", ...opts.pinTypes } });
   }
   override schema = "Connector_Audio:XLR6";

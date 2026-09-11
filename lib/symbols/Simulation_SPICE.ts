@@ -12,7 +12,8 @@ import { Component } from "ts-kicad";
 export class _0 extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ value: "0", ...opts, pinTypes: { P1: "power_in", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Simulation_SPICE:0";
@@ -30,7 +31,8 @@ export class BSOURCE extends Component.withPins({
   "N+": "1",
   "N-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N+": "passive", "N-": "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:BSOURCE";
@@ -49,7 +51,8 @@ export class D extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:D";
@@ -69,7 +72,8 @@ export class ESOURCE extends Component.withPins({
   "C+": "3",
   "C-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N+": "passive", "N-": "passive", "C+": "input", "C-": "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:ESOURCE";
@@ -89,7 +93,8 @@ export class GSOURCE extends Component.withPins({
   "C+": "3",
   "C-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N+": "passive", "N-": "passive", "C+": "input", "C-": "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:GSOURCE";
@@ -107,7 +112,8 @@ export class IAM extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IAM";
@@ -125,7 +131,8 @@ export class IBIS_DEVICE extends Component.withPins({
   "REF": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", P2: "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IBIS_DEVICE";
@@ -144,7 +151,8 @@ export class IBIS_DEVICE_DIFF extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IBIS_DEVICE_DIFF";
@@ -162,7 +170,8 @@ export class IBIS_DRIVER extends Component.withPins({
   "REF": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", P2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IBIS_DRIVER";
@@ -181,7 +190,8 @@ export class IBIS_DRIVER_DIFF extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", "+": "bidirectional", "-": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IBIS_DRIVER_DIFF";
@@ -199,7 +209,8 @@ export class IDC extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IDC";
@@ -217,7 +228,8 @@ export class IEXP extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IEXP";
@@ -235,7 +247,8 @@ export class IPULSE extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IPULSE";
@@ -253,7 +266,8 @@ export class IPWL extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:IPWL";
@@ -271,7 +285,8 @@ export class ISFFM extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:ISFFM";
@@ -289,7 +304,8 @@ export class ISIN extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:ISIN";
@@ -307,7 +323,8 @@ export class ITRNOISE extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:ITRNOISE";
@@ -325,7 +342,8 @@ export class ITRRANDOM extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:ITRRANDOM";
@@ -344,7 +362,8 @@ export class NJFET extends Component.withPins({
   "G": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:NJFET";
@@ -363,7 +382,8 @@ export class NMOS extends Component.withPins({
   "G": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:NMOS";
@@ -383,7 +403,8 @@ export class NMOS_Substrate extends Component.withPins({
   "S": "3",
   "Bulk": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", Bulk: "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:NMOS_Substrate";
@@ -402,7 +423,8 @@ export class NPN extends Component.withPins({
   "B": "2",
   "E": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "open_collector", B: "input", E: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:NPN";
@@ -422,7 +444,8 @@ export class NPN_Substrate extends Component.withPins({
   "E": "3",
   "Substrate": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "open_collector", B: "input", E: "open_emitter", Substrate: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:NPN_Substrate";
@@ -443,7 +466,8 @@ export class OPAMP extends Component.withPins({
   "V-": "4",
   "P5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "-": "input", "V+": "power_in", "V-": "power_in", P5: "output", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:OPAMP";
@@ -462,7 +486,8 @@ export class PJFET extends Component.withPins({
   "G": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:PJFET";
@@ -481,7 +506,8 @@ export class PMOS extends Component.withPins({
   "G": "2",
   "S": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:PMOS";
@@ -501,7 +527,8 @@ export class PMOS_Substrate extends Component.withPins({
   "S": "3",
   "Bulk": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D: "passive", G: "input", S: "passive", Bulk: "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:PMOS_Substrate";
@@ -520,7 +547,8 @@ export class PNP extends Component.withPins({
   "B": "2",
   "E": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "open_collector", B: "input", E: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:PNP";
@@ -540,7 +568,8 @@ export class PNP_Substrate extends Component.withPins({
   "E": "3",
   "Substrate": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { C: "open_collector", B: "input", E: "open_emitter", Substrate: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:PNP_Substrate";
@@ -558,7 +587,8 @@ export class Potentiometer extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:Potentiometer";
@@ -578,7 +608,8 @@ export class SWITCH extends Component.withPins({
   "C+": "3",
   "C-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N+": "passive", "N-": "passive", "C+": "input", "C-": "input", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:SWITCH";
@@ -598,7 +629,8 @@ export class TLINE extends Component.withPins({
   "P3": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Simulation_SPICE:TLINE";
@@ -616,7 +648,8 @@ export class VAM extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VAM";
@@ -634,7 +667,8 @@ export class VDC extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VDC";
@@ -652,7 +686,8 @@ export class VEXP extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VEXP";
@@ -671,7 +706,8 @@ export class VOLTMETER_DIFF extends Component.withPins({
   "-": "2",
   "out": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", out: "output", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null,"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Simulation_SPICE:VOLTMETER_DIFF";
@@ -689,7 +725,8 @@ export class VPULSE extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VPULSE";
@@ -707,7 +744,8 @@ export class VPWL extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VPWL";
@@ -725,7 +763,8 @@ export class VSFFM extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VSFFM";
@@ -743,7 +782,8 @@ export class VSIN extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VSIN";
@@ -761,7 +801,8 @@ export class VTRNOISE extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VTRNOISE";
@@ -779,7 +820,8 @@ export class VTRRANDOM extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Simulation_SPICE:VTRRANDOM";

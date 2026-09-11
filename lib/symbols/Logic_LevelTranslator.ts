@@ -20,7 +20,8 @@ export class _74LVC2T45DC extends Component.withPins({
   "1B": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", "1A": "bidirectional", "2A": "bidirectional", GND: "power_in", DIR: "input", "2B": "bidirectional", "1B": "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:74LVC2T45DC";
@@ -46,7 +47,8 @@ export class _74LVCH2T45DC extends Component.withPins({
   "1B": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", "1A": "bidirectional", "2A": "bidirectional", GND: "power_in", DIR: "input", "2B": "bidirectional", "1B": "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:74LVCH2T45DC";
@@ -80,7 +82,8 @@ export class CD40109BPW extends Component.withPins({
   "ENABLE_D": "15",
   "V_{DD}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", ENABLE_A: "input", A: "input", E: "output", F: "output", B: "input", ENABLE_B: "input", "V_{SS}": "power_in", ENABLE_C: "input", C: "input", G: "output", NC: "no_connect", H: "output", D: "input", ENABLE_D: "input", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:CD40109BPW";
@@ -119,7 +122,8 @@ export class FXMA108 extends Component.withPins({
   "VCCB": "20",
   "NC": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A0: "bidirectional", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", GND: "power_in", "~{OE}": "input", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", B0: "bidirectional", VCCB: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:FXMA108";
@@ -158,7 +162,8 @@ export class LSF0108BQ extends Component.withPins({
   "EN": "20",
   "EPAD": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", RefA: "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", RefB: "power_in", EN: "input", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:LSF0108BQ";
@@ -196,7 +201,8 @@ export class LSF0108PW extends Component.withPins({
   "RefB": "19",
   "EN": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", RefA: "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", RefB: "power_in", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:LSF0108PW";
@@ -231,7 +237,8 @@ export class NCN4555MN extends Component.withPins({
   "NC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{STOP}": "input", MOD_VCC: "input", VDD: "power_in", NC_4: "no_connect", VBAT: "power_in", NC_6: "no_connect", SIM_VCC: "power_out", "SIM_I/O": "bidirectional", SIM_RST: "output", GND_10: "power_in", SIM_CLK: "output", NC_12: "no_connect", CLK: "input", RST: "input", "I/O": "bidirectional", NC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:NCN4555MN";
@@ -257,7 +264,8 @@ export class NLSV2T244D extends Component.withPins({
   "B1": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "input", A2: "input", "~{OE}": "input", GND: "power_in", B2: "output", B1: "output", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:NLSV2T244D";
@@ -283,7 +291,8 @@ export class NLSV2T244DM extends Component.withPins({
   "B1": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "input", A2: "input", "~{OE}": "input", GND: "power_in", B2: "output", B1: "output", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:NLSV2T244DM";
@@ -309,7 +318,8 @@ export class NLSV2T244MU extends Component.withPins({
   "B1": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "input", A2: "input", "~{OE}": "input", GND: "power_in", B2: "output", B1: "output", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:NLSV2T244MU";
@@ -332,7 +342,8 @@ export class SN74AUP1T34DCK extends Component.withPins({
   "B": "4",
   "VCCB": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A: "input", GND: "power_in", B: "output", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74AUP1T34DCK";
@@ -366,7 +377,8 @@ export class SN74AVC4T245PW extends Component.withPins({
   "1~{OE}": "15",
   "VCCB": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", "1DIR": "input", "2DIR": "input", "1A1": "bidirectional", "1A2": "bidirectional", "2A1": "bidirectional", "2A2": "bidirectional", GND_8: "power_in", GND_9: "passive", "2B2": "bidirectional", "2B1": "bidirectional", "1B2": "bidirectional", "1B1": "bidirectional", "2~{OE}": "input", "1~{OE}": "input", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74AVC4T245PW";
@@ -408,7 +420,8 @@ export class SN74AVC8T245PW extends Component.withPins({
   "VCCB_23": "23",
   "VCCB_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", DIR: "input", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", GND_11: "power_in", GND_12: "passive", GND_13: "passive", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", "~{OE}": "input", VCCB_23: "power_in", VCCB_24: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74AVC8T245PW";
@@ -431,7 +444,8 @@ export class SN74LV1T125DCK extends Component.withPins({
   "Y": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LV1T125DCK";
@@ -454,7 +468,8 @@ export class SN74LV1T125DBV extends Component.withPins({
   "Y": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", A: "input", GND: "power_in", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LV1T125DBV";
@@ -477,7 +492,8 @@ export class SN74LV1T34DBV extends Component.withPins({
   "Y": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A: "input", GND: "power_in", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LV1T34DBV";
@@ -500,7 +516,8 @@ export class SN74LV1T34DCK extends Component.withPins({
   "Y": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A: "input", GND: "power_in", Y: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LV1T34DCK";
@@ -524,7 +541,8 @@ export class SN74LVC1T45DBV extends Component.withPins({
   "DIR": "5",
   "VCCB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", DIR: "input", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC1T45DBV";
@@ -548,7 +566,8 @@ export class SN74LVC1T45DCK extends Component.withPins({
   "DIR": "5",
   "VCCB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", DIR: "input", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC1T45DCK";
@@ -572,7 +591,8 @@ export class SN74LVC1T45DRL extends Component.withPins({
   "DIR": "5",
   "VCCB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", DIR: "input", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC1T45DRL";
@@ -610,7 +630,8 @@ export class SN74LVC245APW extends Component.withPins({
   "~{OE}": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIR: "input", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", GND: "power_in", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", "~{OE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC245APW";
@@ -636,7 +657,8 @@ export class SN74LVC2T45DCUR extends Component.withPins({
   "B1": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "bidirectional", A2: "bidirectional", GND: "power_in", DIR: "input", B2: "bidirectional", B1: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC2T45DCUR";
@@ -662,7 +684,8 @@ export class SN74LVC2T45YZP extends Component.withPins({
   "GND": "D1",
   "DIR": "D2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", VCCB: "power_in", A1: "bidirectional", B1: "bidirectional", A2: "bidirectional", B2: "bidirectional", GND: "power_in", DIR: "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC2T45YZP";
@@ -703,7 +726,8 @@ export class SN74LVC8T245 extends Component.withPins({
   "V_{CCB}_23": "23",
   "V_{CCB}_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", DIR: "input", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", GND_11: "power_in", GND_12: "passive", GND_13: "passive", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", "~{OE}": "input", "V_{CCB}_23": "power_in", "V_{CCB}_24": "passive", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:SN74LVC8T245";
@@ -729,7 +753,8 @@ export class TCA9517ADGK extends Component.withPins({
   "SCLB": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", SCLA: "bidirectional", SDAA: "bidirectional", GND: "power_in", EN: "passive", SDAB: "bidirectional", SCLB: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TCA9517ADGK";
@@ -755,7 +780,8 @@ export class TCA9517D extends Component.withPins({
   "SCLB": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", SCLA: "bidirectional", SDAA: "bidirectional", GND: "power_in", EN: "passive", SDAB: "bidirectional", SCLB: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TCA9517D";
@@ -779,7 +805,8 @@ export class TXB0101DBV extends Component.withPins({
   "OE": "5",
   "V_{CCB}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", OE: "input", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0101DBV";
@@ -803,7 +830,8 @@ export class TXB0101DCK extends Component.withPins({
   "OE": "5",
   "V_{CCB}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", OE: "input", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0101DCK";
@@ -827,7 +855,8 @@ export class TXB0101DRL extends Component.withPins({
   "OE": "5",
   "V_{CCB}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", OE: "input", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0101DRL";
@@ -851,7 +880,8 @@ export class TXB0101YZP extends Component.withPins({
   "A": "C1",
   "B": "C2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", "V_{CCB}": "power_in", GND: "power_in", OE: "input", A: "bidirectional", B: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0101YZP";
@@ -877,7 +907,8 @@ export class TXB0102DCU extends Component.withPins({
   "VCCB": "7",
   "B1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B2: "bidirectional", GND: "power_in", VCCA: "power_in", A2: "bidirectional", A1: "bidirectional", OE: "input", VCCB: "power_in", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0102DCU";
@@ -903,7 +934,8 @@ export class TXB0102YZP extends Component.withPins({
   "A2": "D1",
   "A1": "D2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B2: "bidirectional", B1: "bidirectional", GND: "power_in", VCCB: "power_in", VCCA: "power_in", OE: "input", A2: "bidirectional", A1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0102YZP";
@@ -936,7 +968,8 @@ export class TXB0104RGY extends Component.withPins({
   "VCCB": "14",
   "Pad": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", NC_6: "no_connect", GND: "power_in", OE: "input", NC_9: "no_connect", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", VCCB: "power_in", Pad: "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104RGY";
@@ -969,7 +1002,8 @@ export class TXB0104BQA extends Component.withPins({
   "VCCB": "14",
   "Pad": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", NC_6: "no_connect", GND: "power_in", OE: "input", NC_9: "no_connect", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", VCCB: "power_in", Pad: "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104BQA";
@@ -1001,7 +1035,8 @@ export class TXB0104D extends Component.withPins({
   "B1": "13",
   "VCCB": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", NC_6: "no_connect", GND: "power_in", OE: "input", NC_9: "no_connect", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104D";
@@ -1033,7 +1068,8 @@ export class TXB0104PW extends Component.withPins({
   "B1": "13",
   "VCCB": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", NC_6: "no_connect", GND: "power_in", OE: "input", NC_9: "no_connect", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104PW";
@@ -1063,7 +1099,8 @@ export class TXB0104RUT extends Component.withPins({
   "VCCB": "11",
   "OE": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", GND: "power_in", B4: "tri_state", B3: "tri_state", B2: "tri_state", B1: "tri_state", VCCB: "power_in", OE: "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104RUT";
@@ -1093,7 +1130,8 @@ export class TXB0104YZT extends Component.withPins({
   "GND": "D2",
   "A4": "D3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B1: "bidirectional", VCCB: "power_in", A1: "bidirectional", B2: "bidirectional", VCCA: "power_in", A2: "bidirectional", B3: "bidirectional", OE: "input", A3: "bidirectional", B4: "bidirectional", GND: "power_in", A4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104YZT";
@@ -1123,7 +1161,8 @@ export class TXB0104ZXU extends Component.withPins({
   "B3": "C3",
   "B4": "C4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", VCCB: "power_in", VCCA: "power_in", OE: "input", GND: "power_in", B1: "bidirectional", B2: "bidirectional", B3: "bidirectional", B4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0104ZXU";
@@ -1157,7 +1196,8 @@ export class TXB0106PW extends Component.withPins({
   "V_{CCB}": "15",
   "B1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "bidirectional", "V_{CCA}": "power_in", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", OE: "input", GND: "power_in", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", "V_{CCB}": "power_in", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0106PW";
@@ -1192,7 +1232,8 @@ export class TXB0106RGY extends Component.withPins({
   "B1": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "bidirectional", "V_{CCA}": "power_in", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", OE: "input", GND_9: "power_in", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", "V_{CCB}": "power_in", B1: "bidirectional", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0106RGY";
@@ -1230,7 +1271,8 @@ export class TXB0108DQSR extends Component.withPins({
   "B2": "19",
   "B1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", VCCA: "power_in", OE: "input", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", GND: "power_in", VCCB: "power_in", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0108DQSR";
@@ -1268,7 +1310,8 @@ export class TXB0108PW extends Component.withPins({
   "V_{CCB}": "19",
   "B1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "bidirectional", "V_{CCA}": "power_in", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", OE: "input", GND: "power_in", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", "V_{CCB}": "power_in", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0108PW";
@@ -1307,7 +1350,8 @@ export class TXB0108RGY extends Component.withPins({
   "B1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "bidirectional", "V_{CCA}": "power_in", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", OE: "input", GND_11: "power_in", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", "V_{CCB}": "power_in", B1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0108RGY";
@@ -1337,7 +1381,8 @@ export class TXB0304RUT extends Component.withPins({
   "VCCB": "11",
   "OE": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", GND: "power_in", B4: "tri_state", B3: "tri_state", B2: "tri_state", B1: "tri_state", VCCB: "power_in", OE: "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXB0304RUT";
@@ -1367,7 +1412,8 @@ export class TXBN0304RUT extends Component.withPins({
   "VCCB": "11",
   "~{OE}": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", GND: "power_in", B4: "tri_state", B3: "tri_state", B2: "tri_state", B1: "tri_state", VCCB: "power_in", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXBN0304RUT";
@@ -1391,7 +1437,8 @@ export class TXS0101DBV extends Component.withPins({
   "OE": "5",
   "V_{CCB}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", OE: "input", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0101DBV";
@@ -1415,7 +1462,8 @@ export class TXS0101DCK extends Component.withPins({
   "OE": "5",
   "V_{CCB}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", OE: "input", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0101DCK";
@@ -1439,7 +1487,8 @@ export class TXS0101DRL extends Component.withPins({
   "OE": "5",
   "V_{CCB}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", GND: "power_in", A: "bidirectional", B: "bidirectional", OE: "input", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0101DRL";
@@ -1463,7 +1512,8 @@ export class TXS0101YZP extends Component.withPins({
   "A": "C1",
   "B": "C2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CCA}": "power_in", "V_{CCB}": "power_in", GND: "power_in", OE: "input", A: "bidirectional", B: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0101YZP";
@@ -1489,7 +1539,8 @@ export class TXS0102DCT extends Component.withPins({
   "VCCB": "7",
   "B1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B2: "bidirectional", GND: "power_in", VCCA: "power_in", A2: "bidirectional", A1: "bidirectional", OE: "input", VCCB: "power_in", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0102DCT";
@@ -1515,7 +1566,8 @@ export class TXS0102DCU extends Component.withPins({
   "VCCB": "7",
   "B1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B2: "bidirectional", GND: "power_in", VCCA: "power_in", A2: "bidirectional", A1: "bidirectional", OE: "input", VCCB: "power_in", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0102DCU";
@@ -1541,7 +1593,8 @@ export class TXS0102DQE extends Component.withPins({
   "B1": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", A1: "bidirectional", A2: "bidirectional", GND: "power_in", OE: "input", B2: "bidirectional", B1: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0102DQE";
@@ -1567,7 +1620,8 @@ export class TXS0102YZP extends Component.withPins({
   "A2": "D1",
   "A1": "D2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B2: "bidirectional", B1: "bidirectional", GND: "power_in", VCCB: "power_in", VCCA: "power_in", OE: "input", A2: "bidirectional", A1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0102YZP";
@@ -1599,7 +1653,8 @@ export class TXS0104EPW extends Component.withPins({
   "B1": "13",
   "V_{CCB}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_6: "no_connect", NC_9: "no_connect", "V_{CCA}": "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", GND: "power_in", OE: "input", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0104EPW";
@@ -1631,7 +1686,8 @@ export class TXS0104ED extends Component.withPins({
   "B1": "13",
   "V_{CCB}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_6: "no_connect", NC_9: "no_connect", "V_{CCA}": "power_in", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", GND: "power_in", OE: "input", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", "V_{CCB}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0104ED";
@@ -1669,7 +1725,8 @@ export class TXS0108EPW extends Component.withPins({
   "VCCB": "19",
   "B1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "bidirectional", VCCA: "power_in", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", OE: "input", GND: "power_in", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", VCCB: "power_in", B1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS0108EPW";
@@ -1712,7 +1769,8 @@ export class TXS02612RTW extends Component.withPins({
   "SEL": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DAT2A: "bidirectional", GND_2: "power_in", DAT3A: "bidirectional", CMDA: "bidirectional", "V_{CCA}": "power_in", DAT0A: "bidirectional", DAT1A: "bidirectional", "DAT2_{B1}": "bidirectional", CLKA: "input", "DAT3_{B1}": "bidirectional", GND_11: "passive", "CMD_{B1}": "bidirectional", "CLK_{B1}": "output", "DAT0_{B1}": "bidirectional", "DAT1_{B1}": "bidirectional", "DAT1_{B0}": "bidirectional", "VCC_{B1}": "power_in", "DAT0_{B0}": "bidirectional", "CLK_{B0}": "output", "CMD_{B0}": "bidirectional", "VCC_{B0}": "power_in", "DAT3_{B0}": "bidirectional", "DAT2_{B0}": "bidirectional", SEL: "input", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Logic_LevelTranslator:TXS02612RTW";

@@ -16,7 +16,8 @@ export class IRM_H6xxT extends Component.withPins({
   "OUT": "3",
   "Vcc": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", OUT: "output", Vcc: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:IRM-H6xxT";
@@ -38,7 +39,8 @@ export class IS471F extends Component.withPins({
   "GND": "3",
   "GLo": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vs: "power_in", OUT: "output", GND: "power_in", GLo: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:IS471F";
@@ -59,7 +61,8 @@ export class IS485 extends Component.withPins({
   "OUT": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUT: "output", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:IS485";
@@ -80,7 +83,8 @@ export class IS486 extends Component.withPins({
   "OUT": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUT: "output", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:IS486";
@@ -101,7 +105,8 @@ export class QSE159 extends Component.withPins({
   "Out": "2",
   "Vcc": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", Out: "output", Vcc: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:QSE159";
@@ -139,7 +144,8 @@ export class SFP extends Component.withPins({
   "VeeT_20": "20",
   "PCAGE": "CAGE",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VeeT_1: "power_in", TX_FAULT: "open_collector", TX_DISABLE: "input", MOD_DEF2: "bidirectional", MOD_DEF1: "input", MOD_DEF0: "passive", RATE_SELECT: "input", RX_LOS: "open_collector", VeeR_9: "passive", VeeR_10: "power_in", VeeR_11: "passive", "RD-": "output", "RD+": "output", VeeR_14: "passive", VccR: "power_in", VccT: "power_in", VeeT_17: "passive", "TD+": "input", "TD-": "input", VeeT_20: "passive", PCAGE: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:SFP";
@@ -177,7 +183,8 @@ export class SFP_ extends Component.withPins({
   "VeeT_20": "20",
   "PCAGE": "CAGE",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VeeT_1: "power_in", TX_FAULT: "open_collector", TX_DISABLE: "input", SDA: "bidirectional", SCL: "input", MOD_ABS: "passive", RS0: "input", RX_LOS: "open_collector", RS1: "input", VeeR_10: "power_in", VeeR_11: "passive", "RD-": "output", "RD+": "output", VeeR_14: "passive", VccR: "power_in", VccT: "power_in", VeeT_17: "passive", "TD+": "input", "TD-": "input", VeeT_20: "passive", PCAGE: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:SFP+";
@@ -198,7 +205,8 @@ export class TSDP341xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSDP341xx";
@@ -219,7 +227,8 @@ export class TSDP343xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSDP343xx";
@@ -240,7 +249,8 @@ export class TSMP58138 extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSMP58138";
@@ -261,7 +271,8 @@ export class TSMP58000 extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSMP58000";
@@ -282,7 +293,8 @@ export class TSOP17xx extends Component.withPins({
   "Vs": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", Vs: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP17xx";
@@ -303,7 +315,8 @@ export class TSOP32S40F extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP32S40F";
@@ -324,7 +337,8 @@ export class TSOP21xx extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP21xx";
@@ -345,7 +359,8 @@ export class TSOP23xx extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP23xx";
@@ -366,7 +381,8 @@ export class TSOP25xx extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP25xx";
@@ -387,7 +403,8 @@ export class TSOP312xx extends Component.withPins({
   "Vs": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", Vs: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP312xx";
@@ -408,7 +425,8 @@ export class TSOP314xx extends Component.withPins({
   "Vs": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", Vs: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP314xx";
@@ -429,7 +447,8 @@ export class TSOP321xx extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP321xx";
@@ -450,7 +469,8 @@ export class TSOP323xx extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP323xx";
@@ -471,7 +491,8 @@ export class TSOP325xx extends Component.withPins({
   "Vs": "2",
   "GND": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", Vs: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP325xx";
@@ -492,7 +513,8 @@ export class TSOP331xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP331xx";
@@ -513,7 +535,8 @@ export class TSOP333xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP333xx";
@@ -534,7 +557,8 @@ export class TSOP335xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP335xx";
@@ -555,7 +579,8 @@ export class TSOP341xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP341xx";
@@ -576,7 +601,8 @@ export class TSOP343xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP343xx";
@@ -597,7 +623,8 @@ export class TSOP345xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP345xx";
@@ -618,7 +645,8 @@ export class TSOP348xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP348xx";
@@ -639,7 +667,8 @@ export class TSOP34S40F extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP34S40F";
@@ -660,7 +689,8 @@ export class TSOP581xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP581xx";
@@ -681,7 +711,8 @@ export class TSOP382xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP382xx";
@@ -702,7 +733,8 @@ export class TSOP384xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP384xx";
@@ -723,7 +755,8 @@ export class TSOP38G36 extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP38G36";
@@ -744,7 +777,8 @@ export class TSOP41xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP41xx";
@@ -765,7 +799,8 @@ export class TSOP43xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP43xx";
@@ -786,7 +821,8 @@ export class TSOP45xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP45xx";
@@ -807,7 +843,8 @@ export class TSOP531xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP531xx";
@@ -828,7 +865,8 @@ export class TSOP533xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP533xx";
@@ -849,7 +887,8 @@ export class TSOP535xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP535xx";
@@ -870,7 +909,8 @@ export class TSOP582xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP582xx";
@@ -891,7 +931,8 @@ export class TSOP583xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP583xx";
@@ -912,7 +953,8 @@ export class TSOP584xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP584xx";
@@ -933,7 +975,8 @@ export class TSOP585xx extends Component.withPins({
   "GND": "2",
   "Vs": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT: "output", GND: "power_in", Vs: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Optical:TSOP585xx";

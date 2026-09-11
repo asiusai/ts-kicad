@@ -26,7 +26,8 @@ export class DS7820 extends Component.withPins({
   "INPUT_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPUT_1: "input", TERMINATION_2: "input", INPUT_3: "input", STROBE_4: "input", RESPONSE_TIME_5: "input", OUTPUT_6: "input", GND: "power_in", OUTPUT_8: "output", RESPONSE_TIME_9: "input", STROBE_10: "input", INPUT_11: "input", TERMINATION_12: "input", INPUT_13: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:DS7820";
@@ -58,7 +59,8 @@ export class DS7830 extends Component.withPins({
   "B_1": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "input", A_2: "input", A_3: "input", A_4: "input", A_AND_OUTPUT: "input", A_NAND_OUTPUT: "input", GND: "power_in", B_NAND_OUTPUT: "input", B_AND_OUTPUT: "input", B_4: "input", B_3: "input", B_2: "input", B_1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:DS7830";
@@ -90,7 +92,8 @@ export class DS8830 extends Component.withPins({
   "B_1": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "input", A_2: "input", A_3: "input", A_4: "input", A_AND_OUTPUT: "input", A_NAND_OUTPUT: "input", GND: "power_in", B_NAND_OUTPUT: "input", B_AND_OUTPUT: "input", B_4: "input", B_3: "input", B_2: "input", B_1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:DS8830";
@@ -116,7 +119,8 @@ export class DS89C21 extends Component.withPins({
   "~{RI}": "7",
   "RI": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", "~{DO}": "output", DO: "output", "~{RI}": "input", RI: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:DS89C21";
@@ -142,7 +146,8 @@ export class EL7242C extends Component.withPins({
   "IN_4": "4",
   "OUT_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V+": "power_in", IN1_1: "input", IN_2: "input", OUT_7: "output", IN1_3: "input", IN_4: "input", OUT_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:EL7242C";
@@ -176,7 +181,8 @@ export class MC3486N extends Component.withPins({
   "E+_14": "14",
   "E-_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "E-_1": "input", "E+_2": "input", OUT_3: "tri_state", ENABLE_4: "input", GND: "power_in", VCC: "power_in", OUT_5: "tri_state", "E+_6": "input", "E-_7": "input", "E-_9": "input", "E+_10": "input", OUT_11: "tri_state", ENABLE_12: "input", OUT_13: "tri_state", "E+_14": "input", "E-_15": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:MC3486N";
@@ -210,7 +216,8 @@ export class MC3487DX extends Component.withPins({
   "OUT+_14": "14",
   "INPUT_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPUT_1: "input", "OUT+_2": "tri_state", "OUT-_3": "tri_state", ENABLE_4: "input", GND: "power_in", VCC: "power_in", "OUT-_5": "tri_state", "OUT+_6": "tri_state", INPUT_7: "input", INPUT_9: "input", "OUT+_10": "tri_state", "OUT-_11": "tri_state", ENABLE_12: "input", "OUT-_13": "tri_state", "OUT+_14": "tri_state", INPUT_15: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:MC3487DX";
@@ -244,7 +251,8 @@ export class MC3487N extends Component.withPins({
   "OUT+_14": "14",
   "INPUT_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INPUT_1: "input", "OUT+_2": "tri_state", "OUT-_3": "tri_state", ENABLE_4: "input", GND: "power_in", VCC: "power_in", "OUT-_5": "tri_state", "OUT+_6": "tri_state", INPUT_7: "input", INPUT_9: "input", "OUT+_10": "tri_state", "OUT-_11": "tri_state", ENABLE_12: "input", "OUT-_13": "tri_state", "OUT+_14": "tri_state", INPUT_15: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:MC3487N";
@@ -270,7 +278,8 @@ export class UA9637 extends Component.withPins({
   "IN-_5": "5",
   "IN+_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", OUT_2: "output", GND: "power_in", "IN-_7": "input", "IN+_8": "input", OUT_3: "output", "IN-_5": "input", "IN+_6": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9637";
@@ -296,7 +305,8 @@ export class UA9638CD extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CD";
@@ -322,7 +332,8 @@ export class UA9638CDE4 extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CDE4";
@@ -348,7 +359,8 @@ export class UA9638CDG4 extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CDG4";
@@ -374,7 +386,8 @@ export class UA9638CDR extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CDR";
@@ -400,7 +413,8 @@ export class UA9638CDRG4 extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CDRG4";
@@ -426,7 +440,8 @@ export class UA9638CP extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CP";
@@ -452,7 +467,8 @@ export class UA9638CPE4 extends Component.withPins({
   "OUTA_5": "5",
   "OUTB_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN_2: "input", GND: "power_in", OUTA_7: "output", OUTB_8: "output", IN_3: "input", OUTA_5: "output", OUTB_6: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_LineDriver:UA9638CPE4";

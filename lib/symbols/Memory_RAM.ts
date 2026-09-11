@@ -20,7 +20,8 @@ export class _23AA02M_ISN extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", "V_{SS}": "power_in", "SI/SIO0": "bidirectional", SCK: "input", "~{HOLD}/SIO3": "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:23AA02M-ISN";
@@ -46,7 +47,8 @@ export class _23AA02M_IP extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", "V_{SS}": "power_in", "SI/SIO0": "bidirectional", SCK: "input", "~{HOLD}/SIO3": "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:23AA02M-IP";
@@ -72,7 +74,8 @@ export class _23AA02M_IST extends Component.withPins({
   "~{HOLD}/SIO3": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", "V_{SS}": "power_in", "SI/SIO0": "bidirectional", SCK: "input", "~{HOLD}/SIO3": "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:23AA02M-IST";
@@ -98,7 +101,8 @@ export class APS1604M_SQRx_SN extends Component.withPins({
   "SIO3": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS1604M-SQRx-SN";
@@ -124,7 +128,8 @@ export class APS1604M_3SQRx_SN extends Component.withPins({
   "SIO3": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS1604M-3SQRx-SN";
@@ -151,7 +156,8 @@ export class APS1604M_SQRx_ZR extends Component.withPins({
   "VDD": "8",
   "EPAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS1604M-SQRx-ZR";
@@ -178,7 +184,8 @@ export class APS1604M_3SQRx_ZR extends Component.withPins({
   "VDD": "8",
   "EPAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS1604M-3SQRx-ZR";
@@ -204,7 +211,8 @@ export class APS6404L_SQRx_SN extends Component.withPins({
   "SIO3": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS6404L-SQRx-SN";
@@ -230,7 +238,8 @@ export class APS6404L_3SQRx_SN extends Component.withPins({
   "SIO3": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS6404L-3SQRx-SN";
@@ -257,7 +266,8 @@ export class APS6404L_SQRx_ZR extends Component.withPins({
   "VDD": "8",
   "EPAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS6404L-SQRx-ZR";
@@ -284,7 +294,8 @@ export class APS6404L_3SQRx_ZR extends Component.withPins({
   "VDD": "8",
   "EPAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO1": "bidirectional", SIO2: "bidirectional", VSS: "power_in", "SI/SIO0": "bidirectional", SCLK: "input", SIO3: "bidirectional", VDD: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:APS6404L-3SQRx-ZR";
@@ -398,7 +409,8 @@ export class AS4C256M16D3 extends Component.withPins({
   "VREFCA": "M8",
   "BA1": "N8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDQ_A1: "power_in", VDDQ_A8: "passive", VSS_A9: "power_in", VSSQ_B1: "power_in", VDD_B2: "power_in", VSS_B3: "passive", VSSQ_B9: "passive", VDDQ_C1: "passive", VDDQ_C9: "passive", VSSQ_D1: "passive", VDDQ_D2: "passive", VSSQ_D8: "passive", VDD_D9: "passive", VSS_E1: "passive", VSSQ_E2: "passive", DQ0: "bidirectional", VSSQ_E8: "passive", VDDQ_E9: "passive", VDDQ_F1: "passive", DQ2: "bidirectional", DQ1: "bidirectional", DQ3: "bidirectional", VSSQ_F9: "passive", VSSQ_G1: "passive", DQ6: "bidirectional", VDD_G7: "passive", VSS_G8: "passive", VSSQ_G9: "passive", VREFDQ: "power_in", VDDQ_H2: "passive", DQ4: "bidirectional", DQ7: "bidirectional", DQ5: "bidirectional", VDDQ_H9: "passive", VSS_J2: "passive", VSS_J8: "passive", VDD_K2: "passive", VDD_K8: "passive", "~{CS}": "input", "A10/AP": "input", VSS_M1: "passive", VSS_M9: "passive", VDD_N1: "passive", A3: "input", A0: "input", "A12/~{BC}": "input", VDD_N9: "passive", VSS_P1: "passive", A5: "input", A2: "input", A1: "input", A4: "input", VSS_P9: "passive", VDD_R1: "passive", A7: "input", A9: "input", A11: "input", A6: "input", VDD_R9: "passive", VSS_T1: "passive", "~{RESET}": "input", A13: "input", A14: "input", A8: "input", VSS_T9: "passive", DQ13: "bidirectional", DQ15: "bidirectional", DQ12: "bidirectional", "~{UDQS}": "bidirectional", DQ14: "bidirectional", DQ11: "bidirectional", DQ9: "bidirectional", UDQS: "bidirectional", DQ10: "bidirectional", UDM: "input", DQ8: "bidirectional", LDM: "input", LDQS: "bidirectional", "~{LDQS}": "bidirectional", NC_J1: "no_connect", "~{RAS}": "input", CK: "input", NC_J9: "no_connect", ODT: "input", "~{CAS}": "input", "~{CK}": "input", CKE: "input", NC_L1: "no_connect", "~{WE}": "input", ZQ: "input", NC_L9: "no_connect", BA0: "input", BA2: "input", NC_M7: "no_connect", VREFCA: "power_in", BA1: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS4C256M16D3";
@@ -470,7 +482,8 @@ export class AS4C4M16SA extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", "A10/AP": "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC: "no_connect", CKE: "input", CLK: "input", UDQM: "input", "NC/RFU": "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS4C4M16SA";
@@ -524,7 +537,8 @@ export class AS6C1008_xxB extends Component.withPins({
   "A13": "H5",
   "A14": "H6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_D1: "power_in", VCC_D6: "power_in", VCC_E1: "passive", GND_E6: "passive", NC_F3: "no_connect", NC_F4: "no_connect", A0: "input", A1: "input", "CS2/CE2": "input", A3: "input", A6: "input", A8: "input", DQ4: "tri_state", A2: "input", "~{WE}": "input", A4: "input", A7: "input", DQ0: "tri_state", DQ5: "tri_state", NC_C3: "no_connect", A5: "input", DQ1: "tri_state", DQ6: "tri_state", DQ2: "tri_state", DQ7: "tri_state", "~{OE}": "input", "~{CS1}/~{CE1}": "input", A16: "input", A15: "input", DQ3: "tri_state", A9: "input", A10: "input", A11: "input", A12: "input", A13: "input", A14: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C1008-xxB";
@@ -574,7 +588,8 @@ export class AS6C1008_xxP extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C1008-xxP";
@@ -624,7 +639,8 @@ export class AS6C1008_xxS extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C1008-xxS";
@@ -674,7 +690,8 @@ export class AS6C1008_xxT extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C1008-xxT";
@@ -724,7 +741,8 @@ export class AS6C1008_xxST extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C1008-xxST";
@@ -790,7 +808,8 @@ export class AS6C1616 extends Component.withPins({
   "NC_47": "47",
   "A16": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A15: "input", A14: "input", A13: "input", A12: "input", A11: "input", A10: "input", A9: "input", A8: "input", A19: "input", NC_10: "no_connect", "WE#": "input", CE2: "input", NC_13: "no_connect", "UB#": "input", "LB#": "input", A18: "input", A17: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "CE#": "input", VSS_27: "power_in", "OE#": "input", DQ0: "bidirectional", DQ8: "bidirectional", DQ1: "bidirectional", DQ9: "bidirectional", DQ2: "bidirectional", DQ10: "bidirectional", DQ3: "bidirectional", DQ11: "bidirectional", VCC: "power_in", DQ4: "bidirectional", DQ12: "bidirectional", DQ5: "bidirectional", DQ13: "bidirectional", DQ6: "bidirectional", DQ14: "bidirectional", DQ7: "bidirectional", DQ15: "input", VSS_46: "power_in", NC_47: "no_connect", A16: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C1616";
@@ -840,7 +859,8 @@ export class AS6C4008_55PCN extends Component.withPins({
   "A17": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VCC: "power_in", A18: "input", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "CE#": "input", A10: "input", "OE#": "input", A11: "input", A9: "input", A8: "input", A13: "input", "WE#": "input", A17: "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS6C4008-55PCN";
@@ -889,7 +909,8 @@ export class HM628128_DIP32_SOP32 extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HM628128_DIP32_SOP32";
@@ -939,7 +960,8 @@ export class AS7C1024B_xxJ extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C1024B-xxJ";
@@ -988,7 +1010,8 @@ export class HM628128_TSOP32 extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HM628128_TSOP32";
@@ -1038,7 +1061,8 @@ export class AS7C1024B_xxT extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C1024B-xxT";
@@ -1088,7 +1112,8 @@ export class AS7C1024B_xxTJ extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C1024B-xxTJ";
@@ -1138,7 +1163,8 @@ export class AS7C31024B_xxJ extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C31024B-xxJ";
@@ -1188,7 +1214,8 @@ export class AS7C31024B_xxT extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C31024B-xxT";
@@ -1238,7 +1265,8 @@ export class AS7C31024B_xxST extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C31024B-xxST";
@@ -1288,7 +1316,8 @@ export class AS7C31024B_xxTJ extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:AS7C31024B-xxTJ";
@@ -1338,7 +1367,8 @@ export class CY62128EV30xx_xxS extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:CY62128EV30xx-xxS";
@@ -1388,7 +1418,8 @@ export class CY62128EV30xx_xxZ extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:CY62128EV30xx-xxZ";
@@ -1438,7 +1469,8 @@ export class CY62128Exx_xxS extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:CY62128Exx-xxS";
@@ -1488,7 +1520,8 @@ export class CY62128Exx_xxZ extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:CY62128Exx-xxZ";
@@ -1534,7 +1567,8 @@ export class KM62256CLP extends Component.withPins({
   "A13": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", Q0: "tri_state", Q1: "tri_state", Q2: "tri_state", Q3: "tri_state", Q4: "tri_state", Q5: "tri_state", Q6: "tri_state", Q7: "tri_state", "~{CS}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:KM62256CLP";
@@ -1580,7 +1614,8 @@ export class CY62256_70PC extends Component.withPins({
   "A13": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", Q0: "tri_state", Q1: "tri_state", Q2: "tri_state", Q3: "tri_state", Q4: "tri_state", Q5: "tri_state", Q6: "tri_state", Q7: "tri_state", "~{CS}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:CY62256-70PC";
@@ -1622,7 +1657,8 @@ export class CY7C199 extends Component.withPins({
   "A4": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A10: "input", A11: "input", A12: "input", A13: "input", A14: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", "~{CE}": "input", A0: "input", "~{OE}": "input", A1: "input", A2: "input", A3: "input", A4: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:CY7C199";
@@ -1648,7 +1684,8 @@ export class ESP_PSRAM32 extends Component.withPins({
   "SIO3": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CE}": "input", "SO/SIO": "output", SIO2: "bidirectional", VSS: "power_in", "SI/SIO": "input", SCLK: "output", SIO3: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:ESP-PSRAM32";
@@ -1762,7 +1799,8 @@ export class MT40A512M16JY extends Component.withPins({
   "A13": "T8",
   "V_{DD}_T9": "T9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DDQ}_A1": "power_in", "V_{SSQ}_A2": "power_in", DQ8: "bidirectional", UDQS_c: "bidirectional", "V_{SSQ}_A8": "passive", "V_{DDQ}_A9": "passive", "V_{PP}_B1": "power_in", "V_{SS}_B2": "power_in", "V_{DD}_B3": "passive", UDQS_t: "bidirectional", DQ9: "bidirectional", "V_{DD}_B9": "power_in", "V_{DDQ}_C1": "passive", DQ12: "bidirectional", DQ10: "bidirectional", DQ11: "bidirectional", DQ13: "bidirectional", "V_{SSQ}_C9": "passive", "V_{DD}_D1": "passive", "V_{SSQ}_D2": "passive", DQ14: "bidirectional", DQ15: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DDQ}_D9": "passive", "V_{SS}_E1": "passive", "NF/~{UDM}/~{UDBI}": "bidirectional", "V_{SSQ}_E3": "passive", "NF/~{LDM}/~{LDBI}": "bidirectional", "V_{SSQ}_E8": "passive", "V_{SS}_E9": "passive", "V_{SSQ}_F1": "passive", "V_{DDQ}_F2": "passive", LDQS_c: "bidirectional", DQ1: "bidirectional", "V_{DDQ}_F8": "passive", ZQ: "passive", "V_{DDQ}_G1": "passive", DQ0: "bidirectional", LDQS_t: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{DDQ}_G9": "passive", "V_{SSQ}_H1": "passive", DQ4: "bidirectional", DQ2: "bidirectional", DQ3: "bidirectional", DQ5: "bidirectional", "V_{SSQ}_H9": "passive", "V_{DD}_J1": "passive", "V_{DDQ}_J2": "passive", DQ6: "bidirectional", DQ7: "bidirectional", "V_{DDQ}_J8": "passive", "V_{DD}_J9": "passive", "V_{SS}_K1": "passive", CKE: "input", ODT: "input", CK_t: "input", CK_c: "input", "V_{SS}_K9": "passive", "V_{DD}_L1": "passive", "A14/~{WE}": "input", "~{ACT}": "input", "~{CS}": "input", "A16/~{RAS}": "input", "V_{DD}_L9": "passive", "V_{REFCA}": "passive", BG0: "input", "A10/AP": "input", "A12/~{BC}": "input", "A15/~{CAS}": "input", "V_{SS}_M9": "passive", "V_{SS}_N1": "passive", BA0: "input", A4: "input", A3: "input", BA1: "input", TEN: "input", "~{RESET}": "input", A6: "input", A0: "input", A1: "input", A5: "input", "~{ALERT}": "open_collector", "V_{DD}_R1": "passive", A8: "input", A2: "input", A9: "input", A7: "input", "V_{PP}_R9": "passive", "V_{SS}_T1": "passive", A11: "input", PAR: "input", "NF/NC": "no_connect", A13: "input", "V_{DD}_T9": "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT40A512M16JY";
@@ -1876,7 +1914,8 @@ export class H5AN8G6NAFR_xxC extends Component.withPins({
   "A13": "T8",
   "V_{DD}_T9": "T9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DDQ}_A1": "power_in", "V_{SSQ}_A2": "power_in", DQ8: "bidirectional", UDQS_c: "bidirectional", "V_{SSQ}_A8": "passive", "V_{DDQ}_A9": "passive", "V_{PP}_B1": "power_in", "V_{SS}_B2": "power_in", "V_{DD}_B3": "passive", UDQS_t: "bidirectional", DQ9: "bidirectional", "V_{DD}_B9": "power_in", "V_{DDQ}_C1": "passive", DQ12: "bidirectional", DQ10: "bidirectional", DQ11: "bidirectional", DQ13: "bidirectional", "V_{SSQ}_C9": "passive", "V_{DD}_D1": "passive", "V_{SSQ}_D2": "passive", DQ14: "bidirectional", DQ15: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DDQ}_D9": "passive", "V_{SS}_E1": "passive", "NF/~{UDM}/~{UDBI}": "bidirectional", "V_{SSQ}_E3": "passive", "NF/~{LDM}/~{LDBI}": "bidirectional", "V_{SSQ}_E8": "passive", "V_{SS}_E9": "passive", "V_{SSQ}_F1": "passive", "V_{DDQ}_F2": "passive", LDQS_c: "bidirectional", DQ1: "bidirectional", "V_{DDQ}_F8": "passive", ZQ: "passive", "V_{DDQ}_G1": "passive", DQ0: "bidirectional", LDQS_t: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{DDQ}_G9": "passive", "V_{SSQ}_H1": "passive", DQ4: "bidirectional", DQ2: "bidirectional", DQ3: "bidirectional", DQ5: "bidirectional", "V_{SSQ}_H9": "passive", "V_{DD}_J1": "passive", "V_{DDQ}_J2": "passive", DQ6: "bidirectional", DQ7: "bidirectional", "V_{DDQ}_J8": "passive", "V_{DD}_J9": "passive", "V_{SS}_K1": "passive", CKE: "input", ODT: "input", CK_t: "input", CK_c: "input", "V_{SS}_K9": "passive", "V_{DD}_L1": "passive", "A14/~{WE}": "input", "~{ACT}": "input", "~{CS}": "input", "A16/~{RAS}": "input", "V_{DD}_L9": "passive", "V_{REFCA}": "passive", BG0: "input", "A10/AP": "input", "A12/~{BC}": "input", "A15/~{CAS}": "input", "V_{SS}_M9": "passive", "V_{SS}_N1": "passive", BA0: "input", A4: "input", A3: "input", BA1: "input", TEN: "input", "~{RESET}": "input", A6: "input", A0: "input", A1: "input", A5: "input", "~{ALERT}": "open_collector", "V_{DD}_R1": "passive", A8: "input", A2: "input", A9: "input", A7: "input", "V_{PP}_R9": "passive", "V_{SS}_T1": "passive", A11: "input", PAR: "input", "NF/NC": "no_connect", A13: "input", "V_{DD}_T9": "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:H5AN8G6NAFR-xxC";
@@ -1972,7 +2011,8 @@ export class H5AN8G8NAFR_UHC extends Component.withPins({
   "A13": "N8",
   "VDD_N9": "N9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_A1: "power_in", VSSQ_A2: "power_in", TDQS_c: "output", "TDQS_t/~{DM/DBI}": "bidirectional", VSSQ_A8: "passive", VSS_A9: "power_in", VPP_B1: "power_in", VDDQ_B2: "power_in", DQS_c: "bidirectional", DQ1: "bidirectional", VDDQ_B8: "passive", ZQ: "passive", VDDQ_C1: "passive", DQ0: "bidirectional", DQS_t: "bidirectional", VDD_C7: "passive", VSS_C8: "passive", VDDQ_C9: "passive", VSSQ_D1: "passive", DQ4: "bidirectional", DQ2: "bidirectional", DQ3: "bidirectional", DQ5: "bidirectional", VSSQ_D9: "passive", VSS_E1: "passive", VDDQ_E2: "passive", DQ6: "bidirectional", DQ7: "bidirectional", VDDQ_E8: "passive", VSS_E9: "passive", VDD_F1: "passive", "NC/C2/ODT1": "passive", ODT: "input", CK_t: "input", CK_c: "input", VDD_F9: "passive", VSS_G1: "passive", "NC/C0/CKE1": "passive", CKE: "input", "~{CS}": "input", "NC/C1/~{CS1}": "passive", TEN: "input", VDD_H1: "passive", "A14/~{WE}": "input", "~{ACT}": "input", "A15/~{CAS}": "input", "A16/~{RAS}": "input", VSS_H9: "passive", VREFCA: "passive", BG0: "input", "A10/AP": "input", "A12/~{BC}": "input", BG1: "input", VDD_J9: "passive", VSS_K1: "passive", BA0: "input", A4: "input", A3: "input", BA1: "input", VSS_K9: "passive", "~{RESET}": "input", A6: "input", A0: "input", A1: "input", A5: "input", "~{ALERT}": "open_collector", VDD_M1: "passive", A8: "input", A2: "input", A9: "input", A7: "input", VPP_M9: "passive", VSS_N1: "passive", A11: "input", PAR: "input", "A17/NC": "passive", A13: "input", VDD_N9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:H5AN8G8NAFR-UHC";
@@ -2006,7 +2046,8 @@ export class HM50256P extends Component.withPins({
   "Dout": "14",
   "~{CAS}": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A_{8}": "input", "V_{CC}": "power_in", "A_{7}": "input", "V_{SS}": "power_in", Din: "input", "~{WE}": "input", "~{RAS}": "input", "A_{0}": "input", "A_{2}": "input", "A_{1}": "input", "A_{5}": "input", "A_{4}": "input", "A_{3}": "input", "A_{6}": "input", Dout: "tri_state", "~{CAS}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HM50256P";
@@ -2052,7 +2093,8 @@ export class HM62256BLP extends Component.withPins({
   "A13": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", Q0: "tri_state", Q1: "tri_state", Q2: "tri_state", Q3: "tri_state", Q4: "tri_state", Q5: "tri_state", Q6: "tri_state", Q7: "tri_state", "~{CS}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HM62256BLP";
@@ -2101,7 +2143,8 @@ export class HM628128D_DIP32_SOP32 extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HM628128D_DIP32_SOP32";
@@ -2150,7 +2193,8 @@ export class HM628128D_TSOP32 extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HM628128D_TSOP32";
@@ -2196,7 +2240,8 @@ export class HY6264AxP extends Component.withPins({
   "CS2": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", CS2: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HY6264AxP";
@@ -2242,7 +2287,8 @@ export class HY6264AxJ extends Component.withPins({
   "CS2": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", CS2: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:HY6264AxJ";
@@ -2324,7 +2370,8 @@ export class IDT7006PF extends Component.withPins({
   "I/O0L": "63",
   "I/O1L": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "I/O2L": "bidirectional", "I/O3L": "bidirectional", "I/O4L": "bidirectional", "I/O5L": "bidirectional", GND_5: "power_in", "I/O6L": "bidirectional", "I/O7L": "bidirectional", VCC_8: "power_in", GND_9: "passive", "I/O0R": "bidirectional", "I/O1R": "bidirectional", "I/O2R": "bidirectional", VCC_13: "power_in", "I/O3R": "bidirectional", "I/O4R": "bidirectional", "I/O5R": "bidirectional", "I/O6R": "bidirectional", "I/O7R": "bidirectional", "~{OE}R": "input", "R/~{W}R": "input", "~{SEM}R": "input", "~{CE}R": "input", A13R: "input", GND_24: "passive", A12R: "input", A11R: "input", A10R: "input", A9R: "input", A8R: "input", A7R: "input", A6R: "input", A5R: "input", A4R: "input", A3R: "input", A2R: "input", A1R: "input", A0R: "input", "~{INT}R": "output", "~{BUSY}R": "output", "M/~{S}": "input", GND_41: "passive", "~{BUSY}L": "output", "~{INT}L": "output", A0L: "input", A1L: "input", A2L: "input", A3L: "input", A4L: "input", A5L: "input", A6L: "input", A7L: "input", A8L: "input", A9L: "input", A10L: "input", A11L: "input", A12L: "input", VCC_57: "power_in", A13L: "input", "~{CE}L": "input", "~{SEM}L": "input", "R/~{W}L": "input", "~{OE}L": "input", "I/O0L": "bidirectional", "I/O1L": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7006PF";
@@ -2430,7 +2477,8 @@ export class IDT7027_TQ100 extends Component.withPins({
   "A7L": "99",
   "A8L": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A9L: "input", A10L: "input", A11L: "input", A12L: "input", A13L: "input", A14L: "input", LBL: "input", UBL: "input", CE0L: "input", CE1L: "input", SEML: "input", VCC_15: "power_in", "R/WL": "input", OEL: "input", GND_18: "power_in", GND_19: "passive", "I/O15L": "bidirectional", "I/O14L": "bidirectional", "I/O13L": "bidirectional", "I/O12L": "bidirectional", "I/O11L": "bidirectional", "I/O10L": "bidirectional", "I/O9L": "bidirectional", "I/O8L": "bidirectional", VCC_28: "passive", "I/O7L": "bidirectional", "I/O6L": "bidirectional", "I/O5L": "bidirectional", "I/O4L": "bidirectional", "I/O3L": "bidirectional", "I/O2L": "bidirectional", GND_35: "passive", "I/O1L": "bidirectional", "I/O0L": "bidirectional", GND_38: "passive", "I/O0R": "bidirectional", "I/O1R": "bidirectional", "I/O2R": "bidirectional", "I/O3R": "bidirectional", "I/O4R": "bidirectional", "I/O5R": "bidirectional", "I/O6R": "bidirectional", VCC_46: "passive", "I/O7R": "bidirectional", "I/O8R": "bidirectional", "I/O9R": "bidirectional", "I/O10R": "bidirectional", "I/O11R": "bidirectional", "I/O12R": "bidirectional", "I/O13R": "bidirectional", "I/O14R": "bidirectional", "I/O15R": "bidirectional", GND_57: "passive", GND_58: "passive", OER: "input", "R/WR": "input", GND_61: "passive", SEMR: "input", CE1R: "input", CE0R: "input", UBR: "input", LBR: "input", A14R: "input", A13R: "input", A12R: "input", A11R: "input", A10R: "input", A9R: "input", A8R: "input", A7R: "input", A6R: "input", A5R: "input", A4R: "input", A3R: "input", A2R: "input", A1R: "input", A0R: "input", INTR: "output", BUSYR: "bidirectional", "M/S": "input", GND_88: "passive", BUSYL: "bidirectional", INTL: "output", A0L: "input", A1L: "input", A2L: "input", A3L: "input", A4L: "input", A5L: "input", A6L: "input", A7L: "input", A8L: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7027_TQ100";
@@ -2492,7 +2540,8 @@ export class IDT7132 extends Component.withPins({
   "/CER": "47",
   "VCC": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "/CEL": "input", "R/WL": "input", "/BSYL": "output", A10L: "input", "/OEL": "input", A0L: "input", A1L: "input", A2L: "input", A3L: "input", A4L: "input", A5L: "input", A6L: "input", A7L: "input", A8L: "input", A9L: "input", "I/O0L": "input", "I/O1L": "input", "I/O2L": "input", "I/O3L": "input", "I/O4L": "input", "I/O5L": "input", "I/O6L": "input", "I/O7L": "input", GND: "power_in", "I/O0R": "input", "I/O1R": "input", "I/O2R": "input", "I/O3R": "input", "I/O4R": "input", "I/O5R": "input", "I/O6R": "input", "I/O7R": "input", A9R: "input", A8R: "input", A7R: "input", A6R: "input", A5R: "input", A4R: "input", A3R: "input", A2R: "input", A1R: "input", A0R: "input", "/OER": "input", A10R: "input", "/BSYR": "output", "R/WR": "input", "/CER": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7132";
@@ -2630,7 +2679,8 @@ export class IDT71V65903S extends Component.withPins({
   "A16": "R10",
   "A17": "R11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A7: "input", "/CE1": "input", "/BW2": "input", "/CE2": "input", "/CEN": "input", "ADV/LD": "input", A18: "input", A8: "input", A10: "input", A6: "input", CE2: "input", "/BW1": "input", CLK: "input", "R/W": "input", "/OE": "input", A9: "input", VDDQ_C3: "power_in", VSS_C4: "passive", VSS_C5: "passive", VSS_C6: "passive", VSS_C7: "passive", VSS_C8: "passive", VDDQ_C9: "passive", IOP1: "bidirectional", IO8: "bidirectional", VDDQ_D3: "passive", VDD_D4: "passive", VSS_D5: "passive", VSS_D6: "passive", VSS_D7: "passive", VDD_D8: "passive", VDDQ_D9: "passive", IO7: "bidirectional", IO9: "bidirectional", VDDQ_E3: "passive", VDD_E4: "passive", VSS_E5: "passive", VSS_E6: "passive", VSS_E7: "passive", VDD_E8: "passive", VDDQ_E9: "passive", IO6: "bidirectional", IO10: "bidirectional", VDDQ_F3: "passive", VDD_F4: "passive", VSS_F5: "passive", VSS_F6: "passive", VSS_F7: "passive", VDD_F8: "passive", VDDQ_F9: "passive", IO5: "bidirectional", IO11: "bidirectional", VDDQ_G3: "passive", VDD_G4: "passive", VSS_G5: "passive", VSS_G6: "passive", VSS_G7: "passive", VDD_G8: "passive", VDDQ_G9: "passive", IO4: "bidirectional", VSSx_H1: "passive", VDDx: "passive", VDD_H4: "passive", VSS_H5: "passive", VSS_H6: "passive", VSS_H7: "passive", VDD_H8: "passive", ZZ: "input", IO12: "bidirectional", VDDQ_J3: "passive", VDD_J4: "passive", VSS_J5: "passive", VSS_J6: "passive", VSS_J7: "passive", VDD_J8: "passive", VDDQ_J9: "passive", IO3: "bidirectional", IO13: "bidirectional", VDDQ_K3: "passive", VDD_K4: "passive", VSS_K5: "passive", VSS_K6: "passive", VSS_K7: "passive", VDD_K8: "passive", VDDQ_K9: "passive", IO2: "bidirectional", IO14: "bidirectional", VDDQ_L3: "passive", VDD_L4: "passive", VSS_L5: "passive", VSS_L6: "passive", VSS_L7: "passive", VDD_L8: "passive", VDDQ_L9: "passive", IO1: "bidirectional", IO15: "bidirectional", VDDQ_M3: "passive", VDD_M4: "passive", VSS_M5: "passive", VSS_M6: "passive", VSS_M7: "passive", VDD_M8: "passive", VDDQ_M9: "passive", IO0: "bidirectional", IOP2: "bidirectional", VDDQ_N3: "passive", VSS_N4: "passive", VSSx_N7: "passive", VSS_N8: "passive", VDDQ_N9: "power_in", A5: "input", A2: "input", A1: "input", A11: "input", A14: "input", A15: "input", "/LBO": "input", A4: "input", A3: "input", A0: "input", A12: "input", A13: "input", A16: "input", A17: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT71V65903S";
@@ -2672,7 +2722,8 @@ export class IDT7201 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { WR: "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", XI: "input", FF: "output", Q0: "tri_state", Q1: "tri_state", Q2: "tri_state", Q3: "tri_state", Q8: "tri_state", VSS: "power_in", RD: "input", Q4: "tri_state", Q5: "tri_state", Q6: "tri_state", Q7: "tri_state", XO: "input", EF: "output", CLR: "input", FL: "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7201";
@@ -2714,7 +2765,8 @@ export class IDT7202 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { WR: "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", XI: "input", FF: "output", Q0: "tri_state", Q1: "tri_state", Q2: "tri_state", Q3: "tri_state", Q8: "tri_state", VSS: "power_in", RD: "input", Q4: "tri_state", Q5: "tri_state", Q6: "tri_state", Q7: "tri_state", XO: "input", EF: "output", CLR: "input", FL: "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7202";
@@ -2760,7 +2812,8 @@ export class IDT7204 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{W}": "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{XI}": "input", "~{FF}": "output", Q0: "output", Q1: "output", Q2: "output", Q3: "output", Q8: "output", GND: "power_in", "~{R}": "input", Q4: "output", Q5: "output", Q6: "output", Q7: "output", "~{HF}/~{XO}": "output", "~{EF}": "output", "~{RS}": "input", "~{FL}/~{RT}": "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7204";
@@ -2806,7 +2859,8 @@ export class IDT7203 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{W}": "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{XI}": "input", "~{FF}": "output", Q0: "output", Q1: "output", Q2: "output", Q3: "output", Q8: "output", GND: "power_in", "~{R}": "input", Q4: "output", Q5: "output", Q6: "output", Q7: "output", "~{HF}/~{XO}": "output", "~{EF}": "output", "~{RS}": "input", "~{FL}/~{RT}": "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7203";
@@ -2852,7 +2906,8 @@ export class IDT7205 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{W}": "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{XI}": "input", "~{FF}": "output", Q0: "output", Q1: "output", Q2: "output", Q3: "output", Q8: "output", GND: "power_in", "~{R}": "input", Q4: "output", Q5: "output", Q6: "output", Q7: "output", "~{HF}/~{XO}": "output", "~{EF}": "output", "~{RS}": "input", "~{FL}/~{RT}": "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7205";
@@ -2898,7 +2953,8 @@ export class IDT7206 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{W}": "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{XI}": "input", "~{FF}": "output", Q0: "output", Q1: "output", Q2: "output", Q3: "output", Q8: "output", GND: "power_in", "~{R}": "input", Q4: "output", Q5: "output", Q6: "output", Q7: "output", "~{HF}/~{XO}": "output", "~{EF}": "output", "~{RS}": "input", "~{FL}/~{RT}": "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7206";
@@ -2944,7 +3000,8 @@ export class IDT7207 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{W}": "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{XI}": "input", "~{FF}": "output", Q0: "output", Q1: "output", Q2: "output", Q3: "output", Q8: "output", GND: "power_in", "~{R}": "input", Q4: "output", Q5: "output", Q6: "output", Q7: "output", "~{HF}/~{XO}": "output", "~{EF}": "output", "~{RS}": "input", "~{FL}/~{RT}": "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7207";
@@ -2990,7 +3047,8 @@ export class IDT7208 extends Component.withPins({
   "D4": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{W}": "input", D8: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{XI}": "input", "~{FF}": "output", Q0: "output", Q1: "output", Q2: "output", Q3: "output", Q8: "output", GND: "power_in", "~{R}": "input", Q4: "output", Q5: "output", Q6: "output", Q7: "output", "~{HF}/~{XO}": "output", "~{EF}": "output", "~{RS}": "input", "~{FL}/~{RT}": "input", D7: "input", D6: "input", D5: "input", D4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IDT7208";
@@ -3062,7 +3120,8 @@ export class IS42S16400J_xC extends Component.withPins({
   "DQ15": "53",
   "GND_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", GNDQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", GNDQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", GND_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC_36: "no_connect", CKE: "input", CLK: "input", UDQM: "input", NC_40: "no_connect", GND_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", GNDQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", GNDQ_52: "passive", DQ15: "bidirectional", GND_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS42S16400J-xC";
@@ -3134,7 +3193,8 @@ export class IS42S16400J_xT extends Component.withPins({
   "DQ15": "53",
   "GND_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", GNDQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", GNDQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", GND_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC_36: "no_connect", CKE: "input", CLK: "input", UDQM: "input", NC_40: "no_connect", GND_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", GNDQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", GNDQ_52: "passive", DQ15: "bidirectional", GND_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS42S16400J-xT";
@@ -3352,7 +3412,8 @@ export class IS43LQ32256A_062BLI extends Component.withPins({
   "DQ9_B": "Y11",
   "VSS_Y12": "Y12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DNU_A1: "no_connect", DNU_A2: "no_connect", VSS_A3: "passive", VDD2_A4: "power_in", VDD2_A9: "passive", VSS_A10: "power_in", DNU_A11: "no_connect", DNU_A12: "no_connect", DNU_B1: "no_connect", DQ0_A: "bidirectional", VDDQ_B3: "passive", DQ7_A: "bidirectional", VDDQ_B5: "passive", VDDQ_B8: "passive", DQ15_A: "bidirectional", VDDQ_B10: "power_in", DQ8_A: "bidirectional", DNU_B12: "no_connect", VSS_C1: "passive", DQ1_A: "bidirectional", DMI0_A: "bidirectional", DQ6_A: "bidirectional", VSS_C5: "passive", VSS_C8: "passive", DQ14_A: "bidirectional", DMI1_A: "bidirectional", DQ9_A: "bidirectional", VSS_C12: "passive", VDDQ_D1: "passive", VSS_D2: "passive", DQS0_T_A: "bidirectional", VSS_D4: "passive", VDDQ_D5: "passive", VDDQ_D8: "passive", VSS_D9: "passive", DQS1_T_A: "bidirectional", VSS_D11: "passive", VDDQ_D12: "passive", VSS_E1: "passive", DQ2_A: "bidirectional", DQS0_C_A: "bidirectional", DQ5_A: "bidirectional", VSS_E5: "passive", VSS_E8: "passive", DQ13_A: "bidirectional", DQS1_C_A: "bidirectional", DQ10_A: "bidirectional", VSS_E12: "passive", VDD1_F1: "power_in", DQ3_A: "bidirectional", VDDQ_F3: "passive", DQ4_A: "bidirectional", VDD2_F5: "passive", VDD2_F8: "passive", DQ12_A: "bidirectional", VDDQ_F10: "passive", DQ11_A: "bidirectional", VDD1_F12: "passive", VSS_G1: "passive", ODT_CA_A: "input", VSS_G3: "passive", VDD1_G4: "passive", VSS_G5: "passive", VSS_G8: "passive", VDD1_G9: "passive", VSS_G10: "passive", VSS_G12: "passive", VDD2_H1: "passive", CA0_A: "input", NC_H3: "no_connect", CS0_A: "input", VDD2_H5: "passive", VDD2_H8: "passive", CA2_A: "input", CA3_A: "input", CA4_A: "input", VDD2_H12: "passive", VSS_J1: "passive", CA1_A: "input", VSS_J3: "passive", CKE0_A: "input", NC_J5: "no_connect", CK_T_A: "input", CK_C_A: "input", VSS_J10: "passive", CA5_A: "input", VSS_J12: "passive", VDD2_K1: "passive", VSS_K2: "passive", VDD2_K3: "passive", VSS_K4: "passive", NC_K5: "no_connect", NC_K8: "no_connect", VSS_K9: "passive", VDD2_K10: "passive", VSS_K11: "passive", VDD2_K12: "passive", ZQ0: "input", NC_A8: "no_connect", DNU_AA1: "no_connect", DQ0_B: "bidirectional", VDDQ_AA3: "passive", DQ7_B: "bidirectional", VDDQ_AA5: "passive", VDDQ_AA8: "passive", DQ15_B: "bidirectional", VDDQ_AA10: "power_in", DQ8_B: "bidirectional", DNU_AA12: "no_connect", DNU_AB1: "no_connect", DNU_AB2: "no_connect", VSS_AB3: "passive", VDD2_AB4: "power_in", VSS_AB5: "passive", VSS_AB8: "passive", VDD2_AB9: "passive", VSS_AB10: "power_in", DNU_AB11: "no_connect", DNU_AB12: "no_connect", NC_G11: "no_connect", VDD2_N1: "passive", VSS_N2: "passive", VDD2_N3: "passive", VSS_N4: "passive", NC_N5: "no_connect", NC_N8: "no_connect", VSS_N9: "passive", VDD2_N10: "passive", VSS_N11: "passive", VDD2_N12: "passive", VSS_P1: "passive", CA1_B: "input", VSS_P3: "passive", CKE0_B: "input", NC_P5: "no_connect", CK_T_B: "input", CK_C_B: "input", VSS_P10: "passive", CA5_B: "input", VSS_P12: "passive", VDD2_R1: "passive", CA0_B: "input", NC_R3: "no_connect", CS0_B: "input", VDD2_R5: "passive", VDD2_R8: "passive", CA2_B: "input", CA3_B: "input", CA4_B: "input", VDD2_R12: "passive", VSS_T1: "passive", ODT_CA_B: "input", VSS_T3: "passive", VDD1_T4: "power_in", VSS_T5: "passive", VSS_T8: "passive", VDD1_T9: "passive", VSS_T10: "passive", RESET_N: "input", VSS_T12: "passive", VDD1_U1: "passive", DQ3_B: "bidirectional", VDDQ_U3: "passive", DQ4_B: "bidirectional", VDD2_U5: "passive", VDD2_U8: "passive", DQ12_B: "bidirectional", VDDQ_U10: "passive", DQ11_B: "bidirectional", VDD1_U12: "passive", VSS_V1: "passive", DQ2_B: "bidirectional", DQS0_C_B: "bidirectional", DQ5_B: "bidirectional", VSS_V5: "passive", VSS_V8: "passive", DQ13_B: "bidirectional", DQS1_C_B: "bidirectional", DQ10_B: "bidirectional", VSS_V12: "passive", VDDQ_W1: "passive", VSS_W2: "passive", DQS0_T_B: "bidirectional", VSS_W4: "passive", VDDQ_W5: "passive", VDDQ_W8: "passive", VSS_W9: "passive", DQS1_T_B: "bidirectional", VSS_W11: "passive", VDDQ_W12: "passive", VSS_Y1: "passive", DQ1_B: "bidirectional", DMI0_B: "bidirectional", DQ6_B: "bidirectional", VSS_Y5: "passive", VSS_Y8: "passive", DQ14_B: "bidirectional", DMI1_B: "bidirectional", DQ9_B: "bidirectional", VSS_Y12: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS43LQ32256A-062BLI";
@@ -3570,7 +3631,8 @@ export class IS43LQ32256AL_062BLI extends Component.withPins({
   "DQ9_B": "Y11",
   "VSS_Y12": "Y12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DNU_A1: "no_connect", DNU_A2: "no_connect", VSS_A3: "passive", VDD2_A4: "power_in", VDD2_A9: "passive", VSS_A10: "power_in", DNU_A11: "no_connect", DNU_A12: "no_connect", DNU_B1: "no_connect", DQ0_A: "bidirectional", VDDQ_B3: "passive", DQ7_A: "bidirectional", VDDQ_B5: "passive", VDDQ_B8: "passive", DQ15_A: "bidirectional", VDDQ_B10: "power_in", DQ8_A: "bidirectional", DNU_B12: "no_connect", VSS_C1: "passive", DQ1_A: "bidirectional", DMI0_A: "bidirectional", DQ6_A: "bidirectional", VSS_C5: "passive", VSS_C8: "passive", DQ14_A: "bidirectional", DMI1_A: "bidirectional", DQ9_A: "bidirectional", VSS_C12: "passive", VDDQ_D1: "passive", VSS_D2: "passive", DQS0_T_A: "bidirectional", VSS_D4: "passive", VDDQ_D5: "passive", VDDQ_D8: "passive", VSS_D9: "passive", DQS1_T_A: "bidirectional", VSS_D11: "passive", VDDQ_D12: "passive", VSS_E1: "passive", DQ2_A: "bidirectional", DQS0_C_A: "bidirectional", DQ5_A: "bidirectional", VSS_E5: "passive", VSS_E8: "passive", DQ13_A: "bidirectional", DQS1_C_A: "bidirectional", DQ10_A: "bidirectional", VSS_E12: "passive", VDD1_F1: "power_in", DQ3_A: "bidirectional", VDDQ_F3: "passive", DQ4_A: "bidirectional", VDD2_F5: "passive", VDD2_F8: "passive", DQ12_A: "bidirectional", VDDQ_F10: "passive", DQ11_A: "bidirectional", VDD1_F12: "passive", VSS_G1: "passive", ODT_CA_A: "input", VSS_G3: "passive", VDD1_G4: "passive", VSS_G5: "passive", VSS_G8: "passive", VDD1_G9: "passive", VSS_G10: "passive", VSS_G12: "passive", VDD2_H1: "passive", CA0_A: "input", NC_H3: "no_connect", CS0_A: "input", VDD2_H5: "passive", VDD2_H8: "passive", CA2_A: "input", CA3_A: "input", CA4_A: "input", VDD2_H12: "passive", VSS_J1: "passive", CA1_A: "input", VSS_J3: "passive", CKE0_A: "input", NC_J5: "no_connect", CK_T_A: "input", CK_C_A: "input", VSS_J10: "passive", CA5_A: "input", VSS_J12: "passive", VDD2_K1: "passive", VSS_K2: "passive", VDD2_K3: "passive", VSS_K4: "passive", NC_K5: "no_connect", NC_K8: "no_connect", VSS_K9: "passive", VDD2_K10: "passive", VSS_K11: "passive", VDD2_K12: "passive", ZQ0: "input", NC_A8: "no_connect", DNU_AA1: "no_connect", DQ0_B: "bidirectional", VDDQ_AA3: "passive", DQ7_B: "bidirectional", VDDQ_AA5: "passive", VDDQ_AA8: "passive", DQ15_B: "bidirectional", VDDQ_AA10: "power_in", DQ8_B: "bidirectional", DNU_AA12: "no_connect", DNU_AB1: "no_connect", DNU_AB2: "no_connect", VSS_AB3: "passive", VDD2_AB4: "power_in", VSS_AB5: "passive", VSS_AB8: "passive", VDD2_AB9: "passive", VSS_AB10: "power_in", DNU_AB11: "no_connect", DNU_AB12: "no_connect", NC_G11: "no_connect", VDD2_N1: "passive", VSS_N2: "passive", VDD2_N3: "passive", VSS_N4: "passive", NC_N5: "no_connect", NC_N8: "no_connect", VSS_N9: "passive", VDD2_N10: "passive", VSS_N11: "passive", VDD2_N12: "passive", VSS_P1: "passive", CA1_B: "input", VSS_P3: "passive", CKE0_B: "input", NC_P5: "no_connect", CK_T_B: "input", CK_C_B: "input", VSS_P10: "passive", CA5_B: "input", VSS_P12: "passive", VDD2_R1: "passive", CA0_B: "input", NC_R3: "no_connect", CS0_B: "input", VDD2_R5: "passive", VDD2_R8: "passive", CA2_B: "input", CA3_B: "input", CA4_B: "input", VDD2_R12: "passive", VSS_T1: "passive", ODT_CA_B: "input", VSS_T3: "passive", VDD1_T4: "power_in", VSS_T5: "passive", VSS_T8: "passive", VDD1_T9: "passive", VSS_T10: "passive", RESET_N: "input", VSS_T12: "passive", VDD1_U1: "passive", DQ3_B: "bidirectional", VDDQ_U3: "passive", DQ4_B: "bidirectional", VDD2_U5: "passive", VDD2_U8: "passive", DQ12_B: "bidirectional", VDDQ_U10: "passive", DQ11_B: "bidirectional", VDD1_U12: "passive", VSS_V1: "passive", DQ2_B: "bidirectional", DQS0_C_B: "bidirectional", DQ5_B: "bidirectional", VSS_V5: "passive", VSS_V8: "passive", DQ13_B: "bidirectional", DQS1_C_B: "bidirectional", DQ10_B: "bidirectional", VSS_V12: "passive", VDDQ_W1: "passive", VSS_W2: "passive", DQS0_T_B: "bidirectional", VSS_W4: "passive", VDDQ_W5: "passive", VDDQ_W8: "passive", VSS_W9: "passive", DQS1_T_B: "bidirectional", VSS_W11: "passive", VDDQ_W12: "passive", VSS_Y1: "passive", DQ1_B: "bidirectional", DMI0_B: "bidirectional", DQ6_B: "bidirectional", VSS_Y5: "passive", VSS_Y8: "passive", DQ14_B: "bidirectional", DMI1_B: "bidirectional", DQ9_B: "bidirectional", VSS_Y12: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS43LQ32256AL-062BLI";
@@ -3624,7 +3686,8 @@ export class IS61C5128AL_10KLI extends Component.withPins({
   "A18": "35",
   "NC_36": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", "~{CE}": "input", "I/O0": "bidirectional", "I/O1": "bidirectional", VDD_9: "power_in", GND_10: "power_in", "I/O2": "bidirectional", "I/O3": "bidirectional", "~{WE}": "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", NC_19: "no_connect", A10: "input", A11: "input", A12: "input", A13: "input", A14: "input", "I/O4": "bidirectional", "I/O5": "bidirectional", VDD_27: "passive", GND_28: "passive", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{OE}": "input", A15: "input", A16: "input", A17: "input", A18: "input", NC_36: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS61C5128AL-10KLI";
@@ -3686,7 +3749,8 @@ export class IS61C5128AL_10TLI extends Component.withPins({
   "NC_43": "43",
   "NC_44": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", "~{CE}": "input", "I/O0": "bidirectional", "I/O1": "bidirectional", VDD_11: "power_in", GND_12: "power_in", "I/O2": "bidirectional", "I/O3": "bidirectional", "~{WE}": "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", A10: "input", A11: "input", A12: "input", A13: "input", A14: "input", "I/O4": "bidirectional", "I/O5": "bidirectional", VDD_33: "passive", GND_34: "passive", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{OE}": "input", A15: "input", A16: "input", A17: "input", A18: "input", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS61C5128AL-10TLI";
@@ -3736,7 +3800,8 @@ export class IS61C5128AS_25HLI extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", A18: "input", A15: "input", VDD: "power_in", A17: "input", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "bidirectional", "I/O1": "bidirectional", "I/O2": "bidirectional", GND: "power_in", "I/O3": "bidirectional", "I/O4": "bidirectional", "I/O5": "bidirectional", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{CE}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS61C5128AS-25HLI";
@@ -3786,7 +3851,8 @@ export class IS61C5128AS_25QLI extends Component.withPins({
   "A15": "31",
   "VDD": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A17: "input", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "bidirectional", "I/O1": "bidirectional", "I/O2": "bidirectional", GND: "power_in", "I/O3": "bidirectional", "I/O4": "bidirectional", "I/O5": "bidirectional", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{CE}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", A18: "input", A15: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS61C5128AS-25QLI";
@@ -3836,7 +3902,8 @@ export class IS61C5128AS_25TLI extends Component.withPins({
   "A15": "31",
   "VDD": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A17: "input", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "bidirectional", "I/O1": "bidirectional", "I/O2": "bidirectional", GND: "power_in", "I/O3": "bidirectional", "I/O4": "bidirectional", "I/O5": "bidirectional", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{CE}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", A18: "input", A15: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS61C5128AS-25TLI";
@@ -3882,7 +3949,8 @@ export class IS62C256AL extends Component.withPins({
   "A13": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CE}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS62C256AL";
@@ -3944,7 +4012,8 @@ export class IS64C5128AL_12CTLA3 extends Component.withPins({
   "NC_43": "43",
   "NC_44": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", "~{CE}": "input", "I/O0": "bidirectional", "I/O1": "bidirectional", VDD_11: "power_in", GND_12: "power_in", "I/O2": "bidirectional", "I/O3": "bidirectional", "~{WE}": "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", A10: "input", A11: "input", A12: "input", A13: "input", A14: "input", "I/O4": "bidirectional", "I/O5": "bidirectional", VDD_33: "passive", GND_34: "passive", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{OE}": "input", A15: "input", A16: "input", A17: "input", A18: "input", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS64C5128AL-12CTLA3";
@@ -3998,7 +4067,8 @@ export class IS64C5128AL_12KLA3 extends Component.withPins({
   "A18": "35",
   "NC_36": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", "~{CE}": "input", "I/O0": "bidirectional", "I/O1": "bidirectional", VDD_9: "power_in", GND_10: "power_in", "I/O2": "bidirectional", "I/O3": "bidirectional", "~{WE}": "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", NC_19: "no_connect", A10: "input", A11: "input", A12: "input", A13: "input", A14: "input", "I/O4": "bidirectional", "I/O5": "bidirectional", VDD_27: "passive", GND_28: "passive", "I/O6": "bidirectional", "I/O7": "bidirectional", "~{OE}": "input", A15: "input", A16: "input", A17: "input", A18: "input", NC_36: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS64C5128AL-12KLA3";
@@ -4044,7 +4114,8 @@ export class IS65C256AL extends Component.withPins({
   "A13": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CE}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS65C256AL";
@@ -4094,7 +4165,8 @@ export class IS6xC1024AL_xxT extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS6xC1024AL-xxT";
@@ -4144,7 +4216,8 @@ export class IS6xC1024AL_xxH extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS6xC1024AL-xxH";
@@ -4194,7 +4267,8 @@ export class IS6xC1024AL_xxJ extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS6xC1024AL-xxJ";
@@ -4244,7 +4318,8 @@ export class IS6xC1024AL_xxK extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:IS6xC1024AL-xxK";
@@ -4286,7 +4361,8 @@ export class M48Tx2 extends Component.withPins({
   "A8": "23",
   "VCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "bidirectional", DQ1: "bidirectional", DQ2: "bidirectional", VSS: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", DQ5: "bidirectional", DQ6: "bidirectional", DQ7: "bidirectional", "~{E}": "input", A10: "input", "~{G}": "input", "~{W}": "input", A9: "input", A8: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:M48Tx2";
@@ -4328,7 +4404,8 @@ export class M48Zx2 extends Component.withPins({
   "A8": "23",
   "VCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "bidirectional", DQ1: "bidirectional", DQ2: "bidirectional", VSS: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", DQ5: "bidirectional", DQ6: "bidirectional", DQ7: "bidirectional", "~{E}": "input", A10: "input", "~{G}": "input", "~{W}": "input", A9: "input", A8: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:M48Zx2";
@@ -4362,7 +4439,8 @@ export class MK4116N extends Component.withPins({
   "DOUT": "14",
   "~{CAS}": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBB: "power_in", VDD: "power_in", VCC: "power_in", VSS: "power_in", DIN: "input", "~{WRITE}": "input", "~{RAS}": "input", A0: "input", A2: "input", A1: "input", A5: "input", A4: "input", A3: "input", A6: "input", DOUT: "tri_state", "~{CAS}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MK4116N";
@@ -4396,7 +4474,8 @@ export class MK4164N extends Component.withPins({
   "DOUT": "14",
   "~{CAS}": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RFSH}": "input", VCC: "power_in", A7: "input", VSS: "power_in", DIN: "input", "~{WRITE}": "input", "~{RAS}": "input", A0: "input", A2: "input", A1: "input", A5: "input", A4: "input", A3: "input", A6: "input", DOUT: "tri_state", "~{CAS}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MK4164N";
@@ -4510,7 +4589,8 @@ export class MT40A512M16LY extends Component.withPins({
   "A13": "T8",
   "V_{DD}_T9": "T9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DDQ}_A1": "power_in", "V_{SSQ}_A2": "power_in", DQ8: "bidirectional", UDQS_c: "bidirectional", "V_{SSQ}_A8": "passive", "V_{DDQ}_A9": "passive", "V_{PP}_B1": "power_in", "V_{SS}_B2": "power_in", "V_{DD}_B3": "passive", UDQS_t: "bidirectional", DQ9: "bidirectional", "V_{DD}_B9": "power_in", "V_{DDQ}_C1": "passive", DQ12: "bidirectional", DQ10: "bidirectional", DQ11: "bidirectional", DQ13: "bidirectional", "V_{SSQ}_C9": "passive", "V_{DD}_D1": "passive", "V_{SSQ}_D2": "passive", DQ14: "bidirectional", DQ15: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DDQ}_D9": "passive", "V_{SS}_E1": "passive", "NF/~{UDM}/~{UDBI}": "bidirectional", "V_{SSQ}_E3": "passive", "NF/~{LDM}/~{LDBI}": "bidirectional", "V_{SSQ}_E8": "passive", "V_{SS}_E9": "passive", "V_{SSQ}_F1": "passive", "V_{DDQ}_F2": "passive", LDQS_c: "bidirectional", DQ1: "bidirectional", "V_{DDQ}_F8": "passive", ZQ: "passive", "V_{DDQ}_G1": "passive", DQ0: "bidirectional", LDQS_t: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{DDQ}_G9": "passive", "V_{SSQ}_H1": "passive", DQ4: "bidirectional", DQ2: "bidirectional", DQ3: "bidirectional", DQ5: "bidirectional", "V_{SSQ}_H9": "passive", "V_{DD}_J1": "passive", "V_{DDQ}_J2": "passive", DQ6: "bidirectional", DQ7: "bidirectional", "V_{DDQ}_J8": "passive", "V_{DD}_J9": "passive", "V_{SS}_K1": "passive", CKE: "input", ODT: "input", CK_t: "input", CK_c: "input", "V_{SS}_K9": "passive", "V_{DD}_L1": "passive", "A14/~{WE}": "input", "~{ACT}": "input", "~{CS}": "input", "A16/~{RAS}": "input", "V_{DD}_L9": "passive", "V_{REFCA}": "passive", BG0: "input", "A10/AP": "input", "A12/~{BC}": "input", "A15/~{CAS}": "input", "V_{SS}_M9": "passive", "V_{SS}_N1": "passive", BA0: "input", A4: "input", A3: "input", BA1: "input", TEN: "input", "~{RESET}": "input", A6: "input", A0: "input", A1: "input", A5: "input", "~{ALERT}": "open_collector", "V_{DD}_R1": "passive", A8: "input", A2: "input", A9: "input", A7: "input", "V_{PP}_R9": "passive", "V_{SS}_T1": "passive", A11: "input", PAR: "input", "NF/NC": "no_connect", A13: "input", "V_{DD}_T9": "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT40A512M16LY";
@@ -4624,7 +4704,8 @@ export class MT40A512M16TB extends Component.withPins({
   "A13": "T8",
   "V_{DD}_T9": "T9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DDQ}_A1": "power_in", "V_{SSQ}_A2": "power_in", DQ8: "bidirectional", UDQS_c: "bidirectional", "V_{SSQ}_A8": "passive", "V_{DDQ}_A9": "passive", "V_{PP}_B1": "power_in", "V_{SS}_B2": "power_in", "V_{DD}_B3": "passive", UDQS_t: "bidirectional", DQ9: "bidirectional", "V_{DD}_B9": "power_in", "V_{DDQ}_C1": "passive", DQ12: "bidirectional", DQ10: "bidirectional", DQ11: "bidirectional", DQ13: "bidirectional", "V_{SSQ}_C9": "passive", "V_{DD}_D1": "passive", "V_{SSQ}_D2": "passive", DQ14: "bidirectional", DQ15: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DDQ}_D9": "passive", "V_{SS}_E1": "passive", "NF/~{UDM}/~{UDBI}": "bidirectional", "V_{SSQ}_E3": "passive", "NF/~{LDM}/~{LDBI}": "bidirectional", "V_{SSQ}_E8": "passive", "V_{SS}_E9": "passive", "V_{SSQ}_F1": "passive", "V_{DDQ}_F2": "passive", LDQS_c: "bidirectional", DQ1: "bidirectional", "V_{DDQ}_F8": "passive", ZQ: "passive", "V_{DDQ}_G1": "passive", DQ0: "bidirectional", LDQS_t: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{DDQ}_G9": "passive", "V_{SSQ}_H1": "passive", DQ4: "bidirectional", DQ2: "bidirectional", DQ3: "bidirectional", DQ5: "bidirectional", "V_{SSQ}_H9": "passive", "V_{DD}_J1": "passive", "V_{DDQ}_J2": "passive", DQ6: "bidirectional", DQ7: "bidirectional", "V_{DDQ}_J8": "passive", "V_{DD}_J9": "passive", "V_{SS}_K1": "passive", CKE: "input", ODT: "input", CK_t: "input", CK_c: "input", "V_{SS}_K9": "passive", "V_{DD}_L1": "passive", "A14/~{WE}": "input", "~{ACT}": "input", "~{CS}": "input", "A16/~{RAS}": "input", "V_{DD}_L9": "passive", "V_{REFCA}": "passive", BG0: "input", "A10/AP": "input", "A12/~{BC}": "input", "A15/~{CAS}": "input", "V_{SS}_M9": "passive", "V_{SS}_N1": "passive", BA0: "input", A4: "input", A3: "input", BA1: "input", TEN: "input", "~{RESET}": "input", A6: "input", A0: "input", A1: "input", A5: "input", "~{ALERT}": "open_collector", "V_{DD}_R1": "passive", A8: "input", A2: "input", A9: "input", A7: "input", "V_{PP}_R9": "passive", "V_{SS}_T1": "passive", A11: "input", PAR: "input", "NF/NC": "no_connect", A13: "input", "V_{DD}_T9": "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT40A512M16TB";
@@ -4738,7 +4819,8 @@ export class MT41K256M16LY extends Component.withPins({
   "A12/~{BC}": "N7",
   "~{RESET}": "T2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DQ13: "bidirectional", DQ15: "bidirectional", DQ12: "bidirectional", "V_{DDQ}_A8": "passive", "V_{SS}_A9": "passive", "V_{DD}_B2": "passive", "V_{SS}_B3": "passive", DQ14: "bidirectional", "V_{SSQ}_B9": "passive", "V_{DDQ}_C1": "passive", DQ11: "bidirectional", DQ9: "bidirectional", UDQS: "bidirectional", DQ10: "bidirectional", "V_{DDQ}_C9": "passive", "V_{SSQ}_D1": "passive", "V_{DDQ}_D2": "passive", UDM: "input", DQ8: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DD}_D9": "passive", "V_{SSQ}_E2": "passive", DQ0: "bidirectional", LDM: "input", "V_{SSQ}_E8": "passive", "V_{DDQ}_E9": "passive", "V_{DDQ}_F1": "passive", DQ2: "bidirectional", LDQS: "bidirectional", DQ1: "bidirectional", DQ3: "bidirectional", "V_{SSQ}_F9": "passive", "V_{SSQ}_G1": "passive", DQ6: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{SSQ}_G9": "passive", "V_{REFDQ}": "passive", "V_{DDQ}_H2": "passive", DQ4: "bidirectional", DQ7: "bidirectional", DQ5: "bidirectional", "V_{DDQ}_H9": "passive", NC_J1: "no_connect", "V_{SS}_J2": "passive", CK: "input", "V_{SS}_J8": "passive", NC_J9: "no_connect", ODT: "input", "V_{DD}_K2": "passive", "V_{DD}_K8": "passive", CKE: "input", NC_L1: "no_connect", "A10/AP": "input", ZQ: "passive", NC_L9: "no_connect", "V_{SS}_M1": "passive", BA0: "input", BA2: "input", NC_M7: "no_connect", "V_{REFCA}": "passive", "V_{SS}_M9": "passive", A3: "input", A0: "input", BA1: "input", "V_{DD}_N9": "passive", "V_{SS}_P1": "passive", A5: "input", A2: "input", A1: "input", A4: "input", "V_{SS}_P9": "passive", "V_{DD}_R1": "passive", A7: "input", A9: "input", A11: "input", A6: "input", "V_{DD}_R9": "passive", "V_{SS}_T1": "passive", A13: "input", A14: "input", A8: "input", "V_{SS}_T9": "passive", "V_{DDQ}_A1": "power_in", "V_{SSQ}_B1": "power_in", "~{UDQS}": "bidirectional", "V_{SS}_E1": "power_in", "~{LDQS}": "bidirectional", "~{RAS}": "input", "~{CAS}": "input", "~{CK}": "input", "~{CS}": "input", "~{WE}": "input", "V_{DD}_N1": "power_in", "A12/~{BC}": "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT41K256M16LY";
@@ -4852,7 +4934,8 @@ export class MT41K256M16HA extends Component.withPins({
   "A12/~{BC}": "N7",
   "~{RESET}": "T2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DQ13: "bidirectional", DQ15: "bidirectional", DQ12: "bidirectional", "V_{DDQ}_A8": "passive", "V_{SS}_A9": "passive", "V_{DD}_B2": "passive", "V_{SS}_B3": "passive", DQ14: "bidirectional", "V_{SSQ}_B9": "passive", "V_{DDQ}_C1": "passive", DQ11: "bidirectional", DQ9: "bidirectional", UDQS: "bidirectional", DQ10: "bidirectional", "V_{DDQ}_C9": "passive", "V_{SSQ}_D1": "passive", "V_{DDQ}_D2": "passive", UDM: "input", DQ8: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DD}_D9": "passive", "V_{SSQ}_E2": "passive", DQ0: "bidirectional", LDM: "input", "V_{SSQ}_E8": "passive", "V_{DDQ}_E9": "passive", "V_{DDQ}_F1": "passive", DQ2: "bidirectional", LDQS: "bidirectional", DQ1: "bidirectional", DQ3: "bidirectional", "V_{SSQ}_F9": "passive", "V_{SSQ}_G1": "passive", DQ6: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{SSQ}_G9": "passive", "V_{REFDQ}": "passive", "V_{DDQ}_H2": "passive", DQ4: "bidirectional", DQ7: "bidirectional", DQ5: "bidirectional", "V_{DDQ}_H9": "passive", NC_J1: "no_connect", "V_{SS}_J2": "passive", CK: "input", "V_{SS}_J8": "passive", NC_J9: "no_connect", ODT: "input", "V_{DD}_K2": "passive", "V_{DD}_K8": "passive", CKE: "input", NC_L1: "no_connect", "A10/AP": "input", ZQ: "passive", NC_L9: "no_connect", "V_{SS}_M1": "passive", BA0: "input", BA2: "input", NC_M7: "no_connect", "V_{REFCA}": "passive", "V_{SS}_M9": "passive", A3: "input", A0: "input", BA1: "input", "V_{DD}_N9": "passive", "V_{SS}_P1": "passive", A5: "input", A2: "input", A1: "input", A4: "input", "V_{SS}_P9": "passive", "V_{DD}_R1": "passive", A7: "input", A9: "input", A11: "input", A6: "input", "V_{DD}_R9": "passive", "V_{SS}_T1": "passive", A13: "input", A14: "input", A8: "input", "V_{SS}_T9": "passive", "V_{DDQ}_A1": "power_in", "V_{SSQ}_B1": "power_in", "~{UDQS}": "bidirectional", "V_{SS}_E1": "power_in", "~{LDQS}": "bidirectional", "~{RAS}": "input", "~{CAS}": "input", "~{CK}": "input", "~{CS}": "input", "~{WE}": "input", "V_{DD}_N1": "power_in", "A12/~{BC}": "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT41K256M16HA";
@@ -4966,7 +5049,8 @@ export class MT41K256M16TW extends Component.withPins({
   "A12/~{BC}": "N7",
   "~{RESET}": "T2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DQ13: "bidirectional", DQ15: "bidirectional", DQ12: "bidirectional", "V_{DDQ}_A8": "passive", "V_{SS}_A9": "passive", "V_{DD}_B2": "passive", "V_{SS}_B3": "passive", DQ14: "bidirectional", "V_{SSQ}_B9": "passive", "V_{DDQ}_C1": "passive", DQ11: "bidirectional", DQ9: "bidirectional", UDQS: "bidirectional", DQ10: "bidirectional", "V_{DDQ}_C9": "passive", "V_{SSQ}_D1": "passive", "V_{DDQ}_D2": "passive", UDM: "input", DQ8: "bidirectional", "V_{SSQ}_D8": "passive", "V_{DD}_D9": "passive", "V_{SSQ}_E2": "passive", DQ0: "bidirectional", LDM: "input", "V_{SSQ}_E8": "passive", "V_{DDQ}_E9": "passive", "V_{DDQ}_F1": "passive", DQ2: "bidirectional", LDQS: "bidirectional", DQ1: "bidirectional", DQ3: "bidirectional", "V_{SSQ}_F9": "passive", "V_{SSQ}_G1": "passive", DQ6: "bidirectional", "V_{DD}_G7": "passive", "V_{SS}_G8": "passive", "V_{SSQ}_G9": "passive", "V_{REFDQ}": "passive", "V_{DDQ}_H2": "passive", DQ4: "bidirectional", DQ7: "bidirectional", DQ5: "bidirectional", "V_{DDQ}_H9": "passive", NC_J1: "no_connect", "V_{SS}_J2": "passive", CK: "input", "V_{SS}_J8": "passive", NC_J9: "no_connect", ODT: "input", "V_{DD}_K2": "passive", "V_{DD}_K8": "passive", CKE: "input", NC_L1: "no_connect", "A10/AP": "input", ZQ: "passive", NC_L9: "no_connect", "V_{SS}_M1": "passive", BA0: "input", BA2: "input", NC_M7: "no_connect", "V_{REFCA}": "passive", "V_{SS}_M9": "passive", A3: "input", A0: "input", BA1: "input", "V_{DD}_N9": "passive", "V_{SS}_P1": "passive", A5: "input", A2: "input", A1: "input", A4: "input", "V_{SS}_P9": "passive", "V_{DD}_R1": "passive", A7: "input", A9: "input", A11: "input", A6: "input", "V_{DD}_R9": "passive", "V_{SS}_T1": "passive", A13: "input", A14: "input", A8: "input", "V_{SS}_T9": "passive", "V_{DDQ}_A1": "power_in", "V_{SSQ}_B1": "power_in", "~{UDQS}": "bidirectional", "V_{SS}_E1": "power_in", "~{LDQS}": "bidirectional", "~{RAS}": "input", "~{CAS}": "input", "~{CK}": "input", "~{CS}": "input", "~{WE}": "input", "V_{DD}_N1": "power_in", "A12/~{BC}": "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT41K256M16TW";
@@ -5038,7 +5122,8 @@ export class MT48LC16M16A2TG extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", DQML: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", A12: "input", CKE: "input", CLK: "input", DQMH: "input", NC: "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT48LC16M16A2TG";
@@ -5110,7 +5195,8 @@ export class MT48LC16M16A2P extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", DQML: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", A12: "input", CKE: "input", CLK: "input", DQMH: "input", NC: "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT48LC16M16A2P";
@@ -5182,7 +5268,8 @@ export class MT48LC32M8A2TG extends Component.withPins({
   "DQ7": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", NC_4: "no_connect", DQ1: "bidirectional", VSSQ_6: "power_in", NC_7: "no_connect", DQ2: "bidirectional", VDDQ_9: "passive", NC_10: "no_connect", DQ3: "bidirectional", VSSQ_12: "passive", NC_13: "no_connect", VDD_14: "passive", NC_15: "no_connect", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", A12: "input", CKE: "input", CLK: "input", DQM: "input", NC_40: "no_connect", VSS_41: "passive", NC_42: "no_connect", VDDQ_43: "passive", DQ4: "bidirectional", NC_45: "no_connect", VSSQ_46: "passive", DQ5: "bidirectional", NC_48: "no_connect", VDDQ_49: "passive", DQ6: "bidirectional", NC_51: "no_connect", VSSQ_52: "passive", DQ7: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT48LC32M8A2TG";
@@ -5254,7 +5341,8 @@ export class MT48LC32M8A2P extends Component.withPins({
   "DQ7": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", NC_4: "no_connect", DQ1: "bidirectional", VSSQ_6: "power_in", NC_7: "no_connect", DQ2: "bidirectional", VDDQ_9: "passive", NC_10: "no_connect", DQ3: "bidirectional", VSSQ_12: "passive", NC_13: "no_connect", VDD_14: "passive", NC_15: "no_connect", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", A12: "input", CKE: "input", CLK: "input", DQM: "input", NC_40: "no_connect", VSS_41: "passive", NC_42: "no_connect", VDDQ_43: "passive", DQ4: "bidirectional", NC_45: "no_connect", VSSQ_46: "passive", DQ5: "bidirectional", NC_48: "no_connect", VDDQ_49: "passive", DQ6: "bidirectional", NC_51: "no_connect", VSSQ_52: "passive", DQ7: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT48LC32M8A2P";
@@ -5326,7 +5414,8 @@ export class MT48LC64M4A2TG extends Component.withPins({
   "NC_53": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", NC_2: "no_connect", VDDQ_3: "power_in", NC_4: "no_connect", DQ0: "bidirectional", VSSQ_6: "power_in", NC_7: "no_connect", NC_8: "no_connect", VDDQ_9: "passive", NC_10: "no_connect", DQ1: "bidirectional", VSSQ_12: "passive", NC_13: "no_connect", VDD_14: "passive", NC_15: "no_connect", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", A12: "input", CKE: "input", CLK: "input", DQM: "input", NC_40: "no_connect", VSS_41: "passive", NC_42: "no_connect", VDDQ_43: "passive", DQ2: "bidirectional", NC_45: "no_connect", VSSQ_46: "passive", NC_47: "no_connect", NC_48: "no_connect", VDDQ_49: "passive", DQ3: "bidirectional", NC_51: "no_connect", VSSQ_52: "passive", NC_53: "no_connect", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT48LC64M4A2TG";
@@ -5398,7 +5487,8 @@ export class MT48LC64M4A2P extends Component.withPins({
   "NC_53": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", NC_2: "no_connect", VDDQ_3: "power_in", NC_4: "no_connect", DQ0: "bidirectional", VSSQ_6: "power_in", NC_7: "no_connect", NC_8: "no_connect", VDDQ_9: "passive", NC_10: "no_connect", DQ1: "bidirectional", VSSQ_12: "passive", NC_13: "no_connect", VDD_14: "passive", NC_15: "no_connect", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BA0: "input", BA1: "input", A10: "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", A12: "input", CKE: "input", CLK: "input", DQM: "input", NC_40: "no_connect", VSS_41: "passive", NC_42: "no_connect", VDDQ_43: "passive", DQ2: "bidirectional", NC_45: "no_connect", VSSQ_46: "passive", NC_47: "no_connect", NC_48: "no_connect", VDDQ_49: "passive", DQ3: "bidirectional", NC_51: "no_connect", VSSQ_52: "passive", NC_53: "no_connect", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:MT48LC64M4A2P";
@@ -5448,7 +5538,8 @@ export class R1LP0108ESF extends Component.withPins({
   "A10": "31",
   "~{OE}": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:R1LP0108ESF";
@@ -5498,7 +5589,8 @@ export class R1LP0108ESN extends Component.withPins({
   "CS2/CE2": "30",
   "A15": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", NC: "no_connect", A16: "input", A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", DQ0: "tri_state", DQ1: "tri_state", DQ2: "tri_state", DQ3: "tri_state", DQ4: "tri_state", DQ5: "tri_state", DQ6: "tri_state", DQ7: "tri_state", "~{CS1}/~{CE1}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", "CS2/CE2": "input", A15: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:R1LP0108ESN";
@@ -5544,7 +5636,8 @@ export class uPD42832C extends Component.withPins({
   "A_{13}": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{DD}": "power_in", "A_{14}": "input", "A_{12}": "input", "A_{7}": "input", "A_{6}": "input", "A_{5}": "input", "A_{4}": "input", "A_{3}": "input", "A_{2}": "input", "A_{1}": "input", "A_{0}": "input", "I/O_{0}": "tri_state", "I/O_{1}": "tri_state", "I/O_{2}": "tri_state", "I/O_{3}": "tri_state", "I/O_{4}": "tri_state", "I/O_{5}": "tri_state", "I/O_{6}": "tri_state", "I/O_{7}": "tri_state", "~{CE}": "input", "A_{10}": "input", "~{OE}/~{RFSH}": "input", "A_{11}": "input", "A_{9}": "input", "A_{8}": "input", "A_{13}": "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:uPD42832C";
@@ -5590,7 +5683,8 @@ export class TC51832P extends Component.withPins({
   "A_{13}": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{DD}": "power_in", "A_{14}": "input", "A_{12}": "input", "A_{7}": "input", "A_{6}": "input", "A_{5}": "input", "A_{4}": "input", "A_{3}": "input", "A_{2}": "input", "A_{1}": "input", "A_{0}": "input", "I/O_{0}": "tri_state", "I/O_{1}": "tri_state", "I/O_{2}": "tri_state", "I/O_{3}": "tri_state", "I/O_{4}": "tri_state", "I/O_{5}": "tri_state", "I/O_{6}": "tri_state", "I/O_{7}": "tri_state", "~{CE}": "input", "A_{10}": "input", "~{OE}/~{RFSH}": "input", "A_{11}": "input", "A_{9}": "input", "A_{8}": "input", "A_{13}": "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:TC51832P";
@@ -5624,7 +5718,8 @@ export class TMM41256AP extends Component.withPins({
   "D_{OUT}": "14",
   "~{CAS}": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A8: "input", "V_{CC}": "power_in", A7: "input", "V_{SS}": "power_in", "D_{IN}": "input", "~{WRITE}": "input", "~{RAS}": "input", A0: "input", A2: "input", A1: "input", A5: "input", A4: "input", A3: "input", A6: "input", "D_{OUT}": "tri_state", "~{CAS}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:TMM41256AP";
@@ -5696,7 +5791,8 @@ export class W9812G6KH_5 extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BS0: "input", BS1: "input", "A10/AP": "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC_36: "no_connect", CKE: "input", CLK: "input", UDQM: "input", NC_40: "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:W9812G6KH-5";
@@ -5768,7 +5864,8 @@ export class W9812G6KH_6 extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BS0: "input", BS1: "input", "A10/AP": "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC_36: "no_connect", CKE: "input", CLK: "input", UDQM: "input", NC_40: "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:W9812G6KH-6";
@@ -5840,7 +5937,8 @@ export class W9812G6KH_6I extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BS0: "input", BS1: "input", "A10/AP": "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC_36: "no_connect", CKE: "input", CLK: "input", UDQM: "input", NC_40: "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:W9812G6KH-6I";
@@ -5912,7 +6010,8 @@ export class W9812G6KH_75 extends Component.withPins({
   "DQ15": "53",
   "VSS_54": "54",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", DQ0: "bidirectional", VDDQ_3: "power_in", DQ1: "bidirectional", DQ2: "bidirectional", VSSQ_6: "power_in", DQ3: "bidirectional", DQ4: "bidirectional", VDDQ_9: "passive", DQ5: "bidirectional", DQ6: "bidirectional", VSSQ_12: "passive", DQ7: "bidirectional", VDD_14: "passive", LDQM: "input", "~{WE}": "input", "~{CAS}": "input", "~{RAS}": "input", "~{CS}": "input", BS0: "input", BS1: "input", "A10/AP": "input", A0: "input", A1: "input", A2: "input", A3: "input", VDD_27: "passive", VSS_28: "power_in", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", A9: "input", A11: "input", NC_36: "no_connect", CKE: "input", CLK: "input", UDQM: "input", NC_40: "no_connect", VSS_41: "passive", DQ8: "bidirectional", VDDQ_43: "passive", DQ9: "bidirectional", DQ10: "bidirectional", VSSQ_46: "passive", DQ11: "bidirectional", DQ12: "bidirectional", VDDQ_49: "passive", DQ13: "bidirectional", DQ14: "bidirectional", VSSQ_52: "passive", DQ15: "bidirectional", VSS_54: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:W9812G6KH-75";
@@ -5954,7 +6053,8 @@ export class uPD41264C extends Component.withPins({
   "SO_{2}": "22",
   "SO_{3}": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", SC: "input", "SO_{0}": "tri_state", "SO_{1}": "tri_state", "~{DT}/~{OE}": "input", "W_{0}/IO_{0}": "bidirectional", "W_{1}/IO_{1}": "bidirectional", "~{WB}/~{WE}": "input", "~{RAS}": "input", "A_{6}": "input", "A_{5}": "input", "A_{4}": "input", "A_{7}": "input", "A_{3}": "input", "A_{2}": "input", "A_{1}": "input", "A_{0}": "input", "~{CAS}": "input", "W_{2}/IO_{2}": "bidirectional", "W_{3}/IO_{3}": "bidirectional", "~{SOE}": "input", "SO_{2}": "tri_state", "SO_{3}": "tri_state", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:uPD41264C";
@@ -6000,7 +6100,8 @@ export class uPD4168C extends Component.withPins({
   "CS": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", "~{RFSH}": "input", "A_{12}": "input", "A_{7}": "input", "A_{6}": "input", "A_{5}": "input", "A_{4}": "input", "A_{3}": "input", "A_{2}": "input", "A_{1}": "input", "A_{0}": "input", "I/O_{0}": "tri_state", "I/O_{1}": "tri_state", "I/O_{2}": "tri_state", "I/O_{3}": "tri_state", "I/O_{4}": "tri_state", "I/O_{5}": "tri_state", "I/O_{6}": "tri_state", "I/O_{7}": "tri_state", "~{CE}": "input", "A_{10}": "input", "~{OE}": "input", "A_{11}": "input", "A_{9}": "input", "A_{8}": "input", CS: "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:uPD4168C";
@@ -6046,7 +6147,8 @@ export class uPD4364CX extends Component.withPins({
   "CE_{2}": "26",
   "~{WE}": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "V_{CC}": "power_in", NC: "no_connect", "A_{12}": "input", "A_{7}": "input", "A_{6}": "input", "A_{5}": "input", "A_{4}": "input", "A_{3}": "input", "A_{2}": "input", "A_{1}": "input", "A_{0}": "input", "I/O_{1}": "tri_state", "I/O_{2}": "tri_state", "I/O_{3}": "tri_state", "I/O_{4}": "tri_state", "I/O_{5}": "tri_state", "I/O_{6}": "tri_state", "I/O_{7}": "tri_state", "I/O_{8}": "tri_state", "~{CE_{1}}": "input", "A_{10}": "input", "~{OE}": "input", "A_{11}": "input", "A_{9}": "input", "A_{8}": "input", "CE_{2}": "input", "~{WE}": "input", ...opts.pinTypes } });
   }
   override schema = "Memory_RAM:uPD4364CX";

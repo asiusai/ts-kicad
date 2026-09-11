@@ -61,7 +61,8 @@ export class STM32WL54CCUx extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WL54CCUx";
@@ -152,7 +153,8 @@ export class STM32WL54JCIx extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WL54JCIx";
@@ -219,7 +221,8 @@ export class STM32WL55CCUx extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WL55CCUx";
@@ -310,7 +313,8 @@ export class STM32WL55JCIx extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WL55JCIx";
@@ -377,7 +381,8 @@ export class STM32WLE4C8Ux extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE4C8Ux";
@@ -444,7 +449,8 @@ export class STM32WLE4CBUx extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE4CBUx";
@@ -511,7 +517,8 @@ export class STM32WLE4CCUx extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE4CCUx";
@@ -602,7 +609,8 @@ export class STM32WLE4J8Ix extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE4J8Ix";
@@ -693,7 +701,8 @@ export class STM32WLE4JBIx extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE4JBIx";
@@ -784,7 +793,8 @@ export class STM32WLE4JCIx extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE4JCIx";
@@ -851,7 +861,8 @@ export class STM32WLE5C8Ux extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE5C8Ux";
@@ -918,7 +929,8 @@ export class STM32WLE5CBUx extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE5CBUx";
@@ -985,7 +997,8 @@ export class STM32WLE5CCUx extends Component.withPins({
   "VSSSMPS": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PB8: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", VDD_11: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PA8: "bidirectional", PA9: "bidirectional", NRST: "input", PH3: "bidirectional", RFI_P: "bidirectional", RFI_N: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", VR_PA: "power_in", VDDPA: "power_in", OSC_IN: "input", OSC_OUT: "input", VDDRF: "power_in", VDDRF1V55: "power_in", PB0: "bidirectional", PB2: "bidirectional", PB12: "bidirectional", PA10: "bidirectional", PA11: "bidirectional", PA12: "bidirectional", PA13: "bidirectional", VBAT: "power_in", PC13: "bidirectional", PC14: "bidirectional", PC15: "bidirectional", VDDA: "power_in", PA14: "bidirectional", PA15: "bidirectional", VDD_44: "power_in", VFBSMPS: "input", VDDSMPS: "power_in", VLXSMPS: "power_in", VSSSMPS: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE5CCUx";
@@ -1076,7 +1089,8 @@ export class STM32WLE5J8Ix extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE5J8Ix";
@@ -1167,7 +1181,8 @@ export class STM32WLE5JBIx extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE5JBIx";
@@ -1258,7 +1273,8 @@ export class STM32WLE5JCIx extends Component.withPins({
   "RFO_LP": "J8",
   "RFO_HP": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSSMPS: "power_in", VDDSMPS: "power_in", PA14: "bidirectional", VDDA: "power_in", VDD_A7: "power_in", VBAT: "power_in", PA12: "bidirectional", VLXSMPS: "power_in", VFBSMPS: "input", PA15: "bidirectional", PB15: "bidirectional", "VREF+": "input", PC14: "bidirectional", VSS_B7: "power_in", PA13: "bidirectional", PA11: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB7: "bidirectional", PB9: "bidirectional", PC15: "bidirectional", PB14: "bidirectional", PC13: "bidirectional", PA10: "bidirectional", PB5: "bidirectional", PB8: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PA0: "bidirectional", PB13: "bidirectional", PB2: "bidirectional", VSS_D9: "passive", PB6: "bidirectional", VDD_E2: "power_in", VSS_E3: "passive", PC5: "bidirectional", PA9: "bidirectional", PB12: "bidirectional", PB1: "bidirectional", VDDRF: "power_in", VDD_E9: "power_in", PC1: "bidirectional", PC0: "bidirectional", PC4: "bidirectional", PA6: "bidirectional", NRST: "input", PB0: "bidirectional", VDDRF1V55: "power_in", OSC_OUT: "input", PC6: "bidirectional", PA1: "bidirectional", PB11: "bidirectional", VSS_G5: "passive", VSSRF_G6: "power_in", VSSRF_G7: "passive", VSSRF_G8: "passive", OSC_IN: "input", PA3: "bidirectional", PA2: "bidirectional", PA7: "bidirectional", PB10: "bidirectional", VDD_H5: "power_in", VSSRF_H6: "passive", RFI_N: "bidirectional", VDDPA: "power_in", VR_PA: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA8: "bidirectional", PH3: "bidirectional", RFI_P: "bidirectional", RFO_LP: "bidirectional", RFO_HP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_ST_STM32WL:STM32WLE5JCIx";

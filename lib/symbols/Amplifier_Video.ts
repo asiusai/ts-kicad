@@ -25,7 +25,8 @@ export class AD813 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{DISABLE}_1": "input", "+_5": "input", "-_6": "input", P7: "output", "~{DISABLE}_2": "input", "+_12": "input", "-_13": "input", P14: "output", "~{DISABLE}_3": "input", P8: "output", "-_9": "input", "+_10": "input", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Video:AD813";
@@ -50,7 +51,8 @@ export class MAX453 extends Component.withPins({
   "IN-": "7",
   "VOUT": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", GND: "power_in", "V-": "power_in", IN0: "input", IN1: "input", "V+": "power_in", "IN-": "input", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Video:MAX453";
@@ -82,7 +84,8 @@ export class THS7374 extends Component.withPins({
   "CH2_OUT": "13",
   "CH1_OUT": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CH1_IN: "input", CH2_IN: "input", CH3_IN: "input", CH4_IN: "input", GND: "power_in", DISABLE: "input", NC_7: "no_connect", NC_8: "no_connect", BYPASS: "input", "V_{S+}": "power_in", CH4_OUT: "output", CH3_OUT: "output", CH2_OUT: "output", CH1_OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Amplifier_Video:THS7374";

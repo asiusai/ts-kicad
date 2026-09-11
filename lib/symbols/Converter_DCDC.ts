@@ -28,7 +28,8 @@ export class C11204_01 extends Component.withPins({
   "GND_15": "15",
   "Temp": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vs: "power_in", GND_2: "power_in", RXD: "input", TXD: "output", GND_5: "passive", NC_6: "no_connect", NC_7: "no_connect", GND_8: "passive", NC_9: "no_connect", Vo: "power_out", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", GND_15: "passive", Temp: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:C11204-01";
@@ -58,7 +59,8 @@ export class LMZ13608 extends Component.withPins({
   "VOUT_11": "11",
   "PGND": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_1: "power_in", VIN_2: "passive", AGND_3: "passive", EN: "input", AGND_5: "power_in", AGND_6: "passive", FB: "input", SS: "input", NC: "no_connect", VOUT_10: "power_out", VOUT_11: "passive", PGND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZ13608";
@@ -83,7 +85,8 @@ export class LMZ23605TZ extends Component.withPins({
   "SS/TRK": "6",
   "VOUT": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", SYNC: "input", EN: "input", GND: "power_in", FB: "input", "SS/TRK": "passive", VOUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZ23605TZ";
@@ -108,7 +111,8 @@ export class LMZ22003TZ extends Component.withPins({
   "SS/TRK": "6",
   "VOUT": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", SYNC: "input", EN: "input", GND: "power_in", FB: "input", "SS/TRK": "passive", VOUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZ22003TZ";
@@ -133,7 +137,8 @@ export class LMZ22005TZ extends Component.withPins({
   "SS/TRK": "6",
   "VOUT": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", SYNC: "input", EN: "input", GND: "power_in", FB: "input", "SS/TRK": "passive", VOUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZ22005TZ";
@@ -158,7 +163,8 @@ export class LMZ23603TZ extends Component.withPins({
   "SS/TRK": "6",
   "VOUT": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", SYNC: "input", EN: "input", GND: "power_in", FB: "input", "SS/TRK": "passive", VOUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZ23603TZ";
@@ -187,7 +193,8 @@ export class LMZM23601 extends Component.withPins({
   "P10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "MODE/SYNC": "input", VIN: "power_in", EN: "input", PG: "open_collector", VOUT: "power_out", FB: "input", P8: "no_connect", P9: "no_connect", P10: "no_connect", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZM23601";
@@ -216,7 +223,8 @@ export class LMZM23600 extends Component.withPins({
   "P10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "MODE/SYNC": "input", VIN: "power_in", EN: "input", PG: "open_collector", VOUT: "power_out", FB: "input", P8: "no_connect", P9: "no_connect", P10: "no_connect", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZM23600";
@@ -245,7 +253,8 @@ export class LMZM23600V3 extends Component.withPins({
   "P10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "MODE/SYNC": "input", VIN: "power_in", EN: "input", PG: "open_collector", VOUT: "power_out", FB: "input", P8: "no_connect", P9: "no_connect", P10: "no_connect", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZM23600V3";
@@ -274,7 +283,8 @@ export class LMZM23600V5 extends Component.withPins({
   "P10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "MODE/SYNC": "input", VIN: "power_in", EN: "input", PG: "open_collector", VOUT: "power_out", FB: "input", P8: "no_connect", P9: "no_connect", P10: "no_connect", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZM23600V5";
@@ -303,7 +313,8 @@ export class LMZM23601V3 extends Component.withPins({
   "P10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "MODE/SYNC": "input", VIN: "power_in", EN: "input", PG: "open_collector", VOUT: "power_out", FB: "input", P8: "no_connect", P9: "no_connect", P10: "no_connect", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZM23601V3";
@@ -332,7 +343,8 @@ export class LMZM23601V5 extends Component.withPins({
   "P10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "MODE/SYNC": "input", VIN: "power_in", EN: "input", PG: "open_collector", VOUT: "power_out", FB: "input", P8: "no_connect", P9: "no_connect", P10: "no_connect", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LMZM23601V5";
@@ -357,7 +369,8 @@ export class LT1026 extends Component.withPins({
   "C1+": "7",
   "+Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1-": "passive", "C2+": "passive", "C2-": "passive", "-Vout": "power_out", GND: "power_in", Vin: "power_in", "C1+": "passive", "+Vout": "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LT1026";
@@ -424,7 +437,8 @@ export class LTM4638 extends Component.withPins({
   "GND_G6": "G6",
   "GND_G7": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{OUT}_A1": "power_out", "V_{OUT}_A2": "passive", "V_{OUT}_A3": "passive", "V_{OUT}_A4": "passive", "V_{OUT}_A5": "passive", "T_{SENSE}+": "passive", "T_{SENSE}-": "passive", "V_{OSNS}+": "input", GND_B2: "power_in", "INTV_{CC}": "power_out", RUN: "input", PGOOD: "open_collector", GND_B6: "passive", SW: "passive", FB: "input", "V_{OSNS}-": "input", GND_C3: "passive", GND_C4: "passive", GND_C5: "passive", GND_C6: "passive", GND_C7: "passive", COMPa: "passive", "MODE/CLKIN": "passive", "V_{IN}_D3": "power_in", "V_{IN}_D4": "passive", GND_D5: "passive", GND_D6: "passive", GND_D7: "passive", FREQ: "passive", "TRACK/SS": "passive", "V_{IN}_E3": "passive", "V_{IN}_E4": "passive", GND_E5: "passive", GND_E6: "passive", GND_E7: "passive", COMPb: "passive", CLKOUT: "output", "V_{OUT}_F3": "passive", "V_{IN}_F4": "passive", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", "V_{OUT}_G1": "passive", "V_{OUT}_G2": "passive", "V_{OUT}_G3": "passive", "V_{IN}_G4": "passive", PHMODE: "passive", GND_G6: "passive", GND_G7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4638";
@@ -491,7 +505,8 @@ export class LTM4626 extends Component.withPins({
   "GND_G6": "G6",
   "GND_G7": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{OUT}_A1": "power_out", "V_{OUT}_A2": "passive", "V_{OUT}_A3": "passive", "V_{OUT}_A4": "passive", "V_{OUT}_A5": "passive", "T_{SENSE}+": "passive", "T_{SENSE}-": "passive", "V_{OSNS}+": "input", GND_B2: "power_in", "INTV_{CC}": "power_out", RUN: "input", PGOOD: "open_collector", GND_B6: "passive", SW: "passive", FB: "input", "V_{OSNS}-": "input", GND_C3: "passive", GND_C4: "passive", GND_C5: "passive", GND_C6: "passive", GND_C7: "passive", COMPa: "passive", "MODE/CLKIN": "passive", "V_{IN}_D3": "power_in", "V_{IN}_D4": "passive", GND_D5: "passive", GND_D6: "passive", GND_D7: "passive", FREQ: "passive", "TRACK/SS": "passive", "V_{IN}_E3": "passive", "V_{IN}_E4": "passive", GND_E5: "passive", GND_E6: "passive", GND_E7: "passive", COMPb: "passive", CLKOUT: "output", "V_{OUT}_F3": "passive", "V_{IN}_F4": "passive", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", "V_{OUT}_G1": "passive", "V_{OUT}_G2": "passive", "V_{OUT}_G3": "passive", "V_{IN}_G4": "passive", PHMODE: "passive", GND_G6: "passive", GND_G7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4626";
@@ -642,7 +657,8 @@ export class LTM4637xV extends Component.withPins({
   "VOUT_M11": "M11",
   "VOSNS-": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_A1: "power_in", VIN_A2: "passive", VIN_A3: "passive", VIN_A4: "passive", VIN_A5: "passive", VIN_A6: "passive", INTVCC_A7: "power_out", MODE_PLLIN: "input", "TRACK/SS": "passive", RUN: "input", COMP: "passive", MTP1: "no_connect", VIN_B1: "passive", VIN_B2: "passive", VIN_B3: "passive", VIN_B4: "passive", VIN_B5: "passive", VIN_B6: "passive", GND_B7: "power_in", GND_B9: "passive", MTP2: "no_connect", FSET: "passive", VIN_C1: "passive", VIN_C2: "passive", VIN_C3: "passive", VIN_C4: "passive", VIN_C5: "passive", VIN_C6: "passive", GND_C7: "passive", GND_C9: "passive", MTP3: "no_connect", MTP4: "no_connect", MTP5: "no_connect", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", GND_D6: "passive", GND_D8: "passive", INTVCC_D9: "passive", TEMP: "passive", MTP6: "no_connect", MTP7: "no_connect", GND_E1: "passive", GND_E2: "passive", GND_E3: "passive", GND_E4: "passive", GND_E5: "passive", GND_E6: "passive", GND_E7: "passive", GND_E9: "passive", EXTVCC: "power_in", GND_F1: "passive", GND_F2: "passive", GND_F3: "passive", GND_F4: "passive", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", GND_F8: "passive", GND_F9: "passive", PGOOD_F11: "open_collector", VFB: "input", GND_G1: "passive", GND_G2: "passive", GND_G3: "passive", GND_G4: "passive", GND_G5: "passive", GND_G6: "passive", GND_G7: "passive", GND_G8: "passive", GND_G9: "passive", SGND_G11: "power_in", PGOOD_G12: "open_collector", GND_H1: "passive", GND_H2: "passive", GND_H3: "passive", GND_H4: "passive", GND_H5: "passive", GND_H6: "passive", GND_H7: "passive", GND_H8: "passive", GND_H9: "passive", SGND_H11: "passive", SGND_H12: "passive", VOUT_J1: "power_out", VOUT_J2: "passive", VOUT_J3: "passive", VOUT_J4: "passive", VOUT_J5: "passive", VOUT_J6: "passive", VOUT_J7: "passive", VOUT_J8: "passive", VOUT_J9: "passive", VOUT_J10: "passive", "VOSNS+": "input", VOUT_K1: "passive", VOUT_K2: "passive", VOUT_K3: "passive", VOUT_K4: "passive", VOUT_K5: "passive", VOUT_K6: "passive", VOUT_K7: "passive", VOUT_K8: "passive", VOUT_K9: "passive", VOUT_K10: "passive", VOUT_K11: "passive", DIFF_OUT: "output", VOUT_L1: "passive", VOUT_L2: "passive", VOUT_L3: "passive", VOUT_L4: "passive", VOUT_L5: "passive", VOUT_L6: "passive", VOUT_L7: "passive", VOUT_L8: "passive", VOUT_L9: "passive", VOUT_L10: "passive", VOUT_L11: "passive", VOUT_LCL: "input", VOUT_M1: "passive", VOUT_M2: "passive", VOUT_M3: "passive", VOUT_M4: "passive", VOUT_M5: "passive", VOUT_M6: "passive", VOUT_M7: "passive", VOUT_M8: "passive", VOUT_M9: "passive", VOUT_M10: "passive", VOUT_M11: "passive", "VOSNS-": "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4637xV";
@@ -793,7 +809,8 @@ export class LTM4637xY extends Component.withPins({
   "VOUT_M11": "M11",
   "VOSNS-": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_A1: "power_in", VIN_A2: "passive", VIN_A3: "passive", VIN_A4: "passive", VIN_A5: "passive", VIN_A6: "passive", INTVCC_A7: "power_out", MODE_PLLIN: "input", "TRACK/SS": "passive", RUN: "input", COMP: "passive", MTP1: "no_connect", VIN_B1: "passive", VIN_B2: "passive", VIN_B3: "passive", VIN_B4: "passive", VIN_B5: "passive", VIN_B6: "passive", GND_B7: "power_in", GND_B9: "passive", MTP2: "no_connect", FSET: "passive", VIN_C1: "passive", VIN_C2: "passive", VIN_C3: "passive", VIN_C4: "passive", VIN_C5: "passive", VIN_C6: "passive", GND_C7: "passive", GND_C9: "passive", MTP3: "no_connect", MTP4: "no_connect", MTP5: "no_connect", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", GND_D6: "passive", GND_D8: "passive", INTVCC_D9: "passive", TEMP: "passive", MTP6: "no_connect", MTP7: "no_connect", GND_E1: "passive", GND_E2: "passive", GND_E3: "passive", GND_E4: "passive", GND_E5: "passive", GND_E6: "passive", GND_E7: "passive", GND_E9: "passive", EXTVCC: "power_in", GND_F1: "passive", GND_F2: "passive", GND_F3: "passive", GND_F4: "passive", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", GND_F8: "passive", GND_F9: "passive", PGOOD_F11: "open_collector", VFB: "input", GND_G1: "passive", GND_G2: "passive", GND_G3: "passive", GND_G4: "passive", GND_G5: "passive", GND_G6: "passive", GND_G7: "passive", GND_G8: "passive", GND_G9: "passive", SGND_G11: "power_in", PGOOD_G12: "open_collector", GND_H1: "passive", GND_H2: "passive", GND_H3: "passive", GND_H4: "passive", GND_H5: "passive", GND_H6: "passive", GND_H7: "passive", GND_H8: "passive", GND_H9: "passive", SGND_H11: "passive", SGND_H12: "passive", VOUT_J1: "power_out", VOUT_J2: "passive", VOUT_J3: "passive", VOUT_J4: "passive", VOUT_J5: "passive", VOUT_J6: "passive", VOUT_J7: "passive", VOUT_J8: "passive", VOUT_J9: "passive", VOUT_J10: "passive", "VOSNS+": "input", VOUT_K1: "passive", VOUT_K2: "passive", VOUT_K3: "passive", VOUT_K4: "passive", VOUT_K5: "passive", VOUT_K6: "passive", VOUT_K7: "passive", VOUT_K8: "passive", VOUT_K9: "passive", VOUT_K10: "passive", VOUT_K11: "passive", DIFF_OUT: "output", VOUT_L1: "passive", VOUT_L2: "passive", VOUT_L3: "passive", VOUT_L4: "passive", VOUT_L5: "passive", VOUT_L6: "passive", VOUT_L7: "passive", VOUT_L8: "passive", VOUT_L9: "passive", VOUT_L10: "passive", VOUT_L11: "passive", VOUT_LCL: "input", VOUT_M1: "passive", VOUT_M2: "passive", VOUT_M3: "passive", VOUT_M4: "passive", VOUT_M5: "passive", VOUT_M6: "passive", VOUT_M7: "passive", VOUT_M8: "passive", VOUT_M9: "passive", VOUT_M10: "passive", VOUT_M11: "passive", "VOSNS-": "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4637xY";
@@ -860,7 +877,8 @@ export class LTM4657 extends Component.withPins({
   "GND_G6": "G6",
   "GND_G7": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{OUT}_A1": "power_out", "V_{OUT}_A2": "passive", "V_{OUT}_A3": "passive", "V_{OUT}_A4": "passive", "V_{OUT}_A5": "passive", "T_{SENSE}+": "passive", "T_{SENSE}-": "passive", "V_{OSNS}+": "input", GND_B2: "power_in", "INTV_{CC}": "power_out", RUN: "input", PGOOD: "open_collector", GND_B6: "passive", SW: "passive", FB: "input", "V_{OSNS}-": "input", GND_C3: "passive", GND_C4: "passive", GND_C5: "passive", GND_C6: "passive", GND_C7: "passive", COMPa: "passive", "MODE/CLKIN": "passive", "V_{IN}_D3": "power_in", "V_{IN}_D4": "passive", GND_D5: "passive", GND_D6: "passive", GND_D7: "passive", FREQ: "passive", "TRACK/SS": "passive", "V_{IN}_E3": "passive", "V_{IN}_E4": "passive", GND_E5: "passive", GND_E6: "passive", GND_E7: "passive", COMPb: "passive", CLKOUT: "output", "V_{OUT}_F3": "passive", "V_{IN}_F4": "passive", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", "V_{OUT}_G1": "passive", "V_{OUT}_G2": "passive", "V_{OUT}_G3": "passive", "V_{IN}_G4": "passive", PHMODE: "passive", GND_G6: "passive", GND_G7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4657";
@@ -927,7 +945,8 @@ export class LTM4668 extends Component.withPins({
   "GND_G6": "G6",
   "VOUT3_G7": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT1_A1: "power_out", GND_A2: "power_in", GND_A3: "passive", VIN_A4: "power_in", GND_A5: "passive", GND_A6: "passive", VOUT2_A7: "power_out", VOUT1_B1: "passive", GND_B2: "passive", GND_B3: "passive", VIN_B4: "passive", GND_B5: "passive", GND_B6: "passive", VOUT2_B7: "passive", FB1: "output", GND_C2: "passive", RUN1: "input", INTVCC: "output", RUN2: "input", GND_C6: "passive", FB2: "output", PGOOD4: "open_collector", PGOOD1: "open_collector", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", PGOOD2: "open_collector", PGOOD3: "open_collector", FB4: "output", GND_E2: "passive", RUN4: "input", "MODE/SYNC": "input", RUN3: "input", GND_E6: "passive", FB3: "output", VOUT4_F1: "power_out", GND_F2: "passive", GND_F3: "passive", VIN_F4: "power_in", GND_F5: "passive", GND_F6: "passive", VOUT3_F7: "power_out", VOUT4_G1: "passive", GND_G2: "passive", GND_G3: "passive", VIN_G4: "passive", GND_G5: "passive", GND_G6: "passive", VOUT3_G7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4668";
@@ -994,7 +1013,8 @@ export class LTM4668A extends Component.withPins({
   "GND_G6": "G6",
   "VOUT3_G7": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT1_A1: "power_out", GND_A2: "power_in", GND_A3: "passive", VIN_A4: "power_in", GND_A5: "passive", GND_A6: "passive", VOUT2_A7: "power_out", VOUT1_B1: "passive", GND_B2: "passive", GND_B3: "passive", VIN_B4: "passive", GND_B5: "passive", GND_B6: "passive", VOUT2_B7: "passive", FB1: "output", GND_C2: "passive", RUN1: "input", INTVCC: "output", RUN2: "input", GND_C6: "passive", FB2: "output", PGOOD4: "open_collector", PGOOD1: "open_collector", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", PGOOD2: "open_collector", PGOOD3: "open_collector", FB4: "output", GND_E2: "passive", RUN4: "input", "MODE/SYNC": "input", RUN3: "input", GND_E6: "passive", FB3: "output", VOUT4_F1: "power_out", GND_F2: "passive", GND_F3: "passive", VIN_F4: "power_in", GND_F5: "passive", GND_F6: "passive", VOUT3_F7: "power_out", VOUT4_G1: "passive", GND_G2: "passive", GND_G3: "passive", VIN_G4: "passive", GND_G5: "passive", GND_G6: "passive", VOUT3_G7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4668A";
@@ -1221,7 +1241,8 @@ export class LTM4671 extends Component.withPins({
   "GND_W10": "W10",
   "GND_W11": "W11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{OUT0}_A1": "power_out", "V_{OUT0}_A2": "passive", "V_{OUT0}_A3": "passive", GND_A4: "power_in", GND_A5: "passive", "TSENSE0^{-}": "passive", "TSENSE0^{+}": "passive", GND_A8: "passive", GND_A9: "passive", GND_A10: "passive", GND_A11: "passive", "V_{OUT0}_B1": "passive", "V_{OUT0}_B2": "passive", "V_{OUT0}_B3": "passive", GND_B4: "passive", GND_B5: "passive", GND_B6: "passive", GND_B7: "passive", GND_B8: "passive", GND_B9: "passive", GND_B10: "passive", GND_B11: "passive", "V_{OUT0}_C1": "passive", "V_{OUT0}_C2": "passive", "V_{OUT0}_C3": "passive", GND_C4: "passive", GND_C5: "passive", GND_C6: "passive", GND_C7: "passive", GND_C8: "passive", GND_C9: "passive", GND_C10: "passive", GND_C11: "passive", "V_{OUT0}_D1": "passive", "V_{OUT0}_D2": "passive", "V_{OUT0}_D3": "passive", GND_D4: "passive", GND_D5: "passive", GND_D6: "passive", "V_{IN}_D7": "power_in", "V_{IN}_D8": "passive", "V_{IN}_D9": "passive", "V_{IN}_D10": "passive", "V_{IN}_D11": "passive", "V_{OUT0}_E1": "passive", "V_{OUT0}_E2": "passive", GND_E3: "passive", GND_E4: "passive", GND_E5: "passive", PHMODE0: "passive", "INTV_{CC0}": "power_out", "V_{IN}_E8": "passive", "SV_{IN0}": "power_in", CLKOUT0: "output", PGOOD0: "open_collector", GND_F1: "passive", GND_F2: "passive", GND_F3: "passive", GND_F4: "passive", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", "VOSNS0^{-}": "input", "TRACK/SS0": "passive", FREQ0: "input", RUN0: "input", GND_G1: "passive", GND_G2: "passive", GND_G3: "passive", GND_G4: "passive", GND_G5: "passive", GND_G6: "passive", "TRACK/SS1": "passive", "VOSNS0^{+}": "input", FB0: "input", GND_G10: "passive", "MODE/CLKIN0": "passive", "V_{OUT1}_H1": "power_out", "V_{OUT1}_H2": "passive", "V_{OUT1}_H3": "passive", "V_{OUT1}_H4": "passive", GND_H5: "passive", "V_{IN}_H6": "power_in", GND_H7: "passive", PGOOD1: "open_collector", FB1: "input", COMP0a: "passive", COMP0b: "passive", "V_{OUT1}_J1": "passive", "V_{OUT1}_J2": "passive", "V_{OUT1}_J3": "passive", "V_{OUT1}_J4": "passive", "V_{IN}_J5": "passive", "V_{IN}_J6": "passive", GND_J7: "passive", RUN1: "input", GND_J9: "passive", VOSNS1: "input", COMP1: "passive", GND_K1: "passive", GND_K2: "passive", GND_K3: "passive", GND_K4: "passive", GND_K5: "passive", GND_K6: "passive", GND_K7: "passive", TMON: "passive", "INTV_{CC12}": "power_out", FREQ12: "passive", GND_K11: "passive", "V_{OUT2}_L1": "power_out", "V_{OUT2}_L2": "passive", "V_{OUT2}_L3": "passive", "V_{OUT2}_L4": "passive", "V_{IN}_L5": "power_in", "V_{IN}_L6": "passive", GND_L7: "passive", RUN2: "input", "MODE/CLKIN12": "passive", VOSNS2: "input", GND_L11: "passive", "V_{OUT2}_M1": "passive", "V_{OUT2}_M2": "passive", "V_{OUT2}_M3": "passive", "V_{OUT2}_M4": "passive", GND_M5: "passive", "V_{IN}_M6": "passive", GND_M7: "passive", PGOOD2: "open_collector", FB2: "input", GND_M10: "passive", COMP2: "passive", GND_N1: "passive", GND_N2: "passive", GND_N3: "passive", GND_N4: "passive", GND_N5: "passive", GND_N6: "passive", "TRACK/SS2": "passive", COMP3b: "passive", COMP3a: "passive", FB3: "input", "VOSNS3^{+}": "input", GND_P1: "passive", GND_P2: "passive", GND_P3: "passive", GND_P4: "passive", GND_P5: "passive", CLKOUT3: "output", RUN3: "input", FREQ3: "input", "TRACK/SS3": "passive", "VOSNS3^{-}": "input", GND_P11: "passive", "V_{OUT3}_R1": "power_out", "V_{OUT3}_R2": "passive", GND_R3: "passive", GND_R4: "passive", GND_R5: "passive", PHMODE3: "passive", PGOOD3: "open_collector", "MODE/CLKIN3": "passive", "SV_{IN3}": "power_in", "V_{IN}_R10": "power_in", "INTV_{CC3}": "power_out", "V_{OUT3}_T1": "passive", "V_{OUT3}_T2": "passive", "V_{OUT3}_T3": "passive", GND_T4: "passive", GND_T5: "passive", GND_T6: "passive", "V_{IN}_T7": "passive", "V_{IN}_T8": "passive", "V_{IN}_T9": "passive", "V_{IN}_T10": "passive", "V_{IN}_T11": "passive", "V_{OUT3}_U1": "passive", "V_{OUT3}_U2": "passive", "V_{OUT3}_U3": "passive", GND_U4: "passive", GND_U5: "passive", GND_U6: "passive", GND_U7: "passive", GND_U8: "passive", GND_U9: "passive", GND_U10: "passive", GND_U11: "passive", "V_{OUT3}_V1": "passive", "V_{OUT3}_V2": "passive", "V_{OUT3}_V3": "passive", GND_V4: "passive", GND_V5: "passive", GND_V6: "passive", GND_V7: "passive", GND_V8: "passive", GND_V9: "passive", GND_V10: "passive", GND_V11: "passive", "V_{OUT3}_W1": "passive", "V_{OUT3}_W2": "passive", "V_{OUT3}_W3": "passive", GND_W4: "passive", GND_W5: "passive", "TSENSE3^{+}": "passive", "TSENSE3^{-}": "passive", GND_W8: "passive", GND_W9: "passive", GND_W10: "passive", GND_W11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM4671";
@@ -1316,7 +1337,8 @@ export class LTM8049 extends Component.withPins({
   "V_{IN2}_L6": "L6",
   "V_{IN2}_L7": "L7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{OUT1P}_A1": "power_out", "V_{OUT1P}_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "V_{IN1}_A5": "power_in", "V_{IN1}_A6": "passive", "V_{IN1}_A7": "passive", "V_{OUT1P}_B1": "passive", "V_{OUT1P}_B2": "passive", GND_B3: "passive", GND_B4: "passive", GND_B5: "passive", GND_B6: "passive", RUN1: "input", FBX1: "input", "V_{OUT1N}_C2": "power_out", GND_C3: "passive", GND_C4: "passive", GND_C5: "passive", GND_C6: "passive", SS1: "output", "V_{OUT1N}_D1": "passive", "V_{OUT1N}_D2": "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", PG1: "output", SYNC1: "input", "V_{OUT1N}_E1": "passive", "V_{OUT1N}_E2": "passive", GND_E3: "passive", GND_E4: "passive", GND_E5: "passive", CLKOUT1: "output", RT1: "input", GND_F1: "passive", GND_F2: "passive", SHARE1: "input", SHARE2: "input", GND_F5: "passive", GND_F6: "passive", GND_F7: "passive", "V_{OUT2N}_G1": "power_out", "V_{OUT2N}_G2": "passive", GND_G3: "passive", GND_G4: "passive", GND_G5: "passive", CLKOUT2: "output", RT2: "input", "V_{OUT2N}_H1": "passive", "V_{OUT2N}_H2": "passive", GND_H3: "passive", GND_H4: "passive", GND_H5: "passive", PG2: "output", SYNC2: "input", FBX2: "input", "V_{OUT2N}_J2": "passive", GND_J3: "passive", GND_J4: "passive", GND_J5: "passive", GND_J6: "passive", SS2: "output", "V_{OUT2P}_K1": "power_out", "V_{OUT2P}_K2": "passive", GND_K3: "passive", GND_K4: "passive", GND_K5: "passive", GND_K6: "passive", RUN2: "input", "V_{OUT2P}_L1": "passive", "V_{OUT2P}_L2": "passive", GND_L3: "passive", GND_L4: "passive", "V_{IN2}_L5": "power_in", "V_{IN2}_L6": "passive", "V_{IN2}_L7": "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM8049";
@@ -1362,7 +1384,8 @@ export class LTM8063 extends Component.withPins({
   "VOUT_G3": "G3",
   "VOUT_G4": "G4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "power_in", FB: "input", "TR/SS": "input", GND_A4: "passive", PG: "open_collector", SYNC: "input", RUN: "input", VIN_B4: "power_in", RT: "input", GND_C2: "passive", GND_C3: "passive", VIN_C4: "power_in", GND_D1: "passive", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_E1: "passive", GND_E2: "passive", GND_E3: "passive", GND_E4: "passive", VOUT_F1: "power_out", VOUT_F2: "passive", VOUT_F3: "passive", VOUT_F4: "passive", VOUT_G1: "passive", VOUT_G2: "passive", VOUT_G3: "passive", VOUT_G4: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:LTM8063";
@@ -1389,7 +1412,8 @@ export class MUN12AD01_SH extends Component.withPins({
   "VIN": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SS: "input", FB: "input", PGOOD: "open_collector", VOUT: "power_out", GND_5: "power_in", NC: "no_connect", EN: "input", VIN: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:MUN12AD01-SH";
@@ -1418,7 +1442,8 @@ export class MUN12AD03_SH extends Component.withPins({
   "GND_10": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SS: "input", FB: "input", PGOOD: "open_collector", VOUT_4: "power_out", GND_5: "power_in", NC: "no_connect", EN: "input", VIN: "power_in", VOUT_9: "passive", GND_10: "passive", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:MUN12AD03-SH";
@@ -1445,7 +1470,8 @@ export class MYRGPxx0060x21RC extends Component.withPins({
   "L2": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Lx: "passive", "V_{SS}_2": "power_in", "V_{OUT}": "power_out", "CE/MODE": "input", "V_{SS}_5": "passive", "V_{IN}": "power_in", L1: "passive", L2: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:MYRGPxx0060x21RC";
@@ -1472,7 +1498,8 @@ export class MYRGPxx0060x21RF extends Component.withPins({
   "L2": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Lx: "passive", "V_{SS}_2": "power_in", FB: "input", "CE/MODE": "input", "V_{SS}_5": "passive", "V_{IN}": "power_in", L1: "passive", L2: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:MYRGPxx0060x21RF";
@@ -1493,7 +1520,8 @@ export class OKI_78SR_3_3_1_5_W36_C extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:OKI-78SR-3.3_1.5-W36-C";
@@ -1514,7 +1542,8 @@ export class OKI_78SR_12_1_0_W36_C extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:OKI-78SR-12_1.0-W36-C";
@@ -1535,7 +1564,8 @@ export class OKI_78SR_3_3_1_5_W36H_C extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:OKI-78SR-3.3_1.5-W36H-C";
@@ -1556,7 +1586,8 @@ export class OKI_78SR_12_1_0_W36H_C extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:OKI-78SR-12_1.0-W36H-C";
@@ -1577,7 +1608,8 @@ export class OKI_78SR_5_1_5_W36_C extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:OKI-78SR-5_1.5-W36-C";
@@ -1598,7 +1630,8 @@ export class OKI_78SR_5_1_5_W36H_C extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:OKI-78SR-5_1.5-W36H-C";
@@ -1621,7 +1654,8 @@ export class PTN78000W_EUS_5 extends Component.withPins({
   "Vo_Adj": "4",
   "VO": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VI: "power_in", "~{Inhibit}": "input", Vo_Adj: "output", VO: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:PTN78000W_EUS-5";
@@ -1644,7 +1678,8 @@ export class PTN78000H_EUS_5 extends Component.withPins({
   "Vo_Adj": "4",
   "VO": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VI: "power_in", "~{Inhibit}": "input", Vo_Adj: "output", VO: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:PTN78000H_EUS-5";
@@ -1669,7 +1704,8 @@ export class PTN78020W_EUK_7 extends Component.withPins({
   "VO": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VI: "power_in", "~{Inhibit}": "input", VO_Adj: "input", VO_Sense: "power_out", VO: "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:PTN78020W_EUK-7";
@@ -1694,7 +1730,8 @@ export class PTN78020H_EUK_7 extends Component.withPins({
   "VO": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VI: "power_in", "~{Inhibit}": "input", VO_Adj: "input", VO_Sense: "power_out", VO: "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:PTN78020H_EUK-7";
@@ -1719,7 +1756,8 @@ export class PTN78060W_EUW_7 extends Component.withPins({
   "VO": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VI: "power_in", "~{Inhibit}": "input", VO_Adj: "input", VO_Sense: "power_out", VO: "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:PTN78060W_EUW-7";
@@ -1744,7 +1782,8 @@ export class PTN78060H_EUW_7 extends Component.withPins({
   "VO": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VI: "power_in", "~{Inhibit}": "input", VO_Adj: "input", VO_Sense: "power_out", VO: "power_out", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:PTN78060H_EUW-7";
@@ -1765,7 +1804,8 @@ export class R_78E5_0_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E5.0-0.5";
@@ -1786,7 +1826,8 @@ export class R_781_5_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-781.5-0.5";
@@ -1807,7 +1848,8 @@ export class R_781_8_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-781.8-0.5";
@@ -1828,7 +1870,8 @@ export class R_781_8_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-781.8-1.0";
@@ -1849,7 +1892,8 @@ export class R_7812_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-7812-0.5";
@@ -1870,7 +1914,8 @@ export class R_7815_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-7815-0.5";
@@ -1891,7 +1936,8 @@ export class R_782_5_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-782.5-0.5";
@@ -1912,7 +1958,8 @@ export class R_782_5_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-782.5-1.0";
@@ -1933,7 +1980,8 @@ export class R_783_3_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-783.3-0.5";
@@ -1954,7 +2002,8 @@ export class R_783_3_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-783.3-1.0";
@@ -1975,7 +2024,8 @@ export class R_785_0_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-785.0-0.5";
@@ -1996,7 +2046,8 @@ export class R_785_0_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-785.0-1.0";
@@ -2017,7 +2068,8 @@ export class R_786_5_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-786.5-0.5";
@@ -2038,7 +2090,8 @@ export class R_78B1_2_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B1.2-2.0";
@@ -2059,7 +2112,8 @@ export class R_78B1_5_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B1.5-2.0";
@@ -2080,7 +2134,8 @@ export class R_78B1_8_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B1.8-2.0";
@@ -2101,7 +2156,8 @@ export class R_78B12_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B12-2.0";
@@ -2122,7 +2178,8 @@ export class R_78B15_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B15-2.0";
@@ -2143,7 +2200,8 @@ export class R_78B2_5_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B2.5-2.0";
@@ -2164,7 +2222,8 @@ export class R_78B3_3_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B3.3-2.0";
@@ -2185,7 +2244,8 @@ export class R_78B5_0_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B5.0-2.0";
@@ -2206,7 +2266,8 @@ export class R_78B9_0_2_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78B9.0-2.0";
@@ -2227,7 +2288,8 @@ export class R_78C1_8_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78C1.8-1.0";
@@ -2248,7 +2310,8 @@ export class R_78C12_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78C12-1.0";
@@ -2269,7 +2332,8 @@ export class R_78C15_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78C15-1.0";
@@ -2290,7 +2354,8 @@ export class R_78C3_3_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78C3.3-1.0";
@@ -2311,7 +2376,8 @@ export class R_78C5_0_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78C5.0-1.0";
@@ -2332,7 +2398,8 @@ export class R_78C9_0_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78C9.0-1.0";
@@ -2353,7 +2420,8 @@ export class R_78E12_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E12-0.5";
@@ -2374,7 +2442,8 @@ export class R_78E15_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E15-0.5";
@@ -2395,7 +2464,8 @@ export class R_78E3_3_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E3.3-0.5";
@@ -2416,7 +2486,8 @@ export class R_78E3_3_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E3.3-1.0";
@@ -2437,7 +2508,8 @@ export class R_78E5_0_1_0 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E5.0-1.0";
@@ -2458,7 +2530,8 @@ export class R_78E9_0_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78E9.0-0.5";
@@ -2479,7 +2552,8 @@ export class R_78HB24_0_3 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB24-0.3";
@@ -2500,7 +2574,8 @@ export class R_78HB12_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB12-0.5";
@@ -2521,7 +2596,8 @@ export class R_78HB15_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB15-0.5";
@@ -2542,7 +2618,8 @@ export class R_78HB3_3_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB3.3-0.5";
@@ -2563,7 +2640,8 @@ export class R_78HB5_0_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB5.0-0.5";
@@ -2584,7 +2662,8 @@ export class R_78HB6_5_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB6.5-0.5";
@@ -2605,7 +2684,8 @@ export class R_78HB9_0_0_5 extends Component.withPins({
   "GND": "2",
   "OUT": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78HB9.0-0.5";
@@ -2627,7 +2707,8 @@ export class R_78S3_3_0_1 extends Component.withPins({
   "OUT": "3",
   "CTRL": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "power_in", GND: "power_in", OUT: "power_out", CTRL: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:R-78S3.3-0.1";
@@ -2670,7 +2751,8 @@ export class RPM5_0_6_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM5.0-6.0";
@@ -2713,7 +2795,8 @@ export class RPM3_3_1_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM3.3-1.0";
@@ -2756,7 +2839,8 @@ export class RPM3_3_2_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM3.3-2.0";
@@ -2799,7 +2883,8 @@ export class RPM3_3_3_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM3.3-3.0";
@@ -2842,7 +2927,8 @@ export class RPM3_3_6_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM3.3-6.0";
@@ -2885,7 +2971,8 @@ export class RPM5_0_1_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM5.0-1.0";
@@ -2928,7 +3015,8 @@ export class RPM5_0_2_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM5.0-2.0";
@@ -2971,7 +3059,8 @@ export class RPM5_0_3_0 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", SEQ: "passive", NC: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPM5.0-3.0";
@@ -3014,7 +3103,8 @@ export class RPMH3_3_1_5 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", NC_E1: "no_connect", NC_E2: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPMH3.3-1.5";
@@ -3057,7 +3147,8 @@ export class RPMH12_1_5 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", NC_E1: "no_connect", NC_E2: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPMH12-1.5";
@@ -3100,7 +3191,8 @@ export class RPMH15_1_5 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", NC_E1: "no_connect", NC_E2: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPMH15-1.5";
@@ -3143,7 +3235,8 @@ export class RPMH24_1_5 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", NC_E1: "no_connect", NC_E2: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPMH24-1.5";
@@ -3186,7 +3279,8 @@ export class RPMH5_0_1_5 extends Component.withPins({
   "GND_E4": "E4",
   "Trim": "E5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+VIN_A1": "power_in", "+VIN_A2": "passive", GND_A3: "power_in", GND_A4: "passive", "+VOUT_A5": "power_out", GND_B1: "passive", GND_B2: "passive", GND_B3: "passive", GND_B4: "passive", "+VOUT_B5": "passive", CTRL: "input", GND_C2: "passive", GND_C3: "passive", GND_C4: "passive", Sense: "input", PGood: "output", GND_D2: "passive", GND_D3: "passive", GND_D4: "passive", GND_D5: "passive", NC_E1: "no_connect", NC_E2: "no_connect", GND_E3: "passive", GND_E4: "passive", Trim: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:RPMH5.0-1.5";
@@ -3212,7 +3306,8 @@ export class TC7662AxPA extends Component.withPins({
   "OSC": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "CAP+": "passive", GND: "power_in", "CAP-": "passive", VOUT: "power_out", NC_6: "passive", OSC: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TC7662AxPA";
@@ -3238,7 +3333,8 @@ export class TC7662Bx0A extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOST: "input", "CAP+": "passive", GND: "power_in", "CAP-": "passive", VOUT: "power_out", LV: "input", OSC: "passive", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TC7662Bx0A";
@@ -3264,7 +3360,8 @@ export class TC7662BxPA extends Component.withPins({
   "OSC": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOST: "input", "CAP+": "passive", GND: "power_in", "CAP-": "passive", VOUT: "power_out", LV: "input", OSC: "passive", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TC7662BxPA";
@@ -3299,7 +3396,8 @@ export class TPS43060RTE extends Component.withPins({
   "AGND_16": "16",
   "AGND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RT/CLK": "passive", SS: "passive", COMP: "passive", FB: "input", "ISNS–": "input", "ISNS+": "input", VIN: "power_in", LDRV: "output", PGND: "power_in", VCC: "power_out", BOOT: "input", SW: "input", HDRV: "input", PGOOD: "open_collector", EN: "passive", AGND_16: "power_in", AGND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS43060RTE";
@@ -3328,7 +3426,8 @@ export class TPS54240DGQ extends Component.withPins({
   "PH": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOT: "input", VIN: "power_in", EN: "input", "SS/TR": "passive", "RT/CLK": "passive", PWRGD: "open_collector", VSENSE: "input", COMP: "passive", GND_9: "power_in", PH: "power_out", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS54240DGQ";
@@ -3357,7 +3456,8 @@ export class TPS54240DRC extends Component.withPins({
   "PH": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOT: "input", VIN: "power_in", EN: "input", "SS/TR": "passive", "RT/CLK": "passive", PWRGD: "open_collector", VSENSE: "input", COMP: "passive", GND_9: "power_in", PH: "power_out", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS54240DRC";
@@ -3382,7 +3482,8 @@ export class TPS61022 extends Component.withPins({
   "MODE": "6",
   "VIN": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SW: "input", VOUT: "power_out", FB: "input", EN: "input", MODE: "input", VIN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS61022";
@@ -3409,7 +3510,8 @@ export class TPS82130 extends Component.withPins({
   "SS/TR": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", VIN: "power_in", GND_3: "power_in", VOUT_4: "power_out", VOUT_5: "passive", FB: "input", PG: "open_collector", "SS/TR": "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS82130";
@@ -3436,7 +3538,8 @@ export class TPS82140 extends Component.withPins({
   "SS/TR": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", VIN: "power_in", GND_3: "power_in", VOUT_4: "power_out", VOUT_5: "passive", FB: "input", PG: "open_collector", "SS/TR": "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS82140";
@@ -3463,7 +3566,8 @@ export class TPS82150 extends Component.withPins({
   "SS/TR": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", VIN: "power_in", GND_3: "power_in", VOUT_4: "power_out", VOUT_5: "passive", FB: "input", PG: "open_collector", "SS/TR": "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPS82150";
@@ -3496,7 +3600,8 @@ export class TPSM53602RDA extends Component.withPins({
   "VIN_14": "14",
   "PGND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_1: "power_in", EN: "input", PGND_3: "passive", DNC_4: "no_connect", DNC_5: "no_connect", PGOOD: "open_collector", VOUT_7: "power_out", VOUT_8: "passive", FB: "input", PGND_10: "passive", PGND_11: "passive", AGND: "power_in", V5V: "output", VIN_14: "passive", PGND_15: "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPSM53602RDA";
@@ -3529,7 +3634,8 @@ export class TPSM53603RDA extends Component.withPins({
   "VIN_14": "14",
   "PGND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_1: "power_in", EN: "input", PGND_3: "passive", DNC_4: "no_connect", DNC_5: "no_connect", PGOOD: "open_collector", VOUT_7: "power_out", VOUT_8: "passive", FB: "input", PGND_10: "passive", PGND_11: "passive", AGND: "power_in", V5V: "output", VIN_14: "passive", PGND_15: "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPSM53603RDA";
@@ -3562,7 +3668,8 @@ export class TPSM53604RDA extends Component.withPins({
   "VIN_14": "14",
   "PGND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN_1: "power_in", EN: "input", PGND_3: "passive", DNC_4: "no_connect", DNC_5: "no_connect", PGOOD: "open_collector", VOUT_7: "power_out", VOUT_8: "passive", FB: "input", PGND_10: "passive", PGND_11: "passive", AGND: "power_in", V5V: "output", VIN_14: "passive", PGND_15: "power_in", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TPSM53604RDA";
@@ -3583,7 +3690,8 @@ export class TSR_1_2450 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2450";
@@ -3604,7 +3712,8 @@ export class TSR0_5_24120 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-24120";
@@ -3632,7 +3741,8 @@ export class TSR0_5_24120SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-24120SM";
@@ -3653,7 +3763,8 @@ export class TSR0_5_2415 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2415";
@@ -3674,7 +3785,8 @@ export class TSR0_5_24150 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-24150";
@@ -3702,7 +3814,8 @@ export class TSR0_5_24150SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-24150SM";
@@ -3730,7 +3843,8 @@ export class TSR0_5_2415SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2415SM";
@@ -3751,7 +3865,8 @@ export class TSR0_5_2418 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2418";
@@ -3779,7 +3894,8 @@ export class TSR0_5_2418SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2418SM";
@@ -3800,7 +3916,8 @@ export class TSR0_5_2425 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2425";
@@ -3828,7 +3945,8 @@ export class TSR0_5_2425SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2425SM";
@@ -3849,7 +3967,8 @@ export class TSR0_5_2433 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2433";
@@ -3877,7 +3996,8 @@ export class TSR0_5_2433SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2433SM";
@@ -3898,7 +4018,8 @@ export class TSR0_5_2450 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2450";
@@ -3926,7 +4047,8 @@ export class TSR0_5_2450SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2450SM";
@@ -3947,7 +4069,8 @@ export class TSR0_5_2465 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2465";
@@ -3975,7 +4098,8 @@ export class TSR0_5_2465SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2465SM";
@@ -3996,7 +4120,8 @@ export class TSR0_5_2490 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2490";
@@ -4024,7 +4149,8 @@ export class TSR0_5_2490SM extends Component.withPins({
   "GND_9": "9",
   "Remote": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin_1: "power_in", Vin_2: "passive", GND_3: "power_in", Vout_4: "power_out", Vout_5: "passive", Trim: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", Remote: "input", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.5-2490SM";
@@ -4045,7 +4171,8 @@ export class TSR0_6_48120WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-48120WI";
@@ -4066,7 +4193,8 @@ export class TSR0_6_48150WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-48150WI";
@@ -4087,7 +4215,8 @@ export class TSR0_6_48240WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-48240WI";
@@ -4108,7 +4237,8 @@ export class TSR0_6_4833WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-4833WI";
@@ -4129,7 +4259,8 @@ export class TSR0_6_4850WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-4850WI";
@@ -4150,7 +4281,8 @@ export class TSR0_6_4865WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-4865WI";
@@ -4171,7 +4303,8 @@ export class TSR0_6_4890WI extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR0.6-4890WI";
@@ -4192,7 +4325,8 @@ export class TSR1_2433E extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR1-2433E";
@@ -4213,7 +4347,8 @@ export class TSR1_2450E extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR1-2450E";
@@ -4234,7 +4369,8 @@ export class TSR1_5_24120E extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR1.5-24120E";
@@ -4255,7 +4391,8 @@ export class TSR1_5_2433E extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR1.5-2433E";
@@ -4276,7 +4413,8 @@ export class TSR1_5_2450E extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR1.5-2450E";
@@ -4297,7 +4435,8 @@ export class TSR2_0512 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-0512";
@@ -4318,7 +4457,8 @@ export class TSR2_0515 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-0515";
@@ -4339,7 +4479,8 @@ export class TSR2_0518 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-0518";
@@ -4360,7 +4501,8 @@ export class TSR2_0525 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-0525";
@@ -4381,7 +4523,8 @@ export class TSR2_2412 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2412";
@@ -4402,7 +4545,8 @@ export class TSR2_24120 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-24120";
@@ -4423,7 +4567,8 @@ export class TSR2_24120N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-24120N";
@@ -4444,7 +4589,8 @@ export class TSR2_2412N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2412N";
@@ -4465,7 +4611,8 @@ export class TSR2_2415 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2415";
@@ -4486,7 +4633,8 @@ export class TSR2_24150 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-24150";
@@ -4507,7 +4655,8 @@ export class TSR2_24150N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-24150N";
@@ -4528,7 +4677,8 @@ export class TSR2_2415N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2415N";
@@ -4549,7 +4699,8 @@ export class TSR2_2418 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2418";
@@ -4570,7 +4721,8 @@ export class TSR2_2418N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2418N";
@@ -4591,7 +4743,8 @@ export class TSR2_2425 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2425";
@@ -4612,7 +4765,8 @@ export class TSR2_2425N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2425N";
@@ -4633,7 +4787,8 @@ export class TSR2_2433 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2433";
@@ -4654,7 +4809,8 @@ export class TSR2_2433N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2433N";
@@ -4675,7 +4831,8 @@ export class TSR2_2450 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2450";
@@ -4696,7 +4853,8 @@ export class TSR2_2450N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2450N";
@@ -4717,7 +4875,8 @@ export class TSR2_2465 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2465";
@@ -4738,7 +4897,8 @@ export class TSR2_2465N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2465N";
@@ -4759,7 +4919,8 @@ export class TSR2_2490 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2490";
@@ -4780,7 +4941,8 @@ export class TSR2_2490N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR2-2490N";
@@ -4801,7 +4963,8 @@ export class TSR3_24120N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-24120N";
@@ -4822,7 +4985,8 @@ export class TSR3_2412N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2412N";
@@ -4843,7 +5007,8 @@ export class TSR3_24150N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-24150N";
@@ -4864,7 +5029,8 @@ export class TSR3_2415N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2415N";
@@ -4885,7 +5051,8 @@ export class TSR3_2418N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2418N";
@@ -4906,7 +5073,8 @@ export class TSR3_2425N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2425N";
@@ -4927,7 +5095,8 @@ export class TSR3_2433N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2433N";
@@ -4948,7 +5117,8 @@ export class TSR3_2450N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2450N";
@@ -4969,7 +5139,8 @@ export class TSR3_2465N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2465N";
@@ -4990,7 +5161,8 @@ export class TSR3_2490N extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR3-2490N";
@@ -5011,7 +5183,8 @@ export class TSR_1_2412 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2412";
@@ -5032,7 +5205,8 @@ export class TSR_1_24120 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-24120";
@@ -5053,7 +5227,8 @@ export class TSR_1_2415 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2415";
@@ -5074,7 +5249,8 @@ export class TSR_1_24150 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-24150";
@@ -5095,7 +5271,8 @@ export class TSR_1_2418 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2418";
@@ -5116,7 +5293,8 @@ export class TSR_1_2425 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2425";
@@ -5137,7 +5315,8 @@ export class TSR_1_2433 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2433";
@@ -5158,7 +5337,8 @@ export class TSR_1_2465 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2465";
@@ -5179,7 +5359,8 @@ export class TSR_1_2490 extends Component.withPins({
   "GND": "2",
   "Vout": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vin: "power_in", GND: "power_in", Vout: "power_out", ...opts.pinTypes } });
   }
   override schema = "Converter_DCDC:TSR_1-2490";

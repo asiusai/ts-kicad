@@ -85,7 +85,8 @@ export class ADAU1450 extends Component.withPins({
   "DGND_72": "72",
   "EP": "73",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DGND_1: "power_in", IOVDD_2: "power_in", VDRIVE: "output", SPDIFIN: "input", SPDIFOUT: "output", AGND: "power_in", AVDD: "power_in", AUXADC0: "input", AUXADC1: "input", AUXADC2: "input", AUXADC3: "input", AUXADC4: "input", AUXADC5: "input", PGND: "power_in", PVDD: "power_in", PLLFILT: "passive", DGND_17: "passive", IOVDD_18: "passive", DGND_19: "passive", DVDD_20: "power_in", "XTALIN/MCLK": "input", XTALOUT: "output", CLKOUT: "output", "~{RESET}": "input", DGND_25: "passive", "SS_M/MP0": "bidirectional", "MOSI_M/MP1": "bidirectional", "SCL_M/SCLK_M/MP2": "bidirectional", "SDA_M/MISO_M/MP3": "bidirectional", "MISO/SDA": "bidirectional", "SCLK/SCL": "input", "MOSI/ADDR1": "input", "SS/ADDR0": "input", SELFBOOT: "input", DVDD_35: "passive", DGND_36: "passive", DGND_37: "passive", IOVDD_38: "passive", "LRCLK_OUT0/MP4": "bidirectional", BCLK_OUT0: "bidirectional", SDATA_OUT0: "output", "LRCLK_OUT1/MP5": "bidirectional", BCLK_OUT1: "bidirectional", SDATA_OUT1: "output", MP6: "bidirectional", MP7: "bidirectional", "LRCLK_OUT2/MP8": "bidirectional", BCLK_OUT2: "bidirectional", SDATA_OUT2: "output", "LRCLK_OUT3/MP9": "bidirectional", BCLK_OUT3: "bidirectional", SDATA_OUT3: "output", DVDD_53: "passive", DGND_54: "passive", DGND_55: "passive", IOVDD_56: "passive", BCLK_IN0: "bidirectional", "LRCLK_IN0/MP10": "bidirectional", SDATA_IN0: "input", BCLK_IN1: "bidirectional", "LRCLK_IN1/MP11": "bidirectional", SDATA_IN1: "input", THD_M: "passive", THD_P: "passive", BCLK_IN2: "bidirectional", "LRCLK_IN2/MP12": "bidirectional", SDATA_IN2: "input", BCLK_IN3: "bidirectional", "LRCLK_IN3/MP13": "bidirectional", SDATA_IN3: "input", DVDD_71: "passive", DGND_72: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "DSP_AnalogDevices:ADAU1450";
@@ -176,7 +177,8 @@ export class ADAU1451 extends Component.withPins({
   "DGND_72": "72",
   "EP": "73",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DGND_1: "power_in", IOVDD_2: "power_in", VDRIVE: "output", SPDIFIN: "input", SPDIFOUT: "output", AGND: "power_in", AVDD: "power_in", AUXADC0: "input", AUXADC1: "input", AUXADC2: "input", AUXADC3: "input", AUXADC4: "input", AUXADC5: "input", PGND: "power_in", PVDD: "power_in", PLLFILT: "passive", DGND_17: "passive", IOVDD_18: "passive", DGND_19: "passive", DVDD_20: "power_in", "XTALIN/MCLK": "input", XTALOUT: "output", CLKOUT: "output", "~{RESET}": "input", DGND_25: "passive", "SS_M/MP0": "bidirectional", "MOSI_M/MP1": "bidirectional", "SCL_M/SCLK_M/MP2": "bidirectional", "SDA_M/MISO_M/MP3": "bidirectional", "MISO/SDA": "bidirectional", "SCLK/SCL": "input", "MOSI/ADDR1": "input", "SS/ADDR0": "input", SELFBOOT: "input", DVDD_35: "passive", DGND_36: "passive", DGND_37: "passive", IOVDD_38: "passive", "LRCLK_OUT0/MP4": "bidirectional", BCLK_OUT0: "bidirectional", SDATA_OUT0: "output", "LRCLK_OUT1/MP5": "bidirectional", BCLK_OUT1: "bidirectional", SDATA_OUT1: "output", MP6: "bidirectional", MP7: "bidirectional", "LRCLK_OUT2/MP8": "bidirectional", BCLK_OUT2: "bidirectional", SDATA_OUT2: "output", "LRCLK_OUT3/MP9": "bidirectional", BCLK_OUT3: "bidirectional", SDATA_OUT3: "output", DVDD_53: "passive", DGND_54: "passive", DGND_55: "passive", IOVDD_56: "passive", BCLK_IN0: "bidirectional", "LRCLK_IN0/MP10": "bidirectional", SDATA_IN0: "input", BCLK_IN1: "bidirectional", "LRCLK_IN1/MP11": "bidirectional", SDATA_IN1: "input", THD_M: "passive", THD_P: "passive", BCLK_IN2: "bidirectional", "LRCLK_IN2/MP12": "bidirectional", SDATA_IN2: "input", BCLK_IN3: "bidirectional", "LRCLK_IN3/MP13": "bidirectional", SDATA_IN3: "input", DVDD_71: "passive", DGND_72: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "DSP_AnalogDevices:ADAU1451";
@@ -267,7 +269,8 @@ export class ADAU1452 extends Component.withPins({
   "DGND_72": "72",
   "EP": "73",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DGND_1: "power_in", IOVDD_2: "power_in", VDRIVE: "output", SPDIFIN: "input", SPDIFOUT: "output", AGND: "power_in", AVDD: "power_in", AUXADC0: "input", AUXADC1: "input", AUXADC2: "input", AUXADC3: "input", AUXADC4: "input", AUXADC5: "input", PGND: "power_in", PVDD: "power_in", PLLFILT: "passive", DGND_17: "passive", IOVDD_18: "passive", DGND_19: "passive", DVDD_20: "power_in", "XTALIN/MCLK": "input", XTALOUT: "output", CLKOUT: "output", "~{RESET}": "input", DGND_25: "passive", "SS_M/MP0": "bidirectional", "MOSI_M/MP1": "bidirectional", "SCL_M/SCLK_M/MP2": "bidirectional", "SDA_M/MISO_M/MP3": "bidirectional", "MISO/SDA": "bidirectional", "SCLK/SCL": "input", "MOSI/ADDR1": "input", "SS/ADDR0": "input", SELFBOOT: "input", DVDD_35: "passive", DGND_36: "passive", DGND_37: "passive", IOVDD_38: "passive", "LRCLK_OUT0/MP4": "bidirectional", BCLK_OUT0: "bidirectional", SDATA_OUT0: "output", "LRCLK_OUT1/MP5": "bidirectional", BCLK_OUT1: "bidirectional", SDATA_OUT1: "output", MP6: "bidirectional", MP7: "bidirectional", "LRCLK_OUT2/MP8": "bidirectional", BCLK_OUT2: "bidirectional", SDATA_OUT2: "output", "LRCLK_OUT3/MP9": "bidirectional", BCLK_OUT3: "bidirectional", SDATA_OUT3: "output", DVDD_53: "passive", DGND_54: "passive", DGND_55: "passive", IOVDD_56: "passive", BCLK_IN0: "bidirectional", "LRCLK_IN0/MP10": "bidirectional", SDATA_IN0: "input", BCLK_IN1: "bidirectional", "LRCLK_IN1/MP11": "bidirectional", SDATA_IN1: "input", THD_M: "passive", THD_P: "passive", BCLK_IN2: "bidirectional", "LRCLK_IN2/MP12": "bidirectional", SDATA_IN2: "input", BCLK_IN3: "bidirectional", "LRCLK_IN3/MP13": "bidirectional", SDATA_IN3: "input", DVDD_71: "passive", DGND_72: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "DSP_AnalogDevices:ADAU1452";
@@ -333,7 +336,8 @@ export class ADAU1701 extends Component.withPins({
   "FILTA": "47",
   "AVDD_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AGND_1: "power_in", ADC0: "input", ADC_RES: "passive", ADC1: "input", "~{RESET}": "input", SELFBOOT: "input", ADDR0: "input", MP4: "bidirectional", MP5: "bidirectional", MP1: "bidirectional", MP0: "bidirectional", DGND_12: "power_in", DVDD_13: "power_in", MP7: "bidirectional", MP6: "bidirectional", MP10: "bidirectional", VDRIVE: "output", IOVDD: "power_in", MP11: "bidirectional", "ADDR1/CDATA/WB": "input", "CLATCH/WP": "bidirectional", "SDA/COUT": "bidirectional", "SCL/CCLK": "bidirectional", DVDD_24: "passive", DGND_25: "passive", MP9: "bidirectional", MP8: "bidirectional", MP3: "bidirectional", MP2: "bidirectional", RSVD: "passive", OSCO: "passive", MCLKI: "passive", PGND: "power_in", PVDD: "power_in", PLL_LF: "passive", AVDD_36: "power_in", AGND_37: "passive", PLL_MODE0: "input", PLL_MODE1: "input", CM: "output", FILTD: "output", AGND_42: "passive", VOUT3: "output", VOUT2: "output", VOUT1: "output", VOUT0: "output", FILTA: "output", AVDD_48: "passive", ...opts.pinTypes } });
   }
   override schema = "DSP_AnalogDevices:ADAU1701";
@@ -399,7 +403,8 @@ export class ADAU1702 extends Component.withPins({
   "FILTA": "47",
   "AVDD_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AGND_1: "power_in", ADC0: "input", ADC_RES: "passive", ADC1: "input", "~{RESET}": "input", SELFBOOT: "input", ADDR0: "input", MP4: "bidirectional", MP5: "bidirectional", MP1: "bidirectional", MP0: "bidirectional", DGND_12: "power_in", DVDD_13: "power_in", MP7: "bidirectional", MP6: "bidirectional", MP10: "bidirectional", VDRIVE: "output", IOVDD: "power_in", MP11: "bidirectional", "ADDR1/CDATA/WB": "input", "CLATCH/WP": "bidirectional", "SDA/COUT": "bidirectional", "SCL/CCLK": "bidirectional", DVDD_24: "passive", DGND_25: "passive", MP9: "bidirectional", MP8: "bidirectional", MP3: "bidirectional", MP2: "bidirectional", RSVD: "passive", OSCO: "passive", MCLKI: "passive", PGND: "power_in", PVDD: "power_in", PLL_LF: "passive", AVDD_36: "power_in", AGND_37: "passive", PLL_MODE0: "input", PLL_MODE1: "input", CM: "output", FILTD: "output", AGND_42: "passive", VOUT3: "output", VOUT2: "output", VOUT1: "output", VOUT0: "output", FILTA: "output", AVDD_48: "passive", ...opts.pinTypes } });
   }
   override schema = "DSP_AnalogDevices:ADAU1702";

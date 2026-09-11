@@ -29,7 +29,8 @@ export class DRV2510_Q1 extends Component.withPins({
   "GND_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", EN: "input", REG: "passive", SDA: "bidirectional", SCL: "input", "IN+": "input", "IN-": "input", STDBY: "input", GND_9: "passive", BSTN: "passive", "OUT-": "power_out", "OUT+": "power_out", BSTP: "passive", INTZ: "open_collector", VDD: "power_in", GND_16: "passive", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver:DRV2510-Q1";
@@ -57,7 +58,8 @@ export class DRV2605LDGS extends Component.withPins({
   "OUT-": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REG: "passive", SCL: "input", SDA: "bidirectional", "IN/TRIG": "input", EN: "input", "VDD/NC": "power_in", "OUT+": "output", GND: "power_in", "OUT-": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver:DRV2605LDGS";
@@ -91,7 +93,8 @@ export class DRV8860 extends Component.withPins({
   "OUT2": "15",
   "OUT1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", DIN: "input", SCLK: "input", Latch: "input", GND: "power_in", DOUT: "output", FAULT: "open_collector", ENABLE: "input", OUT8: "output", OUT7: "output", OUT6: "output", OUT5: "output", OUT4: "output", OUT3: "output", OUT2: "output", OUT1: "output", ...opts.pinTypes } });
   }
   override schema = "Driver:DRV8860";
@@ -126,7 +129,8 @@ export class DRV8860_PWPR extends Component.withPins({
   "OUT1": "16",
   "PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", DIN: "input", SCLK: "input", Latch: "input", GND: "power_in", DOUT: "output", FAULT: "open_collector", ENABLE: "input", OUT8: "output", OUT7: "output", OUT6: "output", OUT5: "output", OUT4: "output", OUT3: "output", OUT2: "output", OUT1: "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver:DRV8860_PWPR";
@@ -173,7 +177,8 @@ export class MAX1968xUI extends Component.withPins({
   "MAXV": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND_2: "power_in", CTLI: "input", REF: "output", PGND_5: "power_in", LX2_6: "power_out", PGND_7: "passive", LX2_8: "passive", PVDD2_9: "power_in", LX2_10: "passive", PVDD2_11: "passive", FREQ: "input", ITEC: "output", OS2: "input", OS1: "input", CS: "input", "~{SHDN}": "input", PVDD1_18: "power_in", LX1_19: "power_out", PVDD1_20: "passive", LX1_21: "passive", PGND_22: "passive", LX1_23: "passive", PGND_24: "passive", COMP: "passive", MAXIN: "input", MAXIP: "input", MAXV: "input", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver:MAX1968xUI";
@@ -220,7 +225,8 @@ export class MAX1969xUI extends Component.withPins({
   "MAXV": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND_2: "power_in", CTLI: "input", REF: "output", PGND_5: "power_in", LX2_6: "power_out", PGND_7: "passive", LX2_8: "passive", PVDD2_9: "power_in", LX2_10: "passive", PVDD2_11: "passive", FREQ: "input", ITEC: "output", OS2: "input", OS1: "input", CS: "input", "~{SHDN}": "input", PVDD1_18: "power_in", LX1_19: "power_out", PVDD1_20: "passive", LX1_21: "passive", PGND_22: "passive", LX1_23: "passive", PGND_24: "passive", COMP: "passive", MAXIN: "input", MAXIP: "input", MAXV: "input", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver:MAX1969xUI";
@@ -259,7 +265,8 @@ export class MAX4820xUP extends Component.withPins({
   "COM": "15",
   "OUT4": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_9: "power_in", OUT3: "open_collector", GND_18: "passive", OUT2: "open_collector", OUT1: "open_collector", GND_21: "passive", VCC: "power_in", "~{SET}": "input", "~{RESET}": "input", "~{CS}": "input", DIN: "input", SCLK: "input", DOUT: "output", NC: "no_connect", OUT8: "open_collector", OUT7: "open_collector", GND_12: "passive", OUT6: "open_collector", OUT5: "open_collector", COM: "passive", OUT4: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver:MAX4820xUP";
@@ -298,7 +305,8 @@ export class MAX4821xUP extends Component.withPins({
   "COM": "15",
   "OUT4": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_9: "power_in", OUT3: "open_collector", GND_18: "passive", OUT2: "open_collector", OUT1: "open_collector", GND_21: "passive", VCC: "power_in", "~{SET}": "input", "~{RESET}": "input", "~{CS}": "input", LVL: "input", A0: "input", A1: "input", A2: "input", OUT8: "open_collector", OUT7: "open_collector", GND_12: "passive", OUT6: "open_collector", OUT5: "open_collector", COM: "passive", OUT4: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver:MAX4821xUP";
@@ -337,7 +345,8 @@ export class TPL9201_TSSOP extends Component.withPins({
   "SYN": "20",
   "PAD": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ZVS: "output", OUT1: "output", OUT2: "output", OUT3: "output", OUT4: "output", OUT5: "output", OUT6: "output", OUT7: "output", OUT8: "output", GND_10: "power_in", GND_11: "power_in", EN1: "input", Rdelay: "output", RST: "bidirectional", MOSI: "input", CS: "input", SCLK: "input", "5Vout": "power_out", Vin: "power_in", SYN: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver:TPL9201_TSSOP";
@@ -376,7 +385,8 @@ export class TUSS4470 extends Component.withPins({
   "VPWR": "20",
   "EPAD": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT3: "output", DGND: "power_in", "~{CS}": "input", SCLK: "input", SDI: "input", SDO: "tri_state", IO1: "input", IO2: "input", VOUT: "output", VDD: "power_in", INN: "input", INP: "input", SGND: "power_in", GND: "power_in", OUTA: "tri_state", OUTB: "tri_state", VDRV: "power_in", FLT: "bidirectional", OUT4: "output", VPWR: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver:TUSS4470";

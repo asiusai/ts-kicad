@@ -45,7 +45,8 @@ export class AT86RF233_Z extends Component.withPins({
   "AVSS_32": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG3: "output", DIG4: "output", AVSS_3: "power_in", RFP: "passive", RFN: "passive", AVSS_6: "passive", DVSS_7: "power_in", "~{RST}": "input", DIG1: "output", DIG2: "output", SLP_TR: "input", DVSS_12: "passive", DVDD_13: "power_in", DVDD_14: "passive", DEVDD: "power_in", DVSS_16: "passive", CLKM: "output", DVSS_18: "passive", SCLK: "input", MISO: "output", DVSS_21: "passive", MOSI: "input", "~{SEL}": "input", IRQ: "output", XTAL2: "passive", XTAL1: "passive", AVSS_27: "passive", EVDD: "power_in", AVDD: "power_in", AVSS_30: "passive", AVSS_31: "passive", AVSS_32: "passive", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:AT86RF233-Z";
@@ -91,7 +92,8 @@ export class CC2520 extends Component.withPins({
   "SCLK": "28",
   "AGND": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SO: "output", SI: "input", "~{CS}": "input", GPIO5: "bidirectional", GPIO4: "bidirectional", GPIO3: "bidirectional", GPIO2: "bidirectional", DVDD: "power_in", GPIO1: "bidirectional", GPIO0: "bidirectional", AVDD5: "power_in", XOSC_Q2: "passive", XOSC_Q1: "passive", AVDD3: "power_in", NC_15: "no_connect", AVDD2: "power_in", RF_P: "passive", RF_N: "passive", AVDD1: "power_in", NC_21: "no_connect", AVDD4: "power_in", RBIAS: "passive", AVDD_GUARD: "power_in", "~{RESET}": "input", VREG_EN: "input", DCOUPL: "passive", SCLK: "input", AGND: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:CC2520";
@@ -140,7 +142,8 @@ export class MC13192 extends Component.withPins({
   "VDDA": "32",
   "GND": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RFIN-": "input", "RFIN+": "input", TINJ_P: "input", TINJ_M: "input", PAO_P: "open_collector", PAO_M: "open_collector", SM: "input", GPIO4: "bidirectional", GPIO3: "bidirectional", GPIO2: "bidirectional", GPIO1: "bidirectional", RSTBi: "input", RXTXENi: "input", ATTNBi: "input", CLKOo: "output", SPICLKi: "input", MOSIi: "input", MISOo: "tri_state", CEBi: "input", IRQBo: "open_collector", VDDD: "power_out", VDDIN: "power_in", GPIO5: "bidirectional", GPIO6: "bidirectional", GPIO7: "bidirectional", XTALin: "input", XTALout: "output", VDDLO2: "power_in", VDDLO1: "power_in", VDDVCO: "power_out", VBATT: "input", VDDA: "power_out", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:MC13192";
@@ -186,7 +189,8 @@ export class TWE_L_DP_W extends Component.withPins({
   "DIO3/M3": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "DIO14/SCL": "bidirectional", "DIO7/RX": "bidirectional", "DIO5/PWM1": "bidirectional", "DIO18/DO1": "bidirectional", "DO0/PWM2": "output", "DO1/PWM3": "bidirectional", "DIO19/DO2": "bidirectional", "DIO4/DO3": "bidirectional", "DIO6/TX": "bidirectional", "DIO8/PWM4": "bidirectional", "DIO9/DO4": "bidirectional", "DIO10/M1": "bidirectional", GND_14: "passive", "DIO12/DI1": "bidirectional", "DIO13/DI2": "bidirectional", "DIO11/DI3": "bidirectional", "DIO16/DI4": "bidirectional", "DIO15/SDA": "bidirectional", "DIO17/BPS": "bidirectional", "~{RESET}": "input", "ADC1/AI1": "input", "DIO0/AI2": "bidirectional", "ADC2/AI3": "input", "DIO1/AI4": "bidirectional", "DIO2/M2": "bidirectional", "DIO3/M3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:TWE-L-DP-W";
@@ -232,7 +236,8 @@ export class MW_R_DP_W extends Component.withPins({
   "DIO3/M3": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "DIO14/SCL": "bidirectional", "DIO7/RX": "bidirectional", "DIO5/PWM1": "bidirectional", "DIO18/DO1": "bidirectional", "DO0/PWM2": "output", "DO1/PWM3": "bidirectional", "DIO19/DO2": "bidirectional", "DIO4/DO3": "bidirectional", "DIO6/TX": "bidirectional", "DIO8/PWM4": "bidirectional", "DIO9/DO4": "bidirectional", "DIO10/M1": "bidirectional", GND_14: "passive", "DIO12/DI1": "bidirectional", "DIO13/DI2": "bidirectional", "DIO11/DI3": "bidirectional", "DIO16/DI4": "bidirectional", "DIO15/SDA": "bidirectional", "DIO17/BPS": "bidirectional", "~{RESET}": "input", "ADC1/AI1": "input", "DIO0/AI2": "bidirectional", "ADC2/AI3": "input", "DIO1/AI4": "bidirectional", "DIO2/M2": "bidirectional", "DIO3/M3": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:MW-R-DP-W";
@@ -282,7 +287,8 @@ export class TWE_L_WX extends Component.withPins({
   "GND_31": "31",
   "GND_32": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "DO0/PWM2": "output", "DO1/PWM3": "bidirectional", "DIO18/DO1": "bidirectional", "DIO19/DO2": "bidirectional", VCC: "power_in", "DIO4/DO3": "bidirectional", "DIO5/PWM1": "bidirectional", "DIO6/TX": "bidirectional", "DIO7/RX": "bidirectional", "DIO8/PWM4": "bidirectional", "DIO9/DO4": "bidirectional", "DIO10/M1": "bidirectional", "DIO12/DI1": "bidirectional", "DIO14/SCL": "bidirectional", "DIO13/DI2": "bidirectional", "DIO11/DI3": "bidirectional", "DIO15/SDA": "bidirectional", "DIO16/DI4": "bidirectional", "DIO17/BPS": "bidirectional", GND_20: "power_in", "~{RESET}": "input", "ADC2/AI3": "input", "ADC1/AI1": "input", "DIO0/AI2": "bidirectional", "DIO1/AI4": "bidirectional", "DIO2/M2": "bidirectional", "DIO3/M3": "bidirectional", GND_28: "passive", NC: "no_connect", GND_30: "passive", GND_31: "passive", GND_32: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:TWE-L-WX";
@@ -332,7 +338,8 @@ export class MW_R_WX extends Component.withPins({
   "GND_31": "31",
   "GND_32": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "DO0/PWM2": "output", "DO1/PWM3": "bidirectional", "DIO18/DO1": "bidirectional", "DIO19/DO2": "bidirectional", VCC: "power_in", "DIO4/DO3": "bidirectional", "DIO5/PWM1": "bidirectional", "DIO6/TX": "bidirectional", "DIO7/RX": "bidirectional", "DIO8/PWM4": "bidirectional", "DIO9/DO4": "bidirectional", "DIO10/M1": "bidirectional", "DIO12/DI1": "bidirectional", "DIO14/SCL": "bidirectional", "DIO13/DI2": "bidirectional", "DIO11/DI3": "bidirectional", "DIO15/SDA": "bidirectional", "DIO16/DI4": "bidirectional", "DIO17/BPS": "bidirectional", GND_20: "power_in", "~{RESET}": "input", "ADC2/AI3": "input", "ADC1/AI1": "input", "DIO0/AI2": "bidirectional", "DIO1/AI4": "bidirectional", "DIO2/M2": "bidirectional", "DIO3/M3": "bidirectional", GND_28: "passive", NC: "no_connect", GND_30: "passive", GND_31: "passive", GND_32: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:MW-R-WX";
@@ -387,7 +394,8 @@ export class XBee_SMT extends Component.withPins({
   "RF": "36",
   "NC_37": "37",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VCC: "power_in", "DIO13/UART_TX": "bidirectional", "DIO14/UART_RX/~{CONFIG}": "bidirectional", DIO12: "bidirectional", "RESET/OD_OUT": "bidirectional", "DIO10/RSSI/PWM0": "bidirectional", "DIO11/PWM1": "bidirectional", NC_9: "no_connect", "DIO8/SLEEP_REQUEST": "bidirectional", GND_11: "power_in", "DIO19/SPI_~{ATTN}": "output", GND_13: "power_in", "DIO18/SPI_CLK": "input", "DIO17/SPI_~{SSEL}": "input", "DIO16/SPI_MOSI": "input", "DIO15/SPI_MISO": "output", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", NC_21: "no_connect", GND_22: "power_in", NC_23: "no_connect", DIO4: "bidirectional", "DIO7/~{CTS}": "bidirectional", "DIO9/ON/~{SLEEP}": "bidirectional", VREF: "input", "DIO5/ASSOCIATE": "bidirectional", "DIO6/~{RTS}": "bidirectional", "DIO3/AD3": "bidirectional", "DIO2/AD2": "bidirectional", "DIO1/AD1": "bidirectional", "DIO0/AD0": "bidirectional", NC_34: "no_connect", GND_35: "power_in", RF: "bidirectional", NC_37: "no_connect", ...opts.pinTypes } });
   }
   override schema = "RF_ZigBee:XBee_SMT";

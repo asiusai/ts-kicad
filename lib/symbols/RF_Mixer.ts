@@ -32,7 +32,8 @@ export class AD831AP extends Component.withPins({
   "AP": "19",
   "IFP": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VP_1: "power_in", IFN: "open_collector", AN: "input", GND_4: "power_in", VN_5: "power_in", RFP: "input", RFN: "input", VN_8: "power_in", VP_9: "power_in", LON: "input", LOP: "input", VP_12: "power_in", GND_13: "passive", BIAS: "passive", VN_15: "power_in", OUT: "output", VFB: "passive", COM: "passive", AP: "input", IFP: "open_collector", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:AD831AP";
@@ -56,7 +57,8 @@ export class ADE_6 extends Component.withPins({
   "GND_5": "5",
   "LO": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", IF: "output", RF: "input", GND_4: "passive", GND_5: "passive", LO: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:ADE-6";
@@ -80,7 +82,8 @@ export class ADEX_10 extends Component.withPins({
   "GND_5": "5",
   "LO": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", IF: "output", RF: "input", GND_4: "passive", GND_5: "passive", LO: "input", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:ADEX-10";
@@ -123,7 +126,8 @@ export class ADL5801 extends Component.withPins({
   "VPLO_24": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", LOIP: "input", LOIN: "input", GND_5: "passive", GND_6: "passive", VPLO_7: "power_in", GND_8: "passive", "~{ENBL}": "input", VSET: "input", DETO: "output", GND_12: "passive", VPDT: "power_in", GND_14: "passive", RFIN: "input", RFIP: "input", GND_17: "passive", VPRF: "power_in", GND_19: "passive", IFOP: "output", IFON: "output", NC: "no_connect", GND_23: "passive", VPLO_24: "passive", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:ADL5801";
@@ -166,7 +170,8 @@ export class ADL5802 extends Component.withPins({
   "VPOS_24": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "passive", "OP1+": "output", "OP1-": "output", GND_5: "passive", VPOS_6: "power_in", "~{ENBL}": "input", GND_8: "passive", LOIP: "input", LOIN: "input", GND_11: "passive", VSET: "input", VPOS_13: "passive", GND_14: "passive", "OP2-": "output", "OP2+": "output", GND_17: "passive", GND_18: "passive", "RF2-": "input", "RF2+": "input", GND_21: "passive", "RF1-": "input", "RF1+": "input", VPOS_24: "passive", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:ADL5802";
@@ -192,7 +197,8 @@ export class HMC213A extends Component.withPins({
   "RF": "7",
   "GND_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", LO: "passive", GND_3: "passive", NC: "no_connect", IF: "passive", GND_6: "passive", RF: "passive", GND_8: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:HMC213A";
@@ -218,7 +224,8 @@ export class HMC213B extends Component.withPins({
   "RF": "7",
   "GND_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", LO: "passive", GND_3: "passive", NC: "no_connect", IF: "passive", GND_6: "passive", RF: "passive", GND_8: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:HMC213B";
@@ -245,7 +252,8 @@ export class LT5560 extends Component.withPins({
   "LO+": "8",
   "PGND": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "LO-": "input", EN: "input", "IN+": "input", "IN-": "input", "OUT-": "output", "OUT+": "output", VCC: "power_in", "LO+": "input", PGND: "power_in", ...opts.pinTypes } });
   }
   override schema = "RF_Mixer:LT5560";

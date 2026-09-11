@@ -20,7 +20,8 @@ export class _004_0_0013 extends Component.withPins({
   "UART_RXD": "8",
   "DVCC_OUT": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "G+": "power_in", G0: "power_in", ALARM_OC: "open_collector", PWM_1KHZ: "output", BCAL_IN: "input", "UART_R/T": "output", UART_TXD: "output", UART_RXD: "input", DVCC_OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:004-0-0013";
@@ -46,7 +47,8 @@ export class _004_0_0010 extends Component.withPins({
   "UART_RXD": "8",
   "DVCC_OUT": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "G+": "power_in", G0: "power_in", ALARM_OC: "open_collector", PWM_1KHZ: "output", BCAL_IN: "input", "UART_R/T": "output", UART_TXD: "output", UART_RXD: "input", DVCC_OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:004-0-0010";
@@ -72,7 +74,8 @@ export class _004_0_0050 extends Component.withPins({
   "UART_RXD": "8",
   "DVCC_OUT": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "G+": "power_in", G0: "power_in", ALARM_OC: "open_collector", PWM_1KHZ: "output", BCAL_IN: "input", "UART_R/T": "output", UART_TXD: "output", UART_RXD: "input", DVCC_OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:004-0-0050";
@@ -98,7 +101,8 @@ export class _004_0_0053 extends Component.withPins({
   "UART_RXD": "8",
   "DVCC_OUT": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "G+": "power_in", G0: "power_in", ALARM_OC: "open_collector", PWM_1KHZ: "output", BCAL_IN: "input", "UART_R/T": "output", UART_TXD: "output", UART_RXD: "input", DVCC_OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:004-0-0053";
@@ -124,7 +128,8 @@ export class _004_0_0071 extends Component.withPins({
   "UART_RXD": "8",
   "DVCC_OUT": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "G+": "power_in", G0: "power_in", ALARM_OC: "open_collector", PWM_1KHZ: "output", BCAL_IN: "input", "UART_R/T": "output", UART_TXD: "output", UART_RXD: "input", DVCC_OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:004-0-0071";
@@ -150,7 +155,8 @@ export class _004_0_0075 extends Component.withPins({
   "UART_RXD": "8",
   "DVCC_OUT": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "G+": "power_in", G0: "power_in", ALARM_OC: "open_collector", PWM_1KHZ: "output", BCAL_IN: "input", "UART_R/T": "output", UART_TXD: "output", UART_RXD: "input", DVCC_OUT: "power_out", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:004-0-0075";
@@ -172,7 +178,8 @@ export class _3SP_H2S_50_110_304 extends Component.withPins({
   "Counter": "6",
   "Working_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Working_1: "output", Reference: "passive", Counter: "input", Working_10: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:3SP-H2S-50_110-304";
@@ -201,7 +208,8 @@ export class CCS811 extends Component.withPins({
   "SCL": "10",
   "GND": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ADDR: "input", "~{RESET}": "input", "~{INT}": "output", PWM: "output", Sense: "bidirectional", VDD: "power_in", "~{WAKE}": "input", AUX: "input", SDA: "bidirectional", SCL: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:CCS811";
@@ -227,7 +235,8 @@ export class GM_402B extends Component.withPins({
   "Rs2": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Rh1: "passive", NC_2: "no_connect", Rh2: "passive", NC_4: "no_connect", Rs1: "passive", NC_6: "no_connect", Rs2: "passive", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:GM-402B";
@@ -249,7 +258,8 @@ export class LuminOX_LOX_O2 extends Component.withPins({
   "TXD": "3",
   "RXD": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vs: "power_in", GND: "power_in", TXD: "output", RXD: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:LuminOX_LOX-O2";
@@ -273,7 +283,8 @@ export class MQ_6 extends Component.withPins({
   "VH-": "5",
   "A1": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B1: "passive", "VH+": "power_in", B2: "passive", A2: "passive", "VH-": "power_in", A1: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:MQ-6";
@@ -301,7 +312,8 @@ export class MiCS_5524 extends Component.withPins({
   "NC_J": "J",
   "NC_K": "K",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_A: "no_connect", NC_B: "no_connect", Rh1: "output", Rs1: "output", NC_E: "no_connect", Rh2: "input", Rs2: "input", NC_H: "no_connect", NC_J: "no_connect", NC_K: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:MiCS-5524";
@@ -326,7 +338,8 @@ export class SCD40_D_R2 extends Component.withPins({
   "GND_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_6: "power_in", VDD_7: "power_in", SCL: "input", SDA: "bidirectional", VDD_19: "passive", GND_20: "passive", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:SCD40-D-R2";
@@ -351,7 +364,8 @@ export class SCD41_D_R2 extends Component.withPins({
   "GND_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_6: "power_in", VDD_7: "power_in", SCL: "input", SDA: "bidirectional", VDD_19: "passive", GND_20: "passive", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:SCD41-D-R2";
@@ -371,7 +385,8 @@ export class TGS_5141 extends Component.withPins({
   "Working": "1",
   "Counter": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Working: "passive", Counter: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Gas:TGS-5141";

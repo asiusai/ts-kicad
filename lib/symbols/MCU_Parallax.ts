@@ -52,7 +52,8 @@ export class P8X32A_D40 extends Component.withPins({
   "P30": "39",
   "P31": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P0: "bidirectional", P1: "bidirectional", P2: "bidirectional", P3: "bidirectional", P4: "bidirectional", P5: "bidirectional", P6: "bidirectional", P7: "bidirectional", VSS_9: "power_in", "~{BOE}": "input", "~{RES}": "bidirectional", VDD_12: "power_in", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "bidirectional", P13: "bidirectional", P14: "bidirectional", P15: "bidirectional", P16: "bidirectional", P17: "bidirectional", P18: "bidirectional", P19: "bidirectional", P20: "bidirectional", P21: "bidirectional", P22: "bidirectional", P23: "bidirectional", VSS_29: "power_in", XI: "input", XO: "output", VDD_32: "power_in", P24: "bidirectional", P25: "bidirectional", P26: "bidirectional", P27: "bidirectional", P28: "bidirectional", P29: "bidirectional", P30: "bidirectional", P31: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Parallax:P8X32A-D40";
@@ -115,7 +116,8 @@ export class P8X32A_M44 extends Component.withPins({
   "P3": "44",
   "VSS_45": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P4: "bidirectional", P5: "bidirectional", P6: "bidirectional", P7: "bidirectional", VSS_5: "power_in", "~{BOE}": "input", "~{RES}": "bidirectional", VDD_8: "power_in", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "bidirectional", P13: "bidirectional", P14: "bidirectional", P15: "bidirectional", VSS_17: "power_in", VDD_18: "power_in", P16: "bidirectional", P17: "bidirectional", P18: "bidirectional", P19: "bidirectional", P20: "bidirectional", P21: "bidirectional", P22: "bidirectional", P23: "bidirectional", VSS_27: "power_in", XI: "input", XO: "output", VDD_30: "power_in", P24: "bidirectional", P25: "bidirectional", P26: "bidirectional", P27: "bidirectional", P28: "bidirectional", P29: "bidirectional", P30: "bidirectional", P31: "bidirectional", VSS_39: "power_in", VDD_40: "power_in", P0: "bidirectional", P1: "bidirectional", P2: "bidirectional", P3: "bidirectional", VSS_45: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Parallax:P8X32A-M44";
@@ -177,7 +179,8 @@ export class P8X32A_Q44 extends Component.withPins({
   "P2": "43",
   "P3": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P4: "bidirectional", P5: "bidirectional", P6: "bidirectional", P7: "bidirectional", VSS_5: "power_in", "~{BOE}": "input", "~{RES}": "bidirectional", VDD_8: "power_in", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "bidirectional", P13: "bidirectional", P14: "bidirectional", P15: "bidirectional", VSS_17: "power_in", VDD_18: "power_in", P16: "bidirectional", P17: "bidirectional", P18: "bidirectional", P19: "bidirectional", P20: "bidirectional", P21: "bidirectional", P22: "bidirectional", P23: "bidirectional", VSS_27: "power_in", XI: "input", XO: "output", VDD_30: "power_in", P24: "bidirectional", P25: "bidirectional", P26: "bidirectional", P27: "bidirectional", P28: "bidirectional", P29: "bidirectional", P30: "bidirectional", P31: "bidirectional", VSS_39: "power_in", VDD_40: "power_in", P0: "bidirectional", P1: "bidirectional", P2: "bidirectional", P3: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Parallax:P8X32A-Q44";

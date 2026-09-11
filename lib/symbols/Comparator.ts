@@ -19,7 +19,8 @@ export class AD8561 extends Component.withPins({
   "Q": "7",
   "~{Q}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", LATCH: "input", GND: "power_in", Q: "output", "~{Q}": "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:AD8561";
@@ -41,7 +42,8 @@ export class ADCMP350 extends Component.withPins({
   "P3": "3",
   "VCC": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "input", GND: "power_in", P3: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:ADCMP350";
@@ -63,7 +65,8 @@ export class ADCMP354 extends Component.withPins({
   "P3": "3",
   "VCC": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "input", GND: "power_in", P3: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:ADCMP354";
@@ -85,7 +88,8 @@ export class ADCMP356 extends Component.withPins({
   "P3": "3",
   "VCC": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "input", GND: "power_in", P3: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:ADCMP356";
@@ -116,7 +120,8 @@ export class LM2901 extends Component.withPins({
   "V+": "3",
   "V-": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "open_collector", "-_4": "input", "+_5": "input", P1: "open_collector", "-_6": "input", "+_7": "input", "-_10": "input", "+_11": "input", P13: "open_collector", "-_8": "input", "+_9": "input", P14: "open_collector", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM2901";
@@ -141,7 +146,8 @@ export class LM2903 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "open_collector", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM2903";
@@ -166,7 +172,8 @@ export class LM311 extends Component.withPins({
   "P7": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "passive", "+": "input", "-": "input", "V-": "power_in", BAL: "input", STRB: "input", P7: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM311";
@@ -197,7 +204,8 @@ export class LM319 extends Component.withPins({
   "V-": "6",
   "V+": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", GND_3: "passive", "+_4": "input", "-_5": "input", P12: "open_collector", P7: "open_collector", GND_8: "passive", "+_9": "input", "-_10": "input", NC_13: "no_connect", NC_14: "no_connect", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM319";
@@ -225,7 +233,8 @@ export class LM319H extends Component.withPins({
   "V-": "5",
   "V+": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", GND_2: "passive", "+_3": "input", "-_4": "input", P6: "open_collector", GND_7: "passive", "+_8": "input", "-_9": "input", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM319H";
@@ -256,7 +265,8 @@ export class LM339 extends Component.withPins({
   "V+": "3",
   "V-": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "open_collector", "-_4": "input", "+_5": "input", P1: "open_collector", "-_6": "input", "+_7": "input", "-_10": "input", "+_11": "input", P13: "open_collector", "-_8": "input", "+_9": "input", P14: "open_collector", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM339";
@@ -281,7 +291,8 @@ export class LM393 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "open_collector", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM393";
@@ -304,7 +315,8 @@ export class LM397 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "V-": "power_in", "+": "input", P4: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LM397";
@@ -355,7 +367,8 @@ export class LMH7324 extends Component.withPins({
   "VEE_28": "28",
   "VEE/EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCO_1: "power_in", "~{Q}_2": "output", Q_3: "output", VEE_4: "power_in", VEE_29: "passive", "+_30": "input", "-_31": "input", VCCI_32: "power_in", VEE_5: "power_in", Q_6: "output", "~{Q}_7": "output", VCCO_8: "power_in", VCCI_9: "power_in", "-_10": "input", "+_11": "input", VEE_12: "passive", VEE_13: "power_in", "+_14": "input", "-_15": "input", VCCI_16: "power_in", VCCO_17: "power_in", "~{Q}_18": "output", Q_19: "output", VEE_20: "passive", VEE_21: "power_in", Q_22: "output", "~{Q}_23": "output", VCCO_24: "power_in", VCCI_25: "power_in", "-_26": "input", "+_27": "input", VEE_28: "passive", "VEE/EP": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMH7324";
@@ -377,7 +390,8 @@ export class LMV331 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV331";
@@ -408,7 +422,8 @@ export class LMV339 extends Component.withPins({
   "V+": "3",
   "V-": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "open_collector", "-_4": "input", "+_5": "input", P1: "open_collector", "-_6": "input", "+_7": "input", "-_10": "input", "+_11": "input", P13: "open_collector", "-_8": "input", "+_9": "input", P14: "open_collector", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV339";
@@ -433,7 +448,8 @@ export class LMV393 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "open_collector", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV393";
@@ -456,7 +472,8 @@ export class MCP6561_OT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6561-OT";
@@ -479,7 +496,8 @@ export class LMV7219M5 extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV7219M5";
@@ -502,7 +520,8 @@ export class MCP6561x_LT extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6561x-LT";
@@ -525,7 +544,8 @@ export class LMV7219M7 extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV7219M7";
@@ -547,7 +567,8 @@ export class LMV7271 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV7271";
@@ -573,7 +594,8 @@ export class LMV7272 extends Component.withPins({
   "V+": "A2",
   "V-": "C2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA1: "output", "-_B1": "input", "+_C1": "input", PA3: "output", "-_B3": "input", "+_C3": "input", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV7272";
@@ -595,7 +617,8 @@ export class LMV7275 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LMV7275";
@@ -627,7 +650,8 @@ export class LP2901D extends Component.withPins({
   "V+": "3",
   "V-": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "open_collector", "-_4": "input", "+_5": "input", P1: "open_collector", "-_6": "input", "+_7": "input", "-_10": "input", "+_11": "input", P13: "open_collector", "-_8": "input", "+_9": "input", P14: "open_collector", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LP2901D";
@@ -652,7 +676,8 @@ export class LT1011 extends Component.withPins({
   "P7": "7",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "passive", "+": "input", "-": "input", "V-": "power_in", BAL: "input", STRB: "input", P7: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LT1011";
@@ -677,7 +702,8 @@ export class LT1016 extends Component.withPins({
   "Q": "7",
   "~{Q}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", LATCH: "input", GND: "power_in", Q: "output", "~{Q}": "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:LT1016";
@@ -702,7 +728,8 @@ export class LT1116 extends Component.withPins({
   "Q": "7",
   "~{Q}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", LATCH: "input", GND: "power_in", Q: "output", "~{Q}": "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:LT1116";
@@ -728,7 +755,8 @@ export class LT1711xMS8 extends Component.withPins({
   "Q": "7",
   "~{Q}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", LATCH: "input", GND: "power_in", Q: "output", "~{Q}": "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:LT1711xMS8";
@@ -754,7 +782,8 @@ export class LTC6752xMS8_2 extends Component.withPins({
   "P7": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "~{LE}": "input", VEE: "power_in", P7: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6752xMS8-2";
@@ -777,7 +806,8 @@ export class LTC6752xS5 extends Component.withPins({
   "-": "4",
   "VCC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", VEE: "power_in", "+": "input", "-": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6752xS5";
@@ -801,7 +831,8 @@ export class LTC6752xSC6_1 extends Component.withPins({
   "~{LE}": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", VEE: "power_in", "+": "input", "-": "input", "~{LE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6752xSC6-1";
@@ -825,7 +856,8 @@ export class LTC6752xSC6_4 extends Component.withPins({
   "VDD": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", VEE: "power_in", "+": "input", "-": "input", VDD: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6752xSC6-4";
@@ -856,7 +888,8 @@ export class LTC6752xUD_3 extends Component.withPins({
   "Q": "12",
   "VEE_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VCC: "power_in", VEE_3: "power_in", "+": "input", NC_5: "no_connect", "-": "input", "~{SHDN}": "input", "~{LE}": "input", VEE_9: "passive", "~{Q}": "output", NC_11: "no_connect", Q: "output", VEE_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6752xUD-3";
@@ -880,7 +913,8 @@ export class LTC6754xSC6 extends Component.withPins({
   "VCC": "5",
   "~{Q}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Q: "output", VEE: "power_in", "+": "input", "-": "input", VCC: "power_in", "~{Q}": "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6754xSC6";
@@ -911,7 +945,8 @@ export class LTC6754xUD extends Component.withPins({
   "Q": "12",
   "VEE_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCO: "power_in", VCCI: "power_in", VEE_3: "power_in", "+": "input", NC_5: "no_connect", "-": "input", "~{SHDN}": "input", "~{LE}": "input", VEE_9: "passive", "~{Q}": "output", NC_11: "no_connect", Q: "output", VEE_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Comparator:LTC6754xUD";
@@ -934,7 +969,8 @@ export class MAX9031AU extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MAX9031AU";
@@ -957,7 +993,8 @@ export class MAX9031AX extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "input", "V-": "power_in", "-": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MAX9031AX";
@@ -983,7 +1020,8 @@ export class MAX941xPA extends Component.withPins({
   "P7": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "~{LATCH}": "input", "V-": "power_in", P7: "output", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Comparator:MAX941xPA";
@@ -1009,7 +1047,8 @@ export class MAX941xSA extends Component.withPins({
   "P7": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "~{LATCH}": "input", "V-": "power_in", P7: "output", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Comparator:MAX941xSA";
@@ -1035,7 +1074,8 @@ export class MAX941xUA extends Component.withPins({
   "P7": "7",
   "NC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "~{SHDN}": "input", "~{LATCH}": "input", "V-": "power_in", P7: "output", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Comparator:MAX941xUA";
@@ -1058,7 +1098,8 @@ export class MCP6561R extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "V-": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6561R";
@@ -1081,7 +1122,8 @@ export class MCP6561U extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6561U";
@@ -1106,7 +1148,8 @@ export class MCP6562 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "output", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6562";
@@ -1128,7 +1171,8 @@ export class MCP6566 extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "open_collector", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6566";
@@ -1151,7 +1195,8 @@ export class MCP6566R extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "V-": "power_in", P1: "open_collector", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6566R";
@@ -1174,7 +1219,8 @@ export class MCP6566U extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6566U";
@@ -1199,7 +1245,8 @@ export class MCP6567 extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "open_collector", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6567";
@@ -1230,7 +1277,8 @@ export class MCP6569 extends Component.withPins({
   "V+": "4",
   "V-": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", "-_2": "input", "+_3": "input", "+_5": "input", "-_6": "input", P7: "open_collector", P8: "open_collector", "-_9": "input", "+_10": "input", "+_12": "input", "-_13": "input", P14: "open_collector", "V+": "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP6569";
@@ -1254,7 +1302,8 @@ export class MCP65R41 extends Component.withPins({
   "Vref": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "output", "V-": "power_in", "+": "input", "-": "input", Vref: "power_out", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP65R41";
@@ -1278,7 +1327,8 @@ export class MCP65R46 extends Component.withPins({
   "Vref": "5",
   "V+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "open_collector", "V-": "power_in", "+": "input", "-": "input", Vref: "power_out", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MCP65R46";
@@ -1301,7 +1351,8 @@ export class MIC845H extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NIC: "no_connect", GND: "power_in", "+": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MIC845H";
@@ -1324,7 +1375,8 @@ export class MIC845L extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NIC: "no_connect", GND: "power_in", "+": "input", P4: "output", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MIC845L";
@@ -1347,7 +1399,8 @@ export class MIC845N extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NIC: "no_connect", GND: "power_in", "+": "input", P4: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:MIC845N";
@@ -1372,7 +1425,8 @@ export class TL3116 extends Component.withPins({
   "Q": "7",
   "~{Q}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", "+": "input", "-": "input", "V-": "power_in", LATCH: "input", GND: "power_in", Q: "output", "~{Q}": "output", ...opts.pinTypes } });
   }
   override schema = "Comparator:TL3116";
@@ -1395,7 +1449,8 @@ export class TL331 extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "V-": "power_in", "+": "input", P4: "open_collector", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Comparator:TL331";
@@ -1421,7 +1476,8 @@ export class TLV3501AID extends Component.withPins({
   "V+": "7",
   "SHDN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "-": "input", "+": "input", "V-": "power_in", NC_5: "no_connect", P6: "output", "V+": "power_in", SHDN: "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:TLV3501AID";
@@ -1445,7 +1501,8 @@ export class TLV3501AIDBV extends Component.withPins({
   "P5": "5",
   "SHDN": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "input", "V-": "power_in", "+": "input", "V+": "power_in", P5: "output", SHDN: "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:TLV3501AIDBV";
@@ -1468,7 +1525,8 @@ export class TLV7031DBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "output", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:TLV7031DBV";
@@ -1491,7 +1549,8 @@ export class TLV7041DBV extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "open_collector", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:TLV7041DBV";
@@ -1514,7 +1573,8 @@ export class TLV7041DCK extends Component.withPins({
   "+": "3",
   "-": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", P1: "open_collector", "+": "input", "-": "input", ...opts.pinTypes } });
   }
   override schema = "Comparator:TLV7041DCK";
@@ -1537,7 +1597,8 @@ export class TLV7041SDCK extends Component.withPins({
   "-": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V-": "power_in", "V+": "power_in", "+": "input", "-": "input", P4: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Comparator:TLV7041SDCK";

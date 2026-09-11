@@ -32,7 +32,8 @@ export class AT89C2051_12P extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C2051-12P";
@@ -70,7 +71,8 @@ export class AT89C2051_12S extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C2051-12S";
@@ -108,7 +110,8 @@ export class AT89C2051_24P extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C2051-24P";
@@ -146,7 +149,8 @@ export class AT89C2051_24S extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C2051-24S";
@@ -184,7 +188,8 @@ export class AT89C4051_12P extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C4051-12P";
@@ -222,7 +227,8 @@ export class AT89C4051_12S extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C4051-12S";
@@ -260,7 +266,8 @@ export class AT89C4051_24P extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C4051-24P";
@@ -298,7 +305,8 @@ export class AT89C4051_24S extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89C4051-24S";
@@ -336,7 +344,8 @@ export class AT89S2051_24P extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89S2051-24P";
@@ -374,7 +383,8 @@ export class AT89S2051_24S extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89S2051-24S";
@@ -412,7 +422,8 @@ export class AT89S4051_24P extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89S4051-24P";
@@ -450,7 +461,8 @@ export class AT89S4051_24S extends Component.withPins({
   "P1.7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RST/VPP": "input", "P3.0": "bidirectional", "P3.1": "bidirectional", XTAL2: "output", XTAL1: "input", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", GND: "power_in", "P3.7": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89S4051-24S";
@@ -512,7 +524,8 @@ export class AT89x51xxA extends Component.withPins({
   "P1.3": "43",
   "P1.4": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7/SCK": "bidirectional", RST: "input", "P3.0": "bidirectional", NC_6: "no_connect", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", XTAL2: "input", XTAL1: "input", GND_16: "power_in", GND_17: "passive", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", ALE: "output", NC_28: "no_connect", "~{EA}/V_{pp}": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", "V_{cc}": "power_in", NC_39: "no_connect", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89x51xxA";
@@ -574,7 +587,8 @@ export class AT89x51xxJ extends Component.withPins({
   "P0.0/AD0": "43",
   "V_{cc}": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", NC_1: "no_connect", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7/SCK": "bidirectional", RST: "input", "P3.0": "bidirectional", NC_12: "no_connect", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", XTAL2: "input", XTAL1: "input", GND: "power_in", NC_23: "no_connect", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", ALE: "output", NC_34: "no_connect", "~{EA}/V_{pp}": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", "V_{cc}": "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89x51xxJ";
@@ -632,7 +646,8 @@ export class AT89x51xxP extends Component.withPins({
   "P0.0/AD0": "39",
   "V_{cc}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7/SCK": "bidirectional", RST: "input", "P3.0": "bidirectional", "P3.1": "bidirectional", "P3.2": "bidirectional", "P3.3": "bidirectional", "P3.4": "bidirectional", "P3.5": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", XTAL2: "input", XTAL1: "input", GND: "power_in", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", ALE: "output", "~{EA}/V_{pp}": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", "V_{cc}": "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_8051:AT89x51xxP";

@@ -18,7 +18,8 @@ export class DS2401P extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", DQ: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_UniqueID:DS2401P";
@@ -40,7 +41,8 @@ export class DS2401Z extends Component.withPins({
   "NC": "3",
   "GND_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DQ: "bidirectional", GND_2: "power_in", NC: "no_connect", GND_4: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_UniqueID:DS2401Z";

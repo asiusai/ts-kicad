@@ -32,7 +32,8 @@ export class AG12864E extends Component.withPins({
   "LEDA/EL": "19",
   "LEDK/EL": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", VO: "passive", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", "~{CS1}": "input", "~{CS2}": "input", "~{RST}": "input", "R/~{W}": "input", "D/~{I}": "input", E: "input", VEE: "passive", "LEDA/EL": "passive", "LEDK/EL": "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:AG12864E";
@@ -76,7 +77,8 @@ export class EA_DOGL128X_6 extends Component.withPins({
   "~{RST}": "39",
   "~{CS1B}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A1+": "power_in", "A2+": "power_in", "A3+": "power_in", "C1-": "power_in", "C2-": "power_in", "C3-": "power_in", V0: "passive", V1: "passive", V2: "passive", V3: "passive", V4: "passive", VSS_26: "power_in", CAP2N: "passive", CAP2P: "passive", CAP1P: "passive", CAP1N: "passive", CAP3P: "passive", VOUT: "output", VSS_33: "passive", VDD2: "power_in", VDD: "power_in", SI: "input", SCL: "input", A0: "input", "~{RST}": "input", "~{CS1B}": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_DOGL128X-6";
@@ -120,7 +122,8 @@ export class EA_DOGM128X_6 extends Component.withPins({
   "~{RST}": "39",
   "~{CS1B}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A1+": "power_in", "A2+": "power_in", "A3+": "power_in", "C1-": "power_in", "C2-": "power_in", "C3-": "power_in", V0: "passive", V1: "passive", V2: "passive", V3: "passive", V4: "passive", VSS_26: "power_in", CAP2N: "passive", CAP2P: "passive", CAP1P: "passive", CAP1N: "passive", CAP3P: "passive", VOUT: "output", VSS_33: "passive", VDD2: "power_in", VDD: "power_in", SI: "input", SCL: "input", A0: "input", "~{RST}": "input", "~{CS1B}": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_DOGM128X-6";
@@ -152,7 +155,8 @@ export class EA_DOGS104B_A extends Component.withPins({
   "SA0": "19",
   "~{RST}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VOUT: "output", IM1: "input", VDD: "power_in", VSS: "power_in", SOD: "output", SID: "input", SCLK: "input", "~{CS}": "input", SA0: "input", "~{RST}": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_DOGS104B-A";
@@ -192,7 +196,8 @@ export class EA_DOGXL160_7 extends Component.withPins({
   "D3/SDA": "31",
   "D0/SCK": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A1+": "power_in", "A2+": "power_in", "A3+": "power_in", "C1-": "power_in", "C2-": "power_in", "C3-": "power_in", VLCD: "passive", "VB0+": "passive", "VB1+": "passive", "VB1-": "passive", "VB0-": "passive", VDD: "power_in", "VDD2/3": "power_in", VSS2: "power_in", VSS: "power_in", BM0: "input", CD: "input", "~{CS0}/A2": "input", "~{RST}": "input", D6: "input", "D3/SDA": "bidirectional", "D0/SCK": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_DOGXL160-7";
@@ -241,7 +246,8 @@ export class EA_eDIP128B_6LW extends Component.withPins({
   "IN2/OUT7": "31",
   "IN1/OUT8": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP128B-6LW";
@@ -290,7 +296,8 @@ export class EA_eDIP128B_6LWTP extends Component.withPins({
   "IN2/OUT7": "31",
   "IN1/OUT8": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP128B-6LWTP";
@@ -339,7 +346,8 @@ export class EA_eDIP128W_6LW extends Component.withPins({
   "IN2/OUT7": "31",
   "IN1/OUT8": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP128W-6LW";
@@ -388,7 +396,8 @@ export class EA_eDIP128W_6LWTP extends Component.withPins({
   "IN2/OUT7": "31",
   "IN1/OUT8": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP128W-6LWTP";
@@ -446,7 +455,8 @@ export class EA_eDIP160B_7LW extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", TEST_SBUF: "open_collector", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP160B-7LW";
@@ -504,7 +514,8 @@ export class EA_eDIP160B_7LWTP extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", TEST_SBUF: "open_collector", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP160B-7LWTP";
@@ -562,7 +573,8 @@ export class EA_eDIP160W_7LW extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", TEST_SBUF: "open_collector", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP160W-7LW";
@@ -620,7 +632,8 @@ export class EA_eDIP160W_7LWTP extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", PWR: "output", NC_19: "no_connect", TEST_SBUF: "open_collector", GND_21: "power_in", VDD_22: "power_in", NC_23: "no_connect", NC_24: "no_connect", "IN8/OUT1": "bidirectional", "IN7/OUT2": "bidirectional", "IN6/OUT3": "bidirectional", "IN5/OUT4": "bidirectional", "IN4/OUT5": "bidirectional", "IN3/OUT6": "bidirectional", "IN2/OUT7": "bidirectional", "IN1/OUT8": "bidirectional", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP160W-7LWTP";
@@ -678,7 +691,8 @@ export class EA_eDIP240B_7LW extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", EEP_SDA: "bidirectional", EEP_SCL: "output", EEP_WP: "input", TEST_SBUF: "open_collector", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP240B-7LW";
@@ -736,7 +750,8 @@ export class EA_eDIP240B_7LWTP extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", EEP_SDA: "bidirectional", EEP_SCL: "output", EEP_WP: "input", TEST_SBUF: "open_collector", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP240B-7LWTP";
@@ -794,7 +809,8 @@ export class EA_eDIP240J_7LA extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", EEP_SDA: "bidirectional", EEP_SCL: "output", EEP_WP: "input", TEST_SBUF: "open_collector", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP240J-7LA";
@@ -852,7 +868,8 @@ export class EA_eDIP240J_7LATP extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", EEP_SDA: "bidirectional", EEP_SCL: "output", EEP_WP: "input", TEST_SBUF: "open_collector", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP240J-7LATP";
@@ -910,7 +927,8 @@ export class EA_eDIP240J_7LW extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", EEP_SDA: "bidirectional", EEP_SCL: "output", EEP_WP: "input", TEST_SBUF: "open_collector", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP240J-7LW";
@@ -968,7 +986,8 @@ export class EA_eDIP240J_7LWTP extends Component.withPins({
   "NC_39": "39",
   "NC_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", EEP_SDA: "bidirectional", EEP_SCL: "output", EEP_WP: "input", TEST_SBUF: "open_collector", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP240J-7LWTP";
@@ -1034,7 +1053,8 @@ export class EA_eDIP320B_8LW extends Component.withPins({
   "NC_47": "47",
   "NC_78": "78",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DPWR: "output", WP: "input", TEST_SBUF: "open_collector", PDI: "input", PDO: "output", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", NC_45: "no_connect", NC_46: "no_connect", NC_47: "no_connect", NC_78: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP320B-8LW";
@@ -1100,7 +1120,8 @@ export class EA_eDIP320B_8LWTP extends Component.withPins({
   "NC_47": "47",
   "NC_78": "78",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DPWR: "output", WP: "input", TEST_SBUF: "open_collector", PDI: "input", PDO: "output", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", NC_45: "no_connect", NC_46: "no_connect", NC_47: "no_connect", NC_78: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP320B-8LWTP";
@@ -1166,7 +1187,8 @@ export class EA_eDIP320J_8LA extends Component.withPins({
   "NC_47": "47",
   "NC_78": "78",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DPWR: "output", WP: "input", TEST_SBUF: "open_collector", PDI: "input", PDO: "output", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", NC_45: "no_connect", NC_46: "no_connect", NC_47: "no_connect", NC_78: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP320J-8LA";
@@ -1232,7 +1254,8 @@ export class EA_eDIP320J_8LATP extends Component.withPins({
   "NC_47": "47",
   "NC_78": "78",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DPWR: "output", WP: "input", TEST_SBUF: "open_collector", PDI: "input", PDO: "output", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", NC_45: "no_connect", NC_46: "no_connect", NC_47: "no_connect", NC_78: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP320J-8LATP";
@@ -1298,7 +1321,8 @@ export class EA_eDIP320J_8LW extends Component.withPins({
   "NC_47": "47",
   "NC_78": "78",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DPWR: "output", WP: "input", TEST_SBUF: "open_collector", PDI: "input", PDO: "output", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", NC_45: "no_connect", NC_46: "no_connect", NC_47: "no_connect", NC_78: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP320J-8LW";
@@ -1364,7 +1388,8 @@ export class EA_eDIP320J_8LWTP extends Component.withPins({
   "NC_47": "47",
   "NC_78": "78",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", VADJ: "input", VOUT: "output", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", WUP: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DPWR: "output", WP: "input", TEST_SBUF: "open_collector", PDI: "input", PDO: "output", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", NC_43: "no_connect", NC_44: "no_connect", NC_45: "no_connect", NC_46: "no_connect", NC_47: "no_connect", NC_78: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIP320J-8LWTP";
@@ -1422,7 +1447,8 @@ export class EA_eDIPTFT32_A extends Component.withPins({
   "IN7/MI2": "39",
   "IN8/MI1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BA0: "input", BA1: "input", SA0: "input", SA1: "input", SA2: "input", BA2: "input", I2CMO: "input", DPOM: "input", SDA: "bidirectional", SCL: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", GND_21: "power_in", VDD_22: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT32-A";
@@ -1480,7 +1506,8 @@ export class EA_eDIPTFT32_ATP extends Component.withPins({
   "IN7/MI2": "39",
   "IN8/MI1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BA0: "input", BA1: "input", SA0: "input", SA1: "input", SA2: "input", BA2: "input", I2CMO: "input", DPOM: "input", SDA: "bidirectional", SCL: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", GND_21: "power_in", VDD_22: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT32-ATP";
@@ -1538,7 +1565,8 @@ export class EA_eDIPTFT43_A extends Component.withPins({
   "IN7/MI2": "39",
   "IN8/MI1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", GND_21: "power_in", VDD_22: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT43-A";
@@ -1596,7 +1624,8 @@ export class EA_eDIPTFT43_ATC extends Component.withPins({
   "IN7/MI2": "39",
   "IN8/MI1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", GND_21: "power_in", VDD_22: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT43-ATC";
@@ -1654,7 +1683,8 @@ export class EA_eDIPTFT43_ATP extends Component.withPins({
   "IN7/MI2": "39",
   "IN8/MI1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", GND_21: "power_in", VDD_22: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT43-ATP";
@@ -1712,7 +1742,8 @@ export class EA_eDIPTFT43_ATS extends Component.withPins({
   "IN7/MI2": "39",
   "IN8/MI1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", NC_3: "no_connect", NC_4: "no_connect", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", GND_21: "power_in", VDD_22: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT43-ATS";
@@ -1778,7 +1809,8 @@ export class EA_eDIPTFT57_A extends Component.withPins({
   "IN7/MI2": "47",
   "IN8/MI1": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", "SND+": "output", "SND-": "input", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", GND_29: "power_in", VDD_30: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT57-A";
@@ -1844,7 +1876,8 @@ export class EA_eDIPTFT57_ATP extends Component.withPins({
   "IN7/MI2": "47",
   "IN8/MI1": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", "SND+": "output", "SND-": "input", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", GND_29: "power_in", VDD_30: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT57-ATP";
@@ -1910,7 +1943,8 @@ export class EA_eDIPTFT70_A extends Component.withPins({
   "IN7/MI2": "47",
   "IN8/MI1": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", "SND+": "output", "SND-": "input", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", GND_29: "power_in", VDD_30: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT70-A";
@@ -1976,7 +2010,8 @@ export class EA_eDIPTFT70_ATC extends Component.withPins({
   "IN7/MI2": "47",
   "IN8/MI1": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", "SND+": "output", "SND-": "input", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", GND_29: "power_in", VDD_30: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT70-ATC";
@@ -2042,7 +2077,8 @@ export class EA_eDIPTFT70_ATP extends Component.withPins({
   "IN7/MI2": "47",
   "IN8/MI1": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD_2: "power_in", "SND+": "output", "SND-": "input", "~{RESET}": "input", BAUD0: "input", BAUD1: "input", BAUD2: "input", ADR0: "input", RxD: "input", TxD: "output", EN485: "output", DPOM: "input", ADR1: "input", ADR2: "input", BUZZ: "output", DPROT: "input", DNC: "output", WP: "input", TEST_SBUF: "bidirectional", NC_21: "no_connect", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", NC_25: "no_connect", NC_26: "no_connect", NC_27: "no_connect", NC_28: "no_connect", GND_29: "power_in", VDD_30: "power_in", AIN1: "input", AIN2: "input", "OUT1/MO8": "output", "OUT2/MO7": "output", "OUT3/MO6": "output", "OUT4/MO5": "output", "OUT5/MO4": "output", "OUT6/MO3": "output", "OUT7/MO2": "output", "OUT8/MO1": "output", "IN1/MI8": "input", "IN2/MI7": "input", "IN3/MI6": "input", "IN4/MI5": "input", "IN5/MI4": "input", "IN6/MI3": "input", "IN7/MI2": "input", "IN8/MI1": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:EA_eDIPTFT70-ATP";
@@ -2080,7 +2116,8 @@ export class ERM19264 extends Component.withPins({
   "VOUT": "19",
   "BLA": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS3}": "input", VSS: "power_in", VDD: "power_in", VO: "passive", RS: "input", "R/~{W}": "input", E: "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", "~{CS1}": "input", "~{RST}": "input", "~{CS2}": "input", VOUT: "passive", BLA: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:ERM19264";
@@ -2102,7 +2139,8 @@ export class ER_OLEDM0_91_1x_I2C extends Component.withPins({
   "SCL": "3",
   "SDA": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VCC: "power_in", SCL: "input", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:ER_OLEDM0.91_1x-I2C";
@@ -2141,7 +2179,8 @@ export class NHD_C12832A1Z_FSRGB extends Component.withPins({
   "(G)LED-": "20",
   "(B)LED-": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { V0: "passive", V1: "passive", V2: "passive", V3: "passive", V4: "passive", "C2-": "passive", "C2+": "passive", "C1+": "passive", "C1-": "passive", "V_{out}": "passive", "V_{ss}": "power_in", "V_{dd}": "power_in", "SDA(SI)": "input", SCL: "input", A0: "input", "~{RST}": "input", "~{CS1B}": "input", "LED+": "passive", "(R)LED-": "passive", "(G)LED-": "passive", "(B)LED-": "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:NHD-C12832A1Z-FSRGB";
@@ -2189,7 +2228,8 @@ export class OLED_128O064D extends Component.withPins({
   "VLSS": "29",
   "GND_30": "30",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", C2N: "passive", C2P: "passive", C1P: "passive", C1N: "passive", VBAT: "power_in", NC: "no_connect", VSS: "power_in", VDD: "power_in", BS0: "input", BS1: "input", BS2: "input", "~{CS}": "input", "~{RES}": "input", "D/~{C}": "input", "R/~{W}": "input", "E/~{RD}": "input", D0: "bidirectional", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", IREF: "passive", VCOMH: "passive", VCC: "power_in", VLSS: "power_in", GND_30: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Graphic:OLED-128O064D";

@@ -18,7 +18,8 @@ export class ICS_43434 extends Component.withPins({
   "VDD": "5",
   "SD": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { WS: "input", LR: "input", GND: "power_in", SCK: "input", VDD: "power_in", SD: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:ICS-43434";
@@ -41,7 +42,8 @@ export class IM69D120 extends Component.withPins({
   "SELECT": "4",
   "GND": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA: "output", VDD: "power_in", CLOCK: "input", SELECT: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:IM69D120";
@@ -64,7 +66,8 @@ export class IM69D130 extends Component.withPins({
   "SELECT": "4",
   "GND": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA: "output", VDD: "power_in", CLOCK: "input", SELECT: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:IM69D130";
@@ -87,7 +90,8 @@ export class IM73A135V01 extends Component.withPins({
   "GND_4": "4",
   "GND_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "OUT+": "output", "V_{DD}": "power_in", "OUT-": "output", GND_4: "power_in", GND_5: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:IM73A135V01";
@@ -111,7 +115,8 @@ export class MP45DT02 extends Component.withPins({
   "DOUT": "5",
   "VDD": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", LR: "input", GND_3: "passive", CLK: "input", DOUT: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:MP45DT02";
@@ -134,7 +139,8 @@ export class SPH0641LU4H_1 extends Component.withPins({
   "CLOCK": "4",
   "VDD": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA: "output", SEL: "input", GND: "power_in", CLOCK: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:SPH0641LU4H-1";
@@ -158,7 +164,8 @@ export class SPH0645LM4H extends Component.withPins({
   "VDD": "5",
   "DATA": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { WS: "input", SEL: "input", GND: "power_in", BCLK: "input", VDD: "power_in", DATA: "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:SPH0645LM4H";
@@ -182,7 +189,8 @@ export class SPM0687LR5H_1 extends Component.withPins({
   "Vdd": "5",
   "OUT-": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "OUT+": "output", GND_2: "power_in", GND_3: "passive", GND_4: "passive", Vdd: "power_in", "OUT-": "output", ...opts.pinTypes } });
   }
   override schema = "Sensor_Audio:SPM0687LR5H-1";

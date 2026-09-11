@@ -25,7 +25,8 @@ export class HTRC11001T extends Component.withPins({
   "QGND": "13",
   "RX": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", TX2: "output", VDD: "power_in", TX1: "output", MODE: "input", XTAL1: "input", XTAL2: "output", SCLK: "input", DIN: "input", DOUT: "output", CEXT: "passive", QGND: "passive", RX: "input", ...opts.pinTypes } });
   }
   override schema = "RF_RFID:HTRC11001T";
@@ -76,7 +77,8 @@ export class PN5120A0HN1 extends Component.withPins({
   "A0": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", PVDD: "power_in", DVDD: "power_in", DVSS: "power_in", PVSS: "power_in", "~{NRSTPD}": "input", SIGIN: "input", SIGOUT: "output", SVDD: "power_in", TVSS_10: "power_in", TX1: "output", TVDD: "power_in", TX2: "output", TVSS_14: "passive", AVDD: "power_in", VMID: "power_out", RX: "input", AVSS: "power_in", AUX1: "output", AUX2: "output", OSCIN: "input", OSCOUT: "output", IRQ: "output", ALE: "input", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", A0: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "RF_RFID:PN5120A0HN1";

@@ -20,7 +20,8 @@ export class ACPL_C790 extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", "IN+": "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ACPL-C790";
@@ -46,7 +47,8 @@ export class ACPL_C79A extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", "IN+": "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ACPL-C79A";
@@ -72,7 +74,8 @@ export class ACPL_C79B extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", "IN+": "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ACPL-C79B";
@@ -98,7 +101,8 @@ export class ACPL_C870 extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", IN: "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ACPL-C870";
@@ -124,7 +128,8 @@ export class ACPL_C87A extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", IN: "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ACPL-C87A";
@@ -150,7 +155,8 @@ export class ACPL_C87B extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", IN: "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ACPL-C87B";
@@ -176,7 +182,8 @@ export class AMC1100DWV extends Component.withPins({
   "VOUTP": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", VINP: "input", VINN: "input", GND1: "power_in", GND2: "power_in", VOUTN: "output", VOUTP: "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC1100DWV";
@@ -202,7 +209,8 @@ export class AMC1200BDWV extends Component.withPins({
   "VOUTP": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", VINP: "input", VINN: "input", GND1: "power_in", GND2: "power_in", VOUTN: "output", VOUTP: "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC1200BDWV";
@@ -228,7 +236,8 @@ export class AMC1300BDWV extends Component.withPins({
   "VOUTP": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", VINP: "input", VINN: "input", GND1: "power_in", GND2: "power_in", VOUTN: "output", VOUTP: "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC1300BDWV";
@@ -254,7 +263,8 @@ export class AMC1300DWV extends Component.withPins({
   "VOUTP": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", VINP: "input", VINN: "input", GND1: "power_in", GND2: "power_in", VOUTN: "output", VOUTP: "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC1300DWV";
@@ -280,7 +290,8 @@ export class AMC1350DWV extends Component.withPins({
   "OUT+": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", "IN+": "input", "IN-": "input", GND1: "power_in", GND2: "power_in", "OUT-": "output", "OUT+": "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC1350DWV";
@@ -306,7 +317,8 @@ export class AMC1351DWV extends Component.withPins({
   "OUTP": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", IN: "input", GND1_3: "power_in", GND1_4: "passive", GND2: "power_in", OUTN: "output", OUTP: "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC1351DWV";
@@ -340,7 +352,8 @@ export class AMC3330 extends Component.withPins({
   "DCDC_GND": "15",
   "DCDC_IN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DCDC_OUT: "power_out", DCDC_HGND: "power_out", HLDO_IN: "power_in", NC: "no_connect", HLDO_OUT: "power_out", INP: "input", INN: "input", HGND: "power_in", GND: "power_in", OUTN: "output", OUTP: "output", VDD: "power_in", LDO_OUT: "power_out", DIAG: "output", DCDC_GND: "power_in", DCDC_IN: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:AMC3330";
@@ -365,7 +378,8 @@ export class IL300 extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", P5: "passive", P6: "passive", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:IL300";
@@ -391,7 +405,8 @@ export class ISO224xDWV extends Component.withPins({
   "OUTP": "7",
   "VDD2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCAP: "passive", IN: "input", VDD1: "power_in", GND1: "power_in", GND2: "power_in", OUTN: "output", OUTP: "output", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:ISO224xDWV";
@@ -417,7 +432,8 @@ export class LOC112 extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", P5: "passive", P6: "passive", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:LOC112";
@@ -443,7 +459,8 @@ export class LOC112P extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", P5: "passive", P6: "passive", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:LOC112P";
@@ -469,7 +486,8 @@ export class LOC112S extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", P4: "passive", P5: "passive", P6: "passive", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Isolator_Analog:LOC112S";

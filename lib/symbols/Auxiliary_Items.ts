@@ -9,7 +9,8 @@ import { Component } from "ts-kicad";
  */
 export class Generic_Outline extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Auxiliary_Items:Generic_Outline";
@@ -24,7 +25,8 @@ export class Generic_Outline extends Component.withPins({
  */
 export class Jumper_Shunt extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_board":null}, ...opts.properties } });
   }
   override schema = "Auxiliary_Items:Jumper_Shunt";
@@ -40,7 +42,8 @@ export class Jumper_Shunt extends Component.withPins({
  */
 export class MountingScrew extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Auxiliary_Items:MountingScrew";

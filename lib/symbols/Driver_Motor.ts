@@ -21,7 +21,8 @@ export class A4950E extends Component.withPins({
   "OUT2": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IN2: "input", IN1: "input", VREF: "passive", VBB: "power_in", OUT1: "power_out", LSS: "power_in", OUT2: "power_out", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:A4950E";
@@ -48,7 +49,8 @@ export class A4950K extends Component.withPins({
   "OUT2": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IN2: "input", IN1: "input", VREF: "passive", VBB: "power_in", OUT1: "power_out", LSS: "power_in", OUT2: "power_out", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:A4950K";
@@ -77,7 +79,8 @@ export class A4952_LY extends Component.withPins({
   "GND": "10",
   "PAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FLTn}": "output", RTRY: "input", IN2: "input", IN1: "input", VREF: "passive", VBB: "power_in", OUT1: "power_out", LSS: "power_in", OUT2: "power_out", GND: "power_in", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:A4952_LY";
@@ -104,7 +107,8 @@ export class A4953_LJ extends Component.withPins({
   "OUT2": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IN2: "input", IN1: "input", VREF: "passive", VBB: "power_in", OUT1: "power_out", LSS: "power_in", OUT2: "power_out", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:A4953_LJ";
@@ -139,7 +143,8 @@ export class A4954 extends Component.withPins({
   "VBB_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VREF34: "input", IN3: "input", IN4: "input", IN2: "input", IN1: "input", VREF12: "input", GND_8: "passive", VBB_9: "power_in", OUT1: "power_out", LSS12: "power_in", OUT2: "power_out", OUT3: "power_out", LSS34: "power_in", OUT4: "power_out", VBB_16: "passive", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:A4954";
@@ -206,7 +211,8 @@ export class AMT49413 extends Component.withPins({
   "N.C._48": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "N.C._1": "no_connect", "~{RESET}": "input", V5DB: "power_out", V5: "power_out", FF2: "open_collector", FF1: "open_collector", TACHO: "output", BRAKE: "input", DIR: "input", H1: "input", H2: "input", H3: "input", "N.C._13": "no_connect", PWM: "input", MODE: "input", RC: "passive", TEST: "input", RDEAD: "passive", CSOUT: "input", REF: "input", CSN: "input", CSP: "input", VDSTH: "input", VDRAIN: "power_in", SC: "input", GHC: "output", CC: "passive", SB: "input", GHB: "output", CB: "passive", SA: "input", GHA: "output", CA: "passive", GLC: "output", GLB: "output", GLA: "output", "N.C._37": "no_connect", LSS: "input", ESF: "input", VREG: "power_out", GND_41: "power_in", CP1: "passive", CP2: "passive", DIRO: "output", VBB: "power_in", COAST: "input", "N.C._47": "no_connect", "N.C._48": "no_connect", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:AMT49413";
@@ -232,7 +238,8 @@ export class CP3119M extends Component.withPins({
   "FO_5": "5",
   "BO_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FO_6: "passive", BO_8: "passive", BI: "input", FI: "input", GND: "power_in", VCC: "power_in", FO_5: "power_out", BO_7: "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:CP3119M";
@@ -258,7 +265,8 @@ export class CP2119L extends Component.withPins({
   "FO_5": "5",
   "BO_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FO_6: "passive", BO_8: "passive", BI: "input", FI: "input", GND: "power_in", VCC: "power_in", FO_5: "power_out", BO_7: "power_out", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:CP2119L";
@@ -285,7 +293,8 @@ export class DRV8837C extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", OUT1: "output", OUT2: "output", GND_4: "power_in", IN2: "input", IN1: "input", "~{SLEEP}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8837C";
@@ -312,7 +321,8 @@ export class DRV8212P extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", OUT1: "output", OUT2: "output", GND_4: "power_in", IN2: "input", IN1: "input", "~{SLEEP}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8212P";
@@ -336,7 +346,8 @@ export class DRV8220DRL extends Component.withPins({
   "VM": "5",
   "OUT1": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN2: "input", GND: "power_in", OUT2: "output", VM: "power_in", OUT1: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8220DRL";
@@ -363,7 +374,8 @@ export class DRV8220DSG extends Component.withPins({
   "~{SLEEP}": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", OUT1: "output", OUT2: "output", GND_4: "power_in", "IN2/EN": "input", "IN1/PH": "input", MODE: "input", "~{SLEEP}": "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8220DSG";
@@ -390,7 +402,8 @@ export class DRV8231ADSG extends Component.withPins({
   "OUT2": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IPROPI: "output", IN2: "input", IN1: "input", VREF: "input", VM: "power_in", OUT1: "output", GND_7: "power_in", OUT2: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8231ADSG";
@@ -449,7 +462,8 @@ export class DRV8308 extends Component.withPins({
   "WLSG": "40",
   "GND_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { UHP: "input", UHN: "input", VHP: "input", VHN: "input", WHP: "input", WHN: "input", VSW: "power_out", FGFB: "output", FGINN_TACH: "input", FGINP: "bidirectional", SCLK: "input", SCS: "input", SMODE: "input", SDATAI: "input", SDATAO: "output", FGOUT: "output", "~{FAULTn}": "output", "~{LOCKn}": "output", CLKIN: "input", BRAKE: "input", DIR: "input", ENABLE: "input", RESET: "input", VREG: "power_out", VINT: "passive", GND_26: "power_in", VM: "power_in", VCP: "passive", CP2: "passive", CP1: "passive", ISEN: "input", UHSG: "output", U: "input", ULSG: "output", VHSG: "output", V: "input", VLSG: "output", WHSG: "output", W: "input", WLSG: "output", GND_41: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8308";
@@ -492,7 +506,8 @@ export class DRV8311H extends Component.withPins({
   "~{SLEEP}": "24",
   "PGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FAULT}": "open_collector", CSAREF: "input", SOC: "output", SOB: "output", SOA: "output", CP: "input", VIN_AVDD: "power_in", VM: "power_in", PGND_9: "power_in", OUTA: "tri_state", OUTB: "tri_state", OUTC: "tri_state", INHC: "input", INHB: "input", INHA: "input", AGND: "power_in", AVDD: "power_out", INLA: "input", INLB: "input", INLC: "input", GAIN: "input", SLEW: "input", MODE: "input", "~{SLEEP}": "input", PGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8311H";
@@ -535,7 +550,8 @@ export class DRV8311P extends Component.withPins({
   "~{SLEEP}": "24",
   "PGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FAULT}": "open_collector", CSAREF: "input", SOC: "output", SOB: "output", SOA: "output", CP: "input", VIN_AVDD: "power_in", VM: "power_in", PGND_9: "power_in", OUTA: "tri_state", OUTB: "tri_state", OUTC: "tri_state", NC_13: "no_connect", AD1: "input", AD0: "input", AGND: "power_in", AVDD: "power_out", NC_18: "no_connect", PWM_SYNC: "input", "~{SCS}": "input", SDO: "tri_state", SDI: "input", SCLK: "input", "~{SLEEP}": "input", PGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8311P";
@@ -578,7 +594,8 @@ export class DRV8311S extends Component.withPins({
   "~{SCS}": "24",
   "PGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FAULT}": "open_collector", CSAREF: "input", SOC: "output", SOB: "output", SOA: "output", CP: "input", VIN_AVDD: "power_in", VM: "power_in", PGND_9: "power_in", OUTA: "tri_state", OUTB: "tri_state", OUTC: "tri_state", INHC: "input", INHB: "input", INHA: "input", AGND: "power_in", AVDD: "power_out", INLA: "input", INLB: "input", INLC: "input", SDO: "tri_state", SDI: "input", SCLK: "input", "~{SCS}": "input", PGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8311S";
@@ -641,7 +658,8 @@ export class DRV8412 extends Component.withPins({
   "GVDD_D": "44",
   "EP": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GVDD_C: "power_in", VDD: "power_in", "NC/GND_3": "passive", "NC/GND_4": "passive", PWM_D: "input", "~{RESET_CD}": "input", PWM_C: "input", M1: "input", M2: "input", M3: "input", VREG: "output", AGND: "power_in", GND: "power_in", OC_ADJ: "input", PWM_B: "input", "~{RESET_AB}": "input", PWM_A: "input", "~{FAULT}": "open_collector", "NC/GND_19": "passive", "NC/GND_20": "passive", "~{OTW}": "open_collector", GVDD_B: "power_in", GVDD_A: "power_in", BST_A: "input", "NC/GND_25": "passive", PVDD_A_26: "power_in", PVDD_A_27: "power_in", OUT_A: "output", GND_A: "power_in", GND_B: "power_in", OUT_B: "output", PVDD_B: "power_in", BST_B: "input", BST_C: "input", PVDD_C: "power_in", OUT_C: "output", GND_C: "power_in", GND_D: "power_in", OUT_D: "output", PVDD_D_40: "power_in", PVDD_D_41: "power_in", "NC/GND_42": "passive", BST_D: "input", GVDD_D: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8412";
@@ -695,7 +713,8 @@ export class DRV8432 extends Component.withPins({
   "BST_A": "35",
   "GVDD_A": "36",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GVDD_B: "power_in", "~{OTW}": "open_collector", "~{FAULT}": "open_collector", PWM_A: "input", "~{RESET_AB}": "input", PWM_B: "input", OC_ADJ: "input", GND: "power_in", AGND: "power_in", VREG: "output", M3: "input", M2: "input", M1: "input", PWM_C: "input", "~{RESET_CD}": "input", PWM_D: "input", VDD: "power_in", GVDD_C: "power_in", GVDD_D: "power_in", BST_D: "input", PVDD_D: "power_in", OUT_D: "output", GND_D: "power_in", GND_C: "power_in", OUT_C: "output", PVDD_C: "power_in", BST_C: "input", BST_B: "input", PVDD_B: "power_in", OUT_B: "output", GND_B: "power_in", GND_A: "power_in", OUT_A: "output", PVDD_A: "power_in", BST_A: "input", GVDD_A: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8432";
@@ -736,7 +755,8 @@ export class DRV8434PWP extends Component.withPins({
   "BOUT2": "[8,9]",
   "BOUT1": "[10,11]",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCP: "power_out", GND: "power_in", DVDD: "power_out", "~{FAULT}": "open_collector", VREF: "input", M0: "input", TOFF: "input", DECAY1: "input", DECAY0: "input", M1: "input", STEP: "input", DIR: "input", ENABLE: "input", "~{SLEEP}": "input", CPL: "passive", CPH: "passive", PAD: "power_in", VM: "power_in", PGND: "power_in", AOUT1: "tri_state", AOUT2: "tri_state", BOUT2: "tri_state", BOUT1: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8434PWP";
@@ -783,7 +803,8 @@ export class DRV8461SPWP extends Component.withPins({
   "DVDD": "15",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCP: "input", GND_3: "power_in", AOUT1_4: "output", AOUT2_6: "output", BOUT2_8: "output", BOUT1_10: "output", "~{FAULT}": "open_collector", VREF: "input", "~{SCS}": "input", VCC: "power_in", SDO: "output", SDI: "input", SCLK: "input", STEP: "input", DIR: "input", ENABLE: "input", "~{SLEEP}": "input", CPL: "input", CPH: "input", VM_2: "power_in", AOUT1_5: "passive", AOUT2_7: "passive", BOUT2_9: "passive", BOUT1_11: "passive", GND_12: "passive", VM_13: "passive", GND_14: "passive", DVDD: "power_out", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8461SPWP";
@@ -822,7 +843,8 @@ export class DRV8662 extends Component.withPins({
   "EN": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VPUMP: "output", VDD: "power_in", FB: "input", GND_4: "power_in", GND_5: "passive", GND_6: "passive", SW_7: "input", SW_8: "input", NC: "no_connect", VBST_10: "power_out", VBST_11: "passive", PVDD: "power_in", "OUT+": "output", "OUT-": "output", REXT: "input", "IN-": "input", "IN+": "input", GAIN0: "input", GAIN1: "input", EN: "input", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8662";
@@ -857,7 +879,8 @@ export class DRV8800PWP extends Component.withPins({
   "NC": "16",
   "GND(PPAD)": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FAULT}": "open_collector", MODE: "input", PHASE: "input", GND_4: "power_in", "~{SLEEP}": "input", ENABLE: "input", "OUT+": "power_out", SENSE: "power_out", VBB: "power_in", "OUT-": "power_out", CP1: "power_in", CP2: "power_in", GND_13: "passive", VCP: "power_in", VREG: "output", NC: "no_connect", "GND(PPAD)": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8800PWP";
@@ -892,7 +915,8 @@ export class DRV8800RTY extends Component.withPins({
   "MODE": "16",
   "GND(PPAD)": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PHASE: "input", GND_2: "power_in", "~{SLEEP}": "input", ENABLE: "input", NC: "no_connect", "OUT+": "power_out", SENSE: "power_out", VBB: "power_in", "OUT-": "power_out", CP1: "power_in", CP2: "power_in", GND_12: "passive", VCP: "power_in", VREG: "output", "~{FAULT}": "open_collector", MODE: "input", "GND(PPAD)": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8800RTY";
@@ -927,7 +951,8 @@ export class DRV8801PWP extends Component.withPins({
   "MODE2": "16",
   "GND(PPAD)": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FAULT}": "open_collector", MODE1: "input", PHASE: "input", GND_4: "power_in", "~{SLEEP}": "input", ENABLE: "input", "OUT+": "power_out", SENSE: "power_out", VBB: "power_in", "OUT-": "power_out", CP1: "power_in", CP2: "power_in", GND_13: "passive", VCP: "power_in", VPROPI: "output", MODE2: "input", "GND(PPAD)": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8801PWP";
@@ -962,7 +987,8 @@ export class DRV8801RTY extends Component.withPins({
   "MODE1": "16",
   "GND(PPAD)": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PHASE: "input", GND_2: "power_in", "~{SLEEP}": "input", ENABLE: "input", MODE2: "input", "OUT+": "power_out", SENSE: "power_out", VBB: "power_in", "OUT-": "power_out", CP1: "power_in", CP2: "power_in", GND_12: "passive", VCP: "power_in", VPROPI: "output", "~{FAULT}": "open_collector", MODE1: "input", "GND(PPAD)": "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8801RTY";
@@ -996,7 +1022,8 @@ export class DRV8833PW extends Component.withPins({
   "AIN2": "15",
   "AIN1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SLEEP}": "input", AOUT1: "power_out", AISEN: "bidirectional", AOUT2: "power_out", BOUT2: "power_out", BISEN: "bidirectional", BOUT1: "power_out", "~{FAULT}": "open_collector", BIN1: "input", BIN2: "input", VCP: "bidirectional", VM: "power_in", GND: "power_in", VINT: "power_in", AIN2: "input", AIN1: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8833PW";
@@ -1031,7 +1058,8 @@ export class DRV8833PWP extends Component.withPins({
   "AIN1": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SLEEP}": "input", AOUT1: "power_out", AISEN: "bidirectional", AOUT2: "power_out", BOUT2: "power_out", BISEN: "bidirectional", BOUT1: "power_out", "~{FAULT}": "open_collector", BIN1: "input", BIN2: "input", VCP: "bidirectional", VM: "power_in", GND_13: "power_in", VINT: "power_in", AIN2: "input", AIN1: "input", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8833PWP";
@@ -1066,7 +1094,8 @@ export class DRV8833RTY extends Component.withPins({
   "AOUT1": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AISEN: "bidirectional", AOUT2: "power_out", BOUT2: "power_out", BISEN: "bidirectional", BOUT1: "power_out", "~{FAULT}": "open_collector", BIN1: "input", BIN2: "input", VCP: "bidirectional", VM: "power_in", GND_11: "power_in", VINT: "power_in", AIN2: "input", AIN1: "input", "~{SLEEP}": "input", AOUT1: "power_out", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8833RTY";
@@ -1093,7 +1122,8 @@ export class DRV8837 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", OUT1: "output", OUT2: "output", GND_4: "power_in", IN2: "input", IN1: "input", "~{SLEEP}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8837";
@@ -1120,7 +1150,8 @@ export class DRV8838 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VM: "power_in", OUT1: "output", OUT2: "output", GND_4: "power_in", EN: "input", PH: "input", "~{SLEEP}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8838";
@@ -1155,7 +1186,8 @@ export class DRV8847PWP extends Component.withPins({
   "IN1": "16",
   "PPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SLEEP}": "input", OUT1: "output", ISEN12: "passive", OUT2: "output", OUT4: "output", ISEN34: "passive", OUT3: "output", "~{FAULT}": "open_collector", IN3: "input", IN4: "input", TRQ: "input", VM: "power_in", GND: "power_in", MODE: "input", IN2: "input", IN1: "input", PPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8847PWP";
@@ -1189,7 +1221,8 @@ export class DRV8847PWR extends Component.withPins({
   "IN2": "15",
   "IN1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SLEEP}": "input", OUT1: "output", ISEN12: "passive", OUT2: "output", OUT4: "output", ISEN34: "passive", OUT3: "output", "~{FAULT}": "open_collector", IN3: "input", IN4: "input", TRQ: "input", VM: "power_in", GND: "power_in", MODE: "input", IN2: "input", IN1: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8847PWR";
@@ -1224,7 +1257,8 @@ export class DRV8847RTE extends Component.withPins({
   "OUT1": "16",
   "PPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ISEN12: "passive", OUT2: "output", OUT4: "output", ISEN34: "passive", OUT3: "output", "~{FAULT}": "open_collector", IN3: "input", IN4: "input", TRQ: "input", VM: "power_in", GND: "power_in", MODE: "input", IN2: "input", IN1: "input", "~{SLEEP}": "input", OUT1: "output", PPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8847RTE";
@@ -1258,7 +1292,8 @@ export class DRV8847SPWR extends Component.withPins({
   "IN2": "15",
   "IN1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SLEEP}": "input", OUT1: "output", ISEN12: "passive", OUT2: "output", OUT4: "output", ISEN34: "passive", OUT3: "output", "~{FAULT}": "open_collector", IN3: "input", IN4: "input", SCL: "input", VM: "power_in", GND: "power_in", SDA: "bidirectional", IN2: "input", IN1: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8847SPWR";
@@ -1293,7 +1328,8 @@ export class DRV8848 extends Component.withPins({
   "AIN1": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SLEEP}": "input", AOUT1: "output", AISEN: "passive", AOUT2: "output", BOUT2: "output", BISEN: "passive", BOUT1: "output", "~{FAULT}": "open_collector", BIN1: "input", BIN2: "input", VREF: "input", VM: "power_in", GND_13: "power_in", VINT: "passive", AIN2: "input", AIN1: "input", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8848";
@@ -1320,7 +1356,8 @@ export class DRV8870DDA extends Component.withPins({
   "OUT2": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", IN2: "input", IN1: "input", VREF: "input", VM: "power_in", OUT1: "output", ISEN: "passive", OUT2: "output", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8870DDA";
@@ -1347,7 +1384,8 @@ export class DRV8871DDA extends Component.withPins({
   "OUT2": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", IN2: "input", IN1: "input", ILIM: "passive", VM: "power_in", OUT1: "output", GND_7: "passive", OUT2: "output", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8871DDA";
@@ -1374,7 +1412,8 @@ export class DRV8872DDA extends Component.withPins({
   "OUT2": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", IN2: "input", IN1: "input", "~{FAULT}": "open_collector", VM: "power_in", OUT1: "output", ISEN: "passive", OUT2: "output", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:DRV8872DDA";
@@ -1400,7 +1439,8 @@ export class EMC2301_x_ACZL extends Component.withPins({
   "CLK": "7",
   "~{ALERT}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SMDATA: "bidirectional", SMCLK: "input", VDD: "power_in", GND: "power_in", PWM: "output", TACH: "input", CLK: "bidirectional", "~{ALERT}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:EMC2301-x-ACZL";
@@ -1428,7 +1468,8 @@ export class EMC2302_x_AIZL extends Component.withPins({
   "CLK": "9",
   "~{ALERT}": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SMDATA: "bidirectional", SMCLK: "input", VDD: "power_in", GND: "power_in", PWM1: "output", TACH1: "input", PWM2: "output", TACH2: "input", CLK: "bidirectional", "~{ALERT}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:EMC2302-x-AIZL";
@@ -1459,7 +1500,8 @@ export class EMC2303_x_KP extends Component.withPins({
   "TACH3": "12",
   "GND": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SMDATA: "bidirectional", SMCLK: "input", VDD: "power_in", ADDR_SEL: "input", PWM1: "output", TACH1: "input", PWM2: "output", TACH2: "input", CLK: "bidirectional", "~{ALERT}": "open_collector", PWM3: "output", TACH3: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:EMC2303-x-KP";
@@ -1494,7 +1536,8 @@ export class EMC2305_x_AP extends Component.withPins({
   "TACH5": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SMDATA: "bidirectional", SMCLK: "input", VDD: "power_in", ADDR_SEL: "input", PWM1: "output", TACH1: "input", PWM2: "output", TACH2: "input", PWM3: "output", TACH3: "input", CLK: "bidirectional", "~{ALERT}": "open_collector", PWM4: "output", TACH4: "input", PWM5: "output", TACH5: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:EMC2305-x-AP";
@@ -1528,7 +1571,8 @@ export class L293 extends Component.withPins({
   "4A": "15",
   "VCC1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "EN1,2": "input", "1A": "input", "1Y": "output", GND_4: "power_in", GND_5: "power_in", "2Y": "output", "2A": "input", VCC2: "power_in", "EN3,4": "input", "3A": "input", "3Y": "output", GND_12: "power_in", GND_13: "power_in", "4Y": "output", "4A": "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L293";
@@ -1562,7 +1606,8 @@ export class L293D extends Component.withPins({
   "4A": "15",
   "VCC1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "EN1,2": "input", "1A": "input", "1Y": "output", GND_4: "power_in", GND_5: "power_in", "2Y": "output", "2A": "input", VCC2: "power_in", "EN3,4": "input", "3A": "input", "3Y": "output", GND_12: "power_in", GND_13: "power_in", "4Y": "output", "4A": "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L293D";
@@ -1600,7 +1645,8 @@ export class L293E extends Component.withPins({
   "IN4": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN12: "input", IN1: "input", OUT1: "output", SENSE1: "passive", GND_5: "power_in", GND_6: "passive", SENSE2: "passive", OUT2: "output", IN2: "input", VS: "power_in", EN34: "input", IN3: "input", OUT3: "output", SENSE3: "passive", GND_15: "passive", GND_16: "passive", SENSE4: "passive", OUT4: "output", IN4: "input", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L293E";
@@ -1637,7 +1683,8 @@ export class L297 extends Component.withPins({
   "D": "9",
   "ENABLE": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CONTROL: "input", Vs: "power_in", SENS2: "input", SENS1: "input", Vref: "input", OSC: "input", CW: "input", CLOCK: "input", HALF: "input", RESET: "input", SYNC: "bidirectional", GND: "power_in", HOME: "open_collector", A: "output", INH1: "output", B: "output", C: "output", INH2: "output", D: "output", ENABLE: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L297";
@@ -1670,7 +1717,8 @@ export class L298HN extends Component.withPins({
   "OUT4": "14",
   "SENSE_B": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SENSE_A: "input", OUT1: "output", OUT2: "output", Vs: "power_in", IN1: "input", EnA: "input", IN2: "input", GND: "power_in", Vss: "power_in", IN3: "input", EnB: "input", IN4: "input", OUT3: "output", OUT4: "output", SENSE_B: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L298HN";
@@ -1703,7 +1751,8 @@ export class L298N extends Component.withPins({
   "OUT4": "14",
   "SENSE_B": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SENSE_A: "input", OUT1: "output", OUT2: "output", Vs: "power_in", IN1: "input", EnA: "input", IN2: "input", GND: "power_in", Vss: "power_in", IN3: "input", EnB: "input", IN4: "input", OUT3: "output", OUT4: "output", SENSE_B: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L298N";
@@ -1742,7 +1791,8 @@ export class L298P extends Component.withPins({
   "GND_20": "20",
   "PAD": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SENSE_A: "input", NC_3: "no_connect", OUT1: "output", OUT2: "output", Vs: "power_in", IN1: "input", EnA: "input", IN2: "input", GND_10: "power_in", GND_11: "power_in", Vss: "power_in", IN3: "input", EnB: "input", IN4: "input", OUT3: "output", OUT4: "output", NC_18: "no_connect", SENSE_B: "input", GND_20: "power_in", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:L298P";
@@ -1771,7 +1821,8 @@ export class LMD18200 extends Component.withPins({
   "OUTPUT2": "10",
   "BOOTSTRAP2": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BOOTSTRAP1: "passive", OUTPUT1: "output", DIRECTION: "input", BRAKE: "input", PWM: "input", VS: "power_in", GND: "power_in", CURRENT_SENSE_OUTPUT: "output", "~{THERMAL_FLAG_OUTPUT}": "open_collector", OUTPUT2: "output", BOOTSTRAP2: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:LMD18200";
@@ -1802,7 +1853,8 @@ export class MAX22201 extends Component.withPins({
   "~{FAULT}": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ILIM: "input", ROFF: "input", GNDP: "power_in", IN1: "input", IN2: "input", ISEN: "output", "V_{18}": "power_out", GNDA: "power_in", OUT2: "output", "V_{M}": "power_in", OUT1: "output", "~{FAULT}": "open_collector", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:MAX22201";
@@ -1833,7 +1885,8 @@ export class MAX22202 extends Component.withPins({
   "~{FAULT}": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ILIM: "input", MODE: "input", GNDP: "power_in", PHASE: "input", ENBL: "input", ISEN: "output", "V_{18}": "power_out", GNDA: "power_in", OUT2: "output", "V_{M}": "power_in", OUT1: "output", "~{FAULT}": "open_collector", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:MAX22202";
@@ -1864,7 +1917,8 @@ export class MAX22207 extends Component.withPins({
   "~{FAULT}": "12",
   "PAD": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ILIM: "input", "~{CDROUT}": "open_collector", GNDP: "power_in", IN1: "input", IN2: "input", ISEN: "output", "V_{18}": "power_out", GNDA: "power_in", OUT2: "output", "V_{M}": "power_in", OUT1: "output", "~{FAULT}": "open_collector", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:MAX22207";
@@ -1921,7 +1975,8 @@ export class MAX22208xTU extends Component.withPins({
   "GND_38": "38",
   "GND_39": "39",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_out", EN1: "input", DIN1: "input", EN2: "input", DIN2: "input", EN3: "input", DIN3: "input", EN4: "input", DIN4: "input", GND_10: "power_in", GND_11: "passive", "~{FAULT}": "open_collector", "C_{P1}": "input", "C_{P2}": "input", "V_{CP}": "passive", "V_{M}_16": "power_in", "~{SLEEP}": "input", GND_18: "passive", PGND_19: "power_in", PGND_20: "passive", OUT1: "output", "V_{M}_22": "passive", "V_{M}_23": "passive", OUT2: "output", PGND_25: "passive", PGND_26: "passive", OUT3: "output", "V_{M}_28": "passive", "V_{M}_29": "passive", OUT4: "output", PGND_31: "passive", PGND_32: "passive", ISEN1: "output", ISEN2: "output", ISEN3: "output", ISEN4: "output", GND_37: "passive", GND_38: "passive", GND_39: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:MAX22208xTU";
@@ -1978,7 +2033,8 @@ export class MAX22208xUU extends Component.withPins({
   "ISEN3": "38",
   "GND_39": "39",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ISEN4: "output", GND_2: "power_in", GND_3: "passive", "V_{DD}": "power_out", EN1: "input", DIN1: "input", EN2: "input", DIN2: "input", EN3: "input", DIN3: "input", EN4: "input", DIN4: "input", GND_13: "passive", GND_14: "passive", "~{FAULT}": "open_collector", "C_{P1}": "input", "C_{P2}": "input", "V_{CP}": "passive", "V_{M}_19": "power_in", "~{SLEEP}": "input", GND_21: "passive", "N.C._22": "no_connect", PGND_23: "power_in", OUT1: "output", "V_{M}_25": "passive", "V_{M}_26": "passive", OUT2: "output", PGND_28: "passive", PGND_29: "passive", OUT3: "output", "V_{M}_31": "passive", "V_{M}_32": "passive", OUT4: "output", PGND_34: "passive", "N.C._35": "no_connect", ISEN1: "output", ISEN2: "output", ISEN3: "output", GND_39: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:MAX22208xUU";
@@ -2037,7 +2093,8 @@ export class MP6536DU extends Component.withPins({
   "BST2": "38",
   "PGND_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW2_1: "tri_state", SW2_2: "tri_state", SW1_6: "tri_state", SW1_7: "tri_state", LS1_8: "open_emitter", LS1_9: "open_emitter", PWM1: "input", PWM2: "input", "~{FAULTB}": "open_collector", "~{SHDNB}": "input", PWM3: "input", "~{STBYB}": "input", "~{FLT3B}": "open_collector", "~{FLT2B}": "open_collector", SW3_29: "tri_state", SW3_30: "tri_state", LS3_31: "open_emitter", LS3_32: "open_emitter", LS2_39: "open_emitter", LS2_40: "open_emitter", VSP_3: "power_in", VSP_4: "passive", VSP_5: "passive", BST1: "power_in", NC_11: "no_connect", AGND_18: "power_in", NC_21: "no_connect", PGND_22: "power_in", PGND_23: "passive", NC_24: "no_connect", NC_25: "no_connect", VSP_26: "passive", VSP_27: "passive", VSP_28: "passive", BST3: "power_in", VDR2: "power_out", AGND_35: "passive", AGND_36: "passive", VDR1: "power_out", BST2: "power_in", PGND_41: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:MP6536DU";
@@ -2104,7 +2161,8 @@ export class PAC5527QM extends Component.withPins({
   "PF3": "48",
   "VSS_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PF2: "bidirectional", PF1: "bidirectional", PF0: "bidirectional", VCC33: "power_out", VSS_5: "power_in", AIO0: "bidirectional", AIO1: "bidirectional", AIO2: "bidirectional", AIO3: "bidirectional", AIO4: "bidirectional", AIO5: "bidirectional", AIO6: "bidirectional", AIO7: "bidirectional", AIO8: "bidirectional", AIO9: "bidirectional", VSYS: "power_out", VM: "power_in", SW1: "input", SW2: "input", VP: "power_out", CPL: "input", CPH: "input", DRL0: "output", DRL1: "output", DRL2: "output", DRS0: "output", DRH0: "output", DRS1: "output", DRH1: "output", DRS2: "output", DRH2: "output", VCP: "passive", PD7: "bidirectional", PD6: "bidirectional", PD5: "bidirectional", PD4: "bidirectional", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", VCC18: "power_out", VCORE: "power_out", VCCIO: "power_out", PF7: "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", VSS_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:PAC5527QM";
@@ -2134,7 +2192,8 @@ export class PG001M extends Component.withPins({
   "VECTOR": "15",
   "Vdd": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}": "input", CLK_IN: "input", "~{CW}": "input", MSEL_1: "input", MSEL_2: "input", GND: "power_in", "~{MONITOR}": "input", DATA_B: "output", DATA_A: "output", "~{STROBE}": "output", CLK_OUT: "output", VECTOR: "input", Vdd: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:PG001M";
@@ -2168,7 +2227,8 @@ export class Pololu_Breakout_A4988 extends Component.withPins({
   "STEP": "15",
   "DIR": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", VDD: "power_in", "1B": "output", "1A": "output", "2A": "output", "2B": "output", GND_7: "power_in", VMOT: "power_in", "~{ENABLE}": "input", MS1: "input", MS2: "input", MS3: "input", "~{RESET}": "input", "~{SLEEP}": "input", STEP: "input", DIR: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:Pololu_Breakout_A4988";
@@ -2202,7 +2262,8 @@ export class Pololu_Breakout_DRV8825 extends Component.withPins({
   "STEP": "15",
   "DIR": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", "~{FLT}": "output", A2: "output", A1: "output", B1: "output", B2: "output", GND_7: "power_in", VMOT: "power_in", "~{EN}": "input", M0: "input", M1: "input", M2: "input", "~{RST}": "input", "~{SLP}": "input", STEP: "input", DIR: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:Pololu_Breakout_DRV8825";
@@ -2238,7 +2299,8 @@ export class SLA7044M extends Component.withPins({
   "DATA_17": "17",
   "~{OUT}_18": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "output", "~{STROBE}_2": "input", REF_3: "input", Vdd_4: "power_in", "~{CLOCK}_5": "input", DATA_6: "input", GND_7: "power_in", "~{OUT}_8": "output", RS_9: "input", RS_10: "input", OUT_11: "output", GND_12: "power_in", "~{STROBE}_13": "input", REF_14: "input", Vdd_15: "power_in", "~{CLOCK}_16": "input", DATA_17: "input", "~{OUT}_18": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7044M";
@@ -2274,7 +2336,8 @@ export class SLA7042M extends Component.withPins({
   "DATA_17": "17",
   "~{OUT}_18": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT_1: "output", "~{STROBE}_2": "input", REF_3: "input", Vdd_4: "power_in", "~{CLOCK}_5": "input", DATA_6: "input", GND_7: "power_in", "~{OUT}_8": "output", RS_9: "input", RS_10: "input", OUT_11: "output", GND_12: "power_in", "~{STROBE}_13": "input", REF_14: "input", Vdd_15: "power_in", "~{CLOCK}_16": "input", DATA_17: "input", "~{OUT}_18": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7042M";
@@ -2313,7 +2376,8 @@ export class SLA7070MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", "N.C.": "no_connect", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7070MPRT";
@@ -2352,7 +2416,8 @@ export class SLA7071MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", "N.C.": "no_connect", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7071MPRT";
@@ -2391,7 +2456,8 @@ export class SLA7072MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", "N.C.": "no_connect", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7072MPRT";
@@ -2430,7 +2496,8 @@ export class SLA7073MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", "N.C.": "no_connect", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7073MPRT";
@@ -2469,7 +2536,8 @@ export class SLA7075MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", MO: "output", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7075MPRT";
@@ -2508,7 +2576,8 @@ export class SLA7076MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", MO: "output", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7076MPRT";
@@ -2547,7 +2616,8 @@ export class SLA7077MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", MO: "output", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7077MPRT";
@@ -2586,7 +2656,8 @@ export class SLA7078MPRT extends Component.withPins({
   "OUTB_22": "22",
   "OUTB_23": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", OUTA_2: "output", "~{OUTA}_3": "output", "~{OUTA}_4": "output", SENSE_A: "output", MO: "output", M1: "input", M2: "input", M3: "input", CLOCK: "input", VBB: "power_in", GND: "power_in", "REF/SLEEP1": "input", VDD: "power_in", RESET: "input", "CW/CCW": "input", SYNC: "input", FLAG: "output", SENSE_B: "output", "~{OUTB}_20": "output", "~{OUTB}_21": "output", OUTB_22: "output", OUTB_23: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SLA7078MPRT";
@@ -2620,7 +2691,8 @@ export class SN754410NE extends Component.withPins({
   "4A": "15",
   "VCC1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1,2EN": "input", "1A": "input", "1Y": "output", GND_4: "power_in", GND_5: "passive", "2Y": "output", "2A": "input", VCC2: "power_in", "3,4EN": "input", "3A": "input", "3Y": "output", GND_12: "passive", GND_13: "passive", "4Y": "output", "4A": "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:SN754410NE";
@@ -2660,7 +2732,8 @@ export class STK672_040_E extends Component.withPins({
   "MO2": "21",
   "SG": "22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{B}": "output", B: "output", PG_3: "power_in", PG_4: "power_in", "~{A}": "output", A: "output", VCC: "power_in", Vref: "input", M1: "input", M2: "input", M3: "input", M4: "input", M5: "input", CLK: "input", CWB: "input", "~{RESET}": "input", RETURN: "input", ENABLE: "input", MOI: "output", MO1: "output", MO2: "output", SG: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STK672-040-E";
@@ -2693,7 +2766,8 @@ export class STK672_080_E extends Component.withPins({
   "MOI": "14",
   "ENABLE": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PG: "power_in", BB: "output", B: "output", AB: "output", A: "output", VCC: "power_in", Vref: "input", M1: "input", M2: "input", CWB: "input", CLOCK: "input", M3: "input", "~{RESET}": "input", MOI: "output", ENABLE: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STK672-080-E";
@@ -2728,7 +2802,8 @@ export class STSPIN220 extends Component.withPins({
   "MODE1": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIR: "input", STCK: "input", OUTA1: "power_out", SENSEA: "power_out", OUTA2: "power_out", VS: "power_in", GND: "power_in", OUTB2: "power_out", SENSEB: "power_out", OUTB1: "power_out", REF: "input", TOFF: "input", "EN/FLT": "bidirectional", "STBY/RESET": "input", MODE2: "input", MODE1: "input", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STSPIN220";
@@ -2763,7 +2838,8 @@ export class STSPIN230 extends Component.withPins({
   "INVH": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INUL: "input", INUH: "input", OUTU: "power_out", SENSEU: "input", NC: "no_connect", VS: "power_in", GND_7: "power_in", OUTV: "power_out", SENSEVW: "input", OUTW: "power_out", INWL: "input", INWH: "input", "EN/FLT": "bidirectional", STBY: "input", INVL: "input", INVH: "input", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STSPIN230";
@@ -2798,7 +2874,8 @@ export class STSPIN233 extends Component.withPins({
   "ENV": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INU: "input", ENU: "input", OUTU: "power_out", SENSEU: "input", VS: "power_in", GND_6: "power_in", OUTV: "power_out", SENSEV: "input", SENSEW: "input", OUTW: "power_out", INW: "input", ENW: "input", "EN/FAULT": "bidirectional", "STBY/RESET": "input", INV: "input", ENV: "input", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STSPIN233";
@@ -2833,7 +2910,8 @@ export class STSPIN240 extends Component.withPins({
   "PWMB": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PHA: "input", PWMA: "input", OUTA1: "power_out", SENSEA: "power_out", OUTA2: "power_out", VS: "power_in", GND: "power_in", OUTB2: "power_out", SENSEB: "power_out", OUTB1: "power_out", REF: "input", TOFF: "input", "EN/FLT": "bidirectional", "STBY/RESET": "input", PHB: "input", PWMB: "input", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STSPIN240";
@@ -2900,7 +2978,8 @@ export class STSPIN32F0A extends Component.withPins({
   "OP3N": "46",
   "OP3O": "47",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PF0: "bidirectional", PF1: "bidirectional", VREG12: "passive", "~{RST}": "bidirectional", VM: "power_in", SW: "passive", VDDA: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB1: "bidirectional", TESTMODE: "input", OC_COMP: "input", HSW: "output", OUTW: "power_in", VBOOTW: "passive", LSW: "output", HSV: "output", OUTV: "power_in", VBOOTV: "passive", LSV: "output", HSU: "output", OUTU: "power_in", VBOOTU: "passive", LSU: "output", PA13_SWD_IO: "bidirectional", PA14_SWD_CLK: "bidirectional", PA15: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", BOOT0: "input", RESERVED: "passive", GND_44: "power_in", VDD: "power_in", GND_49: "passive", OP1O: "output", OP1N: "input", OP1P: "input", OP2P: "input", OP2N: "input", OP2O: "output", OP3P: "input", OP3N: "input", OP3O: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:STSPIN32F0A";
@@ -2942,7 +3021,8 @@ export class TB6612FNG extends Component.withPins({
   "PWMA": "23",
   "VM1": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AO1_1: "output", AO1_2: "passive", PGND1_3: "power_in", PGND1_4: "passive", AO2_5: "output", AO2_6: "passive", BO2_7: "output", BO2_8: "passive", PGND2_9: "power_in", PGND2_10: "passive", BO1_11: "output", BO1_12: "passive", VM2: "power_in", VM3: "power_in", PWMB: "input", BIN2: "input", BIN1: "input", GND: "power_in", STBY: "input", VCC: "power_in", AIN1: "input", AIN2: "input", PWMA: "input", VM1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TB6612FNG";
@@ -2977,7 +3057,8 @@ export class TC78H670FTG extends Component.withPins({
   "MODE2": "16",
   "GND_PAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AGND: "power_in", VM: "power_in", PGND_A: "power_in", "OUT_A+": "output", "OUT_A-": "output", "OUT_B-": "output", "OUT_B+": "output", MODE3: "input", PGND_B: "power_in", VREF: "input", OSCM: "input", "~{STBY}": "input", "EN/~{ERR}": "bidirectional", MODE0: "input", MODE1: "input", MODE2: "input", GND_PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TC78H670FTG";
@@ -3044,7 +3125,8 @@ export class TMC2041_LA extends Component.withPins({
   "TST_MODE": "48",
   "GNDD_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GNDD_1: "passive", GNDD_2: "passive", "CSN/IO0": "bidirectional", "SCK/IO1": "bidirectional", "SDI/IO2": "bidirectional", GNDD_6: "power_in", VCC_IO: "power_in", SDO: "bidirectional", SWIOP: "bidirectional", SWION: "bidirectional", CLK: "input", SWSEL: "input", GNDD_13: "passive", O2A1: "output", BR2A: "passive", O2A2: "output", VS_17: "power_in", GNDP_18: "power_in", VS_19: "passive", O2B1: "output", BR2B: "passive", O2B2: "output", GNDD_23: "passive", NEXTADDR: "input", DIR2: "input", STEP2: "input", DIR1: "input", STEP1: "input", "~{DRV_ENN}": "input", VSA: "power_in", GNDA: "power_in", "5VOUT": "power_out", VCC: "power_in", GNDD_34: "passive", CPO: "passive", CPI: "passive", VCP: "passive", GNDD_38: "passive", O1B2: "output", BR1B: "passive", O1B1: "output", VS_42: "power_in", GNDP_43: "passive", VS_44: "passive", O1A2: "output", BR1A: "passive", O1A1: "output", TST_MODE: "input", GNDD_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2041-LA";
@@ -3099,7 +3181,8 @@ export class TMC2100_LA extends Component.withPins({
   "TST_MODE": "36",
   "GNDD_37": "37",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", CFG3: "input", CFG2: "input", CFG1: "input", CFG0: "input", STEP: "input", DIR: "input", VCC_IO: "power_in", DNC_9: "no_connect", GNDD_10: "power_in", GNDD_11: "passive", GNDP_12: "power_in", OB1: "output", BRB: "passive", OB2: "output", VS_16: "power_in", DNC_17: "no_connect", CFG4: "input", CFG5: "input", ERROR: "open_collector", INDEX: "open_collector", "~{CFG6_ENN}": "input", AIN_REF: "input", GNDA: "power_in", "5VOUT": "power_out", VCC: "power_in", CP0: "passive", CPI: "passive", VCP: "passive", VSA: "power_in", VS_31: "power_in", OA2: "output", BRA: "passive", OA1: "output", GNDP_35: "passive", TST_MODE: "input", GNDD_37: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2100-LA";
@@ -3166,7 +3249,8 @@ export class TMC2100_TA extends Component.withPins({
   "GNDP_48": "48",
   "GNDD_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TST_MODE: "input", CLK: "input", CFG3: "input", CFG2: "input", CFG1: "input", GNDD_6: "passive", CFG0: "input", STEP: "input", DIR: "input", VCC_IO: "power_in", DNC_11: "no_connect", GNDD_12: "power_in", GNDP_13: "passive", DNC_14: "no_connect", OB1: "output", DNC_16: "no_connect", BRB: "passive", DNC_18: "no_connect", OB2: "output", DNC_20: "no_connect", VS_21: "power_in", DNC_22: "no_connect", DNC_23: "no_connect", CFG4: "input", CFG5: "input", ERROR: "open_collector", INDEX: "open_collector", DNC_28: "no_connect", "~{CFG6_ENN}": "input", AIN_REF: "input", GNDD_31: "passive", GNDA: "power_in", "5VOUT": "power_out", VCC: "power_in", CP0: "passive", GNDD_36: "passive", CPI: "passive", VCP: "passive", VSA: "power_in", VS_40: "power_in", DNC_41: "no_connect", OA2: "output", DNC_43: "no_connect", BRA: "passive", DNC_45: "no_connect", OA1: "output", DNC_47: "no_connect", GNDP_48: "power_in", GNDD_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2100-TA";
@@ -3221,7 +3305,8 @@ export class TMC2130_LA extends Component.withPins({
   "TST_MODE": "36",
   "EP": "37",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", "~{CS}_CFG3": "input", SCK_CFG2: "input", SDI_CFG1: "input", SDO_CFG0: "bidirectional", STEP: "input", DIR: "input", VCC_IO: "power_in", DNC: "no_connect", SPI_MODE: "input", NC: "passive", GNDP_12: "power_in", OB1: "output", BRB: "passive", OB2: "output", VS_16: "power_in", DCO: "output", DCEN_CFG4: "input", DCIN_CFG5: "input", DIAG0: "output", DIAG1: "output", "~{DRV_EN}_CFG6": "input", AIN_IREF: "input", GNDA: "power_in", "5VOUT": "power_out", VCC: "power_in", CPO: "passive", CPI: "passive", VCP: "passive", VSA: "power_in", VS_31: "power_in", OA2: "output", BRA: "passive", OA1: "output", GNDP_35: "passive", TST_MODE: "input", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2130-LA";
@@ -3288,7 +3373,8 @@ export class TMC2130_TA extends Component.withPins({
   "GNDP_48": "48",
   "EP": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TST_MODE: "input", CLK: "input", "~{CS}_CFG3": "input", SCK_CFG2: "input", SDI_CFG1: "input", NC_6: "passive", SDO_CFG0: "bidirectional", STEP: "input", DIR: "input", VCC_IO: "power_in", DNC_11: "no_connect", SPI_MODE: "input", GNDP_13: "power_in", DNC_14: "no_connect", OB1: "output", DNC_16: "no_connect", BRB: "passive", DNC_18: "no_connect", OB2: "output", DNC_20: "no_connect", VS_21: "power_in", DNC_22: "no_connect", DCO: "output", DCEN_CFG4: "input", DCIN_CFG5: "input", DIAG0: "output", DIAG1: "output", DNC_28: "no_connect", "~{DRV_EN}_CFG6": "input", AIN_IREF: "input", NC_31: "passive", GNDA: "power_in", "5VOUT": "power_out", VCC: "power_in", CPO: "passive", NC_36: "passive", CPI: "passive", VCP: "passive", VSA: "power_in", VS_40: "power_in", DNC_41: "no_connect", OA2: "output", DNC_43: "no_connect", BRA: "passive", DNC_45: "no_connect", OA1: "output", DNC_47: "no_connect", GNDP_48: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2130-TA";
@@ -3355,7 +3441,8 @@ export class TMC2160 extends Component.withPins({
   "BMB1": "48",
   "GND": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HB1: "output", CB1: "output", "12VOUT": "power_in", VSA: "power_in", "5VOUT": "power_out", GNDA: "power_in", SRAL: "input", SRAH: "input", SRBH: "input", SRBL: "input", TST_MODE: "input", CLK: "input", "~{CS}_CFG3": "input", SCK_CFG2: "input", SDI_CFG1: "input", SDO_CFG0: "passive", STEP: "input", DIR: "input", GNDD_19: "power_in", VCC_IO_20: "power_in", VCC_IO_21: "passive", SPI_MODE: "input", DCEN_CFG4: "input", DCIN_CFG5: "input", DCO_CFG6: "output", DIAG0: "output", DIAG1: "output", "~{DRV_EN}": "input", VCC: "power_in", GNDD_30: "passive", CPO: "passive", CPI: "passive", VS: "power_in", VCP: "passive", CA2: "passive", HA2: "output", BMA2: "passive", LA2: "output", LA1: "output", BMA1: "passive", HA1: "output", CA1: "output", CB2: "passive", HB2: "output", BMB2: "passive", LB2: "output", LB1: "output", BMB1: "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2160";
@@ -3405,7 +3492,8 @@ export class TMC2202_WA extends Component.withPins({
   "NC_31": "31",
   "BRB": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OB2: "output", NC_2: "no_connect", VS_3: "power_in", NC_4: "no_connect", ENN: "input", GND_6: "power_in", CPO: "passive", CPI: "passive", VCP: "passive", "5VOUT": "power_out", MS1: "input", MS2: "input", DIAG: "output", CLK: "input", PDN_UART: "bidirectional", VCC_IO: "power_in", STEP: "input", VREF: "input", GND_19: "passive", DIR: "input", NC_21: "no_connect", VS_22: "passive", NC_23: "no_connect", OA2: "output", BRA: "passive", NC_26: "no_connect", OA1: "output", NC_28: "no_connect", NC_29: "no_connect", OB1: "output", NC_31: "no_connect", BRB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2202-WA";
@@ -3452,7 +3540,8 @@ export class TMC2208_LA extends Component.withPins({
   "VS_28": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OB2: "output", "~{EN}": "input", GND_3: "power_in", CPO: "passive", CPI: "passive", VCP: "passive", NC_7: "no_connect", "5VOUT": "power_out", MS1: "input", MS2: "input", DIAG: "output", INDEX: "output", CLK: "input", "~{PD}/UART": "bidirectional", VCC_IO: "power_in", STEP: "input", VREF: "input", GND_18: "passive", DIR: "input", NC_20: "no_connect", OA2: "output", VS_22: "power_in", BRA: "passive", OA1: "output", NC_25: "no_connect", OB1: "output", BRB: "passive", VS_28: "passive", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2208-LA";
@@ -3499,7 +3588,8 @@ export class TMC2209_LA extends Component.withPins({
   "VS_28": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OB2: "output", "~{EN}": "input", GND_3: "power_in", CPO: "input", CPI: "input", VCP: "output", SPREAD: "input", "5VOUT": "power_out", "MS1/AD0": "input", "MS2/AD1": "input", DIAG: "output", INDEX: "output", CLK: "input", "~{PD}/UART": "bidirectional", VCC_IO: "power_in", STEP: "input", VREF: "passive", GND_18: "passive", DIR: "input", STDBY: "input", OA2: "output", VS_22: "power_in", BRA: "input", OA1: "output", NC: "passive", OB1: "output", BRB: "input", VS_28: "passive", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2209-LA";
@@ -3545,7 +3635,8 @@ export class TMC2224_LA extends Component.withPins({
   "CLK": "27",
   "MS1": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MS2: "input", INDEX: "output", GND_3: "power_in", CPO: "passive", CPI: "passive", VCP: "passive", VS_7: "power_in", OA2: "output", BRA: "passive", OA1: "output", OB1: "output", BRB: "passive", OB2: "output", VS_14: "passive", VREF: "input", TEST: "input", GND_17: "passive", "5VOUT": "power_out", VCC_IO: "power_in", PDN_UART: "bidirectional", DIAG: "output", SPREAD: "input", DIR: "input", ENN: "input", STEP: "input", NC: "no_connect", CLK: "input", MS1: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2224-LA";
@@ -3592,7 +3683,8 @@ export class TMC2226_SA extends Component.withPins({
   "OA1": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OB1: "output", BRB: "passive", VS_3: "power_in", OB2: "output", "~{EN}": "input", GND_6: "power_in", CPO: "input", CPI: "input", VCP: "passive", SPREAD: "input", "5VOUT": "power_out", MS1_AD0: "input", NC: "passive", MS2_AD1: "input", DIAG: "output", INDEX: "output", CLK: "input", PDN_UART: "bidirectional", VCC_IO: "power_in", STEP: "input", VREF: "passive", GND_22: "passive", DIR: "input", STDBY: "input", OA2: "output", VS_26: "power_in", BRA: "passive", OA1: "output", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2226-SA";
@@ -3643,7 +3735,8 @@ export class TMC262 extends Component.withPins({
   "TST_MODE": "32",
   "DIE_PAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", HA1: "output", HA2: "output", BMA2: "input", BMA1: "input", LA1: "output", LA2: "output", SRA: "input", "5VOUT": "power_out", SD0: "tri_state", SDI: "input", SCK: "input", GND_13: "power_in", CSN: "input", "~{ENN}": "input", CLK: "input", SRB: "input", LB2: "output", LB1: "output", BMB1: "input", BMB2: "input", HB2: "output", HB1: "output", VHS: "power_in", VS: "power_in", TST_ANA: "output", SG_TST: "output", GNDP: "power_in", VCC_IO: "power_in", DIR: "input", STEP: "input", TST_MODE: "input", DIE_PAD: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC262";
@@ -3705,7 +3798,8 @@ export class TMC2660 extends Component.withPins({
   "TST_MODE": "43",
   "GND_44": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "n.c._1": "free", OA1_2: "power_out", OA1_3: "passive", VSA: "power_in", OA2_5: "power_out", OA2_6: "passive", OA1_7: "passive", OA1_8: "passive", BRA: "input", OA2_10: "passive", OA2_11: "passive", SRA: "input", "5VOUT": "power_out", SDO: "passive", SDI: "input", SCK: "input", GND_17: "power_in", "~{CS}": "input", "~{EN}": "input", "n.c._20": "no_connect", CLK: "input", SRB: "input", OB2_23: "power_out", OB2_24: "passive", BRB: "input", OB1_26: "power_out", OB1_27: "passive", OB2_28: "passive", OB2_29: "passive", VSB: "power_in", OB1_31: "passive", OB1_32: "passive", "n.c._33": "free", "n.c._34": "no_connect", VHS: "power_in", VS: "power_in", "ST_ALONE/TST_ANA": "input", SG_TST: "output", GND_39: "passive", VCC_IO: "power_in", DIR: "input", STEP: "input", TST_MODE: "input", GND_44: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC2660";
@@ -3772,7 +3866,8 @@ export class TMC5130A_TA extends Component.withPins({
   "GNDP_48": "48",
   "EP": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TST_MODE: "input", CLK: "input", "~{CS}_CFG3": "input", SCK_CFG2: "input", SDI_NAI_CFG1: "input", NC_6: "passive", SDO_NAO_CFG0: "bidirectional", REFL_STEP: "input", REFR_DIR: "input", VCC_IO: "power_in", SD_MODE: "input", SPI_MODE: "input", GNDP_13: "power_in", DNC_14: "no_connect", OB1: "output", DNC_16: "no_connect", BRB: "passive", DNC_18: "no_connect", OB2: "output", DNC_20: "no_connect", VS_21: "power_in", DNC_22: "no_connect", ENCN_DCO: "bidirectional", ENCB_DCEN_CFG4: "input", ENCA_DCIN_CFG5: "input", SWN_DIAG0: "bidirectional", SWP_DIAG1: "bidirectional", SWSEL: "input", "~{DRV_EN}_CFG6": "input", AIN_IREF: "input", NC_31: "passive", GNDA: "power_in", "5VOUT": "power_out", VCC: "power_in", CP0: "passive", NC_36: "passive", CPI: "passive", VCP: "passive", VSA: "power_in", VS_40: "power_in", DNC_41: "no_connect", OA2: "output", DNC_43: "no_connect", BRA: "passive", DNC_45: "no_connect", OA1: "output", DNC_47: "no_connect", GNDP_48: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC5130A-TA";
@@ -3839,7 +3934,8 @@ export class TMC5160A_TA extends Component.withPins({
   "BMB1": "48",
   "EP": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HB1: "output", CB1: "passive", "12VOUT": "power_out", VSA: "power_in", "5VOUT": "power_out", GNDA: "power_in", SRAL: "passive", SRAH: "passive", SRBH: "passive", SRBL: "passive", TST_MODE: "input", CLK: "input", "~{CS}/CFG3": "input", "SCK/CFG2": "input", "SDI/CFG1": "input", "SDO/CFG0": "bidirectional", "REFL/STEP": "input", "REFR/DIR": "input", GNDD_19: "power_in", VCC_IO: "power_in", SD_MODE: "input", SPI_MODE: "input", "ENCB/DCEN/CFG4": "input", "ENCA/DCIN/CFG5": "input", "ENCN/DCO/CFG6": "bidirectional", "SWN/DIAG0": "bidirectional", "SWP/DIAG1": "bidirectional", "~{DRV_EN}": "input", VCC: "power_in", GNDD_30: "passive", CPO: "passive", CPI: "passive", VS: "power_in", VCP: "passive", CA2: "passive", HA2: "output", BMA2: "passive", LA2: "output", LA1: "output", BMA1: "passive", HA1: "output", CA1: "passive", CB2: "passive", HB2: "output", BMB2: "passive", LB2: "output", LB1: "output", BMB1: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:TMC5160A-TA";
@@ -3890,7 +3986,8 @@ export class VNH2SP30 extends Component.withPins({
   "OUTB_32": "32",
   "OUTA_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", NC_2: "no_connect", VCC_3: "power_in", NC_4: "no_connect", INA: "input", "EN/DIAA": "output", NC_7: "no_connect", PWM: "input", CS: "output", "EN/DIAB": "output", INB: "input", NC_12: "no_connect", VCC_13: "passive", NC_14: "no_connect", OUTB_15: "output", OUTB_16: "passive", NC_17: "no_connect", GNDB_18: "power_in", GNDB_19: "passive", GNDB_20: "passive", OUTB_21: "passive", NC_22: "no_connect", VCC_23: "passive", NC_24: "no_connect", OUTA_25: "passive", GNDA_26: "power_in", GNDA_27: "passive", GNDA_28: "passive", NC_29: "no_connect", OUTA_30: "passive", VCC_31: "passive", OUTB_32: "passive", OUTA_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:VNH2SP30";
@@ -3941,7 +4038,8 @@ export class VNH5019A_E extends Component.withPins({
   "OUTB_32": "32",
   "OUTA_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA_1: "output", NC_2: "no_connect", VCC_3: "power_in", INA: "input", "EN/DIAGA": "open_collector", CS_DIS: "input", PWM: "input", CS: "output", "EN/DIAGB": "open_collector", INB: "input", CP: "output", VBAT: "power_in", VCC_13: "passive", NC_14: "no_connect", OUTB_15: "output", OUTB_16: "passive", NC_17: "no_connect", GNDB_18: "power_in", GNDB_19: "passive", GNDB_20: "passive", OUTB_21: "passive", NC_22: "no_connect", VCC_23: "passive", NC_24: "no_connect", OUTA_25: "passive", GNDA_26: "power_in", GNDA_27: "passive", GNDA_28: "passive", NC_29: "no_connect", OUTA_30: "passive", VCC_31: "passive", OUTB_32: "passive", OUTA_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:VNH5019A-E";
@@ -3967,7 +4065,8 @@ export class ZXBM5210_S extends Component.withPins({
   "OUT2": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT1: "output", VM: "power_in", VDD: "power_in", FWD: "input", REV: "input", VREF: "input", OUT2: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:ZXBM5210-S";
@@ -3994,7 +4093,8 @@ export class ZXBM5210_SP extends Component.withPins({
   "GND_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT1: "output", VM: "power_in", VDD: "power_in", FWD: "input", REV: "input", VREF: "input", OUT2: "output", GND_8: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_Motor:ZXBM5210-SP";

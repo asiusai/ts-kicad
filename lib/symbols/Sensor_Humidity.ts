@@ -17,7 +17,8 @@ export class ENS210 extends Component.withPins({
   "GND_4": "4",
   "GND_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", SCL: "input", SDA: "bidirectional", GND_4: "power_in", GND_5: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:ENS210";
@@ -42,7 +43,8 @@ export class GXHTC3 extends Component.withPins({
   "GND": "6",
   "EPAD": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", NC_2: "no_connect", SCL: "bidirectional", SDA: "bidirectional", NC_5: "no_connect", GND: "power_in", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:GXHTC3";
@@ -67,7 +69,8 @@ export class HDC1080 extends Component.withPins({
   "SCL": "6",
   "DAP": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND: "power_in", NC_3: "no_connect", NC_4: "no_connect", VCC: "power_in", SCL: "input", DAP: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:HDC1080";
@@ -92,7 +95,8 @@ export class HDC2080 extends Component.withPins({
   "SCL": "6",
   "EP": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND: "power_in", ADDR: "input", DRDY: "output", VDD: "power_in", SCL: "input", EP: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:HDC2080";
@@ -119,7 +123,8 @@ export class SHT31_DIS extends Component.withPins({
   "VSS_8": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", ADDR: "input", ALERT: "output", SCL: "input", VDD: "power_in", "~{RESET}": "input", R: "passive", VSS_8: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT31-DIS";
@@ -146,7 +151,8 @@ export class SHT30_DIS extends Component.withPins({
   "VSS_8": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", ADDR: "input", ALERT: "output", SCL: "input", VDD: "power_in", "~{RESET}": "input", R: "passive", VSS_8: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT30-DIS";
@@ -173,7 +179,8 @@ export class SHT30A_DIS extends Component.withPins({
   "VSS_8": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", ADDR: "input", ALERT: "output", SCL: "input", VDD: "power_in", "~{RESET}": "input", R: "passive", VSS_8: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT30A-DIS";
@@ -200,7 +207,8 @@ export class SHT31A_DIS extends Component.withPins({
   "VSS_8": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", ADDR: "input", ALERT: "output", SCL: "input", VDD: "power_in", "~{RESET}": "input", R: "passive", VSS_8: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT31A-DIS";
@@ -227,7 +235,8 @@ export class SHT35_DIS extends Component.withPins({
   "VSS_8": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", ADDR: "input", ALERT: "output", SCL: "input", VDD: "power_in", "~{RESET}": "input", R: "passive", VSS_8: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT35-DIS";
@@ -254,7 +263,8 @@ export class SHT35A_DIS extends Component.withPins({
   "VSS_8": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", ADDR: "input", ALERT: "output", SCL: "input", VDD: "power_in", "~{RESET}": "input", R: "passive", VSS_8: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT35A-DIS";
@@ -276,7 +286,8 @@ export class SHT4x extends Component.withPins({
   "VDD": "3",
   "VSS": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", SCL: "input", VDD: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHT4x";
@@ -299,7 +310,8 @@ export class SHTC1 extends Component.withPins({
   "VSS": "4",
   "NC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", SCL: "input", SDA: "bidirectional", VSS: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHTC1";
@@ -322,7 +334,8 @@ export class SHTC3 extends Component.withPins({
   "VSS": "4",
   "NC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", SCL: "input", SDA: "bidirectional", VSS: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:SHTC3";
@@ -347,7 +360,8 @@ export class Si7020_A20 extends Component.withPins({
   "SCL": "6",
   "PAD": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND: "power_in", NC_3: "no_connect", NC_4: "no_connect", VDD: "power_in", SCL: "input", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:Si7020-A20";
@@ -372,7 +386,8 @@ export class Si7021_A20 extends Component.withPins({
   "SCL": "6",
   "PAD": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND: "power_in", NC_3: "no_connect", NC_4: "no_connect", VDD: "power_in", SCL: "input", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Humidity:Si7021-A20";

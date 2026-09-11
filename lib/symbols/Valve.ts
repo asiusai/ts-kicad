@@ -21,7 +21,8 @@ export class EABC80 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2_2: "output", K_3: "input", A1: "input", A3: "output", K_7: "input", G: "input", A2_9: "output", F1: "input", F2: "input", ...opts.pinTypes } });
   }
   override schema = "Valve:EABC80";
@@ -48,7 +49,8 @@ export class _6AK8 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2_2: "output", K_3: "input", A1: "input", A3: "output", K_7: "input", G: "input", A2_9: "output", F1: "input", F2: "input", ...opts.pinTypes } });
   }
   override schema = "Valve:6AK8";
@@ -75,7 +77,8 @@ export class _9AK8 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2_2: "output", K_3: "input", A1: "input", A3: "output", K_7: "input", G: "input", A2_9: "output", F1: "input", F2: "input", ...opts.pinTypes } });
   }
   override schema = "Valve:9AK8";
@@ -98,7 +101,8 @@ export class CK6418 extends Component.withPins({
   "G1": "4",
   "F+,G3_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "F+,G3_3": "power_in", P: "output", G2: "input", G1: "input", "F+,G3_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:CK6418";
@@ -120,7 +124,8 @@ export class CK548DX extends Component.withPins({
   "G1": "4",
   "F+,G3_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "F+,G3_3": "power_in", P: "output", G2: "input", G1: "input", "F+,G3_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:CK548DX";
@@ -143,7 +148,8 @@ export class EC92 extends Component.withPins({
   "F1": "3",
   "F2": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "output", G: "input", K: "bidirectional", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EC92";
@@ -170,7 +176,8 @@ export class ECC81 extends Component.withPins({
   "F1_5": "5",
   "F2": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_6: "output", G_7: "input", K_8: "bidirectional", A_1: "output", G_2: "input", K_3: "bidirectional", F1_4: "power_in", F1_5: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:ECC81";
@@ -197,7 +204,8 @@ export class ECC83 extends Component.withPins({
   "F1_5": "5",
   "F2": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_6: "output", G_7: "input", K_8: "bidirectional", A_1: "output", G_2: "input", K_3: "bidirectional", F1_4: "power_in", F1_5: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:ECC83";
@@ -223,7 +231,8 @@ export class ECC88 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "output", G_2: "input", K_3: "bidirectional", A_6: "output", G_7: "input", K_8: "bidirectional", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:ECC88";
@@ -251,7 +260,8 @@ export class ECH81 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "bidirectional", A_8: "output", G: "input", K_G5: "bidirectional", G2_G4: "input", G1: "input", A_6: "output", G3: "input", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:ECH81";
@@ -278,7 +288,8 @@ export class ECL82 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", K: "bidirectional", A_9: "output", K_G3: "bidirectional", G1: "input", A_6: "output", G2: "input", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:ECL82";
@@ -305,7 +316,8 @@ export class ECL86 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", K: "bidirectional", A_9: "output", G2: "input", A_6: "output", K_G3: "bidirectional", G1: "input", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:ECL86";
@@ -331,7 +343,8 @@ export class EF80 extends Component.withPins({
   "F1_4": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G1: "input", F1_3: "power_in", S: "input", A: "output", G2: "input", G3: "input", F1_4: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EF80";
@@ -357,7 +370,8 @@ export class EF83 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G2: "input", K: "bidirectional", A: "output", S: "input", G3: "input", G1: "input", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EF83";
@@ -382,7 +396,8 @@ export class EF85 extends Component.withPins({
   "F1_4": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G1: "input", F1_3: "power_in", S: "input", A: "output", G2: "input", G3: "input", F1_4: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EF85";
@@ -407,7 +422,8 @@ export class EF86 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G2: "input", K: "bidirectional", A: "output", S: "input", G3: "input", G1: "input", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EF86";
@@ -432,7 +448,8 @@ export class EL34 extends Component.withPins({
   "F1_2": "2",
   "F2": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G3: "input", A: "output", G2: "input", G1: "input", F1_8: "power_in", F1_2: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EL34";
@@ -456,7 +473,8 @@ export class EL84 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G1: "input", K_G3: "bidirectional", A: "output", G2: "input", F1: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EL84";
@@ -482,7 +500,8 @@ export class EM84 extends Component.withPins({
   "F1_4": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "bidirectional", L: "output", ST: "input", F1_: "power_in", G: "input", A: "output", F1_4: "power_in", F2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:EM84";
@@ -505,7 +524,8 @@ export class JAN6418 extends Component.withPins({
   "G1": "4",
   "F+,G3_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "F+,G3_3": "power_in", P: "output", G2: "input", G1: "input", "F+,G3_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:JAN6418";
@@ -528,7 +548,8 @@ export class NOS_6418 extends Component.withPins({
   "G1": "4",
   "F+,G3_5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "F+,G3_3": "power_in", P: "output", G2: "input", G1: "input", "F+,G3_5": "power_in", ...opts.pinTypes } });
   }
   override schema = "Valve:NOS-6418";
@@ -555,7 +576,8 @@ export class PABC80 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2_2: "output", K_3: "input", A1: "input", A3: "output", K_7: "input", G: "input", A2_9: "output", F1: "input", F2: "input", ...opts.pinTypes } });
   }
   override schema = "Valve:PABC80";
@@ -573,7 +595,8 @@ export class STABI extends Component.withPins({
   "A": "3",
   "K": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", K: "passive", ...opts.pinTypes } });
   }
   override schema = "Valve:STABI";
@@ -600,7 +623,8 @@ export class UABC80 extends Component.withPins({
   "F1": "4",
   "F2": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2_2: "output", K_3: "input", A1: "input", A3: "output", K_7: "input", G: "input", A2_9: "output", F1: "input", F2: "input", ...opts.pinTypes } });
   }
   override schema = "Valve:UABC80";

@@ -16,7 +16,8 @@ export class APA_106_F5 extends Component.withPins({
   "VDD": "3",
   "DI": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "output", GND: "power_in", VDD: "power_in", DI: "input", ...opts.pinTypes } });
   }
   override schema = "LED:APA-106-F5";
@@ -40,7 +41,8 @@ export class APA102 extends Component.withPins({
   "CO": "5",
   "DO": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DI: "input", CI: "input", GND: "power_in", VCC: "power_in", CO: "output", DO: "output", ...opts.pinTypes } });
   }
   override schema = "LED:APA102";
@@ -64,7 +66,8 @@ export class APA102_2020 extends Component.withPins({
   "CKI": "5",
   "GND": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", CKO: "output", SDO: "output", SDI: "input", CKI: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:APA102-2020";
@@ -86,7 +89,8 @@ export class APFA3010 extends Component.withPins({
   "G": "3",
   "B": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "input", A: "power_in", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "LED:APFA3010";
@@ -108,7 +112,8 @@ export class ASMB_MTB0_0A3A2 extends Component.withPins({
   "GK": "3",
   "RK": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", BK: "passive", GK: "passive", RK: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:ASMB-MTB0-0A3A2";
@@ -130,7 +135,8 @@ export class ASMB_MTB1_0A3A2 extends Component.withPins({
   "BK": "3",
   "A": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RK: "passive", GK: "passive", BK: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:ASMB-MTB1-0A3A2";
@@ -154,7 +160,8 @@ export class ASMT_YTC2_0AA02 extends Component.withPins({
   "AG": "5",
   "AB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KB: "passive", KG: "passive", KR: "passive", AR: "passive", AG: "passive", AB: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:ASMT-YTC2-0AA02";
@@ -178,7 +185,8 @@ export class ASMT_YTB7_0AA02 extends Component.withPins({
   "AG": "5",
   "AB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KB: "passive", KG: "passive", KR: "passive", AR: "passive", AG: "passive", AB: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:ASMT-YTB7-0AA02";
@@ -202,7 +210,8 @@ export class CLS6B_FKW extends Component.withPins({
   "AG": "5",
   "KR_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AB: "passive", KB: "passive", AR: "passive", KR_4: "passive", AG: "passive", KR_6: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:CLS6B-FKW";
@@ -224,7 +233,8 @@ export class CLV1L_FKB extends Component.withPins({
   "GK": "3",
   "BK": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", RK: "passive", GK: "passive", BK: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:CLV1L-FKB";
@@ -248,7 +258,8 @@ export class CLX6F_FKC extends Component.withPins({
   "AG": "5",
   "AB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KB: "passive", KG: "passive", KR: "passive", AR: "passive", AG: "passive", AB: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:CLX6F-FKC";
@@ -268,7 +279,8 @@ export class LD271 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LD271";
@@ -288,7 +300,8 @@ export class CQY99 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:CQY99";
@@ -326,7 +339,8 @@ export class HDSP_4830 extends Component.withPins({
   "A_10": "10",
   "K_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", K_20: "passive", A_2: "passive", K_19: "passive", A_3: "passive", K_18: "passive", A_4: "passive", K_17: "passive", A_5: "passive", K_16: "passive", A_6: "passive", K_15: "passive", A_7: "passive", K_14: "passive", A_8: "passive", K_13: "passive", A_9: "passive", K_12: "passive", A_10: "passive", K_11: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4830";
@@ -364,7 +378,8 @@ export class HDSP_4830_2 extends Component.withPins({
   "K_19": "19",
   "K_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", A_2: "passive", A_3: "passive", A_4: "passive", A_5: "passive", A_6: "passive", A_7: "passive", A_8: "passive", A_9: "passive", A_10: "passive", K_11: "passive", K_12: "passive", K_13: "passive", K_14: "passive", K_15: "passive", K_16: "passive", K_17: "passive", K_18: "passive", K_19: "passive", K_20: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4830_2";
@@ -402,7 +417,8 @@ export class HDSP_4832 extends Component.withPins({
   "A_10": "10",
   "K_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", K_20: "passive", A_2: "passive", K_19: "passive", A_3: "passive", K_18: "passive", A_4: "passive", K_17: "passive", A_5: "passive", K_16: "passive", A_6: "passive", K_15: "passive", A_7: "passive", K_14: "passive", A_8: "passive", K_13: "passive", A_9: "passive", K_12: "passive", A_10: "passive", K_11: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4832";
@@ -440,7 +456,8 @@ export class HDSP_4832_2 extends Component.withPins({
   "K_19": "19",
   "K_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", A_2: "passive", A_3: "passive", A_4: "passive", A_5: "passive", A_6: "passive", A_7: "passive", A_8: "passive", A_9: "passive", A_10: "passive", K_11: "passive", K_12: "passive", K_13: "passive", K_14: "passive", K_15: "passive", K_16: "passive", K_17: "passive", K_18: "passive", K_19: "passive", K_20: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4832_2";
@@ -478,7 +495,8 @@ export class HDSP_4836 extends Component.withPins({
   "A_10": "10",
   "K_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", K_20: "passive", A_2: "passive", K_19: "passive", A_3: "passive", K_18: "passive", A_4: "passive", K_17: "passive", A_5: "passive", K_16: "passive", A_6: "passive", K_15: "passive", A_7: "passive", K_14: "passive", A_8: "passive", K_13: "passive", A_9: "passive", K_12: "passive", A_10: "passive", K_11: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4836";
@@ -516,7 +534,8 @@ export class HDSP_4836_2 extends Component.withPins({
   "K_19": "19",
   "K_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", A_2: "passive", A_3: "passive", A_4: "passive", A_5: "passive", A_6: "passive", A_7: "passive", A_8: "passive", A_9: "passive", A_10: "passive", K_11: "passive", K_12: "passive", K_13: "passive", K_14: "passive", K_15: "passive", K_16: "passive", K_17: "passive", K_18: "passive", K_19: "passive", K_20: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4836_2";
@@ -554,7 +573,8 @@ export class HDSP_4840 extends Component.withPins({
   "A_10": "10",
   "K_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", K_20: "passive", A_2: "passive", K_19: "passive", A_3: "passive", K_18: "passive", A_4: "passive", K_17: "passive", A_5: "passive", K_16: "passive", A_6: "passive", K_15: "passive", A_7: "passive", K_14: "passive", A_8: "passive", K_13: "passive", A_9: "passive", K_12: "passive", A_10: "passive", K_11: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4840";
@@ -592,7 +612,8 @@ export class HDSP_4840_2 extends Component.withPins({
   "K_19": "19",
   "K_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", A_2: "passive", A_3: "passive", A_4: "passive", A_5: "passive", A_6: "passive", A_7: "passive", A_8: "passive", A_9: "passive", A_10: "passive", K_11: "passive", K_12: "passive", K_13: "passive", K_14: "passive", K_15: "passive", K_16: "passive", K_17: "passive", K_18: "passive", K_19: "passive", K_20: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4840_2";
@@ -630,7 +651,8 @@ export class HDSP_4850 extends Component.withPins({
   "A_10": "10",
   "K_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", K_20: "passive", A_2: "passive", K_19: "passive", A_3: "passive", K_18: "passive", A_4: "passive", K_17: "passive", A_5: "passive", K_16: "passive", A_6: "passive", K_15: "passive", A_7: "passive", K_14: "passive", A_8: "passive", K_13: "passive", A_9: "passive", K_12: "passive", A_10: "passive", K_11: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4850";
@@ -668,7 +690,8 @@ export class HDSP_4850_2 extends Component.withPins({
   "K_19": "19",
   "K_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", A_2: "passive", A_3: "passive", A_4: "passive", A_5: "passive", A_6: "passive", A_7: "passive", A_8: "passive", A_9: "passive", A_10: "passive", K_11: "passive", K_12: "passive", K_13: "passive", K_14: "passive", K_15: "passive", K_16: "passive", K_17: "passive", K_18: "passive", K_19: "passive", K_20: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HDSP-4850_2";
@@ -706,7 +729,8 @@ export class HLCP_J100 extends Component.withPins({
   "A_10": "10",
   "K_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", K_20: "passive", A_2: "passive", K_19: "passive", A_3: "passive", K_18: "passive", A_4: "passive", K_17: "passive", A_5: "passive", K_16: "passive", A_6: "passive", K_15: "passive", A_7: "passive", K_14: "passive", A_8: "passive", K_13: "passive", A_9: "passive", K_12: "passive", A_10: "passive", K_11: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HLCP-J100";
@@ -744,7 +768,8 @@ export class HLCP_J100_2 extends Component.withPins({
   "K_19": "19",
   "K_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A_1: "passive", A_2: "passive", A_3: "passive", A_4: "passive", A_5: "passive", A_6: "passive", A_7: "passive", A_8: "passive", A_9: "passive", A_10: "passive", K_11: "passive", K_12: "passive", K_13: "passive", K_14: "passive", K_15: "passive", K_16: "passive", K_17: "passive", K_18: "passive", K_19: "passive", K_20: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:HLCP-J100_2";
@@ -764,7 +789,8 @@ export class SFH4356P extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH4356P";
@@ -784,7 +810,8 @@ export class IR204A extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:IR204A";
@@ -804,7 +831,8 @@ export class IR26_21C_L110_TR8 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:IR26-21C_L110_TR8";
@@ -824,7 +852,8 @@ export class IRL81A extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:IRL81A";
@@ -848,7 +877,8 @@ export class Inolux_IN_P55TATRGB extends Component.withPins({
   "AR": "5",
   "AB": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { KB: "passive", KR: "passive", KG: "passive", AG: "passive", AR: "passive", AB: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:Inolux_IN-P55TATRGB";
@@ -870,7 +900,8 @@ export class Inolux_IN_PI554FCH extends Component.withPins({
   "VDD": "3",
   "DO": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", DIN: "input", VDD: "power_in", DO: "output", ...opts.pinTypes } });
   }
   override schema = "LED:Inolux_IN-PI554FCH";
@@ -894,7 +925,8 @@ export class Inolux_IN_PI556FCH extends Component.withPins({
   "VCC": "5",
   "VSS": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "output", DIN: "input", VDD: "power_in", NC: "no_connect", VCC: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:Inolux_IN-PI556FCH";
@@ -914,7 +946,8 @@ export class LD274 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LD274";
@@ -935,7 +968,8 @@ export class LED_Cree_XHP50_12V_HighDensity extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP50_12V_HighDensity";
@@ -956,7 +990,8 @@ export class LED_Cree_XHP50_12V_HighIntensity extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP50_12V_HighIntensity";
@@ -977,7 +1012,8 @@ export class LED_Cree_XHP50_3V_HighDensity extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP50_3V_HighDensity";
@@ -998,7 +1034,8 @@ export class LED_Cree_XHP50_3V_HighIntensity extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP50_3V_HighIntensity";
@@ -1019,7 +1056,8 @@ export class LED_Cree_XHP50_6V_HighDensity extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP50_6V_HighDensity";
@@ -1040,7 +1078,8 @@ export class LED_Cree_XHP50_6V_HighIntensity extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP50_6V_HighIntensity";
@@ -1061,7 +1100,8 @@ export class LED_Cree_XHP70_12V extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP70_12V";
@@ -1082,7 +1122,8 @@ export class LED_Cree_XHP70_6V extends Component.withPins({
   "A": "2",
   "PAD": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:LED_Cree_XHP70_6V";
@@ -1104,7 +1145,8 @@ export class LTST_C235KGKRKT extends Component.withPins({
   "A1": "3",
   "K1": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K2: "input", A2: "input", A1: "input", K1: "input", ...opts.pinTypes } });
   }
   override schema = "LED:LTST-C235KGKRKT";
@@ -1126,7 +1168,8 @@ export class LiteOn_LTST_E563C extends Component.withPins({
   "DOUT": "3",
   "VDD": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", DIN: "input", DOUT: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:LiteOn_LTST-E563C";
@@ -1147,7 +1190,8 @@ export class NeoPixel_THT extends Component.withPins({
   "VDD": "3",
   "DIN": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", GND: "power_in", VDD: "power_in", DIN: "input", ...opts.pinTypes } });
   }
   override schema = "LED:NeoPixel_THT";
@@ -1171,7 +1215,8 @@ export class QLS6A_FKW extends Component.withPins({
   "AG": "5",
   "KR_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AB: "passive", KB: "passive", AR: "passive", KR_4: "passive", AG: "passive", KR_6: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:QLS6A-FKW";
@@ -1195,7 +1240,8 @@ export class QLS6B_FKW extends Component.withPins({
   "AG": "5",
   "KR_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AB: "passive", KB: "passive", AR: "passive", KR_4: "passive", AG: "passive", KR_6: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:QLS6B-FKW";
@@ -1215,7 +1261,8 @@ export class SFH4346 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH4346";
@@ -1235,7 +1282,8 @@ export class SFH4546 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH4546";
@@ -1255,7 +1303,8 @@ export class SFH4550 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH4550";
@@ -1275,7 +1324,8 @@ export class SFH460 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH460";
@@ -1295,7 +1345,8 @@ export class SFH482 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH482";
@@ -1315,7 +1366,8 @@ export class SFH480 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SFH480";
@@ -1337,7 +1389,8 @@ export class SK6805 extends Component.withPins({
   "DIN": "3",
   "VDD": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", VSS: "power_in", DIN: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:SK6805";
@@ -1359,7 +1412,8 @@ export class SK6812 extends Component.withPins({
   "VDD": "3",
   "DOUT": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", DIN: "input", VDD: "power_in", DOUT: "output", ...opts.pinTypes } });
   }
   override schema = "LED:SK6812";
@@ -1381,7 +1435,8 @@ export class SK6812MINI extends Component.withPins({
   "DIN": "3",
   "VDD": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", VSS: "power_in", DIN: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:SK6812MINI";
@@ -1403,7 +1458,8 @@ export class SK6812MINI_E extends Component.withPins({
   "VDD": "3",
   "DOUT": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", DIN: "input", VDD: "power_in", DOUT: "output", ...opts.pinTypes } });
   }
   override schema = "LED:SK6812MINI-E";
@@ -1427,7 +1483,8 @@ export class SMLVN6RGB extends Component.withPins({
   "RK": "5",
   "BK": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BA: "passive", RA: "passive", GA: "passive", GK: "passive", RK: "passive", BK: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:SMLVN6RGB";
@@ -1447,7 +1504,8 @@ export class TSAL4400 extends Component.withPins({
   "K": "1",
   "A": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "LED:TSAL4400";
@@ -1471,7 +1529,8 @@ export class WS2812S extends Component.withPins({
   "VDD": "5",
   "VSS": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", DIN: "input", VCC: "power_in", NC: "no_connect", VDD: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:WS2812S";
@@ -1495,7 +1554,8 @@ export class WS2812 extends Component.withPins({
   "VDD": "5",
   "VSS": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", DIN: "input", VCC: "power_in", NC: "no_connect", VDD: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:WS2812";
@@ -1517,7 +1577,8 @@ export class WS2812B extends Component.withPins({
   "VSS": "3",
   "DIN": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", DOUT: "output", VSS: "power_in", DIN: "input", ...opts.pinTypes } });
   }
   override schema = "LED:WS2812B";
@@ -1539,7 +1600,8 @@ export class WS2812B_2020 extends Component.withPins({
   "DIN": "3",
   "VDD": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DOUT: "output", VSS: "power_in", DIN: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:WS2812B-2020";
@@ -1563,7 +1625,8 @@ export class WS2813 extends Component.withPins({
   "GND": "5",
   "BIN": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VDD: "power_in", DOUT: "output", DIN: "input", GND: "power_in", BIN: "input", ...opts.pinTypes } });
   }
   override schema = "LED:WS2813";
@@ -1587,7 +1650,8 @@ export class WS2822S extends Component.withPins({
   "ADRO": "5",
   "VDD": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DAI: "input", ADRI: "input", VCC: "power_in", GND: "power_in", ADRO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "LED:WS2822S";

@@ -79,7 +79,8 @@ export class _80186 extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AD15: "bidirectional", AD7: "bidirectional", AD14: "bidirectional", AD6: "bidirectional", AD13: "bidirectional", AD5: "bidirectional", AD12: "bidirectional", AD4: "bidirectional", VCC_9: "power_in", AD11: "bidirectional", AD3: "bidirectional", AD10: "bidirectional", AD2: "bidirectional", AD9: "bidirectional", AD1: "bidirectional", AD8: "bidirectional", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "output", "~{UCS}": "output", "~{MCS3}": "output", "~{MCS2}": "output", "~{MCS1}": "output", "~{MCS0}": "output", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "output", "~{WR}/QS1": "output", "~{BHE}/S7": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:80186";
@@ -164,7 +165,8 @@ export class _80188 extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A15: "output", AD7: "bidirectional", A14: "output", AD6: "bidirectional", A13: "output", AD5: "bidirectional", A12: "output", AD4: "bidirectional", VCC_9: "power_in", A11: "output", AD3: "bidirectional", A10: "output", AD2: "bidirectional", A9: "output", AD1: "bidirectional", A8: "output", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "output", "~{UCS}": "output", "~{MCS3}": "output", "~{MCS2}": "output", "~{MCS1}": "output", "~{MCS0}": "output", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", S7: "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:80188";
@@ -220,7 +222,8 @@ export class _8035 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", VDD: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8035";
@@ -276,7 +279,8 @@ export class _8039 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", VDD: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8039";
@@ -332,7 +336,8 @@ export class _8040 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", VDD: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8040";
@@ -388,7 +393,8 @@ export class _8048 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", VDD: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8048";
@@ -444,7 +450,8 @@ export class _8049 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", VDD: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8049";
@@ -500,7 +507,8 @@ export class _8050 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", VDD: "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8050";
@@ -558,7 +566,8 @@ export class _8080 extends Component.withPins({
   "A14": "39",
   "A11": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A10: "output", GND: "power_in", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "-5V": "power_in", RESET: "input", HOLD: "input", INT: "input", "ϕ2": "input", INTE: "output", DBIN: "output", "~{WR}": "output", SYNC: "output", "+5V": "power_in", HLDA: "output", "ϕ1": "input", READY: "input", WAIT: "output", A0: "output", A1: "output", A2: "output", "+12V": "power_in", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A15: "output", A12: "output", A13: "output", A14: "output", A11: "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8080";
@@ -616,7 +625,8 @@ export class _8080A extends Component.withPins({
   "A14": "39",
   "A11": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A10: "output", GND: "power_in", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "-5V": "power_in", RESET: "input", HOLD: "input", INT: "input", "ϕ2": "input", INTE: "output", DBIN: "output", "~{WR}": "output", SYNC: "output", "+5V": "power_in", HLDA: "output", "ϕ1": "input", READY: "input", WAIT: "output", A0: "output", A1: "output", A2: "output", "+12V": "power_in", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A15: "output", A12: "output", A13: "output", A14: "output", A11: "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8080A";
@@ -674,7 +684,8 @@ export class _8086_Max_Mode extends Component.withPins({
   "AD15": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", AD14: "bidirectional", AD13: "bidirectional", AD12: "bidirectional", AD11: "bidirectional", AD10: "bidirectional", AD9: "bidirectional", AD8: "bidirectional", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", NMI: "input", INTR: "input", CLK: "input", GND_20: "power_in", RESET: "input", READY: "input", "~{TEST}": "input", QS1: "output", QS0: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", "~{LOCK}": "output", "~{RQ}/~{GT1}": "bidirectional", "~{RQ}/~{GT0}": "bidirectional", "~{RD}": "output", "MN/~{MX}": "input", "~{BHE}/S7": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", AD15: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8086_Max_Mode";
@@ -732,7 +743,8 @@ export class _8086_Min_Mode extends Component.withPins({
   "AD15": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", AD14: "bidirectional", AD13: "bidirectional", AD12: "bidirectional", AD11: "bidirectional", AD10: "bidirectional", AD9: "bidirectional", AD8: "bidirectional", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", NMI: "input", INTR: "input", CLK: "input", GND_20: "power_in", RESET: "input", READY: "input", "~{TEST}": "input", "~{INTA}": "output", ALE: "output", "~{DEN}": "output", "DT/~{R}": "output", "M/~{IO}": "output", "~{WR}": "output", HLDA: "output", HOLD: "input", "~{RD}": "output", "MN/~{MX}": "input", "~{BHE}/S7": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", AD15: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8086_Min_Mode";
@@ -790,7 +802,8 @@ export class _8087 extends Component.withPins({
   "AD15": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", AD14: "bidirectional", AD13: "bidirectional", AD12: "bidirectional", AD11: "bidirectional", AD10: "bidirectional", AD9: "bidirectional", AD8: "bidirectional", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", CLK: "input", GND_20: "power_in", RESET: "input", READY: "input", BUSY: "output", QS1: "input", QS0: "input", "~{S0}": "bidirectional", "~{S1}": "bidirectional", "~{S2}": "bidirectional", NC_29: "no_connect", NC_30: "no_connect", "~{RQ}/~{GT0}": "bidirectional", INT: "output", "~{RQ}/~{GT1}": "bidirectional", "~{BHE}/S7": "bidirectional", "A19/S6": "bidirectional", "A18/S5": "bidirectional", "A17/S4": "bidirectional", "A16/S3": "bidirectional", AD15: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8087";
@@ -848,7 +861,8 @@ export class _8088 extends Component.withPins({
   "A15": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", A14: "output", A13: "output", A12: "output", A11: "output", A10: "output", A9: "output", A8: "output", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", NMI: "input", INTR: "input", CLK: "input", GND_20: "passive", RESET: "input", READY: "input", "~{TEST}": "input", "~{INTA}": "output", ALE: "output", DEN: "output", "DT/~{R}": "output", "IO/~{M}": "output", "~{WR}": "output", HLDA: "output", HOLD: "input", "~{RD}": "output", "MN/~{MX}": "input", "~{SSO}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", A15: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8088";
@@ -906,7 +920,8 @@ export class _8088_Max_Mode extends Component.withPins({
   "A15": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", A14: "output", A13: "output", A12: "output", A11: "output", A10: "output", A9: "output", A8: "output", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", NMI: "input", INTR: "input", CLK: "input", GND_20: "passive", RESET: "input", READY: "input", "~{TEST}": "input", QS1: "output", QS0: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", "~{LOCK}": "output", "~{RQ}/~{GT1}": "bidirectional", "~{RQ}/~{GT0}": "bidirectional", "~{RD}": "output", "MN/~{MX}": "input", HIGH: "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", A15: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8088_Max_Mode";
@@ -964,7 +979,8 @@ export class _8088_Min_Mode extends Component.withPins({
   "A15": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", A14: "output", A13: "output", A12: "output", A11: "output", A10: "output", A9: "output", A8: "output", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", NMI: "input", INTR: "input", CLK: "input", GND_20: "passive", RESET: "input", READY: "input", "~{TEST}": "input", "~{INTA}": "output", ALE: "output", DEN: "output", "DT/~{R}": "output", "IO/~{M}": "output", "~{WR}": "output", HLDA: "output", HOLD: "input", "~{RD}": "output", "MN/~{MX}": "input", "~{SSO}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", A15: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8088_Min_Mode";
@@ -1049,7 +1065,8 @@ export class M80C186XL extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AD15: "bidirectional", AD7: "bidirectional", AD14: "bidirectional", AD6: "bidirectional", AD13: "bidirectional", AD5: "bidirectional", AD12: "bidirectional", AD4: "bidirectional", VCC_9: "power_in", AD11: "bidirectional", AD3: "bidirectional", AD10: "bidirectional", AD2: "bidirectional", AD9: "bidirectional", AD1: "bidirectional", AD8: "bidirectional", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "bidirectional", "~{UCS}": "bidirectional", "~{MCS3}/~{NPS}": "output", "~{MCS2}": "output", "~{MCS1}/~{ERROR}": "bidirectional", "~{MCS0}/PEREQ": "bidirectional", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}/BUSY": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", "~{BHE}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:M80C186XL";
@@ -1134,7 +1151,8 @@ export class _80C186XL extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AD15: "bidirectional", AD7: "bidirectional", AD14: "bidirectional", AD6: "bidirectional", AD13: "bidirectional", AD5: "bidirectional", AD12: "bidirectional", AD4: "bidirectional", VCC_9: "power_in", AD11: "bidirectional", AD3: "bidirectional", AD10: "bidirectional", AD2: "bidirectional", AD9: "bidirectional", AD1: "bidirectional", AD8: "bidirectional", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "bidirectional", "~{UCS}": "bidirectional", "~{MCS3}/~{NPS}": "output", "~{MCS2}": "output", "~{MCS1}/~{ERROR}": "bidirectional", "~{MCS0}/PEREQ": "bidirectional", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}/BUSY": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", "~{BHE}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:80C186XL";
@@ -1219,7 +1237,8 @@ export class _80C188 extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A15: "output", AD7: "bidirectional", A14: "output", AD6: "bidirectional", A13: "output", AD5: "bidirectional", A12: "output", AD4: "bidirectional", VCC_9: "power_in", A11: "output", AD3: "bidirectional", A10: "output", AD2: "bidirectional", A9: "output", AD1: "bidirectional", A8: "output", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "bidirectional", "~{UCS}": "bidirectional", "~{MCS3}": "output", "~{MCS2}": "output", "~{MCS1}": "output", "~{MCS0}": "output", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", "~{RFSH}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:80C188";
@@ -1304,7 +1323,8 @@ export class _80C188XL extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A15: "output", AD7: "bidirectional", A14: "output", AD6: "bidirectional", A13: "output", AD5: "bidirectional", A12: "output", AD4: "bidirectional", VCC_9: "power_in", A11: "output", AD3: "bidirectional", A10: "output", AD2: "bidirectional", A9: "output", AD1: "bidirectional", A8: "output", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "bidirectional", "~{UCS}": "bidirectional", "~{MCS3}": "output", "~{MCS2}": "output", "~{MCS1}": "output", "~{MCS0}": "output", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", "~{RFSH}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:80C188XL";
@@ -1360,7 +1380,8 @@ export class _8748 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", "Vpp/VDD": "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8748";
@@ -1416,7 +1437,8 @@ export class _8749 extends Component.withPins({
   "T1": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T0: "input", X1: "input", X2: "output", "~{RESET}": "input", "~{SS}": "input", "~{INT}": "input", EA: "input", "~{RD}": "output", "~{PSEN}": "output", "~{WR}": "output", ALE: "output", "DB.0": "bidirectional", "DB.1": "bidirectional", "DB.2": "bidirectional", "DB.3": "bidirectional", "DB.4": "bidirectional", "DB.5": "bidirectional", "DB.6": "bidirectional", "DB.7": "bidirectional", GND: "power_in", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", PROG: "output", "Vpp/VDD": "power_in", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.2": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "P2.6": "bidirectional", "P2.7": "bidirectional", T1: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:8749";
@@ -1563,7 +1585,8 @@ export class I386EX_PQFP extends Component.withPins({
   "TXD0/P2.6": "131",
   "CTS0/P2.7": "132",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { UCS: "output", "CS6/REFRESH": "output", GND_3: "power_in", LBA: "output", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", VCC_9: "power_in", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", D8: "tri_state", VCC_15: "power_in", D9: "tri_state", GND_17: "power_in", D10: "tri_state", D11: "tri_state", D12: "tri_state", D13: "tri_state", D14: "tri_state", D15: "tri_state", TDO: "output", TDI: "input", TMS: "input", "M/IO": "output", VCC_28: "power_in", "D/C": "output", "WR/RD": "output", GND_31: "power_in", READY: "bidirectional", BS8: "input", RD: "output", WR: "output", GND_36: "power_in", BLE: "output", VCC_38: "power_in", BHE: "output", ADS: "output", NA: "input", A1: "tri_state", A2: "tri_state", A3: "tri_state", A4: "tri_state", GND_46: "power_in", VCC_47: "power_in", A5: "tri_state", A6: "tri_state", A7: "tri_state", A8: "tri_state", A9: "tri_state", A10: "tri_state", A11: "tri_state", A12: "tri_state", A13: "tri_state", A14: "tri_state", A15: "tri_state", "A16/CAS0": "tri_state", VCC_60: "power_in", "A17/CAS1": "tri_state", "A18/CAS2": "tri_state", A19: "tri_state", GND_64: "power_in", A20: "tri_state", A21: "tri_state", A22: "tri_state", A23: "tri_state", GND_69: "power_in", A24: "tri_state", VCC_71: "power_in", A25: "tri_state", SMI: "input", "TMROUT0/P3.0": "bidirectional", "TMROUT1/P3.1": "bidirectional", TCK: "input", "SRXCLK/DTR1": "bidirectional", "SSIORX/RI1": "input", "SSIOTX/RST1": "bidirectional", "INT0/P3.2": "bidirectional", VCC_81: "power_in", "INT1/P3.3": "bidirectional", GND_83: "power_in", "INT2/P3.4": "bidirectional", "INT3/P3.5": "bidirectional", "PWRDWN/P3.6": "bidirectional", "COMCLK/P3.7": "bidirectional", VCC_88: "power_in", "PEREQ/TMRCLK2": "input", NMI: "input", "ERROR/TMROUT2": "bidirectional", "BUSY/TMRGATE2": "input", "INT4/TMRCLK0": "input", "INT5/TMRGATE0": "input", "INT6/TMRCLK1": "input", "INT7/TMRGATE1": "input", GND_97: "power_in", "STXCLK/DSR1": "bidirectional", FLT: "input", GND_100: "power_in", "DCD0/P1.0": "bidirectional", "RTS0/P1.1": "bidirectional", "DTR0/P1.2": "bidirectional", "DSR0/P1.3": "bidirectional", "RI0/P1.4": "bidirectional", "LOCK/P1.5": "bidirectional", "HOLD/P1.6": "bidirectional", VCC_109: "power_in", RESET: "input", "HLDA/P1.7": "bidirectional", "DACK1/TXD1": "output", "EOP/CTS1": "bidirectional", WDTOUT: "output", CLK2: "input", GND_116: "power_in", "DRQ0/DCD1": "input", "DRQ1/RXD1": "input", TRST: "input", SMIACT: "output", VCC_121: "power_in", "CS0/P2.0": "bidirectional", "CS1/P2.1": "bidirectional", "CS2/P2.2": "bidirectional", "CS3/P2.3": "bidirectional", "CS4/P2.4": "bidirectional", VCC_127: "power_in", "DACK0/CS5": "output", "RDX0/P2.5": "bidirectional", GND_130: "power_in", "TXD0/P2.6": "bidirectional", "CTS0/P2.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:I386EX_PQFP";
@@ -1648,7 +1671,8 @@ export class IA186XLPLC68IR2 extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AD15: "bidirectional", AD7: "bidirectional", AD14: "bidirectional", AD6: "bidirectional", AD13: "bidirectional", AD5: "bidirectional", AD12: "bidirectional", AD4: "bidirectional", VCC_9: "power_in", AD11: "bidirectional", AD3: "bidirectional", AD10: "bidirectional", AD2: "bidirectional", AD9: "bidirectional", AD1: "bidirectional", AD8: "bidirectional", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "bidirectional", "~{UCS}": "bidirectional", "~{MCS3}/~{NPS}": "output", "~{MCS2}": "output", "~{MCS1}/~{ERROR}": "bidirectional", "~{MCS0}/PEREQ": "bidirectional", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}/BUSY": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", "~{BHE}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:IA186XLPLC68IR2";
@@ -1733,7 +1757,8 @@ export class IA188XLPLC68IR2 extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A15: "output", AD7: "bidirectional", A14: "output", AD6: "bidirectional", A13: "output", AD5: "bidirectional", A12: "output", AD4: "bidirectional", VCC_9: "power_in", A11: "output", AD3: "bidirectional", A10: "output", AD2: "bidirectional", A9: "output", AD1: "bidirectional", A8: "output", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "bidirectional", "~{UCS}": "bidirectional", "~{MCS3}": "output", "~{MCS2}": "output", "~{MCS1}": "output", "~{MCS0}": "output", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}/IRQ": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", "INT1/~{SELECT}": "input", INT0: "input", NMI: "input", "~{TEST}": "bidirectional", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "bidirectional", "~{WR}/QS1": "output", "~{RFSH}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:IA188XLPLC68IR2";
@@ -1818,7 +1843,8 @@ export class M80C186 extends Component.withPins({
   "A17/S4": "67",
   "A16/S3": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AD15: "bidirectional", AD7: "bidirectional", AD14: "bidirectional", AD6: "bidirectional", AD13: "bidirectional", AD5: "bidirectional", AD12: "bidirectional", AD4: "bidirectional", VCC_9: "power_in", AD11: "bidirectional", AD3: "bidirectional", AD10: "bidirectional", AD2: "bidirectional", AD9: "bidirectional", AD1: "bidirectional", AD8: "bidirectional", AD0: "bidirectional", DRQ0: "input", DRQ1: "input", TMR_IN_0: "input", TMR_IN_1: "input", TMR_OUT_0: "output", TMR_OUT_1: "output", "~{RES}": "input", "~{PCS0}": "output", VSS_26: "power_in", "~{PCS1}": "output", "~{PCS2}": "output", "~{PCS3}": "output", "~{PCS4}": "output", "~{PCS5}/A1": "output", "~{PCS6}/A2": "output", "~{LCS}": "output", "~{UCS}": "output", "~{MCS3}/~{NPS}": "output", "~{MCS2}": "output", "~{MCS1}/~{ERROR}": "bidirectional", "~{MCS0}/PEREQ": "bidirectional", "~{DEN}": "output", "DT/~{R}": "output", "INT3/~{INTA1}": "bidirectional", "INT2/~{INTA0}": "bidirectional", VCC_43: "power_in", INT1: "input", INT0: "input", NMI: "input", "~{TEST}/BUSY": "input", "~{LOCK}": "output", SRDY: "input", HOLD: "input", HLDA: "output", "~{S0}": "output", "~{S1}": "output", "~{S2}": "output", ARDY: "input", CLKOUT: "output", RESET: "output", X2: "output", X1: "input", VSS_60: "passive", "ALE/QS0": "output", "~{RD}/~{QSMD}": "output", "~{WR}/QS1": "output", "~{BHE}": "output", "A19/S6": "output", "A18/S5": "output", "A17/S4": "output", "A16/S3": "output", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:M80C186";
@@ -1876,7 +1902,8 @@ export class P8051AH extends Component.withPins({
   "P0.0/AD0": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", RST: "input", "P3.0/RXD": "bidirectional", "P3.1/TXD": "bidirectional", "P3.2/~{INT0}": "bidirectional", "P3.3/~{INT1}": "bidirectional", "P3.4/T0": "bidirectional", "P3.5/T1": "bidirectional", "P3.6/~{WR}": "bidirectional", "P3.7/~{RD}": "bidirectional", XTAL2: "output", XTAL1: "input", VSS: "power_in", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", ALE: "output", "~{EA}": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:P8051AH";
@@ -1934,7 +1961,8 @@ export class P8031AH extends Component.withPins({
   "P0.0/AD0": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", RST: "input", "P3.0/RXD": "bidirectional", "P3.1/TXD": "bidirectional", "P3.2/~{INT0}": "bidirectional", "P3.3/~{INT1}": "bidirectional", "P3.4/T0": "bidirectional", "P3.5/T1": "bidirectional", "P3.6/~{WR}": "bidirectional", "P3.7/~{RD}": "bidirectional", XTAL2: "output", XTAL1: "input", VSS: "power_in", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", ALE: "output", "~{EA}": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:P8031AH";
@@ -1992,7 +2020,8 @@ export class P8052AH extends Component.withPins({
   "P0.0/AD0": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.0/T2": "bidirectional", "P1.1/T2EX": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", RST: "input", "P3.0/RXD": "bidirectional", "P3.1/TXD": "bidirectional", "P3.2/~{INT0}": "bidirectional", "P3.3/~{INT1}": "bidirectional", "P3.4/T0": "bidirectional", "P3.5/T1": "bidirectional", "P3.6/~{WR}": "bidirectional", "P3.7/~{RD}": "bidirectional", XTAL2: "output", XTAL1: "input", VSS: "power_in", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", ALE: "output", "~{EA}": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:P8052AH";
@@ -2050,7 +2079,8 @@ export class P8751BH extends Component.withPins({
   "P0.0/AD0": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.0": "bidirectional", "P1.1": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", RST: "input", "P3.0/RXD": "bidirectional", "P3.1/TXD": "bidirectional", "P3.2/~{INT0}": "bidirectional", "P3.3/~{INT1}": "bidirectional", "P3.4/T0": "bidirectional", "P3.5/T1": "bidirectional", "P3.6/~{WR}": "bidirectional", "P3.7/~{RD}": "bidirectional", XTAL2: "output", XTAL1: "input", VSS: "power_in", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", "ALE/~{PROG}": "output", "~{EA}/VPP": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:P8751BH";
@@ -2108,7 +2138,8 @@ export class P8752BH extends Component.withPins({
   "P0.0/AD0": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.2": "bidirectional", "P1.0/T2": "bidirectional", "P1.1/T2EX": "bidirectional", "P1.3": "bidirectional", "P1.4": "bidirectional", "P1.5": "bidirectional", "P1.6": "bidirectional", "P1.7": "bidirectional", RST: "input", "P3.0/RXD": "bidirectional", "P3.1/TXD": "bidirectional", "P3.2/~{INT0}": "bidirectional", "P3.3/~{INT1}": "bidirectional", "P3.4/T0": "bidirectional", "P3.5/T1": "bidirectional", "P3.6/~{WR}": "bidirectional", "P3.7/~{RD}": "bidirectional", XTAL2: "output", XTAL1: "input", VSS: "power_in", "P2.0/A8": "bidirectional", "P2.1/A9": "bidirectional", "P2.2/A10": "bidirectional", "P2.3/A11": "bidirectional", "P2.4/A12": "bidirectional", "P2.5/A13": "bidirectional", "P2.6/A14": "bidirectional", "P2.7/A15": "bidirectional", "~{PSEN}": "output", "ALE/~{PROG}": "output", "~{EA}/VPP": "input", "P0.7/AD7": "bidirectional", "P0.6/AD6": "bidirectional", "P0.5/AD5": "bidirectional", "P0.4/AD4": "bidirectional", "P0.3/AD3": "bidirectional", "P0.2/AD2": "bidirectional", "P0.1/AD1": "bidirectional", "P0.0/AD0": "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Intel:P8752BH";

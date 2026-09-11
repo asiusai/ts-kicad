@@ -27,7 +27,8 @@ export class FX614 extends Component.withPins({
   "~{RDYN}": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { XTALN: "output", "XTAL/CLK": "input", M0: "input", M1: "input", RXIN: "input", RXFB: "output", TXOP: "output", VSS: "power_in", VBIAS: "passive", RXEQ: "input", TXD: "input", CLK: "input", RXD: "output", DET: "output", "~{RDYN}": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Telecom:FX614";
@@ -63,7 +64,8 @@ export class HT9170D extends Component.withPins({
   "RT/GT": "17",
   "VDD": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VP: "input", VN: "input", GS: "output", VREF: "power_out", INH: "input", PWDN: "input", X1: "input", X2: "output", VSS: "power_in", OE: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", DV: "output", EST: "output", "RT/GT": "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_Telecom:HT9170D";
@@ -119,7 +121,8 @@ export class Si3210 extends Component.withPins({
   "SDI": "37",
   "SCLK": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{INT}": "output", PCLK: "input", DRX: "input", DTX: "output", FSYNC: "input", "~{RESET}": "input", SDCH: "output", SDCL: "output", VDDA1: "power_in", IREF: "output", CAPP: "output", QGND: "power_in", CAPM: "output", STIPDC: "input", SRINGDC: "input", STIPE: "input", SVBAT: "input", SRINGE: "input", STIPAC: "input", SRINGAC: "input", IGMN: "output", GNDA: "power_in", IGMP: "output", IRINGN: "input", IRINGP: "input", VDDA2: "power_in", ITIPP: "input", ITIPN: "input", VDDD: "power_in", GNDD: "power_in", TEST: "input", DCFF: "output", DCDRV: "output", SDITHRU: "output", SDO: "output", SDI: "input", SCLK: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_Telecom:Si3210";

@@ -38,7 +38,8 @@ export class AD390JD extends Component.withPins({
   "~{CS3}": "27",
   "~{CS4}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D0: "input", D1: "input", D2: "input", D3: "input", D4: "input", D5: "input", D6: "input", D7: "input", D8: "input", D9: "input", D10: "input", D11: "input", GND: "power_in", "-VS": "power_in", AGND: "passive", REFOUT: "passive", REFIN: "passive", VOUT1: "passive", VOUT2: "passive", VOUT3: "passive", VOUT4: "passive", "+VS": "power_in", "~{A1}": "input", "~{A0}": "input", "~{CS1}": "input", "~{CS2}": "input", "~{CS3}": "input", "~{CS4}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD390JD";
@@ -82,7 +83,8 @@ export class AD390KD extends Component.withPins({
   "~{CS3}": "27",
   "~{CS4}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D0: "input", D1: "input", D2: "input", D3: "input", D4: "input", D5: "input", D6: "input", D7: "input", D8: "input", D9: "input", D10: "input", D11: "input", GND: "power_in", "-VS": "power_in", AGND: "passive", REFOUT: "passive", REFIN: "passive", VOUT1: "passive", VOUT2: "passive", VOUT3: "passive", VOUT4: "passive", "+VS": "power_in", "~{A1}": "input", "~{A0}": "input", "~{CS1}": "input", "~{CS2}": "input", "~{CS3}": "input", "~{CS4}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD390KD";
@@ -115,7 +117,8 @@ export class AD558JN extends Component.withPins({
   "VSEN": "15",
   "VOUT": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DB0: "input", DB1: "input", DB2: "input", DB3: "input", DB4: "input", DB5: "input", DB6: "input", DB7: "input", "~{CE}": "input", "~{CS}": "input", "V+": "power_in", DGND: "power_in", AGND: "power_in", VSEL: "input", VSEN: "input", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD558JN";
@@ -147,7 +150,8 @@ export class AD558JP extends Component.withPins({
   "VSEN": "19",
   "VOUT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DB0: "input", DB1: "input", DB2: "input", DB3: "input", DB4: "input", DB5: "input", DB6: "input", DB7: "input", "~{CE}": "input", "~{CS}": "input", "V+": "power_in", DGND: "power_in", AGND: "power_in", VSEL: "input", VSEN: "input", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD558JP";
@@ -180,7 +184,8 @@ export class AD558KN extends Component.withPins({
   "VSEN": "15",
   "VOUT": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DB0: "input", DB1: "input", DB2: "input", DB3: "input", DB4: "input", DB5: "input", DB6: "input", DB7: "input", "~{CE}": "input", "~{CS}": "input", "V+": "power_in", DGND: "power_in", AGND: "power_in", VSEL: "input", VSEN: "input", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD558KN";
@@ -212,7 +217,8 @@ export class AD558KP extends Component.withPins({
   "VSEN": "19",
   "VOUT": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DB0: "input", DB1: "input", DB2: "input", DB3: "input", DB4: "input", DB5: "input", DB6: "input", DB7: "input", "~{CE}": "input", "~{CS}": "input", "V+": "power_in", DGND: "power_in", AGND: "power_in", VSEL: "input", VSEN: "input", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD558KP";
@@ -247,7 +253,8 @@ export class AD5687BCPZ extends Component.withPins({
   "NC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", GND_2: "power_in", VDD: "power_in", NC_4: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", VREF: "power_in", NC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5687BCPZ";
@@ -281,7 +288,8 @@ export class AD5687BRUZ extends Component.withPins({
   "~{RESET}": "15",
   "RSTSEL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "power_in", NC_2: "no_connect", VOUTA: "output", GND: "power_in", VDD: "power_in", NC_6: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5687BRUZ";
@@ -316,7 +324,8 @@ export class AD5687RBCPZ extends Component.withPins({
   "NC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", GND_2: "power_in", VDD: "power_in", NC_4: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", VREF: "power_in", NC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5687RBCPZ";
@@ -350,7 +359,8 @@ export class AD5687RBRUZ extends Component.withPins({
   "~{RESET}": "15",
   "RSTSEL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "power_in", NC_2: "no_connect", VOUTA: "output", GND: "power_in", VDD: "power_in", NC_6: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5687RBRUZ";
@@ -385,7 +395,8 @@ export class AD5689BCPZ extends Component.withPins({
   "NC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", GND_2: "power_in", VDD: "power_in", NC_4: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", VREF: "power_in", NC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5689BCPZ";
@@ -419,7 +430,8 @@ export class AD5689BRUZ extends Component.withPins({
   "~{RESET}": "15",
   "RSTSEL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "power_in", NC_2: "no_connect", VOUTA: "output", GND: "power_in", VDD: "power_in", NC_6: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5689BRUZ";
@@ -454,7 +466,8 @@ export class AD5689RxCPZ extends Component.withPins({
   "NC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", GND_2: "power_in", VDD: "power_in", NC_4: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", VREF: "power_in", NC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5689RxCPZ";
@@ -488,7 +501,8 @@ export class AD5689RxRUZ extends Component.withPins({
   "~{RESET}": "15",
   "RSTSEL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "power_in", NC_2: "no_connect", VOUTA: "output", GND: "power_in", VDD: "power_in", NC_6: "no_connect", VOUTB: "output", SDO: "output", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", SCLK: "input", "~{SYNC}": "input", SDIN: "input", "~{RESET}": "input", RSTSEL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5689RxRUZ";
@@ -516,7 +530,8 @@ export class AD5691RxRM extends Component.withPins({
   "VREF": "9",
   "VOUT": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VLOGIC: "power_in", "~{RESET}": "input", "~{LDAC}": "input", GND: "power_in", A0: "input", SCL: "input", SDA: "bidirectional", VREF: "passive", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5691RxRM";
@@ -544,7 +559,8 @@ export class AD5692RxRM extends Component.withPins({
   "VREF": "9",
   "VOUT": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VLOGIC: "power_in", "~{RESET}": "input", "~{LDAC}": "input", GND: "power_in", A0: "input", SCL: "input", SDA: "bidirectional", VREF: "passive", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5692RxRM";
@@ -572,7 +588,8 @@ export class AD5693RxRM extends Component.withPins({
   "VREF": "9",
   "VOUT": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VLOGIC: "power_in", "~{RESET}": "input", "~{LDAC}": "input", GND: "power_in", A0: "input", SCL: "input", SDA: "bidirectional", VREF: "passive", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5693RxRM";
@@ -607,7 +624,8 @@ export class AD5697RBCPZ extends Component.withPins({
   "NC_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", GND_2: "power_in", VDD: "power_in", NC_4: "no_connect", VOUTB: "output", SDA: "bidirectional", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", A0: "input", SCL: "input", A1: "input", "~{RESET}": "input", RSTSEL: "input", VREF: "power_in", NC_16: "no_connect", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5697RBCPZ";
@@ -641,7 +659,8 @@ export class AD5697RBRUZ extends Component.withPins({
   "~{RESET}": "15",
   "RSTSEL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VREF: "power_in", NC_2: "no_connect", VOUTA: "output", GND: "power_in", VDD: "power_in", NC_6: "no_connect", VOUTB: "output", SDA: "bidirectional", "~{LDAC}": "input", GAIN: "input", VLOGIC: "power_in", A0: "input", SCL: "input", A1: "input", "~{RESET}": "input", RSTSEL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5697RBRUZ";
@@ -679,7 +698,8 @@ export class AD5781xRUZ extends Component.withPins({
   "AGND": "19",
   "R_{FB}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INV: "output", "V_{OUT}": "output", "V_{REFPS}": "output", "V_{REFPF}": "input", "V_{DD}": "power_in", "~{RESET}": "input", "~{CLR}": "input", "~{LDAC}": "input", "V_{CC}": "power_in", "IOV_{CC}": "power_in", SDO: "output", SDIN: "input", SCLK: "input", "~{SYNC}": "input", DGND: "power_in", "V_{REFNF}": "input", "V_{REFNS}": "output", "V_{SS}": "power_in", AGND: "power_in", "R_{FB}": "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5781xRUZ";
@@ -717,7 +737,8 @@ export class AD5791xRUZ extends Component.withPins({
   "AGND": "19",
   "R_{FB}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INV: "output", "V_{OUT}": "output", "V_{REFPS}": "output", "V_{REFPF}": "input", "V_{DD}": "power_in", "~{RESET}": "input", "~{CLR}": "input", "~{LDAC}": "input", "V_{CC}": "power_in", "IOV_{CC}": "power_in", SDO: "output", SDIN: "input", SCLK: "input", "~{SYNC}": "input", DGND: "power_in", "V_{REFNF}": "input", "V_{REFNS}": "output", "V_{SS}": "power_in", AGND: "power_in", "R_{FB}": "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD5791xRUZ";
@@ -752,7 +773,8 @@ export class AD7224KN extends Component.withPins({
   "~{RST}": "17",
   "VDD": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224KN";
@@ -787,7 +809,8 @@ export class AD7224KP extends Component.withPins({
   "~{RST}": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224KP";
@@ -822,7 +845,8 @@ export class AD7224KR_1 extends Component.withPins({
   "~{RST}": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224KR-1";
@@ -857,7 +881,8 @@ export class AD7224KR_18 extends Component.withPins({
   "~{RST}": "17",
   "VDD": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224KR-18";
@@ -892,7 +917,8 @@ export class AD7224LN extends Component.withPins({
   "~{RST}": "17",
   "VDD": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224LN";
@@ -927,7 +953,8 @@ export class AD7224LP extends Component.withPins({
   "~{RST}": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224LP";
@@ -962,7 +989,8 @@ export class AD7224LR_1 extends Component.withPins({
   "~{RST}": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224LR-1";
@@ -997,7 +1025,8 @@ export class AD7224LR_18 extends Component.withPins({
   "~{RST}": "17",
   "VDD": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VOUT: "output", VREF: "passive", AGND: "passive", DGND: "power_in", "DB7(MSB)": "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", "DB0(LSB)": "input", "~{CS}": "input", "~{WR}": "input", "~{LDAC}": "input", "~{RST}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7224LR-18";
@@ -1038,7 +1067,8 @@ export class AD7225BRS extends Component.withPins({
   "VOUTD": "23",
   "VOUTC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225BRS";
@@ -1079,7 +1109,8 @@ export class AD7225CRS extends Component.withPins({
   "VOUTD": "23",
   "VOUTC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225CRS";
@@ -1120,7 +1151,8 @@ export class AD7225KN extends Component.withPins({
   "VOUTD": "23",
   "VOUTC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225KN";
@@ -1161,7 +1193,8 @@ export class AD7225KP extends Component.withPins({
   "VOUTD": "27",
   "VOUTC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A0: "input", A1: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225KP";
@@ -1202,7 +1235,8 @@ export class AD7225KR extends Component.withPins({
   "VOUTD": "23",
   "VOUTC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225KR";
@@ -1243,7 +1277,8 @@ export class AD7225LN extends Component.withPins({
   "VOUTD": "23",
   "VOUTC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225LN";
@@ -1284,7 +1319,8 @@ export class AD7225LP extends Component.withPins({
   "VOUTD": "27",
   "VOUTC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A0: "input", A1: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225LP";
@@ -1325,7 +1361,8 @@ export class AD7225LR extends Component.withPins({
   "VOUTD": "23",
   "VOUTC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFB: "input", VREFA: "input", AGND: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VREFD: "input", VREFC: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7225LR";
@@ -1362,7 +1399,8 @@ export class AD7226BRSZ extends Component.withPins({
   "VOUTD": "19",
   "VOUTC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREF: "input", AGND: "input", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7226BRSZ";
@@ -1399,7 +1437,8 @@ export class AD7226KN extends Component.withPins({
   "VOUTD": "19",
   "VOUTC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREF: "input", AGND: "input", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7226KN";
@@ -1436,7 +1475,8 @@ export class AD7226KP extends Component.withPins({
   "VOUTD": "19",
   "VOUTC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREF: "input", AGND: "input", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7226KP";
@@ -1473,7 +1513,8 @@ export class AD7226KR extends Component.withPins({
   "VOUTD": "19",
   "VOUTC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREF: "input", AGND: "input", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A1: "input", A0: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7226KR";
@@ -1514,7 +1555,8 @@ export class AD7228ABN extends Component.withPins({
   "A1": "23",
   "A0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUT8: "output", VOUT7: "output", VOUT6: "output", VOUT5: "output", VOUT4: "output", VOUT3: "output", VOUT2: "output", VOUT1: "output", VSS: "power_in", VREF: "passive", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A2: "input", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7228ABN";
@@ -1555,7 +1597,8 @@ export class AD7228ABP extends Component.withPins({
   "A1": "27",
   "A0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUT8: "output", VOUT7: "output", VOUT6: "output", VOUT5: "output", VOUT4: "output", VOUT3: "output", VOUT2: "output", VOUT1: "output", VSS: "power_in", VREF: "passive", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A2: "input", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7228ABP";
@@ -1596,7 +1639,8 @@ export class AD7228ABR extends Component.withPins({
   "A1": "23",
   "A0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUT8: "output", VOUT7: "output", VOUT6: "output", VOUT5: "output", VOUT4: "output", VOUT3: "output", VOUT2: "output", VOUT1: "output", VSS: "power_in", VREF: "passive", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A2: "input", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7228ABR";
@@ -1637,7 +1681,8 @@ export class AD7228ACN extends Component.withPins({
   "A1": "23",
   "A0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUT8: "output", VOUT7: "output", VOUT6: "output", VOUT5: "output", VOUT4: "output", VOUT3: "output", VOUT2: "output", VOUT1: "output", VSS: "power_in", VREF: "passive", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A2: "input", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7228ACN";
@@ -1678,7 +1723,8 @@ export class AD7228ACP extends Component.withPins({
   "A1": "27",
   "A0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUT8: "output", VOUT7: "output", VOUT6: "output", VOUT5: "output", VOUT4: "output", VOUT3: "output", VOUT2: "output", VOUT1: "output", VSS: "power_in", VREF: "passive", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A2: "input", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7228ACP";
@@ -1719,7 +1765,8 @@ export class AD7228ACR extends Component.withPins({
   "A1": "23",
   "A0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUT8: "output", VOUT7: "output", VOUT6: "output", VOUT5: "output", VOUT4: "output", VOUT3: "output", VOUT2: "output", VOUT1: "output", VSS: "power_in", VREF: "passive", GND: "power_in", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "input", A2: "input", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7228ACR";
@@ -1752,7 +1799,8 @@ export class AD7304 extends Component.withPins({
   "VOUTD": "15",
   "VOUTC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREFA: "input", VREFB: "input", GND: "power_in", "~{LDAC}": "output", "~{CLR}": "output", "~{CS}": "input", CLK: "input", "SDI/SHDN": "input", VREFC: "input", VREFD: "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7304";
@@ -1789,7 +1837,8 @@ export class AD7305 extends Component.withPins({
   "VOUTD": "19",
   "VOUTC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTB: "output", VOUTA: "output", VSS: "power_in", VREF: "input", GND: "power_in", "~{LDAC}": "input", DB7: "input", DB6: "input", DB5: "input", DB4: "input", DB3: "input", DB2: "input", DB1: "input", DB0: "input", "~{WR}": "output", A1: "input", "A0/SHDN": "input", VDD: "power_in", VOUTD: "output", VOUTC: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7305";
@@ -1814,7 +1863,8 @@ export class AD7390 extends Component.withPins({
   "Vdd": "7",
   "Vref": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{LD}": "input", CLK: "input", SDI: "input", "~{CLR}": "input", Vss: "power_in", Vout: "output", Vdd: "power_in", Vref: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7390";
@@ -1839,7 +1889,8 @@ export class AD7391 extends Component.withPins({
   "Vdd": "7",
   "Vref": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{LD}": "input", CLK: "input", SDI: "input", "~{CLR}": "input", Vss: "power_in", Vout: "output", Vdd: "power_in", Vref: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7391";
@@ -1872,7 +1923,8 @@ export class AD7533JN extends Component.withPins({
   "VREF": "15",
   "RFBACK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I_OUT1: "passive", I_OUT2: "passive", GND: "power_in", "D9(MSB)": "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", "D0(LSB)": "input", VCC: "power_in", VREF: "passive", RFBACK: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7533JN";
@@ -1905,7 +1957,8 @@ export class AD7533JP extends Component.withPins({
   "VREF": "19",
   "RFBACK": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I_OUT1: "passive", I_OUT2: "passive", GND: "power_in", "D9(MSB)": "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", "D0(LSB)": "input", VDD: "power_in", VREF: "passive", RFBACK: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7533JP";
@@ -1938,7 +1991,8 @@ export class AD7533KN extends Component.withPins({
   "VREF": "15",
   "RFBACK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I_OUT1: "passive", I_OUT2: "passive", GND: "power_in", "D9(MSB)": "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", "D0(LSB)": "input", VCC: "power_in", VREF: "passive", RFBACK: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7533KN";
@@ -1971,7 +2025,8 @@ export class AD7533KP extends Component.withPins({
   "VREF": "19",
   "RFBACK": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I_OUT1: "passive", I_OUT2: "passive", GND: "power_in", "D9(MSB)": "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", "D0(LSB)": "input", VDD: "power_in", VREF: "passive", RFBACK: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7533KP";
@@ -2004,7 +2059,8 @@ export class AD7533KR extends Component.withPins({
   "VREF": "15",
   "RFBACK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I_OUT1: "passive", I_OUT2: "passive", GND: "power_in", "D9(MSB)": "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", "D0(LSB)": "input", VCC: "power_in", VREF: "passive", RFBACK: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7533KR";
@@ -2037,7 +2093,8 @@ export class AD7533LN extends Component.withPins({
   "VREF": "15",
   "RFBACK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I_OUT1: "passive", I_OUT2: "passive", GND: "power_in", "D9(MSB)": "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", "D0(LSB)": "input", VCC: "power_in", VREF: "passive", RFBACK: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD7533LN";
@@ -2077,7 +2134,8 @@ export class AD775 extends Component.withPins({
   "VRB": "23",
   "DGND_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OE}": "input", DGND_2: "power_in", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", DVDD_11: "power_in", CLK: "input", DVDD_13: "power_in", AVDD_14: "power_in", AVDD_15: "power_in", VRTS: "input", VRT: "input", AVDD_18: "power_in", VIN: "input", AGND_20: "power_in", AGND_21: "power_in", VRBS: "input", VRB: "input", DGND_24: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD775";
@@ -2128,7 +2186,8 @@ export class AD9106BCP extends Component.withPins({
   "~{TRIGGER}": "32",
   "DGND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCLK: "input", SDIO: "bidirectional", DGND_3: "power_in", DLDO2: "power_out", DVDD: "power_in", DLDO1: "power_out", SDO: "output", "~{CS}": "input", "~{RESET}": "input", IOUTP4: "output", IOUTN4: "output", AVDD2: "power_in", IOUTN3: "output", IOUTP3: "output", AGND_15: "power_in", FSADJ3: "output", FSADJ4: "output", REFIO: "bidirectional", CLKGND: "power_in", CLKN: "input", CLKP: "input", CLDO: "bidirectional", CLKVDD: "power_in", "FSADJ2/CAL_SENSE": "bidirectional", FSADJ1: "output", AGND_26: "passive", IOUTP1: "output", IOUTN1: "output", AVDD1: "power_in", IOUTN2: "output", IOUTP2: "output", "~{TRIGGER}": "input", DGND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD9106BCP";
@@ -2219,7 +2278,8 @@ export class AD9142 extends Component.withPins({
   "CVDD18_72": "72",
   "AVSS": "73",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CVDD18_1: "power_in", "REFP/SYNCP": "input", "REFN/SYNCN": "input", CVDD18_4: "passive", "~{RESET}": "input", TXEN: "input", DVDD18_7: "power_in", FRAMEP: "input", FRAMEN: "input", D15P: "input", D15N: "input", DVDD18_12: "passive", D14P: "input", D14N: "input", D13P: "input", D13N: "input", D12P: "input", D12N: "input", DVDD18_19: "passive", D11P: "input", D11N: "input", D10P: "input", D10N: "input", D9P: "input", D9N: "input", D8P: "input", D8N: "input", DCIP: "input", DCIN: "input", D7P: "input", D7N: "input", D6P: "input", D6N: "input", D5P: "input", D5N: "input", DVDD18_36: "passive", D4P: "input", D4N: "input", D3P: "input", D3N: "input", D2P: "input", D2N: "input", DVDD18_43: "passive", D1P: "input", D1N: "input", D0P: "input", D0N: "input", DVDD18_48: "passive", DVDD18_49: "passive", "~{IRQ2}": "input", "~{IRQ1}": "input", SDIO: "bidirectional", SCLK: "input", "~{CS}": "input", AVDD33_55: "power_in", IOUT2P: "output", IOUT2N: "output", AVDD33_58: "passive", CVDD18_59: "passive", CVDD18_60: "passive", DACCLKN: "input", DACCLKP: "input", CVDD18_63: "passive", CVDD18_64: "passive", AVDD33_65: "passive", IOUT1N: "output", IOUT1P: "output", AVDD33_68: "passive", FSADJ: "input", REFIO: "input", CVDD18_71: "passive", CVDD18_72: "passive", AVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD9142";
@@ -2263,7 +2323,8 @@ export class AD9744 extends Component.withPins({
   "DVDD": "27",
   "CLK": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D13: "input", D12: "input", D11: "input", D10: "input", D9: "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", D0: "input", SLEEP: "input", REFLO: "input", REFIO: "input", FS_ADJ: "input", AGND: "power_in", IOUTB: "output", IOUTA: "output", AVDD: "power_in", MODE: "input", DGND: "power_in", DVDD: "power_in", CLK: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:AD9744";
@@ -2297,7 +2358,8 @@ export class ADS7830 extends Component.withPins({
   "SDA": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CH0: "input", CH1: "input", CH2: "input", CH3: "input", CH4: "input", CH5: "input", CH6: "input", CH7: "input", GND: "power_in", "REFin/REFout": "bidirectional", COM: "input", A0: "input", A1: "input", SCL: "input", SDA: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:ADS7830";
@@ -2325,7 +2387,8 @@ export class CS434x_xZZ extends Component.withPins({
   "VA": "9",
   "AOUTR": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDIN: "input", "~{DEM}/SCLK": "input", LRCK: "input", MCLK: "input", VQ: "passive", "FILT+": "passive", AOUTL: "output", AGND: "power_in", VA: "power_in", AOUTR: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:CS434x-xZZ";
@@ -2357,7 +2420,8 @@ export class DAC08 extends Component.withPins({
   "R-": "15",
   "CMP": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VLC: "input", "I+": "output", "V-": "power_in", "I-": "output", B0: "input", B1: "input", B2: "input", B3: "input", B4: "input", B5: "input", B6: "input", B7: "input", "V+": "power_in", "R+": "input", "R-": "input", CMP: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC08";
@@ -2391,7 +2455,8 @@ export class MC1408_DIP extends Component.withPins({
   "VREF-": "15",
   "COMPEN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", GND: "power_in", VEE: "power_in", I0: "input", A8: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", VCC: "power_in", "VREF+": "output", "VREF-": "output", COMPEN: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MC1408_DIP";
@@ -2425,7 +2490,8 @@ export class DAC0808_DIP extends Component.withPins({
   "VREF-": "15",
   "COMPEN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", GND: "power_in", VEE: "power_in", I0: "input", A8: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", VCC: "power_in", "VREF+": "output", "VREF-": "output", COMPEN: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC0808_DIP";
@@ -2459,7 +2525,8 @@ export class MC1408_SOIC extends Component.withPins({
   "A7": "15",
   "A8": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "VREF+": "output", "VREF-": "output", COMPEN: "passive", NC: "no_connect", GND: "power_in", VEE: "power_in", I0: "input", A1: "input", A2: "input", A3: "input", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MC1408_SOIC";
@@ -2493,7 +2560,8 @@ export class DAC0808_SOIC extends Component.withPins({
   "A7": "15",
   "A8": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "VREF+": "output", "VREF-": "output", COMPEN: "passive", NC: "no_connect", GND: "power_in", VEE: "power_in", I0: "input", A1: "input", A2: "input", A3: "input", A4: "input", A5: "input", A6: "input", A7: "input", A8: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC0808_SOIC";
@@ -2517,7 +2585,8 @@ export class DAC081C081CIMK extends Component.withPins({
   "SCL": "5",
   "ADR0": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "output", VA: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", ADR0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC081C081CIMK";
@@ -2555,7 +2624,8 @@ export class DAC1007LCN extends Component.withPins({
   "DI4": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "Byte1/~{Byte2}": "input", "~{XFER}": "input", DI5: "input", DI6: "input", DI7: "input", DI8: "input", "DI9(MSB)": "input", GND: "power_in", "I_{OUT}2": "output", "I_{OUT}1": "output", "V_{REF}": "input", "R_{FB}": "input", "DI0(LSB)": "input", DI1: "input", DI2: "input", DI3: "input", DI4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC1007LCN";
@@ -2593,7 +2663,8 @@ export class DAC1006LCN extends Component.withPins({
   "DI4": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "Byte1/~{Byte2}": "input", "~{XFER}": "input", DI5: "input", DI6: "input", DI7: "input", DI8: "input", "DI9(MSB)": "input", GND: "power_in", "I_{OUT}2": "output", "I_{OUT}1": "output", "V_{REF}": "input", "R_{FB}": "input", "DI0(LSB)": "input", DI1: "input", DI2: "input", DI3: "input", DI4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC1006LCN";
@@ -2631,7 +2702,8 @@ export class DAC1006LCWM extends Component.withPins({
   "DI4": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "Byte1/~{Byte2}": "input", "~{XFER}": "input", DI5: "input", DI6: "input", DI7: "input", DI8: "input", "DI9(MSB)": "input", GND: "power_in", "I_{OUT}2": "output", "I_{OUT}1": "output", "V_{REF}": "input", "R_{FB}": "input", "DI0(LSB)": "input", DI1: "input", DI2: "input", DI3: "input", DI4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC1006LCWM";
@@ -2669,7 +2741,8 @@ export class DAC1008LCN extends Component.withPins({
   "DI4": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "Byte1/~{Byte2}": "input", "~{XFER}": "input", DI5: "input", DI6: "input", DI7: "input", DI8: "input", "DI9(MSB)": "input", GND: "power_in", "I_{OUT}2": "output", "I_{OUT}1": "output", "V_{REF}": "input", "R_{FB}": "input", "DI0(LSB)": "input", DI1: "input", DI2: "input", DI3: "input", DI4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC1008LCN";
@@ -2693,7 +2766,8 @@ export class DAC101C081CIMK extends Component.withPins({
   "SCL": "5",
   "ADR0": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "output", VA: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", ADR0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC101C081CIMK";
@@ -2717,7 +2791,8 @@ export class DAC121C081CIMK extends Component.withPins({
   "SCL": "5",
   "ADR0": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "output", VA: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", ADR0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC121C081CIMK";
@@ -2751,7 +2826,8 @@ export class DAC1220E extends Component.withPins({
   "SDIO": "15",
   "SCLK": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVDD: "power_in", XOUT: "output", XIN: "input", DGND: "power_in", AVDD: "power_in", DNC_6: "no_connect", DNC_7: "no_connect", DNC_8: "no_connect", C1: "passive", C2: "passive", VOUT: "output", VREF: "input", AGND: "power_in", "~{CS}": "input", SDIO: "bidirectional", SCLK: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC1220E";
@@ -2775,7 +2851,8 @@ export class DAC5311xDCK extends Component.withPins({
   "GND": "5",
   "VOUT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SYNC}": "input", SCLK: "input", DIN: "input", "AVDD/AVREF": "power_in", GND: "power_in", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC5311xDCK";
@@ -2809,7 +2886,8 @@ export class DAC5578xPW extends Component.withPins({
   "SDA": "15",
   "SCL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{LDAC}": "input", ADDR0: "input", AVDD: "power_in", VOUTA: "output", VOUTC: "output", VOUTE: "output", VOUTG: "output", VREFIN: "input", "~{CLR}": "input", VOUTH: "output", VOUTF: "output", VOUTD: "output", VOUTB: "output", GND: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC5578xPW";
@@ -2852,7 +2930,8 @@ export class DAC5578xRGE extends Component.withPins({
   "NC_24": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", AVDD: "power_in", VOUTA: "output", VOUTC: "output", VOUTE: "output", VOUTG: "output", NC_7: "no_connect", VREFIN: "input", RSTSEL: "input", ADDR1: "input", ADDR0: "input", "~{CLR}": "input", VOUTH: "output", VOUTF: "output", VOUTD: "output", VOUTB: "output", GND: "power_in", NC_18: "no_connect", SDA: "bidirectional", SCL: "input", TWOC: "input", "~{LDAC}": "input", NC_23: "no_connect", NC_24: "no_connect", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC5578xRGE";
@@ -2880,7 +2959,8 @@ export class DAC80502 extends Component.withPins({
   "VREFIO": "10",
   "SCLK/SCL": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUTA: "output", RSTSEL: "input", AGND: "power_in", SPI2C: "input", "~{SYNC}/A0": "input", "SDIN/SDA": "bidirectional", VOUTB: "output", VREFIO: "bidirectional", "SCLK/SCL": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC80502";
@@ -2908,7 +2988,8 @@ export class DAC60502 extends Component.withPins({
   "VREFIO": "10",
   "SCLK/SCL": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUTA: "output", RSTSEL: "input", AGND: "power_in", SPI2C: "input", "~{SYNC}/A0": "input", "SDIN/SDA": "bidirectional", VOUTB: "output", VREFIO: "bidirectional", "SCLK/SCL": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC60502";
@@ -2943,7 +3024,8 @@ export class DAC80504 extends Component.withPins({
   "VIO": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "bidirectional", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", GND: "power_in", VDD: "power_in", GAIN: "input", RSTSEL: "input", REFDIV: "input", "~{LDAC}": "input", "~{CS}": "input", SCLK: "input", SDI: "input", "SDO/~{ALARM}": "output", VIO: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC80504";
@@ -2978,7 +3060,8 @@ export class DAC60504 extends Component.withPins({
   "VIO": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "bidirectional", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", GND: "power_in", VDD: "power_in", GAIN: "input", RSTSEL: "input", REFDIV: "input", "~{LDAC}": "input", "~{CS}": "input", SCLK: "input", SDI: "input", "SDO/~{ALARM}": "output", VIO: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC60504";
@@ -3002,7 +3085,8 @@ export class DAC6311xDCK extends Component.withPins({
   "GND": "5",
   "VOUT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SYNC}": "input", SCLK: "input", DIN: "input", "AVDD/AVREF": "power_in", GND: "power_in", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC6311xDCK";
@@ -3036,7 +3120,8 @@ export class DAC6578xPW extends Component.withPins({
   "SDA": "15",
   "SCL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{LDAC}": "input", ADDR0: "input", AVDD: "power_in", VOUTA: "output", VOUTC: "output", VOUTE: "output", VOUTG: "output", VREFIN: "input", "~{CLR}": "input", VOUTH: "output", VOUTF: "output", VOUTD: "output", VOUTB: "output", GND: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC6578xPW";
@@ -3079,7 +3164,8 @@ export class DAC6578xRGE extends Component.withPins({
   "NC_24": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", AVDD: "power_in", VOUTA: "output", VOUTC: "output", VOUTE: "output", VOUTG: "output", NC_7: "no_connect", VREFIN: "input", RSTSEL: "input", ADDR1: "input", ADDR0: "input", "~{CLR}": "input", VOUTH: "output", VOUTF: "output", VOUTD: "output", VOUTB: "output", GND: "power_in", NC_18: "no_connect", SDA: "bidirectional", SCL: "input", TWOC: "input", "~{LDAC}": "input", NC_23: "no_connect", NC_24: "no_connect", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC6578xRGE";
@@ -3107,7 +3193,8 @@ export class DAC70502 extends Component.withPins({
   "VREFIO": "10",
   "SCLK/SCL": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VOUTA: "output", RSTSEL: "input", AGND: "power_in", SPI2C: "input", "~{SYNC}/A0": "input", "SDIN/SDA": "bidirectional", VOUTB: "output", VREFIO: "bidirectional", "SCLK/SCL": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC70502";
@@ -3142,7 +3229,8 @@ export class DAC70504 extends Component.withPins({
   "VIO": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "bidirectional", OUT0: "output", OUT1: "output", OUT2: "output", OUT3: "output", GND: "power_in", VDD: "power_in", GAIN: "input", RSTSEL: "input", REFDIV: "input", "~{LDAC}": "input", "~{CS}": "input", SCLK: "input", SDI: "input", "SDO/~{ALARM}": "output", VIO: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC70504";
@@ -3166,7 +3254,8 @@ export class DAC7311xDCK extends Component.withPins({
   "GND": "5",
   "VOUT": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SYNC}": "input", SCLK: "input", DIN: "input", "AVDD/AVREF": "power_in", GND: "power_in", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC7311xDCK";
@@ -3192,7 +3281,8 @@ export class DAC7513_DCN extends Component.withPins({
   "SCLK": "7",
   "~{SYNC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "output", VFB: "input", VREF: "input", VCC: "power_in", GND: "power_in", DIN: "input", SCLK: "input", "~{SYNC}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC7513_DCN";
@@ -3226,7 +3316,8 @@ export class DAC8165 extends Component.withPins({
   "~{ENABLE}": "15",
   "LDAC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", VOUTB: "output", "VREFH/VREFOUT": "bidirectional", AVDD: "power_in", VREFL: "input", GND: "power_in", VOUTC: "output", VOUTD: "output", "~{SYNC}": "input", SCLK: "input", DIN: "input", IOVDD: "power_in", "~{RST}": "input", RSTSEL: "input", "~{ENABLE}": "input", LDAC: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8165";
@@ -3260,7 +3351,8 @@ export class DAC7565 extends Component.withPins({
   "~{ENABLE}": "15",
   "LDAC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", VOUTB: "output", "VREFH/VREFOUT": "bidirectional", AVDD: "power_in", VREFL: "input", GND: "power_in", VOUTC: "output", VOUTD: "output", "~{SYNC}": "input", SCLK: "input", DIN: "input", IOVDD: "power_in", "~{RST}": "input", RSTSEL: "input", "~{ENABLE}": "input", LDAC: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC7565";
@@ -3294,7 +3386,8 @@ export class DAC7578xPW extends Component.withPins({
   "SDA": "15",
   "SCL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{LDAC}": "input", ADDR0: "input", AVDD: "power_in", VOUTA: "output", VOUTC: "output", VOUTE: "output", VOUTG: "output", VREFIN: "input", "~{CLR}": "input", VOUTH: "output", VOUTF: "output", VOUTD: "output", VOUTB: "output", GND: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC7578xPW";
@@ -3337,7 +3430,8 @@ export class DAC7578xRGE extends Component.withPins({
   "NC_24": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", AVDD: "power_in", VOUTA: "output", VOUTC: "output", VOUTE: "output", VOUTG: "output", NC_7: "no_connect", VREFIN: "input", RSTSEL: "input", ADDR1: "input", ADDR0: "input", "~{CLR}": "input", VOUTH: "output", VOUTF: "output", VOUTD: "output", VOUTB: "output", GND: "power_in", NC_18: "no_connect", SDA: "bidirectional", SCL: "input", TWOC: "input", "~{LDAC}": "input", NC_23: "no_connect", NC_24: "no_connect", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC7578xRGE";
@@ -3396,7 +3490,8 @@ export class DAC8750xRHA extends Component.withPins({
   "NC_40": "40",
   "GND_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "~{ALARM}": "open_collector", GND_3: "passive", GND_4: "power_in", CLR: "input", LATCH: "input", SCLK: "input", DIN: "input", SDO: "output", NC_10: "no_connect", NC_11: "no_connect", GND_12: "passive", GND_13: "passive", GND_14: "passive", GND_15: "passive", "ISET-R": "passive", REFOUT: "output", REFIN: "input", NC_19: "no_connect", NC_20: "no_connect", NC_21: "no_connect", NC_22: "no_connect", "DVDD-EN": "input", "HART-IN": "input", "R3-SENSE": "output", IOUT: "output", BOOST: "output", CAP1: "passive", CAP2: "passive", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", AVDD: "power_in", GND_37: "passive", NC_38: "no_connect", DVDD: "power_in", NC_40: "no_connect", GND_41: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8750xRHA";
@@ -3455,7 +3550,8 @@ export class DAC7750xRHA extends Component.withPins({
   "NC_40": "40",
   "GND_41": "41",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "~{ALARM}": "open_collector", GND_3: "passive", GND_4: "power_in", CLR: "input", LATCH: "input", SCLK: "input", DIN: "input", SDO: "output", NC_10: "no_connect", NC_11: "no_connect", GND_12: "passive", GND_13: "passive", GND_14: "passive", GND_15: "passive", "ISET-R": "passive", REFOUT: "output", REFIN: "input", NC_19: "no_connect", NC_20: "no_connect", NC_21: "no_connect", NC_22: "no_connect", "DVDD-EN": "input", "HART-IN": "input", "R3-SENSE": "output", IOUT: "output", BOOST: "output", CAP1: "passive", CAP2: "passive", NC_30: "no_connect", NC_31: "no_connect", NC_32: "no_connect", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", AVDD: "power_in", GND_37: "passive", NC_38: "no_connect", DVDD: "power_in", NC_40: "no_connect", GND_41: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC7750xRHA";
@@ -3481,7 +3577,8 @@ export class DAC8501E extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "input", "V_{FB}": "input", "V_{OUT}": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8501E";
@@ -3507,7 +3604,8 @@ export class DAC8531E extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "input", "V_{FB}": "input", "V_{OUT}": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8531E";
@@ -3533,7 +3631,8 @@ export class DAC8531IDRB extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "input", "V_{FB}": "input", "V_{OUT}": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8531IDRB";
@@ -3559,7 +3658,8 @@ export class DAC8532xDGK extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "power_in", "V_{OUT}B": "output", "V_{OUT}A": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8532xDGK";
@@ -3585,7 +3685,8 @@ export class DAC8550IxDGK extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "input", "V_{FB}": "input", "V_{OUT}": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8550IxDGK";
@@ -3611,7 +3712,8 @@ export class DAC8551IxDGK extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "input", "V_{FB}": "input", "V_{OUT}": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8551IxDGK";
@@ -3637,7 +3739,8 @@ export class DAC8552 extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "power_in", "V_{OUT}B": "output", "V_{OUT}A": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8552";
@@ -3663,7 +3766,8 @@ export class DAC8560IxDGK extends Component.withPins({
   "D_{IN}": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "bidirectional", "V_{FB}": "input", "V_{OUT}": "output", "~{SYNC}": "input", SCLK: "input", "D_{IN}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8560IxDGK";
@@ -3697,7 +3801,8 @@ export class DAC8565 extends Component.withPins({
   "~{ENABLE}": "15",
   "LDAC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUTA: "output", VOUTB: "output", "VREFH/VREFOUT": "bidirectional", AVDD: "power_in", VREFL: "input", GND: "power_in", VOUTC: "output", VOUTD: "output", "~{SYNC}": "input", SCLK: "input", DIN: "input", IOVDD: "power_in", "~{RST}": "input", RSTSEL: "input", "~{ENABLE}": "input", LDAC: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8565";
@@ -3723,7 +3828,8 @@ export class DAC8571IDGK extends Component.withPins({
   "SDA": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{REF}": "input", "V_{SENSE}": "input", "V_{OUT}": "output", A0: "input", SCL: "input", SDA: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:DAC8571IDGK";
@@ -3748,7 +3854,8 @@ export class LTC1257 extends Component.withPins({
   "VOUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CKL: "input", DIN: "input", "~{LOAD}": "input", DOUT: "output", GND: "power_in", VREF: "bidirectional", VOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1257";
@@ -3773,7 +3880,8 @@ export class LTC1446 extends Component.withPins({
   "VCC": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCK: "input", SDI: "input", "~{CS}/LD": "input", SDO: "output", VA: "output", GND: "power_in", VCC: "power_in", VB: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1446";
@@ -3798,7 +3906,8 @@ export class LTC1446L extends Component.withPins({
   "VCC": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCK: "input", SDI: "input", "~{CS}/LD": "input", SDO: "output", VA: "output", GND: "power_in", VCC: "power_in", VB: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1446L";
@@ -3831,7 +3940,8 @@ export class LTC1664CGN extends Component.withPins({
   "NC_15": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "input", "~{CS}/LD": "input", SCK: "input", DIN: "input", DOUT: "output", "~{CLR}": "input", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1664CGN";
@@ -3864,7 +3974,8 @@ export class LTC1664CN extends Component.withPins({
   "NC_15": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "input", "~{CS}/LD": "input", SCK: "input", DIN: "input", DOUT: "output", "~{CLR}": "input", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1664CN";
@@ -3897,7 +4008,8 @@ export class LTC1664IGN extends Component.withPins({
   "NC_15": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "input", "~{CS}/LD": "input", SCK: "input", DIN: "input", DOUT: "output", "~{CLR}": "input", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1664IGN";
@@ -3930,7 +4042,8 @@ export class LTC1664IN extends Component.withPins({
   "NC_15": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "input", "~{CS}/LD": "input", SCK: "input", DIN: "input", DOUT: "output", "~{CLR}": "input", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:LTC1664IN";
@@ -3964,7 +4077,8 @@ export class MAX5139 extends Component.withPins({
   "REFO": "15",
   "AGND_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "M/~{Z}": "input", "~{LDAC}": "input", NC_4: "no_connect", SCLK: "input", "~{CS}": "input", DIN: "input", AGND_8: "power_in", NC_9: "no_connect", "~{READY}": "output", DVDD: "power_in", OUT: "output", AVDD: "power_in", REFI: "input", REFO: "output", AGND_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5139";
@@ -3998,7 +4112,8 @@ export class MAX5138 extends Component.withPins({
   "REFO": "15",
   "AGND_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "M/~{Z}": "input", "~{LDAC}": "input", NC_4: "no_connect", SCLK: "input", "~{CS}": "input", DIN: "input", AGND_8: "power_in", NC_9: "no_connect", "~{READY}": "output", DVDD: "power_in", OUT: "output", AVDD: "power_in", REFI: "input", REFO: "output", AGND_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5138";
@@ -4024,7 +4139,8 @@ export class MAX5215 extends Component.withPins({
   "VDD": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", ADDR: "input", SCL: "input", SDA: "bidirectional", "~{AUX}": "input", OUT: "output", VDD: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5215";
@@ -4050,7 +4166,8 @@ export class MAX5217 extends Component.withPins({
   "VDD": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", ADDR: "input", SCL: "input", SDA: "bidirectional", "~{AUX}": "input", OUT: "output", VDD: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5217";
@@ -4082,7 +4199,8 @@ export class MAX5717xSD extends Component.withPins({
   "INV": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RFB: "passive", OUT: "output", AGNDF: "power_in", AGNDS: "power_in", REFS: "input", REFF: "input", "~{CS}": "input", SCLK: "input", NC: "no_connect", DIN: "input", "~{LDAC}": "input", DGND: "power_in", INV: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5717xSD";
@@ -4114,7 +4232,8 @@ export class MAX5719xSD extends Component.withPins({
   "INV": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RFB: "passive", OUT: "output", AGNDF: "power_in", AGNDS: "power_in", REFS: "input", REFF: "input", "~{CS}": "input", SCLK: "input", NC: "no_connect", DIN: "input", "~{LDAC}": "input", DGND: "power_in", INV: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5719xSD";
@@ -4142,7 +4261,8 @@ export class MAX5741 extends Component.withPins({
   "OUTC": "9",
   "OUTD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCLK: "input", VDD: "power_in", GND: "power_in", DIN: "input", REF: "power_in", OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5741";
@@ -4173,7 +4293,8 @@ export class MAX5813 extends Component.withPins({
   "VDDIO": "13",
   "~{LDAC}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", OUTA: "output", OUTB: "output", GND: "power_in", OUTC: "output", OUTD: "output", VDD: "power_in", ADDR1: "input", ADDR0: "input", SCL: "input", SDA: "bidirectional", "~{CLR}": "input", VDDIO: "power_in", "~{LDAC}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5813";
@@ -4202,7 +4323,8 @@ export class MAX5813WLP extends Component.withPins({
   "SCL": "C3",
   "ADDR0": "C4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "power_in", GND: "power_in", VDDIO: "power_in", VDD: "power_in", "~{CLR}": "input", SDA: "bidirectional", SCL: "input", ADDR0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5813WLP";
@@ -4233,7 +4355,8 @@ export class MAX5814 extends Component.withPins({
   "VDDIO": "13",
   "~{LDAC}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", OUTA: "output", OUTB: "output", GND: "power_in", OUTC: "output", OUTD: "output", VDD: "power_in", ADDR1: "input", ADDR0: "input", SCL: "input", SDA: "bidirectional", "~{CLR}": "input", VDDIO: "power_in", "~{LDAC}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5814";
@@ -4262,7 +4385,8 @@ export class MAX5814WLP extends Component.withPins({
   "SCL": "C3",
   "ADDR0": "C4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "power_in", GND: "power_in", VDDIO: "power_in", VDD: "power_in", "~{CLR}": "input", SDA: "bidirectional", SCL: "input", ADDR0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5814WLP";
@@ -4293,7 +4417,8 @@ export class MAX5815 extends Component.withPins({
   "VDDIO": "13",
   "~{LDAC}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { REF: "power_in", OUTA: "output", OUTB: "output", GND: "power_in", OUTC: "output", OUTD: "output", VDD: "power_in", ADDR1: "input", ADDR0: "input", SCL: "input", SDA: "bidirectional", "~{CLR}": "input", VDDIO: "power_in", "~{LDAC}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5815";
@@ -4322,7 +4447,8 @@ export class MAX5815WLP extends Component.withPins({
   "SCL": "C3",
   "ADDR0": "C4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTA: "output", OUTB: "output", OUTC: "output", OUTD: "output", REF: "power_in", GND: "power_in", VDDIO: "power_in", VDD: "power_in", "~{CLR}": "input", SDA: "bidirectional", SCL: "input", ADDR0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MAX5815WLP";
@@ -4346,7 +4472,8 @@ export class MCP4725xxx_xCH extends Component.withPins({
   "SCL": "5",
   "A0": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VOUT: "output", VSS: "power_in", VDD: "power_in", SDA: "bidirectional", SCL: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4725xxx-xCH";
@@ -4374,7 +4501,8 @@ export class MCP4728 extends Component.withPins({
   "VOUTD": "9",
   "VSS": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", SCL: "input", SDA: "bidirectional", "~{LDAC}": "input", "RDY/~{BSY}": "output", VOUTA: "output", VOUTB: "output", VOUTC: "output", VOUTD: "output", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4728";
@@ -4399,7 +4527,8 @@ export class MCP4801 extends Component.withPins({
   "Vss": "7",
   "Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", "~{SHDN}": "input", Vss: "power_in", Vout: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4801";
@@ -4426,7 +4555,8 @@ export class MCP4801_EMC extends Component.withPins({
   "Vout": "8",
   "PAD/Vss": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", "~{SHDN}": "input", Vss: "power_in", Vout: "output", "PAD/Vss": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4801-EMC";
@@ -4451,7 +4581,8 @@ export class MCP4802 extends Component.withPins({
   "Vss": "7",
   "VA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", VB: "output", Vss: "power_in", VA: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4802";
@@ -4476,7 +4607,8 @@ export class MCP4811 extends Component.withPins({
   "Vss": "7",
   "Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", "~{SHDN}": "input", Vss: "power_in", Vout: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4811";
@@ -4503,7 +4635,8 @@ export class MCP4811_EMC extends Component.withPins({
   "Vout": "8",
   "PAD/Vss": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", "~{SHDN}": "input", Vss: "power_in", Vout: "output", "PAD/Vss": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4811-EMC";
@@ -4528,7 +4661,8 @@ export class MCP4812 extends Component.withPins({
   "Vss": "7",
   "VA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", VB: "output", Vss: "power_in", VA: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4812";
@@ -4553,7 +4687,8 @@ export class MCP4821 extends Component.withPins({
   "Vss": "7",
   "Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", "~{SHDN}": "input", Vss: "power_in", Vout: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4821";
@@ -4580,7 +4715,8 @@ export class MCP4821_EMC extends Component.withPins({
   "Vout": "8",
   "PAD/Vss": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", "~{SHDN}": "input", Vss: "power_in", Vout: "output", "PAD/Vss": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4821-EMC";
@@ -4605,7 +4741,8 @@ export class MCP4822 extends Component.withPins({
   "Vss": "7",
   "VA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", VB: "output", Vss: "power_in", VA: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4822";
@@ -4630,7 +4767,8 @@ export class MCP4901 extends Component.withPins({
   "Vss": "7",
   "Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", Vref: "power_in", Vss: "power_in", Vout: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4901";
@@ -4657,7 +4795,8 @@ export class MCP4901_EMC extends Component.withPins({
   "Vout": "8",
   "PAD/Vss": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", Vref: "power_in", Vss: "power_in", Vout: "output", "PAD/Vss": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4901-EMC";
@@ -4688,7 +4827,8 @@ export class MCP4902 extends Component.withPins({
   "VrefA": "13",
   "VA": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", NC_2: "no_connect", "~{CS}": "input", SCK: "input", SDI: "input", NC_6: "no_connect", NC_7: "no_connect", "~{LDAC}": "input", "~{SHDN}": "input", VB: "output", VrefB: "input", Vss: "power_in", VrefA: "input", VA: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4902";
@@ -4713,7 +4853,8 @@ export class MCP4911 extends Component.withPins({
   "Vss": "7",
   "Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", Vref: "power_in", Vss: "power_in", Vout: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4911";
@@ -4740,7 +4881,8 @@ export class MCP4911_EMC extends Component.withPins({
   "Vout": "8",
   "PAD/Vss": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", Vref: "power_in", Vss: "power_in", Vout: "output", "PAD/Vss": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4911-EMC";
@@ -4771,7 +4913,8 @@ export class MCP4912 extends Component.withPins({
   "VrefA": "13",
   "VA": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", NC_2: "no_connect", "~{CS}": "input", SCK: "input", SDI: "input", NC_6: "no_connect", NC_7: "no_connect", "~{LDAC}": "input", "~{SHDN}": "input", VB: "output", VrefB: "input", Vss: "power_in", VrefA: "input", VA: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4912";
@@ -4796,7 +4939,8 @@ export class MCP4921 extends Component.withPins({
   "Vss": "7",
   "Vout": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", Vref: "power_in", Vss: "power_in", Vout: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4921";
@@ -4823,7 +4967,8 @@ export class MCP4921_EMC extends Component.withPins({
   "Vout": "8",
   "PAD/Vss": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", Vref: "power_in", Vss: "power_in", Vout: "output", "PAD/Vss": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4921-EMC";
@@ -4848,7 +4993,8 @@ export class MCP4921_EMS extends Component.withPins({
   "AVSS": "7",
   "VoutA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", VrefA: "passive", AVSS: "power_in", VoutA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4921-EMS";
@@ -4873,7 +5019,8 @@ export class MCP4921_EP extends Component.withPins({
   "AVSS": "7",
   "VoutA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", VrefA: "passive", AVSS: "power_in", VoutA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4921-EP";
@@ -4898,7 +5045,8 @@ export class MCP4921_ESN extends Component.withPins({
   "AVSS": "7",
   "VoutA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "~{CS}": "input", SCK: "input", SDI: "input", "~{LDAC}": "input", VrefA: "passive", AVSS: "power_in", VoutA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4921-ESN";
@@ -4929,7 +5077,8 @@ export class MCP4922 extends Component.withPins({
   "VrefA": "13",
   "VA": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd: "power_in", NC_2: "no_connect", "~{CS}": "input", SCK: "input", SDI: "input", NC_6: "no_connect", NC_7: "no_connect", "~{LDAC}": "input", "~{SHDN}": "input", VB: "output", VrefB: "input", Vss: "power_in", VrefA: "input", VA: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4922";
@@ -4960,7 +5109,8 @@ export class MCP4922_EP extends Component.withPins({
   "VrefA": "13",
   "VoutA": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", NC_2: "no_connect", "~{CS}": "input", SCK: "input", SDI: "input", NC_6: "no_connect", NC_7: "no_connect", "~{LDAC}": "input", "~{SHDN}": "input", VoutB: "passive", VrefB: "passive", AVSS: "power_in", VrefA: "passive", VoutA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4922-EP";
@@ -4991,7 +5141,8 @@ export class MCP4922_ESL extends Component.withPins({
   "VrefA": "13",
   "VoutA": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", NC_2: "no_connect", "~{CS}": "input", SCK: "input", SDI: "input", NC_6: "no_connect", NC_7: "no_connect", "~{LDAC}": "input", "~{SHDN}": "input", VoutB: "passive", VrefB: "passive", AVSS: "power_in", VrefA: "passive", VoutA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4922-ESL";
@@ -5022,7 +5173,8 @@ export class MCP4922_EST extends Component.withPins({
   "VrefA": "13",
   "VoutA": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", NC_2: "no_connect", "~{CS}": "input", SCK: "input", SDI: "input", NC_6: "no_connect", NC_7: "no_connect", "~{LDAC}": "input", "~{SHDN}": "input", VoutB: "passive", VrefB: "passive", AVSS: "power_in", VrefA: "passive", VoutA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:MCP4922-EST";
@@ -5068,7 +5220,8 @@ export class THS5641AxDW extends Component.withPins({
   "DVDD": "27",
   "CLK": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", D0: "input", NC_9: "no_connect", NC_10: "no_connect", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", SLEEP: "input", EXTLO: "bidirectional", EXTIO: "bidirectional", BIASJ: "passive", COMP1: "input", AGND: "power_in", "~{IOUT2}": "output", IOUT1: "output", COMP2: "input", AVDD: "power_in", MODE: "input", DGND: "power_in", DVDD: "power_in", CLK: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:THS5641AxDW";
@@ -5114,7 +5267,8 @@ export class THS5641AxPW extends Component.withPins({
   "DVDD": "27",
   "CLK": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", D0: "input", NC_9: "no_connect", NC_10: "no_connect", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", SLEEP: "input", EXTLO: "bidirectional", EXTIO: "bidirectional", BIASJ: "passive", COMP1: "input", AGND: "power_in", "~{IOUT2}": "output", IOUT1: "output", COMP2: "input", AVDD: "power_in", MODE: "input", DGND: "power_in", DVDD: "power_in", CLK: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:THS5641AxPW";
@@ -5146,7 +5300,8 @@ export class TLV5627CD extends Component.withPins({
   "REFINAB": "15",
   "AVDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVDD: "power_in", "~{PD}": "input", "~{LDAC}": "input", DIN: "input", SCLK: "input", "~{CS}": "input", FS: "input", DGND: "power_in", AGND: "power_in", REFINCD: "input", OUTD: "output", OUTC: "output", OUTB: "output", OUTA: "output", REFINAB: "input", AVDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:TLV5627CD";
@@ -5178,7 +5333,8 @@ export class TLV5627CPW extends Component.withPins({
   "REFINAB": "15",
   "AVDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVDD: "power_in", "~{PD}": "input", "~{LDAC}": "input", DIN: "input", SCLK: "input", "~{CS}": "input", FS: "input", DGND: "power_in", AGND: "power_in", REFINCD: "input", OUTD: "output", OUTC: "output", OUTB: "output", OUTA: "output", REFINAB: "input", AVDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_DAC:TLV5627CPW";

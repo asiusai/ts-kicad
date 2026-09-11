@@ -17,7 +17,8 @@ export class _24AA02_OT extends Component.withPins({
   "V_{CC}": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", "V_{SS}": "power_in", SDA: "bidirectional", "V_{CC}": "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24AA02-OT";
@@ -41,7 +42,8 @@ export class _24AA025E_OT extends Component.withPins({
   "A0": "5",
   "V_{CC}": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", "V_{SS}": "power_in", SDA: "bidirectional", A1: "input", A0: "input", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24AA025E-OT";
@@ -67,7 +69,8 @@ export class _24AA025E_SN extends Component.withPins({
   "NC": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", "V_{SS}": "power_in", SDA: "bidirectional", SCL: "input", NC: "no_connect", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24AA025E-SN";
@@ -90,7 +93,8 @@ export class _24AA02E_OT extends Component.withPins({
   "V_{CC}": "4",
   "NC": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", "V_{SS}": "power_in", SDA: "bidirectional", "V_{CC}": "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24AA02E-OT";
@@ -116,7 +120,8 @@ export class _24AA02E_SN extends Component.withPins({
   "NC_7": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", "V_{SS}": "power_in", SDA: "bidirectional", SCL: "input", NC_7: "no_connect", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24AA02E-SN";
@@ -143,7 +148,8 @@ export class AT24CS01_MAHM extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND_4: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS01-MAHM";
@@ -170,7 +176,8 @@ export class _24C02Cx_x_MNY extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND_4: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24C02Cx-x-MNY";
@@ -196,7 +203,8 @@ export class AT24CS01_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS01-SSHM";
@@ -222,7 +230,8 @@ export class _24C02Cx_x_SN extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24C02Cx-x-SN";
@@ -247,7 +256,8 @@ export class _24LC16 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC16";
@@ -272,7 +282,8 @@ export class _24LC00 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC00";
@@ -297,7 +308,8 @@ export class _24LC01 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC01";
@@ -322,7 +334,8 @@ export class _24LC02 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC02";
@@ -347,7 +360,8 @@ export class _24LC04 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC04";
@@ -372,7 +386,8 @@ export class _24LC08 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC08";
@@ -397,7 +412,8 @@ export class _24LC1025 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC1025";
@@ -422,7 +438,8 @@ export class _24LC128 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC128";
@@ -447,7 +464,8 @@ export class _24LC256 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC256";
@@ -472,7 +490,8 @@ export class _24LC32 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC32";
@@ -497,7 +516,8 @@ export class _24LC512 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC512";
@@ -522,7 +542,8 @@ export class _24LC64 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:24LC64";
@@ -548,7 +569,8 @@ export class _25CSM04xxSN extends Component.withPins({
   "~{HOLD}": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SO: "tri_state", "~{WP}": "input", "V_{SS}": "power_in", SI: "input", SCK: "input", "~{HOLD}": "input", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:25CSM04xxSN";
@@ -574,7 +596,8 @@ export class _25CSM04xxMF extends Component.withPins({
   "~{HOLD}": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SO: "tri_state", "~{WP}": "input", "V_{SS}": "power_in", SI: "input", SCK: "input", "~{HOLD}": "input", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:25CSM04xxMF";
@@ -599,7 +622,8 @@ export class _25LCxxx extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:25LCxxx";
@@ -626,7 +650,8 @@ export class _25LCxxx_MC extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND_4: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:25LCxxx-MC";
@@ -653,7 +678,8 @@ export class _25LCxxx_MF extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND_4: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:25LCxxx-MF";
@@ -698,7 +724,8 @@ export class _28C256 extends Component.withPins({
   "~{WE}": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A14: "input", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", GND: "power_in", D3: "tri_state", D4: "tri_state", D5: "tri_state", D6: "tri_state", D7: "tri_state", "~{CS}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", A13: "input", "~{WE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:28C256";
@@ -723,7 +750,8 @@ export class _93AAxxA extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93AAxxA";
@@ -747,7 +775,8 @@ export class _93AAxxAT_xOT extends Component.withPins({
   "CS": "5",
   "Vcc": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "tri_state", Vss: "power_in", DI: "input", CLK: "input", CS: "input", Vcc: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93AAxxAT-xOT";
@@ -772,7 +801,8 @@ export class _93AAxxB extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93AAxxB";
@@ -796,7 +826,8 @@ export class _93AAxxBT_xOT extends Component.withPins({
   "CS": "5",
   "Vcc": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "tri_state", Vss: "power_in", DI: "input", CLK: "input", CS: "input", Vcc: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93AAxxBT-xOT";
@@ -821,7 +852,8 @@ export class _93AAxxC extends Component.withPins({
   "NC": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", ORG: "input", NC: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93AAxxC";
@@ -846,7 +878,8 @@ export class _93CxxA extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93CxxA";
@@ -871,7 +904,8 @@ export class _93CxxB extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93CxxB";
@@ -896,7 +930,8 @@ export class _93CxxC extends Component.withPins({
   "NC": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", ORG: "input", NC: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93CxxC";
@@ -921,7 +956,8 @@ export class _93LCxxA extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93LCxxA";
@@ -945,7 +981,8 @@ export class _93LCxxAxxOT extends Component.withPins({
   "CS": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "tri_state", GND: "power_in", DI: "input", CLK: "input", CS: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93LCxxAxxOT";
@@ -970,7 +1007,8 @@ export class _93LCxxB extends Component.withPins({
   "NC_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93LCxxB";
@@ -994,7 +1032,8 @@ export class _93LCxxBxxOT extends Component.withPins({
   "CS": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DO: "tri_state", GND: "power_in", DI: "input", CLK: "input", CS: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93LCxxBxxOT";
@@ -1019,7 +1058,8 @@ export class _93LCxxC extends Component.withPins({
   "NC": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", SCLK: "input", DI: "input", DO: "tri_state", GND: "power_in", ORG: "input", NC: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:93LCxxC";
@@ -1042,7 +1082,8 @@ export class AT24CS01_STUM extends Component.withPins({
   "VCC": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", GND: "power_in", SDA: "bidirectional", VCC: "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS01-STUM";
@@ -1068,7 +1109,8 @@ export class AT24CS01_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS01-XHM";
@@ -1095,7 +1137,8 @@ export class AT24CS02_MAHM extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND_4: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS02-MAHM";
@@ -1121,7 +1164,8 @@ export class AT24CS02_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS02-SSHM";
@@ -1144,7 +1188,8 @@ export class AT24CS02_STUM extends Component.withPins({
   "VCC": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", GND: "power_in", SDA: "bidirectional", VCC: "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS02-STUM";
@@ -1170,7 +1215,8 @@ export class AT24CS02_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS02-XHM";
@@ -1197,7 +1243,8 @@ export class AT24CS04_MAHM extends Component.withPins({
   "VCC": "8",
   "NC_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", NC_9: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS04-MAHM";
@@ -1223,7 +1270,8 @@ export class AT24CS04_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS04-SSHM";
@@ -1246,7 +1294,8 @@ export class AT24CS04_STUM extends Component.withPins({
   "VCC": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", GND: "power_in", SDA: "bidirectional", VCC: "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS04-STUM";
@@ -1272,7 +1321,8 @@ export class AT24CS04_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS04-XHM";
@@ -1299,7 +1349,8 @@ export class AT24CS08_MAHM extends Component.withPins({
   "VCC": "8",
   "NC_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", NC_9: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS08-MAHM";
@@ -1325,7 +1376,8 @@ export class AT24CS08_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS08-SSHM";
@@ -1348,7 +1400,8 @@ export class AT24CS08_STUM extends Component.withPins({
   "VCC": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", GND: "power_in", SDA: "bidirectional", VCC: "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS08-STUM";
@@ -1374,7 +1427,8 @@ export class AT24CS08_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS08-XHM";
@@ -1401,7 +1455,8 @@ export class AT24CS16_MAHM extends Component.withPins({
   "VCC": "8",
   "NC_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", NC_9: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS16-MAHM";
@@ -1427,7 +1482,8 @@ export class AT24CS16_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS16-SSHM";
@@ -1450,7 +1506,8 @@ export class AT24CS16_STUM extends Component.withPins({
   "VCC": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", GND: "power_in", SDA: "bidirectional", VCC: "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS16-STUM";
@@ -1476,7 +1533,8 @@ export class AT24CS16_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS16-XHM";
@@ -1503,7 +1561,8 @@ export class AT24CS32_MAHM extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND_4: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS32-MAHM";
@@ -1529,7 +1588,8 @@ export class AT24CS32_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS32-SSHM";
@@ -1552,7 +1612,8 @@ export class AT24CS32_STUM extends Component.withPins({
   "VCC": "4",
   "WP": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", GND: "power_in", SDA: "bidirectional", VCC: "power_in", WP: "input", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS32-STUM";
@@ -1578,7 +1639,8 @@ export class AT24CS32_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS32-XHM";
@@ -1605,7 +1667,8 @@ export class AT24CS64_MAHM extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND_4: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS64-MAHM";
@@ -1631,7 +1694,8 @@ export class AT24CS64_SSHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS64-SSHM";
@@ -1657,7 +1721,8 @@ export class AT24CS64_XHM extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT24CS64-XHM";
@@ -1682,7 +1747,8 @@ export class AT25xxx extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT25xxx";
@@ -1709,7 +1775,8 @@ export class AT25xxx_MA extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND_4: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:AT25xxx-MA";
@@ -1734,7 +1801,8 @@ export class BR25Sxxx extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:BR25Sxxx";
@@ -1761,7 +1829,8 @@ export class BR25xxx_NUX extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND_4: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:BR25xxx-NUX";
@@ -1786,7 +1855,8 @@ export class CAT24C128 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT24C128";
@@ -1811,7 +1881,8 @@ export class CAT24C256 extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT24C256";
@@ -1837,7 +1908,8 @@ export class CAT24M01L extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT24M01L";
@@ -1863,7 +1935,8 @@ export class CAT24M01W extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT24M01W";
@@ -1889,7 +1962,8 @@ export class CAT24M01X extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT24M01X";
@@ -1915,7 +1989,8 @@ export class CAT24M01Y extends Component.withPins({
   "WP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", A1: "input", A2: "input", GND: "power_in", SDA: "bidirectional", SCL: "input", WP: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT24M01Y";
@@ -1940,7 +2015,8 @@ export class CAT250xxx extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT250xxx";
@@ -1967,7 +2043,8 @@ export class CAT250xxx_HU4 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", MISO: "tri_state", "~{WP}": "input", GND_4: "power_in", MOSI: "input", SCK: "input", "~{HOLD}": "input", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:CAT250xxx-HU4";
@@ -1988,7 +2065,8 @@ export class DS2431 extends Component.withPins({
   "IO": "2",
   "NC": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IO: "bidirectional", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:DS2431";
@@ -2012,7 +2090,8 @@ export class DS2431P extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IO: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:DS2431P";
@@ -2037,7 +2116,8 @@ export class DS2431Q extends Component.withPins({
   "NC_6": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IO: "bidirectional", GND_3: "power_in", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:DS2431Q";
@@ -2058,7 +2138,8 @@ export class DS28E07 extends Component.withPins({
   "IO": "2",
   "NC": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IO: "bidirectional", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:DS28E07";
@@ -2082,7 +2163,8 @@ export class DS28E07P extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IO: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:DS28E07P";
@@ -2107,7 +2189,8 @@ export class DS28E07Q extends Component.withPins({
   "NC_6": "6",
   "GND_7": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IO: "bidirectional", GND_3: "power_in", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", GND_7: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:DS28E07Q";
@@ -2153,7 +2236,8 @@ export class KM28C64A extends Component.withPins({
   "~{WE}": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", GND: "power_in", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CE}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", NC_26: "no_connect", "~{WE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:KM28C64A";
@@ -2199,7 +2283,8 @@ export class KM28C65A extends Component.withPins({
   "~{WE}": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RDY/~{BSY}": "output", A12: "input", A7: "input", A6: "input", A5: "input", A4: "input", A3: "input", A2: "input", A1: "input", A0: "input", "I/O0": "tri_state", "I/O1": "tri_state", "I/O2": "tri_state", GND: "power_in", "I/O3": "tri_state", "I/O4": "tri_state", "I/O5": "tri_state", "I/O6": "tri_state", "I/O7": "tri_state", "~{CE}": "input", A10: "input", "~{OE}": "input", A11: "input", A9: "input", A8: "input", NC: "no_connect", "~{WE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:KM28C65A";
@@ -2225,7 +2310,8 @@ export class M24C02_WDW extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C02-WDW";
@@ -2251,7 +2337,8 @@ export class M24C01_FDW extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C01-FDW";
@@ -2277,7 +2364,8 @@ export class M24C02_WMN extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C02-WMN";
@@ -2303,7 +2391,8 @@ export class M24C01_FMN extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C01-FMN";
@@ -2329,7 +2418,8 @@ export class M24C01_RDW extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C01-RDW";
@@ -2355,7 +2445,8 @@ export class M24C01_RMN extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C01-RMN";
@@ -2381,7 +2472,8 @@ export class M24C01_WDW extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C01-WDW";
@@ -2407,7 +2499,8 @@ export class M24C01_WMN extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C01-WMN";
@@ -2433,7 +2526,8 @@ export class M24C02_FDW extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C02-FDW";
@@ -2459,7 +2553,8 @@ export class M24C02_FMN extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C02-FMN";
@@ -2485,7 +2580,8 @@ export class M24C02_RDW extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C02-RDW";
@@ -2511,7 +2607,8 @@ export class M24C02_RMN extends Component.withPins({
   "~{WC}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E0: "input", E1: "input", E2: "input", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{WC}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M24C02-RMN";
@@ -2537,7 +2634,8 @@ export class M95256_WMN6P extends Component.withPins({
   "~{HOLD}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{S}": "input", Q: "output", "~{W}": "input", VSS: "power_in", D: "input", C: "input", "~{HOLD}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M95256-WMN6P";
@@ -2564,7 +2662,8 @@ export class M95512_Axxx_MF extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{S}": "input", Q: "output", "~{W}": "input", VSS: "power_in", D: "input", C: "input", "~{HOLD}": "input", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:M95512-Axxx-MF";
@@ -2598,7 +2697,8 @@ export class TMS4C1050N extends Component.withPins({
   "RE/OE": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { WE: "input", RSTW: "input", SWCLK: "input", D0: "input", D1: "input", D2: "input", D3: "input", GND: "power_in", Q3: "tri_state", Q2: "tri_state", Q1: "tri_state", Q0: "tri_state", SRCLK: "input", RSTR: "input", "RE/OE": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_EEPROM:TMS4C1050N";

@@ -45,7 +45,8 @@ export class MK20DX128VFM5 extends Component.withPins({
   "USB0_DM": "4",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", USB0_DP: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", XTAL32: "input", EXTAL32: "input", VBAT: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", "~{RESET}": "input", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", USB0_DM: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20DX128VFM5";
@@ -96,7 +97,8 @@ export class MK20DN128VFM5 extends Component.withPins({
   "USB0_DM": "4",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", USB0_DP: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", XTAL32: "input", EXTAL32: "input", VBAT: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", "~{RESET}": "input", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", USB0_DM: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20DN128VFM5";
@@ -147,7 +149,8 @@ export class MK20DN32VFM5 extends Component.withPins({
   "USB0_DM": "4",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", USB0_DP: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", XTAL32: "input", EXTAL32: "input", VBAT: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", "~{RESET}": "input", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", USB0_DM: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20DN32VFM5";
@@ -198,7 +201,8 @@ export class MK20DN64VFM5 extends Component.withPins({
   "USB0_DM": "4",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", USB0_DP: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", XTAL32: "input", EXTAL32: "input", VBAT: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", "~{RESET}": "input", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", USB0_DM: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20DN64VFM5";
@@ -249,7 +253,8 @@ export class MK20DX32VFM5 extends Component.withPins({
   "USB0_DM": "4",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", USB0_DP: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", XTAL32: "input", EXTAL32: "input", VBAT: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", "~{RESET}": "input", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", USB0_DM: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20DX32VFM5";
@@ -300,7 +305,8 @@ export class MK20DX64VFM5 extends Component.withPins({
   "USB0_DM": "4",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", USB0_DP: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", XTAL32: "input", EXTAL32: "input", VBAT: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", "~{RESET}": "input", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", USB0_DM: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20DX64VFM5";
@@ -462,7 +468,8 @@ export class MK20FX512VMD12 extends Component.withPins({
   "PTA19": "M11",
   "PTA18": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", "PTD0/LLWU_P12": "bidirectional", PTC16: "bidirectional", PTC12: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", NC_A10: "no_connect", "PTC3/LLWU_P7": "bidirectional", PTC2: "bidirectional", PTD12: "bidirectional", PTD11: "bidirectional", PTD10: "bidirectional", PTD3: "bidirectional", PTC19: "bidirectional", PTC15: "bidirectional", "PTC11/LLWU_P11": "bidirectional", PTC7: "bidirectional", PTD9: "bidirectional", NC_B10: "no_connect", "PTC1/LLWU_P6": "bidirectional", PTC0: "bidirectional", PTD15: "bidirectional", PTD14: "bidirectional", PTD13: "bidirectional", "PTD2/LLWU_P13": "bidirectional", PTC18: "bidirectional", PTC14: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTD8: "bidirectional", NC_C10: "no_connect", PTB23: "bidirectional", PTB22: "bidirectional", "PTE2/LLWU_P1": "bidirectional", "PTE1/LLWU_P0": "bidirectional", PTE0: "bidirectional", PTD1: "bidirectional", PTC17: "bidirectional", PTC13: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTB21: "bidirectional", PTB20: "bidirectional", PTB19: "bidirectional", PTB18: "bidirectional", PTE6: "bidirectional", PTE5: "bidirectional", "PTE4/LLWU_P2": "bidirectional", PTE3: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", VDD_E8: "passive", PTB17: "bidirectional", PTB16: "bidirectional", PTB11: "bidirectional", PTB10: "bidirectional", PTE10: "bidirectional", PTE9: "bidirectional", PTE8: "bidirectional", PTE7: "bidirectional", VDD_F5: "passive", VSS_F6: "power_in", VSS_F7: "passive", VDD_F8: "passive", PTB9: "bidirectional", PTB8: "bidirectional", PTB7: "bidirectional", PTB6: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE12: "bidirectional", PTE11: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", VSS_G8: "passive", PTB5: "bidirectional", PTB4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VSS_H3: "passive", PTE28: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_H7: "passive", VSS_H8: "passive", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA29: "bidirectional", PTA28: "bidirectional", "PGA2_DP/ADC2_DP0/ADC3_DP3/ADC0_DP1": "input", "PGA2_DM/ADC2_DM0/ADC3_DM3/ADC0_DM1": "input", "ADC0_SE16/CMP1_IN2/ADC0_SE21": "input", PTE27: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", "PTA13/LLWU_P4": "bidirectional", PTA27: "bidirectional", PTA26: "bidirectional", PTA25: "bidirectional", "PGA3_DP/ADC3_DP0/ADC2_DP3/ADC1_DP1": "input", "PGA3_DM/ADC3_DM0/ADC2_DM3/ADC1_DM1": "input", "ADC1_SE16/CMP2_IN2/ADC0_SE22": "input", PTE26: "bidirectional", PTE25: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA8: "bidirectional", PTA12: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA24: "bidirectional", "PGA0_DP/ADC0_DP0/ADC1_DP3": "input", "PGA0_DM/ADC0_DM0/ADC1_DM3": "input", "DAC0_OUT/CMP1_IN3/ADC0_SE23": "bidirectional", "DAC1_OUT/CMP0_IN4/CMP2_IN3/ADC1_SE23": "bidirectional", "~{RTC_WAKEUP}": "output", VBAT: "power_in", "PTA4/LLWU_P3": "bidirectional", PTA9: "bidirectional", PTA11: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", "~{RESET}": "bidirectional", "PGA1_DP/ADC1_DP0/ADC0_DP3": "input", "PGA1_DM/ADC1_DM0/ADC0_DM3": "input", "VREF_OUT/CMP1_IN5/CMP0_IN5/ADC1_SE18": "bidirectional", PTE24: "bidirectional", NC_M5: "no_connect", EXTAL32: "input", XTAL32: "output", PTA5: "bidirectional", PTA10: "bidirectional", VSS_M10: "passive", PTA19: "bidirectional", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20FX512VMD12";
@@ -624,7 +631,8 @@ export class MK20FN1M0VMD12 extends Component.withPins({
   "PTA19": "M11",
   "PTA18": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", "PTD0/LLWU_P12": "bidirectional", PTC16: "bidirectional", PTC12: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", NC_A10: "no_connect", "PTC3/LLWU_P7": "bidirectional", PTC2: "bidirectional", PTD12: "bidirectional", PTD11: "bidirectional", PTD10: "bidirectional", PTD3: "bidirectional", PTC19: "bidirectional", PTC15: "bidirectional", "PTC11/LLWU_P11": "bidirectional", PTC7: "bidirectional", PTD9: "bidirectional", NC_B10: "no_connect", "PTC1/LLWU_P6": "bidirectional", PTC0: "bidirectional", PTD15: "bidirectional", PTD14: "bidirectional", PTD13: "bidirectional", "PTD2/LLWU_P13": "bidirectional", PTC18: "bidirectional", PTC14: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTD8: "bidirectional", NC_C10: "no_connect", PTB23: "bidirectional", PTB22: "bidirectional", "PTE2/LLWU_P1": "bidirectional", "PTE1/LLWU_P0": "bidirectional", PTE0: "bidirectional", PTD1: "bidirectional", PTC17: "bidirectional", PTC13: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTB21: "bidirectional", PTB20: "bidirectional", PTB19: "bidirectional", PTB18: "bidirectional", PTE6: "bidirectional", PTE5: "bidirectional", "PTE4/LLWU_P2": "bidirectional", PTE3: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", VDD_E8: "passive", PTB17: "bidirectional", PTB16: "bidirectional", PTB11: "bidirectional", PTB10: "bidirectional", PTE10: "bidirectional", PTE9: "bidirectional", PTE8: "bidirectional", PTE7: "bidirectional", VDD_F5: "passive", VSS_F6: "power_in", VSS_F7: "passive", VDD_F8: "passive", PTB9: "bidirectional", PTB8: "bidirectional", PTB7: "bidirectional", PTB6: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE12: "bidirectional", PTE11: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", VSS_G8: "passive", PTB5: "bidirectional", PTB4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VSS_H3: "passive", PTE28: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_H7: "passive", VSS_H8: "passive", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA29: "bidirectional", PTA28: "bidirectional", "PGA2_DP/ADC2_DP0/ADC3_DP3/ADC0_DP1": "input", "PGA2_DM/ADC2_DM0/ADC3_DM3/ADC0_DM1": "input", "ADC0_SE16/CMP1_IN2/ADC0_SE21": "input", PTE27: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", "PTA13/LLWU_P4": "bidirectional", PTA27: "bidirectional", PTA26: "bidirectional", PTA25: "bidirectional", "PGA3_DP/ADC3_DP0/ADC2_DP3/ADC1_DP1": "input", "PGA3_DM/ADC3_DM0/ADC2_DM3/ADC1_DM1": "input", "ADC1_SE16/CMP2_IN2/ADC0_SE22": "input", PTE26: "bidirectional", PTE25: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA8: "bidirectional", PTA12: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA24: "bidirectional", "PGA0_DP/ADC0_DP0/ADC1_DP3": "input", "PGA0_DM/ADC0_DM0/ADC1_DM3": "input", "DAC0_OUT/CMP1_IN3/ADC0_SE23": "bidirectional", "DAC1_OUT/CMP0_IN4/CMP2_IN3/ADC1_SE23": "bidirectional", "~{RTC_WAKEUP}": "output", VBAT: "power_in", "PTA4/LLWU_P3": "bidirectional", PTA9: "bidirectional", PTA11: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", "~{RESET}": "bidirectional", "PGA1_DP/ADC1_DP0/ADC0_DP3": "input", "PGA1_DM/ADC1_DM0/ADC0_DM3": "input", "VREF_OUT/CMP1_IN5/CMP0_IN5/ADC1_SE18": "bidirectional", PTE24: "bidirectional", NC_M5: "no_connect", EXTAL32: "input", XTAL32: "output", PTA5: "bidirectional", PTA10: "bidirectional", VSS_M10: "passive", PTA19: "bidirectional", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK20FN1M0VMD12";
@@ -786,7 +794,8 @@ export class MK26FN2M0VMD18 extends Component.withPins({
   "PTA19": "M11",
   "PTA18": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", "PTD0/LLWU_P12": "bidirectional", PTC16: "bidirectional", PTC12: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", NC_A10: "no_connect", "PTC3/LLWU_P7": "bidirectional", PTC2: "bidirectional", PTD12: "bidirectional", "PTD11/LLWU_P25": "bidirectional", PTD10: "bidirectional", PTD3: "bidirectional", PTC19: "bidirectional", PTC15: "bidirectional", "PTC11/LLWU_P11": "bidirectional", PTC7: "bidirectional", PTD9: "bidirectional", NC_B10: "no_connect", "PTC1/LLWU_P6": "bidirectional", PTC0: "bidirectional", PTD15: "bidirectional", PTD14: "bidirectional", PTD13: "bidirectional", "PTD2/LLWU_P13": "bidirectional", PTC18: "bidirectional", PTC14: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTD8/LLWU_P24": "bidirectional", NC_C10: "no_connect", PTB23: "bidirectional", PTB22: "bidirectional", "PTE2/LLWU_P1": "bidirectional", "PTE1/LLWU_P0": "bidirectional", PTE0: "bidirectional", PTD1: "bidirectional", PTC17: "bidirectional", PTC13: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTB21: "bidirectional", PTB20: "bidirectional", PTB19: "bidirectional", PTB18: "bidirectional", "PTE6/LLWU_P16": "bidirectional", PTE5: "bidirectional", "PTE4/LLWU_P2": "bidirectional", PTE3: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", VDD_E8: "passive", PTB17: "bidirectional", PTB16: "bidirectional", PTB11: "bidirectional", PTB10: "bidirectional", "PTE10/LLWU_P18": "bidirectional", "PTE9/LLWU_P17": "bidirectional", PTE8: "bidirectional", PTE7: "bidirectional", VDD_F5: "passive", VSS_F6: "power_in", VSS_F7: "passive", VDD_F8: "passive", PTB9: "bidirectional", PTB8: "bidirectional", PTB7: "bidirectional", PTB6: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE12: "bidirectional", PTE11: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", VSS_G8: "passive", PTB5: "bidirectional", PTB4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VSS_H3: "passive", PTE28: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_H7: "passive", VSS_H8: "passive", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA29: "bidirectional", PTA28: "bidirectional", "PGA2_DP/ADC2_DP0/ADC3_DP3/ADC0_DP1": "input", "PGA2_DM/ADC2_DM0/ADC3_DM3/ADC0_DM1": "input", "ADC0_SE16/CMP1_IN2/ADC0_SE21": "input", PTE27: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", "PTA13/LLWU_P4": "bidirectional", PTA27: "bidirectional", PTA26: "bidirectional", PTA25: "bidirectional", "PGA3_DP/ADC3_DP0/ADC2_DP3/ADC1_DP1": "input", "PGA3_DM/ADC3_DM0/ADC2_DM3/ADC1_DM1": "input", "ADC1_SE16/CMP2_IN2/ADC0_SE22": "input", "PTE26/CLKOUT32K": "bidirectional", "PTE25/LLWU_P21": "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA8: "bidirectional", PTA12: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA24: "bidirectional", "PGA0_DP/ADC0_DP0/ADC1_DP3": "input", "PGA0_DM/ADC0_DM0/ADC1_DM3": "input", "DAC0_OUT/CMP1_IN3/ADC0_SE23": "bidirectional", "DAC1_OUT/CMP0_IN4/CMP2_IN3/ADC1_SE23": "bidirectional", "~{RTC_WAKEUP}": "output", VBAT: "power_in", "PTA4/LLWU_P3": "bidirectional", PTA9: "bidirectional", "PTA11/LLWU_P23": "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", "~{RESET}": "bidirectional", "PGA1_DP/ADC1_DP0/ADC0_DP3": "input", "PGA1_DM/ADC1_DM0/ADC0_DM3": "input", "VREF_OUT/CMP1_IN5/CMP0_IN5/ADC1_SE18": "bidirectional", PTE24: "bidirectional", NC_M5: "no_connect", EXTAL32: "input", XTAL32: "output", PTA5: "bidirectional", "PTA10/LLWU_P22": "bidirectional", VSS_M10: "passive", PTA19: "bidirectional", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MK26FN2M0VMD18";
@@ -836,7 +845,8 @@ export class MKE02Z64VLC4 extends Component.withPins({
   "PTA5": "31",
   "PTA4": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", VDD: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z64VLC4";
@@ -886,7 +896,8 @@ export class MKE02Z16VLC4 extends Component.withPins({
   "PTA5": "31",
   "PTA4": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", VDD: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z16VLC4";
@@ -948,7 +959,8 @@ export class MKE02Z64VLD4 extends Component.withPins({
   "PTA5": "43",
   "PTA4": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_5: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_11: "power_in", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", VSS_27: "passive", VDD_28: "passive", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z64VLD4";
@@ -1010,7 +1022,8 @@ export class MKE02Z16VLD4 extends Component.withPins({
   "PTA5": "43",
   "PTA4": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_5: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_11: "power_in", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", VSS_27: "passive", VDD_28: "passive", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z16VLD4";
@@ -1060,7 +1073,8 @@ export class MKE02Z32VLC4 extends Component.withPins({
   "PTA5": "31",
   "PTA4": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", VDD: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z32VLC4";
@@ -1122,7 +1136,8 @@ export class MKE02Z32VLD4 extends Component.withPins({
   "PTA5": "43",
   "PTA4": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_5: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_11: "power_in", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", VSS_27: "passive", VDD_28: "passive", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z32VLD4";
@@ -1204,7 +1219,8 @@ export class MKE02Z64VLH4 extends Component.withPins({
   "PTA5": "63",
   "PTA4": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTH7: "bidirectional", PTH6: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_7: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_13: "power_in", PTH1: "bidirectional", PTH0: "bidirectional", PTE6: "bidirectional", PTE5: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTF7: "bidirectional", PTF6: "bidirectional", PTF5: "bidirectional", PTF4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTF3: "bidirectional", PTF2: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTE4: "bidirectional", VSS_40: "passive", VDD_41: "passive", PTF1: "bidirectional", PTF0: "bidirectional", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE3: "bidirectional", PTE2: "bidirectional", PTG3: "bidirectional", PTG2: "bidirectional", PTG1: "bidirectional", PTG0: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z64VLH4";
@@ -1286,7 +1302,8 @@ export class MKE02Z32VLH4 extends Component.withPins({
   "PTA5": "63",
   "PTA4": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTH7: "bidirectional", PTH6: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_7: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_13: "power_in", PTH1: "bidirectional", PTH0: "bidirectional", PTE6: "bidirectional", PTE5: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTF7: "bidirectional", PTF6: "bidirectional", PTF5: "bidirectional", PTF4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTF3: "bidirectional", PTF2: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTE4: "bidirectional", VSS_40: "passive", VDD_41: "passive", PTF1: "bidirectional", PTF0: "bidirectional", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE3: "bidirectional", PTE2: "bidirectional", PTG3: "bidirectional", PTG2: "bidirectional", PTG1: "bidirectional", PTG0: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z32VLH4";
@@ -1368,7 +1385,8 @@ export class MKE02Z64VQH4 extends Component.withPins({
   "PTA5": "63",
   "PTA4": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTH7: "bidirectional", PTH6: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_7: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_13: "power_in", PTH1: "bidirectional", PTH0: "bidirectional", PTE6: "bidirectional", PTE5: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTF7: "bidirectional", PTF6: "bidirectional", PTF5: "bidirectional", PTF4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTF3: "bidirectional", PTF2: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTE4: "bidirectional", VSS_40: "passive", VDD_41: "passive", PTF1: "bidirectional", PTF0: "bidirectional", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE3: "bidirectional", PTE2: "bidirectional", PTG3: "bidirectional", PTG2: "bidirectional", PTG1: "bidirectional", PTG0: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z64VQH4";
@@ -1450,7 +1468,8 @@ export class MKE02Z32VQH4 extends Component.withPins({
   "PTA5": "63",
   "PTA4": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTH7: "bidirectional", PTH6: "bidirectional", PTE7: "bidirectional", PTH2: "bidirectional", VDD_7: "power_in", "VDDA/VREFH": "power_in", VREFL: "power_in", "VSS/VSSA": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", VSS_13: "power_in", PTH1: "bidirectional", PTH0: "bidirectional", PTE6: "bidirectional", PTE5: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTF7: "bidirectional", PTF6: "bidirectional", PTF5: "bidirectional", PTF4: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTF3: "bidirectional", PTF2: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", PTE4: "bidirectional", VSS_40: "passive", VDD_41: "passive", PTF1: "bidirectional", PTF0: "bidirectional", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE3: "bidirectional", PTE2: "bidirectional", PTG3: "bidirectional", PTG2: "bidirectional", PTG1: "bidirectional", PTG0: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE02Z32VQH4";
@@ -1516,7 +1535,8 @@ export class MKE16Z64VLF4 extends Component.withPins({
   "PTA5": "47",
   "PTA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD1: "bidirectional", PTD0: "bidirectional", PTE11: "bidirectional", PTE10: "bidirectional", PTE5: "bidirectional", PTE4: "bidirectional", VDD_7: "power_in", VDDA: "power_in", VREFH: "power_in", "VSS/VREFL": "power_in", PTB7: "bidirectional", PTB6: "bidirectional", PTE3: "bidirectional", PTE8: "bidirectional", PTB5: "bidirectional", PTB4: "bidirectional", PTC3: "bidirectional", PTC2: "bidirectional", PTD7: "bidirectional", PTD6: "bidirectional", PTD5: "bidirectional", PTC1: "bidirectional", PTC0: "bidirectional", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", PTB0: "bidirectional", PTA7: "bidirectional", PTA6: "bidirectional", VSS: "power_in", VDD_31: "power_in", PTD4: "bidirectional", PTD3: "bidirectional", PTD2: "bidirectional", PTA3: "bidirectional", PTA2: "bidirectional", PTA1: "bidirectional", PTA0: "bidirectional", PTC7: "bidirectional", PTC6: "bidirectional", PTE6: "bidirectional", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", PTC5: "bidirectional", PTC4: "bidirectional", PTA5: "bidirectional", PTA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKE16Z64VLF4";
@@ -1551,7 +1571,8 @@ export class MKL02Z32VFG4 extends Component.withPins({
   "PTA2": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z32VFG4";
@@ -1586,7 +1607,8 @@ export class MKL02Z16VFG4 extends Component.withPins({
   "PTA2": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z16VFG4";
@@ -1629,7 +1651,8 @@ export class MKL02Z32VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z32VFK4";
@@ -1672,7 +1695,8 @@ export class MKL02Z16VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z16VFK4";
@@ -1723,7 +1747,8 @@ export class MKL02Z32VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_8": "bidirectional", "PTA11/IRQ_9": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z32VFM4";
@@ -1774,7 +1799,8 @@ export class MKL02Z16VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_8": "bidirectional", "PTA11/IRQ_9": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z16VFM4";
@@ -1812,7 +1838,8 @@ export class MKL02Z32CAF4 extends Component.withPins({
   "PTA5": "E3",
   "PTA6": "E4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB5/IRQ_12": "bidirectional", PTA2: "bidirectional", "VDD/VREFH": "power_in", PTA9: "bidirectional", "PTB4/IRQ_11": "bidirectional", "VSS/VREFL": "power_in", PTA3: "bidirectional", PTA8: "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB1/IRQ_6": "bidirectional", PTA4: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z32CAF4";
@@ -1847,7 +1874,8 @@ export class MKL02Z8VFG4 extends Component.withPins({
   "PTA2": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA0/IRQ_0": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL02Z8VFG4";
@@ -1882,7 +1910,8 @@ export class MKL03Z32VFG4 extends Component.withPins({
   "PTA2": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", PTA6: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5/LLWU_P4": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z32VFG4";
@@ -1917,7 +1946,8 @@ export class MKL03Z16VFG4 extends Component.withPins({
   "PTA2": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", PTA6: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5/LLWU_P4": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z16VFG4";
@@ -1960,7 +1990,8 @@ export class MKL03Z32VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", PTA6: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5/LLWU_P4": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", "PTB13/CLKOUT32K": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z32VFK4";
@@ -2003,7 +2034,8 @@ export class MKL03Z16VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", PTA6: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5/LLWU_P4": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", "PTB13/CLKOUT32K": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z16VFK4";
@@ -2041,7 +2073,8 @@ export class MKL03Z32CAF4 extends Component.withPins({
   "PTA7/IRQ_4": "D4",
   "PTA6": "D5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB3/IRQ_10": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTB13/CLKOUT32K": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", PTA2: "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", VDD: "power_in", "PTB0/IRQ_5/LLWU_P4": "bidirectional", PTA9: "bidirectional", PTA4: "bidirectional", PTA3: "bidirectional", VSS: "power_in", "PTB1/IRQ_6": "bidirectional", PTA8: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", "PTA7/IRQ_4": "bidirectional", PTA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z32CAF4";
@@ -2079,7 +2112,8 @@ export class MKL03Z32CBF4 extends Component.withPins({
   "PTA7/IRQ_4": "D4",
   "PTA6": "D5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB3/IRQ_10": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTB13/CLKOUT32K": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", PTA2: "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", VDD: "power_in", "PTB0/IRQ_5/LLWU_P4": "bidirectional", PTA9: "bidirectional", PTA4: "bidirectional", PTA3: "bidirectional", VSS: "power_in", "PTB1/IRQ_6": "bidirectional", PTA8: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", "PTA7/IRQ_4": "bidirectional", PTA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z32CBF4";
@@ -2114,7 +2148,8 @@ export class MKL03Z8VFG4 extends Component.withPins({
   "PTA2": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", PTA6: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5/LLWU_P4": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z8VFG4";
@@ -2157,7 +2192,8 @@ export class MKL03Z8VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VSS: "power_in", PTA3: "bidirectional", PTA4: "bidirectional", "PTA5/RTC_CLK_IN": "bidirectional", PTA6: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_4": "bidirectional", "PTB0/IRQ_5/LLWU_P4": "bidirectional", "PTB1/IRQ_6": "bidirectional", "PTB2/IRQ_7": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_10": "bidirectional", "PTB4/IRQ_11": "bidirectional", "PTB5/IRQ_12": "bidirectional", "PTA12/IRQ_13/LPTMR0_ALT2": "bidirectional", "PTB13/CLKOUT32K": "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL03Z8VFK4";
@@ -2200,7 +2236,8 @@ export class MKL04Z32VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z32VFK4";
@@ -2243,7 +2280,8 @@ export class MKL04Z16VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z16VFK4";
@@ -2294,7 +2332,8 @@ export class MKL04Z32VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z32VFM4";
@@ -2345,7 +2384,8 @@ export class MKL04Z16VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z16VFM4";
@@ -2395,7 +2435,8 @@ export class MKL04Z32VLC4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "31",
   "PTA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z32VLC4";
@@ -2445,7 +2486,8 @@ export class MKL04Z16VLC4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "31",
   "PTA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z16VLC4";
@@ -2511,7 +2553,8 @@ export class MKL04Z32VLF4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "47",
   "PTA2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", VDD_5: "power_in", VREFH: "power_in", VREFL: "power_in", VSS_8: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", VSS_11: "passive", PTB18: "bidirectional", PTB19: "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", "PTA16/IRQ_4": "bidirectional", "PTA17/IRQ_5": "bidirectional", "PTA18/IRQ_6": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", PTB20: "bidirectional", VSS_30: "passive", VDD_31: "passive", "PTB14/IRQ_11": "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTA19: "bidirectional", PTB15: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z32VLF4";
@@ -2577,7 +2620,8 @@ export class MKL04Z16VLF4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "47",
   "PTA2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", VDD_5: "power_in", VREFH: "power_in", VREFL: "power_in", VSS_8: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", VSS_11: "passive", PTB18: "bidirectional", PTB19: "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", "PTA16/IRQ_4": "bidirectional", "PTA17/IRQ_5": "bidirectional", "PTA18/IRQ_6": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", PTB20: "bidirectional", VSS_30: "passive", VDD_31: "passive", "PTB14/IRQ_11": "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTA19: "bidirectional", PTB15: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z16VLF4";
@@ -2620,7 +2664,8 @@ export class MKL04Z8VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z8VFK4";
@@ -2671,7 +2716,8 @@ export class MKL04Z8VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z8VFM4";
@@ -2721,7 +2767,8 @@ export class MKL04Z8VLC4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "31",
   "PTA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL04Z8VLC4";
@@ -2764,7 +2811,8 @@ export class MKL05Z32VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z32VFK4";
@@ -2807,7 +2855,8 @@ export class MKL05Z16VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z16VFK4";
@@ -2858,7 +2907,8 @@ export class MKL05Z32VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z32VFM4";
@@ -2909,7 +2959,8 @@ export class MKL05Z16VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z16VFM4";
@@ -2959,7 +3010,8 @@ export class MKL05Z32VLC4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "31",
   "PTA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z32VLC4";
@@ -3009,7 +3061,8 @@ export class MKL05Z16VLC4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "31",
   "PTA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z16VLC4";
@@ -3075,7 +3128,8 @@ export class MKL05Z32VLF4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "47",
   "PTA2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", VDD_5: "power_in", VREFH: "power_in", VREFL: "power_in", VSS_8: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", VSS_11: "passive", PTB18: "bidirectional", PTB19: "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", "PTA16/IRQ_4": "bidirectional", "PTA17/IRQ_5": "bidirectional", "PTA18/IRQ_6": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", PTB20: "bidirectional", VSS_30: "passive", VDD_31: "passive", "PTB14/IRQ_11": "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTA19: "bidirectional", PTB15: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z32VLF4";
@@ -3141,7 +3195,8 @@ export class MKL05Z16VLF4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "47",
   "PTA2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", VDD_5: "power_in", VREFH: "power_in", VREFL: "power_in", VSS_8: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", VSS_11: "passive", PTB18: "bidirectional", PTB19: "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", "PTA16/IRQ_4": "bidirectional", "PTA17/IRQ_5": "bidirectional", "PTA18/IRQ_6": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", PTB20: "bidirectional", VSS_30: "passive", VDD_31: "passive", "PTB14/IRQ_11": "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTA19: "bidirectional", PTB15: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z16VLF4";
@@ -3184,7 +3239,8 @@ export class MKL05Z8VFK4 extends Component.withPins({
   "PTA2": "24",
   "EPAD": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", "VDD/VREFH": "power_in", "VSS/VREFL": "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z8VFK4";
@@ -3235,7 +3291,8 @@ export class MKL05Z8VFM4 extends Component.withPins({
   "PTA2": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z8VFM4";
@@ -3285,7 +3342,8 @@ export class MKL05Z8VLC4 extends Component.withPins({
   "PTA1/IRQ_1/LPTMR0_ALT1": "31",
   "PTA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTB6/IRQ_2/LPTMR0_ALT3": "bidirectional", "PTB7/IRQ_3": "bidirectional", VDD: "power_in", VREFH: "power_in", VREFL: "power_in", VSS: "power_in", PTA3: "bidirectional", "PTA4/LLWU_P0": "bidirectional", "PTA5/LLWU_P1/RTC_CLK_IN": "bidirectional", "PTA6/LLWU_P2": "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", "PTA7/IRQ_7/LLWU_P3": "bidirectional", "PTB0/IRQ_8/LLWU_P4": "bidirectional", "PTB1/IRQ_9": "bidirectional", "PTB2/IRQ_10/LLWU_P5": "bidirectional", PTA8: "bidirectional", PTA9: "bidirectional", "PTA10/IRQ_12": "bidirectional", "PTA11/IRQ_13": "bidirectional", "PTB3/IRQ_14": "bidirectional", "PTB4/IRQ_15/LLWU_P6": "bidirectional", "PTB5/IRQ_16": "bidirectional", "PTA12/IRQ_17/LPTMR0_ALT2": "bidirectional", PTA13: "bidirectional", PTB12: "bidirectional", PTB13: "bidirectional", "PTA0/IRQ_0/LLWU_P7": "bidirectional", "PTA1/IRQ_1/LPTMR0_ALT1": "bidirectional", PTA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL05Z8VLC4";
@@ -3335,7 +3393,8 @@ export class MKL16Z128VFM4 extends Component.withPins({
   "PTD6/LLWU_P15": "31",
   "PTD7": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z128VFM4";
@@ -3401,7 +3460,8 @@ export class MKL16Z128VFT4 extends Component.withPins({
   "PTD6/LLWU_P15": "47",
   "PTD7": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z128VFT4";
@@ -3483,7 +3543,8 @@ export class MKL16Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z128VLH4";
@@ -3565,7 +3626,8 @@ export class MKL16Z256VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z256VLH4";
@@ -3647,7 +3709,8 @@ export class MKL16Z256VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", PTC11: "bidirectional", PTC8: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC10: "bidirectional", PTC9: "bidirectional", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", NC: "no_connect", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTE17: "bidirectional", PTE19: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", PTE16: "bidirectional", PTE18: "bidirectional", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z256VMP4";
@@ -3697,7 +3760,8 @@ export class MKL16Z32VFM4 extends Component.withPins({
   "PTD6/LLWU_P15": "31",
   "PTD7": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z32VFM4";
@@ -3763,7 +3827,8 @@ export class MKL16Z32VFT4 extends Component.withPins({
   "PTD6/LLWU_P15": "47",
   "PTD7": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z32VFT4";
@@ -3845,7 +3910,8 @@ export class MKL16Z32VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z32VLH4";
@@ -3895,7 +3961,8 @@ export class MKL16Z64VFM4 extends Component.withPins({
   "PTD6/LLWU_P15": "31",
   "PTD7": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z64VFM4";
@@ -3961,7 +4028,8 @@ export class MKL16Z64VFT4 extends Component.withPins({
   "PTD6/LLWU_P15": "47",
   "PTD7": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z64VFT4";
@@ -4043,7 +4111,8 @@ export class MKL16Z64VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL16Z64VLH4";
@@ -4094,7 +4163,8 @@ export class MKL17Z256VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z256VFM4";
@@ -4145,7 +4215,8 @@ export class MKL17Z128VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z128VFM4";
@@ -4212,7 +4283,8 @@ export class MKL17Z256VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z256VFT4";
@@ -4279,7 +4351,8 @@ export class MKL17Z128VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z128VFT4";
@@ -4361,7 +4434,8 @@ export class MKL17Z256VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z256VLH4";
@@ -4443,7 +4517,8 @@ export class MKL17Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z128VLH4";
@@ -4525,7 +4600,8 @@ export class MKL17Z256VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", PTC11: "bidirectional", PTC8: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC10: "bidirectional", PTC9: "bidirectional", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", NC: "no_connect", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTE17: "bidirectional", PTE19: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", PTE16: "bidirectional", PTE18: "bidirectional", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z256VMP4";
@@ -4607,7 +4683,8 @@ export class MKL17Z128VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", PTC11: "bidirectional", PTC8: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC10: "bidirectional", PTC9: "bidirectional", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", NC: "no_connect", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTE17: "bidirectional", PTE19: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", PTE16: "bidirectional", PTE18: "bidirectional", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z128VMP4";
@@ -4661,7 +4738,8 @@ export class MKL17Z256CAL4 extends Component.withPins({
   "PTA0": "F5",
   "VSSA/VREFL": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", "PTD6/LLWU_P15": "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", VDD_B3: "power_in", "PTC6/LLWU_P10": "bidirectional", PTD5: "bidirectional", PTD7: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA16: "bidirectional", VSS_C4: "power_in", Reserved_C5: "passive", Reserved_C6: "passive", PTA20: "bidirectional", PTA17: "bidirectional", PTA15: "bidirectional", PTA2: "bidirectional", Reserved_D5: "passive", Reserved_D6: "passive", PTA19: "bidirectional", VDD_E2: "passive", PTA14: "bidirectional", PTA1: "bidirectional", PTE30: "bidirectional", "VDDA/VREFH": "power_in", PTA18: "bidirectional", VSS_F2: "passive", PTA4: "bidirectional", PTA3: "bidirectional", PTA0: "bidirectional", "VSSA/VREFL": "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z256CAL4";
@@ -4715,7 +4793,8 @@ export class MKL17Z64VDA4 extends Component.withPins({
   "PTA4": "F5",
   "PTA18": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTC7: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD5: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC2: "bidirectional", PTE17: "bidirectional", PTE16: "bidirectional", VDD: "power_in", VSS: "power_in", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB1: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", "VDDA/VREFH": "power_in", "VSSA/VREFL": "power_in", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE22: "bidirectional", PTE21: "bidirectional", PTE20: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA19: "bidirectional", PTE23: "bidirectional", "PTE30/VREF0": "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA4: "bidirectional", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z64VDA4";
@@ -4769,7 +4848,8 @@ export class MKL17Z32VDA4 extends Component.withPins({
   "PTA4": "F5",
   "PTA18": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTC7: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD5: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC2: "bidirectional", PTE17: "bidirectional", PTE16: "bidirectional", VDD: "power_in", VSS: "power_in", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB1: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", "VDDA/VREFH": "power_in", "VSSA/VREFL": "power_in", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE22: "bidirectional", PTE21: "bidirectional", PTE20: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA19: "bidirectional", PTE23: "bidirectional", "PTE30/VREF0": "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA4: "bidirectional", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z32VDA4";
@@ -4820,7 +4900,8 @@ export class MKL17Z64VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", "VDDA/VREFH": "power_in", "VSSA/VREFL": "power_in", "PTE30/VREF0": "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z64VFM4";
@@ -4871,7 +4952,8 @@ export class MKL17Z32VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", "VDDA/VREFH": "power_in", "VSSA/VREFL": "power_in", "PTE30/VREF0": "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS: "power_in", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z32VFM4";
@@ -4938,7 +5020,8 @@ export class MKL17Z64VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z64VFT4";
@@ -5005,7 +5088,8 @@ export class MKL17Z32VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z32VFT4";
@@ -5087,7 +5171,8 @@ export class MKL17Z64VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z64VLH4";
@@ -5169,7 +5254,8 @@ export class MKL17Z32VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z32VLH4";
@@ -5251,7 +5337,8 @@ export class MKL17Z64VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", PTC11: "bidirectional", PTC8: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC10: "bidirectional", PTC9: "bidirectional", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", NC: "no_connect", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTE17: "bidirectional", PTE19: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", PTE16: "bidirectional", PTE18: "bidirectional", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", "VREFH/VREFO": "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z64VMP4";
@@ -5333,7 +5420,8 @@ export class MKL17Z32VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", PTC11: "bidirectional", PTC8: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC10: "bidirectional", PTC9: "bidirectional", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", NC: "no_connect", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTE17: "bidirectional", PTE19: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", PTE16: "bidirectional", PTE18: "bidirectional", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", "VREFH/VREFO": "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL17Z32VMP4";
@@ -5384,7 +5472,8 @@ export class MKL24Z64VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z64VFM4";
@@ -5435,7 +5524,8 @@ export class MKL24Z32VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z32VFM4";
@@ -5502,7 +5592,8 @@ export class MKL24Z64VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z64VFT4";
@@ -5569,7 +5660,8 @@ export class MKL24Z32VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z32VFT4";
@@ -5651,7 +5743,8 @@ export class MKL24Z64VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z64VLH4";
@@ -5733,7 +5826,8 @@ export class MKL24Z32VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z32VLH4";
@@ -5831,7 +5925,8 @@ export class MKL24Z64VLK4 extends Component.withPins({
   "PTD6/LLWU_P15": "79",
   "PTD7": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", VDD_7: "power_in", VSS_8: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_38: "passive", VSS_39: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_59: "passive", VDD_60: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z64VLK4";
@@ -5929,7 +6024,8 @@ export class MKL24Z32VLK4 extends Component.withPins({
   "PTD6/LLWU_P15": "79",
   "PTD7": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", VDD_7: "power_in", VSS_8: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_38: "passive", VSS_39: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_59: "passive", VDD_60: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL24Z32VLK4";
@@ -5980,7 +6076,8 @@ export class MKL25Z128VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z128VFM4";
@@ -6047,7 +6144,8 @@ export class MKL25Z128VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z128VFT4";
@@ -6129,7 +6227,8 @@ export class MKL25Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z128VLH4";
@@ -6227,7 +6326,8 @@ export class MKL25Z128VLK4 extends Component.withPins({
   "PTD6/LLWU_P15": "79",
   "PTD7": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", VDD_7: "power_in", VSS_8: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_38: "passive", VSS_39: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_59: "passive", VDD_60: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z128VLK4";
@@ -6278,7 +6378,8 @@ export class MKL25Z32VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z32VFM4";
@@ -6345,7 +6446,8 @@ export class MKL25Z32VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z32VFT4";
@@ -6427,7 +6529,8 @@ export class MKL25Z32VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z32VLH4";
@@ -6525,7 +6628,8 @@ export class MKL25Z32VLK4 extends Component.withPins({
   "PTD6/LLWU_P15": "79",
   "PTD7": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", VDD_7: "power_in", VSS_8: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_38: "passive", VSS_39: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_59: "passive", VDD_60: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z32VLK4";
@@ -6576,7 +6680,8 @@ export class MKL25Z64VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z64VFM4";
@@ -6643,7 +6748,8 @@ export class MKL25Z64VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z64VFT4";
@@ -6725,7 +6831,8 @@ export class MKL25Z64VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z64VLH4";
@@ -6823,7 +6930,8 @@ export class MKL25Z64VLK4 extends Component.withPins({
   "PTD6/LLWU_P15": "79",
   "PTD7": "80",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", VDD_7: "power_in", VSS_8: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_38: "passive", VSS_39: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_59: "passive", VDD_60: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL25Z64VLK4";
@@ -6877,7 +6985,8 @@ export class MKL26Z128CAL4 extends Component.withPins({
   "PTA0": "F5",
   "VSSA/VREFL": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PTC4/LLWU_P8": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", PTE0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", VSS_C3: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", PTA20: "bidirectional", PTE19: "bidirectional", PTE18: "bidirectional", VREGIN: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTA19: "bidirectional", VSS_E2: "passive", PTA3: "bidirectional", PTA1: "bidirectional", PTE30: "bidirectional", "VDDA/VREFH": "power_in", PTA18: "bidirectional", VDD: "power_in", PTA4: "bidirectional", PTA2: "bidirectional", PTA0: "bidirectional", "VSSA/VREFL": "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z128CAL4";
@@ -6928,7 +7037,8 @@ export class MKL26Z128VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z128VFM4";
@@ -6995,7 +7105,8 @@ export class MKL26Z128VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z128VFT4";
@@ -7077,7 +7188,8 @@ export class MKL26Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z128VLH4";
@@ -7195,7 +7307,8 @@ export class MKL26Z256VLL4 extends Component.withPins({
   "PTD6/LLWU_P15": "99",
   "PTD7": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", PTE6: "bidirectional", VDD_8: "power_in", VSS_9: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", VSS_29: "passive", VDD_30: "passive", PTE24: "bidirectional", PTE25: "bidirectional", PTE26: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_48: "passive", VSS_49: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB7: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTB20: "bidirectional", PTB21: "bidirectional", PTB22: "bidirectional", PTB23: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_74: "passive", VDD_75: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", NC_86: "no_connect", NC_87: "no_connect", NC_88: "no_connect", NC_89: "no_connect", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z256VLL4";
@@ -7313,7 +7426,8 @@ export class MKL26Z128VLL4 extends Component.withPins({
   "PTD6/LLWU_P15": "99",
   "PTD7": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", PTE6: "bidirectional", VDD_8: "power_in", VSS_9: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", VSS_29: "passive", VDD_30: "passive", PTE24: "bidirectional", PTE25: "bidirectional", PTE26: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_48: "passive", VSS_49: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB7: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTB20: "bidirectional", PTB21: "bidirectional", PTB22: "bidirectional", PTB23: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_74: "passive", VDD_75: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", NC_86: "no_connect", NC_87: "no_connect", NC_88: "no_connect", NC_89: "no_connect", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z128VLL4";
@@ -7452,7 +7566,8 @@ export class MKL26Z256VMC4 extends Component.withPins({
   "VDD_L10": "L10",
   "PTA18": "L11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", NC_A4: "no_connect", NC_A5: "no_connect", PTC13: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTC21: "bidirectional", PTC20: "bidirectional", NC_A11: "no_connect", NC_B1: "no_connect", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC18: "bidirectional", NC_B5: "no_connect", PTC12: "bidirectional", PTC7: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC0: "bidirectional", PTB16: "bidirectional", PTC22: "bidirectional", NC_C1: "no_connect", NC_C2: "no_connect", PTD2: "bidirectional", PTC17: "bidirectional", PTC11: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC2: "bidirectional", PTB19: "bidirectional", PTB11: "bidirectional", PTC23: "bidirectional", NC_D1: "no_connect", NC_D2: "no_connect", PTD1: "bidirectional", PTD0: "bidirectional", PTC16: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB18: "bidirectional", PTB10: "bidirectional", PTB8: "bidirectional", NC_E1: "no_connect", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", PTB23: "bidirectional", PTB17: "bidirectional", PTB9: "bidirectional", PTB7: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", PTE6: "bidirectional", PTE3: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_F7: "power_in", PTB22: "bidirectional", PTB21: "bidirectional", PTB20: "bidirectional", NC_F11: "no_connect", VOUT33: "power_out", VREGIN: "power_in", VSS_G3: "passive", PTE5: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", NC_H3: "no_connect", PTA7: "bidirectional", PTE24: "bidirectional", PTE26: "bidirectional", PTE4: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTA17: "bidirectional", NC_H11: "no_connect", PTE18: "bidirectional", PTE19: "bidirectional", NC_J3: "no_connect", NC_J4: "no_connect", PTE25: "bidirectional", PTA0: "bidirectional", PTA2: "bidirectional", PTA4: "bidirectional", NC_J9: "no_connect", PTA16: "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTA6: "bidirectional", NC_K4: "no_connect", PTE30: "bidirectional", VDD_K6: "passive", PTA5: "bidirectional", PTA12: "bidirectional", PTA14: "bidirectional", VSS_K10: "passive", PTA19: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", PTE29: "bidirectional", PTE31: "bidirectional", VSS_L5: "passive", VSS_L6: "passive", NC_L7: "no_connect", "PTA13/LLWU_P4": "bidirectional", PTA15: "bidirectional", VDD_L10: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z256VMC4";
@@ -7591,7 +7706,8 @@ export class MKL26Z128VMC4 extends Component.withPins({
   "VDD_L10": "L10",
   "PTA18": "L11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", NC_A4: "no_connect", NC_A5: "no_connect", PTC13: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTC21: "bidirectional", PTC20: "bidirectional", NC_A11: "no_connect", NC_B1: "no_connect", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC18: "bidirectional", NC_B5: "no_connect", PTC12: "bidirectional", PTC7: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC0: "bidirectional", PTB16: "bidirectional", PTC22: "bidirectional", NC_C1: "no_connect", NC_C2: "no_connect", PTD2: "bidirectional", PTC17: "bidirectional", PTC11: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC2: "bidirectional", PTB19: "bidirectional", PTB11: "bidirectional", PTC23: "bidirectional", NC_D1: "no_connect", NC_D2: "no_connect", PTD1: "bidirectional", PTD0: "bidirectional", PTC16: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB18: "bidirectional", PTB10: "bidirectional", PTB8: "bidirectional", NC_E1: "no_connect", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", PTB23: "bidirectional", PTB17: "bidirectional", PTB9: "bidirectional", PTB7: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", PTE6: "bidirectional", PTE3: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_F7: "power_in", PTB22: "bidirectional", PTB21: "bidirectional", PTB20: "bidirectional", NC_F11: "no_connect", VOUT33: "power_out", VREGIN: "power_in", VSS_G3: "passive", PTE5: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", NC_H3: "no_connect", PTA7: "bidirectional", PTE24: "bidirectional", PTE26: "bidirectional", PTE4: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTA17: "bidirectional", NC_H11: "no_connect", PTE18: "bidirectional", PTE19: "bidirectional", NC_J3: "no_connect", NC_J4: "no_connect", PTE25: "bidirectional", PTA0: "bidirectional", PTA2: "bidirectional", PTA4: "bidirectional", NC_J9: "no_connect", PTA16: "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTA6: "bidirectional", NC_K4: "no_connect", PTE30: "bidirectional", VDD_K6: "passive", PTA5: "bidirectional", PTA12: "bidirectional", PTA14: "bidirectional", VSS_K10: "passive", PTA19: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", PTE29: "bidirectional", PTE31: "bidirectional", VSS_L5: "passive", VSS_L6: "passive", NC_L7: "no_connect", "PTA13/LLWU_P4": "bidirectional", PTA15: "bidirectional", VDD_L10: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z128VMC4";
@@ -7673,7 +7789,8 @@ export class MKL26Z256VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z256VLH4";
@@ -7755,7 +7872,8 @@ export class MKL26Z256VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", PTC11: "bidirectional", PTC8: "bidirectional", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC10: "bidirectional", PTC9: "bidirectional", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", NC: "no_connect", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", USB0_DM: "bidirectional", VREGIN: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", USB0_DP: "bidirectional", VOUT33: "power_out", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z256VMP4";
@@ -7806,7 +7924,8 @@ export class MKL26Z32VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z32VFM4";
@@ -7873,7 +7992,8 @@ export class MKL26Z32VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z32VFT4";
@@ -7955,7 +8075,8 @@ export class MKL26Z32VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z32VLH4";
@@ -8006,7 +8127,8 @@ export class MKL26Z64VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VDDA: "power_in", VSSA: "power_in", PTE30: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z64VFM4";
@@ -8073,7 +8195,8 @@ export class MKL26Z64VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z64VFT4";
@@ -8155,7 +8278,8 @@ export class MKL26Z64VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL26Z64VLH4";
@@ -8222,7 +8346,8 @@ export class MKL27Z256VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z256VFT4";
@@ -8289,7 +8414,8 @@ export class MKL27Z128VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z128VFT4";
@@ -8371,7 +8497,8 @@ export class MKL27Z256VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z256VLH4";
@@ -8453,7 +8580,8 @@ export class MKL27Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z128VLH4";
@@ -8504,7 +8632,8 @@ export class MKL27Z64VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", USB_VDD: "power_in", PTE16: "bidirectional", "VDDA/VREFH": "power_in", "VSSA/VREFL": "power_in", "PTE30/VREF0": "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z64VFM4";
@@ -8555,7 +8684,8 @@ export class MKL27Z32VFM4 extends Component.withPins({
   "PTD7": "32",
   "EPAD": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", USB_VDD: "power_in", PTE16: "bidirectional", "VDDA/VREFH": "power_in", "VSSA/VREFL": "power_in", "PTE30/VREF0": "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD: "power_in", VSS_16: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z32VFM4";
@@ -8622,7 +8752,8 @@ export class MKL27Z64VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", USB_VDD: "power_in", PTE16: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z64VFT4";
@@ -8689,7 +8820,8 @@ export class MKL27Z32VFT4 extends Component.withPins({
   "PTD7": "48",
   "EPAD": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", USB_VDD: "power_in", PTE16: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "passive", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z32VFT4";
@@ -8771,7 +8903,8 @@ export class MKL27Z64VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", USB_VDD: "power_in", PTE16: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z64VLH4";
@@ -8853,7 +8986,8 @@ export class MKL27Z32VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", USB_VDD: "power_in", PTE16: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", "VREFH/VREFO": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VDD_48: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL27Z32VLH4";
@@ -8992,7 +9126,8 @@ export class MKL28Z512VDC7 extends Component.withPins({
   "VDD_L10": "L10",
   "PTA18": "L11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTC19: "bidirectional", PTC14: "bidirectional", PTC13: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD9: "bidirectional", "PTD8/LLWU_P24": "bidirectional", VSS_A11: "power_in", PTD10: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC18: "bidirectional", PTC15: "bidirectional", PTC12: "bidirectional", PTC7: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC0: "bidirectional", PTB16: "bidirectional", PTC22: "bidirectional", PTD12: "bidirectional", "PTD11/LLWU_P25": "bidirectional", "PTD2/LLWU_P13": "bidirectional", PTC17: "bidirectional", "PTC11/LLWU_P11": "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC2: "bidirectional", PTB19: "bidirectional", PTB11: "bidirectional", PTC23: "bidirectional", PTD14: "bidirectional", PTD13: "bidirectional", PTD1: "bidirectional", "PTD0/LLWU_P12": "bidirectional", PTC16: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB18: "bidirectional", PTB10: "bidirectional", PTB8: "bidirectional", PTD15: "bidirectional", "PTE2/LLWU_P1": "bidirectional", "PTE1/LLWU_P0": "bidirectional", PTE0: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", PTB23: "bidirectional", PTB17: "bidirectional", PTB9: "bidirectional", PTB7: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", "PTE6/LLWU_P16": "bidirectional", PTE3: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_F7: "passive", PTB22: "bidirectional", PTB21: "bidirectional", PTB20: "bidirectional", PTB6: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", VSS_G3: "passive", PTE5: "bidirectional", "VREFH/VREF_OUT": "power_in", VREFL: "power_in", VSS_G7: "passive", PTB3: "bidirectional", PTB2: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE16: "bidirectional", "PTE17/LLWU_P19": "bidirectional", NC_H3: "no_connect", PTA7: "bidirectional", PTE24: "bidirectional", PTE26: "bidirectional", "PTE4/LLWU_P2": "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTA17: "bidirectional", PTA29: "bidirectional", "PTE18/LLWU_P20": "bidirectional", PTE19: "bidirectional", NC_J3: "no_connect", "PTA11/LLWU_P23": "bidirectional", "PTE25/LLWU_P21": "bidirectional", PTA0: "bidirectional", PTA2: "bidirectional", "PTA4/LLWU_P3": "bidirectional", "PTA10/LLWU_P22": "bidirectional", PTA16: "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTA6: "bidirectional", NC_K4: "no_connect", PTE30: "bidirectional", VDD_K6: "passive", PTA5: "bidirectional", PTA12: "bidirectional", PTA14: "bidirectional", VSS_K10: "passive", PTA19: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", PTE29: "bidirectional", PTE31: "bidirectional", VSS_L5: "passive", VSS_L6: "passive", NC_L7: "no_connect", "PTA13/LLWU_P4": "bidirectional", PTA15: "bidirectional", VDD_L10: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL28Z512VDC7";
@@ -9110,7 +9245,8 @@ export class MKL28Z512VLL7 extends Component.withPins({
   "PTD6/LLWU_P15": "99",
   "PTD7": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", "PTE1/LLWU_P0": "bidirectional", "PTE2/LLWU_P1": "bidirectional", PTE3: "bidirectional", "PTE4/LLWU_P2": "bidirectional", PTE5: "bidirectional", "PTE6/LLWU_P16": "bidirectional", VDD_8: "power_in", VSS_9: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE16: "bidirectional", "PTE17/LLWU_P19": "bidirectional", "PTE18/LLWU_P20": "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", "VREFH/VREF_OUT": "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", VSS_29: "passive", VDD_30: "passive", PTE24: "bidirectional", "PTE25/LLWU_P21": "bidirectional", PTE26: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", "PTA4/LLWU_P3": "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", PTA12: "bidirectional", "PTA13/LLWU_P4": "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_48: "passive", VSS_49: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB7: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTB20: "bidirectional", PTB21: "bidirectional", PTB22: "bidirectional", PTB23: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_74: "passive", VDD_75: "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", "PTC11/LLWU_P11": "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC14: "bidirectional", PTC15: "bidirectional", VSS_88: "passive", VDD_89: "passive", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", "PTD0/LLWU_P12": "bidirectional", PTD1: "bidirectional", "PTD2/LLWU_P13": "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL28Z512VLL7";
@@ -9192,7 +9328,8 @@ export class MKL43Z256VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VLL3: "power_out", "VLL2/PTC20": "power_out", "VLL1/PTC21": "power_out", "VCAP2/PTC22": "passive", "VCAP1/PTC23": "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL43Z256VLH4";
@@ -9274,7 +9411,8 @@ export class MKL43Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VLL3: "power_out", "VLL2/PTC20": "power_out", "VLL1/PTC21": "power_out", "VCAP2/PTC22": "passive", "VCAP1/PTC23": "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL43Z128VLH4";
@@ -9356,7 +9494,8 @@ export class MKL43Z256VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", "VCAP1/PTC23": "passive", "VLL2/PTC20": "power_out", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", "VCAP2/PTC22": "passive", "VLL1/PTC21": "power_out", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", VLL3: "power_out", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", USB0_DM: "bidirectional", VREGIN: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", USB0_DP: "bidirectional", VOUT33: "power_out", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL43Z256VMP4";
@@ -9438,7 +9577,8 @@ export class MKL43Z128VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", "VCAP1/PTC23": "passive", "VLL2/PTC20": "power_out", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", "VCAP2/PTC22": "passive", "VLL1/PTC21": "power_out", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", VLL3: "power_out", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", USB0_DM: "bidirectional", VREGIN: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", USB0_DP: "bidirectional", VOUT33: "power_out", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL43Z128VMP4";
@@ -9520,7 +9660,8 @@ export class MKL46Z256VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VLL3: "power_out", "VLL2/PTC20": "power_out", "VLL1/PTC21": "power_out", "VCAP2/PTC22": "passive", "VCAP1/PTC23": "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z256VLH4";
@@ -9602,7 +9743,8 @@ export class MKL46Z128VLH4 extends Component.withPins({
   "PTD6/LLWU_P15": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "passive", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_47: "passive", VLL3: "power_out", "VLL2/PTC20": "power_out", "VLL1/PTC21": "power_out", "VCAP2/PTC22": "passive", "VCAP1/PTC23": "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z128VLH4";
@@ -9720,7 +9862,8 @@ export class MKL46Z256VLL4 extends Component.withPins({
   "PTD6/LLWU_P15": "99",
   "PTD7": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", PTE6: "bidirectional", VDD_8: "power_in", VSS_9: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", VSS_29: "passive", VDD_30: "passive", PTE24: "bidirectional", PTE25: "bidirectional", PTE26: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_48: "passive", VSS_49: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2_55: "bidirectional", PTB3: "bidirectional", PTB7: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTB2_66: "bidirectional", PTB21: "bidirectional", PTB22: "bidirectional", PTB23: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_74: "passive", VLL3: "power_out", "VLL2/PTC20": "power_out", "VLL1/PTC21": "power_out", "VCAP2/PTC22": "passive", "VCAP1/PTC23": "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z256VLL4";
@@ -9838,7 +9981,8 @@ export class MKL46Z128VLL4 extends Component.withPins({
   "PTD6/LLWU_P15": "99",
   "PTD7": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", PTE2: "bidirectional", PTE3: "bidirectional", PTE4: "bidirectional", PTE5: "bidirectional", PTE6: "bidirectional", VDD_8: "power_in", VSS_9: "power_in", USB0_DP: "bidirectional", USB0_DM: "bidirectional", VOUT33: "power_out", VREGIN: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", VSS_29: "passive", VDD_30: "passive", PTE24: "bidirectional", PTE25: "bidirectional", PTE26: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA6: "bidirectional", PTA7: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", PTA14: "bidirectional", PTA15: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", VDD_48: "passive", VSS_49: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTB1: "bidirectional", PTB2_55: "bidirectional", PTB3: "bidirectional", PTB7: "bidirectional", PTB8: "bidirectional", PTB9: "bidirectional", PTB10: "bidirectional", PTB11: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTB2_66: "bidirectional", PTB21: "bidirectional", PTB22: "bidirectional", PTB23: "bidirectional", PTC0: "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTC2: "bidirectional", "PTC3/LLWU_P7": "bidirectional", VSS_74: "passive", VLL3: "power_out", "VLL2/PTC20": "power_out", "VLL1/PTC21": "power_out", "VCAP2/PTC22": "passive", "VCAP1/PTC23": "passive", "PTC4/LLWU_P8": "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTC12: "bidirectional", PTC13: "bidirectional", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD5: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z128VLL4";
@@ -9977,7 +10121,8 @@ export class MKL46Z256VMC4 extends Component.withPins({
   "VDD_L10": "L10",
   "PTA18": "L11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", NC_A4: "no_connect", NC_A5: "no_connect", PTC13: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", "VLL1/PTC21": "power_out", "VLL2/PTC20": "power_out", VLL3: "power_out", NC_B1: "no_connect", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC18: "bidirectional", NC_B5: "no_connect", PTC12: "bidirectional", PTC7: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC0: "bidirectional", PTB16: "bidirectional", "VCAP2/PTC22": "passive", NC_C1: "no_connect", NC_C2: "no_connect", PTD2: "bidirectional", PTC17: "bidirectional", PTC11: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC2: "bidirectional", PTB19: "bidirectional", PTB11: "bidirectional", "VCAP1/PTC23": "passive", NC_D1: "no_connect", NC_D2: "no_connect", PTD1: "bidirectional", PTD0: "bidirectional", PTC16: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB18: "bidirectional", PTB10: "bidirectional", PTB8: "bidirectional", NC_E1: "no_connect", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", PTB23: "bidirectional", PTB17: "bidirectional", PTB9: "bidirectional", PTB7: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", PTE6: "bidirectional", PTE3: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_F7: "power_in", PTB22: "bidirectional", PTB21: "bidirectional", PTB2_F10: "bidirectional", NC_F11: "no_connect", VOUT33: "power_out", VREGIN: "power_in", VSS_G3: "passive", PTE5: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", PTB3: "bidirectional", PTB2_G9: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", NC_H3: "no_connect", PTA7: "bidirectional", PTE24: "bidirectional", PTE26: "bidirectional", PTE4: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTA17: "bidirectional", NC_H11: "no_connect", PTE18: "bidirectional", PTE19: "bidirectional", NC_J3: "no_connect", NC_J4: "no_connect", PTE25: "bidirectional", PTA0: "bidirectional", PTA2: "bidirectional", PTA4: "bidirectional", NC_J9: "no_connect", PTA16: "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTA6: "bidirectional", NC_K4: "no_connect", PTE30: "bidirectional", VDD_K6: "passive", PTA5: "bidirectional", PTA12: "bidirectional", PTA14: "bidirectional", VSS_K10: "passive", PTA19: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", PTE29: "bidirectional", PTE31: "bidirectional", VSS_L5: "passive", VSS_L6: "passive", NC_L7: "no_connect", PTA13: "bidirectional", PTA15: "bidirectional", VDD_L10: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z256VMC4";
@@ -10116,7 +10261,8 @@ export class MKL46Z128VMC4 extends Component.withPins({
   "VDD_L10": "L10",
   "PTA18": "L11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTD7: "bidirectional", PTD5: "bidirectional", "PTD4/LLWU_P14": "bidirectional", NC_A4: "no_connect", NC_A5: "no_connect", PTC13: "bidirectional", PTC8: "bidirectional", "PTC4/LLWU_P8": "bidirectional", "VLL1/PTC21": "power_out", "VLL2/PTC20": "power_out", VLL3: "power_out", NC_B1: "no_connect", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", PTC18: "bidirectional", NC_B5: "no_connect", PTC12: "bidirectional", PTC7: "bidirectional", "PTC3/LLWU_P7": "bidirectional", PTC0: "bidirectional", PTB16: "bidirectional", "VCAP2/PTC22": "passive", NC_C1: "no_connect", NC_C2: "no_connect", PTD2: "bidirectional", PTC17: "bidirectional", PTC11: "bidirectional", PTC10: "bidirectional", "PTC6/LLWU_P10": "bidirectional", PTC2: "bidirectional", PTB19: "bidirectional", PTB11: "bidirectional", "VCAP1/PTC23": "passive", NC_D1: "no_connect", NC_D2: "no_connect", PTD1: "bidirectional", PTD0: "bidirectional", PTC16: "bidirectional", PTC9: "bidirectional", "PTC5/LLWU_P9": "bidirectional", "PTC1/LLWU_P6/RTC_CLKIN": "bidirectional", PTB18: "bidirectional", PTB10: "bidirectional", PTB8: "bidirectional", NC_E1: "no_connect", PTE2: "bidirectional", PTE1: "bidirectional", PTE0: "bidirectional", VDD_E5: "power_in", VDD_E6: "passive", VDD_E7: "passive", PTB23: "bidirectional", PTB17: "bidirectional", PTB9: "bidirectional", PTB7: "bidirectional", USB0_DP: "bidirectional", USB0_DM: "bidirectional", PTE6: "bidirectional", PTE3: "bidirectional", VDDA: "power_in", VSSA: "power_in", VSS_F7: "power_in", PTB22: "bidirectional", PTB21: "bidirectional", PTB2_F10: "bidirectional", NC_F11: "no_connect", VOUT33: "power_out", VREGIN: "power_in", VSS_G3: "passive", PTE5: "bidirectional", VREFH: "power_in", VREFL: "power_in", VSS_G7: "passive", PTB3: "bidirectional", PTB2_G9: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTE16: "bidirectional", PTE17: "bidirectional", NC_H3: "no_connect", PTA7: "bidirectional", PTE24: "bidirectional", PTE26: "bidirectional", PTE4: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTA17: "bidirectional", NC_H11: "no_connect", PTE18: "bidirectional", PTE19: "bidirectional", NC_J3: "no_connect", NC_J4: "no_connect", PTE25: "bidirectional", PTA0: "bidirectional", PTA2: "bidirectional", PTA4: "bidirectional", NC_J9: "no_connect", PTA16: "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTA6: "bidirectional", NC_K4: "no_connect", PTE30: "bidirectional", VDD_K6: "passive", PTA5: "bidirectional", PTA12: "bidirectional", PTA14: "bidirectional", VSS_K10: "passive", PTA19: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", PTE29: "bidirectional", PTE31: "bidirectional", VSS_L5: "passive", VSS_L6: "passive", NC_L7: "no_connect", PTA13: "bidirectional", PTA15: "bidirectional", VDD_L10: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z128VMC4";
@@ -10198,7 +10344,8 @@ export class MKL46Z256VMP4 extends Component.withPins({
   "VSS_H7": "H7",
   "PTA18": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTD7: "bidirectional", "PTD4/LLWU_P14": "bidirectional", PTD1: "bidirectional", "VCAP1/PTC23": "passive", "VLL2/PTC20": "power_out", "PTC6/LLWU_P10": "bidirectional", "PTC5/LLWU_P9": "bidirectional", PTE1: "bidirectional", "PTD6/LLWU_P15": "bidirectional", PTD3: "bidirectional", "VCAP2/PTC22": "passive", "VLL1/PTC21": "power_out", PTC7: "bidirectional", PTC2: "bidirectional", "PTC4/LLWU_P8": "bidirectional", PTD5: "bidirectional", PTD2: "bidirectional", PTD0: "bidirectional", VSS_C4: "power_in", VLL3: "power_out", "PTC1/LLWU_P6": "bidirectional", PTB19: "bidirectional", "PTC3/LLWU_P7": "bidirectional", USB0_DM: "bidirectional", VREGIN: "power_in", PTA0: "bidirectional", PTA1: "bidirectional", PTA3: "bidirectional", PTB18: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", USB0_DP: "bidirectional", VOUT33: "power_out", VSS_E3: "passive", VDD_E4: "power_in", PTA2: "bidirectional", PTB16: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTE21: "bidirectional", PTE23: "bidirectional", VSSA: "power_in", VDDA: "power_in", PTA5: "bidirectional", PTB1: "bidirectional", "PTB0/LLWU_P5": "bidirectional", PTA20: "bidirectional", PTE20: "bidirectional", PTE22: "bidirectional", VREFL: "power_in", VREFH: "power_in", PTA4: "bidirectional", PTA13: "bidirectional", VDD_G7: "passive", PTA19: "bidirectional", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA12: "bidirectional", VSS_H7: "passive", PTA18: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKL46Z256VMP4";
@@ -10264,7 +10411,8 @@ export class MKV11Z128VLF7 extends Component.withPins({
   "PTD6": "47",
   "PTD7": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", VSS_2: "power_in", PTE16: "bidirectional", PTE17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", VDD_22: "power_in", VSS_23: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTC0: "bidirectional", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", PTD4: "bidirectional", PTD5: "bidirectional", PTD6: "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKV11Z128VLF7";
@@ -10346,7 +10494,8 @@ export class MKV11Z128VLH7 extends Component.withPins({
   "PTD6": "63",
   "PTD7": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTE0: "bidirectional", PTE1: "bidirectional", VDD_3: "power_in", VSS_4: "power_in", PTE16: "bidirectional", PTR17: "bidirectional", PTE18: "bidirectional", PTE19: "bidirectional", PTE20: "bidirectional", PTE21: "bidirectional", PTE22: "bidirectional", PTE23: "bidirectional", VDDA: "power_in", VREFH: "power_in", VREFL: "power_in", VSSA: "power_in", PTE29: "bidirectional", PTE30: "bidirectional", PTE31: "bidirectional", PTE24: "bidirectional", PTE25: "bidirectional", PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA3: "bidirectional", PTA4: "bidirectional", PTA5: "bidirectional", PTA12: "bidirectional", PTA13: "bidirectional", VDD_30: "power_in", VSS_31: "passive", PTA18: "bidirectional", PTA19: "bidirectional", PTA20: "bidirectional", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", PTB19: "bidirectional", PTC0: "bidirectional", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", VSS_47: "passive", VDD_48: "power_in", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", PTC8: "bidirectional", PTC9: "bidirectional", PTC10: "bidirectional", PTC11: "bidirectional", PTD0: "bidirectional", PTD1: "bidirectional", PTD2: "bidirectional", PTD3: "bidirectional", PTD4: "bidirectional", PTD5: "bidirectional", PTD6: "bidirectional", PTD7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKV11Z128VLH7";
@@ -10413,7 +10562,8 @@ export class MKW41Z512VHT extends Component.withPins({
   "PTC19": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", PSWITCH: "input", DCDC_CFG: "input", VDCDC_IN: "power_in", DCDC_LP: "passive", DCDC_LN: "passive", DCDC_GND: "power_in", VDD_1P8OUT: "power_out", VDD_1P5OUT_PMCIN: "power_out", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", VDD_0: "power_in", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", "ADC0_DP0/CMP0_IN0": "input", "ADC0_DM0/CMP0_IN1": "input", VSSA: "power_in", "VREFH/VREF_OUT": "bidirectional", VDDA: "power_in", XTAL_OUT: "output", EXTAL: "input", XTAL: "input", VDD_RF3: "power_in", ANT: "passive", GANT: "power_in", VDD_RF2: "power_in", VDD_RF1: "power_in", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", VDD_1: "power_in", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTC19: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKW41Z512VHT";
@@ -10480,7 +10630,8 @@ export class MKW21Z256VHT extends Component.withPins({
   "PTC19": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", PSWITCH: "input", DCDC_CFG: "input", VDCDC_IN: "power_in", DCDC_LP: "passive", DCDC_LN: "passive", DCDC_GND: "power_in", VDD_1P8OUT: "power_out", VDD_1P5OUT_PMCIN: "power_out", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", VDD_0: "power_in", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", "ADC0_DP0/CMP0_IN0": "input", "ADC0_DM0/CMP0_IN1": "input", VSSA: "power_in", "VREFH/VREF_OUT": "bidirectional", VDDA: "power_in", XTAL_OUT: "output", EXTAL: "input", XTAL: "input", VDD_RF3: "power_in", ANT: "passive", GANT: "power_in", VDD_RF2: "power_in", VDD_RF1: "power_in", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", VDD_1: "power_in", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTC19: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKW21Z256VHT";
@@ -10547,7 +10698,8 @@ export class MKW21Z512VHT extends Component.withPins({
   "PTC19": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", PSWITCH: "input", DCDC_CFG: "input", VDCDC_IN: "power_in", DCDC_LP: "passive", DCDC_LN: "passive", DCDC_GND: "power_in", VDD_1P8OUT: "power_out", VDD_1P5OUT_PMCIN: "power_out", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", VDD_0: "power_in", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", "ADC0_DP0/CMP0_IN0": "input", "ADC0_DM0/CMP0_IN1": "input", VSSA: "power_in", "VREFH/VREF_OUT": "bidirectional", VDDA: "power_in", XTAL_OUT: "output", EXTAL: "input", XTAL: "input", VDD_RF3: "power_in", ANT: "passive", GANT: "power_in", VDD_RF2: "power_in", VDD_RF1: "power_in", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", VDD_1: "power_in", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTC19: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKW21Z512VHT";
@@ -10614,7 +10766,8 @@ export class MKW31Z256VHT extends Component.withPins({
   "PTC19": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", PSWITCH: "input", DCDC_CFG: "input", VDCDC_IN: "power_in", DCDC_LP: "passive", DCDC_LN: "passive", DCDC_GND: "power_in", VDD_1P8OUT: "power_out", VDD_1P5OUT_PMCIN: "power_out", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", VDD_0: "power_in", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", "ADC0_DP0/CMP0_IN0": "input", "ADC0_DM0/CMP0_IN1": "input", VSSA: "power_in", "VREFH/VREF_OUT": "bidirectional", VDDA: "power_in", XTAL_OUT: "output", EXTAL: "input", XTAL: "input", VDD_RF3: "power_in", ANT: "passive", GANT: "power_in", VDD_RF2: "power_in", VDD_RF1: "power_in", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", VDD_1: "power_in", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTC19: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKW31Z256VHT";
@@ -10681,7 +10834,8 @@ export class MKW31Z512VHT extends Component.withPins({
   "PTC19": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", PSWITCH: "input", DCDC_CFG: "input", VDCDC_IN: "power_in", DCDC_LP: "passive", DCDC_LN: "passive", DCDC_GND: "power_in", VDD_1P8OUT: "power_out", VDD_1P5OUT_PMCIN: "power_out", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", VDD_0: "power_in", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", "ADC0_DP0/CMP0_IN0": "input", "ADC0_DM0/CMP0_IN1": "input", VSSA: "power_in", "VREFH/VREF_OUT": "bidirectional", VDDA: "power_in", XTAL_OUT: "output", EXTAL: "input", XTAL: "input", VDD_RF3: "power_in", ANT: "passive", GANT: "power_in", VDD_RF2: "power_in", VDD_RF1: "power_in", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", VDD_1: "power_in", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTC19: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKW31Z512VHT";
@@ -10748,7 +10902,8 @@ export class MKW41Z256VHT extends Component.withPins({
   "PTC19": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PTA0: "bidirectional", PTA1: "bidirectional", PTA2: "bidirectional", PTA16: "bidirectional", PTA17: "bidirectional", PTA18: "bidirectional", PTA19: "bidirectional", PSWITCH: "input", DCDC_CFG: "input", VDCDC_IN: "power_in", DCDC_LP: "passive", DCDC_LN: "passive", DCDC_GND: "power_in", VDD_1P8OUT: "power_out", VDD_1P5OUT_PMCIN: "power_out", PTB0: "bidirectional", PTB1: "bidirectional", PTB2: "bidirectional", PTB3: "bidirectional", VDD_0: "power_in", PTB16: "bidirectional", PTB17: "bidirectional", PTB18: "bidirectional", "ADC0_DP0/CMP0_IN0": "input", "ADC0_DM0/CMP0_IN1": "input", VSSA: "power_in", "VREFH/VREF_OUT": "bidirectional", VDDA: "power_in", XTAL_OUT: "output", EXTAL: "input", XTAL: "input", VDD_RF3: "power_in", ANT: "passive", GANT: "power_in", VDD_RF2: "power_in", VDD_RF1: "power_in", PTC1: "bidirectional", PTC2: "bidirectional", PTC3: "bidirectional", PTC4: "bidirectional", PTC5: "bidirectional", PTC6: "bidirectional", PTC7: "bidirectional", VDD_1: "power_in", PTC16: "bidirectional", PTC17: "bidirectional", PTC18: "bidirectional", PTC19: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_Kinetis:MKW41Z256VHT";

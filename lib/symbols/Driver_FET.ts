@@ -18,7 +18,8 @@ export class _1EDN7550B extends Component.withPins({
   "OUT_SRC": "5",
   "OUT_SNK": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IN-": "input", GND: "power_in", "IN+": "input", VDD: "power_in", OUT_SRC: "output", OUT_SNK: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:1EDN7550B";
@@ -42,7 +43,8 @@ export class _1EDN8550B extends Component.withPins({
   "OUT_SRC": "5",
   "OUT_SNK": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IN-": "input", GND: "power_in", "IN+": "input", VDD: "power_in", OUT_SRC: "output", OUT_SNK: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:1EDN8550B";
@@ -80,7 +82,8 @@ export class _2ED1324S12P extends Component.withPins({
   "NC_19": "19",
   "NC_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", HIN: "input", LIN: "input", "~{RFE}": "open_collector", VSS: "power_in", ITRIP: "passive", COM: "power_in", LC: "passive", LO: "output", VCC: "power_in", NC_13: "no_connect", VB: "passive", HO: "output", HC: "passive", VS: "passive", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:2ED1324S12P";
@@ -118,7 +121,8 @@ export class _2ED1323S12P extends Component.withPins({
   "NC_19": "19",
   "NC_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", HIN: "input", LIN: "input", "~{RFE}": "open_collector", VSS: "power_in", ITRIP: "passive", COM: "power_in", LC: "passive", LO: "output", VCC: "power_in", NC_13: "no_connect", VB: "passive", HO: "output", HC: "passive", VS: "passive", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:2ED1323S12P";
@@ -150,7 +154,8 @@ export class _2ED21824S06J extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", VSS: "power_in", DT: "passive", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:2ED21824S06J";
@@ -182,7 +187,8 @@ export class _2EDL23N06PJXUMA1 extends Component.withPins({
   "NC_13": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HIN: "input", LIN: "input", "EN/FLT": "open_collector", GND: "power_in", PGND: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_13: "no_connect", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:2EDL23N06PJXUMA1";
@@ -216,7 +222,8 @@ export class ACPL_336J extends Component.withPins({
   "VLED": "15",
   "VEE2_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VEE1: "power_in", "VIN+": "input", VCC1: "power_in", VLEDDRV: "output", "~{UVLO}": "open_collector", "~{FAULT}": "open_collector", ANODE: "passive", CATHODE: "passive", VEE2_9: "passive", VCLAMP: "bidirectional", VOUT: "output", VCC2: "power_in", VE: "power_in", DESAT: "bidirectional", VLED: "output", VEE2_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ACPL-336J";
@@ -240,7 +247,8 @@ export class ACPL_P343 extends Component.withPins({
   "VO": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", NC: "no_connect", C: "passive", VEE: "power_in", VO: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ACPL-P343";
@@ -264,7 +272,8 @@ export class ACPL_W343 extends Component.withPins({
   "VO": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", NC: "no_connect", C: "passive", VEE: "power_in", VO: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ACPL-W343";
@@ -299,7 +308,8 @@ export class AN34092B extends Component.withPins({
   "CN": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUT1: "output", OUT2: "output", OUT3: "output", VEE: "power_in", GND_5: "power_in", VCC: "power_in", INP: "input", INN: "input", TEST: "passive", VREG: "passive", IGCNT: "passive", VRCNT: "passive", VR: "passive", "~{FAULT}": "open_collector", CP: "passive", CN: "passive", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:AN34092B";
@@ -325,7 +335,8 @@ export class BDR2L00_DFN extends Component.withPins({
   "PHASE": "7",
   "UGATE": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_9: "passive", BOOT: "passive", PWM: "input", EN: "input", VCC: "power_in", LGATE: "output", GND_6: "power_in", PHASE: "passive", UGATE: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:BDR2L00_DFN";
@@ -351,7 +362,8 @@ export class ICL7667xPA extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", "V-": "power_in", IN_B: "input", "~{OUT_B}": "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ICL7667xPA";
@@ -376,7 +388,8 @@ export class DS0026 extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", "V-": "power_in", IN_B: "input", "~{OUT_B}": "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:DS0026";
@@ -402,7 +415,8 @@ export class EL7202CN extends Component.withPins({
   "OUT_A": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V+": "power_in", OUT_A: "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:EL7202CN";
@@ -428,7 +442,8 @@ export class EL7202CS extends Component.withPins({
   "OUT_A": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V+": "power_in", OUT_A: "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:EL7202CS";
@@ -454,7 +469,8 @@ export class EL7212CN extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", "~{OUT_B}": "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:EL7212CN";
@@ -480,7 +496,8 @@ export class EL7212CS extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", "~{OUT_B}": "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:EL7212CS";
@@ -506,7 +523,8 @@ export class EL7222CN extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:EL7222CN";
@@ -532,7 +550,8 @@ export class EL7222CS extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:EL7222CS";
@@ -555,7 +574,8 @@ export class FAN3111C extends Component.withPins({
   "~{IN-}": "4",
   "OUT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", "IN+": "input", "~{IN-}": "input", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN3111C";
@@ -578,7 +598,8 @@ export class FAN3111E extends Component.withPins({
   "XREF": "4",
   "OUT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", "IN+": "input", XREF: "input", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN3111E";
@@ -604,7 +625,8 @@ export class FAN3121xMX extends Component.withPins({
   "~{OUT}_7": "7",
   "V_{DD}_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "power_in", IN: "input", EN: "input", GND_4: "power_in", GND_5: "passive", "~{OUT}_6": "output", "~{OUT}_7": "passive", "V_{DD}_8": "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN3121xMX";
@@ -630,7 +652,8 @@ export class FAN3122xMX extends Component.withPins({
   "OUT_7": "7",
   "V_{DD}_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}_1": "power_in", IN: "input", EN: "input", GND_4: "power_in", GND_5: "passive", OUT_6: "output", OUT_7: "passive", "V_{DD}_8": "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN3122xMX";
@@ -656,7 +679,8 @@ export class FAN3268 extends Component.withPins({
   "OUTA": "7",
   "ENB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND: "power_in", INB: "input", "~{OUTB}": "output", VDD: "power_in", OUTA: "output", ENB: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN3268";
@@ -682,7 +706,8 @@ export class FAN3278 extends Component.withPins({
   "OUTA": "7",
   "ENB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND: "power_in", INB: "input", "~{OUTB}": "output", VDD: "power_in", OUTA: "output", ENB: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN3278";
@@ -708,7 +733,8 @@ export class FAN7371 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", IN: "input", NC_3: "no_connect", GND: "power_in", NC_5: "no_connect", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN7371";
@@ -746,7 +772,8 @@ export class FAN7888 extends Component.withPins({
   "HO1": "19",
   "VB1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN1: "input", LIN1: "input", HIN2: "input", LIN2: "input", HIN3: "input", LIN3: "input", LO3: "output", VS3: "passive", HO3: "output", VB3: "passive", GND: "power_in", VDD: "power_in", LO2: "output", VS2: "passive", HO2: "output", VB2: "passive", LO1: "output", VS1: "passive", HO1: "output", VB1: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN7888";
@@ -784,7 +811,8 @@ export class FAN7388 extends Component.withPins({
   "HO1": "19",
   "VB1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN1: "input", LIN1: "input", HIN2: "input", LIN2: "input", HIN3: "input", LIN3: "input", LO3: "output", VS3: "passive", HO3: "output", VB3: "passive", GND: "power_in", VDD: "power_in", LO2: "output", VS2: "passive", HO2: "output", VB2: "passive", LO1: "output", VS1: "passive", HO1: "output", VB1: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN7388";
@@ -810,7 +838,8 @@ export class FAN7842 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FAN7842";
@@ -838,7 +867,8 @@ export class FL5150MX extends Component.withPins({
   "DRV_Gate": "9",
   "OC_Sense1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ZC_Monitor: "input", DIM_Control: "input", VDD: "power_out", DIM_Mode: "input", GND: "power_out", VS: "power_in", Low_Power: "input", OC_Sense2: "input", DRV_Gate: "output", OC_Sense1: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FL5150MX";
@@ -866,7 +896,8 @@ export class FL5160MX extends Component.withPins({
   "DRV_Gate": "9",
   "OC_Sense1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ZC_Monitor: "input", DIM_Control: "input", VDD: "power_out", DIM_Mode: "input", GND: "power_out", VS: "power_in", Low_Power: "input", OC_Sense2: "input", DRV_Gate: "output", OC_Sense1: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:FL5160MX";
@@ -892,7 +923,8 @@ export class HCPL_3120 extends Component.withPins({
   "VO_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A: "passive", C: "passive", NC_4: "no_connect", VEE: "power_out", VO_6: "output", VO_7: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HCPL-3120";
@@ -922,7 +954,8 @@ export class HCPL_314J extends Component.withPins({
   "VO_10": "10",
   "VCC_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A_2: "passive", C_3: "passive", VEE_14: "power_in", VO_15: "output", VCC_16: "power_in", A_6: "passive", C_7: "passive", NC_8: "no_connect", VEE_9: "power_in", VO_10: "output", VCC_11: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HCPL-314J";
@@ -953,7 +986,8 @@ export class HIP2100_DFN extends Component.withPins({
   "LO": "12",
   "EP": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", NC_2: "no_connect", NC_3: "no_connect", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", NC_9: "no_connect", NC_10: "no_connect", VSS: "power_in", LO: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2100_DFN";
@@ -980,7 +1014,8 @@ export class HIP2100_EPSOIC extends Component.withPins({
   "LO": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", VSS: "power_in", LO: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2100_EPSOIC";
@@ -1015,7 +1050,8 @@ export class HIP2100_QFN extends Component.withPins({
   "VDD": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", HB: "passive", HO: "output", NC_4: "no_connect", NC_5: "no_connect", HS: "passive", HI: "input", NC_8: "no_connect", NC_9: "no_connect", LI: "input", VSS: "power_in", NC_12: "no_connect", NC_13: "no_connect", LO: "output", NC_15: "no_connect", VDD: "power_in", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2100_QFN";
@@ -1041,7 +1077,8 @@ export class HIP2100_SOIC extends Component.withPins({
   "VSS": "7",
   "LO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", VSS: "power_in", LO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2100_SOIC";
@@ -1072,7 +1109,8 @@ export class HIP2101_DFN extends Component.withPins({
   "LO": "12",
   "EP": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", NC_2: "no_connect", NC_3: "no_connect", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", NC_9: "no_connect", NC_10: "no_connect", VSS: "power_in", LO: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2101_DFN";
@@ -1099,7 +1137,8 @@ export class HIP2101_EPSOIC extends Component.withPins({
   "LO": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", VSS: "power_in", LO: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2101_EPSOIC";
@@ -1134,7 +1173,8 @@ export class HIP2101_QFN extends Component.withPins({
   "VDD": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", HB: "passive", HO: "output", NC_4: "no_connect", NC_5: "no_connect", HS: "passive", HI: "input", NC_8: "no_connect", NC_9: "no_connect", LI: "input", VSS: "power_in", NC_12: "no_connect", NC_13: "no_connect", LO: "output", NC_15: "no_connect", VDD: "power_in", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2101_QFN";
@@ -1160,7 +1200,8 @@ export class HIP2101_SOIC extends Component.withPins({
   "VSS": "7",
   "LO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", VSS: "power_in", LO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP2101_SOIC";
@@ -1197,7 +1238,8 @@ export class HIP4080A extends Component.withPins({
   "BHS": "19",
   "BHO": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BHB: "input", HEN: "output", DIS: "output", VSS: "power_in", OUT: "output", "IN+": "input", "IN-": "input", HDEL: "passive", LDEL: "passive", AHB: "input", AHO: "output", AHS: "passive", ALO: "output", ALS: "passive", VCC: "power_in", VDD: "power_in", BLS: "passive", BLO: "output", BHS: "passive", BHO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP4080A";
@@ -1234,7 +1276,8 @@ export class HIP4081A extends Component.withPins({
   "BHS": "19",
   "BHO": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BHB: "input", BHI: "input", DIS: "output", VSS: "power_in", BLI: "input", ALI: "input", AHI: "input", HDEL: "passive", LDEL: "passive", AHB: "input", AHO: "output", AHS: "passive", ALO: "output", ALS: "passive", VCC: "power_in", VDD: "power_in", BLS: "passive", BLO: "output", BHS: "passive", BHO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP4081A";
@@ -1268,7 +1311,8 @@ export class HIP4082xB extends Component.withPins({
   "BHS": "15",
   "BHO": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DEL: "passive", BHB: "input", BHI: "input", BLI: "input", ALI: "input", VSS: "power_in", AHI: "input", DIS: "input", AHB: "input", AHO: "output", AHS: "passive", VDD: "power_in", ALO: "output", BLO: "output", BHS: "passive", BHO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP4082xB";
@@ -1302,7 +1346,8 @@ export class HIP4082xP extends Component.withPins({
   "BHS": "15",
   "BHO": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DEL: "passive", BHB: "input", BHI: "input", BLI: "input", ALI: "input", VSS: "power_in", AHI: "input", DIS: "input", AHB: "input", AHO: "output", AHS: "passive", VDD: "power_in", ALO: "output", BLO: "output", BHS: "passive", BHO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:HIP4082xP";
@@ -1328,7 +1373,8 @@ export class ICL7667xBA extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", "V-": "power_in", IN_B: "input", "~{OUT_B}": "output", "V+": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ICL7667xBA";
@@ -1360,7 +1406,8 @@ export class IR2010 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2010";
@@ -1394,7 +1441,8 @@ export class IR2010S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2010S";
@@ -1419,7 +1467,8 @@ export class IR2011 extends Component.withPins({
   "COM": "7",
   "LO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VB: "passive", HO: "output", VS: "passive", HIN: "input", LIN: "input", COM: "power_in", LO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2011";
@@ -1445,7 +1494,8 @@ export class IR2085S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CS: "input", OSC: "passive", GND: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2085S";
@@ -1470,7 +1520,8 @@ export class IR2101 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2101";
@@ -1495,7 +1546,8 @@ export class IR2102 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "~{HIN}": "input", "~{LIN}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2102";
@@ -1520,7 +1572,8 @@ export class IR2103 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2103";
@@ -1545,7 +1598,8 @@ export class IR2104 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2104";
@@ -1570,7 +1624,8 @@ export class IR2106 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2106";
@@ -1601,7 +1656,8 @@ export class IR21064 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", NC_4: "no_connect", VSS: "power_in", COM: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21064";
@@ -1626,7 +1682,8 @@ export class IR2108 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2108";
@@ -1657,7 +1714,8 @@ export class IR21084 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", DT: "input", VSS: "power_in", COM: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21084";
@@ -1682,7 +1740,8 @@ export class IR2109 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2109";
@@ -1707,7 +1766,8 @@ export class IR21091 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "DT/SD": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21091";
@@ -1738,7 +1798,8 @@ export class IR21094 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", DT: "input", VSS: "power_in", COM: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21094";
@@ -1770,7 +1831,8 @@ export class IR2110 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2110";
@@ -1804,7 +1866,8 @@ export class IR2110S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2110S";
@@ -1829,7 +1892,8 @@ export class IR2111 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", COM: "power_in", LO: "output", NC: "no_connect", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2111";
@@ -1861,7 +1925,8 @@ export class IR2112 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2112";
@@ -1895,7 +1960,8 @@ export class IR2112S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2112S";
@@ -1927,7 +1993,8 @@ export class IR2113 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2113";
@@ -1961,7 +2028,8 @@ export class IR2113S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2113S";
@@ -2003,7 +2071,8 @@ export class IR2114S extends Component.withPins({
   "VB": "23",
   "DSH": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", FLT_CLR: "input", "~{SY_FLT}": "bidirectional", "~{FAULT/SD}": "bidirectional", VSS: "power_in", SSDL: "input", COM: "power_in", LON: "output", LOP: "output", VCC: "power_in", DSL: "input", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", NC_16: "no_connect", NC_17: "no_connect", SSDH: "input", VS: "passive", HON: "output", HOP: "output", NC_22: "no_connect", VB: "passive", DSH: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2114S";
@@ -2049,7 +2118,8 @@ export class IR2133 extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2133";
@@ -2095,7 +2165,8 @@ export class IR2133S extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2133S";
@@ -2141,7 +2212,8 @@ export class IR2135 extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2135";
@@ -2187,7 +2259,8 @@ export class IR2135S extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2135S";
@@ -2212,7 +2285,8 @@ export class IR2153 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RT: "passive", CT: "passive", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2153";
@@ -2237,7 +2311,8 @@ export class IR21531 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RT: "passive", CT: "passive", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21531";
@@ -2262,7 +2337,8 @@ export class IR2155 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RT: "passive", CT: "passive", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2155";
@@ -2287,7 +2363,8 @@ export class IR2181 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2181";
@@ -2318,7 +2395,8 @@ export class IR21814 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", VSS: "power_in", NC_4: "no_connect", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21814";
@@ -2343,7 +2421,8 @@ export class IR2183 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2183";
@@ -2374,7 +2453,8 @@ export class IR21834 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", "~{LIN}": "input", VSS: "power_in", DT: "input", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21834";
@@ -2399,7 +2479,8 @@ export class IR2184 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2184";
@@ -2430,7 +2511,8 @@ export class IR21844 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", "~{SD}": "input", VSS: "power_in", DT: "input", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR21844";
@@ -2462,7 +2544,8 @@ export class IR2213 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2213";
@@ -2496,7 +2579,8 @@ export class IR2213S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2213S";
@@ -2538,7 +2622,8 @@ export class IR2214S extends Component.withPins({
   "VB": "23",
   "DSH": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", FLT_CLR: "input", "~{SY_FLT}": "bidirectional", "~{FAULT/SD}": "bidirectional", VSS: "power_in", SSDL: "input", COM: "power_in", LON: "output", LOP: "output", VCC: "power_in", DSL: "input", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", NC_16: "no_connect", NC_17: "no_connect", SSDH: "input", VS: "passive", HON: "output", HOP: "output", NC_22: "no_connect", VB: "passive", DSH: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2214S";
@@ -2584,7 +2669,8 @@ export class IR2233 extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2233";
@@ -2630,7 +2716,8 @@ export class IR2233S extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2233S";
@@ -2676,7 +2763,8 @@ export class IR2235 extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2235";
@@ -2722,7 +2810,8 @@ export class IR2235S extends Component.withPins({
   "~{LIN3}": "27",
   "~{FAULT}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ITRIP: "input", "~{FLT-CLR}": "input", CAO: "output", "CA-": "input", "CA+": "input", SD: "input", VSS: "power_in", COM: "passive", LO3: "output", LO2: "output", LO1: "output", VS3: "passive", HO3: "output", VB3: "passive", VS2: "passive", HO2: "output", VB2: "passive", VS1: "passive", HO1: "output", VB1: "passive", VCC: "power_in", "~{HIN1}": "input", "~{HIN2}": "input", "~{HIN3}": "input", "~{LIN1}": "input", "~{LIN2}": "input", "~{LIN3}": "input", "~{FAULT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2235S";
@@ -2747,7 +2836,8 @@ export class IR2301 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2301";
@@ -2772,7 +2862,8 @@ export class IR2302 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2302";
@@ -2797,7 +2888,8 @@ export class IR2304 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LIN: "input", HIN: "input", VCC: "power_in", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2304";
@@ -2822,7 +2914,8 @@ export class IR2308 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR2308";
@@ -2848,7 +2941,8 @@ export class IR25602S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR25602S";
@@ -2873,7 +2967,8 @@ export class IR25603 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RT: "passive", CT: "passive", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR25603";
@@ -2899,7 +2994,8 @@ export class IR25604S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR25604S";
@@ -2933,7 +3029,8 @@ export class IR25607S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR25607S";
@@ -2959,7 +3056,8 @@ export class IR7106S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR7106S";
@@ -2985,7 +3083,8 @@ export class IR7184S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR7184S";
@@ -3011,7 +3110,8 @@ export class IR7304S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LIN: "input", HIN: "input", VCC: "power_in", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IR7304S";
@@ -3036,7 +3136,8 @@ export class IRS2001 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2001";
@@ -3069,7 +3170,8 @@ export class IRS2001M extends Component.withPins({
   "VCC": "16",
   "COM_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", HIN: "input", LIN: "input", COM_4: "power_in", NC_5: "no_connect", NC_6: "no_connect", LO: "output", NC_8: "no_connect", NC_9: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", VCC: "power_in", COM_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2001M";
@@ -3094,7 +3196,8 @@ export class IRS2003 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2003";
@@ -3119,7 +3222,8 @@ export class IRS2004 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2004";
@@ -3152,7 +3256,8 @@ export class IRS2005M extends Component.withPins({
   "VCC": "16",
   "COM_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", HIN: "input", LIN: "input", COM_4: "power_in", NC_5: "no_connect", NC_6: "no_connect", LO: "output", NC_8: "no_connect", NC_9: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", VCC: "power_in", COM_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2005M";
@@ -3178,7 +3283,8 @@ export class IRS2005S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2005S";
@@ -3204,7 +3310,8 @@ export class IRS2008S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2008S";
@@ -3229,7 +3336,8 @@ export class IRS2011 extends Component.withPins({
   "COM": "7",
   "LO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", VB: "passive", HO: "output", VS: "passive", HIN: "input", LIN: "input", COM: "power_in", LO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2011";
@@ -3254,7 +3362,8 @@ export class IRS2101 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2101";
@@ -3279,7 +3388,8 @@ export class IRS2103 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2103";
@@ -3304,7 +3414,8 @@ export class IRS2104 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2104";
@@ -3329,7 +3440,8 @@ export class IRS2106 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2106";
@@ -3360,7 +3472,8 @@ export class IRS21064 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", NC_4: "no_connect", VSS: "power_in", COM: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21064";
@@ -3385,7 +3498,8 @@ export class IRS2108 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2108";
@@ -3416,7 +3530,8 @@ export class IRS21084 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", "~{LIN}": "input", DT: "input", VSS: "power_in", COM: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21084";
@@ -3441,7 +3556,8 @@ export class IRS2109 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2109";
@@ -3466,7 +3582,8 @@ export class IRS21091 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "DT/SD": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21091";
@@ -3497,7 +3614,8 @@ export class IRS21094 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", DT: "input", VSS: "power_in", COM: "power_in", LO: "output", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21094";
@@ -3529,7 +3647,8 @@ export class IRS2110 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2110";
@@ -3563,7 +3682,8 @@ export class IRS2110S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2110S";
@@ -3588,7 +3708,8 @@ export class IRS2111 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", COM: "power_in", LO: "output", NC: "no_connect", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2111";
@@ -3620,7 +3741,8 @@ export class IRS2112 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2112";
@@ -3654,7 +3776,8 @@ export class IRS2112S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2112S";
@@ -3686,7 +3809,8 @@ export class IRS2113 extends Component.withPins({
   "VSS": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_8: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2113";
@@ -3719,7 +3843,8 @@ export class IRS2113M extends Component.withPins({
   "NC_16": "16",
   "COM_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", LO: "output", COM_7: "power_in", NC_8: "no_connect", VCC: "power_in", NC_11: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_16: "no_connect", COM_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2113M";
@@ -3753,7 +3878,8 @@ export class IRS2113S extends Component.withPins({
   "VSS": "15",
   "NC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LO: "output", COM: "power_in", VCC: "power_in", NC_4: "no_connect", NC_5: "no_connect", VS: "passive", VB: "passive", HO: "output", NC_9: "no_connect", NC_10: "no_connect", VDD: "power_in", HIN: "input", SD: "input", LIN: "input", VSS: "power_in", NC_16: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2113S";
@@ -3778,7 +3904,8 @@ export class IRS21531D extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RT: "passive", CT: "passive", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21531D";
@@ -3803,7 +3930,8 @@ export class IRS2153D extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RT: "passive", CT: "passive", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2153D";
@@ -3828,7 +3956,8 @@ export class IRS2181 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2181";
@@ -3859,7 +3988,8 @@ export class IRS21814 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", VSS: "power_in", NC_4: "no_connect", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21814";
@@ -3892,7 +4022,8 @@ export class IRS21814M extends Component.withPins({
   "HIN": "16",
   "COM_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LIN: "input", VSS: "power_in", NC_3: "no_connect", COM_4: "power_in", LO: "output", NC_6: "no_connect", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", HIN: "input", COM_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21814M";
@@ -3917,7 +4048,8 @@ export class IRS2183 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", "~{LIN}": "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2183";
@@ -3948,7 +4080,8 @@ export class IRS21834 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", "~{LIN}": "input", VSS: "power_in", DT: "input", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21834";
@@ -3973,7 +4106,8 @@ export class IRS2184 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2184";
@@ -4004,7 +4138,8 @@ export class IRS21844 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN: "input", "~{SD}": "input", VSS: "power_in", DT: "input", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21844";
@@ -4037,7 +4172,8 @@ export class IRS21844M extends Component.withPins({
   "IN": "16",
   "COM_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{SD}": "input", VSS: "power_in", DT: "input", COM_4: "power_in", LO: "output", NC_6: "no_connect", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", IN: "input", COM_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21844M";
@@ -4062,7 +4198,8 @@ export class IRS2186 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", COM: "power_in", LO: "output", VCC: "power_in", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2186";
@@ -4093,7 +4230,8 @@ export class IRS21864 extends Component.withPins({
   "VB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "input", LIN: "input", VSS: "power_in", NC_4: "no_connect", COM: "power_in", LO: "output", VCC: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", VS: "passive", HO: "output", VB: "passive", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21864";
@@ -4119,7 +4257,8 @@ export class IRS21867S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS21867S";
@@ -4145,7 +4284,8 @@ export class IRS2301S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2301S";
@@ -4171,7 +4311,8 @@ export class IRS2302S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", "~{SD}": "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2302S";
@@ -4196,7 +4337,8 @@ export class IRS2304 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LIN: "input", HIN: "input", VCC: "power_in", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2304";
@@ -4221,7 +4363,8 @@ export class IRS2308 extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2308";
@@ -4247,7 +4390,8 @@ export class IRS25606S extends Component.withPins({
   "HO": "7",
   "VB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", COM: "power_in", LO: "output", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS25606S";
@@ -4279,7 +4423,8 @@ export class IRS2890DS extends Component.withPins({
   "HO": "13",
   "VB": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", HIN: "input", LIN: "input", ITRIP: "passive", NC_5: "no_connect", COM: "power_in", RFE: "open_collector", NC_8: "no_connect", LO: "output", NC_10: "no_connect", NC_11: "no_connect", VS: "passive", HO: "output", VB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:IRS2890DS";
@@ -4317,7 +4462,8 @@ export class ITS724G extends Component.withPins({
   "VBB_19": "19",
   "VBB_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBB_1: "power_in", "GND1/2": "power_in", IN1: "input", "ST1/2": "open_collector", IN2: "input", "GND3/4": "power_in", IN3: "input", "ST3/4": "open_collector", IN4: "input", VBB_10: "passive", VBB_11: "passive", VBB_12: "passive", OUT4: "open_emitter", OUT3: "open_emitter", VBB_15: "passive", VBB_16: "passive", OUT2: "open_emitter", OUT1: "open_emitter", VBB_19: "passive", VBB_20: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ITS724G";
@@ -4355,7 +4501,8 @@ export class ITS711L1 extends Component.withPins({
   "VBB_19": "19",
   "VBB_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBB_1: "power_in", "GND1/2": "power_in", IN1: "input", "ST1/2": "open_collector", IN2: "input", "GND3/4": "power_in", IN3: "input", "ST3/4": "open_collector", IN4: "input", VBB_10: "passive", VBB_11: "passive", VBB_12: "passive", OUT4: "open_emitter", OUT3: "open_emitter", VBB_15: "passive", VBB_16: "passive", OUT2: "open_emitter", OUT1: "open_emitter", VBB_19: "passive", VBB_20: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ITS711L1";
@@ -4393,7 +4540,8 @@ export class ITS716G extends Component.withPins({
   "VBB_19": "19",
   "VBB_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBB_1: "power_in", "GND1/2": "power_in", IN1: "input", "ST1/2": "open_collector", IN2: "input", "GND3/4": "power_in", IN3: "input", "ST3/4": "open_collector", IN4: "input", VBB_10: "passive", VBB_11: "passive", VBB_12: "passive", OUT4: "open_emitter", OUT3: "open_emitter", VBB_15: "passive", VBB_16: "passive", OUT2: "open_emitter", OUT1: "open_emitter", VBB_19: "passive", VBB_20: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ITS716G";
@@ -4425,7 +4573,8 @@ export class L6491 extends Component.withPins({
   "HVG": "13",
   "BOOT": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{LIN}": "input", "~{SD}/OD": "input", HIN: "input", VCC: "power_in", DT: "input", SGND: "power_in", PGND: "power_in", LVG: "output", "CP-": "input", "CP+": "input", NC: "no_connect", OUT: "input", HVG: "output", BOOT: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:L6491";
@@ -4451,7 +4600,8 @@ export class LF2190N extends Component.withPins({
   "HO": "7",
   "V_{B}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HIN: "passive", LIN: "passive", COM: "power_in", LO: "output", "V_{CC}": "power_in", "V_{S}": "passive", HO: "output", "V_{B}": "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LF2190N";
@@ -4477,7 +4627,8 @@ export class LM2105D extends Component.withPins({
   "GH": "7",
   "BST": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GVDD: "power_in", INH: "input", INL: "input", GND: "power_in", GL: "output", SH: "passive", GH: "output", BST: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM2105D";
@@ -4504,7 +4655,8 @@ export class LM2105DSG extends Component.withPins({
   "BST": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GVDD: "power_in", INH: "input", INL: "input", GND_4: "power_in", GL: "output", SH: "passive", GH: "output", BST: "passive", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM2105DSG";
@@ -4533,7 +4685,8 @@ export class LM5106SD extends Component.withPins({
   "LO": "10",
   "EP": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HB: "passive", HO: "output", HS: "passive", NC: "no_connect", RDT: "passive", EN: "input", IN: "input", VSS: "power_in", LO: "output", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM5106SD";
@@ -4559,7 +4712,8 @@ export class LM5109MA extends Component.withPins({
   "HO": "7",
   "HB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HI: "input", LI: "input", VSS: "power_in", LO: "output", HS: "passive", HO: "output", HB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM5109MA";
@@ -4585,7 +4739,8 @@ export class LM5109AMA extends Component.withPins({
   "HO": "7",
   "HB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HI: "input", LI: "input", VSS: "power_in", LO: "output", HS: "passive", HO: "output", HB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM5109AMA";
@@ -4612,7 +4767,8 @@ export class LM5109ASD extends Component.withPins({
   "HB": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HI: "input", LI: "input", VSS_4: "power_in", LO: "output", HS: "passive", HO: "output", HB: "passive", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM5109ASD";
@@ -4638,7 +4794,8 @@ export class LM5109BMA extends Component.withPins({
   "HO": "7",
   "HB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HI: "input", LI: "input", VSS: "power_in", LO: "output", HS: "passive", HO: "output", HB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM5109BMA";
@@ -4665,7 +4822,8 @@ export class LM5109BSD extends Component.withPins({
   "HB": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HI: "input", LI: "input", VSS_4: "power_in", LO: "output", HS: "passive", HO: "output", HB: "passive", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LM5109BSD";
@@ -4689,7 +4847,8 @@ export class LMG1020YFF extends Component.withPins({
   "IN+": "C1",
   "IN-": "C2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", OUTH: "output", GND: "power_in", OUTL: "output", "IN+": "input", "IN-": "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LMG1020YFF";
@@ -4716,7 +4875,8 @@ export class LTC4440EMS8 extends Component.withPins({
   "TS": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INP: "input", GND_2: "power_in", VCC: "power_in", GND_4: "power_in", NC: "no_connect", BOOST: "input", TG: "output", TS: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LTC4440EMS8";
@@ -4740,7 +4900,8 @@ export class LTC4440ES6 extends Component.withPins({
   "TG": "5",
   "BOOST": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", INP: "input", TS: "input", TG: "output", BOOST: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LTC4440ES6";
@@ -4767,7 +4928,8 @@ export class LTC4440IMS8 extends Component.withPins({
   "TS": "8",
   "PAD": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INP: "input", GND_2: "power_in", VCC: "power_in", GND_4: "power_in", NC: "no_connect", BOOST: "input", TG: "output", TS: "input", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LTC4440IMS8";
@@ -4791,7 +4953,8 @@ export class LTC4440IS6 extends Component.withPins({
   "TG": "5",
   "BOOST": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", INP: "input", TS: "input", TG: "output", BOOST: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:LTC4440IS6";
@@ -4817,7 +4980,8 @@ export class MAX15012AxSA extends Component.withPins({
   "GND": "7",
   "DL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", IN_L: "input", GND: "power_in", DL: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15012AxSA";
@@ -4843,7 +5007,8 @@ export class MAX15012BxSA extends Component.withPins({
   "GND": "7",
   "DL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", "~{IN_L}": "input", GND: "power_in", DL: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15012BxSA";
@@ -4870,7 +5035,8 @@ export class MAX15012CxSA extends Component.withPins({
   "DL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", IN_L: "input", GND: "power_in", DL: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15012CxSA";
@@ -4897,7 +5063,8 @@ export class MAX15012DxSA extends Component.withPins({
   "DL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", "~{IN_L}": "input", GND: "power_in", DL: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15012DxSA";
@@ -4923,7 +5090,8 @@ export class MAX15013AxSA extends Component.withPins({
   "GND": "7",
   "DL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", IN_L: "input", GND: "power_in", DL: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15013AxSA";
@@ -4949,7 +5117,8 @@ export class MAX15013BxSA extends Component.withPins({
   "GND": "7",
   "DL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", "~{IN_L}": "input", GND: "power_in", DL: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15013BxSA";
@@ -4976,7 +5145,8 @@ export class MAX15013CxSA extends Component.withPins({
   "DL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", IN_L: "input", GND: "power_in", DL: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15013CxSA";
@@ -5003,7 +5173,8 @@ export class MAX15013DxSA extends Component.withPins({
   "DL": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", BST: "power_in", DH: "output", HS: "passive", IN_H: "input", "~{IN_L}": "input", GND: "power_in", DL: "output", EP: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX15013DxSA";
@@ -5029,7 +5200,8 @@ export class MAX626xSA extends Component.withPins({
   "~{OUT_{A}}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "IN_{A}": "input", GND: "power_in", "IN_{B}": "input", "~{OUT_{B}}": "output", "V_{DD}": "power_in", "~{OUT_{A}}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX626xSA";
@@ -5055,7 +5227,8 @@ export class MAX627xSA extends Component.withPins({
   "OUT_{A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "IN_{A}": "input", GND: "power_in", "IN_{B}": "input", "OUT_{B}": "output", "V_{DD}": "power_in", "OUT_{A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX627xSA";
@@ -5081,7 +5254,8 @@ export class MAX628xSA extends Component.withPins({
   "~{OUT_{A}}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", "IN_{A}": "input", GND: "power_in", "IN_{B}": "input", "OUT_{B}": "output", "V_{DD}": "power_in", "~{OUT_{A}}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MAX628xSA";
@@ -5107,7 +5281,8 @@ export class TC4427xOA extends Component.withPins({
   "OUT_A": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V_{DD}": "power_in", OUT_A: "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:TC4427xOA";
@@ -5132,7 +5307,8 @@ export class MC3x152 extends Component.withPins({
   "OUT_A": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V_{DD}": "power_in", OUT_A: "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MC3x152";
@@ -5155,7 +5331,8 @@ export class MCP1415 extends Component.withPins({
   "GND": "4",
   "~{OUT}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", Vdd: "power_in", IN: "input", GND: "power_in", "~{OUT}": "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP1415";
@@ -5178,7 +5355,8 @@ export class MCP1415R extends Component.withPins({
   "~{OUT}": "4",
   "Vdd": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", GND: "power_in", IN: "input", "~{OUT}": "output", Vdd: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP1415R";
@@ -5201,7 +5379,8 @@ export class MCP1416 extends Component.withPins({
   "GND": "4",
   "OUT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", Vdd: "power_in", IN: "input", GND: "power_in", OUT: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP1416";
@@ -5224,7 +5403,8 @@ export class MCP1416R extends Component.withPins({
   "OUT": "4",
   "Vdd": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", GND: "power_in", IN: "input", OUT: "output", Vdd: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP1416R";
@@ -5251,7 +5431,8 @@ export class MCP14A0303xMNY extends Component.withPins({
   "ENB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND_3: "power_in", INB: "input", "~{OUTB}": "output", "V_{DD}": "power_in", "~{OUTA}": "output", ENB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A0303xMNY";
@@ -5278,7 +5459,8 @@ export class MCP14A0304xMNY extends Component.withPins({
   "ENB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND_3: "power_in", INB: "input", OUTB: "output", "V_{DD}": "power_in", OUTA: "output", ENB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A0304xMNY";
@@ -5305,7 +5487,8 @@ export class MCP14A0305xMNY extends Component.withPins({
   "ENB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND_3: "power_in", INB: "input", OUTB: "output", "V_{DD}": "power_in", "~{OUTA}": "output", ENB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A0305xMNY";
@@ -5332,7 +5515,8 @@ export class MCP14A0901xMNY extends Component.withPins({
   "VDD_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", IN: "input", EN: "input", GND_4: "power_in", GND_5: "passive", "~{OUT}_6": "output", "~{OUT}_7": "passive", VDD_8: "passive", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A0901xMNY";
@@ -5359,7 +5543,8 @@ export class MCP14A0902xMNY extends Component.withPins({
   "VDD_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", IN: "input", EN: "input", GND_4: "power_in", GND_5: "passive", OUT_6: "output", OUT_7: "passive", VDD_8: "passive", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A0902xMNY";
@@ -5386,7 +5571,8 @@ export class MCP14A1201xMNY extends Component.withPins({
   "VDD_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", IN: "input", EN: "input", GND_4: "power_in", GND_5: "passive", "~{OUT}_6": "output", "~{OUT}_7": "passive", VDD_8: "passive", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A1201xMNY";
@@ -5413,7 +5599,8 @@ export class MCP14A1202xMNY extends Component.withPins({
   "VDD_8": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", IN: "input", EN: "input", GND_4: "power_in", GND_5: "passive", OUT_6: "output", OUT_7: "passive", VDD_8: "passive", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MCP14A1202xMNY";
@@ -5438,7 +5625,8 @@ export class MIC4426 extends Component.withPins({
   "~{OUTA}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", INA: "input", GND: "power_in", INB: "input", "~{OUTB}": "output", "V_{S}": "power_in", "~{OUTA}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MIC4426";
@@ -5463,7 +5651,8 @@ export class MIC4427 extends Component.withPins({
   "OUTA": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", INA: "input", GND: "power_in", INB: "input", OUTB: "output", "V_{S}": "power_in", OUTA: "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MIC4427";
@@ -5488,7 +5677,8 @@ export class MIC4428 extends Component.withPins({
   "~{OUTA}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", INA: "input", GND: "power_in", INB: "input", OUTB: "output", "V_{S}": "power_in", "~{OUTA}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MIC4428";
@@ -5514,7 +5704,8 @@ export class MIC4604YM extends Component.withPins({
   "VSS": "7",
   "LO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", HB: "passive", HO: "output", HS: "passive", HI: "input", LI: "input", VSS: "power_in", LO: "output", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:MIC4604YM";
@@ -5548,7 +5739,8 @@ export class NCD5702 extends Component.withPins({
   "VEEA": "15",
   "CLAMP": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", VIN: "input", VREF: "power_out", "~{FLT}": "open_collector", GNDA: "power_in", NC_6: "no_connect", RSVD: "passive", NC_8: "no_connect", DESAT: "input", VCC: "power_in", VOH: "open_emitter", VOL: "open_collector", GND: "power_in", VEE: "power_in", VEEA: "power_in", CLAMP: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:NCD5702";
@@ -5582,7 +5774,8 @@ export class PE29101 extends Component.withPins({
   "VDD": "15",
   "RDHL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HSGpd: "output", HSS: "passive", HSB: "input", VDDSYNC: "passive", RDLH: "passive", HSGpu: "output", "~{EN}": "input", IN: "input", LSGpu: "output", LSO: "output", GND: "power_in", LSGpd: "output", LSS: "passive", LSB: "input", VDD: "power_in", RDHL: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:PE29101";
@@ -5616,7 +5809,8 @@ export class PE29102 extends Component.withPins({
   "VDD": "15",
   "RDHL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HSGpd: "output", HSS: "passive", HSB: "input", NC: "no_connect", RDLH: "passive", HSGpu: "output", "~{EN}": "input", IN: "input", LSGpu: "output", PHCTL: "input", GND: "power_in", LSGpd: "output", LSS: "passive", LSB: "input", VDD: "power_in", RDHL: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:PE29102";
@@ -5642,7 +5836,8 @@ export class PM8834 extends Component.withPins({
   "OUT1": "7",
   "EN2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN1: "input", PWM1: "input", GND: "power_in", PWM2: "input", OUT2: "output", VCC: "power_in", OUT1: "output", EN2: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:PM8834";
@@ -5669,7 +5864,8 @@ export class PM8834M extends Component.withPins({
   "EN2": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN1: "input", PWM1: "input", GND_3: "power_in", PWM2: "input", OUT2: "output", VCC: "power_in", OUT1: "output", EN2: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:PM8834M";
@@ -5715,7 +5911,8 @@ export class SM72295MA extends Component.withPins({
   "HOB": "27",
   "HSB": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SIA: "input", SOA: "input", IIN: "passive", BIN: "output", AGND: "power_in", LIA: "input", HIA: "input", HIB: "input", LIB: "input", PGOOD: "open_collector", BOUT: "output", IOUT: "passive", SOB: "input", SIB: "input", OVP: "open_collector", OVS: "input", VDD: "power_in", HSA: "passive", HOA: "output", HBA: "passive", VCCA: "power_in", LOA: "output", PGND: "power_in", LOB: "output", VCCB: "power_in", HBB: "passive", HOB: "output", HSB: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:SM72295MA";
@@ -5757,7 +5954,8 @@ export class STGAP1AS extends Component.withPins({
   "VL_23": "23",
   "ASC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", SDO: "output", SDI: "input", "~{CS}": "input", CK: "input", VREG: "power_out", VDD: "power_in", "IN-/DIAG2": "bidirectional", "IN+": "input", DIAG1: "open_collector", "~{SD}": "input", GND_12: "passive", GNDISO: "power_in", VL_14: "power_in", VREGISO: "power_out", SENSE: "input", VH: "power_in", DESAT: "passive", VCECLAMP: "input", GON: "output", GOFF: "output", CLAMP: "output", VL_23: "passive", ASC: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:STGAP1AS";
@@ -5783,7 +5981,8 @@ export class STGAP2SCM extends Component.withPins({
   "CLAMP": "7",
   "GNDISO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "IN+": "input", "IN-": "input", GND: "power_in", VH: "power_in", GOUT: "output", CLAMP: "output", GNDISO: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:STGAP2SCM";
@@ -5809,7 +6008,8 @@ export class STGAP2SM extends Component.withPins({
   "GOFF": "7",
   "GNDISO": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "IN+": "input", "IN-": "input", GND: "power_in", VH: "power_in", GON: "output", GOFF: "output", GNDISO: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:STGAP2SM";
@@ -5835,7 +6035,8 @@ export class TC4421 extends Component.withPins({
   "~{OUTPUT}_7": "7",
   "VDD_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", INPUT: "input", NC: "no_connect", GND_4: "power_in", GND_5: "passive", "~{OUTPUT}_6": "output", "~{OUTPUT}_7": "passive", VDD_8: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:TC4421";
@@ -5861,7 +6062,8 @@ export class TC4422 extends Component.withPins({
   "OUTPUT_7": "7",
   "VDD_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", INPUT: "input", NC: "no_connect", GND_4: "power_in", GND_5: "passive", OUTPUT_6: "output", OUTPUT_7: "passive", VDD_8: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:TC4422";
@@ -5887,7 +6089,8 @@ export class TC4426xOA extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", "~{OUT_B}": "output", "V_{DD}": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:TC4426xOA";
@@ -5913,7 +6116,8 @@ export class TC4428xOA extends Component.withPins({
   "~{OUT_A}": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", IN_A: "input", GND: "power_in", IN_B: "input", OUT_B: "output", "V_{DD}": "power_in", "~{OUT_A}": "output", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:TC4428xOA";
@@ -5939,7 +6143,8 @@ export class TLP250 extends Component.withPins({
   "VO_7": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A: "passive", C: "passive", NC_4: "no_connect", VEE: "power_in", VO_6: "output", VO_7: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:TLP250";
@@ -5973,7 +6178,8 @@ export class UCC21520DW extends Component.withPins({
   "OUTA": "15",
   "VDDA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INA: "input", INB: "input", VCCI_3: "power_in", GND: "power_in", DIS: "input", DT: "passive", NC_7: "no_connect", VCCI_8: "passive", VSSB: "power_in", OUTB: "output", VDDB: "power_in", NC_12: "no_connect", NC_13: "no_connect", VSSA: "power_in", OUTA: "output", VDDA: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:UCC21520DW";
@@ -6007,7 +6213,8 @@ export class UCC21520ADW extends Component.withPins({
   "OUTA": "15",
   "VDDA": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { INA: "input", INB: "input", VCCI_3: "power_in", GND: "power_in", DIS: "input", DT: "passive", NC_7: "no_connect", VCCI_8: "passive", VSSB: "power_in", OUTB: "output", VDDB: "power_in", NC_12: "no_connect", NC_13: "no_connect", VSSA: "power_in", OUTA: "output", VDDA: "power_in", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:UCC21520ADW";
@@ -6031,7 +6238,8 @@ export class UCC27511ADBV extends Component.withPins({
   "IN-": "5",
   "IN+": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", OUTH: "output", OUTL: "output", GND: "power_in", "IN-": "input", "IN+": "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:UCC27511ADBV";
@@ -6057,7 +6265,8 @@ export class UCC27524D extends Component.withPins({
   "OUTA": "7",
   "ENB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND: "power_in", INB: "input", OUTB: "output", "V_{DD}": "power_in", OUTA: "output", ENB: "input", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:UCC27524D";
@@ -6084,7 +6293,8 @@ export class UCC27524DGN extends Component.withPins({
   "ENB": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENA: "input", INA: "input", GND_3: "power_in", INB: "input", OUTB: "output", "V_{DD}": "power_in", OUTA: "output", ENB: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:UCC27524DGN";
@@ -6116,7 +6326,8 @@ export class UCC27714D extends Component.withPins({
   "HB": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { HI: "input", LI: "input", VSS: "power_in", "EN/NC": "input", COM: "passive", LO: "output", VDD: "power_in", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", HS: "passive", HO: "output", HB: "input", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:UCC27714D";
@@ -6140,7 +6351,8 @@ export class ZXGD3001E6 extends Component.withPins({
   "IN2": "5",
   "SOURCE": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN1: "input", GND: "power_in", SINK: "open_collector", IN2: "input", SOURCE: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ZXGD3001E6";
@@ -6164,7 +6376,8 @@ export class ZXGD3002E6 extends Component.withPins({
   "IN2": "5",
   "SOURCE": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN1: "input", GND: "power_in", SINK: "open_collector", IN2: "input", SOURCE: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ZXGD3002E6";
@@ -6188,7 +6401,8 @@ export class ZXGD3003E6 extends Component.withPins({
   "IN2": "5",
   "SOURCE": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN1: "input", GND: "power_in", SINK: "open_collector", IN2: "input", SOURCE: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ZXGD3003E6";
@@ -6212,7 +6426,8 @@ export class ZXGD3004E6 extends Component.withPins({
   "IN2": "5",
   "SOURCE": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN1: "input", GND: "power_in", SINK: "open_collector", IN2: "input", SOURCE: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ZXGD3004E6";
@@ -6236,7 +6451,8 @@ export class ZXGD3006E6 extends Component.withPins({
   "NC": "5",
   "SRC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", VEE: "power_in", SINK: "open_collector", NC: "no_connect", SRC: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ZXGD3006E6";
@@ -6260,7 +6476,8 @@ export class ZXGD3009E6 extends Component.withPins({
   "NC": "5",
   "SOURCE": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", IN: "input", VEE: "power_in", SINK: "open_collector", NC: "no_connect", SOURCE: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Driver_FET:ZXGD3009E6";

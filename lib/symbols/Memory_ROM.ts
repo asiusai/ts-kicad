@@ -29,7 +29,8 @@ export class XC18V01SO20 extends Component.withPins({
   "VCCO": "19",
   "VCC_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D0: "output", D2: "output", CLK: "input", TDI: "input", TMS: "input", TCK: "input", "D4/CF": "open_collector", "OE/RESET": "input", D6: "output", CE: "input", GND: "power_in", D7: "output", CEO: "output", D5: "output", D3: "output", D1: "output", TDO: "open_collector", VCC_18: "power_in", VCCO: "power_in", VCC_20: "power_in", ...opts.pinTypes } });
   }
   override schema = "Memory_ROM:XC18V01SO20";
@@ -82,7 +83,8 @@ export class XCF08P extends Component.withPins({
   "D1": "H5",
   "D0": "H6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_A1: "power_in", GND_A2: "power_in", "OE/RST": "input", D6: "tri_state", D7: "tri_state", VCCINT_B1: "power_in", VCCO_B2: "power_in", CLK: "input", CE: "input", D5: "tri_state", GND_B6: "power_in", BUSY: "input", CLKOUT: "output", D4: "tri_state", VCCO_C6: "power_in", CF: "bidirectional", CEO: "output", D3: "tri_state", VCCO_D6: "power_in", VCCINT_E1: "power_in", TMS: "input", D2: "tri_state", TDO: "output", GND_F1: "power_in", GND_F5: "power_in", GND_F6: "power_in", TDI: "input", "REV-SEL0": "input", "REV-SEL1": "input", VCCO_G5: "power_in", VCCINT_G6: "power_in", GND_H1: "power_in", VCCJ: "power_in", TCK: "input", "/EN-EXT-SEL": "input", D1: "tri_state", D0: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Memory_ROM:XCF08P";

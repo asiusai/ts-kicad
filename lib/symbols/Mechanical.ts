@@ -10,7 +10,8 @@ import { Component } from "ts-kicad";
  */
 export class DIN_Rail_Adapter extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes } });
   }
   override schema = "Mechanical:DIN_Rail_Adapter";
@@ -26,7 +27,8 @@ export class DIN_Rail_Adapter extends Component.withPins({
  */
 export class Fiducial extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Mechanical:Fiducial";
@@ -42,7 +44,8 @@ export class Fiducial extends Component.withPins({
  */
 export class Heatsink extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes } });
   }
   override schema = "Mechanical:Heatsink";
@@ -59,7 +62,8 @@ export class Heatsink extends Component.withPins({
 export class Heatsink_Pad extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", ...opts.pinTypes } });
   }
   override schema = "Mechanical:Heatsink_Pad";
@@ -77,7 +81,8 @@ export class Heatsink_Pad_2Pin extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Mechanical:Heatsink_Pad_2Pin";
@@ -96,7 +101,8 @@ export class Heatsink_Pad_3Pin extends Component.withPins({
   "P2": "2",
   "P3": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P3: "passive", ...opts.pinTypes } });
   }
   override schema = "Mechanical:Heatsink_Pad_3Pin";
@@ -112,7 +118,8 @@ export class Heatsink_Pad_3Pin extends Component.withPins({
  */
 export class Housing extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes } });
   }
   override schema = "Mechanical:Housing";
@@ -128,7 +135,8 @@ export class Housing extends Component.withPins({
 export class Housing_Pad extends Component.withPins({
   "PAD": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PAD: "input", ...opts.pinTypes } });
   }
   override schema = "Mechanical:Housing_Pad";
@@ -144,7 +152,8 @@ export class Housing_Pad extends Component.withPins({
  */
 export class Mechanical_Shape extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Mechanical:Mechanical_Shape";
@@ -160,7 +169,8 @@ export class Mechanical_Shape extends Component.withPins({
  */
 export class MountingHole extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Mechanical:MountingHole";
@@ -177,7 +187,8 @@ export class MountingHole extends Component.withPins({
 export class MountingHole_Pad extends Component.withPins({
   "P1": "1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Mechanical:MountingHole_Pad";
@@ -194,7 +205,8 @@ export class MountingHole_Pad extends Component.withPins({
 export class MountingHole_Pad_MP extends Component.withPins({
   "PMP": "MP",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PMP: "input", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Mechanical:MountingHole_Pad_MP";
@@ -210,7 +222,8 @@ export class MountingHole_Pad_MP extends Component.withPins({
  */
 export class MouseBite extends Component.withPins({
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Mechanical:MouseBite";

@@ -61,7 +61,8 @@ export class CC430F5137xRGZ extends Component.withPins({
   "P2.3": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", VCORE: "power_in", DVCC_8: "power_in", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", DVCC_22: "passive", "P2.7": "bidirectional", "P2.6": "bidirectional", RF_XIN: "input", RF_XOUT: "output", AVCC_RF_27: "power_in", AVCC_RF_28: "passive", RF_P: "passive", RF_N: "passive", AVCC_RF_31: "power_in", AVCC_RF_32: "passive", RBIAS: "passive", GUARD: "power_in", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", TEST: "bidirectional", "~{RST}": "input", DVCC_41: "passive", AVSS: "power_in", "P5.1": "bidirectional", "P5.0": "bidirectional", AVCC: "power_in", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:CC430F5137xRGZ";
@@ -128,7 +129,8 @@ export class CC430F5133xRGZ extends Component.withPins({
   "P2.3": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", VCORE: "power_in", DVCC_8: "power_in", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", DVCC_22: "passive", "P2.7": "bidirectional", "P2.6": "bidirectional", RF_XIN: "input", RF_XOUT: "output", AVCC_RF_27: "power_in", AVCC_RF_28: "passive", RF_P: "passive", RF_N: "passive", AVCC_RF_31: "power_in", AVCC_RF_32: "passive", RBIAS: "passive", GUARD: "power_in", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", TEST: "bidirectional", "~{RST}": "input", DVCC_41: "passive", AVSS: "power_in", "P5.1": "bidirectional", "P5.0": "bidirectional", AVCC: "power_in", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:CC430F5133xRGZ";
@@ -195,7 +197,8 @@ export class CC430F5135xRGZ extends Component.withPins({
   "P2.3": "48",
   "VSS": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P2.2": "bidirectional", "P2.1": "bidirectional", "P2.0": "bidirectional", "P1.7": "bidirectional", "P1.6": "bidirectional", "P1.5": "bidirectional", VCORE: "power_in", DVCC_8: "power_in", "P1.4": "bidirectional", "P1.3": "bidirectional", "P1.2": "bidirectional", "P1.1": "bidirectional", "P1.0": "bidirectional", "P3.7": "bidirectional", "P3.6": "bidirectional", "P3.5": "bidirectional", "P3.4": "bidirectional", "P3.3": "bidirectional", "P3.2": "bidirectional", "P3.1": "bidirectional", "P3.0": "bidirectional", DVCC_22: "passive", "P2.7": "bidirectional", "P2.6": "bidirectional", RF_XIN: "input", RF_XOUT: "output", AVCC_RF_27: "power_in", AVCC_RF_28: "passive", RF_P: "passive", RF_N: "passive", AVCC_RF_31: "power_in", AVCC_RF_32: "passive", RBIAS: "passive", GUARD: "power_in", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", TEST: "bidirectional", "~{RST}": "input", DVCC_41: "passive", AVSS: "power_in", "P5.1": "bidirectional", "P5.0": "bidirectional", AVCC: "power_in", "P2.5": "bidirectional", "P2.4": "bidirectional", "P2.3": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:CC430F5135xRGZ";
@@ -237,7 +240,8 @@ export class MSP430AFE221IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "(AVSS)_3": "passive", "(AVSS)_4": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "(AVSS)_8": "passive", "(AVSS)_9": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "UTXD0/P1.3": "bidirectional", "URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE221IPW";
@@ -279,7 +283,8 @@ export class MSP430AFE222IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "A1.0+": "passive", "A1.0-": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "(AVSS)_8": "passive", "(AVSS)_9": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "SD1DO/UTXD0/P1.3": "bidirectional", "URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE222IPW";
@@ -321,7 +326,8 @@ export class MSP430AFE223IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "A1.0+": "passive", "A1.0-": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "A2.0+": "passive", "A2.0-": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "SD1DO/UTXD0/P1.3": "bidirectional", "SD2DO/URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE223IPW";
@@ -363,7 +369,8 @@ export class MSP430AFE231IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "(AVSS)_3": "passive", "(AVSS)_4": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "(AVSS)_8": "passive", "(AVSS)_9": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "UTXD0/P1.3": "bidirectional", "URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE231IPW";
@@ -405,7 +412,8 @@ export class MSP430AFE232IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "A1.0+": "passive", "A1.0-": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "(AVSS)_8": "passive", "(AVSS)_9": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "SD1DO/UTXD0/P1.3": "bidirectional", "URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE232IPW";
@@ -447,7 +455,8 @@ export class MSP430AFE233IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "A1.0+": "passive", "A1.0-": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "A2.0+": "passive", "A2.0-": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "SD1DO/UTXD0/P1.3": "bidirectional", "SD2DO/URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE233IPW";
@@ -489,7 +498,8 @@ export class MSP430AFE251IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "(AVSS)_3": "passive", "(AVSS)_4": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "(AVSS)_8": "passive", "(AVSS)_9": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "UTXD0/P1.3": "bidirectional", "URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE251IPW";
@@ -531,7 +541,8 @@ export class MSP430AFE252IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "A1.0+": "passive", "A1.0-": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "(AVSS)_8": "passive", "(AVSS)_9": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "SD1DO/UTXD0/P1.3": "bidirectional", "URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE252IPW";
@@ -573,7 +584,8 @@ export class MSP430AFE253IPW extends Component.withPins({
   "TDI/TDO/TA1/UCLK0/P1.7": "23",
   "TCLK/TDI/TA0/STE0/P2.0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0.0+": "passive", "A0.0-": "passive", "A1.0+": "passive", "A1.0-": "passive", AVCC: "power_in", AVSS: "power_in", Vref: "passive", "A2.0+": "passive", "A2.0-": "passive", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", "TA2/SMCLK/TACLK/SVSIN/P1.0": "bidirectional", DVSS: "power_in", "XT2IN/P2.6": "bidirectional", "XT2OUT/P2.7": "bidirectional", DVCC: "power_in", "SDCLK/TA1/P1.1": "bidirectional", "SD0DO/TA0/P1.2": "bidirectional", "SD1DO/UTXD0/P1.3": "bidirectional", "SD2DO/URXD0/P1.4": "bidirectional", "TMS/SVSOUT/SIMO0/P1.5": "bidirectional", "TCK/TA2/SOMI0/P1.6": "bidirectional", "TDI/TDO/TA1/UCLK0/P1.7": "bidirectional", "TCLK/TDI/TA0/STE0/P2.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430AFE253IPW";
@@ -611,7 +623,8 @@ export class MSP430F1101AIDGV extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1101AIDGV";
@@ -649,7 +662,8 @@ export class MSP430F1101AIDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1101AIDW";
@@ -687,7 +701,8 @@ export class MSP430F1101AIPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1101AIPW";
@@ -725,7 +740,8 @@ export class MSP430F1101AIRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/Rosc": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1101AIRGE";
@@ -763,7 +779,8 @@ export class MSP430F1111AIDGV extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1111AIDGV";
@@ -801,7 +818,8 @@ export class MSP430F1111AIDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1111AIDW";
@@ -839,7 +857,8 @@ export class MSP430F1111AIPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1111AIPW";
@@ -877,7 +896,8 @@ export class MSP430F1111AIRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/Rosc": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1111AIRGE";
@@ -915,7 +935,8 @@ export class MSP430F1121AIDGV extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1121AIDGV";
@@ -953,7 +974,8 @@ export class MSP430F1121AIDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1121AIDW";
@@ -991,7 +1013,8 @@ export class MSP430F1121AIPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1121AIPW";
@@ -1029,7 +1052,8 @@ export class MSP430F1121AIRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/Rosc": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/ACLK": "bidirectional", "P2.1/INCLK": "bidirectional", "P2.2/CAOUT/TA0": "bidirectional", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1121AIRGE";
@@ -1067,7 +1091,8 @@ export class MSP430F1122IDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/A0/ACLK": "bidirectional", "P2.1/A1/INCLK": "bidirectional", "P2.2/A2/TA0": "bidirectional", "P2.3/A3/VREF-/VeREF-/TA1": "bidirectional", "P2.4/A4/VREF+/VeREF+/TA2": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1122IDW";
@@ -1105,7 +1130,8 @@ export class MSP430F1122IPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/A0/ACLK": "bidirectional", "P2.1/A1/INCLK": "bidirectional", "P2.2/A2/TA0": "bidirectional", "P2.3/A3/VREF-/VeREF-/TA1": "bidirectional", "P2.4/A4/VREF+/VeREF+/TA2": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1122IPW";
@@ -1143,7 +1169,8 @@ export class MSP430F1122IRHB extends Component.withPins({
   "VCC": "30",
   "P2.5/Rosc": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/A0/ACLK": "bidirectional", "P2.1/A1/INCLK": "bidirectional", "P2.2/A2/TA0": "bidirectional", "P2.3/A3/VREF-/VeREF-/TA1": "bidirectional", "P2.4/A4/VREF+/VeREF+/TA2": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1122IRHB";
@@ -1181,7 +1208,8 @@ export class MSP430F1132IDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/A0/ACLK": "bidirectional", "P2.1/A1/INCLK": "bidirectional", "P2.2/A2/TA0": "bidirectional", "P2.3/A3/VREF-/VeREF-/TA1": "bidirectional", "P2.4/A4/VREF+/VeREF+/TA2": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1132IDW";
@@ -1219,7 +1247,8 @@ export class MSP430F1132IPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "19",
   "TDO/TDI/TA2/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/A0/ACLK": "bidirectional", "P2.1/A1/INCLK": "bidirectional", "P2.2/A2/TA0": "bidirectional", "P2.3/A3/VREF-/VeREF-/TA1": "bidirectional", "P2.4/A4/VREF+/VeREF+/TA2": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1132IPW";
@@ -1257,7 +1286,8 @@ export class MSP430F1132IRHB extends Component.withPins({
   "VCC": "30",
   "P2.5/Rosc": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "P2.0/A0/ACLK": "bidirectional", "P2.1/A1/INCLK": "bidirectional", "P2.2/A2/TA0": "bidirectional", "P2.3/A3/VREF-/VeREF-/TA1": "bidirectional", "P2.4/A4/VREF+/VeREF+/TA2": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/Rosc": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1132IRHB";
@@ -1303,7 +1333,8 @@ export class MSP430F1222IDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/A0/P2.0": "bidirectional", "INCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VeREF-/VREF-/A3/P2.3": "bidirectional", "TA2/VeREF+/VREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1222IDW";
@@ -1349,7 +1380,8 @@ export class MSP430F1222IPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/A0/P2.0": "bidirectional", "INCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VeREF-/VREF-/A3/P2.3": "bidirectional", "TA2/VeREF+/VREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1222IPW";
@@ -1395,7 +1427,8 @@ export class MSP430F1222IRHB extends Component.withPins({
   "VCC": "30",
   "Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/A0/P2.0": "bidirectional", "INCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VeREF-/VREF-/A3/P2.3": "bidirectional", "TA2/VeREF+/VREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1222IRHB";
@@ -1441,7 +1474,8 @@ export class MSP430F122IDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/P2.0": "bidirectional", "INCLK/P2.1": "bidirectional", "TA0/CAOUT/P2.2": "bidirectional", "P3.0/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F122IDW";
@@ -1487,7 +1521,8 @@ export class MSP430F122IPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/P2.0": "bidirectional", "INCLK/P2.1": "bidirectional", "TA0/CAOUT/P2.2": "bidirectional", "P3.0/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F122IPW";
@@ -1533,7 +1568,8 @@ export class MSP430F122IRHB extends Component.withPins({
   "VCC": "30",
   "Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/P2.0": "bidirectional", "INCLK/P2.1": "bidirectional", "TA0/CAOUT/P2.2": "bidirectional", "P3.0/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F122IRHB";
@@ -1579,7 +1615,8 @@ export class MSP430F1232IDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/A0/P2.0": "bidirectional", "INCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VeREF-/VREF-/A3/P2.3": "bidirectional", "TA2/VeREF+/VREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1232IDW";
@@ -1625,7 +1662,8 @@ export class MSP430F1232IPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/A0/P2.0": "bidirectional", "INCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VeREF-/VREF-/A3/P2.3": "bidirectional", "TA2/VeREF+/VREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1232IPW";
@@ -1671,7 +1709,8 @@ export class MSP430F1232IRHB extends Component.withPins({
   "VCC": "30",
   "Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/A0/P2.0": "bidirectional", "INCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VeREF-/VREF-/A3/P2.3": "bidirectional", "TA2/VeREF+/VREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F1232IRHB";
@@ -1717,7 +1756,8 @@ export class MSP430F123IDW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/P2.0": "bidirectional", "INCLK/P2.1": "bidirectional", "TA0/CAOUT/P2.2": "bidirectional", "P3.0/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F123IDW";
@@ -1763,7 +1803,8 @@ export class MSP430F123IPW extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "27",
   "TDO/TDI/TA2/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/P2.0": "bidirectional", "INCLK/P2.1": "bidirectional", "TA0/CAOUT/P2.2": "bidirectional", "P3.0/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F123IPW";
@@ -1809,7 +1850,8 @@ export class MSP430F123IRHB extends Component.withPins({
   "VCC": "30",
   "Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", "~{RST}/NMI": "input", "ACLK/P2.0": "bidirectional", "INCLK/P2.1": "bidirectional", "TA0/CAOUT/P2.2": "bidirectional", "P3.0/STE0": "bidirectional", "P3.1/SIMO0": "bidirectional", "P3.2/SOMI0": "bidirectional", "P3.3/UCLK0": "bidirectional", "P3.4/UTXD0": "bidirectional", "P3.5/URXD0": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F123IRHB";
@@ -1841,7 +1883,8 @@ export class MSP430F2001IN extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0/P1.1": "bidirectional", "CA2/TA1/P1.2": "bidirectional", "CA3/CAOUT/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0/TMS/P1.5": "bidirectional", "CA6/TA1/TDI/TCLK/P1.6": "bidirectional", "CA7/CAOUT/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2001IN";
@@ -1873,7 +1916,8 @@ export class MSP430F2001IPW extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0/P1.1": "bidirectional", "CA2/TA1/P1.2": "bidirectional", "CA3/CAOUT/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0/TMS/P1.5": "bidirectional", "CA6/TA1/TDI/TCLK/P1.6": "bidirectional", "CA7/CAOUT/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2001IPW";
@@ -1905,7 +1949,8 @@ export class MSP430F2001IRSA extends Component.withPins({
   "VSS": "14",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0.0/P1.1": "bidirectional", "CA2/TA0.1/P1.2": "bidirectional", "CA3/CAOUT/P1.3": "bidirectional", "CA4/TCK/SMCLK/P1.4": "bidirectional", "CA5/TMS/TA0.0/P1.5": "bidirectional", "CA6/TDI/TCLK/TA0.1/P1.6": "bidirectional", "CA7/TDO/TDI/CAOUT/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2001IRSA";
@@ -1937,7 +1982,8 @@ export class MSP430F2002IN extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "A0/TA0CLK/ACLK/P1.0": "bidirectional", "A1/TA0/P1.1": "bidirectional", "A2/TA1/P1.2": "bidirectional", "ADC10CLK/A3/VREF-/VeREF-/P1.3": "bidirectional", "SMCLK/A4/VREF+/VeREF+/TCK/P1.4": "bidirectional", "TA0/A5/SCLK/TMS/P1.5": "bidirectional", "TA1/A6/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A7/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2002IN";
@@ -1969,7 +2015,8 @@ export class MSP430F2002IPW extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "A0/TA0CLK/ACLK/P1.0": "bidirectional", "A1/TA0/P1.1": "bidirectional", "A2/TA1/P1.2": "bidirectional", "ADC10CLK/A3/VREF-/VeREF-/P1.3": "bidirectional", "SMCLK/A4/VREF+/VeREF+/TCK/P1.4": "bidirectional", "TA0/A5/SCLK/TMS/P1.5": "bidirectional", "TA1/A6/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A7/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2002IPW";
@@ -2003,7 +2050,8 @@ export class MSP430F2002IRSA extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0/TA0CLK/ACLK/P1.0": "bidirectional", "A1/TA0/P1.1": "bidirectional", "A2/TA1/P1.2": "bidirectional", "ADC10CLK/A3/VREF-/VeREF-/P1.3": "bidirectional", "SMCLK/A4/VREF+/VeREF+/TCK/P1.4": "bidirectional", "TA0/A5/SCLK/TMS/P1.5": "bidirectional", "TA1/A6/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A7/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2002IRSA";
@@ -2035,7 +2083,8 @@ export class MSP430F2003IN extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TACLK/ACLK/A0+/P1.0": "bidirectional", "TA0/A0-/A4+/P1.1": "bidirectional", "TA1/A1+/A4-/P1.2": "bidirectional", "VREF/A1-/P1.3": "bidirectional", "SMCLK/A2+/TCK/P1.4": "bidirectional", "TA0/A2-/SCLK/TMS/P1.5": "bidirectional", "TA1/A3+/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A3-/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2003IN";
@@ -2067,7 +2116,8 @@ export class MSP430F2003IPW extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TACLK/ACLK/A0+/P1.0": "bidirectional", "TA0/A0-/A4+/P1.1": "bidirectional", "TA1/A1+/A4-/P1.2": "bidirectional", "VREF/A1-/P1.3": "bidirectional", "SMCLK/A2+/TCK/P1.4": "bidirectional", "TA0/A2-/SCLK/TMS/P1.5": "bidirectional", "TA1/A3+/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A3-/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2003IPW";
@@ -2101,7 +2151,8 @@ export class MSP430F2003IRSA extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TACLK/ACLK/A0+/P1.0": "bidirectional", "TA0/A0-/A4+/P1.1": "bidirectional", "TA1/A1+/A4-/P1.2": "bidirectional", "VREF/A1-/P1.3": "bidirectional", "SMCLK/A2+/TCK/P1.4": "bidirectional", "TA0/A2-/SCLK/TMS/P1.5": "bidirectional", "TA1/A3+/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A3-/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2003IRSA";
@@ -2133,7 +2184,8 @@ export class MSP430F2011IN extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0/P1.1": "bidirectional", "CA2/TA1/P1.2": "bidirectional", "CA3/CAOUT/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0/TMS/P1.5": "bidirectional", "CA6/TA1/TDI/TCLK/P1.6": "bidirectional", "CA7/CAOUT/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2011IN";
@@ -2165,7 +2217,8 @@ export class MSP430F2011IPW extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0/P1.1": "bidirectional", "CA2/TA1/P1.2": "bidirectional", "CA3/CAOUT/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0/TMS/P1.5": "bidirectional", "CA6/TA1/TDI/TCLK/P1.6": "bidirectional", "CA7/CAOUT/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2011IPW";
@@ -2197,7 +2250,8 @@ export class MSP430F2011IRSA extends Component.withPins({
   "VSS": "14",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0.0/P1.1": "bidirectional", "CA2/TA0.1/P1.2": "bidirectional", "CA3/CAOUT/P1.3": "bidirectional", "CA4/TCK/SMCLK/P1.4": "bidirectional", "CA5/TMS/TA0.0/P1.5": "bidirectional", "CA6/TDI/TCLK/TA0.1/P1.6": "bidirectional", "CA7/TDO/TDI/CAOUT/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2011IRSA";
@@ -2229,7 +2283,8 @@ export class MSP430F2012IN extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "A0/TA0CLK/ACLK/P1.0": "bidirectional", "A1/TA0/P1.1": "bidirectional", "A2/TA1/P1.2": "bidirectional", "ADC10CLK/A3/VREF-/VeREF-/P1.3": "bidirectional", "SMCLK/A4/VREF+/VeREF+/TCK/P1.4": "bidirectional", "TA0/A5/SCLK/TMS/P1.5": "bidirectional", "TA1/A6/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A7/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2012IN";
@@ -2261,7 +2316,8 @@ export class MSP430F2012IPW extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "A0/TA0CLK/ACLK/P1.0": "bidirectional", "A1/TA0/P1.1": "bidirectional", "A2/TA1/P1.2": "bidirectional", "ADC10CLK/A3/VREF-/VeREF-/P1.3": "bidirectional", "SMCLK/A4/VREF+/VeREF+/TCK/P1.4": "bidirectional", "TA0/A5/SCLK/TMS/P1.5": "bidirectional", "TA1/A6/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A7/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2012IPW";
@@ -2295,7 +2351,8 @@ export class MSP430F2012IRSA extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "A0/TA0CLK/ACLK/P1.0": "bidirectional", "A1/TA0/P1.1": "bidirectional", "A2/TA1/P1.2": "bidirectional", "ADC10CLK/A3/VREF-/VeREF-/P1.3": "bidirectional", "SMCLK/A4/VREF+/VeREF+/TCK/P1.4": "bidirectional", "TA0/A5/SCLK/TMS/P1.5": "bidirectional", "TA1/A6/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A7/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2012IRSA";
@@ -2327,7 +2384,8 @@ export class MSP430F2013IN extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TACLK/ACLK/A0+/P1.0": "bidirectional", "TA0/A0-/A4+/P1.1": "bidirectional", "TA1/A1+/A4-/P1.2": "bidirectional", "VREF/A1-/P1.3": "bidirectional", "SMCLK/A2+/TCK/P1.4": "bidirectional", "TA0/A2-/SCLK/TMS/P1.5": "bidirectional", "TA1/A3+/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A3-/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2013IN";
@@ -2359,7 +2417,8 @@ export class MSP430F2013IPW extends Component.withPins({
   "P2.6/XIN/TA1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TACLK/ACLK/A0+/P1.0": "bidirectional", "TA0/A0-/A4+/P1.1": "bidirectional", "TA1/A1+/A4-/P1.2": "bidirectional", "VREF/A1-/P1.3": "bidirectional", "SMCLK/A2+/TCK/P1.4": "bidirectional", "TA0/A2-/SCLK/TMS/P1.5": "bidirectional", "TA1/A3+/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A3-/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2013IPW";
@@ -2393,7 +2452,8 @@ export class MSP430F2013IRSA extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TACLK/ACLK/A0+/P1.0": "bidirectional", "TA0/A0-/A4+/P1.1": "bidirectional", "TA1/A1+/A4-/P1.2": "bidirectional", "VREF/A1-/P1.3": "bidirectional", "SMCLK/A2+/TCK/P1.4": "bidirectional", "TA0/A2-/SCLK/TMS/P1.5": "bidirectional", "TA1/A3+/SDO/SCL/TDI/TCLK/P1.6": "bidirectional", "A3-/SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2013IRSA";
@@ -2431,7 +2491,8 @@ export class MSP430F2101IDGV extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2101IDGV";
@@ -2469,7 +2530,8 @@ export class MSP430F2101IDW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2101IDW";
@@ -2507,7 +2569,8 @@ export class MSP430F2101IPW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2101IPW";
@@ -2545,7 +2608,8 @@ export class MSP430F2101IRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/CA5": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2101IRGE";
@@ -2583,7 +2647,8 @@ export class MSP430F2111IDGV extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2111IDGV";
@@ -2621,7 +2686,8 @@ export class MSP430F2111IDW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2111IDW";
@@ -2659,7 +2725,8 @@ export class MSP430F2111IPW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2111IPW";
@@ -2697,7 +2764,8 @@ export class MSP430F2111IRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/CA5": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2111IRGE";
@@ -2743,7 +2811,8 @@ export class MSP430F2112IPW extends Component.withPins({
   "TA0.1/TDI/P1.6": "27",
   "TA0.2/TDI/TDO/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2112IPW";
@@ -2789,7 +2858,8 @@ export class MSP430F2112IRHB extends Component.withPins({
   "DVCC": "30",
   "CA5/Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2112IRHB";
@@ -2835,7 +2905,8 @@ export class MSP430F2112IRTV extends Component.withPins({
   "DVCC": "30",
   "CA5/Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2112IRTV";
@@ -2873,7 +2944,8 @@ export class MSP430F2121IDGV extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2121IDGV";
@@ -2911,7 +2983,8 @@ export class MSP430F2121IDW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2121IDW";
@@ -2949,7 +3022,8 @@ export class MSP430F2121IPW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2121IPW";
@@ -2987,7 +3061,8 @@ export class MSP430F2121IRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/CA5": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2121IRGE";
@@ -3033,7 +3108,8 @@ export class MSP430F2122IPW extends Component.withPins({
   "TA0.1/TDI/P1.6": "27",
   "TA0.2/TDI/TDO/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2122IPW";
@@ -3079,7 +3155,8 @@ export class MSP430F2122IRHB extends Component.withPins({
   "DVCC": "30",
   "CA5/Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2122IRHB";
@@ -3125,7 +3202,8 @@ export class MSP430F2122IRTV extends Component.withPins({
   "DVCC": "30",
   "CA5/Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2122IRTV";
@@ -3163,7 +3241,8 @@ export class MSP430F2131IDGV extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2131IDGV";
@@ -3201,7 +3280,8 @@ export class MSP430F2131IDW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2131IDW";
@@ -3239,7 +3319,8 @@ export class MSP430F2131IPW extends Component.withPins({
   "TA1/TCLK/TDI/P1.6": "19",
   "TA2/TDI/TDO/P1.7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2131IPW";
@@ -3277,7 +3358,8 @@ export class MSP430F2131IRGE extends Component.withPins({
   "VCC": "23",
   "P2.5/CA5": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "P2.7/XOUT/CA7": "bidirectional", "P2.6/XIN/CA6": "bidirectional", "~{RST}/NMI": "input", "P2.0/ACLK/CA2": "bidirectional", "P2.1/INCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.3/TA1/CA0": "bidirectional", "P2.4/TA2/CA1": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TCLK/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", TEST: "input", VCC: "power_in", "P2.5/CA5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2131IRGE";
@@ -3323,7 +3405,8 @@ export class MSP430F2132IPW extends Component.withPins({
   "TA0.1/TDI/P1.6": "27",
   "TA0.2/TDI/TDO/P1.7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2132IPW";
@@ -3369,7 +3452,8 @@ export class MSP430F2132IRHB extends Component.withPins({
   "DVCC": "30",
   "CA5/Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2132IRHB";
@@ -3415,7 +3499,8 @@ export class MSP430F2132IRTV extends Component.withPins({
   "DVCC": "30",
   "CA5/Rosc/P2.5": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS: "power_in", "CA7/XOUT/P2.7": "bidirectional", "CA6/XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "CA2/ACLK/A0/P2.0": "bidirectional", "CA3/TAINCLK/SMCLK/A1/P2.1": "bidirectional", "CAOUT/CA4/TA0.0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.0": "bidirectional", "P3.7/A7/TA1.1": "bidirectional", "CA0/TA0.1/A3/VREF-/VeREF-/P2.3": "bidirectional", "CA1/TA0.2/A4/VREF+/VeREF+/P2.4": "bidirectional", "CAOUT/TACLK/ADC10CLK/P1.0": "bidirectional", "TA1.0/TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/P1.6": "bidirectional", "TA0.2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC: "power_in", "CA5/Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2132IRTV";
@@ -3471,7 +3556,8 @@ export class MSP430F2232IDA extends Component.withPins({
   "TA1/TDI/P1.6": "37",
   "TA2/TDI/TDO/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/A3/VREF-/VeREF-/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2232IDA";
@@ -3529,7 +3615,8 @@ export class MSP430F2232IRHA extends Component.withPins({
   "DVCC_39": "39",
   "ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P1.0/TACLK/ADC10CLK": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", "TA2/TDO/TDI/P1.7": "bidirectional", "TEST/SBWTCK": "input", DVCC_38: "power_in", DVCC_39: "power_in", "ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2232IRHA";
@@ -3596,7 +3683,8 @@ export class MSP430F2232IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/TBOUTH/A15": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/P2.0": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TA2/TDO/TDI/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "P3.6/A6": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.4/TB1/A13": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P3.7/A7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2232IYFF";
@@ -3652,7 +3740,8 @@ export class MSP430F2234IDA extends Component.withPins({
   "TA1/TDI/P1.6": "37",
   "TA2/TDI/TDO/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/OA0I0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/OA0O/P2.1": "bidirectional", "TA0/A2/OA0I1/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "TA1/A3/VREF-/VeREF-/OA1I1/OA1O/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/OA1I0/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2234IDA";
@@ -3710,7 +3799,8 @@ export class MSP430F2234IRHA extends Component.withPins({
   "DVCC_39": "39",
   "Rosc/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/OA0I0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/OA0O/P2.1": "bidirectional", "TA0/A2/OA0I1/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "TA1/A3/VREF-/VeREF-/OA1I1/OA1O/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/OA1I0/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2234IRHA";
@@ -3777,7 +3867,8 @@ export class MSP430F2234IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/TBOUTH/A15/OA1I3": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/OA0I0/A0/P2.0": "bidirectional", "TA0/OA0I1/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/OA0O/A1/P2.1": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TA2/TDO/TDI/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/OA1I1/OA1O/A3/P2.3": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/OA1I0/A4/P2.4": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2234IYFF";
@@ -3833,7 +3924,8 @@ export class MSP430F2252IDA extends Component.withPins({
   "TA1/TDI/P1.6": "37",
   "TA2/TDI/TDO/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/A3/VREF-/VeREF-/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2252IDA";
@@ -3891,7 +3983,8 @@ export class MSP430F2252IRHA extends Component.withPins({
   "DVCC_39": "39",
   "ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P1.0/TACLK/ADC10CLK": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", "TA2/TDO/TDI/P1.7": "bidirectional", "TEST/SBWTCK": "input", DVCC_38: "power_in", DVCC_39: "power_in", "ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2252IRHA";
@@ -3958,7 +4051,8 @@ export class MSP430F2252IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/TBOUTH/A15": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/P2.0": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TA2/TDO/TDI/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "P3.6/A6": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.4/TB1/A13": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P3.7/A7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2252IYFF";
@@ -4014,7 +4108,8 @@ export class MSP430F2254IDA extends Component.withPins({
   "TA1/TDI/P1.6": "37",
   "TA2/TDI/TDO/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/OA0I0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/OA0O/P2.1": "bidirectional", "TA0/A2/OA0I1/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "TA1/A3/VREF-/VeREF-/OA1I1/OA1O/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/OA1I0/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2254IDA";
@@ -4072,7 +4167,8 @@ export class MSP430F2254IRHA extends Component.withPins({
   "DVCC_39": "39",
   "Rosc/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/OA0I0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/OA0O/P2.1": "bidirectional", "TA0/A2/OA0I1/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "TA1/A3/VREF-/VeREF-/OA1I1/OA1O/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/OA1I0/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2254IRHA";
@@ -4139,7 +4235,8 @@ export class MSP430F2254IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/TBOUTH/A15/OA1I3": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/OA0I0/A0/P2.0": "bidirectional", "TA0/OA0I1/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/OA0O/A1/P2.1": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TA2/TDO/TDI/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/OA1I1/OA1O/A3/P2.3": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/OA1I0/A4/P2.4": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2254IYFF";
@@ -4195,7 +4292,8 @@ export class MSP430F2272IDA extends Component.withPins({
   "TA1/TDI/P1.6": "37",
   "TA2/TDI/TDO/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/A3/VREF-/VeREF-/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2272IDA";
@@ -4253,7 +4351,8 @@ export class MSP430F2272IRHA extends Component.withPins({
   "DVCC_39": "39",
   "ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P1.0/TACLK/ADC10CLK": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", "TA2/TDO/TDI/P1.7": "bidirectional", "TEST/SBWTCK": "input", DVCC_38: "power_in", DVCC_39: "power_in", "ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2272IRHA";
@@ -4320,7 +4419,8 @@ export class MSP430F2272IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/TBOUTH/A15": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/P2.0": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TA2/TDO/TDI/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "P3.6/A6": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.4/TB1/A13": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P3.7/A7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2272IYFF";
@@ -4376,7 +4476,8 @@ export class MSP430F2274IDA extends Component.withPins({
   "TA1/TDI/P1.6": "37",
   "TA2/TDI/TDO/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/OA0I0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/OA0O/P2.1": "bidirectional", "TA0/A2/OA0I1/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "TA1/A3/VREF-/VeREF-/OA1I1/OA1O/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/OA1I0/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2274IDA";
@@ -4434,7 +4535,8 @@ export class MSP430F2274IRHA extends Component.withPins({
   "DVCC_39": "39",
   "Rosc/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "bidirectional", "ACLK/A0/OA0I0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/OA0O/P2.1": "bidirectional", "TA0/A2/OA0I1/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "TA1/A3/VREF-/VeREF-/OA1I1/OA1O/P2.3": "bidirectional", "TA2/A4/VREF+/VeREF+/OA1I0/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/TDI/P1.6": "bidirectional", "TA2/TDI/TDO/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "Rosc/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2274IRHA";
@@ -4501,7 +4603,8 @@ export class MSP430F2274IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/TBOUTH/A15/OA1I3": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/OA0I0/A0/P2.0": "bidirectional", "TA0/OA0I1/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/OA0O/A1/P2.1": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TA2/TDO/TDI/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TA0/TMS/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TA1/TDI/TCLK/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12/OA0O": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/OA1I1/OA1O/A3/P2.3": "bidirectional", "P3.6/A6/OA0I2": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/TB2/A14/OA0I3": "bidirectional", "P4.4/TB1/A13/OA1O": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/OA1I0/A4/P2.4": "bidirectional", "P3.7/A7/OA1I2": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/TBOUTH/A15/OA1I3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2274IYFF";
@@ -4559,7 +4662,8 @@ export class MSP430F2330IRHA extends Component.withPins({
   "VSS": "39",
   "AVCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "XIN/CA6/P2.6": "bidirectional", "XOUT/CA7/P2.7": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/P1.4": "bidirectional", "TA0/P1.5": "bidirectional", "TA1/P1.6": "bidirectional", "TA2/P1.7": "bidirectional", "ACLK/CA2/P2.0": "bidirectional", "TAINCLK/CA3/P2.1": "bidirectional", "TA0/CAOUT/CA4/P2.2": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "ROSC/CA5/P2.5": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0": "bidirectional", "P4.4/TB1": "bidirectional", "P4.5/TB2": "bidirectional", "P4.6/TBOUTH/ACLK": "bidirectional", "P4.7/TBCLK": "bidirectional", "TDO/TDI": "bidirectional", "TDI/TCLK": "input", TMS: "input", TCK: "input", "~{RST}/NMI": "input", VSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2330IRHA";
@@ -4617,7 +4721,8 @@ export class MSP430F2330IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P3.3/UCB0CLK/UCA0STE": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVCC: "power_in", "XIN/CA6/P2.6": "bidirectional", "XOUT/CA7/P2.7": "bidirectional", "TA1/P1.2": "bidirectional", "SMCLK/P1.4": "bidirectional", "TA1/P1.6": "bidirectional", VSS: "power_in", DVCC: "power_in", "TACLK/P1.0": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.5": "bidirectional", "TA2/P1.7": "bidirectional", TCK: "input", "~{RST}/NMI": "input", "TA0/P1.1": "bidirectional", "ACLK/CA2/P2.0": "bidirectional", "TA0/CAOUT/CA4/P2.2": "bidirectional", "TAINCLK/CA3/P2.1": "bidirectional", "TDI/TCLK": "input", TMS: "input", "TA2/CA1/P2.4": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TDO/TDI": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "ROSC/CA5/P2.5": "bidirectional", "P4.5/TB2": "bidirectional", "P4.6/TBOUTH/ACLK": "bidirectional", "P4.3/TB0": "bidirectional", "P4.0/TB0": "bidirectional", "P3.6": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P4.4/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.1/TB1": "bidirectional", "P3.7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2330IYFF";
@@ -4675,7 +4780,8 @@ export class MSP430F2350IRHA extends Component.withPins({
   "VSS": "39",
   "AVCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "XIN/CA6/P2.6": "bidirectional", "XOUT/CA7/P2.7": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/P1.4": "bidirectional", "TA0/P1.5": "bidirectional", "TA1/P1.6": "bidirectional", "TA2/P1.7": "bidirectional", "ACLK/CA2/P2.0": "bidirectional", "TAINCLK/CA3/P2.1": "bidirectional", "TA0/CAOUT/CA4/P2.2": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "ROSC/CA5/P2.5": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0": "bidirectional", "P4.4/TB1": "bidirectional", "P4.5/TB2": "bidirectional", "P4.6/TBOUTH/ACLK": "bidirectional", "P4.7/TBCLK": "bidirectional", "TDO/TDI": "bidirectional", "TDI/TCLK": "input", TMS: "input", TCK: "input", "~{RST}/NMI": "input", VSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2350IRHA";
@@ -4733,7 +4839,8 @@ export class MSP430F2350IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P3.3/UCB0CLK/UCA0STE": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVCC: "power_in", "XIN/CA6/P2.6": "bidirectional", "XOUT/CA7/P2.7": "bidirectional", "TA1/P1.2": "bidirectional", "SMCLK/P1.4": "bidirectional", "TA1/P1.6": "bidirectional", VSS: "power_in", DVCC: "power_in", "TACLK/P1.0": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.5": "bidirectional", "TA2/P1.7": "bidirectional", TCK: "input", "~{RST}/NMI": "input", "TA0/P1.1": "bidirectional", "ACLK/CA2/P2.0": "bidirectional", "TA0/CAOUT/CA4/P2.2": "bidirectional", "TAINCLK/CA3/P2.1": "bidirectional", "TDI/TCLK": "input", TMS: "input", "TA2/CA1/P2.4": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TDO/TDI": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "ROSC/CA5/P2.5": "bidirectional", "P4.5/TB2": "bidirectional", "P4.6/TBOUTH/ACLK": "bidirectional", "P4.3/TB0": "bidirectional", "P4.0/TB0": "bidirectional", "P3.6": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P4.4/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.1/TB1": "bidirectional", "P3.7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2350IYFF";
@@ -4791,7 +4898,8 @@ export class MSP430F2370IRHA extends Component.withPins({
   "VSS": "39",
   "AVCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "XIN/CA6/P2.6": "bidirectional", "XOUT/CA7/P2.7": "bidirectional", "TACLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/P1.4": "bidirectional", "TA0/P1.5": "bidirectional", "TA1/P1.6": "bidirectional", "TA2/P1.7": "bidirectional", "ACLK/CA2/P2.0": "bidirectional", "TAINCLK/CA3/P2.1": "bidirectional", "TA0/CAOUT/CA4/P2.2": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TA2/CA1/P2.4": "bidirectional", "ROSC/CA5/P2.5": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6": "bidirectional", "P3.7": "bidirectional", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0": "bidirectional", "P4.4/TB1": "bidirectional", "P4.5/TB2": "bidirectional", "P4.6/TBOUTH/ACLK": "bidirectional", "P4.7/TBCLK": "bidirectional", "TDO/TDI": "bidirectional", "TDI/TCLK": "input", TMS: "input", TCK: "input", "~{RST}/NMI": "input", VSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2370IRHA";
@@ -4849,7 +4957,8 @@ export class MSP430F2370IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P3.3/UCB0CLK/UCA0STE": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AVCC: "power_in", "XIN/CA6/P2.6": "bidirectional", "XOUT/CA7/P2.7": "bidirectional", "TA1/P1.2": "bidirectional", "SMCLK/P1.4": "bidirectional", "TA1/P1.6": "bidirectional", VSS: "power_in", DVCC: "power_in", "TACLK/P1.0": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.5": "bidirectional", "TA2/P1.7": "bidirectional", TCK: "input", "~{RST}/NMI": "input", "TA0/P1.1": "bidirectional", "ACLK/CA2/P2.0": "bidirectional", "TA0/CAOUT/CA4/P2.2": "bidirectional", "TAINCLK/CA3/P2.1": "bidirectional", "TDI/TCLK": "input", TMS: "input", "TA2/CA1/P2.4": "bidirectional", "TA1/CA0/P2.3": "bidirectional", "TDO/TDI": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "ROSC/CA5/P2.5": "bidirectional", "P4.5/TB2": "bidirectional", "P4.6/TBOUTH/ACLK": "bidirectional", "P4.3/TB0": "bidirectional", "P4.0/TB0": "bidirectional", "P3.6": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P4.4/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.1/TB1": "bidirectional", "P3.7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2370IYFF";
@@ -4980,7 +5089,8 @@ export class MSP430F2618_EP extends Component.withPins({
   "P4.4/TB4": "M11",
   "P4.5/TB5": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC_A1: "power_in", AVCC: "power_in", DVSS_A3: "power_in", "A1/P6.1": "bidirectional", TCK: "input", "TDI/TCLK": "input", "XT2IN/P8.7": "bidirectional", "XT2OUT/P8.6": "bidirectional", "P8.3": "bidirectional", "P8.1": "bidirectional", "P7.7": "bidirectional", "P7.6": "bidirectional", "A3/P6.3": "bidirectional", AVSS_B2: "power_in", AVSS_B3: "passive", "A2/P6.2": "bidirectional", "~{RST}/NMI": "input", TMS: "input", "TDO/TDI": "bidirectional", "P8.5": "bidirectional", "P8.4": "bidirectional", "P8.0": "bidirectional", DVSS_B11: "passive", "P7.5": "bidirectional", "P6.4/A4": "bidirectional", "DAC1/A5/P6.5_C2": "bidirectional", "DAC1/A5/P6.5_C3": "bidirectional", "P7.4": "bidirectional", "P7.3": "bidirectional", "DAC0/A6/P6.6": "bidirectional", "SVSIN/DAC1/A7/P6.7": "bidirectional", "A0/P6.0": "bidirectional", DVSS_D5: "passive", DVSS_D6: "passive", DVSS_D7: "passive", DVSS_D8: "passive", "P8.2": "bidirectional", "P7.2": "bidirectional", "P7.1": "bidirectional", XIN: "input", "VREF+": "power_in", DVSS_E4: "passive", DVSS_E5: "passive", DVSS_E6: "passive", DVSS_E7: "passive", DVSS_E8: "passive", DVSS_E9: "passive", "P7.0": "power_in", DVSS_E12: "passive", XOUT: "output", "VeREF+/DAC0": "bidirectional", DVSS_F4: "passive", DVSS_F5: "passive", DVSS_F8: "passive", DVSS_F9: "passive", "SVSOUT/TBOUTH/P5.7": "bidirectional", DVCC_F12: "power_in", "VREF-/VeREF-": "bidirectional", "P1.0/TACLK/CAOUT": "bidirectional", DVSS_G4: "passive", DVSS_G5: "passive", DVSS_G8: "passive", DVSS_G9: "passive", "SMCLK/P5.5": "bidirectional", "ACLK/P5.6": "bidirectional", "P1.1/TA0": "bidirectional", "P1.2/TA1": "bidirectional", DVSS_H4: "passive", DVSS_H5: "passive", DVSS_H6: "passive", DVSS_H7: "passive", DVSS_H8: "passive", DVSS_H9: "passive", "UCA1STE/UCB1CLK/P5.3": "bidirectional", "MCLK/P5.4": "bidirectional", "P1.3/TA2": "bidirectional", "P1.4/SMCLK": "bidirectional", "P2.6/ADC12CLK/DMAE0/CA6": "bidirectional", DVSS_J5: "passive", DVSS_J6: "passive", DVSS_J7: "passive", DVSS_J8: "passive", "P4.1/TB1": "bidirectional", "UCB1SDA/UCB1SIMO/P5.1": "bidirectional", "UCB1SCL/UCB1SOMI/P5.2": "bidirectional", "P1.5/TA0": "bidirectional", "P1.6/TA1": "bidirectional", "P4.7/TBCLK": "bidirectional", "UCA1CLK/UCB1STE/P5.0": "bidirectional", "P1.7/TA2": "bidirectional", DVSS_L2: "passive", "P2.3/CA0/TA1": "bidirectional", "P2.4/CA1/TA2": "bidirectional", "P2.7/TA0/CA7": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.7/UCA1RXD/UCA1SOMI": "bidirectional", "P4.3/TB3": "bidirectional", DVSS_L11: "passive", "P4.6/TB6": "bidirectional", "P2.0/ACLK/CA2": "bidirectional", "P2.1/TAINCLK/CA3": "bidirectional", "P2.2/CAOUT/TA0/CA4": "bidirectional", "P2.5/Rosc/CA5": "bidirectional", "P3.0/UCB0STE/UCA0CLK": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.6/UCA1TXD/UCA1SIMO": "bidirectional", "P4.0/TB0": "bidirectional", "P4.2/TB2": "bidirectional", "P4.4/TB4": "bidirectional", "P4.5/TB5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F2618-EP";
@@ -5062,7 +5172,8 @@ export class MSP430F5217IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P6.4/CB4": "bidirectional", "P6.5/CB5": "bidirectional", "P6.6/CB6": "bidirectional", "P6.7/CB7": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC: "power_in", DVSS_16: "power_in", VCORE: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVIO: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5217IRGC";
@@ -5144,7 +5255,8 @@ export class MSP430F5217IYFF extends Component.withPins({
   "UCB0SIMO/UCB0SDA/P3.0": "H8",
   "TA2.1/P2.4": "J7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.1/CB1": "bidirectional", "P6.4/CB4": "bidirectional", "P6.7/CB7": "bidirectional", "P5.1": "bidirectional", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC: "power_in", DVSS_A8: "power_in", "PJ.3/TCK": "bidirectional", "P6.2/CB2": "bidirectional", "P6.5/CB5": "bidirectional", "P5.0": "bidirectional", AVCC: "power_in", AVSS: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "power_in", "PJ.1/TDI/TCLK": "bidirectional", "P6.0/CB0": "bidirectional", "P6.3/CB3": "bidirectional", "P6.6/CB6": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P5.3/XT2OUT": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.2/TMS": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA1.0/P1.7": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA0.4/P1.5": "bidirectional", "P5.2/XT2IN": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "SBWTCK/TEST": "input", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.1/P2.0": "bidirectional", "P7.5/TB0.5": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.2/TB0.2": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.0/P2.3": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.1/TB0.1": "bidirectional", "P4.7": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "P7.0/TB0.0": "bidirectional", "P4.6": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVIO: "power_in", DVSS_H6: "power_in", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "TA2.1/P2.4": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5217IYFF";
@@ -5226,7 +5338,8 @@ export class MSP430F5219IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P6.4/CB4": "bidirectional", "P6.5/CB5": "bidirectional", "P6.6/CB6": "bidirectional", "P6.7/CB7": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC: "power_in", DVSS_16: "power_in", VCORE: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVIO: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5219IRGC";
@@ -5308,7 +5421,8 @@ export class MSP430F5219IYFF extends Component.withPins({
   "UCB0SIMO/UCB0SDA/P3.0": "H8",
   "TA2.1/P2.4": "J7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.1/CB1": "bidirectional", "P6.4/CB4": "bidirectional", "P6.7/CB7": "bidirectional", "P5.1": "bidirectional", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC: "power_in", DVSS_A8: "power_in", "PJ.3/TCK": "bidirectional", "P6.2/CB2": "bidirectional", "P6.5/CB5": "bidirectional", "P5.0": "bidirectional", AVCC: "power_in", AVSS: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "power_in", "PJ.1/TDI/TCLK": "bidirectional", "P6.0/CB0": "bidirectional", "P6.3/CB3": "bidirectional", "P6.6/CB6": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P5.3/XT2OUT": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.2/TMS": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA1.0/P1.7": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA0.4/P1.5": "bidirectional", "P5.2/XT2IN": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "SBWTCK/TEST": "input", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.1/P2.0": "bidirectional", "P7.5/TB0.5": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.2/TB0.2": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.0/P2.3": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.1/TB0.1": "bidirectional", "P4.7": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "P7.0/TB0.0": "bidirectional", "P4.6": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVIO: "power_in", DVSS_H6: "power_in", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "TA2.1/P2.4": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5219IYFF";
@@ -5390,7 +5504,8 @@ export class MSP430F5227IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC: "power_in", DVSS_16: "power_in", VCORE: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVIO: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5227IRGC";
@@ -5472,7 +5587,8 @@ export class MSP430F5227IYFF extends Component.withPins({
   "UCB0SIMO/UCB0SDA/P3.0": "H8",
   "TA2.1/P2.4": "J7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.1/CB1/A1": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC: "power_in", DVSS_A8: "power_in", "PJ.3/TCK": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", AVCC: "power_in", AVSS: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "power_in", "PJ.1/TDI/TCLK": "bidirectional", "P6.0/CB0/A0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.6/CB6/A6": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P5.3/XT2OUT": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.2/TMS": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA1.0/P1.7": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA0.4/P1.5": "bidirectional", "P5.2/XT2IN": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "SBWTCK/TEST": "input", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.1/P2.0": "bidirectional", "P7.5/TB0.5": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.2/TB0.2": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.0/P2.3": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.1/TB0.1": "bidirectional", "P4.7": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "P7.0/TB0.0": "bidirectional", "P4.6": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVIO: "power_in", DVSS_H6: "power_in", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "TA2.1/P2.4": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5227IYFF";
@@ -5554,7 +5670,8 @@ export class MSP430F5229IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC: "power_in", DVSS_16: "power_in", VCORE: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVIO: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5229IRGC";
@@ -5636,7 +5753,8 @@ export class MSP430F5229IYFF extends Component.withPins({
   "UCB0SIMO/UCB0SDA/P3.0": "H8",
   "TA2.1/P2.4": "J7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.1/CB1/A1": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC: "power_in", DVSS_A8: "power_in", "PJ.3/TCK": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", AVCC: "power_in", AVSS: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "power_in", "PJ.1/TDI/TCLK": "bidirectional", "P6.0/CB0/A0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.6/CB6/A6": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P5.3/XT2OUT": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.2/TMS": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "TA1.2/P2.1": "bidirectional", "TA1.0/P1.7": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA0.4/P1.5": "bidirectional", "P5.2/XT2IN": "bidirectional", BSLEN: "bidirectional", "~{RST}/NMI": "input", "SBWTCK/TEST": "input", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.1/P2.0": "bidirectional", "P7.5/TB0.5": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.2/TB0.2": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.0/P2.3": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.1/TB0.1": "bidirectional", "P4.7": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "P7.0/TB0.0": "bidirectional", "P4.6": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVIO: "power_in", DVSS_H6: "power_in", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "TA2.1/P2.4": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5229IYFF";
@@ -5701,7 +5819,8 @@ export class MSP430F5232IRGZ extends Component.withPins({
   "P6.1/CB1": "47",
   "P6.2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/CB3": "bidirectional", "P6.4/CB4": "bidirectional", "P6.5/CB5": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_10: "power_in", DVSS_11: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_27: "power_in", DVCC_28: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5232IRGZ";
@@ -5766,7 +5885,8 @@ export class MSP430F5234IRGZ extends Component.withPins({
   "P6.1/CB1": "47",
   "P6.2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/CB3": "bidirectional", "P6.4/CB4": "bidirectional", "P6.5/CB5": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_10: "power_in", DVSS_11: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_27: "power_in", DVCC_28: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5234IRGZ";
@@ -5847,7 +5967,8 @@ export class MSP430F5237IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P6.4/CB4": "bidirectional", "P6.5/CB5": "bidirectional", "P6.6/CB6": "bidirectional", "P6.7/CB7": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_15: "power_in", DVSS_16: "power_in", VCORE: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVCC_40: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5237IRGC";
@@ -5928,7 +6049,8 @@ export class MSP430F5239IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P6.4/CB4": "bidirectional", "P6.5/CB5": "bidirectional", "P6.6/CB6": "bidirectional", "P6.7/CB7": "bidirectional", "P5.0": "bidirectional", "P5.1": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_15: "power_in", DVSS_16: "power_in", VCORE: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVCC_40: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5239IRGC";
@@ -5993,7 +6115,8 @@ export class MSP430F5242IRGZ extends Component.withPins({
   "P6.1/A1/CB1": "47",
   "P6.2/A2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/A3/CB3": "bidirectional", "P6.4/A4/CB4": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_10: "power_in", DVSS_11: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_27: "power_in", DVCC_28: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5242IRGZ";
@@ -6058,7 +6181,8 @@ export class MSP430F5244IRGZ extends Component.withPins({
   "P6.1/A1/CB1": "47",
   "P6.2/A2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/A3/CB3": "bidirectional", "P6.4/A4/CB4": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_10: "power_in", DVSS_11: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_27: "power_in", DVCC_28: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5244IRGZ";
@@ -6139,7 +6263,8 @@ export class MSP430F5247IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_15: "power_in", DVSS_16: "power_in", VCORE: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVCC_40: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5247IRGC";
@@ -6220,7 +6345,8 @@ export class MSP430F5249IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RSTDVCC}/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS: "power_in", DVCC_15: "power_in", DVSS_16: "power_in", VCORE: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS_39: "power_in", DVCC_40: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", "P7.0/TB0.0": "bidirectional", "P7.1/TB0.1": "bidirectional", "P7.2/TB0.2": "bidirectional", "P7.3/TB0.3": "bidirectional", "P7.4/TB0.4": "bidirectional", "P7.5/TB0.5": "bidirectional", "~{RST}/NMI": "input", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RSTDVCC}/SBWTDIO": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5249IRGC";
@@ -6284,7 +6410,8 @@ export class MSP430F5304IPT extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0": "bidirectional", "P6.1/A1": "bidirectional", "P6.2/A2": "bidirectional", "P6.3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5304IPT";
@@ -6348,7 +6475,8 @@ export class MSP430F5304IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0": "bidirectional", "P6.1/A1": "bidirectional", "P6.2/A2": "bidirectional", "P6.3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5304IRGZ";
@@ -6412,7 +6540,8 @@ export class MSP430F5308IPT extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", "P6.3/A3/CB3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5308IPT";
@@ -6492,7 +6621,8 @@ export class MSP430F5308IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RST}/NMI/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5308IRGC";
@@ -6556,7 +6686,8 @@ export class MSP430F5308IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", "P6.3/A3/CB3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5308IRGZ";
@@ -6652,7 +6783,8 @@ export class MSP430F5308IZQE extends Component.withPins({
   "TA2.2/P2.5": "J8",
   "RTCCLK/DMAE0/P2.6": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.2/TMS": "bidirectional", "SBWTCK/TEST": "input", AVSS2: "power_in", LDOO: "power_out", LDOI: "power_in", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.1/CB1/A1": "bidirectional", "PJ.3/TCK": "bidirectional", "P5.3/XT2OUT": "bidirectional", "P5.2/XT2IN": "bidirectional", VSSU_B8: "power_in", VSSU_B9: "power_in", "P6.4/CB4/A4": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.0/TDO": "bidirectional", GND_C6: "power_in", "PM_NONE/P4.7": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.7/CB7/A7": "bidirectional", GND_D4: "power_in", GND_D5: "power_in", GND_D6: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", GND_E3: "power_in", GND_E4: "power_in", GND_E5: "power_in", GND_E6: "power_in", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", DVCC2: "power_in", "P5.4/XIN": "bidirectional", AVCC1: "power_in", GND_F3: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F6: "power_in", GND_F7: "power_in", GND_F8: "power_in", DVSS2: "power_in", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", GND_G3: "power_in", "TA0.2/P1.3": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.2/P2.1": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", DVCC1: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA2.0/P2.3": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1.1/P2.0": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5308IZQE";
@@ -6716,7 +6848,8 @@ export class MSP430F5309IPT extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", "P6.3/A3/CB3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5309IPT";
@@ -6796,7 +6929,8 @@ export class MSP430F5309IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RST}/NMI/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5309IRGC";
@@ -6860,7 +6994,8 @@ export class MSP430F5309IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", "P6.3/A3/CB3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5309IRGZ";
@@ -6956,7 +7091,8 @@ export class MSP430F5309IZQE extends Component.withPins({
   "TA2.2/P2.5": "J8",
   "RTCCLK/DMAE0/P2.6": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.2/TMS": "bidirectional", "SBWTCK/TEST": "input", AVSS2: "power_in", LDOO: "power_out", LDOI: "power_in", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.1/CB1/A1": "bidirectional", "PJ.3/TCK": "bidirectional", "P5.3/XT2OUT": "bidirectional", "P5.2/XT2IN": "bidirectional", VSSU_B8: "power_in", VSSU_B9: "power_in", "P6.4/CB4/A4": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.0/TDO": "bidirectional", GND_C6: "power_in", "PM_NONE/P4.7": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.7/CB7/A7": "bidirectional", GND_D4: "power_in", GND_D5: "power_in", GND_D6: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", GND_E3: "power_in", GND_E4: "power_in", GND_E5: "power_in", GND_E6: "power_in", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", DVCC2: "power_in", "P5.4/XIN": "bidirectional", AVCC1: "power_in", GND_F3: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F6: "power_in", GND_F7: "power_in", GND_F8: "power_in", DVSS2: "power_in", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", GND_G3: "power_in", "TA0.2/P1.3": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.2/P2.1": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", DVCC1: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA2.0/P2.3": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1.1/P2.0": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5309IZQE";
@@ -7020,7 +7156,8 @@ export class MSP430F5310IPT extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", "P6.3/A3/CB3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5310IPT";
@@ -7100,7 +7237,8 @@ export class MSP430F5310IRGC extends Component.withPins({
   "PJ.3/TCK": "63",
   "~{RST}/NMI/SBWTDIO": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA1.2/P2.1": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5310IRGC";
@@ -7164,7 +7302,8 @@ export class MSP430F5310IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0/CB0": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", "P6.3/A3/CB3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "power_in", LDOO: "power_out", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5310IRGZ";
@@ -7260,7 +7399,8 @@ export class MSP430F5310IZQE extends Component.withPins({
   "TA2.2/P2.5": "J8",
   "RTCCLK/DMAE0/P2.6": "J9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.2/TMS": "bidirectional", "SBWTCK/TEST": "input", AVSS2: "power_in", LDOO: "power_out", LDOI: "power_in", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.1/CB1/A1": "bidirectional", "PJ.3/TCK": "bidirectional", "P5.3/XT2OUT": "bidirectional", "P5.2/XT2IN": "bidirectional", VSSU_B8: "power_in", VSSU_B9: "power_in", "P6.4/CB4/A4": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.0/TDO": "bidirectional", GND_C6: "power_in", "PM_NONE/P4.7": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.7/CB7/A7": "bidirectional", GND_D4: "power_in", GND_D5: "power_in", GND_D6: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", GND_E3: "power_in", GND_E4: "power_in", GND_E5: "power_in", GND_E6: "power_in", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", DVCC2: "power_in", "P5.4/XIN": "bidirectional", AVCC1: "power_in", GND_F3: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F6: "power_in", GND_F7: "power_in", GND_F8: "power_in", DVSS2: "power_in", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", GND_G3: "power_in", "TA0.2/P1.3": "bidirectional", "CBOUT/TA1CLK/P1.6": "bidirectional", "TA1.2/P2.1": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", DVCC1: "power_in", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA2.0/P2.3": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1.1/P2.0": "bidirectional", "SMCLK/TA2CLK/P2.2": "bidirectional", "TA2.1/P2.4": "bidirectional", "TA2.2/P2.5": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5310IZQE";
@@ -7375,7 +7515,8 @@ export class MSP430F5333IPZ extends Component.withPins({
   "P6.2/CB2/A2": "99",
   "P6.3/CB3/A3": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.4/CB8/A12": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P7.6/CB10/A14": "bidirectional", "P7.7/CB11/A15": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "VREF-/VeREF-/P5.1": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", XIN: "bidirectional", XOUT: "bidirectional", AVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP0/P2.0": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP3/P2.3": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "P2MAP7/P2.7": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "P5.2": "bidirectional", DVSS: "power_in", "P5.3": "bidirectional", "P5.4": "bidirectional", "P5.5": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.0/P3.1": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.1/P3.6": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.0/P4.0": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.3/P4.3": "bidirectional", "TB0.4/P4.4": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.7": "bidirectional", "P9.0": "bidirectional", "P9.1": "bidirectional", "P9.2": "bidirectional", "P9.3": "bidirectional", "P9.4": "bidirectional", "P9.5": "bidirectional", "P9.6": "bidirectional", "P9.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "bidirectional", LDOO: "bidirectional", AVSS3: "power_in", "P7.2/XT2IN": "bidirectional", "P7.3/XT2OUT": "bidirectional", VBAK: "bidirectional", VBAT: "bidirectional", "RTCCLK/P5.7": "bidirectional", DVCC3: "power_in", DVSS3: "power_in", "TEST/SBWTCK": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5333IPZ";
@@ -7503,7 +7644,8 @@ export class MSP430F5333IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", LDOO: "bidirectional", LDOI: "bidirectional", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15": "bidirectional", "P7.6/CB10/A14": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5333IZQW";
@@ -7618,7 +7760,8 @@ export class MSP430F5335IPZ extends Component.withPins({
   "P6.2/CB2/A2": "99",
   "P6.3/CB3/A3": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.4/CB8/A12": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P7.6/CB10/A14": "bidirectional", "P7.7/CB11/A15": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "VREF-/VeREF-/P5.1": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", XIN: "bidirectional", XOUT: "bidirectional", AVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP0/P2.0": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP3/P2.3": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "P2MAP7/P2.7": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "P5.2": "bidirectional", DVSS: "power_in", "P5.3": "bidirectional", "P5.4": "bidirectional", "P5.5": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.0/P3.1": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.1/P3.6": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.0/P4.0": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.3/P4.3": "bidirectional", "TB0.4/P4.4": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.7": "bidirectional", "P9.0": "bidirectional", "P9.1": "bidirectional", "P9.2": "bidirectional", "P9.3": "bidirectional", "P9.4": "bidirectional", "P9.5": "bidirectional", "P9.6": "bidirectional", "P9.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "bidirectional", LDOO: "bidirectional", AVSS3: "power_in", "P7.2/XT2IN": "bidirectional", "P7.3/XT2OUT": "bidirectional", VBAK: "bidirectional", VBAT: "bidirectional", "RTCCLK/P5.7": "bidirectional", DVCC3: "power_in", DVSS3: "power_in", "TEST/SBWTCK": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5335IPZ";
@@ -7746,7 +7889,8 @@ export class MSP430F5335IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", LDOO: "bidirectional", LDOI: "bidirectional", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15": "bidirectional", "P7.6/CB10/A14": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5335IZQW";
@@ -7861,7 +8005,8 @@ export class MSP430F5336IPZ extends Component.withPins({
   "P6.2/CB2/A2": "99",
   "P6.3/CB3/A3": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.4/CB8/A12": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "VREF-/VeREF-/P5.1": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", XIN: "bidirectional", XOUT: "bidirectional", AVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP0/P2.0": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP3/P2.3": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "P2MAP7/P2.7": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "P5.2": "bidirectional", DVSS: "power_in", "P5.3": "bidirectional", "P5.4": "bidirectional", "P5.5": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.0/P3.1": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.1/P3.6": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.0/P4.0": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.3/P4.3": "bidirectional", "TB0.4/P4.4": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.7": "bidirectional", "P9.0": "bidirectional", "P9.1": "bidirectional", "P9.2": "bidirectional", "P9.3": "bidirectional", "P9.4": "bidirectional", "P9.5": "bidirectional", "P9.6": "bidirectional", "P9.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "bidirectional", LDOO: "bidirectional", AVSS3: "power_in", "P7.2/XT2IN": "bidirectional", "P7.3/XT2OUT": "bidirectional", VBAK: "bidirectional", VBAT: "bidirectional", "RTCCLK/P5.7": "bidirectional", DVCC3: "power_in", DVSS3: "power_in", "TEST/SBWTCK": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5336IPZ";
@@ -7989,7 +8134,8 @@ export class MSP430F5336IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", LDOO: "bidirectional", LDOI: "bidirectional", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15/DAC0": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5336IZQW";
@@ -8104,7 +8250,8 @@ export class MSP430F5338IPZ extends Component.withPins({
   "P6.2/CB2/A2": "99",
   "P6.3/CB3/A3": "100",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.4/CB8/A12": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "VREF-/VeREF-/P5.1": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", XIN: "bidirectional", XOUT: "bidirectional", AVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP0/P2.0": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP3/P2.3": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "P2MAP7/P2.7": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", VCORE: "bidirectional", "P5.2": "bidirectional", DVSS: "power_in", "P5.3": "bidirectional", "P5.4": "bidirectional", "P5.5": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.0/P3.1": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.1/P3.6": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.0/P4.0": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.3/P4.3": "bidirectional", "TB0.4/P4.4": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.7": "bidirectional", "P9.0": "bidirectional", "P9.1": "bidirectional", "P9.2": "bidirectional", "P9.3": "bidirectional", "P9.4": "bidirectional", "P9.5": "bidirectional", "P9.6": "bidirectional", "P9.7": "bidirectional", VSSU: "power_in", "PU.0": "bidirectional", "PU.1": "bidirectional", LDOI: "bidirectional", LDOO: "bidirectional", AVSS3: "power_in", "P7.2/XT2IN": "bidirectional", "P7.3/XT2OUT": "bidirectional", VBAK: "bidirectional", VBAT: "bidirectional", "RTCCLK/P5.7": "bidirectional", DVCC3: "power_in", DVSS3: "power_in", "TEST/SBWTCK": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5338IPZ";
@@ -8232,7 +8379,8 @@ export class MSP430F5338IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", LDOO: "bidirectional", LDOI: "bidirectional", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15/DAC0": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5338IZQW";
@@ -8298,7 +8446,8 @@ export class MSP430F5340IRGZ extends Component.withPins({
   "P6.1/A1/CB1": "47",
   "P6.2/A2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/A3/CB3": "bidirectional", "P6.4/A4/CB4": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P5.0/A8/VREF+/VeREF+": "bidirectional", "P5.1/A9/VREF-/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", "P5.7/TB0.1": "bidirectional", DVSS3: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5340IRGZ";
@@ -8364,7 +8513,8 @@ export class MSP430F5341IRGZ extends Component.withPins({
   "P6.1/A1/CB1": "47",
   "P6.2/A2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/A3/CB3": "bidirectional", "P6.4/A4/CB4": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P5.0/A8/VREF+/VeREF+": "bidirectional", "P5.1/A9/VREF-/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", "P5.7/TB0.1": "bidirectional", DVSS3: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5341IRGZ";
@@ -8430,7 +8580,8 @@ export class MSP430F5342IRGZ extends Component.withPins({
   "P6.1/A1/CB1": "47",
   "P6.2/A2/CB2": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.3/A3/CB3": "bidirectional", "P6.4/A4/CB4": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P5.0/A8/VREF+/VeREF+": "bidirectional", "P5.1/A9/VREF-/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_NONE/P4.6": "bidirectional", "PM_NONE/P4.7": "bidirectional", "P5.7/TB0.1": "bidirectional", DVSS3: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "P6.1/A1/CB1": "bidirectional", "P6.2/A2/CB2": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5342IRGZ";
@@ -8558,7 +8709,8 @@ export class MSP430F5358IZQW extends Component.withPins({
   "P4.1/TB0.1": "M11",
   "P4.3/TB0.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", LDOO: "bidirectional", LDOI: "bidirectional", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6/UCB2SOMI/UCB2SCL": "bidirectional", "P9.5/UCB2SIMO/UCB2SDA": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "P5.0/VREF+/VeREF+": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "P5.7/RTCCLK": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3/UCA2RXD/UCA2SOMI": "bidirectional", "P9.2/UCA2TXD/UCA2SIMO": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "P5.1/VREF-/VeREF-": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4/UCB2CLK/UCA2STE": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1/UCB2STE/UCA2CLK": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2.0/P2MAP0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "P5.6/ADC12CLK/DMAE0": "bidirectional", "P2.1/P2MAP1": "bidirectional", "P2.3/P2MAP3": "bidirectional", GND_H5: "power_in", "P1.3/TA0.2": "bidirectional", "P3.1/TA1.0": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2.2/P2MAP2": "bidirectional", "P2.4/P2MAP4": "bidirectional", "P5.5": "bidirectional", "P1.2/TA0.1": "bidirectional", "P1.6/TA0.1": "bidirectional", "P3.4/TA2CLK/SMCLK": "bidirectional", "P4.0/TB0.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2.5/P2MAP5": "bidirectional", "P2.6/P2MAP6": "bidirectional", "P4.6/TB0.6": "bidirectional", "P4.7/TB0OUTH/SVMOUT": "bidirectional", DVCC1: "power_in", "P2.7/P2MAP7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P1.0/TA0CLK/ACLK": "bidirectional", "P1.5/TA0.4": "bidirectional", "P3.0/TA1CLK/CBOUT": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.6/TA2.1": "bidirectional", "P4.2/TB0.2": "bidirectional", "P4.5/TB0.5": "bidirectional", "P4.4/TB0.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "P1.1/TA0.0": "bidirectional", "P1.4/TA0.3": "bidirectional", "P1.7/TA0.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.5/TA2.0": "bidirectional", "P3.7/TA2.2": "bidirectional", "P4.1/TB0.1": "bidirectional", "P4.3/TB0.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5358IZQW";
@@ -8686,7 +8838,8 @@ export class MSP430F5359IZQW extends Component.withPins({
   "P4.1/TB0.1": "M11",
   "P4.3/TB0.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", LDOO: "bidirectional", LDOI: "bidirectional", "PU.1": "bidirectional", "PU.0": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6/UCB2SOMI/UCB2SCL": "bidirectional", "P9.5/UCB2SIMO/UCB2SDA": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "P5.0/VREF+/VeREF+": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "P5.7/RTCCLK": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3/UCA2RXD/UCA2SOMI": "bidirectional", "P9.2/UCA2TXD/UCA2SIMO": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "P5.1/VREF-/VeREF-": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4/UCB2CLK/UCA2STE": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1/UCB2STE/UCA2CLK": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2.0/P2MAP0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "P5.6/ADC12CLK/DMAE0": "bidirectional", "P2.1/P2MAP1": "bidirectional", "P2.3/P2MAP3": "bidirectional", GND_H5: "power_in", "P1.3/TA0.2": "bidirectional", "P3.1/TA1.0": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2.2/P2MAP2": "bidirectional", "P2.4/P2MAP4": "bidirectional", "P5.5": "bidirectional", "P1.2/TA0.1": "bidirectional", "P1.6/TA0.1": "bidirectional", "P3.4/TA2CLK/SMCLK": "bidirectional", "P4.0/TB0.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2.5/P2MAP5": "bidirectional", "P2.6/P2MAP6": "bidirectional", "P4.6/TB0.6": "bidirectional", "P4.7/TB0OUTH/SVMOUT": "bidirectional", DVCC1: "power_in", "P2.7/P2MAP7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "P1.0/TA0CLK/ACLK": "bidirectional", "P1.5/TA0.4": "bidirectional", "P3.0/TA1CLK/CBOUT": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.6/TA2.1": "bidirectional", "P4.2/TB0.2": "bidirectional", "P4.5/TB0.5": "bidirectional", "P4.4/TB0.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "P1.1/TA0.0": "bidirectional", "P1.4/TA0.3": "bidirectional", "P1.7/TA0.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.5/TA2.0": "bidirectional", "P3.7/TA2.2": "bidirectional", "P4.1/TB0.1": "bidirectional", "P4.3/TB0.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5359IZQW";
@@ -8752,7 +8905,8 @@ export class MSP430F5500IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P5.0/VeREF+": "bidirectional", "P5.1/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5500IRGZ";
@@ -8818,7 +8972,8 @@ export class MSP430F5501IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P5.0/VeREF+": "bidirectional", "P5.1/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5501IRGZ";
@@ -8884,7 +9039,8 @@ export class MSP430F5502IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P5.0/VeREF+": "bidirectional", "P5.1/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5502IRGZ";
@@ -8950,7 +9106,8 @@ export class MSP430F5503IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0": "bidirectional", "P6.1/CB1": "bidirectional", "P6.2/CB2": "bidirectional", "P6.3/CB3": "bidirectional", "P5.0/VeREF+": "bidirectional", "P5.1/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5503IRGZ";
@@ -9016,7 +9173,8 @@ export class MSP430F5504IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0": "bidirectional", "P6.1/A1": "bidirectional", "P6.2/A2": "bidirectional", "P6.3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5504IRGZ";
@@ -9082,7 +9240,8 @@ export class MSP430F5505IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0": "bidirectional", "P6.1/A1": "bidirectional", "P6.2/A2": "bidirectional", "P6.3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5505IRGZ";
@@ -9148,7 +9307,8 @@ export class MSP430F5506IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0": "bidirectional", "P6.1/A1": "bidirectional", "P6.2/A2": "bidirectional", "P6.3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5506IRGZ";
@@ -9214,7 +9374,8 @@ export class MSP430F5507IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/A0": "bidirectional", "P6.1/A1": "bidirectional", "P6.2/A2": "bidirectional", "P6.3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5507IRGZ";
@@ -9280,7 +9441,8 @@ export class MSP430F5508IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5508IRGZ";
@@ -9346,7 +9508,8 @@ export class MSP430F5509IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5509IRGZ";
@@ -9412,7 +9575,8 @@ export class MSP430F5510IRGZ extends Component.withPins({
   "SBWTCK/TEST": "47",
   "~{RST}/NMI/SBWTDIO": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.0/CB0/A0": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.2/CB2/A2": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P5.0/A8/VeREF+": "bidirectional", "P5.1/A9/VeREF-": "bidirectional", AVCC1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", AVSS1: "power_in", DVCC1: "power_in", DVSS1: "power_in", VCORE: "passive", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", DVSS2: "power_in", DVCC2: "power_in", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "P4.6": "bidirectional", "P4.7": "bidirectional", VSSU: "power_in", "PU.0/DP": "bidirectional", PUR: "bidirectional", "PU.1/DM": "bidirectional", VBUS: "power_in", VUSB: "power_out", V18: "passive", AVSS2: "power_in", "P5.2/XT2IN": "bidirectional", "P5.3/XT2OUT": "bidirectional", "SBWTCK/TEST": "input", "~{RST}/NMI/SBWTDIO": "input", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5510IRGZ";
@@ -9494,7 +9658,8 @@ export class MSP430F5524IYFF extends Component.withPins({
   "UCB0SOMI/UCB0SCL/P3.1": "H7",
   "UCB0STE/UCA0CLK/P2.7": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.2/CB2/A2": "bidirectional", "P6.6/CB6/A6": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", "P6.0/CB0/A0": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P5.0/A8/VREF+/VeREF+": "bidirectional", "P5.1/A9/VREF-/VeREF-": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.7/CB7/A7": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "P5.3/XT2OUT": "bidirectional", AVSS2: "power_in", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "P5.2/XT2IN": "bidirectional", V18: "passive", "SBWTCK/TEST": "input", "P4.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.2/P2.1": "bidirectional", VUSB: "power_out", VBUS: "power_in", "P4.6": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.1/P2.4": "bidirectional", "PU.1/DM": "bidirectional", PUR: "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "PU.0/DP": "bidirectional", VSSU: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVCC2: "power_in", DVSS2: "power_in", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5524IYFF";
@@ -9576,7 +9741,8 @@ export class MSP430F5526IYFF extends Component.withPins({
   "UCB0SOMI/UCB0SCL/P3.1": "H7",
   "UCB0STE/UCA0CLK/P2.7": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.2/CB2/A2": "bidirectional", "P6.6/CB6/A6": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", "P6.0/CB0/A0": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P5.0/A8/VREF+/VeREF+": "bidirectional", "P5.1/A9/VREF-/VeREF-": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.7/CB7/A7": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "P5.3/XT2OUT": "bidirectional", AVSS2: "power_in", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "P5.2/XT2IN": "bidirectional", V18: "passive", "SBWTCK/TEST": "input", "P4.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.2/P2.1": "bidirectional", VUSB: "power_out", VBUS: "power_in", "P4.6": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.1/P2.4": "bidirectional", "PU.1/DM": "bidirectional", PUR: "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "PU.0/DP": "bidirectional", VSSU: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVCC2: "power_in", DVSS2: "power_in", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5526IYFF";
@@ -9658,7 +9824,8 @@ export class MSP430F5528IYFF extends Component.withPins({
   "UCB0SOMI/UCB0SCL/P3.1": "H7",
   "UCB0STE/UCA0CLK/P2.7": "H8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.2/CB2/A2": "bidirectional", "P6.6/CB6/A6": "bidirectional", AVCC1: "power_in", AVSS1: "power_in", "P5.4/XIN": "bidirectional", "P5.5/XOUT": "bidirectional", DVCC1: "power_in", DVSS1: "power_in", "P6.0/CB0/A0": "bidirectional", "P6.4/CB4/A4": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P5.0/A8/VREF+/VeREF+": "bidirectional", "P5.1/A9/VREF-/VeREF-": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", VCORE: "bidirectional", "PJ.2/TMS": "bidirectional", "PJ.3/TCK": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.3/CB3/A3": "bidirectional", "P6.7/CB7/A7": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.3": "bidirectional", "P5.3/XT2OUT": "bidirectional", AVSS2: "power_in", "PJ.0/TDO": "bidirectional", "PJ.1/TDI/TCLK": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P1.6": "bidirectional", "TA1.0/P1.7": "bidirectional", "P5.2/XT2IN": "bidirectional", V18: "passive", "SBWTCK/TEST": "input", "P4.7": "bidirectional", "TA1.1/P2.0": "bidirectional", "TA2.0/P2.3": "bidirectional", "TA2CLK/SMCLK/P2.2": "bidirectional", "TA1.2/P2.1": "bidirectional", VUSB: "power_out", VBUS: "power_in", "P4.6": "bidirectional", "PM_UCB1CLK/PM_UCA1STE/P4.3": "bidirectional", "PM_UCB1STE/PM_UCA1CLK/P4.0": "bidirectional", "RTCCLK/DMAE0/P2.6": "bidirectional", "TA2.2/P2.5": "bidirectional", "TA2.1/P2.4": "bidirectional", "PU.1/DM": "bidirectional", PUR: "bidirectional", "PM_UCA1RXD/PM_UCA1SOMI/P4.5": "bidirectional", "PM_UCB1SOMI/PM_UCB1SCL/P4.2": "bidirectional", "UCA0RXD/UCA0SOMI/P3.4": "bidirectional", "UCA0TXD/UCA0SIMO/P3.3": "bidirectional", "UCB0CLK/UCA0STE/P3.2": "bidirectional", "UCB0SIMO/UCB0SDA/P3.0": "bidirectional", "PU.0/DP": "bidirectional", VSSU: "power_in", "PM_UCA1TXD/PM_UCA1SIMO/P4.4": "bidirectional", "PM_UCB1SIMO/PM_UCB1SDA/P4.1": "bidirectional", DVCC2: "power_in", DVSS2: "power_in", "UCB0SOMI/UCB0SCL/P3.1": "bidirectional", "UCB0STE/UCA0CLK/P2.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5528IYFF";
@@ -9788,7 +9955,8 @@ export class MSP430F5630IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4": "bidirectional", "P6.2/CB2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6": "bidirectional", "P6.5/CB5": "bidirectional", "P6.1/CB1": "bidirectional", "P6.0/CB0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8": "bidirectional", "P6.7/CB7": "bidirectional", "P7.5/CB9": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11": "bidirectional", "P7.6/CB10": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5630IZQW";
@@ -9918,7 +10086,8 @@ export class MSP430F5631IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4": "bidirectional", "P6.2/CB2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6": "bidirectional", "P6.5/CB5": "bidirectional", "P6.1/CB1": "bidirectional", "P6.0/CB0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8": "bidirectional", "P6.7/CB7": "bidirectional", "P7.5/CB9": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11": "bidirectional", "P7.6/CB10": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5631IZQW";
@@ -10048,7 +10217,8 @@ export class MSP430F5632IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4": "bidirectional", "P6.2/CB2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6": "bidirectional", "P6.5/CB5": "bidirectional", "P6.1/CB1": "bidirectional", "P6.0/CB0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8": "bidirectional", "P6.7/CB7": "bidirectional", "P7.5/CB9": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11": "bidirectional", "P7.6/CB10": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5632IZQW";
@@ -10178,7 +10348,8 @@ export class MSP430F5633IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15": "bidirectional", "P7.6/CB10/A14": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5633IZQW";
@@ -10308,7 +10479,8 @@ export class MSP430F5634IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15": "bidirectional", "P7.6/CB10/A14": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5634IZQW";
@@ -10438,7 +10610,8 @@ export class MSP430F5635IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6/A6": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15": "bidirectional", "P7.6/CB10/A14": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5635IZQW";
@@ -10568,7 +10741,8 @@ export class MSP430F5636IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5636IZQW";
@@ -10698,7 +10872,8 @@ export class MSP430F5637IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5637IZQW";
@@ -10828,7 +11003,8 @@ export class MSP430F5638IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/CB4/A4": "bidirectional", "P6.2/CB2/A2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "bidirectional", AVSS3: "power_in", VUSB: "bidirectional", VBUS: "bidirectional", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/CB6/A6/DAC0": "bidirectional", "P6.5/CB5/A5": "bidirectional", "P6.1/CB1/A1": "bidirectional", "P6.0/CB0/A0": "bidirectional", "PJ.0/TDO": "bidirectional", "SBWTCK/TEST": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", V18: "passive", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/CB8/A12": "bidirectional", "P6.7/CB7/A7/DAC1": "bidirectional", "P7.5/CB9/A13": "bidirectional", "P9.6": "bidirectional", "P9.5": "bidirectional", "P7.7/CB11/A15/DAC1": "bidirectional", "P7.6/CB10/A14/DAC0": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/CB3/A3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "bidirectional", "P9.7": "bidirectional", "P9.3": "bidirectional", "P9.2": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "bidirectional", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "bidirectional", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "ADC12CLK/DMAE0/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "TA2CLK/SMCLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "TB0OUTH/SVMOUT/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "TA1CLK/CBOUT/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "bidirectional", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5638IZQW";
@@ -10957,7 +11133,8 @@ export class MSP430F5658IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/A4/CB4": "bidirectional", "P6.2/A2/CB2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "passive", AVSS3: "power_in", VUSB: "passive", VBUS: "passive", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/A6/DAC0/CB6": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.0/A0/CB0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/A12/CB8": "bidirectional", "P6.7/A7/DAC1/CB7": "bidirectional", "P7.5/A13/CB9": "bidirectional", "P9.6/UCB2SOMI/UCB2SCL": "bidirectional", "P9.5/UCB2SIMO/UCB2SDA": "bidirectional", "P7.7/A15/DAC1/CB11": "bidirectional", "P7.6/A14/DAC0/CB10": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/A3/CB3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "passive", "P9.7": "bidirectional", "P9.3/UCA2RXD/UCA2SOMI": "bidirectional", "P9.2/UCA2TXD/UCA2SIMO": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4/UCB2CLK/UCA2STE": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "input", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1/UCB2STE/UCA2CLK": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "output", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "DMAE0/ADC12CLK/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "SMCLK/TA2CLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "SVMOUT/TB0OUTH/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "power_in", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5658IZQW";
@@ -11086,7 +11263,8 @@ export class MSP430F5659IZQW extends Component.withPins({
   "TB0.1/P4.1": "M11",
   "TB0.3/P4.3": "M12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P6.4/A4/CB4": "bidirectional", "P6.2/A2/CB2": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "PJ.1/TDI/TCLK": "bidirectional", DVSS3: "power_in", DVCC3: "power_in", VBAK: "passive", AVSS3: "power_in", VUSB: "passive", VBUS: "passive", "PU.1/DM": "bidirectional", "PU.0/DP": "bidirectional", "P6.6/A6/DAC0/CB6": "bidirectional", "P6.5/A5/CB5": "bidirectional", "P6.1/A1/CB1": "bidirectional", "P6.0/A0/CB0": "bidirectional", "PJ.0/TDO": "bidirectional", "TEST/SBWTCK": "input", "P7.3/XT2OUT": "bidirectional", "P7.2/XT2IN": "bidirectional", PUR: "bidirectional", VSSU_B11: "power_in", VSSU_B12: "power_in", "P7.4/A12/CB8": "bidirectional", "P6.7/A7/DAC1/CB7": "bidirectional", "P7.5/A13/CB9": "bidirectional", "P9.6/UCB2SOMI/UCB2SCL": "bidirectional", "P9.5/UCB2SIMO/UCB2SDA": "bidirectional", "P7.7/A15/DAC1/CB11": "bidirectional", "P7.6/A14/DAC0/CB10": "bidirectional", "VREF+/VeREF+/P5.0": "bidirectional", "P6.3/A3/CB3": "bidirectional", "PJ.3/TCK": "bidirectional", "RTCCLK/P5.7": "bidirectional", VBAT: "passive", "P9.7": "bidirectional", "P9.3/UCA2RXD/UCA2SOMI": "bidirectional", "P9.2/UCA2TXD/UCA2SIMO": "bidirectional", AVCC1_E1: "power_in", AVCC1_E2: "power_in", "VREF-/VeREF-/P5.1": "bidirectional", GND_E5: "power_in", GND_E6: "power_in", "PJ.2/TMS": "bidirectional", GND_E8: "power_in", "P9.4/UCB2CLK/UCA2STE": "bidirectional", "P9.0": "bidirectional", "P8.7": "bidirectional", XIN: "input", AVSS1: "power_in", GND_F4: "power_in", GND_F5: "power_in", GND_F8: "power_in", "P9.1/UCB2STE/UCA2CLK": "bidirectional", "P8.5/UCB1SIMO/UCB1SDA": "bidirectional", DVCC2: "power_in", XOUT: "output", AVSS2: "power_in", "P2MAP0/P2.0": "bidirectional", GND_G5: "power_in", GND_G8: "power_in", "P8.6/UCB1SOMI/UCB1SCL": "bidirectional", "P8.4/UCB1CLK/UCA1STE": "bidirectional", DVSS2: "power_in", "DMAE0/ADC12CLK/P5.6": "bidirectional", "P2MAP1/P2.1": "bidirectional", "P2MAP3/P2.3": "bidirectional", GND_H5: "power_in", "TA0.2/P1.3": "bidirectional", "TA1.0/P3.1": "bidirectional", GND_H8: "power_in", GND_H9: "power_in", "P8.2/UCA1TXD/UCA1SIMO": "bidirectional", "P8.3/UCA1RXD/UCA1SOMI": "bidirectional", "P2MAP2/P2.2": "bidirectional", "P2MAP4/P2.4": "bidirectional", "P5.5": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.1/P1.6": "bidirectional", "SMCLK/TA2CLK/P3.4": "bidirectional", "TB0.0/P4.0": "bidirectional", "P8.0/TB0CLK": "bidirectional", "P8.1/UCB1STE/UCA1CLK": "bidirectional", "P2MAP5/P2.5": "bidirectional", "P2MAP6/P2.6": "bidirectional", "TB0.6/P4.6": "bidirectional", "SVMOUT/TB0OUTH/P4.7": "bidirectional", DVCC1: "power_in", "P2MAP7/P2.7": "bidirectional", "P5.2": "bidirectional", "P5.3": "bidirectional", "ACLK/TA0CLK/P1.0": "bidirectional", "TA0.4/P1.5": "bidirectional", "CBOUT/TA1CLK/P3.0": "bidirectional", "TA1.2/P3.3": "bidirectional", "TA2.1/P3.6": "bidirectional", "TB0.2/P4.2": "bidirectional", "TB0.5/P4.5": "bidirectional", "TB0.4/P4.4": "bidirectional", DVSS1: "power_in", VCORE: "power_in", DVSS: "power_in", "P5.4": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.3/P1.4": "bidirectional", "TA0.2/P1.7": "bidirectional", "TA1.1/P3.2": "bidirectional", "TA2.0/P3.5": "bidirectional", "TA2.2/P3.7": "bidirectional", "TB0.1/P4.1": "bidirectional", "TB0.3/P4.3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430F5659IZQW";
@@ -11128,7 +11306,8 @@ export class MSP430FR5720IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/CD0/VeREF-/A0/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/CD1/VeREF+/A1/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5720IRGE";
@@ -11170,7 +11349,8 @@ export class MSP430FR5722IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5722IRGE";
@@ -11212,7 +11392,8 @@ export class MSP430FR5724IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/CD0/VeREF-/A0/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/CD1/VeREF+/A1/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5724IRGE";
@@ -11254,7 +11435,8 @@ export class MSP430FR5726IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5726IRGE";
@@ -11296,7 +11478,8 @@ export class MSP430FR5728IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/CD0/VeREF-/A0/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/CD1/VeREF+/A1/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5728IRGE";
@@ -11338,7 +11521,8 @@ export class MSP430FR5730IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/CD0/VeREF-/A0/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/CD1/VeREF+/A1/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5730IRGE";
@@ -11380,7 +11564,8 @@ export class MSP430FR5732IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5732IRGE";
@@ -11422,7 +11607,8 @@ export class MSP430FR5734IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/CD0/VeREF-/A0/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/CD1/VeREF+/A1/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5734IRGE";
@@ -11464,7 +11650,8 @@ export class MSP430FR5736IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5736IRGE";
@@ -11506,7 +11693,8 @@ export class MSP430FR5738IRGE extends Component.withPins({
   "AVSS": "23",
   "AVCC": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.1/DMAE0/RTCCLK/CD0/VeREF-/A0/P1.0": "bidirectional", "TA0.2/TA1CLK/CDOUT/CD1/VeREF+/A1/P1.1": "bidirectional", "TA1.1/TA0CLK/CDOUT/CD2/A2/P1.2": "bidirectional", "TA1.2/UCB0STE/CD3/A3/P1.3": "bidirectional", "TB0.1/UCA0STE/CD4/A4/P1.4": "bidirectional", "TB0.2/UCA0CLK/CD5/A5/P1.5": "bidirectional", "PJ.0/TDO/TB0OUTH/SMCLK/CD6": "bidirectional", "PJ.1/TDI/TCLK/MCLK/CD7": "bidirectional", "PJ.2/TMS/ACLK/CD8": "bidirectional", "PJ.3/TCK/CD9": "bidirectional", "TEST/SBWTCK": "input", "~{RST}/NMI/SBWTDIO": "input", "TB0CLK/UCA0TXD/UCA0SIMO/ACLK/P2.0": "input", "TB0.0/UCA0RXD/UCA0SOMI/P2.1": "input", "UCB0CLK/P2.2": "input", "TA0.0/UCB0SIMO/UCB0SDA/P1.6": "input", "TA1.0/UCB0SOMI/UCB0SCL/P1.7": "input", VCORE: "input", DVSS: "power_in", DVCC: "power_in", "PJ.4/XIN": "input", "PJ.5/XOUT": "input", AVSS: "power_in", AVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430FR5738IRGE";
@@ -11538,7 +11726,8 @@ export class MSP430G2001IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2001IN14";
@@ -11570,7 +11759,8 @@ export class MSP430G2001IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2001IPW14";
@@ -11602,7 +11792,8 @@ export class MSP430G2001IRSA16 extends Component.withPins({
   "DVSS": "14",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2001IRSA16";
@@ -11634,7 +11825,8 @@ export class MSP430G2101IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2101IN14";
@@ -11666,7 +11858,8 @@ export class MSP430G2101IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2101IPW14";
@@ -11698,7 +11891,8 @@ export class MSP430G2101IRSA16 extends Component.withPins({
   "DVSS": "14",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2101IRSA16";
@@ -11736,7 +11930,8 @@ export class MSP430G2102IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2102IN20";
@@ -11768,7 +11963,8 @@ export class MSP430G2102IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2102IPW14";
@@ -11806,7 +12002,8 @@ export class MSP430G2102IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2102IPW20";
@@ -11840,7 +12037,8 @@ export class MSP430G2102IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2102IRSA16";
@@ -11872,7 +12070,8 @@ export class MSP430G2111IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0.0/P1.1": "bidirectional", "CA2/TA0.1/P1.2": "bidirectional", "CAOUT/CA3/ADC10CLK/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0.0/TMS/P1.5": "bidirectional", "CA6/TA0.1/TDI/TCLK/P1.6": "bidirectional", "CA7/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2111IN14";
@@ -11904,7 +12103,8 @@ export class MSP430G2111IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0.0/P1.1": "bidirectional", "CA2/TA0.1/P1.2": "bidirectional", "CAOUT/CA3/ADC10CLK/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0.0/TMS/P1.5": "bidirectional", "CA6/TA0.1/TDI/TCLK/P1.6": "bidirectional", "CA7/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2111IPW14";
@@ -11936,7 +12136,8 @@ export class MSP430G2111IRSA16 extends Component.withPins({
   "DVSS": "14",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/TA0CLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2111IRSA16";
@@ -11974,7 +12175,8 @@ export class MSP430G2112IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2112IN20";
@@ -12006,7 +12208,8 @@ export class MSP430G2112IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2112IPW14";
@@ -12044,7 +12247,8 @@ export class MSP430G2112IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2112IPW20";
@@ -12078,7 +12282,8 @@ export class MSP430G2112IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2112IRSA16";
@@ -12116,7 +12321,8 @@ export class MSP430G2113IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2113IPW20";
@@ -12148,7 +12354,8 @@ export class MSP430G2121IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2121IN14";
@@ -12180,7 +12387,8 @@ export class MSP430G2121IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2121IPW14";
@@ -12214,7 +12422,8 @@ export class MSP430G2121IRSA16 extends Component.withPins({
   "DVCC_15": "15",
   "DVCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/TACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS_13: "power_in", DVSS_14: "power_in", DVCC_15: "power_in", DVCC_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2121IRSA16";
@@ -12246,7 +12455,8 @@ export class MSP430G2131IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/A0/P1.0": "bidirectional", "TA0.0/A1/P1.1": "bidirectional", "TA0.1/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/A5/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2131IN14";
@@ -12278,7 +12488,8 @@ export class MSP430G2131IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/A0/P1.0": "bidirectional", "TA0.0/A1/P1.1": "bidirectional", "TA0.1/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/A5/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2131IPW14";
@@ -12312,7 +12523,8 @@ export class MSP430G2131IRSA16 extends Component.withPins({
   "DVCC_15": "15",
   "DVCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/TACLK/A0/P1.0": "bidirectional", "TA0.0/A1/P1.1": "bidirectional", "TA0.1/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/A5/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS_13: "power_in", DVSS_14: "power_in", DVCC_15: "power_in", DVCC_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2131IRSA16";
@@ -12350,7 +12562,8 @@ export class MSP430G2132IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2132IN20";
@@ -12382,7 +12595,8 @@ export class MSP430G2132IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/A4/VREF+/VeREF+/TA0.2/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2132IPW14";
@@ -12420,7 +12634,8 @@ export class MSP430G2132IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2132IPW20";
@@ -12454,7 +12669,8 @@ export class MSP430G2132IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2132IRSA16";
@@ -12492,7 +12708,8 @@ export class MSP430G2152IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2152IN20";
@@ -12524,7 +12741,8 @@ export class MSP430G2152IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2152IPW14";
@@ -12562,7 +12780,8 @@ export class MSP430G2152IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2152IPW20";
@@ -12596,7 +12815,8 @@ export class MSP430G2152IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/A1/CA1/P1.1": "bidirectional", "TA0.1/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/SCLK/A5/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/SDI/SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2152IRSA16";
@@ -12634,7 +12854,8 @@ export class MSP430G2153IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2153IN20";
@@ -12672,7 +12893,8 @@ export class MSP430G2153IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2153IPW20";
@@ -12718,7 +12940,8 @@ export class MSP430G2153IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2153IPW28";
@@ -12766,7 +12989,8 @@ export class MSP430G2153IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/A0/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2153IRHB32";
@@ -12798,7 +13022,8 @@ export class MSP430G2201IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2201IN14";
@@ -12830,7 +13055,8 @@ export class MSP430G2201IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2201IPW14";
@@ -12862,7 +13088,8 @@ export class MSP430G2201IRSA16 extends Component.withPins({
   "DVSS": "14",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TA0.0/TMS/P1.5": "bidirectional", "TA0.1/TDI/TCLK/P1.6": "bidirectional", "TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2201IRSA16";
@@ -12900,7 +13127,8 @@ export class MSP430G2202IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2202IN20";
@@ -12932,7 +13160,8 @@ export class MSP430G2202IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2202IPW14";
@@ -12970,7 +13199,8 @@ export class MSP430G2202IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2202IPW20";
@@ -13004,7 +13234,8 @@ export class MSP430G2202IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2202IRSA16";
@@ -13042,7 +13273,8 @@ export class MSP430G2203IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2203IN20";
@@ -13080,7 +13312,8 @@ export class MSP430G2203IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2203IPW20";
@@ -13126,7 +13359,8 @@ export class MSP430G2203IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2203IPW28";
@@ -13174,7 +13408,8 @@ export class MSP430G2203IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2203IRHB32";
@@ -13200,7 +13435,8 @@ export class MSP430G2210ID extends Component.withPins({
   "TEST/SBWTCK": "17",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0.1/CA2/P1.2": "bidirectional", "TA0.0/CA5/P1.5": "bidirectional", "TA0.1/CA6/P1.6": "bidirectional", "CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2210ID";
@@ -13232,7 +13468,8 @@ export class MSP430G2211IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0.0/P1.1": "bidirectional", "CA2/TA0.1/P1.2": "bidirectional", "CAOUT/CA3/ADC10CLK/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0.0/TMS/P1.5": "bidirectional", "CA6/TA0.1/TDI/TCLK/P1.6": "bidirectional", "CA7/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2211IN14";
@@ -13264,7 +13501,8 @@ export class MSP430G2211IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "CA0/TA0CLK/ACLK/P1.0": "bidirectional", "CA1/TA0.0/P1.1": "bidirectional", "CA2/TA0.1/P1.2": "bidirectional", "CAOUT/CA3/ADC10CLK/P1.3": "bidirectional", "CA4/SMCLK/TCK/P1.4": "bidirectional", "CA5/TA0.0/TMS/P1.5": "bidirectional", "CA6/TA0.1/TDI/TCLK/P1.6": "bidirectional", "CA7/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2211IPW14";
@@ -13296,7 +13534,8 @@ export class MSP430G2211IRSA16 extends Component.withPins({
   "DVSS": "14",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/TA0CLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2211IRSA16";
@@ -13334,7 +13573,8 @@ export class MSP430G2212IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2212IN20";
@@ -13366,7 +13606,8 @@ export class MSP430G2212IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2212IPW14";
@@ -13404,7 +13645,8 @@ export class MSP430G2212IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2212IPW20";
@@ -13438,7 +13680,8 @@ export class MSP430G2212IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2212IRSA16";
@@ -13476,7 +13719,8 @@ export class MSP430G2213IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2213IN20";
@@ -13514,7 +13758,8 @@ export class MSP430G2213IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2213IPW20";
@@ -13560,7 +13805,8 @@ export class MSP430G2213IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2213IPW28";
@@ -13608,7 +13854,8 @@ export class MSP430G2213IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2213IRHB32";
@@ -13640,7 +13887,8 @@ export class MSP430G2221IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2221IN14";
@@ -13672,7 +13920,8 @@ export class MSP430G2221IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2221IPW14";
@@ -13706,7 +13955,8 @@ export class MSP430G2221IRSA16 extends Component.withPins({
   "DVCC_15": "15",
   "DVCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/TACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS_13: "power_in", DVSS_14: "power_in", DVCC_15: "power_in", DVCC_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2221IRSA16";
@@ -13732,7 +13982,8 @@ export class MSP430G2230ID extends Component.withPins({
   "TEST/SBWTCK": "7",
   "DVSS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0.1/A2/P1.2": "bidirectional", "TA0.0/SCLK/A5/P1.5": "bidirectional", "TA0.1/SDO/SCL/A6/P1.6": "bidirectional", "SDI/SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2230ID";
@@ -13764,7 +14015,8 @@ export class MSP430G2231IN14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/A0/P1.0": "bidirectional", "TA0.0/A1/P1.1": "bidirectional", "TA0.1/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/A5/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2231IN14";
@@ -13796,7 +14048,8 @@ export class MSP430G2231IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/TACLK/A0/P1.0": "bidirectional", "TA0.0/A1/P1.1": "bidirectional", "TA0.1/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/A5/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2231IPW14";
@@ -13830,7 +14083,8 @@ export class MSP430G2231IRSA16 extends Component.withPins({
   "DVCC_15": "15",
   "DVCC_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/TACLK/A0/P1.0": "bidirectional", "TA0.0/A1/P1.1": "bidirectional", "TA0.1/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/A5/P1.5": "bidirectional", "TDI/SDO/SCL/TCLK/TA0.1/P1.6": "bidirectional", "TDI/TDO/SDI/SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS_13: "power_in", DVSS_14: "power_in", DVCC_15: "power_in", DVCC_16: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2231IRSA16";
@@ -13868,7 +14122,8 @@ export class MSP430G2232IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2232IN20";
@@ -13900,7 +14155,8 @@ export class MSP430G2232IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/A4/VREF+/VeREF+/TA0.2/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2232IPW14";
@@ -13938,7 +14194,8 @@ export class MSP430G2232IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2232IPW20";
@@ -13972,7 +14229,8 @@ export class MSP430G2232IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2232IRSA16";
@@ -14010,7 +14268,8 @@ export class MSP430G2233IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2233IN20";
@@ -14048,7 +14307,8 @@ export class MSP430G2233IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2233IPW20";
@@ -14094,7 +14354,8 @@ export class MSP430G2233IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2233IPW28";
@@ -14142,7 +14403,8 @@ export class MSP430G2233IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/A0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2233IRHB32";
@@ -14180,7 +14442,8 @@ export class MSP430G2252IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2252IN20";
@@ -14212,7 +14475,8 @@ export class MSP430G2252IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2252IPW14";
@@ -14250,7 +14514,8 @@ export class MSP430G2252IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2252IPW20";
@@ -14284,7 +14549,8 @@ export class MSP430G2252IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/A1/CA1/P1.1": "bidirectional", "TA0.1/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/SCLK/A5/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/SDI/SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2252IRSA16";
@@ -14322,7 +14588,8 @@ export class MSP430G2253IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2253IN20";
@@ -14360,7 +14627,8 @@ export class MSP430G2253IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2253IPW20";
@@ -14406,7 +14674,8 @@ export class MSP430G2253IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2253IPW28";
@@ -14454,7 +14723,8 @@ export class MSP430G2253IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/A0/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2253IRHB32";
@@ -14492,7 +14762,8 @@ export class MSP430G2302IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2302IN20";
@@ -14524,7 +14795,8 @@ export class MSP430G2302IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2302IPW14";
@@ -14562,7 +14834,8 @@ export class MSP430G2302IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2302IPW20";
@@ -14596,7 +14869,8 @@ export class MSP430G2302IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2302IRSA16";
@@ -14634,7 +14908,8 @@ export class MSP430G2303IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2303IN20";
@@ -14672,7 +14947,8 @@ export class MSP430G2303IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2303IPW20";
@@ -14718,7 +14994,8 @@ export class MSP430G2303IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2303IPW28";
@@ -14766,7 +15043,8 @@ export class MSP430G2303IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2303IRHB32";
@@ -14804,7 +15082,8 @@ export class MSP430G2312IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2312IN20";
@@ -14836,7 +15115,8 @@ export class MSP430G2312IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2312IPW14";
@@ -14874,7 +15154,8 @@ export class MSP430G2312IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2312IPW20";
@@ -14908,7 +15189,8 @@ export class MSP430G2312IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2312IRSA16";
@@ -14946,7 +15228,8 @@ export class MSP430G2313IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2313IN20";
@@ -14984,7 +15267,8 @@ export class MSP430G2313IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2313IPW20";
@@ -15030,7 +15314,8 @@ export class MSP430G2313IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2313IPW28";
@@ -15078,7 +15363,8 @@ export class MSP430G2313IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2313IRHB32";
@@ -15116,7 +15402,8 @@ export class MSP430G2332IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2332IN20";
@@ -15148,7 +15435,8 @@ export class MSP430G2332IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/A4/VREF+/VeREF+/TA0.2/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2332IPW14";
@@ -15186,7 +15474,8 @@ export class MSP430G2332IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2332IPW20";
@@ -15220,7 +15509,8 @@ export class MSP430G2332IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2332IRSA16";
@@ -15258,7 +15548,8 @@ export class MSP430G2333IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2333IN20";
@@ -15296,7 +15587,8 @@ export class MSP430G2333IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2333IPW20";
@@ -15342,7 +15634,8 @@ export class MSP430G2333IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2333IPW28";
@@ -15390,7 +15683,8 @@ export class MSP430G2333IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/A0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2333IRHB32";
@@ -15428,7 +15722,8 @@ export class MSP430G2352IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2352IN20";
@@ -15460,7 +15755,8 @@ export class MSP430G2352IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2352IPW14";
@@ -15498,7 +15794,8 @@ export class MSP430G2352IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2352IPW20";
@@ -15532,7 +15829,8 @@ export class MSP430G2352IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/A1/CA1/P1.1": "bidirectional", "TA0.1/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/SCLK/A5/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/SDI/SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2352IRSA16";
@@ -15570,7 +15868,8 @@ export class MSP430G2353IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2353IN20";
@@ -15608,7 +15907,8 @@ export class MSP430G2353IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2353IPW20";
@@ -15654,7 +15954,8 @@ export class MSP430G2353IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2353IPW28";
@@ -15702,7 +16003,8 @@ export class MSP430G2353IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/A0/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2353IRHB32";
@@ -15740,7 +16042,8 @@ export class MSP430G2402IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2402IN20";
@@ -15772,7 +16075,8 @@ export class MSP430G2402IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2402IPW14";
@@ -15810,7 +16114,8 @@ export class MSP430G2402IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/TA0.2/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2402IPW20";
@@ -15844,7 +16149,8 @@ export class MSP430G2402IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/SCLK/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2402IRSA16";
@@ -15882,7 +16188,8 @@ export class MSP430G2403IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2403IN20";
@@ -15920,7 +16227,8 @@ export class MSP430G2403IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2403IPW20";
@@ -15966,7 +16274,8 @@ export class MSP430G2403IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2403IPW28";
@@ -16014,7 +16323,8 @@ export class MSP430G2403IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/P1.2": "bidirectional", "P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2403IRHB32";
@@ -16052,7 +16362,8 @@ export class MSP430G2412IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2412IN20";
@@ -16084,7 +16395,8 @@ export class MSP430G2412IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2412IPW14";
@@ -16122,7 +16434,8 @@ export class MSP430G2412IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2412IPW20";
@@ -16156,7 +16469,8 @@ export class MSP430G2412IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/CA1/P1.1": "bidirectional", "TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/CA4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2412IRSA16";
@@ -16194,7 +16508,8 @@ export class MSP430G2413IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2413IN20";
@@ -16232,7 +16547,8 @@ export class MSP430G2413IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2413IPW20";
@@ -16278,7 +16594,8 @@ export class MSP430G2413IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2413IPW28";
@@ -16326,7 +16643,8 @@ export class MSP430G2413IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2413IRHB32";
@@ -16364,7 +16682,8 @@ export class MSP430G2432IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2432IN20";
@@ -16396,7 +16715,8 @@ export class MSP430G2432IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/A4/VREF+/VeREF+/TA0.2/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2432IPW14";
@@ -16434,7 +16754,8 @@ export class MSP430G2432IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "A0/ACLK/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/VREF+/VeREF+/A4/SMCLK/TA0.2/P1.4": "bidirectional", "TMS/A5/TA0.0/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2432IPW20";
@@ -16468,7 +16789,8 @@ export class MSP430G2432IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "ACLK/A0/TA0CLK/P1.0": "bidirectional", "A1/TA0.0/P1.1": "bidirectional", "A2/TA0.1/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "SMCLK/TCK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/SCLK/A5/TA0.0/P1.5": "bidirectional", "SDO/SCL/TDI/TCLK/A6/TA0.1/P1.6": "bidirectional", "SDI/SDA/TDO/TDI/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2432IRSA16";
@@ -16506,7 +16828,8 @@ export class MSP430G2433IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2433IN20";
@@ -16544,7 +16867,8 @@ export class MSP430G2433IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2433IPW20";
@@ -16590,7 +16914,8 @@ export class MSP430G2433IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2433IPW28";
@@ -16638,7 +16963,8 @@ export class MSP430G2433IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/A0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2433IRHB32";
@@ -16694,7 +17020,8 @@ export class MSP430G2444IDA38 extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "37",
   "TDO/TDI/TA2/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/A12/TB0": "bidirectional", "P4.4/A13/TB1": "bidirectional", "P4.5/A14/TB2": "bidirectional", "P4.6/A15/TBOUTH": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2444IDA38";
@@ -16752,7 +17079,8 @@ export class MSP430G2444IRHA40 extends Component.withPins({
   "DVCC_39": "39",
   "ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2444IRHA40";
@@ -16819,7 +17147,8 @@ export class MSP430G2444IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/A15/TBOUTH": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/P2.0": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TDO/TDI/TA2/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/A12/TB0": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "P3.6/A6": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/A14/TB2": "bidirectional", "P4.4/A13/TB1": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P3.7/A7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/A15/TBOUTH": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2444IYFF";
@@ -16857,7 +17186,8 @@ export class MSP430G2452IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2452IN20";
@@ -16889,7 +17219,8 @@ export class MSP430G2452IPW14 extends Component.withPins({
   "P2.6/XIN/TA0.1": "13",
   "DVSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2452IPW14";
@@ -16927,7 +17258,8 @@ export class MSP430G2452IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/CA1/A1/P1.1": "bidirectional", "TA0.1/CA2/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/CAOUT/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/SCLK/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0": "bidirectional", "P2.1": "bidirectional", "P2.2": "bidirectional", "P2.3": "bidirectional", "P2.4": "bidirectional", "P2.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/CA6/A6/P1.6": "bidirectional", "TDO/TDI/SDI/SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2452IPW20";
@@ -16961,7 +17293,8 @@ export class MSP430G2452IRSA16 extends Component.withPins({
   "AVCC": "15",
   "DVCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/A1/CA1/P1.1": "bidirectional", "TA0.1/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/TA0.2/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/SCLK/A5/CA5/P1.5": "bidirectional", "TDI/TCLK/TA0.1/SDO/SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/SDI/SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2452IRSA16";
@@ -16999,7 +17332,8 @@ export class MSP430G2453IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2453IN20";
@@ -17037,7 +17371,8 @@ export class MSP430G2453IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2453IPW20";
@@ -17083,7 +17418,8 @@ export class MSP430G2453IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2453IPW28";
@@ -17131,7 +17467,8 @@ export class MSP430G2453IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/A0/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2453IRHB32";
@@ -17169,7 +17506,8 @@ export class MSP430G2513IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2513IN20";
@@ -17207,7 +17545,8 @@ export class MSP430G2513IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2513IPW20";
@@ -17253,7 +17592,8 @@ export class MSP430G2513IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2513IPW28";
@@ -17301,7 +17641,8 @@ export class MSP430G2513IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/CA2/P1.2": "bidirectional", "CAOUT/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2513IRHB32";
@@ -17339,7 +17680,8 @@ export class MSP430G2533IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2533IN20";
@@ -17377,7 +17719,8 @@ export class MSP430G2533IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2533IPW20";
@@ -17423,7 +17766,8 @@ export class MSP430G2533IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2533IPW28";
@@ -17471,7 +17815,8 @@ export class MSP430G2533IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/CA0/A0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/P1.2": "bidirectional", "ADC10CLK/VREF-/VeREF-/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2533IRHB32";
@@ -17527,7 +17872,8 @@ export class MSP430G2544IDA38 extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "37",
   "TDO/TDI/TA2/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/A12/TB0": "bidirectional", "P4.4/A13/TB1": "bidirectional", "P4.5/A14/TB2": "bidirectional", "P4.6/A15/TBOUTH": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2544IDA38";
@@ -17585,7 +17931,8 @@ export class MSP430G2544IRHA40 extends Component.withPins({
   "DVCC_39": "39",
   "ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2544IRHA40";
@@ -17652,7 +17999,8 @@ export class MSP430G2544IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/A15/TBOUTH": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/P2.0": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TDO/TDI/TA2/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/A12/TB0": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "P3.6/A6": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/A14/TB2": "bidirectional", "P4.4/A13/TB1": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P3.7/A7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/A15/TBOUTH": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2544IYFF";
@@ -17690,7 +18038,8 @@ export class MSP430G2553IN20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2553IN20";
@@ -17728,7 +18077,8 @@ export class MSP430G2553IPW20 extends Component.withPins({
   "P2.6/XIN/TA0.1": "19",
   "DVSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/CA0/A0/P1.0": "bidirectional", "UCA0RXD/UCA0SOMI/TA0.0/CA1/A1/P1.1": "bidirectional", "UCA0TXD/UCA0SIMO/TA0.1/CA2/A2/P1.2": "bidirectional", "CAOUT/VREF-/VeREF-/CA3/A3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/CA4/A4/P1.4": "bidirectional", "TMS/UCB0CLK/UCA0STE/TA0.0/CA5/A5/P1.5": "bidirectional", "P2.0/TA1.0": "bidirectional", "P2.1/TA1.1": "bidirectional", "P2.2/TA1.1": "bidirectional", "P2.3/TA1.0": "bidirectional", "P2.4/TA1.2": "bidirectional", "P2.5/TA1.2": "bidirectional", "TDI/TCLK/UCB0SOMI/UCB0SCL/TA0.1/CA6/A6/P1.6": "bidirectional", "TDO/TDI/UCB0SIMO/UCB0SDA/CAOUT/CA7/A7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TEST/SBWTCK": "input", "P2.7/XOUT": "bidirectional", "P2.6/XIN/TA0.1": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2553IPW20";
@@ -17774,7 +18124,8 @@ export class MSP430G2553IPW28 extends Component.withPins({
   "TA0.1/XIN/P2.6": "27",
   "DVSS": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", DVSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2553IPW28";
@@ -17822,7 +18173,8 @@ export class MSP430G2553IRHB32 extends Component.withPins({
   "DVCC": "30",
   "TA0CLK/ACLK/A0/CA0/P1.0": "31",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "TA0.0/UCA0RXD/UCA0SOMI/A1/CA1/P1.1": "bidirectional", "TA0.1/UCA0TXD/UCA0SIMO/A2/CA2/P1.2": "bidirectional", "ADC10CLK/CAOUT/VREF-/VeREF-/A3/CA3/P1.3": "bidirectional", "TCK/SMCLK/UCB0STE/UCA0CLK/VREF+/VeREF+/A4/CA4/P1.4": "bidirectional", "TMS/TA0.0/UCB0CLK/UCA0STE/A5/CA5/P1.5": "bidirectional", "P3.1/TA1.0": "bidirectional", "P3.0/TA0.2": "bidirectional", "TA1.0/P2.0": "bidirectional", "TA1.1/P2.1": "bidirectional", "TA1.1/P2.2": "bidirectional", "P3.2/TA1.1": "bidirectional", "P3.3/TA1.2": "bidirectional", "P3.4/TA0.0": "bidirectional", "TA1.0/P2.3": "bidirectional", "TA1.2/P2.4": "bidirectional", "TA1.2/P2.5": "bidirectional", "P3.5/TA0.1": "bidirectional", "P3.6/TA0.2": "bidirectional", "P3.7/TA1CLK/CAOUT": "bidirectional", "TDI/TCLK/TA0.1/UCB0SOMI/UCB0SCL/A6/CA6/P1.6": "bidirectional", "TDO/TDI/CAOUT/UCB0SIMO/UCB0SDA/A7/CA7/P1.7": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "SBWTCK/TEST": "input", "XOUT/P2.7": "bidirectional", "TA0.1/XIN/P2.6": "bidirectional", AVSS: "power_in", DVSS: "power_in", AVCC: "power_in", DVCC: "power_in", "TA0CLK/ACLK/A0/CA0/P1.0": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2553IRHB32";
@@ -17878,7 +18230,8 @@ export class MSP430G2744IDA38 extends Component.withPins({
   "TDI/TCLK/TA1/P1.6": "37",
   "TDO/TDI/TA2/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "Rosc/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/A12/TB0": "bidirectional", "P4.4/A13/TB1": "bidirectional", "P4.5/A14/TB2": "bidirectional", "P4.6/A15/TBOUTH": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2744IDA38";
@@ -17936,7 +18289,8 @@ export class MSP430G2744IRHA40 extends Component.withPins({
   "DVCC_39": "39",
   "ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "ACLK/A0/P2.0": "bidirectional", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.0/UCB0STE/UCA0CLK/A5": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "P4.2/TB2": "bidirectional", "P4.3/TB0/A12": "bidirectional", "P4.4/TB1/A13": "bidirectional", "P4.5/TB2/A14": "bidirectional", "P4.6/TBOUTH/A15": "bidirectional", "P4.7/TBCLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6": "bidirectional", "P3.7/A7": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA0/P1.1": "bidirectional", "TA1/P1.2": "bidirectional", "TA2/P1.3": "bidirectional", "SMCLK/TCK/P1.4": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", "TDO/TDI/TA2/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2744IRHA40";
@@ -18003,7 +18357,8 @@ export class MSP430G2744IYFF extends Component.withPins({
   "P3.4/UCA0TXD/UCA0SIMO": "G6",
   "P4.6/A15/TBOUTH": "G7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_A3: "power_in", "ACLK/A0/P2.0": "bidirectional", "TA0/A2/P2.2": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", DVSS_B1: "power_in", DVSS_B2: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TAINCLK/SMCLK/A1/P2.1": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS_B7: "power_in", DVCC_C1: "power_in", "ROSC/P2.5": "bidirectional", DVSS_C3: "power_in", DVSS_C4: "power_in", AVSS_C5: "power_in", AVCC_C6: "power_in", AVCC_C7: "power_in", "SBWTCK/TEST": "input", "TDO/TDI/TA2/P1.7": "bidirectional", DVCC_D3: "power_in", DVCC_D4: "power_in", AVCC_D5: "power_in", "P4.0/TB0": "bidirectional", "P4.1/TB1": "bidirectional", "TMS/TA0/P1.5": "bidirectional", "TA1/P1.2": "bidirectional", "TDI/TCLK/TA1/P1.6": "bidirectional", DVCC_E4: "power_in", DVCC_E5: "power_in", "P4.2/TB2": "bidirectional", "P4.3/A12/TB0": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TACLK/ADC10CLK/P1.0": "bidirectional", "TA1/VREF-/VeREF-/A3/P2.3": "bidirectional", "P3.6/A6": "bidirectional", "P4.7/TBCLK": "bidirectional", "P4.5/A14/TB2": "bidirectional", "P4.4/A13/TB1": "bidirectional", "TA2/P1.3": "bidirectional", "TA0/P1.1": "bidirectional", "TA2/VREF+/VeREF+/A4/P2.4": "bidirectional", "P3.7/A7": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P4.6/A15/TBOUTH": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2744IYFF";
@@ -18059,7 +18414,8 @@ export class MSP430G2755IDA38 extends Component.withPins({
   "TDI/TA0.1/P1.6": "37",
   "TDO/TDI/TA0.2/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "TA1.0/ROSC/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TA1CLK/ACLK/A0/P2.0": "bidirectional", "TA0INCLK/SMCLK/A1/P2.1": "bidirectional", "TA0.0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/CA0/TB0.0": "bidirectional", "P4.1/CA1/TB0.1": "bidirectional", "P4.2/CA2/TB0.2": "bidirectional", "P4.3/A12/CA3/TB0.0": "bidirectional", "P4.4/A13/CA4/TB0.1": "bidirectional", "P4.5/A14/CA5/TB0.2": "bidirectional", "P4.6/A15/CA6/TB0OUTH": "bidirectional", "P4.7/CA7/TB0CLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.1": "bidirectional", "P3.7/A7/TA1.2": "bidirectional", "TA0.1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA0.2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TA0CLK/ADC10CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "TDI/TA0.1/P1.6": "bidirectional", "TDO/TDI/TA0.2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2755IDA38";
@@ -18117,7 +18473,8 @@ export class MSP430G2755IRHA40 extends Component.withPins({
   "DVCC_39": "39",
   "TA1.0/ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TA1CLK/ACLK/A0/P2.0": "bidirectional", "TA0INCLK/SMCLK/A1/P2.1": "bidirectional", "TA0.0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/CA0/TB0.0": "bidirectional", "P4.1/CA1/TB0.1": "bidirectional", "P4.2/CA2/TB0.2": "bidirectional", "P4.3/A12/CA3/TB0.0": "bidirectional", "P4.4/A13/CA4/TB0.1": "bidirectional", "P4.5/A14/CA5/TB0.2": "bidirectional", "P4.6/A15/CA6/TB0OUTH": "bidirectional", "P4.7/CA7/TB0CLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.1": "bidirectional", "P3.7/A6/TA1.2": "bidirectional", "TA0.1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA0.2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TA0CLK/ADC10CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "TDI/TA0.1/P1.6": "bidirectional", "TDO/TDI/TA0.2/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "TA1.0/ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2755IRHA40";
@@ -18173,7 +18530,8 @@ export class MSP430G2855IDA38 extends Component.withPins({
   "TDI/TA0.1/P1.6": "37",
   "TDO/TDI/TA0.2/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "TA1.0/ROSC/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TA1CLK/ACLK/A0/P2.0": "bidirectional", "TA0INCLK/SMCLK/A1/P2.1": "bidirectional", "TA0.0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/CA0/TB0.0": "bidirectional", "P4.1/CA1/TB0.1": "bidirectional", "P4.2/CA2/TB0.2": "bidirectional", "P4.3/A12/CA3/TB0.0": "bidirectional", "P4.4/A13/CA4/TB0.1": "bidirectional", "P4.5/A14/CA5/TB0.2": "bidirectional", "P4.6/A15/CA6/TB0OUTH": "bidirectional", "P4.7/CA7/TB0CLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.1": "bidirectional", "P3.7/A7/TA1.2": "bidirectional", "TA0.1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA0.2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TA0CLK/ADC10CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "TDI/TA0.1/P1.6": "bidirectional", "TDO/TDI/TA0.2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2855IDA38";
@@ -18231,7 +18589,8 @@ export class MSP430G2855IRHA40 extends Component.withPins({
   "DVCC_39": "39",
   "TA1.0/ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TA1CLK/ACLK/A0/P2.0": "bidirectional", "TA0INCLK/SMCLK/A1/P2.1": "bidirectional", "TA0.0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/CA0/TB0.0": "bidirectional", "P4.1/CA1/TB0.1": "bidirectional", "P4.2/CA2/TB0.2": "bidirectional", "P4.3/A12/CA3/TB0.0": "bidirectional", "P4.4/A13/CA4/TB0.1": "bidirectional", "P4.5/A14/CA5/TB0.2": "bidirectional", "P4.6/A15/CA6/TB0OUTH": "bidirectional", "P4.7/CA7/TB0CLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.1": "bidirectional", "P3.7/A6/TA1.2": "bidirectional", "TA0.1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA0.2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TA0CLK/ADC10CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "TDI/TA0.1/P1.6": "bidirectional", "TDO/TDI/TA0.2/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "TA1.0/ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2855IRHA40";
@@ -18287,7 +18646,8 @@ export class MSP430G2955IDA38 extends Component.withPins({
   "TDI/TA0.1/P1.6": "37",
   "TDO/TDI/TA0.2/P1.7": "38",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SBWTCK/TEST": "input", DVCC: "power_in", "TA1.0/ROSC/P2.5": "bidirectional", DVSS: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", "~{RST}/NMI/SBWTDIO": "input", "TA1CLK/ACLK/A0/P2.0": "bidirectional", "TA0INCLK/SMCLK/A1/P2.1": "bidirectional", "TA0.0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/CA0/TB0.0": "bidirectional", "P4.1/CA1/TB0.1": "bidirectional", "P4.2/CA2/TB0.2": "bidirectional", "P4.3/A12/CA3/TB0.0": "bidirectional", "P4.4/A13/CA4/TB0.1": "bidirectional", "P4.5/A14/CA5/TB0.2": "bidirectional", "P4.6/A15/CA6/TB0OUTH": "bidirectional", "P4.7/CA7/TB0CLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.1": "bidirectional", "P3.7/A7/TA1.2": "bidirectional", "TA0.1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA0.2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TA0CLK/ADC10CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "TDI/TA0.1/P1.6": "bidirectional", "TDO/TDI/TA0.2/P1.7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2955IDA38";
@@ -18345,7 +18705,8 @@ export class MSP430G2955IRHA40 extends Component.withPins({
   "DVCC_39": "39",
   "TA1.0/ROSC/P2.5": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVSS_1: "power_in", "XOUT/P2.7": "bidirectional", "XIN/P2.6": "bidirectional", DVSS_4: "power_in", "~{RST}/NMI/SBWTDIO": "input", "TA1CLK/ACLK/A0/P2.0": "bidirectional", "TA0INCLK/SMCLK/A1/P2.1": "bidirectional", "TA0.0/A2/P2.2": "bidirectional", "P3.0/A5/UCB0STE/UCA0CLK": "bidirectional", "P3.1/UCB0SIMO/UCB0SDA": "bidirectional", "P3.2/UCB0SOMI/UCB0SCL": "bidirectional", "P3.3/UCB0CLK/UCA0STE": "bidirectional", AVSS: "power_in", AVCC: "power_in", "P4.0/CA0/TB0.0": "bidirectional", "P4.1/CA1/TB0.1": "bidirectional", "P4.2/CA2/TB0.2": "bidirectional", "P4.3/A12/CA3/TB0.0": "bidirectional", "P4.4/A13/CA4/TB0.1": "bidirectional", "P4.5/A14/CA5/TB0.2": "bidirectional", "P4.6/A15/CA6/TB0OUTH": "bidirectional", "P4.7/CA7/TB0CLK": "bidirectional", "P3.4/UCA0TXD/UCA0SIMO": "bidirectional", "P3.5/UCA0RXD/UCA0SOMI": "bidirectional", "P3.6/A6/TA1.1": "bidirectional", "P3.7/A6/TA1.2": "bidirectional", "TA0.1/VREF-/VeREF-/A3/P2.3": "bidirectional", "TA0.2/VREF+/VeREF+/A4/P2.4": "bidirectional", "TA0CLK/ADC10CLK/P1.0": "bidirectional", "TA0.0/P1.1": "bidirectional", "TA0.1/P1.2": "bidirectional", "TA0.2/P1.3": "bidirectional", "TCK/SMCLK/P1.4": "bidirectional", "TMS/TA0.0/P1.5": "bidirectional", "TDI/TA0.1/P1.6": "bidirectional", "TDO/TDI/TA0.2/P1.7": "bidirectional", "SBWTCK/TEST": "input", DVCC_38: "power_in", DVCC_39: "power_in", "TA1.0/ROSC/P2.5": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Texas_MSP430:MSP430G2955IRHA40";

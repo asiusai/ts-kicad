@@ -37,7 +37,8 @@ export class NHS3100 extends Component.withPins({
   "VSS_24": "24",
   "VSS_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P0/WAKEUP": "bidirectional", "P1/CLKOUT": "bidirectional", "P2/SSEL": "bidirectional", "P6/SCLK": "bidirectional", "P8/MISO": "bidirectional", "P9/MOSI": "bidirectional", VDDBAT: "power_in", VSS_8: "power_in", "~{RESET}": "input", reserved: "no_connect", "P4/SCL": "bidirectional", "P5/SDA": "bidirectional", "P7/CT16B_M1": "bidirectional", "P3/CT16B_M0": "bidirectional", "P10/SWCLK": "bidirectional", "P11/SWDIO": "bidirectional", VSS_17: "passive", VSS_18: "passive", LB: "passive", LA: "passive", VSS_21: "passive", VSS_22: "passive", VSS_23: "passive", VSS_24: "passive", VSS_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_NTAG:NHS3100";

@@ -15,7 +15,8 @@ export class HV100K5_G extends Component.withPins({
   "VNN": "2",
   "GATE": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VPP: "power_in", VNN: "power_in", GATE: "output", ...opts.pinTypes } });
   }
   override schema = "Regulator_Current:HV100K5-G";
@@ -36,7 +37,8 @@ export class HV101K5_G extends Component.withPins({
   "VNN": "2",
   "GATE": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VPP: "power_in", VNN: "power_in", GATE: "output", ...opts.pinTypes } });
   }
   override schema = "Regulator_Current:HV101K5-G";

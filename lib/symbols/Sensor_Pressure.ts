@@ -16,7 +16,8 @@ export class _40PC015G extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", GND: "power_in", Vout: "output", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:40PC015G";
@@ -38,7 +39,8 @@ export class _40PC100G extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", GND: "power_in", Vout: "output", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:40PC100G";
@@ -60,7 +62,8 @@ export class _40PC150G extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", GND: "power_in", Vout: "output", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:40PC150G";
@@ -82,7 +85,8 @@ export class _40PC250G extends Component.withPins({
   "NC_5": "5",
   "NC_6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc: "power_in", GND: "power_in", Vout: "output", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:40PC250G";
@@ -105,7 +109,8 @@ export class ABPxxxxxxxxx0 extends Component.withPins({
   "INT": "3",
   "NC": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", SDA: "bidirectional", SCL: "bidirectional", VCC: "power_in", INT: "output", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:ABPxxxxxxxxx0";
@@ -128,7 +133,8 @@ export class ABPxxxxxxxxxA extends Component.withPins({
   "NC_5": "5",
   "VCC": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", NC_2: "no_connect", "V_{out}": "output", NC_4: "no_connect", NC_5: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:ABPxxxxxxxxxA";
@@ -151,7 +157,8 @@ export class ABPxxxxxxxxxS extends Component.withPins({
   "~{CS}": "3",
   "NC": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", MISO: "bidirectional", SCLK: "input", VCC: "power_in", "~{CS}": "input", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:ABPxxxxxxxxxS";
@@ -177,7 +184,8 @@ export class BMP280 extends Component.withPins({
   "GND_7": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", CSB: "input", SDI: "bidirectional", SCK: "input", SDO: "bidirectional", VDDIO: "power_in", GND_7: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:BMP280";
@@ -202,7 +210,8 @@ export class ILPS28QSW extends Component.withPins({
   "VDD": "6",
   "PAD2LID": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", "AH1/QVAR1": "input", SCL: "input", "AH2/QVAR2": "input", GND: "power_in", VDD: "power_in", PAD2LID: "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:ILPS28QSW";
@@ -230,7 +239,8 @@ export class LPS22DF extends Component.withPins({
   "GND_9": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd_IO: "power_in", SCL: "input", GND_3: "passive", SDA: "bidirectional", SA0: "input", "~{CS}": "input", INT_DRDY: "output", GND_IO: "power_in", GND_9: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:LPS22DF";
@@ -258,7 +268,8 @@ export class LPS25HB extends Component.withPins({
   "GND_9": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd_IO: "power_in", SCL: "input", GND_3: "passive", SDA: "bidirectional", SA0: "input", "~{CS}": "input", INT_DRDY: "output", GND_8: "power_in", GND_9: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:LPS25HB";
@@ -286,7 +297,8 @@ export class LPS22HB extends Component.withPins({
   "GND_9": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd_IO: "power_in", SCL: "input", GND_3: "passive", SDA: "bidirectional", SA0: "input", "~{CS}": "input", INT_DRDY: "output", GND_8: "power_in", GND_9: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:LPS22HB";
@@ -314,7 +326,8 @@ export class LPS22HH extends Component.withPins({
   "GND_9": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd_IO: "power_in", SCL: "input", GND_3: "passive", SDA: "bidirectional", SA0: "input", "~{CS}": "input", INT_DRDY: "output", GND_8: "power_in", GND_9: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:LPS22HH";
@@ -340,7 +353,8 @@ export class MPL115A1 extends Component.withPins({
   "DIN": "7",
   "SCLK": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", CAP: "passive", GND: "power_in", "~{SHDN}": "input", "~{CS}": "input", DOUT: "output", DIN: "input", SCLK: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MPL115A1";
@@ -366,7 +380,8 @@ export class MPL3115A2 extends Component.withPins({
   "SDL": "7",
   "SCL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", CAP: "passive", GND: "power_in", VDDIO: "power_in", INT2: "open_collector", INT1: "open_collector", SDL: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MPL3115A2";
@@ -390,7 +405,8 @@ export class MPXA6115A extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", Vcc: "power_in", GND: "power_in", Vout: "output", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MPXA6115A";
@@ -414,7 +430,8 @@ export class MPXAZ6115A extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", Vcc: "power_in", GND: "power_in", Vout: "output", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MPXAZ6115A";
@@ -438,7 +455,8 @@ export class MPXH6115A extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", Vcc: "power_in", GND: "power_in", Vout: "output", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MPXH6115A";
@@ -462,7 +480,8 @@ export class MPXHZ6115A extends Component.withPins({
   "NC_7": "7",
   "NC_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", Vcc: "power_in", GND: "power_in", Vout: "output", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MPXHZ6115A";
@@ -493,7 +512,8 @@ export class MS5525DSO extends Component.withPins({
   "SUPPLY+_13": "13",
   "SOUT+_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SIN-_1": "passive", "SOUT-_2": "passive", "SIN-_3": "passive", "SOUT-_4": "passive", SDO: "output", "SDI/SDA": "input", "SCLK/SCL": "input", CSB: "input", "SUPPLY-": "power_in", PS: "input", "SUPPLY+_11": "passive", "SOUT+_12": "passive", "SUPPLY+_13": "power_in", "SOUT+_14": "passive", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MS5525DSO";
@@ -519,7 +539,8 @@ export class MS5607_02BA extends Component.withPins({
   "SDI/SDA": "7",
   "SCLK": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", PS: "input", GND: "power_in", CSB_4: "input", CSB_5: "input", SDO: "output", "SDI/SDA": "bidirectional", SCLK: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MS5607-02BA";
@@ -545,7 +566,8 @@ export class MS5611_01BA extends Component.withPins({
   "SDI/SDA": "7",
   "SCLK": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", PS: "input", GND: "power_in", CSB_4: "input", CSB_5: "input", SDO: "output", "SDI/SDA": "bidirectional", SCLK: "input", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MS5611-01BA";
@@ -567,7 +589,8 @@ export class MS5837_xxBA extends Component.withPins({
   "SCL": "3",
   "SDA": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VDD: "power_in", SCL: "passive", SDA: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:MS5837-xxBA";
@@ -595,7 +618,8 @@ export class WSEN_PADS_2511020213301 extends Component.withPins({
   "GND_9": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vdd_IO: "power_in", SCL: "input", GND_3: "passive", SDA: "bidirectional", SA0: "input", "~{CS}": "input", INT_DRDY: "output", GND_8: "power_in", GND_9: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:WSEN-PADS_2511020213301";
@@ -619,7 +643,8 @@ export class XGZP6859D extends Component.withPins({
   "VDD": "2",
   "GND": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_3: "no_connect", SDA: "bidirectional", SCL: "input", VDD: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:XGZP6859D";
@@ -645,7 +670,8 @@ export class XGZP6897D extends Component.withPins({
   "SCL": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_3: "no_connect", NC_4: "no_connect", NC_5: "no_connect", VDD: "power_in", SDA: "bidirectional", SCL: "passive", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:XGZP6897D";
@@ -671,7 +697,8 @@ export class XGZP6899D extends Component.withPins({
   "SDA": "4",
   "VDD": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_5: "no_connect", NC_7: "no_connect", NC_8: "no_connect", GND: "power_in", SCL: "passive", SDA: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Sensor_Pressure:XGZP6899D";

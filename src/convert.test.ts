@@ -53,12 +53,15 @@ test('converted symbols retain native pin types and merge per-instance overrides
         (pin unspecified line (at 0 7.62 0) (name "UNKNOWN") (number "4")))))`)
     write('src/index.ts', `import {Sensor} from '../lib/Package/symbols';
       export default [new Sensor().wire({IN:null,GND:null,'V+':null,UNKNOWN:null}),
-        new Sensor({pinTypes:{IN:'output'}}).wire({IN:null,GND:null,'V+':null,UNKNOWN:null})];`)
+        new Sensor({pinTypes:{IN:'output'}}).wire({IN:null,GND:null,'V+':null,UNKNOWN:null}),
+        new Sensor('U3', {pinTypes:{IN:'output'}}).wire({IN:null,GND:null,'V+':null,UNKNOWN:null})];`)
     for(let pass=0;pass<2;pass++){
       convertLibraries(project)
       const parts=inspect(join(project,'src/index.ts'))
       expect(parts[0].pinTypes).toEqual({'1':'input','2':'power_in','3':'power_in','4':'unspecified'})
       expect(parts[1].pinTypes).toEqual({'1':'output','2':'power_in','3':'power_in','4':'unspecified'})
+      expect(parts[2].ref).toBe('U3')
+      expect(parts[2].pinTypes).toEqual(parts[1].pinTypes)
     }
   } finally {rmSync(project,{recursive:true,force:true})}
 })

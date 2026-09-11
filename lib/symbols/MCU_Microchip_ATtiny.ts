@@ -20,7 +20,8 @@ export class ATtiny4_MA extends Component.withPins({
   "VCC": "7",
   "PB2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny4-MA";
@@ -46,7 +47,8 @@ export class ATtiny10_MA extends Component.withPins({
   "VCC": "7",
   "PB2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny10-MA";
@@ -70,7 +72,8 @@ export class ATtiny4_TS extends Component.withPins({
   "VCC": "5",
   "~{RESET}/PB3": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny4-TS";
@@ -94,7 +97,8 @@ export class ATtiny10_TS extends Component.withPins({
   "VCC": "5",
   "~{RESET}/PB3": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny10-TS";
@@ -121,7 +125,8 @@ export class ATtiny102_M extends Component.withPins({
   "GND": "8",
   "NC": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA0: "bidirectional", PA1: "bidirectional", "~{RESET}/PA2": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", GND: "power_in", NC: "no_connect", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny102-M";
@@ -147,7 +152,8 @@ export class ATtiny102_SS extends Component.withPins({
   "PB3": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA0: "bidirectional", PA1: "bidirectional", "~{RESET}/PA2": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny102-SS";
@@ -179,7 +185,8 @@ export class ATtiny104_SS extends Component.withPins({
   "PB3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA0: "bidirectional", PA1: "bidirectional", "~{RESET}/PA2": "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny104-SS";
@@ -218,7 +225,8 @@ export class ATtiny13V_10M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", PB4: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13V-10M";
@@ -257,7 +265,8 @@ export class ATtiny13_20M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", PB4: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13-20M";
@@ -286,7 +295,8 @@ export class ATtiny13V_10MM extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", PB4: "bidirectional", GND_5: "power_in", PB0: "bidirectional", PB1: "bidirectional", NC_8: "no_connect", PB2: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13V-10MM";
@@ -315,7 +325,8 @@ export class ATtiny13_20MM extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", PB4: "bidirectional", GND_5: "power_in", PB0: "bidirectional", PB1: "bidirectional", NC_8: "no_connect", PB2: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13-20MM";
@@ -341,7 +352,8 @@ export class ATtiny13V_10P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13V-10P";
@@ -367,7 +379,8 @@ export class ATtiny13_20P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13-20P";
@@ -393,7 +406,8 @@ export class ATtiny13V_10S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13V-10S";
@@ -419,7 +433,8 @@ export class ATtiny13_20S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13-20S";
@@ -445,7 +460,8 @@ export class ATtiny13V_10SS extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13V-10SS";
@@ -471,7 +487,8 @@ export class ATtiny13_20SS extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13-20SS";
@@ -510,7 +527,8 @@ export class ATtiny13A_M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", NC_4: "no_connect", PB4: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13A-M";
@@ -539,7 +557,8 @@ export class ATtiny13A_MM extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", NC_3: "no_connect", PB4: "bidirectional", GND_5: "power_in", PB0: "bidirectional", PB1: "bidirectional", NC_8: "no_connect", PB2: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13A-MM";
@@ -565,7 +584,8 @@ export class ATtiny13A_P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13A-P";
@@ -591,7 +611,8 @@ export class ATtiny13A_S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13A-S";
@@ -617,7 +638,8 @@ export class ATtiny13A_SS extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", PB3: "bidirectional", PB4: "bidirectional", GND: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny13A-SS";
@@ -649,7 +671,8 @@ export class ATtiny204_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny204-SS";
@@ -681,7 +704,8 @@ export class ATtiny1604_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1604-SS";
@@ -720,7 +744,8 @@ export class ATtiny406_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny406-M";
@@ -759,7 +784,8 @@ export class ATtiny1606_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1606-M";
@@ -797,7 +823,8 @@ export class ATtiny406_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny406-S";
@@ -835,7 +862,8 @@ export class ATtiny1606_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1606-S";
@@ -878,7 +906,8 @@ export class ATtiny807_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny807-M";
@@ -921,7 +950,8 @@ export class ATtiny1607_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1607-M";
@@ -953,7 +983,8 @@ export class ATtiny1614_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1614-SS";
@@ -992,7 +1023,8 @@ export class ATtiny1616_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1616-M";
@@ -1030,7 +1062,8 @@ export class ATtiny1616_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1616-S";
@@ -1073,7 +1106,8 @@ export class ATtiny1617_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1617-M";
@@ -1105,7 +1139,8 @@ export class ATtiny1624_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1624-SS";
@@ -1137,7 +1172,8 @@ export class ATtiny1624_X extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1624-X";
@@ -1176,7 +1212,8 @@ export class ATtiny1626_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1626-M";
@@ -1214,7 +1251,8 @@ export class ATtiny1626_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1626-S";
@@ -1252,7 +1290,8 @@ export class ATtiny1626_X extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1626-X";
@@ -1295,7 +1334,8 @@ export class ATtiny1627_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1627-M";
@@ -1334,7 +1374,8 @@ export class ATtiny1634_M extends Component.withPins({
   "PA7": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND_8: "power_in", VCC: "power_in", "XTAL1/PC5": "bidirectional", "XTAL2/PC4": "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA7: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1634-M";
@@ -1372,7 +1413,8 @@ export class ATtiny1634_S extends Component.withPins({
   "PB2": "19",
   "PB1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", VCC: "power_in", "XTAL1/PC5": "bidirectional", "XTAL2/PC4": "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny1634-S";
@@ -1423,7 +1465,8 @@ export class ATtiny87_M extends Component.withPins({
   "NC_32": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", NC_13: "no_connect", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", NC_16: "no_connect", NC_17: "no_connect", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND_21: "power_in", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", NC_32: "no_connect", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny87-M";
@@ -1474,7 +1517,8 @@ export class ATtiny167_M extends Component.withPins({
   "NC_32": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", NC_13: "no_connect", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", NC_16: "no_connect", NC_17: "no_connect", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND_21: "power_in", NC_22: "no_connect", NC_23: "no_connect", NC_24: "no_connect", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", NC_32: "no_connect", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny167-M";
@@ -1512,7 +1556,8 @@ export class ATtiny87_S extends Component.withPins({
   "PB1": "19",
   "PB0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny87-S";
@@ -1550,7 +1595,8 @@ export class ATtiny167_S extends Component.withPins({
   "PB1": "19",
   "PB0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny167-S";
@@ -1588,7 +1634,8 @@ export class ATtiny87_X extends Component.withPins({
   "PB1": "19",
   "PB0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny87-X";
@@ -1626,7 +1673,8 @@ export class ATtiny167_X extends Component.withPins({
   "PB1": "19",
   "PB0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", AVCC: "power_in", AGND: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "AREF/PA7": "bidirectional", "~{RESET}/PB7": "bidirectional", PB6: "bidirectional", "XTAL2/PB5": "bidirectional", "XTAL1/PB4": "bidirectional", VCC: "power_in", GND: "power_in", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny167-X";
@@ -1659,7 +1707,8 @@ export class ATtiny20_CC extends Component.withPins({
   "GND_D3": "D3",
   "VCC": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PB0: "bidirectional", PA0: "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny20-CC";
@@ -1698,7 +1747,8 @@ export class ATtiny20_MM extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", PB0: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny20-MM";
@@ -1730,7 +1780,8 @@ export class ATtiny20_SS extends Component.withPins({
   "PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PB0: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny20-SS";
@@ -1760,7 +1811,8 @@ export class ATtiny20_U extends Component.withPins({
   "~{RESET}/PB3": "D4",
   "PB0": "D6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA6: "bidirectional", GND: "power_in", VCC: "power_in", PA5: "bidirectional", PA7: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", "~{RESET}/PB3": "bidirectional", PB0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny20-U";
@@ -1792,7 +1844,8 @@ export class ATtiny20_X extends Component.withPins({
   "PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PB0: "bidirectional", PB1: "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny20-X";
@@ -1818,7 +1871,8 @@ export class ATtiny202_SS extends Component.withPins({
   "PA3": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny202-SS";
@@ -1844,7 +1898,8 @@ export class ATtiny212_SS extends Component.withPins({
   "PA3": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny212-SS";
@@ -1876,7 +1931,8 @@ export class ATtiny214_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny214-SS";
@@ -1915,7 +1971,8 @@ export class ATtiny2313V_10M extends Component.withPins({
   "PD0": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313V-10M";
@@ -1954,7 +2011,8 @@ export class ATtiny2313_20M extends Component.withPins({
   "PD0": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313-20M";
@@ -1992,7 +2050,8 @@ export class ATtiny2313V_10P extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313V-10P";
@@ -2030,7 +2089,8 @@ export class ATtiny2313_20P extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313-20P";
@@ -2068,7 +2128,8 @@ export class ATtiny2313V_10S extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313V-10S";
@@ -2106,7 +2167,8 @@ export class ATtiny2313_20S extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313-20S";
@@ -2145,7 +2207,8 @@ export class ATtiny2313A_M extends Component.withPins({
   "PD0": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313A-M";
@@ -2184,7 +2247,8 @@ export class ATtiny2313A_MM extends Component.withPins({
   "PD0": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313A-MM";
@@ -2222,7 +2286,8 @@ export class ATtiny2313A_P extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313A-P";
@@ -2260,7 +2325,8 @@ export class ATtiny2313A_S extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny2313A-S";
@@ -2299,7 +2365,8 @@ export class ATtiny24V_10M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24V-10M";
@@ -2338,7 +2405,8 @@ export class ATtiny24_20M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24-20M";
@@ -2370,7 +2438,8 @@ export class ATtiny24V_10P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24V-10P";
@@ -2402,7 +2471,8 @@ export class ATtiny24_20P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24-20P";
@@ -2434,7 +2504,8 @@ export class ATtiny24V_10SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24V-10SS";
@@ -2466,7 +2537,8 @@ export class ATtiny24_20SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24-20SS";
@@ -2499,7 +2571,8 @@ export class ATtiny24A_CC extends Component.withPins({
   "GND_D3": "D3",
   "VCC": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "XTAL1/PB0": "bidirectional", "AREF/PA0": "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24A-CC";
@@ -2538,7 +2611,8 @@ export class ATtiny24A_M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24A-M";
@@ -2577,7 +2651,8 @@ export class ATtiny24A_MM extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24A-MM";
@@ -2609,7 +2684,8 @@ export class ATtiny24A_P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24A-P";
@@ -2641,7 +2717,8 @@ export class ATtiny24A_SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny24A-SS";
@@ -2680,7 +2757,8 @@ export class ATtiny25V_10M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25V-10M";
@@ -2719,7 +2797,8 @@ export class ATtiny25_20M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25-20M";
@@ -2745,7 +2824,8 @@ export class ATtiny25V_10P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25V-10P";
@@ -2771,7 +2851,8 @@ export class ATtiny25_20P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25-20P";
@@ -2797,7 +2878,8 @@ export class ATtiny25V_10S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25V-10S";
@@ -2823,7 +2905,8 @@ export class ATtiny25_20S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25-20S";
@@ -2849,7 +2932,8 @@ export class ATtiny25V_10SS extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25V-10SS";
@@ -2875,7 +2959,8 @@ export class ATtiny25_20SS extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny25-20SS";
@@ -2926,7 +3011,8 @@ export class ATtiny26L_8M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny26L-8M";
@@ -2977,7 +3063,8 @@ export class ATtiny26_16M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny26-16M";
@@ -3015,7 +3102,8 @@ export class ATtiny26L_8P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny26L-8P";
@@ -3053,7 +3141,8 @@ export class ATtiny26_16P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny26-16P";
@@ -3091,7 +3180,8 @@ export class ATtiny26L_8S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny26L-8S";
@@ -3129,7 +3219,8 @@ export class ATtiny26_16S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND_6: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", GND_16: "passive", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny26-16S";
@@ -3180,7 +3271,8 @@ export class ATtiny461V_10M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461V-10M";
@@ -3231,7 +3323,8 @@ export class ATtiny261A_M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny261A-M";
@@ -3269,7 +3362,8 @@ export class ATtiny461V_10P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461V-10P";
@@ -3307,7 +3401,8 @@ export class ATtiny261A_P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny261A-P";
@@ -3345,7 +3440,8 @@ export class ATtiny461V_10S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461V-10S";
@@ -3383,7 +3479,8 @@ export class ATtiny261A_S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny261A-S";
@@ -3421,7 +3518,8 @@ export class ATtiny261A_X extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny261A-X";
@@ -3471,7 +3569,8 @@ export class ATtiny28V_1A extends Component.withPins({
   "PD1": "31",
   "PD2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny28V-1A";
@@ -3521,7 +3620,8 @@ export class ATtiny28L_4A extends Component.withPins({
   "PD1": "31",
   "PD2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny28L-4A";
@@ -3572,7 +3672,8 @@ export class ATtiny28V_1M extends Component.withPins({
   "PD2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny28V-1M";
@@ -3623,7 +3724,8 @@ export class ATtiny28L_4M extends Component.withPins({
   "PD2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", NC_3: "no_connect", VCC_4: "power_in", GND_5: "power_in", NC_6: "no_connect", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_18: "passive", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", NC_22: "no_connect", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny28L-4M";
@@ -3669,7 +3771,8 @@ export class ATtiny28V_1P extends Component.withPins({
   "PA1": "27",
   "PA0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC_7: "power_in", GND_8: "power_in", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_20: "passive", NC: "no_connect", GND_22: "passive", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny28V-1P";
@@ -3715,7 +3818,8 @@ export class ATtiny28L_4P extends Component.withPins({
   "PA1": "27",
   "PA0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}": "input", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC_7: "power_in", GND_8: "power_in", XTAL1: "input", XTAL2: "output", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", VCC_20: "passive", NC: "no_connect", GND_22: "passive", PB6: "bidirectional", PB7: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny28L-4P";
@@ -3754,7 +3858,8 @@ export class ATtiny3216_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3216-M";
@@ -3792,7 +3897,8 @@ export class ATtiny3216_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3216-S";
@@ -3835,7 +3941,8 @@ export class ATtiny3217_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3217-M";
@@ -3867,7 +3974,8 @@ export class ATtiny3224_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3224-SS";
@@ -3899,7 +4007,8 @@ export class ATtiny3224_X extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3224-X";
@@ -3938,7 +4047,8 @@ export class ATtiny3226_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3226-M";
@@ -3976,7 +4086,8 @@ export class ATtiny3226_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3226-S";
@@ -4014,7 +4125,8 @@ export class ATtiny3226_X extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3226-X";
@@ -4057,7 +4169,8 @@ export class ATtiny3227_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny3227-M";
@@ -4096,7 +4209,8 @@ export class ATtiny40_MM extends Component.withPins({
   "PA7": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND_8: "power_in", VCC: "power_in", PC5: "bidirectional", PC4: "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PA7: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny40-MM";
@@ -4134,7 +4248,8 @@ export class ATtiny40_S extends Component.withPins({
   "PB2": "19",
   "PB1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", VCC: "power_in", PC5: "bidirectional", PC4: "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny40-S";
@@ -4172,7 +4287,8 @@ export class ATtiny40_X extends Component.withPins({
   "PB2": "19",
   "PB1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", GND: "power_in", VCC: "power_in", PC5: "bidirectional", PC4: "bidirectional", "~{RESET}/PC3": "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PC0: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny40-X";
@@ -4198,7 +4314,8 @@ export class ATtiny402_SS extends Component.withPins({
   "PA3": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny402-SS";
@@ -4230,7 +4347,8 @@ export class ATtiny404_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny404-SS";
@@ -4256,7 +4374,8 @@ export class ATtiny412_SS extends Component.withPins({
   "PA3": "7",
   "GND": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA6: "bidirectional", PA7: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", "~{RESET}/PA0": "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny412-SS";
@@ -4288,7 +4407,8 @@ export class ATtiny414_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny414-SS";
@@ -4327,7 +4447,8 @@ export class ATtiny416_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny416-M";
@@ -4365,7 +4486,8 @@ export class ATtiny416_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny416-S";
@@ -4408,7 +4530,8 @@ export class ATtiny417_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny417-M";
@@ -4440,7 +4563,8 @@ export class ATtiny424_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny424-SS";
@@ -4472,7 +4596,8 @@ export class ATtiny424_X extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny424-X";
@@ -4511,7 +4636,8 @@ export class ATtiny426_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny426-M";
@@ -4549,7 +4675,8 @@ export class ATtiny426_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny426-S";
@@ -4587,7 +4714,8 @@ export class ATtiny426_X extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny426-X";
@@ -4630,7 +4758,8 @@ export class ATtiny427_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny427-M";
@@ -4669,7 +4798,8 @@ export class ATtiny4313_M extends Component.withPins({
   "PD0": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny4313-M";
@@ -4708,7 +4838,8 @@ export class ATtiny4313_MM extends Component.withPins({
   "PD0": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND_8: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny4313-MM";
@@ -4746,7 +4877,8 @@ export class ATtiny4313_P extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny4313-P";
@@ -4784,7 +4916,8 @@ export class ATtiny4313_S extends Component.withPins({
   "PB7": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PA2/~{RESET}": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PA1/XTAL2": "bidirectional", "PA0/XTAL1": "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", GND: "power_in", PD6: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny4313-S";
@@ -4823,7 +4956,8 @@ export class ATtiny43U_M extends Component.withPins({
   "PB1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", GND_8: "power_in", LSW: "passive", VBAT: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "~{RESET}/PA7": "bidirectional", PB0: "bidirectional", PB1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny43U-M";
@@ -4861,7 +4995,8 @@ export class ATtiny43U_S extends Component.withPins({
   "PA6": "19",
   "~{RESET}/PA7": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", GND: "power_in", LSW: "passive", VBAT: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", "~{RESET}/PA7": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny43U-S";
@@ -4900,7 +5035,8 @@ export class ATtiny44_20M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44-20M";
@@ -4932,7 +5068,8 @@ export class ATtiny44_20P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44-20P";
@@ -4964,7 +5101,8 @@ export class ATtiny44_20SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44-20SS";
@@ -5003,7 +5141,8 @@ export class ATtiny441_M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny441-M";
@@ -5042,7 +5181,8 @@ export class ATtiny441_MM extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny441-MM";
@@ -5074,7 +5214,8 @@ export class ATtiny441_SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny441-SS";
@@ -5107,7 +5248,8 @@ export class ATtiny44A_CC extends Component.withPins({
   "GND_D3": "D3",
   "VCC": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "XTAL1/PB0": "bidirectional", "AREF/PA0": "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44A-CC";
@@ -5146,7 +5288,8 @@ export class ATtiny44A_M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44A-M";
@@ -5185,7 +5328,8 @@ export class ATtiny44A_MM extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44A-MM";
@@ -5217,7 +5361,8 @@ export class ATtiny44A_P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44A-P";
@@ -5249,7 +5394,8 @@ export class ATtiny44A_SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44A-SS";
@@ -5288,7 +5434,8 @@ export class ATtiny44V_10M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44V-10M";
@@ -5320,7 +5467,8 @@ export class ATtiny44V_10P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44V-10P";
@@ -5352,7 +5500,8 @@ export class ATtiny44V_10SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny44V-10SS";
@@ -5391,7 +5540,8 @@ export class ATtiny45_20M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45-20M";
@@ -5417,7 +5567,8 @@ export class ATtiny45_20P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45-20P";
@@ -5443,7 +5594,8 @@ export class ATtiny45_20S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45-20S";
@@ -5469,7 +5621,8 @@ export class ATtiny45V_10X extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45V-10X";
@@ -5495,7 +5648,8 @@ export class ATtiny45_20X extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45-20X";
@@ -5534,7 +5688,8 @@ export class ATtiny45V_10M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45V-10M";
@@ -5560,7 +5715,8 @@ export class ATtiny45V_10P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45V-10P";
@@ -5586,7 +5742,8 @@ export class ATtiny45V_10S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny45V-10S";
@@ -5637,7 +5794,8 @@ export class ATtiny461_20M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461-20M";
@@ -5675,7 +5833,8 @@ export class ATtiny461_20P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461-20P";
@@ -5713,7 +5872,8 @@ export class ATtiny461_20S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461-20S";
@@ -5764,7 +5924,8 @@ export class ATtiny461A_M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461A-M";
@@ -5802,7 +5963,8 @@ export class ATtiny461A_P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461A-P";
@@ -5840,7 +6002,8 @@ export class ATtiny461A_S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461A-S";
@@ -5878,7 +6041,8 @@ export class ATtiny461A_X extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny461A-X";
@@ -5928,7 +6092,8 @@ export class ATtiny48_A extends Component.withPins({
   "PD1": "31",
   "PD2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny48-A";
@@ -5978,7 +6143,8 @@ export class ATtiny48_CC extends Component.withPins({
   "PB3": "F5",
   "PB4": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD2: "bidirectional", PD1: "bidirectional", "~{RESET}/PC6": "bidirectional", PC4: "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD0: "bidirectional", PC5: "bidirectional", PC3: "bidirectional", PC0: "bidirectional", GND_C1: "power_in", PA2: "bidirectional", PA1: "bidirectional", GND_C6: "passive", VCC: "power_in", PA3: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PB6: "bidirectional", PD6: "bidirectional", PB0: "bidirectional", PB2: "bidirectional", AVCC: "power_in", PB5: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD7: "bidirectional", PB1: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny48-CC";
@@ -6029,7 +6195,8 @@ export class ATtiny48_M extends Component.withPins({
   "PD2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny48-M";
@@ -6076,7 +6243,8 @@ export class ATtiny48_MM extends Component.withPins({
   "PD2": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_4: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_18: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny48-MM";
@@ -6122,7 +6290,8 @@ export class ATtiny48_P extends Component.withPins({
   "PC4": "27",
   "PC5": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_8: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_22: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny48-P";
@@ -6148,7 +6317,8 @@ export class ATtiny5_MA extends Component.withPins({
   "VCC": "7",
   "PB2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny5-MA";
@@ -6172,7 +6342,8 @@ export class ATtiny5_TS extends Component.withPins({
   "VCC": "5",
   "~{RESET}/PB3": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny5-TS";
@@ -6204,7 +6375,8 @@ export class ATtiny804_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny804-SS";
@@ -6243,7 +6415,8 @@ export class ATtiny806_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny806-M";
@@ -6281,7 +6454,8 @@ export class ATtiny806_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny806-S";
@@ -6313,7 +6487,8 @@ export class ATtiny814_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny814-SS";
@@ -6352,7 +6527,8 @@ export class ATtiny816_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny816-M";
@@ -6390,7 +6566,8 @@ export class ATtiny816_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny816-S";
@@ -6433,7 +6610,8 @@ export class ATtiny817_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny817-M";
@@ -6465,7 +6643,8 @@ export class ATtiny824_SS extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny824-SS";
@@ -6497,7 +6676,8 @@ export class ATtiny824_X extends Component.withPins({
   "PA3": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny824-X";
@@ -6536,7 +6716,8 @@ export class ATtiny826_M extends Component.withPins({
   "PA1": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny826-M";
@@ -6574,7 +6755,8 @@ export class ATtiny826_S extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny826-S";
@@ -6612,7 +6794,8 @@ export class ATtiny826_X extends Component.withPins({
   "PA3": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny826-X";
@@ -6655,7 +6838,8 @@ export class ATtiny827_M extends Component.withPins({
   "PA1": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA2: "bidirectional", PA3: "bidirectional", GND_3: "power_in", VCC: "power_in", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB7: "bidirectional", PB6: "bidirectional", PB5: "bidirectional", PB4: "bidirectional", PB3: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", PB0: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PA0": "bidirectional", PA1: "bidirectional", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny827-M";
@@ -6705,7 +6889,8 @@ export class ATtiny828_A extends Component.withPins({
   "PC0": "31",
   "PC1": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", VCC: "power_in", GND_5: "power_in", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", AVCC: "power_in", PB1: "bidirectional", PB2: "bidirectional", GND_21: "passive", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PD2/~{RESET}": "bidirectional", PD3: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny828-A";
@@ -6756,7 +6941,8 @@ export class ATtiny828_M extends Component.withPins({
   "PC1": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", VCC: "power_in", GND_5: "power_in", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", AVCC: "power_in", PB1: "bidirectional", PB2: "bidirectional", GND_21: "passive", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", "PD2/~{RESET}": "bidirectional", PD3: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny828-M";
@@ -6795,7 +6981,8 @@ export class ATtiny84_20M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84-20M";
@@ -6827,7 +7014,8 @@ export class ATtiny84_20P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84-20P";
@@ -6859,7 +7047,8 @@ export class ATtiny84_20SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84-20SS";
@@ -6898,7 +7087,8 @@ export class ATtiny841_M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny841-M";
@@ -6937,7 +7127,8 @@ export class ATtiny841_MM extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny841-MM";
@@ -6969,7 +7160,8 @@ export class ATtiny841_SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny841-SS";
@@ -7002,7 +7194,8 @@ export class ATtiny84A_CC extends Component.withPins({
   "GND_D3": "D3",
   "VCC": "D4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PB2: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "XTAL1/PB0": "bidirectional", "AREF/PA0": "bidirectional", GND_D2: "power_in", GND_D3: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84A-CC";
@@ -7041,7 +7234,8 @@ export class ATtiny84A_M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84A-M";
@@ -7080,7 +7274,8 @@ export class ATtiny84A_MM extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84A-MM";
@@ -7112,7 +7307,8 @@ export class ATtiny84A_P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84A-P";
@@ -7144,7 +7340,8 @@ export class ATtiny84A_SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84A-SS";
@@ -7183,7 +7380,8 @@ export class ATtiny84V_10M extends Component.withPins({
   "PA5": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", VCC: "power_in", NC_10: "no_connect", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", PA5: "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84V-10M";
@@ -7215,7 +7413,8 @@ export class ATtiny84V_10P extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84V-10P";
@@ -7247,7 +7446,8 @@ export class ATtiny84V_10SS extends Component.withPins({
   "AREF/PA0": "13",
   "GND": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", "XTAL1/PB0": "bidirectional", "XTAL2/PB1": "bidirectional", "~{RESET}/PB3": "bidirectional", PB2: "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", "AREF/PA0": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny84V-10SS";
@@ -7286,7 +7486,8 @@ export class ATtiny85_20M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny85-20M";
@@ -7312,7 +7513,8 @@ export class ATtiny85_20P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny85-20P";
@@ -7338,7 +7540,8 @@ export class ATtiny85_20S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny85-20S";
@@ -7377,7 +7580,8 @@ export class ATtiny85V_10M extends Component.withPins({
   "NC_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", NC_3: "no_connect", NC_4: "no_connect", "XTAL2/PB4": "bidirectional", NC_6: "no_connect", NC_7: "no_connect", GND_8: "power_in", NC_9: "no_connect", NC_10: "no_connect", "AREF/PB0": "bidirectional", PB1: "bidirectional", NC_13: "no_connect", PB2: "bidirectional", VCC: "power_in", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", NC_19: "no_connect", NC_20: "no_connect", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny85V-10M";
@@ -7403,7 +7607,8 @@ export class ATtiny85V_10P extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny85V-10P";
@@ -7429,7 +7634,8 @@ export class ATtiny85V_10S extends Component.withPins({
   "PB2": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PB5": "bidirectional", "XTAL1/PB3": "bidirectional", "XTAL2/PB4": "bidirectional", GND: "power_in", "AREF/PB0": "bidirectional", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny85V-10S";
@@ -7480,7 +7686,8 @@ export class ATtiny861_20M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861-20M";
@@ -7518,7 +7725,8 @@ export class ATtiny861_20P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861-20P";
@@ -7556,7 +7764,8 @@ export class ATtiny861_20S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861-20S";
@@ -7607,7 +7816,8 @@ export class ATtiny861A_M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861A-M";
@@ -7645,7 +7855,8 @@ export class ATtiny861A_P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861A-P";
@@ -7683,7 +7894,8 @@ export class ATtiny861A_S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861A-S";
@@ -7721,7 +7933,8 @@ export class ATtiny861A_X extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861A-X";
@@ -7772,7 +7985,8 @@ export class ATtiny861V_10M extends Component.withPins({
   "PB2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PB3: "bidirectional", NC_3: "no_connect", VCC: "power_in", GND_5: "power_in", NC_6: "no_connect", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", NC_9: "no_connect", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", NC_12: "no_connect", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", NC_16: "no_connect", PA4: "bidirectional", AVCC: "power_in", NC_19: "no_connect", NC_20: "no_connect", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", NC_24: "no_connect", PA1: "bidirectional", PA0: "bidirectional", NC_27: "no_connect", NC_28: "no_connect", NC_29: "no_connect", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861V-10M";
@@ -7810,7 +8024,8 @@ export class ATtiny861V_10P extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861V-10P";
@@ -7848,7 +8063,8 @@ export class ATtiny861V_10S extends Component.withPins({
   "PA1": "19",
   "PA0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", VCC: "power_in", GND: "power_in", "XTAL1/PB4": "bidirectional", "XTAL2/PB5": "bidirectional", PB6: "bidirectional", "~{RESET}/PB7": "bidirectional", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", AVCC: "power_in", AGND: "power_in", "AREF/PA3": "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny861V-10S";
@@ -7898,7 +8114,8 @@ export class ATtiny88_A extends Component.withPins({
   "PD1": "31",
   "PD2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny88-A";
@@ -7948,7 +8165,8 @@ export class ATtiny88_CC extends Component.withPins({
   "PB3": "F5",
   "PB4": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD2: "bidirectional", PD1: "bidirectional", "~{RESET}/PC6": "bidirectional", PC4: "bidirectional", PC2: "bidirectional", PC1: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD0: "bidirectional", PC5: "bidirectional", PC3: "bidirectional", PC0: "bidirectional", GND_C1: "power_in", PA2: "bidirectional", PA1: "bidirectional", GND_C6: "passive", VCC: "power_in", PA3: "bidirectional", PC7: "bidirectional", PA0: "bidirectional", PB6: "bidirectional", PD6: "bidirectional", PB0: "bidirectional", PB2: "bidirectional", AVCC: "power_in", PB5: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD7: "bidirectional", PB1: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny88-CC";
@@ -7999,7 +8217,8 @@ export class ATtiny88_M extends Component.withPins({
   "PD2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", PA2: "bidirectional", VCC: "power_in", GND_5: "power_in", PA3: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PA0: "bidirectional", PC7: "bidirectional", GND_21: "passive", PA1: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny88-M";
@@ -8046,7 +8265,8 @@ export class ATtiny88_MM extends Component.withPins({
   "PD2": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_4: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_18: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny88-MM";
@@ -8092,7 +8312,8 @@ export class ATtiny88_P extends Component.withPins({
   "PC4": "27",
   "PC5": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}/PC6": "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", VCC: "power_in", GND_8: "power_in", PB6: "bidirectional", PB7: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", PD7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", AVCC: "power_in", PC7: "bidirectional", GND_22: "passive", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PC4: "bidirectional", PC5: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny88-P";
@@ -8118,7 +8339,8 @@ export class ATtiny9_MA extends Component.withPins({
   "VCC": "7",
   "PB2": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB1: "bidirectional", NC_2: "no_connect", NC_3: "no_connect", GND: "power_in", PB0: "bidirectional", "~{RESET}/PB3": "bidirectional", VCC: "power_in", PB2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny9-MA";
@@ -8142,7 +8364,8 @@ export class ATtiny9_TS extends Component.withPins({
   "VCC": "5",
   "~{RESET}/PB3": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB0: "bidirectional", GND: "power_in", PB1: "bidirectional", PB2: "bidirectional", VCC: "power_in", "~{RESET}/PB3": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_ATtiny:ATtiny9-TS";

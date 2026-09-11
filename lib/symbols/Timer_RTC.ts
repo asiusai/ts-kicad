@@ -29,7 +29,8 @@ export class AB0805 extends Component.withPins({
   "XI": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", WDI: "input", NC_3: "no_connect", "~{IRQ2}": "open_collector", VBAT: "power_in", SDA: "bidirectional", SCL: "input", NC_8: "no_connect", VSS_9: "power_in", EXTI: "input", "FOUT/~{IRQ}": "open_collector", "~{TIRQ}": "open_collector", VCC: "power_in", AF: "passive", XO: "output", XI: "input", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:AB0805";
@@ -64,7 +65,8 @@ export class AB0815 extends Component.withPins({
   "XI": "16",
   "VSS": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", WDI: "input", NC_3: "no_connect", "~{IRQ2}": "open_collector", VBAT: "power_in", SDO: "output", SCL: "input", NC_8: "no_connect", SDI: "input", EXTI: "input", "FOUT/~{IRQ}": "open_collector", "~{CE}": "input", VCC: "power_in", AF: "passive", XO: "output", XI: "input", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:AB0815";
@@ -99,7 +101,8 @@ export class AB1805 extends Component.withPins({
   "XI": "16",
   "VSS_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "open_collector", WDI: "input", "~{EXTR}": "input", "~{IRQ2}": "open_collector", VBAT: "power_in", SDA: "bidirectional", SCL: "input", "CLKOUT/~{IRQ3}": "output", VSS_9: "power_in", EXTI: "input", "FOUT/~{IRQ}": "open_collector", "~{TIRQ}": "open_collector", VCC: "power_in", AF: "passive", XO: "output", XI: "input", VSS_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:AB1805";
@@ -134,7 +137,8 @@ export class AB1815 extends Component.withPins({
   "XI": "16",
   "VSS": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "open_collector", WDI: "input", "~{EXTR}": "input", "~{IRQ2}": "open_collector", VBAT: "power_in", SDO: "output", SCL: "input", "CLKOUT/~{IRQ3}": "output", SDI: "input", EXTI: "input", "FOUT/~{IRQ}": "open_collector", "~{CE}": "input", VCC: "power_in", AF: "passive", XO: "output", XI: "input", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:AB1815";
@@ -160,7 +164,8 @@ export class BQ32000 extends Component.withPins({
   "~{IRQ}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "input", VBACK: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", "~{IRQ}": "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:BQ32000";
@@ -186,7 +191,8 @@ export class BQ32002 extends Component.withPins({
   "~{IRQ}": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "input", VBACK: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", "~{IRQ}": "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:BQ32002";
@@ -212,7 +218,8 @@ export class DS1302_ extends Component.withPins({
   "SCLK": "7",
   "VCC1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC2: "power_in", X1: "input", X2: "input", GND: "power_in", CE: "input", "I/O": "bidirectional", SCLK: "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1302+";
@@ -238,7 +245,8 @@ export class DS1302N_ extends Component.withPins({
   "SCLK": "7",
   "VCC1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC2: "power_in", X1: "input", X2: "input", GND: "power_in", CE: "input", "I/O": "bidirectional", SCLK: "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1302N+";
@@ -264,7 +272,8 @@ export class DS1302S_ extends Component.withPins({
   "SCLK": "7",
   "VCC1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC2: "power_in", X1: "input", X2: "input", GND: "power_in", CE: "input", "I/O": "bidirectional", SCLK: "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1302S+";
@@ -290,7 +299,8 @@ export class DS1302SN_ extends Component.withPins({
   "SCLK": "7",
   "VCC1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC2: "power_in", X1: "input", X2: "input", GND: "power_in", CE: "input", "I/O": "bidirectional", SCLK: "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1302SN+";
@@ -316,7 +326,8 @@ export class DS1302Z_ extends Component.withPins({
   "SCLK": "7",
   "VCC1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC2: "power_in", X1: "input", X2: "input", GND: "power_in", CE: "input", "I/O": "bidirectional", SCLK: "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1302Z+";
@@ -342,7 +353,8 @@ export class DS1302ZN_ extends Component.withPins({
   "SCLK": "7",
   "VCC1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC2: "power_in", X1: "input", X2: "input", GND: "power_in", CE: "input", "I/O": "bidirectional", SCLK: "input", VCC1: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1302ZN+";
@@ -368,7 +380,8 @@ export class DS1307_ extends Component.withPins({
   "SQW/OUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "input", VBAT: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", "SQW/OUT": "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1307+";
@@ -394,7 +407,8 @@ export class DS1307N_ extends Component.withPins({
   "SQW/OUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "input", VBAT: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", "SQW/OUT": "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1307N+";
@@ -420,7 +434,8 @@ export class DS1307Z_ extends Component.withPins({
   "SQW/OUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "input", VBAT: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", "SQW/OUT": "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1307Z+";
@@ -446,7 +461,8 @@ export class DS1307ZN_ extends Component.withPins({
   "SQW/OUT": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "input", VBAT: "power_in", GND: "power_in", SDA: "bidirectional", SCL: "input", "SQW/OUT": "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1307ZN+";
@@ -471,7 +487,8 @@ export class DS1602 extends Component.withPins({
   "XTAL1": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", DQ: "bidirectional", CLK: "input", GND: "power_in", VBAT: "power_in", XTAL2: "passive", XTAL1: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS1602";
@@ -505,7 +522,8 @@ export class DS3231M extends Component.withPins({
   "SDA": "15",
   "SCL": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "32KHZ": "open_collector", VCC: "power_in", "~{INT}/SQW": "open_collector", "~{RST}": "bidirectional", GND_5: "passive", GND_6: "passive", GND_7: "passive", GND_8: "passive", GND_9: "passive", GND_10: "passive", GND_11: "passive", GND_12: "passive", GND_13: "power_in", VBAT: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS3231M";
@@ -531,7 +549,8 @@ export class DS3231MZ extends Component.withPins({
   "SDA": "7",
   "SCL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "32KHZ": "open_collector", VCC: "power_in", "~{INT}/SQW": "open_collector", "~{RST}": "bidirectional", GND: "power_in", VBAT: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS3231MZ";
@@ -557,7 +576,8 @@ export class DS3232M extends Component.withPins({
   "SDA": "7",
   "SCL": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "32KHZ": "output", VCC: "power_in", "~{INT}/SQW": "open_collector", "~{RST}": "bidirectional", GND: "power_in", VBAT: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:DS3232M";
@@ -584,7 +604,8 @@ export class M41T62Q extends Component.withPins({
   "VCC": "14",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { XI: "input", XO: "input", SQW: "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{IRQ}/OUT": "output", VCC: "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:M41T62Q";
@@ -611,7 +632,8 @@ export class MCP7940N_xMNY extends Component.withPins({
   "VCC": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", MFP: "open_collector", VCC: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP7940N-xMNY";
@@ -636,7 +658,8 @@ export class MCP7940N_xMS extends Component.withPins({
   "MFP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP7940N-xMS";
@@ -661,7 +684,8 @@ export class MCP7940N_xP extends Component.withPins({
   "MFP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP7940N-xP";
@@ -686,7 +710,8 @@ export class MCP7940N_xSN extends Component.withPins({
   "MFP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP7940N-xSN";
@@ -711,7 +736,8 @@ export class MCP7940N_xST extends Component.withPins({
   "MFP": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP7940N-xST";
@@ -739,7 +765,8 @@ export class MCP79510_xMS extends Component.withPins({
   "MFP": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", "~{CS}": "input", VSS: "power_in", SI: "input", SO: "output", SCK: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP79510-xMS";
@@ -767,7 +794,8 @@ export class MCP79511_xMS extends Component.withPins({
   "MFP": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", "~{CS}": "input", VSS: "power_in", SI: "input", SO: "output", SCK: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP79511-xMS";
@@ -795,7 +823,8 @@ export class MCP79512_xMS extends Component.withPins({
   "MFP": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", "~{CS}": "input", VSS: "power_in", SI: "input", SO: "output", SCK: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP79512-xMS";
@@ -823,7 +852,8 @@ export class MCP79520_xMS extends Component.withPins({
   "MFP": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", "~{CS}": "input", VSS: "power_in", SI: "input", SO: "output", SCK: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP79520-xMS";
@@ -851,7 +881,8 @@ export class MCP79521_xMS extends Component.withPins({
   "MFP": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", "~{CS}": "input", VSS: "power_in", SI: "input", SO: "output", SCK: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP79521-xMS";
@@ -879,7 +910,8 @@ export class MCP79522_xMS extends Component.withPins({
   "MFP": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X1: "input", X2: "output", VBAT: "power_in", "~{CS}": "input", VSS: "power_in", SI: "input", SO: "output", SCK: "input", MFP: "open_collector", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:MCP79522-xMS";
@@ -914,7 +946,8 @@ export class PCA2131 extends Component.withPins({
   "V_{BAT}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IFS: "input", SCL: "input", SDI: "input", SDO: "tri_state", "SDA/~{CE}": "bidirectional", CLKOUT: "output", "V_{SS}": "power_in", "~{TS1}": "input", "~{TS2}": "input", "~{TS3}": "input", "~{TS4}": "input", "~{INTB}": "open_collector", "~{INTA}": "open_collector", BBS: "power_out", "V_{DD}": "power_in", "V_{BAT}": "power_in", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCA2131";
@@ -942,7 +975,8 @@ export class PCF85063ATL extends Component.withPins({
   "CLKOUT": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", CLKOE: "input", "~{INT}": "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", NC: "no_connect", CLKOUT: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85063ATL";
@@ -968,7 +1002,8 @@ export class PCF8523T extends Component.withPins({
   "~{INT1}/CLKOUT": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{INT1}/CLKOUT": "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF8523T";
@@ -995,7 +1030,8 @@ export class PCF8523TK extends Component.withPins({
   "VDD": "8",
   "VSS_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", VSS_4: "power_in", SDA: "bidirectional", SCL: "input", "~{INT1}/CLKOUT": "open_collector", VDD: "power_in", VSS_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF8523TK";
@@ -1027,7 +1063,8 @@ export class PCF8523TS extends Component.withPins({
   "~{INT1}/CLKOUT": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", NC_3: "no_connect", VBAT: "power_in", VSS: "power_in", NC_6: "no_connect", "~{INT2}": "open_collector", CLKOUT: "open_collector", NC_9: "no_connect", SDA: "bidirectional", SCL: "input", NC_12: "no_connect", "~{INT1}/CLKOUT": "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF8523TS";
@@ -1053,7 +1090,8 @@ export class PCF85263AT extends Component.withPins({
   "~{INTA}": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{INTA}": "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85263AT";
@@ -1082,7 +1120,8 @@ export class PCF85263ATL extends Component.withPins({
   "VDD": "10",
   "PAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", TS: "bidirectional", VSS: "power_in", SDA: "bidirectional", SCL: "input", CLK: "output", "~{INTA}": "open_collector", VDD: "power_in", PAD: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85263ATL";
@@ -1108,7 +1147,8 @@ export class PCF85263ATT extends Component.withPins({
   "~{INTA}": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{INTA}": "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85263ATT";
@@ -1136,7 +1176,8 @@ export class PCF85263ATT1 extends Component.withPins({
   "~{INTA}": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", TS: "bidirectional", VSS: "power_in", SDA: "bidirectional", SCL: "input", CLK: "output", "~{INTA}": "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85263ATT1";
@@ -1162,7 +1203,8 @@ export class PCF85363ATT extends Component.withPins({
   "~{INTA}": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", VSS: "power_in", SDA: "bidirectional", SCL: "input", "~{INTA}": "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85363ATT";
@@ -1190,7 +1232,8 @@ export class PCF85363ATT1 extends Component.withPins({
   "~{INTA}": "9",
   "VDD": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", VBAT: "power_in", TS: "bidirectional", VSS: "power_in", SDA: "bidirectional", SCL: "input", CLK: "output", "~{INTA}": "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF85363ATT1";
@@ -1216,7 +1259,8 @@ export class PCF8563T extends Component.withPins({
   "CLKO": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", "~{INT}": "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", CLKO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF8563T";
@@ -1242,7 +1286,8 @@ export class PCF8563TS extends Component.withPins({
   "CLKO": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OSCI: "input", OSCO: "output", "~{INT}": "output", VSS: "power_in", SDA: "bidirectional", SCL: "input", CLKO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:PCF8563TS";
@@ -1270,7 +1315,8 @@ export class RV_1805_C3 extends Component.withPins({
   "WDI": "9",
   "~{RST}": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", Cap_RC: "passive", "CLK/~{INT}": "open_collector", SCL: "input", SDA: "bidirectional", VSS: "power_in", VBACKUP: "power_in", PSW: "open_collector", WDI: "input", "~{RST}": "open_collector", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:RV-1805-C3";
@@ -1296,7 +1342,8 @@ export class RV_3028_C7 extends Component.withPins({
   "VDD": "7",
   "EVI": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKOUT: "output", "~{INT}": "open_collector", SCL: "input", SDA: "bidirectional", VSS: "power_in", VBACKUP: "power_in", VDD: "power_in", EVI: "input", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:RV-3028-C7";
@@ -1324,7 +1371,8 @@ export class RV_8523_C3 extends Component.withPins({
   "NC_9": "9",
   "NC_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "~{INT_1}": "open_collector", SCL: "input", SDA: "bidirectional", CLKOUT: "open_collector", "~{INT_2}": "open_collector", VSS: "power_in", VBACKUP: "power_in", NC_9: "no_connect", NC_10: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:RV-8523-C3";
@@ -1352,7 +1400,8 @@ export class RX8901CE extends Component.withPins({
   "GND": "9",
   "EVIN2/FOE": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "V_{OUT}": "power_out", "V_{BAT}": "power_in", "FOUT/EVIN3": "bidirectional", SCL: "input", EVIN1: "passive", SDA: "bidirectional", "~{INT}": "open_collector", GND: "power_in", "EVIN2/FOE": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Timer_RTC:RX8901CE";

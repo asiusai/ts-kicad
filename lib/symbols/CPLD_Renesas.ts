@@ -32,7 +32,8 @@ export class SLG46580 extends Component.withPins({
   "IO8/ACMP3+": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IO0/EXT_CLK": "bidirectional", "IO1/ACMP0+": "bidirectional", IO2: "bidirectional", IO3: "bidirectional", "IO4/ACMP1+": "bidirectional", IO5: "input", VDD: "power_in", SCL: "input", SDA: "bidirectional", "IO6/EXT_VREF": "bidirectional", LDO0_VOUT: "power_out", "LDO0,1_VIN": "power_in", LDO1_VOUT: "power_out", LDO2_VOUT: "power_out", "LDO2,3_VIN": "power_in", LDO3_VOUT: "power_out", AGND: "power_in", "IO7/ACMP2+": "bidirectional", "IO8/ACMP3+": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "CPLD_Renesas:SLG46580";
@@ -70,7 +71,8 @@ export class SLG46582 extends Component.withPins({
   "IO8/ACMP3+": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IO0/EXT_CLK": "bidirectional", "IO1/ACMP0+": "bidirectional", IO2: "bidirectional", IO3: "bidirectional", "IO4/ACMP1+": "bidirectional", IO5: "input", VDD: "power_in", SCL: "input", SDA: "bidirectional", "IO6/EXT_VREF": "bidirectional", LDO0_VOUT_11: "power_out", LDO0_VIN: "power_in", LDO0_VOUT_13: "passive", LDO1_VOUT_14: "power_out", LDO1_VIN: "power_in", LDO1_VOUT_16: "passive", AGND: "power_in", "IO7/ACMP2+": "bidirectional", "IO8/ACMP3+": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "CPLD_Renesas:SLG46582";
@@ -108,7 +110,8 @@ export class SLG46583 extends Component.withPins({
   "IO8/ACMP3+": "19",
   "GND": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "IO0/EXT_CLK": "bidirectional", "IO1/ACMP0+": "bidirectional", IO2: "bidirectional", IO3: "bidirectional", "IO4/ACMP1+": "bidirectional", IO5: "input", VDD: "power_in", SCL: "input", SDA: "bidirectional", "IO6/EXT_VREF": "bidirectional", LDO_VOUT_11: "power_out", LDO_VIN_12: "power_in", LDO_VOUT_13: "passive", LDO_VOUT_14: "passive", LDO_VIN_15: "passive", LDO_VOUT_16: "passive", AGND: "power_in", "IO7/ACMP2+": "bidirectional", "IO8/ACMP3+": "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "CPLD_Renesas:SLG46583";
@@ -146,7 +149,8 @@ export class SLG46826G extends Component.withPins({
   "IO0": "19",
   "V_{DD}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IO14: "bidirectional", IO13: "bidirectional", IO12: "bidirectional", IO11: "bidirectional", IO10: "bidirectional", IO9: "bidirectional", "V_{DD2}": "power_in", IO8: "bidirectional", IO7: "output", GND: "power_in", IO6: "output", SDA: "bidirectional", SCL: "bidirectional", IO5: "bidirectional", IO4: "bidirectional", IO3: "bidirectional", IO2: "bidirectional", IO1: "bidirectional", IO0: "bidirectional", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "CPLD_Renesas:SLG46826G";
@@ -180,7 +184,8 @@ export class SLG47011V extends Component.withPins({
   "GPIO11": "15",
   "GPIO12": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", GND: "power_in", GPI: "input", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", GPIO6: "bidirectional", GPIO7: "bidirectional", GPIO8: "bidirectional", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", GPIO12: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "CPLD_Renesas:SLG47011V";

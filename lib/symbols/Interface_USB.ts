@@ -28,7 +28,8 @@ export class ADUM4160 extends Component.withPins({
   "GND2_15": "15",
   "VBUS2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBUS1: "power_in", GND1_2: "power_in", VDD1: "power_in", PDEN: "input", SPU: "input", "UD-": "bidirectional", "UD+": "bidirectional", GND1_8: "power_in", GND2_9: "power_in", "DD+": "bidirectional", "DD-": "bidirectional", PIN: "input", SPD: "input", VDD2: "power_in", GND2_15: "power_in", VBUS2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:ADUM4160";
@@ -62,7 +63,8 @@ export class ADUM3160 extends Component.withPins({
   "GND2_15": "15",
   "VBUS2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBUS1: "power_in", GND1_2: "power_in", VDD1: "power_in", PDEN: "input", SPU: "input", "UD-": "bidirectional", "UD+": "bidirectional", GND1_8: "power_in", GND2_9: "power_in", "DD+": "bidirectional", "DD-": "bidirectional", PIN: "input", SPD: "input", VDD2: "power_in", GND2_15: "power_in", VBUS2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:ADUM3160";
@@ -105,7 +107,8 @@ export class AP33771 extends Component.withPins({
   "VCC": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ISENP: "bidirectional", NC_2: "no_connect", GND_3: "power_in", NC_4: "no_connect", NC_5: "no_connect", GPIO4: "bidirectional", VSEL1: "bidirectional", GPIO1: "bidirectional", VSEL0: "bidirectional", NC_10: "no_connect", VSEL2: "bidirectional", V3VD: "power_out", PSEL: "bidirectional", VFB: "input", IFB: "input", CC2: "bidirectional", CC1: "bidirectional", NC_18: "no_connect", NC_19: "no_connect", V5V: "power_out", NC_21: "no_connect", VBUS: "power_in", PWR_EN: "power_in", VCC: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:AP33771";
@@ -148,7 +151,8 @@ export class AP33772SDKZ_xx_FA02 extends Component.withPins({
   "VCC": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ISENP: "input", NC_2: "no_connect", GND_3: "power_in", SDA: "bidirectional", SCL: "input", FLIP: "output", GPIO: "bidirectional", LED: "output", INT: "output", NC_10: "no_connect", VSEL: "input", V18: "output", OTP: "passive", NC_14: "no_connect", IFB: "passive", CC2: "bidirectional", CC1: "bidirectional", DN: "bidirectional", DP: "bidirectional", V5V: "passive", NC_21: "no_connect", VOUT: "input", PWR_EN: "output", VCC: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:AP33772SDKZ-xx-FA02";
@@ -176,7 +180,8 @@ export class BQ24392 extends Component.withPins({
   "VBUS": "9",
   "CHG_DET": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW_OPEN: "open_collector", DM_HOST: "bidirectional", DP_HOST: "bidirectional", "~{CHG_AL}": "open_collector", GOOD_BAT: "input", GND: "power_in", DP_CON: "bidirectional", DM_CON: "bidirectional", VBUS: "power_in", CHG_DET: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:BQ24392";
@@ -200,7 +205,8 @@ export class CH221K extends Component.withPins({
   "CC2": "5",
   "CFG": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", "~{PG}": "open_collector", CC1: "bidirectional", CC2: "bidirectional", CFG: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH221K";
@@ -229,7 +235,8 @@ export class CH224K extends Component.withPins({
   "PG": "10",
   "GND": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", CFG2: "passive", CFG3: "passive", DP: "bidirectional", DM: "bidirectional", CC2: "bidirectional", CC1: "bidirectional", VBUS: "passive", CFG1: "passive", PG: "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH224K";
@@ -268,7 +275,8 @@ export class CH236D extends Component.withPins({
   "VBUS": "19",
   "FBO": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", FBOX: "passive", VHV: "passive", NC_3: "no_connect", GATEP: "output", GATEN: "output", "~{NMOS}": "input", VDD: "power_in", "UD+": "bidirectional", "UD-": "bidirectional", CC1: "bidirectional", CC2: "bidirectional", NC_12: "no_connect", NC_13: "no_connect", "IS+": "passive", "IS-": "passive", NC_16: "no_connect", VFB: "passive", IFB: "passive", VBUS: "power_in", FBO: "power_out", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH236D";
@@ -307,7 +315,8 @@ export class CH246D extends Component.withPins({
   "OSC": "19",
   "LED0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", NC_1: "no_connect", VHV: "power_in", HV1: "output", HV0P: "output", HV0N: "output", NC_6: "no_connect", VDD: "power_in", UDP: "bidirectional", UDM: "bidirectional", CC1: "bidirectional", CC0: "bidirectional", LV0: "output", LV1: "output", "IS+": "passive", "IS-": "passive", QII: "input", LED1: "open_emitter", NTC: "input", OSC: "input", LED0: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH246D";
@@ -333,7 +342,8 @@ export class CH330N extends Component.withPins({
   "RXD": "7",
   "V3": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", "~{RTS}": "output", VCC: "power_in", TXD: "output", RXD: "input", V3: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH330N";
@@ -376,7 +386,8 @@ export class CH334F extends Component.withPins({
   "~{PWREN}": "24",
   "GND": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{OVCUR}": "input", NC_2: "no_connect", XO: "passive", XI: "passive", "DM4-": "bidirectional", "DP4+": "bidirectional", "DM3-": "bidirectional", "DP3+": "bidirectional", "DM2-": "bidirectional", "DP2+": "bidirectional", "DM1-": "bidirectional", "DP1+": "bidirectional", "LED3/SCL": "bidirectional", "DMU-": "bidirectional", "DPU+": "bidirectional", "~{RESET}/CDP": "input", NC_17: "no_connect", PSELF: "input", V5: "power_in", "VDD33_{LDO}": "power_out", "LED4/SDA": "bidirectional", LED1: "bidirectional", LED2: "bidirectional", "~{PWREN}": "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH334F";
@@ -410,7 +421,8 @@ export class CH334R extends Component.withPins({
   "XO": "15",
   "XI": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "DM4-": "bidirectional", "DP4+": "bidirectional", "DM3-": "bidirectional", "DP3+": "bidirectional", "DM2-": "bidirectional", "DP2+": "bidirectional", "DM1-": "bidirectional", "DP1+": "bidirectional", "~{RESET}/CDP": "input", "DMU-": "bidirectional", "DPU+": "bidirectional", V5: "power_in", "VDD33_{LDO}": "power_out", GND: "power_in", XO: "passive", XI: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH334R";
@@ -456,7 +468,8 @@ export class CH334U extends Component.withPins({
   "NC_27": "27",
   "GND_28": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", XO: "passive", XI: "passive", "DM4-": "bidirectional", "DP4+": "bidirectional", "DM3-": "bidirectional", "DP3+": "bidirectional", "DM2-": "bidirectional", "DP2+": "bidirectional", "DM1-": "bidirectional", "DP1+": "bidirectional", "LED3/SCL": "bidirectional", "DMU-": "bidirectional", "DPU+": "bidirectional", PSELF: "input", V5: "power_in", "LED4/SDA": "bidirectional", LED1: "output", LED2: "output", GND_12: "passive", VDD33: "power_in", "~{RESET}/CDP": "input", NC_18: "no_connect", "VDD33_{LDO}": "power_out", "~{PWREN}": "output", "~{OVCUR}": "input", NC_27: "no_connect", GND_28: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH334U";
@@ -490,7 +503,8 @@ export class CH340C extends Component.withPins({
   "R232": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", TXD: "output", RXD: "input", V3: "power_out", "UD+": "bidirectional", "UD-": "bidirectional", NC_7: "no_connect", NC_8: "no_connect", "~{CTS}": "input", "~{DSR}": "input", "~{RI}": "input", "~{DCD}": "input", "~{DTR}": "output", "~{RTS}": "output", R232: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340C";
@@ -518,7 +532,8 @@ export class CH340E extends Component.withPins({
   "RXD": "9",
   "V3": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", "~{RTS}": "output", "~{CTS}": "input", TNOW: "output", VCC: "power_in", TXD: "output", RXD: "input", V3: "power_out", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340E";
@@ -552,7 +567,8 @@ export class CH340G extends Component.withPins({
   "R232": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", TXD: "output", RXD: "input", V3: "power_out", "UD+": "bidirectional", "UD-": "bidirectional", XI: "input", XO: "output", "~{CTS}": "input", "~{DSR}": "input", "~{RI}": "input", "~{DCD}": "input", "~{DTR}": "output", "~{RTS}": "output", R232: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340G";
@@ -581,7 +597,8 @@ export class CH340K extends Component.withPins({
   "RXD": "9",
   "V3": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_11: "passive", "UD+": "bidirectional", "UD-": "bidirectional", GND_3: "power_in", "~{DTR}": "output", "~{CTS}": "input", "~{RTS}": "output", VCC: "power_in", TXD: "output", RXD: "input", V3: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340K";
@@ -607,7 +624,8 @@ export class CH340N extends Component.withPins({
   "RXD": "7",
   "V3": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", "~{RTS}": "output", VCC: "power_in", TXD: "output", RXD: "input", V3: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340N";
@@ -645,7 +663,8 @@ export class CH340T extends Component.withPins({
   "VCC": "19",
   "~{NOS}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CKOH: "output", CKOL: "output", TXD: "output", RXD: "input", V3: "power_out", "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", XI: "input", XO: "output", "~{CTS}": "input", "~{DSR}": "input", "~{RI}": "input", "~{DCD}": "input", "~{DTR}": "output", "~{RTS}": "output", NC: "no_connect", R232: "input", VCC: "power_in", "~{NOS}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340T";
@@ -673,7 +692,8 @@ export class CH340X extends Component.withPins({
   "RXD": "9",
   "V3": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", "~{RTS}": "output", "~{CTS}": "input", "TNOW/~{DTR}": "output", VCC: "power_in", TXD: "output", RXD: "input", V3: "power_out", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH340X";
@@ -719,7 +739,8 @@ export class CH341A extends Component.withPins({
   "~{OUT}/D4": "19",
   "~{DTR}/D5": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RTS}/D6": "tri_state", "~{SLP}/D7": "tri_state", SDA: "bidirectional", SCL: "open_collector", "~{RDY}/~{STB}/~{WR}": "output", "TNOW/~{INI}/~{RST}": "output", "~{TEN}/BUSY/~{WT}": "passive", VCC: "power_in", "~{ACT}": "output", RSTI: "passive", "IN7/~{SIN}/~{AS}": "tri_state", "~{ROV}/~{AFD}/~{DS}": "tri_state", "TXD/~{ERR}": "bidirectional", "RXD/PEMP": "input", "~{INT}/~{ACK}": "passive", "IN3/SLCT": "passive", V3: "passive", "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", XI: "input", XO: "output", "~{CTS}/D0": "tri_state", "~{DSR}/D1": "tri_state", "~{RI}/D2": "tri_state", "~{DCD}/D3": "tri_state", "~{OUT}/D4": "tri_state", "~{DTR}/D5": "tri_state", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH341A";
@@ -753,7 +774,8 @@ export class CH343G extends Component.withPins({
   "VIO": "15",
   "VDD5": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", TXD: "output", RXD: "input", V3: "power_out", "UD+": "bidirectional", "UD-": "bidirectional", VBUS: "input", "~{ACT}": "output", "~{DCD}": "input", "~{DTR}": "output", "~{RTS}": "output", "~{DSR}": "input", "~{CTS}": "input", "~{RI}": "input", VIO: "power_in", VDD5: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH343G";
@@ -788,7 +810,8 @@ export class CH343P extends Component.withPins({
   "~{CTS}": "15",
   "~{RI}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", GND_EPAD: "power_in", VIO: "power_in", VDD5: "power_in", TXD: "output", RXD: "input", "V3_{OUT}": "power_out", "UD+": "bidirectional", "UD-": "bidirectional", VBUS: "input", "~{ACT}": "output", "~{DCD}": "input", "~{DTR}": "output", "~{RTS}": "output", "~{DSR}": "input", "~{CTS}": "input", "~{RI}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH343P";
@@ -854,7 +877,8 @@ export class CH344Q extends Component.withPins({
   "GND_47": "47",
   "VCC_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{DTR2}/TNOW2/GPIO9": "bidirectional", GND_20: "passive", NC: "no_connect", "~{DSR2}": "input", "~{RI2}": "input", "~{DCD2}": "input", XI: "input", XO: "output", "~{RESET}": "input", GND_8: "power_in", VCC_9: "power_in", "~{CTS1}/GPIO2": "bidirectional", "~{RTS1}/GPIO3": "bidirectional", TXD1: "output", RXD1: "input", "~{ACT}/~{CFG}/~{DCD3}": "bidirectional", "TX_S/~{RI3}": "bidirectional", "RX_S/~{DSR3}": "bidirectional", "~{DSR1}": "input", "~{DTR1}/TNOW1/GPIO9": "bidirectional", TXD2: "output", RXD2: "input", GND_23: "passive", VCC_24: "power_in", "~{RI1}": "input", "~{CTS2}/GPIO4": "bidirectional", "~{RTS2}/GPIO5": "bidirectional", "~{DCD1}/GPIO15": "bidirectional", "~{DSR0}/GPIO14": "input", TXD0: "output", RXD0: "input", "~{RI0}/GPIO13": "bidirectional", "~{DCD0}/GPIO12": "bidirectional", "~{DTR3}/TNOW3/GPIO11": "bidirectional", GND_35: "passive", VCC_36: "power_in", TXD3: "output", RXD3: "input", "~{DTR0}/TNOW0/GPIO8": "bidirectional", "~{RTS0}/GPIO1": "bidirectional", "~{CTS0}/GPIO0": "bidirectional", "UD-": "bidirectional", "UD+": "bidirectional", TEST: "input", "~{RTS3}/GPIO7": "bidirectional", "~{CTS3}/GPIO6": "bidirectional", GND_47: "passive", VCC_48: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH344Q";
@@ -897,7 +921,8 @@ export class CH9102F extends Component.withPins({
   "~{DCD}": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RI}": "input", GND_2: "power_in", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", V3: "power_out", VDD5: "power_in", VBUS: "input", "~{RST}": "input", "~{ACT}": "output", "~{WAKEUP}/GPIO3": "bidirectional", "TNOW/GPIO2": "bidirectional", "RXS/GPIO1": "bidirectional", "TXS/GPIO0": "bidirectional", "~{SUSPEND}": "output", GPIO4: "bidirectional", SUSPEND: "output", "~{CTS}": "input", "~{RTS}": "output", RXD: "input", TXD: "output", "~{DSR}": "input", "~{DTR}": "output", "~{DCD}": "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CH9102F";
@@ -939,7 +964,8 @@ export class CP2102C_Axx_xQFN24 extends Component.withPins({
   "~{DCD}": "24",
   "GND": "[2,25]",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RI}": "input", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", VDD: "power_in", VREGIN: "power_in", VBUS: "input", "~{RST}": "input", NC_10: "no_connect", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", "~{SUSPEND}": "output", NC_16: "no_connect", SUSPEND: "output", "~{CTS}": "input", "~{RTS}": "output", RXD: "input", TXD: "tri_state", "~{DSR}": "input", "~{DTR}": "output", "~{DCD}": "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2102C-Axx-xQFN24";
@@ -978,7 +1004,8 @@ export class CP2102N_Axx_xQFN20 extends Component.withPins({
   "~{TXT}/GPIO.2": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "RS485/GPIO.1": "bidirectional", "CLK/GPIO.0": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", VREGIN: "power_in", VBUS: "input", "~{RST}": "input", NC: "no_connect", "~{SUSPEND}": "output", GND_12: "passive", "~{WAKEUP}": "input", SUSPEND: "output", "~{CTS}": "input", "~{RTS}": "output", RXD: "input", TXD: "output", "~{RXT}/GPIO.3": "bidirectional", "~{TXT}/GPIO.2": "bidirectional", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2102N-Axx-xQFN20";
@@ -1021,7 +1048,8 @@ export class CP2102N_Axx_xQFN24 extends Component.withPins({
   "~{DCD}": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RI}/CLK": "bidirectional", GND_2: "power_in", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", VDD: "power_in", VREGIN: "power_in", VBUS: "input", "~{RST}": "input", NC_10: "no_connect", "~{WAKEUP}/GPIO.3": "bidirectional", "RS485/GPIO.2": "bidirectional", "~{RXT}/GPIO.1": "bidirectional", "~{TXT}/GPIO.0": "bidirectional", "~{SUSPEND}": "output", NC_16: "no_connect", SUSPEND: "output", "~{CTS}": "input", "~{RTS}": "output", RXD: "input", TXD: "output", "~{DSR}": "input", "~{DTR}": "output", "~{DCD}": "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2102N-Axx-xQFN24";
@@ -1068,7 +1096,8 @@ export class CP2102N_Axx_xQFN28 extends Component.withPins({
   "~{DTR}": "28",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{DCD}": "input", "~{RI}/CLK": "bidirectional", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", VREGIN: "power_in", VBUS: "input", "~{RST}": "input", NC: "no_connect", "~{SUSPEND}": "output", SUSPEND: "output", CHREN: "output", CHR1: "output", CHR0: "output", "~{WAKEUP}/GPIO.3": "bidirectional", "RS485/GPIO.2": "bidirectional", "~{RXT}/GPIO.1": "bidirectional", "~{TXT}/GPIO.0": "bidirectional", "GPIO.6": "bidirectional", "GPIO.5": "bidirectional", "GPIO.4": "bidirectional", "~{CTS}": "input", "~{RTS}": "output", RXD: "input", TXD: "output", "~{DSR}": "input", "~{DTR}": "output", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2102N-Axx-xQFN28";
@@ -1111,7 +1140,8 @@ export class CP2104 extends Component.withPins({
   "~{DCD}": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RI}": "input", GND_2: "power_in", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}": "bidirectional", NC: "no_connect", "GPIO.3": "bidirectional", "RS485/GPIO.2": "bidirectional", "RXT/GPIO.1": "bidirectional", "TXT/GPIO.0": "bidirectional", "~{SUSPEND}": "output", VPP: "passive", SUSPEND: "output", "~{CTS}": "input", "~{RTS}": "output", RXD: "input", TXD: "output", "~{DSR}": "input", "~{DTR}": "output", "~{DCD}": "input", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2104";
@@ -1154,7 +1184,8 @@ export class CP2105_F01_GM extends Component.withPins({
   "~{DCD_SCI}": "24",
   "EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RI_SCI}": "input", GND: "power_in", "D+": "bidirectional", "D-": "bidirectional", "V_{IO}": "power_in", "V_{DD}": "power_in", REGIN: "power_in", VBUS: "input", "~{RST}": "bidirectional", "~{CTS_ECI}": "input", "~{RTS_ECI}": "output", RXD_ECI: "input", TXD_ECI: "output", "~{DSR_ECI}": "input", "~{DTR_ECI}": "output", "~{DCD_ECI}": "input", "~{RI_ECI}": "input", "~{CTS_SCI}": "input", "~{RTS_SCI}": "output", RXD_SCI: "input", TXD_SCI: "output", "~{DSR_SCI}": "input", "~{DTR_SCI}": "output", "~{DCD_SCI}": "input", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2105-F01-GM";
@@ -1237,7 +1268,8 @@ export class CP2108_xxx_xM extends Component.withPins({
   "~{RESET}": "64",
   "VSS_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RX3: "input", VSSHD: "power_in", VIOHD: "power_in", TX3: "output", "~{CTS3}": "input", "~{RTS3}": "output", "~{RI3}": "input", "~{DCD3}": "input", "~{DSR3}": "input", "~{DTR3}": "output", "~{RI2}": "input", "~{DCD2}": "input", "~{CTS2}": "input", "~{RTS2}": "output", RX2: "input", TX2: "output", "~{DSR2}": "input", "~{DTR2}": "output", "~{SUSPEND}": "output", SUSPEND: "output", GPIO15: "bidirectional", GPIO14: "bidirectional", GPIO13: "bidirectional", VIO_24: "power_in", VSS_25: "power_in", GPIO12: "bidirectional", GPIO11: "bidirectional", GPIO10: "bidirectional", GPIO9: "bidirectional", GPIO8: "bidirectional", GPIO7: "bidirectional", GPIO6: "bidirectional", GPIO5: "bidirectional", GPIO4: "bidirectional", NC_35: "no_connect", NC_36: "no_connect", GPIO3: "bidirectional", GPIO2: "bidirectional", VIO_39: "passive", GPIO1: "bidirectional", GPIO0: "bidirectional", "~{RI1}": "input", "~{DCD1}": "input", "~{DSR1}": "input", "~{DTR1}": "output", "~{CTS1}": "input", "~{RTS1}": "output", RX1: "input", TX1: "output", "~{RI0}": "input", "~{DCD0}": "input", "~{DSR0}": "input", "~{DTR0}": "output", "~{CTS0}": "input", "~{RTS0}": "output", RX0: "input", TX0: "output", VDD: "power_in", VSS_59: "passive", VREGIN: "power_in", VBUS: "input", "D+": "bidirectional", "D-": "bidirectional", "~{RESET}": "input", VSS_65: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2108-xxx-xM";
@@ -1280,7 +1312,8 @@ export class CP2112 extends Component.withPins({
   "SCL": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND_2: "power_in", "D+": "bidirectional", "D-": "bidirectional", VIO: "power_in", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}": "input", NC_10: "no_connect", SUSPEND: "output", "GPIO.7": "bidirectional", "GPIO.6": "bidirectional", "GPIO.5": "bidirectional", "GPIO.4": "bidirectional", VPP: "power_in", "~{SUSPEND}": "output", NC_18: "no_connect", NC_19: "no_connect", "GPIO.3": "bidirectional", "GPIO.2": "bidirectional", "GPIO.1": "bidirectional", "GPIO.0": "bidirectional", SCL: "output", GND_25: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2112";
@@ -1331,7 +1364,8 @@ export class CP2615_xx_xM extends Component.withPins({
   "GPIO.8/ADC": "20",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I2S_SDIN: "input", I2S_SCLK: "output", GND_3: "power_in", "D+": "bidirectional", "D-": "bidirectional", VDD: "power_in", REGIN: "power_in", VBUS: "input", "~{RST}": "bidirectional", NC: "no_connect", "GPIO.7": "bidirectional", "GPIO.6": "bidirectional", "~{CFGMODE}": "input", "GPIO.10/~{RESETOUT}": "bidirectional", "GPIO.14/RX": "bidirectional", "GPIO.13/TX": "bidirectional", "GPIO.12/CLKOUT": "bidirectional", I2S_MCLK: "output", "GPIO.11/RTS": "bidirectional", I2S_LRCLK: "output", I2C_SCL: "bidirectional", I2C_SDA: "bidirectional", "GPIO.15/CTS": "bidirectional", I2S_SDOUT: "output", "GPIO.5": "bidirectional", "GPIO.4": "bidirectional", "GPIO.3": "bidirectional", "GPIO.2": "bidirectional", "GPIO.1": "bidirectional", "GPIO.0": "bidirectional", "GPIO.9/BUTTONS": "bidirectional", "GPIO.8/ADC": "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CP2615-xx-xM";
@@ -1374,7 +1408,8 @@ export class CY7C65211_24LTXI extends Component.withPins({
   "VDDD": "24",
   "1EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SCB_0/GPIO_6": "bidirectional", "SCB_5/GPIO_7": "bidirectional", VSSD_3: "power_in", GPIO_8: "tri_state", GPIO_9: "tri_state", GPIO_10: "tri_state", GPIO_11: "tri_state", SUSPEND: "output", WAKEUP: "input", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "power_in", VSSD_13: "power_in", "~{XRES}": "input", VBUS: "power_out", VSSD_16: "power_in", VSSA: "power_in", GPIO_0: "tri_state", GPIO_1: "tri_state", "SCB_1/GPIO_2": "bidirectional", "SCB_2/GPIO_3": "bidirectional", "SCB_3/GPIO_4": "bidirectional", "SCB_4/GPIO_5": "bidirectional", VDDD: "power_in", "1EP": "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65211-24LTXI";
@@ -1417,7 +1452,8 @@ export class CY7C65211A_24LTXI extends Component.withPins({
   "VDDD": "24",
   "1EP": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SCB_0/GPIO_6": "bidirectional", "SCB_5/GPIO_7": "bidirectional", VSSD_3: "power_in", GPIO_8: "tri_state", GPIO_9: "tri_state", GPIO_10: "tri_state", GPIO_11: "tri_state", SUSPEND: "output", WAKEUP: "input", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "power_in", VSSD_13: "power_in", "~{XRES}": "input", VBUS: "power_out", VSSD_16: "power_in", VSSA: "power_in", GPIO_0: "tri_state", GPIO_1: "tri_state", "SCB_1/GPIO_2": "bidirectional", "SCB_2/GPIO_3": "bidirectional", "SCB_3/GPIO_4": "bidirectional", "SCB_4/GPIO_5": "bidirectional", VDDD: "power_in", "1EP": "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65211A-24LTXI";
@@ -1463,7 +1499,8 @@ export class CY7C65213_28PVXI extends Component.withPins({
   "GPIO6": "27",
   "GPIO7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXD: "output", DTR: "output", RTS: "output", VCCIO: "power_in", RXD: "input", RI: "input", GND_7: "power_in", GPIO5: "tri_state", DSR: "input", DCD: "input", CTS: "input", GPIO4: "bidirectional", GPIO2: "tri_state", GPIO3: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "passive", GND_18: "power_in", "~{RESET}": "bidirectional", VCC: "power_in", GND_21: "power_in", GPIO1: "bidirectional", GPIO0: "bidirectional", NC_24: "no_connect", NC_25: "no_connect", DNU: "passive", GPIO6: "tri_state", GPIO7: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65213-28PVXI";
@@ -1514,7 +1551,8 @@ export class CY7C65213_32LTXI extends Component.withPins({
   "RTS": "32",
   "1EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCIO: "power_in", RXD: "input", RI: "input", GND_4: "power_in", GPIO5: "tri_state", DSR: "input", DCD: "input", CTS: "input", GPIO4: "bidirectional", GPIO2: "tri_state", GPIO3: "bidirectional", GPIO6: "tri_state", GPIO7: "tri_state", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "passive", GND_17: "power_in", "~{RESET}": "bidirectional", VCC: "power_in", GND_20: "power_in", GPIO1: "bidirectional", GPIO0: "bidirectional", DNU_23: "passive", AGND: "power_in", DNU_25: "passive", DNU_26: "passive", DNU_27: "passive", DNU_28: "passive", DNU_29: "passive", TXD: "output", DTR: "output", RTS: "output", "1EP": "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65213-32LTXI";
@@ -1560,7 +1598,8 @@ export class CY7C65213A_28PVXI extends Component.withPins({
   "GPIO6": "27",
   "GPIO7": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXD: "output", DTR: "output", RTS: "output", VCCIO: "power_in", RXD: "input", RI: "input", GND_7: "power_in", GPIO5: "tri_state", DSR: "input", DCD: "input", CTS: "input", GPIO4: "bidirectional", GPIO2: "tri_state", GPIO3: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "passive", GND_18: "power_in", "~{RESET}": "bidirectional", VCC: "power_in", GND_21: "power_in", GPIO1: "bidirectional", GPIO0: "bidirectional", NC_24: "no_connect", NC_25: "no_connect", DNU: "passive", GPIO6: "tri_state", GPIO7: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65213A-28PVXI";
@@ -1611,7 +1650,8 @@ export class CY7C65213A_32LTXI extends Component.withPins({
   "RTS": "32",
   "1EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCIO: "power_in", RXD: "input", RI: "input", GND_4: "power_in", GPIO5: "tri_state", DSR: "input", DCD: "input", CTS: "input", GPIO4: "bidirectional", GPIO2: "tri_state", GPIO3: "bidirectional", GPIO6: "tri_state", GPIO7: "tri_state", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "passive", GND_17: "power_in", "~{RESET}": "bidirectional", VCC: "power_in", GND_20: "power_in", GPIO1: "bidirectional", GPIO0: "bidirectional", DNU_23: "passive", AGND: "power_in", DNU_25: "passive", DNU_26: "passive", DNU_27: "passive", DNU_28: "passive", DNU_29: "passive", TXD: "output", DTR: "output", RTS: "output", "1EP": "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65213A-32LTXI";
@@ -1662,7 +1702,8 @@ export class CY7C65215_32LTXI extends Component.withPins({
   "GPIO_7": "32",
   "1EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "SCB0_0/GPIO_8": "bidirectional", "SCB0_5/GPIO_9": "bidirectional", VSSD_4: "power_in", "SCB1_0/GPIO_10": "bidirectional", "SCB1_1/GPIO_11": "bidirectional", "SCB1_2/GPIO_12": "bidirectional", "SCB1_3/GPIO_13": "bidirectional", "SCB1_4/GPIO_14": "bidirectional", "SCB1_5/GPIO_15": "bidirectional", SUSPEND: "output", WAKEUP: "input", GPIO_16: "tri_state", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "power_in", VSSD_17: "power_in", "~{XRES}": "input", VBUS: "power_out", VSSD_20: "power_in", GPIO_17: "tri_state", GPIO_18: "tri_state", VDDD_23: "power_in", VSSA: "power_in", GPIO_0: "bidirectional", GPIO_1: "bidirectional", "SCB0_1/GPIO_2": "bidirectional", "SCB0_2/GPIO_3": "bidirectional", "SCB0_3/GPIO_4": "bidirectional", "SCB0_4/GPIO_5": "bidirectional", GPIO_6: "bidirectional", GPIO_7: "bidirectional", "1EP": "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65215-32LTXI";
@@ -1713,7 +1754,8 @@ export class CY7C65215A_32LTXI extends Component.withPins({
   "GPIO_7": "32",
   "1EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDD_1: "power_in", "SCB0_0/GPIO_8": "bidirectional", "SCB0_5/GPIO_9": "bidirectional", VSSD_4: "power_in", "SCB1_0/GPIO_10": "bidirectional", "SCB1_1/GPIO_11": "bidirectional", "SCB1_2/GPIO_12": "bidirectional", "SCB1_3/GPIO_13": "bidirectional", "SCB1_4/GPIO_14": "bidirectional", "SCB1_5/GPIO_15": "bidirectional", SUSPEND: "output", WAKEUP: "input", GPIO_16: "tri_state", USBDP: "bidirectional", USBDM: "bidirectional", VCCD: "power_in", VSSD_17: "power_in", "~{XRES}": "input", VBUS: "power_out", VSSD_20: "power_in", GPIO_17: "tri_state", GPIO_18: "tri_state", VDDD_23: "power_in", VSSA: "power_in", GPIO_0: "bidirectional", GPIO_1: "bidirectional", "SCB0_1/GPIO_2": "bidirectional", "SCB0_2/GPIO_3": "bidirectional", "SCB0_3/GPIO_4": "bidirectional", "SCB0_4/GPIO_5": "bidirectional", GPIO_6: "bidirectional", GPIO_7: "bidirectional", "1EP": "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CY7C65215A-32LTXI";
@@ -1756,7 +1798,8 @@ export class CYPD3171_24LQXQ extends Component.withPins({
   "VCCD": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.0": "bidirectional", "P1.1": "bidirectional", VBUS_P_CTRL: "output", VBUS_C_CTRL: "output", "DP1/P1.2": "bidirectional", "DM1/P1.3": "bidirectional", "P0.0/SWD_DAT_0": "bidirectional", "P0.1/SWD_CLK_0": "bidirectional", "P2.0/AXRES": "bidirectional", "P2.1": "bidirectional", VBUS_C_MON_DIS: "input", "P2.2": "bidirectional", "P2.3": "bidirectional", CC2: "bidirectional", CC1: "bidirectional", "DM0/P3.1": "bidirectional", "DP0/P3.0": "bidirectional", VBUS_IN_DIS: "input", CSP: "input", FB: "output", COMP: "input", GND_22: "power_in", VDDD: "power_in", VCCD: "power_out", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CYPD3171-24LQXQ";
@@ -1790,7 +1833,8 @@ export class CYPD3174_16SXQ extends Component.withPins({
   "GND": "15",
   "CSP": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FB: "output", COMP: "input", VDDD: "power_in", VCCD: "power_out", VBUS_P_CTRL: "output", "P0.0/SWD_DAT_0": "bidirectional", "P0.1/SWD_CLK_0": "bidirectional", "P2.0/AXRES": "bidirectional", VBUS_C_MON_DIS: "input", CC2: "bidirectional", CC1: "bidirectional", "DM0/P3.1": "bidirectional", "DP0/P3.0": "bidirectional", VBUS_IN_DIS: "input", GND: "power_in", CSP: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CYPD3174-16SXQ";
@@ -1833,7 +1877,8 @@ export class CYPD3174_24LQXQ extends Component.withPins({
   "VCCD": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.0": "bidirectional", "P1.1": "bidirectional", VBUS_P_CTRL: "output", VBUS_C_CTRL: "output", "DP1/P1.2": "bidirectional", "DM1/P1.3": "bidirectional", "P0.0/SWD_DAT_0": "bidirectional", "P0.1/SWD_CLK_0": "bidirectional", "P2.0/AXRES": "bidirectional", "P2.1": "bidirectional", VBUS_C_MON_DIS: "input", "P2.2": "bidirectional", "P2.3": "bidirectional", CC2: "bidirectional", CC1: "bidirectional", "DM0/P3.1": "bidirectional", "DP0/P3.0": "bidirectional", VBUS_IN_DIS: "input", CSP: "input", FB: "output", COMP: "input", GND_22: "power_in", VDDD: "power_in", VCCD: "power_out", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CYPD3174-24LQXQ";
@@ -1876,7 +1921,8 @@ export class CYPD3175_24LQXQ extends Component.withPins({
   "VCCD": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "P1.0": "bidirectional", "P1.1": "bidirectional", VBUS_P_CTRL: "output", VBUS_C_CTRL: "output", "DP1/P1.2": "bidirectional", "DM1/P1.3": "bidirectional", "P0.0/SWD_DAT_0": "bidirectional", "P0.1/SWD_CLK_0": "bidirectional", "P2.0/AXRES": "bidirectional", "P2.1": "bidirectional", VBUS_C_MON_DIS: "input", "P2.2": "bidirectional", "P2.3": "bidirectional", CC2: "bidirectional", CC1: "bidirectional", "DM0/P3.1": "bidirectional", "DP0/P3.0": "bidirectional", VBUS_IN_DIS: "input", CSP: "input", FB: "output", COMP: "input", GND_22: "power_in", VDDD: "power_in", VCCD: "power_out", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CYPD3175-24LQXQ";
@@ -1919,7 +1965,8 @@ export class CYPD3177_24LQ extends Component.withPins({
   "VCCD": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBUS_MIN: "input", VBUS_MAX: "input", VBUS_FET_EN: "output", SAFE_PWR_EN: "output", ISNK_COARSE: "input", ISNK_FINE: "input", "~{HPI_INT}": "input", GPIO_1: "bidirectional", FAULT: "output", FLIP: "output", VDC_OUT: "output", HPI_SDA: "bidirectional", HPI_SCL: "bidirectional", CC2: "bidirectional", CC1: "bidirectional", NC_16: "no_connect", NC_17: "no_connect", VBUS_IN: "power_in", GND_19: "power_in", NC_20: "no_connect", NC_21: "no_connect", GND_22: "passive", VDDD: "power_out", VCCD: "power_out", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:CYPD3177-24LQ";
@@ -1965,7 +2012,8 @@ export class FE1_1s extends Component.withPins({
   "TESTJ/EESDA": "27",
   "VD18": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XOUT: "output", XIN: "input", DM4: "bidirectional", DP4: "bidirectional", DM3: "bidirectional", DP3: "bidirectional", DM2: "bidirectional", DP2: "bidirectional", DM1: "bidirectional", DP1: "bidirectional", VD18_O: "power_out", VD33: "power_in", REXT: "passive", DMU: "bidirectional", DPU: "bidirectional", "~{XRSTJ}": "input", VBUSM: "input", BUSJ: "input", VDD5: "power_in", VD33_O: "power_out", DRV: "bidirectional", "LED1/EESCL": "bidirectional", LED2: "bidirectional", PWRJ: "output", OVCJ: "input", "TESTJ/EESDA": "bidirectional", VD18: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FE1.1s";
@@ -1993,7 +2041,8 @@ export class FSUSB30MUX extends Component.withPins({
   "~{OE}": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S: "input", "HSD1+": "bidirectional", "HSD2+": "bidirectional", "D+": "bidirectional", GND: "power_in", "D-": "bidirectional", "HSD2-": "bidirectional", "HSD1-": "bidirectional", "~{OE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FSUSB30MUX";
@@ -2021,7 +2070,8 @@ export class FSUSB42MUX extends Component.withPins({
   "HSD2+": "9",
   "~{OE}": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", SEL: "input", "D+": "bidirectional", "D-": "bidirectional", GND: "power_in", "HSD1-": "bidirectional", "HSD1+": "bidirectional", "HSD2-": "bidirectional", "HSD2+": "bidirectional", "~{OE}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FSUSB42MUX";
@@ -2050,7 +2100,8 @@ export class FT200XD extends Component.withPins({
   "USBDP": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { USBDM: "input", "~{RESET}": "input", "3V3OUT": "power_out", VCC: "power_in", CBUS0: "bidirectional", SCL: "input", VCCIO: "power_in", SDA: "bidirectional", GND_9: "power_in", USBDP: "input", GND_11: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT200XD";
@@ -2085,7 +2136,8 @@ export class FT201XQ extends Component.withPins({
   "SCL": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCIO: "power_in", SDA: "bidirectional", GND_3: "power_in", CBUS4: "bidirectional", CBUS2: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", CBUS1: "bidirectional", CBUS0: "bidirectional", GND_13: "power_in", CBUS3: "bidirectional", CBUS5: "bidirectional", SCL: "input", GND_17: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT201XQ";
@@ -2119,7 +2171,8 @@ export class FT201XS extends Component.withPins({
   "CBUS0": "15",
   "CBUS3": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CBUS5: "bidirectional", SCL: "input", VCCIO: "power_out", SDA: "bidirectional", GND_5: "power_in", CBUS4: "bidirectional", CBUS2: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_13: "power_in", CBUS1: "bidirectional", CBUS0: "bidirectional", CBUS3: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT201XS";
@@ -2154,7 +2207,8 @@ export class FT220XQ extends Component.withPins({
   "MIOSI2": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCIO: "power_in", MIOSI1: "input", GND_3: "power_in", MIOSI3: "input", MISO: "input", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", "~{CS}": "input", CLK: "input", GND_13: "power_in", CBUS3: "bidirectional", MIOSI0: "input", MIOSI2: "input", GND_17: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT220XQ";
@@ -2188,7 +2242,8 @@ export class FT220XS extends Component.withPins({
   "CLK": "15",
   "CBUS3": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MIOSI0: "input", MIOSI2: "input", VCCIO: "power_in", MIOSI1: "input", GND_5: "power_in", MIOSI3: "input", MISO: "input", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_13: "power_in", "~{CS}": "input", CLK: "input", CBUS3: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT220XS";
@@ -2227,7 +2282,8 @@ export class FT221XQ extends Component.withPins({
   "VCCIO": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MIOSI1: "input", MIOSI7: "input", GND_3: "power_in", MIOSI5: "input", MIOSI6: "input", MIOSI3: "input", MISO: "input", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_13: "power_in", "~{CS}": "input", CLK: "input", CBUS3: "bidirectional", MIOSI0: "input", MIOSI4: "input", MIOSI2: "input", VCCIO: "power_in", GND_21: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT221XQ";
@@ -2265,7 +2321,8 @@ export class FT221XS extends Component.withPins({
   "CBUS3": "19",
   "MIOSI0": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { MIOSI4: "input", MIOSI2: "input", VCCIO: "power_in", MIOSI1: "input", MIOSI7: "input", GND_6: "power_in", MIOSI5: "input", MIOSI6: "input", MIOSI3: "input", MISO: "input", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_16: "power_in", "~{CS}": "input", CLK: "input", CBUS3: "bidirectional", MIOSI0: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT221XS";
@@ -2331,7 +2388,8 @@ export class FT2232D extends Component.withPins({
   "TEST": "47",
   "EECS": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EECLK: "output", EEDATA: "bidirectional", VCC_3: "power_in", "~{RESET}": "input", "~{RSTOUT}": "output", "3V3OUT": "power_out", USBDP: "bidirectional", USBDM: "bidirectional", GND_9: "power_in", "SI/WUA": "bidirectional", ACBUS3: "bidirectional", ACBUS2: "bidirectional", ACBUS1: "bidirectional", VCCIOA: "power_in", ACBUS0: "bidirectional", ADBUS7: "bidirectional", ADBUS6: "bidirectional", GND_18: "power_in", ADBUS5: "bidirectional", ADBUS4: "bidirectional", ADBUS3: "bidirectional", ADBUS2: "bidirectional", ADBUS1: "bidirectional", ADBUS0: "bidirectional", GND_25: "power_in", "SI/WUB": "output", BCBUS3: "output", BCBUS2: "output", BCBUS1: "output", BCBUS0: "output", VCCIOB: "power_in", BDBUS7: "output", BDBUS6: "output", GND_34: "power_in", BDBUS5: "output", BDBUS4: "output", BDBUS3: "output", BDBUS2: "output", BDBUS1: "output", BDBUS0: "output", "~{PWREN}": "output", VCC_42: "power_in", XTIN: "input", XTOUT: "output", AGND: "power_in", AVCC: "power_in", TEST: "input", EECS: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT2232D";
@@ -2413,7 +2471,8 @@ export class FT2232HL extends Component.withPins({
   "EECS": "63",
   "VCORE_64": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", OSCI: "input", OSCO: "output", VPHY: "power_in", GND_5: "power_in", REF: "output", DM: "bidirectional", DP: "bidirectional", VPLL: "input", AGND: "power_in", GND_11: "power_in", VCORE_12: "power_in", TEST: "input", "~{RESET}": "input", GND_15: "power_in", ADBUS0: "bidirectional", ADBUS1: "bidirectional", ADBUS2: "bidirectional", ADBUS3: "bidirectional", VCCIO_20: "power_in", ADBUS4: "bidirectional", ADBUS5: "bidirectional", ADBUS6: "bidirectional", ADBUS7: "bidirectional", GND_25: "power_in", ACBUS0: "bidirectional", ACBUS1: "bidirectional", ACBUS2: "bidirectional", ACBUS3: "bidirectional", ACBUS4: "bidirectional", VCCIO_31: "power_in", ACBUS5: "bidirectional", ACBUS6: "bidirectional", ACBUS7: "bidirectional", GND_35: "power_in", "~{SUSPEND}": "output", VCORE_37: "power_in", BDBUS0: "bidirectional", BDBUS1: "bidirectional", BDBUS2: "bidirectional", BDBUS3: "bidirectional", VCCIO_42: "power_in", BDBUS4: "bidirectional", BDBUS5: "bidirectional", BDBUS6: "bidirectional", BDBUS7: "bidirectional", GND_47: "power_in", BCBUS0: "bidirectional", VREGOUT: "power_out", VREGIN: "power_in", GND_51: "power_in", BCBUS1: "bidirectional", BCBUS2: "bidirectional", BCBUS3: "bidirectional", BCBUS4: "bidirectional", VCCIO_56: "power_in", BCBUS5: "bidirectional", BCBUS6: "bidirectional", BCBUS7: "bidirectional", "~{PWREN}": "output", EEDATA: "bidirectional", EECLK: "output", EECS: "output", VCORE_64: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT2232HL";
@@ -2500,7 +2559,8 @@ export class FT2232HPQ extends Component.withPins({
   "EECS": "68",
   "GND_69": "69",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EECLK: "output", EEDATA: "bidirectional", TEST: "input", "~{RESET}": "input", GPIO3: "bidirectional", ADBUS0: "bidirectional", ADBUS1: "bidirectional", VCORE_8: "power_in", GND_9: "power_in", VCCIO_10: "power_in", ADBUS2: "bidirectional", ADBUS3: "bidirectional", ADBUS4: "bidirectional", ADBUS5: "bidirectional", ADBUS6: "bidirectional", ADBUS7: "bidirectional", ACBUS0: "bidirectional", ACBUS1: "bidirectional", ACBUS2: "bidirectional", ACBUS3: "bidirectional", ACBUS4: "bidirectional", ACBUS5: "bidirectional", ACBUS6: "bidirectional", ACBUS7: "bidirectional", VCORE_25: "passive", VCCIO_26: "passive", OSCI: "input", OSCO: "output", GND_29: "passive", VREGIN: "power_in", VREGOUT: "power_out", FSOURCE: "power_in", VPP: "input", BDBUS0: "bidirectional", BDBUS1: "bidirectional", BDBUS2: "bidirectional", BDBUS3: "bidirectional", BDBUS4: "bidirectional", VCCIO_39: "passive", BDBUS5: "bidirectional", BDBUS6: "bidirectional", BDBUS7: "bidirectional", "~{SUSPEND}": "output", VCORE_44: "passive", BCBUS0: "bidirectional", BCBUS1: "bidirectional", BCBUS2: "bidirectional", BCBUS3: "bidirectional", BCBUS4: "bidirectional", BCBUS5: "bidirectional", VCCIO_51: "passive", BCBUS6: "bidirectional", BCBUS7: "bidirectional", GPIO2: "bidirectional", GPIO1: "bidirectional", GPIO0: "bidirectional", VCC_USB: "power_in", DM: "bidirectional", DP: "bidirectional", REF: "output", VCC_PD: "power_in", PD1_CC2: "bidirectional", PD1_SVBUS: "input", PD1_VCONN: "power_in", PD1_CC1: "bidirectional", VCORE_66: "passive", "~{PWREN}": "output", EECS: "bidirectional", GND_69: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT2232HPQ";
@@ -2583,7 +2643,8 @@ export class FT2232HQ extends Component.withPins({
   "VCORE_64": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", OSCI: "input", OSCO: "output", VPHY: "power_in", GND_5: "power_in", REF: "output", DM: "bidirectional", DP: "bidirectional", VPLL: "input", AGND: "power_in", GND_11: "power_in", VCORE_12: "power_in", TEST: "input", "~{RESET}": "input", GND_15: "power_in", ADBUS0: "bidirectional", ADBUS1: "bidirectional", ADBUS2: "bidirectional", ADBUS3: "bidirectional", VCCIO_20: "power_in", ADBUS4: "bidirectional", ADBUS5: "bidirectional", ADBUS6: "bidirectional", ADBUS7: "bidirectional", GND_25: "power_in", ACBUS0: "bidirectional", ACBUS1: "bidirectional", ACBUS2: "bidirectional", ACBUS3: "bidirectional", ACBUS4: "bidirectional", VCCIO_31: "power_in", ACBUS5: "bidirectional", ACBUS6: "bidirectional", ACBUS7: "bidirectional", GND_35: "power_in", "~{SUSPEND}": "output", VCORE_37: "power_in", BDBUS0: "bidirectional", BDBUS1: "bidirectional", BDBUS2: "bidirectional", BDBUS3: "bidirectional", VCCIO_42: "power_in", BDBUS4: "bidirectional", BDBUS5: "bidirectional", BDBUS6: "bidirectional", BDBUS7: "bidirectional", GND_47: "power_in", BCBUS0: "bidirectional", VREGOUT: "power_out", VREGIN: "power_in", GND_51: "power_in", BCBUS1: "bidirectional", BCBUS2: "bidirectional", BCBUS3: "bidirectional", BCBUS4: "bidirectional", VCCIO_56: "power_in", BCBUS5: "bidirectional", BCBUS6: "bidirectional", BCBUS7: "bidirectional", "~{PWREN}": "output", EEDATA: "bidirectional", EECLK: "output", EECS: "output", VCORE_64: "power_in", GND_65: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT2232HQ";
@@ -2618,7 +2679,8 @@ export class FT230XQ extends Component.withPins({
   "~{RTS}": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCIO: "power_in", RXD: "input", GND_3: "power_in", "~{CTS}": "input", CBUS2: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", CBUS1: "bidirectional", CBUS0: "bidirectional", GND_13: "passive", CBUS3: "bidirectional", TXD: "output", "~{RTS}": "output", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT230XQ";
@@ -2652,7 +2714,8 @@ export class FT230XS extends Component.withPins({
   "CBUS0": "15",
   "CBUS3": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXD: "output", "~{RTS}": "output", VCCIO: "power_in", RXD: "input", GND_5: "power_in", "~{CTS}": "input", CBUS2: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_13: "passive", CBUS1: "bidirectional", CBUS0: "bidirectional", CBUS3: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT230XS";
@@ -2691,7 +2754,8 @@ export class FT231XQ extends Component.withPins({
   "VCCIO": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RXD: "input", "~{RI}": "input", GND_3: "power_in", "~{DSR}": "input", "~{DCD}": "input", "~{CTS}": "input", CBUS2: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_13: "power_in", CBUS1: "bidirectional", CBUS0: "bidirectional", CBUS3: "bidirectional", TXD: "output", "~{DTR}": "output", "~{RTS}": "output", VCCIO: "power_in", GND_21: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT231XQ";
@@ -2729,7 +2793,8 @@ export class FT231XS extends Component.withPins({
   "CBUS3": "19",
   "TXD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{DTR}": "output", "~{RTS}": "output", VCCIO: "power_in", RXD: "input", "~{RI}": "input", GND_6: "power_in", "~{DSR}": "input", "~{DCD}": "input", "~{CTS}": "input", CBUS2: "bidirectional", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCC: "power_in", GND_16: "power_in", CBUS1: "bidirectional", CBUS0: "bidirectional", CBUS3: "bidirectional", TXD: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT231XS";
@@ -2779,7 +2844,8 @@ export class FT232BM extends Component.withPins({
   "TEST": "31",
   "EECS": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EESK: "output", EEDATA: "bidirectional", VCC_3: "power_in", "~{RESET}": "input", "~{RSTOUT}": "output", "3V3OUT": "power_out", USBDP: "bidirectional", USBDM: "bidirectional", GND_9: "power_in", "~{SLEEP}": "output", "~{RXLED}": "open_collector", "~{TXLED}": "open_collector", VCCIO: "power_in", PWRCTL: "input", "~{PWREN}": "output", TXDEN: "output", GND_17: "power_in", "D7/~{RI}": "bidirectional", "D6/~{DCD}": "bidirectional", "D5/~{DSR}": "bidirectional", "D4/~{DTR}": "bidirectional", "D3/~{CTS}": "bidirectional", "D2/~{RST}": "bidirectional", "D1/RXD": "bidirectional", "D0/TXD": "bidirectional", VCC_26: "power_in", XTIN: "input", XTOUT: "output", AGND: "power_in", AVCC: "power_in", TEST: "input", EECS: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT232BM";
@@ -2844,7 +2910,8 @@ export class FT232H extends Component.withPins({
   "GND_47": "47",
   "GND_48": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { XCSI: "input", XCSO: "output", VPHY: "power_in", AGND_4: "power_in", REF: "input", DM: "bidirectional", DP: "bidirectional", VPLL: "power_in", AGND_9: "power_in", GND_10: "power_in", GND_11: "power_in", VCCIO_12: "power_in", ADBUS0: "bidirectional", ADBUS1: "bidirectional", ADBUS2: "bidirectional", ADBUS3: "bidirectional", ADBUS4: "bidirectional", ADBUS5: "bidirectional", ADBUS6: "bidirectional", ADBUS7: "bidirectional", ACBUS0: "bidirectional", GND_22: "power_in", GND_23: "power_in", VCCIO_24: "power_in", ACBUS1: "bidirectional", ACBUS2: "bidirectional", ACBUS3: "bidirectional", ACBUS4: "bidirectional", ACBUS5: "bidirectional", ACBUS6: "bidirectional", ACBUS7: "bidirectional", ACBUS8: "bidirectional", ACBUS9: "bidirectional", "~{RESET}": "input", GND_35: "power_in", GND_36: "power_in", VCCA: "power_out", VCCCORE: "power_out", VCCD: "power_in", VREGIN: "power_in", AGND_41: "power_in", TEST: "input", EEDATA: "bidirectional", EECLK: "input", EECS: "input", VCCIO_46: "power_in", GND_47: "power_in", GND_48: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT232H";
@@ -2888,7 +2955,8 @@ export class FT232RL extends Component.withPins({
   "OSCI": "27",
   "OSCO": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXD: "output", DTR: "output", RTS: "output", VCCIO: "power_in", RXD: "input", RI: "input", GND_7: "power_in", DCR: "input", DCD: "input", CTS: "input", CBUS4: "bidirectional", CBUS2: "bidirectional", CBUS3: "bidirectional", "USBD+": "bidirectional", "USBD-": "bidirectional", "3V3OUT": "power_out", GND_18: "power_in", "~{RESET}": "input", VCC: "power_in", GND_21: "power_in", CBUS1: "bidirectional", CBUS0: "bidirectional", AGND: "power_in", TEST: "input", OSCI: "input", OSCO: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT232RL";
@@ -2919,7 +2987,8 @@ export class FT234XD extends Component.withPins({
   "USBDP": "12",
   "GND_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { USBDM: "bidirectional", "~{RESET}": "input", "3V3OUT": "power_out", VCC: "power_in", GND_5: "power_in", CBUS0: "bidirectional", "TXD/D0": "bidirectional", "~{RTS}/D2": "bidirectional", VCCIO: "power_in", "RXD/D1": "bidirectional", "~{CTS}/D3": "bidirectional", USBDP: "bidirectional", GND_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT234XD";
@@ -2962,7 +3031,8 @@ export class FT240XQ extends Component.withPins({
   "VCCIO": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA1: "bidirectional", DATA7: "bidirectional", GND_3: "power_in", DATA5: "bidirectional", DATA6: "bidirectional", DATA3: "bidirectional", "~{SI/WU}": "input", "~{RD}": "input", "~{WR}": "input", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCORE: "power_out", VCC: "power_in", GND_16: "passive", "~{TXE}": "output", "~{RXF}": "output", CBUS6: "bidirectional", CBUS5: "bidirectional", DATA0: "bidirectional", DATA4: "bidirectional", DATA2: "bidirectional", VCCIO: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT240XQ";
@@ -3004,7 +3074,8 @@ export class FT240XS extends Component.withPins({
   "CBUS5": "23",
   "DATA0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DATA4: "bidirectional", DATA2: "bidirectional", VCCIO: "power_in", DATA1: "bidirectional", DATA7: "bidirectional", GND_6: "power_in", DATA5: "bidirectional", DATA6: "bidirectional", DATA3: "bidirectional", "~{SI/WU}": "input", "~{RD}": "input", "~{WR}": "input", USBDP: "bidirectional", USBDM: "bidirectional", "3V3OUT": "power_out", "~{RESET}": "input", VCORE: "power_out", VCC: "power_in", GND_19: "passive", "~{TXE}": "output", "~{RXF}": "output", CBUS6: "bidirectional", CBUS5: "bidirectional", DATA0: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT240XS";
@@ -3054,7 +3125,8 @@ export class FT245BM extends Component.withPins({
   "TEST": "31",
   "EECS": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EESK: "output", EEDATA: "bidirectional", VCC_3: "power_in", "~{RESET}": "input", "~{RSTOUT}": "output", "3V3OUT": "power_out", USBDP: "bidirectional", USBDM: "bidirectional", GND_9: "power_in", "~{PWREN}": "output", "SI/WU": "input", "~{RXF}": "output", VCCIO: "power_in", "~{TXE}": "output", WR: "input", "~{RD}": "input", GND_17: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", VCC_26: "power_in", XTIN: "input", XTOUT: "output", GND_29: "power_in", AVCC: "power_in", TEST: "input", EECS: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT245BM";
@@ -3105,7 +3177,8 @@ export class FT4222HQ extends Component.withPins({
   "~{SS}": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DEBUGGER: "bidirectional", "~{STEST_RST}": "input", "~{RESET}": "input", DCNF0: "input", DCNF1: "input", DGND_6: "power_in", VCCIO: "power_in", SCK: "bidirectional", MISO: "bidirectional", MOSI: "bidirectional", IO2: "bidirectional", IO3: "bidirectional", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", "~{SS0O}": "output", XSCI: "input", XSCO: "output", UGND_20: "power_in", RREF: "input", DM: "bidirectional", DP: "bidirectional", UGND_24: "passive", VOUT3V3: "unspecified", VCCIN: "power_in", AGND: "power_in", DGND_28: "passive", VPP: "power_in", VBUS_DET: "input", BCD_DET: "output", "~{SS}": "input", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT4222HQ";
@@ -3186,7 +3259,8 @@ export class FT4232H extends Component.withPins({
   "EECS": "63",
   "VCORE_64": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", OSCI: "input", OSCO: "output", VPHY: "power_in", GND_5: "power_in", REF: "input", DM: "bidirectional", DP: "bidirectional", VPLL: "power_in", AGND: "power_in", GND_11: "power_in", VCORE_12: "power_in", TEST: "input", "~{RESET}": "input", GND_15: "power_in", ADBUS0: "bidirectional", ADBUS1: "bidirectional", ADBUS2: "bidirectional", ADBUS3: "bidirectional", VCCIO_20: "power_in", ADBUS4: "bidirectional", ADBUS5: "bidirectional", ADBUS6: "bidirectional", ADBUS7: "bidirectional", GND_25: "power_in", BDBUS0: "bidirectional", BDBUS1: "bidirectional", BDBUS2: "bidirectional", BDBUS3: "bidirectional", BDBUS4: "bidirectional", VCCIO_31: "power_in", BDBUS5: "bidirectional", BDBUS6: "bidirectional", BDBUS7: "bidirectional", GND_35: "power_in", "~{SUSPEND}": "output", VCORE_37: "power_in", CDBUS0: "bidirectional", CDBUS1: "bidirectional", CDBUS2: "bidirectional", CDBUS3: "bidirectional", VCCIO_42: "power_in", CDBUS4: "bidirectional", CDBUS5: "bidirectional", CDBUS6: "bidirectional", CDBUS7: "bidirectional", GND_47: "power_in", DDBUS0: "bidirectional", VREGOUT: "power_out", VREGIN: "power_in", GND_51: "power_in", DDBUS1: "bidirectional", DDBUS2: "bidirectional", DDBUS3: "bidirectional", DDBUS4: "bidirectional", VCCIO_56: "power_in", DDBUS5: "bidirectional", DDBUS6: "bidirectional", DDBUS7: "bidirectional", "~{PWREN}": "output", EEDATA: "bidirectional", EECLK: "output", EECS: "output", VCORE_64: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT4232H";
@@ -3281,7 +3355,8 @@ export class FT601Q extends Component.withPins({
   "DATA_31": "76",
   "GND_77": "77",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", AVDD: "power_in", VD10_3: "power_in", BE_0: "bidirectional", BE_1: "bidirectional", BE_2: "bidirectional", BE_3: "bidirectional", "~{TXE}": "output", "~{RXF}": "output", "~{SIWU}": "input", "~{WR}": "input", "~{RD}": "input", "~{OE}": "input", VCCIO_14: "power_in", "~{RESET}": "input", "~{WAKEUP}": "bidirectional", GPIO0: "bidirectional", GPIO1: "bidirectional", Reserved: "no_connect", VCC33_20: "power_in", XI: "input", XO: "output", DP: "bidirectional", VCC33_24: "passive", DM: "bidirectional", GND_26: "passive", RREF: "input", VDDA: "power_in", GND_29: "passive", VD10_30: "passive", TODN: "output", TODP: "output", VD10_33: "passive", RIDN: "input", RIDP: "input", GND_36: "passive", VBUS: "power_in", VCC33_38: "passive", DV10: "power_out", DATA_0: "bidirectional", DATA_1: "bidirectional", DATA_2: "bidirectional", DATA_3: "bidirectional", DATA_4: "bidirectional", DATA_5: "bidirectional", DATA_6: "bidirectional", DATA_7: "bidirectional", VD10_48: "passive", VCCIO_49: "passive", DATA_8: "bidirectional", DATA_9: "bidirectional", DATA_10: "bidirectional", DATA_11: "bidirectional", DATA_12: "bidirectional", DATA_13: "bidirectional", DATA_14: "bidirectional", DATA_15: "bidirectional", CLK: "output", VCCIO_59: "passive", DATA_16: "bidirectional", DATA_17: "bidirectional", DATA_18: "bidirectional", DATA_19: "bidirectional", DATA_20: "bidirectional", DATA_21: "bidirectional", DATA_22: "bidirectional", DATA_23: "bidirectional", VCCIO_68: "passive", DATA_24: "bidirectional", DATA_25: "bidirectional", DATA_26: "bidirectional", DATA_27: "bidirectional", DATA_28: "bidirectional", DATA_29: "bidirectional", DATA_30: "bidirectional", DATA_31: "bidirectional", GND_77: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FT601Q";
@@ -3314,7 +3389,8 @@ export class FUSB302BMPX extends Component.withPins({
   "CC2_14": "14",
   "GND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC2_1: "bidirectional", VBUS: "input", VDD_3: "power_in", VDD_4: "passive", INT_N: "open_collector", SCL: "input", SDA: "bidirectional", GND_8: "power_in", GND_9: "passive", CC1_10: "bidirectional", CC1_11: "bidirectional", VCONN_12: "power_in", VCONN_13: "power_in", CC2_14: "bidirectional", GND_15: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FUSB302BMPX";
@@ -3347,7 +3423,8 @@ export class FUSB302B01MPX extends Component.withPins({
   "CC2_14": "14",
   "GND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC2_1: "bidirectional", VBUS: "input", VDD_3: "power_in", VDD_4: "passive", INT_N: "open_collector", SCL: "input", SDA: "bidirectional", GND_8: "power_in", GND_9: "passive", CC1_10: "bidirectional", CC1_11: "bidirectional", VCONN_12: "power_in", VCONN_13: "power_in", CC2_14: "bidirectional", GND_15: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FUSB302B01MPX";
@@ -3380,7 +3457,8 @@ export class FUSB302B10MPX extends Component.withPins({
   "CC2_14": "14",
   "GND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC2_1: "bidirectional", VBUS: "input", VDD_3: "power_in", VDD_4: "passive", INT_N: "open_collector", SCL: "input", SDA: "bidirectional", GND_8: "power_in", GND_9: "passive", CC1_10: "bidirectional", CC1_11: "bidirectional", VCONN_12: "power_in", VCONN_13: "power_in", CC2_14: "bidirectional", GND_15: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FUSB302B10MPX";
@@ -3413,7 +3491,8 @@ export class FUSB302B11MPX extends Component.withPins({
   "CC2_14": "14",
   "GND_15": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC2_1: "bidirectional", VBUS: "input", VDD_3: "power_in", VDD_4: "passive", INT_N: "open_collector", SCL: "input", SDA: "bidirectional", GND_8: "power_in", GND_9: "passive", CC1_10: "bidirectional", CC1_11: "bidirectional", VCONN_12: "power_in", VCONN_13: "power_in", CC2_14: "bidirectional", GND_15: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FUSB302B11MPX";
@@ -3443,7 +3522,8 @@ export class FUSB303BTMX extends Component.withPins({
   "~{EN}": "11",
   "VDD": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", CC2: "bidirectional", "PORT/~{DEBUG}": "bidirectional", VBUS_DET: "input", "ADDR/ORIENT": "bidirectional", "INT_N/OUT3": "open_collector", "SDA/OUT1": "bidirectional", "SCL/OUT2": "bidirectional", ID: "open_collector", GND: "power_in", "~{EN}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FUSB303BTMX";
@@ -3478,7 +3558,8 @@ export class FUSB307BMPX extends Component.withPins({
   "GPIO1": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", VCONN: "power_in", CC2: "bidirectional", "ORIENT/I2C_ADDR": "tri_state", LDO: "power_out", VBUS: "power_in", VDD: "power_in", DBG_N: "open_collector", GPIO2: "bidirectional", INT_N: "open_collector", "SCL1/SDA2": "bidirectional", "SDA1/SCL2": "bidirectional", SRC: "output", SNK: "output", GND_15: "power_in", GPIO1: "bidirectional", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:FUSB307BMPX";
@@ -3545,7 +3626,8 @@ export class GL3224_ONY extends Component.withPins({
   "S1D4_M1D7": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SD1_CDZ: "input", "MS1_INS/SD1_WP": "input", GND_3: "power_in", DM: "bidirectional", DP: "bidirectional", AVDD33_6: "power_in", TXN: "output", TXP: "output", AVDD12: "power_in", RXN: "input", RXP: "input", GND_12: "passive", X1: "input", X2: "output", AVDD33_15: "passive", RTERM: "passive", SPI_MISO: "input", SPI_MOSI: "output", SPI_CK: "output", SPI_CS: "output", LED: "output", VBUS: "power_in", S1M1_VCC: "power_out", S2M2_VCC: "power_out", DVDD33_25: "passive", DVDD12: "passive", S2D1_M2BS: "bidirectional", S2D0_M2D1: "bidirectional", S2CK_M2D0: "bidirectional", S2CM_M2D2: "bidirectional", S2D3_M2D3: "bidirectional", S2D2_M2CK: "bidirectional", VUHS_2: "power_out", DVDD33_34: "passive", "MS2_INS/SD2_WP": "input", SD2_CDZ: "input", S1D1_M1BS: "bidirectional", S1D0_M1D1: "bidirectional", S1CK_M1D0: "bidirectional", S1CM_M1D2: "bidirectional", S1D3_M1D3: "bidirectional", S1D2_M1CK: "bidirectional", VUHS_1: "power_out", DVDD33_44: "passive", S1D7_M1D4: "bidirectional", S1D6_M1D5: "bidirectional", S1D5_M1D6: "bidirectional", S1D4_M1D7: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:GL3224-ONY";
@@ -3606,7 +3688,8 @@ export class HD3SS6126 extends Component.withPins({
   "NC_42": "42",
   "EPAD": "43",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", NC_4: "no_connect", NC_5: "no_connect", "HS_~{OE}": "input", "HSA(n)": "passive", "HSA(p)": "passive", SEL: "input", GND_10: "power_in", "SSA0(p)": "passive", "SSA0(n)": "passive", VDD_13: "power_in", GND_14: "passive", "SSA1(p)": "passive", "SSA1(n)": "passive", GND_17: "passive", NC_18: "no_connect", GND_19: "passive", VDD_20: "passive", GND_21: "passive", "SSC1(n)": "passive", "SSC1(p)": "passive", "SSC0(n)": "passive", "SSC0(p)": "passive", "SSB1(n)": "passive", "SSB1(p)": "passive", "SSB0(n)": "passive", "SSB0(p)": "passive", VDD_30: "passive", "HSB(p)": "passive", "HSB(n)": "passive", "HSC(p)": "passive", "HSC(n)": "passive", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", NC_38: "no_connect", NC_39: "no_connect", NC_40: "no_connect", NC_41: "no_connect", NC_42: "no_connect", EPAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:HD3SS6126";
@@ -3641,7 +3724,8 @@ export class HUSB238A_xxxxx_QN16R extends Component.withPins({
   "VBUS": "16",
   "GND": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "D+": "bidirectional", "D-": "bidirectional", CC1: "bidirectional", CC2: "bidirectional", VDD: "power_in", "~{DEBUG}": "output", "EN_HVDCP/OUT1": "bidirectional", "ADDR/ORIENT": "bidirectional", "SDA/SNK_VSET": "bidirectional", "SCL/SNK_ISET": "input", "~{INT}": "open_collector", "~{EN}": "input", "FAULT/OUT2": "output", FLGIN: "input", GATE: "open_collector", VBUS: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:HUSB238A-xxxxx-QN16R";
@@ -3670,7 +3754,8 @@ export class HUSB238_xxxDD extends Component.withPins({
   "GATE": "10",
   "GND": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VIN: "power_in", "D+": "bidirectional", "D-": "bidirectional", CC1: "bidirectional", CC2: "bidirectional", SDA: "bidirectional", SCL: "input", VSET: "input", ISET: "input", GATE: "open_collector", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:HUSB238_xxxDD";
@@ -3704,7 +3789,8 @@ export class IP2721 extends Component.withPins({
   "NC_15": "15",
   "VBUS": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBUSG: "output", VIN: "power_in", NC_3: "no_connect", NC_4: "no_connect", GND: "power_in", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", NC_9: "no_connect", NC_10: "no_connect", SEL: "input", CC2: "bidirectional", CC1: "bidirectional", NC_14: "no_connect", NC_15: "no_connect", VBUS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:IP2721";
@@ -3750,7 +3836,8 @@ export class MA8601 extends Component.withPins({
   "TEST/EESDA": "27",
   "VDD12": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", XO: "output", XI: "input", DM4: "bidirectional", DP4: "bidirectional", DM3: "bidirectional", DP3: "bidirectional", DM2: "bidirectional", DP2: "bidirectional", DM1: "bidirectional", DP1: "bidirectional", VDDR12: "power_out", VDD33: "power_in", REXT: "passive", DMU: "bidirectional", DPU: "bidirectional", "~{SRST}": "input", VBUS_IN: "input", PSELF: "input", VDD5: "power_in", VDDR33: "power_out", DRV: "bidirectional", "LED1/EESCL": "bidirectional", "LED2/GLEDEN": "bidirectional", "~{PWRJ}": "output", OVCJ: "input", "TEST/EESDA": "bidirectional", VDD12: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MA8601";
@@ -3788,7 +3875,8 @@ export class MCP2200_I_SS extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200-I-SS";
@@ -3826,7 +3914,8 @@ export class MCP2200_E_SS extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200-E-SS";
@@ -3865,7 +3954,8 @@ export class MCP2200_I_MQ extends Component.withPins({
   "OSC2": "20",
   "EP": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", VDD: "power_in", OSC1: "input", OSC2: "output", EP: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200-I-MQ";
@@ -3903,7 +3993,8 @@ export class MCP2200_I_SO extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200-I-SO";
@@ -3941,7 +4032,8 @@ export class MCP2200T_E_SS extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200T-E-SS";
@@ -3980,7 +4072,8 @@ export class MCP2200T_I_MQ extends Component.withPins({
   "OSC2": "20",
   "EP": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", VDD: "power_in", OSC1: "input", OSC2: "output", EP: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200T-I-MQ";
@@ -4018,7 +4111,8 @@ export class MCP2200T_I_SO extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200T-I-SO";
@@ -4056,7 +4150,8 @@ export class MCP2200T_I_SS extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", RST: "input", "GP7/TxLED": "bidirectional", "GP6/RxLED": "bidirectional", GP5: "bidirectional", GP4: "bidirectional", GP3: "bidirectional", TX: "output", RTS: "output", RX: "input", CTS: "input", GP2: "bidirectional", "GP1/USB-CFG": "bidirectional", "GP0/SSPND": "bidirectional", V_USB: "power_in", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2200T-I-SS";
@@ -4095,7 +4190,8 @@ export class MCP2210x_MQ extends Component.withPins({
   "OSC2": "20",
   "EP": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", GP0: "bidirectional", GP1: "bidirectional", GP2: "bidirectional", GP3: "bidirectional", MOSI: "output", GP4: "bidirectional", SCK: "output", GP5: "bidirectional", MISO: "input", GP6: "bidirectional", GP7: "bidirectional", GP8: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", VDD: "power_in", OSC1: "input", OSC2: "output", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2210x-MQ";
@@ -4133,7 +4229,8 @@ export class MCP2210x_SO extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", "~{RST}": "input", GP0: "bidirectional", GP1: "bidirectional", GP2: "bidirectional", GP3: "bidirectional", MOSI: "output", GP4: "bidirectional", SCK: "output", GP5: "bidirectional", MISO: "input", GP6: "bidirectional", GP7: "bidirectional", GP8: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2210x-SO";
@@ -4171,7 +4268,8 @@ export class MCP2210x_SS extends Component.withPins({
   "D+": "19",
   "VSS": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OSC1: "input", OSC2: "output", "~{RST}": "input", GP0: "bidirectional", GP1: "bidirectional", GP2: "bidirectional", GP3: "bidirectional", MOSI: "output", GP4: "bidirectional", SCK: "output", GP5: "bidirectional", MISO: "input", GP6: "bidirectional", GP7: "bidirectional", GP8: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2210x-SS";
@@ -4206,7 +4304,8 @@ export class MCP2221AxML extends Component.withPins({
   "VDD": "16",
   "NC_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GP0: "bidirectional", GP1: "bidirectional", "~{RST}": "input", URx: "input", UTx: "output", GP2: "bidirectional", GP3: "bidirectional", SDA: "bidirectional", SCL: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", NC_14: "no_connect", NC_15: "no_connect", VDD: "power_in", NC_17: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2221AxML";
@@ -4238,7 +4337,8 @@ export class MCP2221AxP extends Component.withPins({
   "D+": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP0: "bidirectional", GP1: "bidirectional", "~{RST}": "input", URx: "input", UTx: "output", GP2: "bidirectional", GP3: "bidirectional", SDA: "bidirectional", SCL: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2221AxP";
@@ -4270,7 +4370,8 @@ export class MCP2221AxSL extends Component.withPins({
   "D+": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP0: "bidirectional", GP1: "bidirectional", "~{RST}": "input", URx: "input", UTx: "output", GP2: "bidirectional", GP3: "bidirectional", SDA: "bidirectional", SCL: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2221AxSL";
@@ -4302,7 +4403,8 @@ export class MCP2221AxST extends Component.withPins({
   "D+": "13",
   "VSS": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GP0: "bidirectional", GP1: "bidirectional", "~{RST}": "input", URx: "input", UTx: "output", GP2: "bidirectional", GP3: "bidirectional", SDA: "bidirectional", SCL: "bidirectional", VUSB: "passive", "D-": "bidirectional", "D+": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MCP2221AxST";
@@ -4328,7 +4430,8 @@ export class MP5034GJ extends Component.withPins({
   "DM": "7",
   "DP": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", IN_2: "power_in", IN_3: "passive", GND: "power_in", ADJ: "passive", NC: "no_connect", DM: "input", DP: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MP5034GJ";
@@ -4411,7 +4514,8 @@ export class MS2130 extends Component.withPins({
   "DVSS_64": "64",
   "AVSS_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DVDD33_1: "power_in", AVDD33_USB_2: "power_in", DM: "bidirectional", DP: "bidirectional", AVDD33_USB_5: "passive", AVDD11_USB_6: "power_in", USB_REXT: "output", AVDD33_USB_8: "passive", SSTXM: "output", AVDD11_USB_10: "passive", SSTXP: "output", AVDD11_USB_12: "passive", SSRXM: "input", SSRXP: "input", AVSS_15: "power_in", DVDD33_16: "passive", DVSS_17: "power_in", DVDD11_18: "power_in", AVSS_19: "passive", AVDD25_20: "power_in", XTIN: "input", XTOUT: "output", AVDD25_23: "passive", AVDD11_24: "power_in", AVSS_25: "passive", RXDDCSCL: "input", RXDDCSDA: "bidirectional", HDMIRXDET: "input", HDMIRXHPD: "output", DVSS_30: "passive", DVDD33_31: "passive", DVSS_32: "passive", DVDD33_33: "passive", DVSS_34: "passive", GPIO4: "bidirectional", GPIO3: "bidirectional", GPIO5: "bidirectional", GPIO2: "bidirectional", DVDD11_39: "passive", DVSS_40: "passive", DVDD33_41: "passive", GPIO0: "bidirectional", GPIO1: "bidirectional", MCU_SEL: "input", HDMIRX_REXT: "output", HDMIRXCN: "input", AVDD25_47: "passive", AVDD33_48: "power_in", HDMIRXCP: "input", AVSS_50: "passive", AVDD11_51: "passive", AVDD33_52: "passive", HDMIRX0N: "input", HDMIRX0P: "input", AVDD11_55: "passive", AVDD33_56: "passive", HDMIRX1N: "input", HDMIRX1P: "input", AVDD11_59: "passive", AVDD33_60: "passive", HDMIRX2N: "input", HDMIRX2P: "input", DVO_D7: "output", DVSS_64: "passive", AVSS_65: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:MS2130";
@@ -4465,7 +4569,8 @@ export class STULPI01A extends Component.withPins({
   "XI": "F5",
   "XO": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", CLK: "output", D4: "bidirectional", D5: "bidirectional", D0: "bidirectional", VDVIO_B2: "power_in", VDVIO_B3: "passive", GND_B4: "power_in", VDVIO_B5: "passive", D6: "bidirectional", DM: "bidirectional", RREF: "passive", "~{CS}/PWRDN": "input", "~{RESET}": "input", GND_C5: "passive", D7: "bidirectional", DP: "bidirectional", GND_D2: "passive", ID: "input", "~{PSW}": "output", NXT: "output", STP: "input", GND_E1: "passive", VB_REF_FAULT: "input", "3V3V": "passive", GND_E4: "passive", DIR: "output", "1V2V": "passive", NC_F1: "no_connect", NC_F2: "no_connect", VBAT: "power_in", VBUS: "bidirectional", XI: "input", XO: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:STULPI01A";
@@ -4519,7 +4624,8 @@ export class STULPI01B extends Component.withPins({
   "XI": "F5",
   "XO": "F6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", CLK: "output", D4: "bidirectional", D5: "bidirectional", D0: "bidirectional", VDVIO_B2: "power_in", VDVIO_B3: "passive", GND_B4: "power_in", VDVIO_B5: "passive", D6: "bidirectional", DM: "bidirectional", RREF: "passive", "~{CS}/PWRDN": "input", "~{RESET}": "input", GND_C5: "passive", D7: "bidirectional", DP: "bidirectional", GND_D2: "passive", ID: "input", "~{PSW}": "output", NXT: "output", STP: "input", GND_E1: "passive", VB_REF_FAULT: "input", "3V3V": "passive", GND_E4: "passive", DIR: "output", "1V2V": "passive", NC_F1: "no_connect", NC_F2: "no_connect", VBAT: "power_in", VBUS: "bidirectional", XI: "input", XO: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:STULPI01B";
@@ -4562,7 +4668,8 @@ export class STUSB4500QTR extends Component.withPins({
   "VDD": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1DB: "bidirectional", CC1: "bidirectional", NC: "no_connect", CC2: "bidirectional", CC2DB: "bidirectional", RESET: "input", SCL: "input", SDA: "bidirectional", DISCH: "bidirectional", GND_10: "power_in", ATTACH: "open_collector", ADDR0: "input", ADDR1: "input", POWER_OK3: "open_collector", GPIO: "open_collector", VBUS_EN_SNK: "open_collector", A_B_SIDE: "open_collector", VBUS_VS_DISCH: "input", ALERT: "open_collector", POWER_OK2: "open_collector", VREG_1V2: "power_out", VSYS: "power_in", VREG_2V7: "power_out", VDD: "power_in", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:STUSB4500QTR";
@@ -4601,7 +4708,8 @@ export class TCPP03_M20 extends Component.withPins({
   "EN": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", "VCC_{VCONN}": "power_in", CC2: "bidirectional", "I_{ANA}": "output", "GDP_{g}": "output", "GDP_{s}": "input", "GDC_{g}": "output", "GDC_{s}": "input", "VBUS_{c}": "input", "I_{sense}": "input", "V_{sense}": "input", GND_12: "power_in", "CC2_{c}": "bidirectional", "C_{BIAS}": "output", "CC1_{c}": "bidirectional", "I2C_{ADD}": "input", SDA: "bidirectional", SCL: "bidirectional", "~{FLG}": "open_collector", EN: "input", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TCPP03-M20";
@@ -4630,7 +4738,8 @@ export class TPS2500DRC extends Component.withPins({
   "AUX": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "power_in", GND_2: "passive", IN: "power_in", EN: "input", GND_5: "power_in", ILIM: "passive", ENUSB: "input", "~{FAULT}": "open_collector", USB: "power_out", AUX: "power_out", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2500DRC";
@@ -4659,7 +4768,8 @@ export class TPS2501DRC extends Component.withPins({
   "AUX": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SW: "power_in", GND_2: "passive", IN: "power_in", EN: "input", GND_5: "power_in", ILIM: "passive", ENUSB: "input", "~{FAULT}": "open_collector", USB: "power_out", AUX: "power_out", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2501DRC";
@@ -4683,7 +4793,8 @@ export class TPS2513 extends Component.withPins({
   "IN": "5",
   "DM1": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DP1: "input", GND: "power_in", DP2: "input", DM2: "input", IN: "power_in", DM1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2513";
@@ -4707,7 +4818,8 @@ export class TPS2513A extends Component.withPins({
   "IN": "5",
   "DM1": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DP1: "input", GND: "power_in", DP2: "input", DM2: "input", IN: "power_in", DM1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2513A";
@@ -4731,7 +4843,8 @@ export class TPS2514 extends Component.withPins({
   "IN": "5",
   "DM1": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DP1: "input", GND: "power_in", NC_3: "no_connect", NC_4: "no_connect", IN: "power_in", DM1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2514";
@@ -4755,7 +4868,8 @@ export class TPS2514A extends Component.withPins({
   "IN": "5",
   "DM1": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DP1: "input", GND: "power_in", NC_3: "no_connect", NC_4: "no_connect", IN: "power_in", DM1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2514A";
@@ -4784,7 +4898,8 @@ export class TPS2560 extends Component.withPins({
   "~{FAULT1}": "10",
   "PAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IN_2: "power_in", IN_3: "power_in", EN1: "input", EN2: "input", "~{FAULT2}": "output", ILM: "output", OUT2: "output", OUT1: "output", "~{FAULT1}": "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2560";
@@ -4813,7 +4928,8 @@ export class TPS2561 extends Component.withPins({
   "~{FAULT1}": "10",
   "PAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IN_2: "power_in", IN_3: "power_in", EN1: "input", EN2: "input", "~{FAULT2}": "output", ILM: "output", OUT2: "output", OUT1: "output", "~{FAULT1}": "output", PAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS2561";
@@ -4865,7 +4981,8 @@ export class TPS25730D extends Component.withPins({
   "GND_39": "39",
   "DRAIN_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LDO_3V3: "power_out", ADCIN1: "input", ADCIN2: "input", LDO_1V5: "output", ADCIN3: "input", CAP_MIS: "open_collector", ADCIN4: "input", I2Ct_SDA: "bidirectional", I2Ct_SCL: "input", DBG_ACC: "open_collector", GND_11: "power_in", GND_12: "passive", PLUG_FLIP: "open_collector", GND_14: "passive", DRAIN_15: "passive", GND_16: "passive", GND_17: "passive", "~{FAULT_IN}": "input", "~{SINK_EN}": "open_collector", PPHV: "bidirectional", VBUS_IN: "power_in", RESERVED_26: "input", RESERVED_27: "input", CC1: "bidirectional", CC2: "bidirectional", DRAIN_30: "passive", GND_31: "passive", VBUS: "power_in", GND_34: "passive", RESERVED_36: "input", PLUG_EVENT: "open_collector", VIN_3V3: "power_in", GND_39: "passive", DRAIN_40: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS25730D";
@@ -4912,7 +5029,8 @@ export class TPS25751D extends Component.withPins({
   "GND": "[11,12,14,31,39]",
   "DRAIN": "[15,30]",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LDO_3V3: "power_out", ADCIN1: "input", ADCIN2: "input", LDO_1V5: "power_out", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", I2Ct_SDA: "bidirectional", I2Ct_SCL: "input", "~{I2Ct_IRQ}": "open_collector", GPIO11: "output", I2Cc_SDA: "bidirectional", I2Cc_SCL: "open_collector", "~{I2Cc_IRQ}": "input", GPIO3: "bidirectional", PPHV: "power_in", VBUS_IN: "power_in", GPIO4: "bidirectional", GPIO5: "bidirectional", CC1: "bidirectional", CC2: "bidirectional", VBUS: "power_out", PP5V: "power_in", GPIO7: "bidirectional", GPIO6: "bidirectional", VIN_3V3: "power_in", DRAIN_EP: "passive", GND: "power_in", DRAIN: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS25751D";
@@ -4951,7 +5069,8 @@ export class TPS25810RVC extends Component.withPins({
   "~{LD_DET}": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{FAULT}": "open_collector", IN1_2: "power_in", IN1_3: "passive", IN2: "power_in", AUX: "power_in", EN: "input", CHG: "input", CHG_HI: "input", REF_RTN: "passive", REF: "output", CC1: "bidirectional", GND_12: "power_in", CC2: "bidirectional", OUT_14: "power_out", OUT_15: "passive", "~{DEBUG}": "open_collector", "~{AUDIO}": "open_collector", "~{POL}": "open_collector", "~{UFP}": "open_collector", "~{LD_DET}": "open_collector", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TPS25810RVC";
@@ -4979,7 +5098,8 @@ export class TS3USB30EDGSR extends Component.withPins({
   "~{OE}": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S: "input", "D1+": "bidirectional", "D2+": "bidirectional", "D+": "bidirectional", GND: "power_in", "D-": "bidirectional", "D2-": "bidirectional", "D1-": "bidirectional", "~{OE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TS3USB30EDGSR";
@@ -5007,7 +5127,8 @@ export class TS3USB30ERSWR extends Component.withPins({
   "VCC": "9",
   "S": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "D1+": "bidirectional", "D2+": "bidirectional", "D+": "bidirectional", GND: "power_in", "D-": "bidirectional", "D2-": "bidirectional", "D1-": "bidirectional", "~{OE}": "input", VCC: "power_in", S: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TS3USB30ERSWR";
@@ -5041,7 +5162,8 @@ export class TS3USBCA410 extends Component.withPins({
   "LnAn": "15",
   "LnAp": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LnBp: "passive", LnBn: "passive", VCC: "power_in", "MIC_GND1/Ln1": "passive", "MIC_GND2/Ln2": "passive", "~{OE}": "input", "SEL1/SCL": "input", "SEL0/SDA": "bidirectional", GND: "power_in", SBU2: "passive", SBU1: "passive", I2C_EN: "input", NC: "no_connect", FLIP: "input", LnAn: "passive", LnAp: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TS3USBCA410";
@@ -5075,7 +5197,8 @@ export class TS3USBCA420 extends Component.withPins({
   "LnAn": "15",
   "LnAp": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LnBp: "passive", LnBn: "passive", LnCn: "passive", LnCp: "passive", VCC: "power_in", "MIC_GND1/Ln1": "passive", "MIC_GND2/Ln2": "passive", "~{OE}": "input", "SEL1/SCL": "input", "SEL0/SDA": "bidirectional", GND: "power_in", SBU2: "passive", SBU1: "passive", I2C_EN: "input", LnAn: "passive", LnAp: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TS3USBCA420";
@@ -5125,7 +5248,8 @@ export class TUSB2036 extends Component.withPins({
   "MODE": "31",
   "SUSPND": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DP0: "bidirectional", DM0: "bidirectional", VCC_3: "power_in", "~{RESET}": "input", EECLK: "tri_state", "EEDATA/~{GANGED}": "bidirectional", GND_7: "power_in", "~{BUSPWR}": "input", "~{PWRON1}": "output", "~{OVRCUR1}": "input", DM1: "bidirectional", DP1: "bidirectional", "~{PWRON2}": "output", "~{OVRCUR2}": "input", DM2: "bidirectional", DP2: "bidirectional", "~{PWRON3}": "output", "~{OVRCUR3}": "input", DM3: "bidirectional", DP3: "bidirectional", "~{OCPROT}/~{PWRSW}": "input", NPINT0: "input", NPINT1: "input", "~{NP3}": "input", VCC_25: "power_in", "~{EXTMEM}": "input", DP0PUR: "output", GND_28: "power_in", XTAL2: "output", "XTAL1/CLK48": "input", MODE: "input", SUSPND: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB2036";
@@ -5155,7 +5279,8 @@ export class TUSB320 extends Component.withPins({
   "~{EN}": "11",
   "VDD": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", CC2: "bidirectional", PORT: "input", VBUS_DET: "input", ADDR: "input", "~{INT}/OUT3": "open_collector", "SDA/OUT1": "bidirectional", "SCL/OUT2": "bidirectional", ID: "open_collector", GND: "power_in", "~{EN}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB320";
@@ -5185,7 +5310,8 @@ export class TUSB320I extends Component.withPins({
   "~{EN}": "11",
   "VDD": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", CC2: "bidirectional", PORT: "input", VBUS_DET: "input", ADDR: "input", "~{INT}/OUT3": "open_collector", "SDA/OUT1": "bidirectional", "SCL/OUT2": "bidirectional", ID: "open_collector", GND: "power_in", "~{EN}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB320I";
@@ -5215,7 +5341,8 @@ export class TUSB321 extends Component.withPins({
   "DIR": "11",
   "VDD": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", CC2: "bidirectional", CURRENT_MODE: "input", PORT: "input", VBUS_DET: "input", "~{VCONN_FAULT}": "open_collector", OUT1: "open_collector", OUT2: "open_collector", ID: "open_collector", GND: "power_in", DIR: "open_collector", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB321";
@@ -5245,7 +5372,8 @@ export class TUSB322I extends Component.withPins({
   "~{EN}": "11",
   "VDD": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC1: "bidirectional", CC2: "bidirectional", VBUS_DET: "input", DIR: "open_collector", ADDR: "input", "~{INT}/OUT3": "open_collector", "SDA/OUT1": "bidirectional", "SCL/OUT2": "bidirectional", ID: "open_collector", GND: "power_in", "~{EN}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB322I";
@@ -5328,7 +5456,8 @@ export class TUSB4041I extends Component.withPins({
   "PWRCTL4/BATEN4": "64",
   "VSS": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PWRCTL3/BATEN3": "bidirectional", VDD33_2: "power_in", "PWRCTL2/BATEN2": "bidirectional", "PWRCTL1/BATEN1": "bidirectional", "SDA/SMBDAT": "bidirectional", "SCL/SMBCLK": "bidirectional", SMBUSz: "bidirectional", "FULLPWRMGMTz/SMBA1": "bidirectional", PWRCTL_POL: "bidirectional", "GANGED/SMBA2/HS_UP": "bidirectional", OVERCUR4z: "input", OVERCUR3z: "input", "AUTOENz/HS_SUSPEND": "bidirectional", OVERCUR1z: "input", OVERCUR2z: "input", USB_VBUS: "input", TEST: "input", GRSTz: "input", VDD_19: "power_in", VDD33_20: "power_in", USB_DP_UP: "bidirectional", USB_DM_UP: "bidirectional", RSVD_23: "no_connect", RSVD_24: "no_connect", VDD_25: "power_in", RSVD_26: "no_connect", RSVD_27: "no_connect", NC_28: "no_connect", XO: "output", XI: "input", VDD33_31: "power_in", USB_R1: "input", USB_DP_DN1: "bidirectional", USB_DM_DN1: "bidirectional", RSVD_35: "no_connect", RSVD_36: "no_connect", VDD_37: "power_in", RSVD_38: "no_connect", RSVD_39: "no_connect", NC_40: "no_connect", USB_DP_DN2: "bidirectional", USB_DM_DN2: "bidirectional", RSVD_43: "no_connect", RSVD_44: "no_connect", VDD_45: "power_in", RSVD_46: "no_connect", RSVD_47: "no_connect", VDD33_48: "power_in", USB_DP_DN3: "bidirectional", USB_DM_DN3: "bidirectional", RSVD_51: "no_connect", RSVD_52: "no_connect", VDD_53: "power_in", RSVD_54: "no_connect", RSVD_55: "no_connect", USB_DP_DN4: "bidirectional", USB_DM_DN4: "bidirectional", RSVD_58: "no_connect", RSVD_59: "no_connect", VDD_60: "power_in", RSVD_61: "no_connect", RSVD_62: "no_connect", VDD_63: "power_in", "PWRCTL4/BATEN4": "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB4041I";
@@ -5385,7 +5514,8 @@ export class TUSB564 extends Component.withPins({
   "EP": "41",
   "VCC": "[6,20,28]",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", DPEQ1: "input", SSEQ1: "input", SSRXn: "input", SSRXp: "input", SSTXn: "input", SSTXp: "input", TX1p: "bidirectional", TX1n: "bidirectional", EQ0: "input", RX1p: "input", RX1n: "input", EQ1: "input", RX2n: "input", RX2p: "input", I2C_EN: "input", TX2n: "bidirectional", TX2p: "bidirectional", "FLIP/SCL": "input", "CTL0/SDA": "input", CTL1: "input", SBU1: "bidirectional", SBU2: "bidirectional", AUXp: "bidirectional", AUXn: "bidirectional", EN: "input", DP3n: "output", DP3p: "output", HPDIN: "input", DP2n: "output", DP2p: "output", "DPEQ0/A1": "input", DP1n: "output", DP1p: "output", "SSEQ0/A0": "input", DP0n: "output", DP0p: "output", EP: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB564";
@@ -5508,7 +5638,8 @@ export class TUSB7340 extends Component.withPins({
   "VSS_C3": "C3",
   "VSS_C4": "C4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD11_A1: "power_in", SDA: "bidirectional", VDD33_A3: "power_in", VDD11_A4: "power_in", USB_DM_DN4: "bidirectional", VDD11_A6: "power_in", USB_SSRXN_DN4: "input", USB_SSTXN_DN4: "input", VDD11_A9: "power_in", USB_SSRXN_DN2: "input", USB_SSTXP_DN2: "output", VDD11_A12: "power_in", USB_DM_DN2: "bidirectional", NC_A14: "no_connect", "GRST#": "input", VDD11_A16: "power_in", USB_SSTXP_DN1: "output", USB_SSRXP_DN1: "input", VDDA_3P3_A19: "power_in", USB_DP_DN1: "bidirectional", VDDA_3P3_A21: "power_in", XO: "output", XI: "input", R1EXT: "bidirectional", VDDA_3P3_A25: "power_in", NC_A26: "no_connect", USB_DM_DN3: "bidirectional", VDD11_A28: "power_in", USB_SSRXN_DN3: "input", USB_SSTXN_DN3: "output", VDD11_A31: "power_in", JTAG_TCK: "input", VDD11_A33: "power_in", VDD33_A34: "power_in", JTAG_TDI: "input", "OVERCUR1#": "input", "OVERCUR2#": "input", VDD11_A38: "power_in", VDD33_A39: "power_in", "PERST#": "input", PCIE_TXN: "output", PCIE_RXN: "input", NC_A43: "no_connect", VDDA_3P3_A44: "power_in", PCIE_REFCLKP: "input", "PWRON3#": "output", VDD33_A47: "power_in", "PWRON4#": "output", GPIO0: "bidirectional", VDD11_A50: "power_in", VDD33_A51: "power_in", AUX_DET: "input", VSS_EP: "power_in", VDD11_B1: "power_in", SCL: "bidirectional", SMI: "output", VDDA_3P3_B4: "power_in", USB_DP_DN4: "bidirectional", USB_SSRXP_DN4: "input", USB_SSTXP_DN4: "input", NC_B8: "no_connect", USB_SSRXP_DN2: "input", USB_SSTXN_DN2: "output", VDDA_3P3_B11: "power_in", USB_DP_DN2: "bidirectional", NC_B13: "no_connect", FREQSEL: "input", USB_SSTXN_DN1: "output", USB_SSRXN_DN1: "input", VDD11_B17: "power_in", USB_DM_DN1: "bidirectional", VDD11_B19: "power_in", VSS_B20: "power_in", VSS_OSC: "input", VDDA_3P3_B22: "power_in", R1EXTRTN: "bidirectional", VDD11_B24: "power_in", USB_DP_DN3: "bidirectional", VDDA_3P3_B26: "power_in", USB_SSRXP_DN3: "input", USB_SSTXP_DN3: "output", NC_B29: "no_connect", JTAG_TMS: "input", JTAG_TDO: "output", "JTAG_RST#": "input", "PWRON1#": "output", "PWRON2#": "output", "WAKE#": "output", "CLKREQ#": "input", VDD11_B37: "power_in", PCIE_TXP: "output", PCIE_RXP: "input", VDD11_B40: "power_in", PCIE_REFCLKN: "input", VDD11_B42: "power_in", "OVERCUR3#": "input", VDD11_B44: "power_in", "OVERCUR4#": "input", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", VSS_C1: "power_in", VSS_C2: "power_in", VSS_C3: "power_in", VSS_C4: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB7340";
@@ -5591,7 +5722,8 @@ export class TUSB8041 extends Component.withPins({
   "USB_R1": "64",
   "VSS": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { USB_DP_DN1: "bidirectional", USB_DM_DN1: "bidirectional", USB_SSTXP_DN1: "output", USB_SSTXM_DN1: "output", VDD_5: "power_in", USB_SSRXP_DN1: "input", USB_SSRXM_DN1: "input", VDD_8: "power_in", USB_DP_DN2: "bidirectional", USB_DM_DN2: "bidirectional", USB_SSTXP_DN2: "output", USB_SSTXM_DN2: "output", VDD_13: "power_in", USB_SSRXP_DN2: "input", USB_SSRXM_DN2: "input", VDD33_16: "power_in", USB_DP_DN3: "bidirectional", USB_DM_DN3: "bidirectional", USB_SSTXP_DN3: "output", USB_SSTXM_DN3: "output", VDD_21: "power_in", USB_SSRXP_DN3: "input", USB_SSRXM_DN3: "input", USB_DP_DN4: "bidirectional", USB_DM_DN4: "bidirectional", USB_SSTXP_DN4: "output", USB_SSTXM_DN4: "output", VDD_28: "power_in", USB_SSRXP_DN4: "input", USB_SSRXM_DN4: "input", VDD_31: "power_in", "PWRCTL4/BATEN4": "bidirectional", "PWRCTL3/BATEN3": "bidirectional", VDD33_34: "power_in", "PWRCTL2/BATEN2": "bidirectional", "PWRCTL1/BATEN1": "bidirectional", "SDA/SMBDAT": "bidirectional", "SCL/SMBCLK": "bidirectional", "SMBUSz/SS_SUSPEND": "bidirectional", "FULLPWRMGMTz/SMBA1/SS_UP": "bidirectional", PWRCTL_POL: "bidirectional", "GANGED/SMBA2/HS_UP": "bidirectional", OVERCUR4z: "input", OVERCUR3z: "input", "AUTOENz/HS_SUSPEND": "bidirectional", OVERCUR1z: "input", OVERCUR2z: "input", USB_VBUS: "input", TEST: "input", GRSTz: "input", VDD_51: "power_in", VDD33_52: "power_in", USB_DP_UP: "bidirectional", USB_DM_UP: "bidirectional", USB_SSTXP_UP: "output", USB_SSTXM_UP: "output", VDD_57: "power_in", USB_SSRXP_UP: "input", USB_SSRXM_UP: "input", NC: "no_connect", XO: "output", XI: "input", VDD33_63: "power_in", USB_R1: "input", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB8041";
@@ -5674,7 +5806,8 @@ export class TUSB8043A extends Component.withPins({
   "USB_R1": "64",
   "VSS": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { USB_DP_DN1: "bidirectional", USB_DM_DN1: "bidirectional", USB_SSTXP_DN1: "output", USB_SSTXM_DN1: "output", VDD_5: "power_in", USB_SSRXP_DN1: "input", USB_SSRXM_DN1: "input", VDD_8: "power_in", USB_DP_DN2: "bidirectional", USB_DM_DN2: "bidirectional", USB_SSTXP_DN2: "output", USB_SSTXM_DN2: "output", VDD_13: "power_in", USB_SSRXP_DN2: "input", USB_SSRXM_DN2: "input", VDD33_16: "power_in", USB_DP_DN3: "bidirectional", USB_DM_DN3: "bidirectional", USB_SSTXP_DN3: "output", USB_SSTXM_DN3: "output", VDD_21: "power_in", USB_SSRXP_DN3: "input", USB_SSRXM_DN3: "input", USB_DP_DN4: "bidirectional", USB_DM_DN4: "bidirectional", USB_SSTXP_DN4: "output", USB_SSTXM_DN4: "output", VDD_28: "power_in", USB_SSRXP_DN4: "input", USB_SSRXM_DN4: "input", VDD_31: "power_in", "PWRCTL4/BATEN4": "bidirectional", "PWRCTL3/BATEN3": "bidirectional", VDD33_34: "power_in", "PWRCTL2/BATEN2": "bidirectional", "PWRCTL1/BATEN1": "bidirectional", "SDA/SMBDAT": "bidirectional", "SCL/SMBCLK": "bidirectional", "SMBUSz/SS_SUSPEND": "bidirectional", "FULLPWRMGMTz/SMBA1/SS_UP": "bidirectional", PWRCTL_POL: "bidirectional", "GANGED/SMBA2/HS_UP": "bidirectional", OVERCUR4z: "input", OVERCUR3z: "input", "AUTOENz/HS_SUSPEND": "bidirectional", OVERCUR1z: "input", OVERCUR2z: "input", USB_VBUS: "input", TEST: "input", GRSTz: "input", VDD_51: "power_in", VDD33_52: "power_in", USB_DP_UP: "bidirectional", USB_DM_UP: "bidirectional", USB_SSTXP_UP: "output", USB_SSTXM_UP: "output", VDD_57: "power_in", USB_SSRXP_UP: "input", USB_SSRXM_UP: "input", NC: "no_connect", XO: "output", XI: "input", VDD33_63: "power_in", USB_R1: "input", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:TUSB8043A";
@@ -5741,7 +5874,8 @@ export class UPD720202K8_7x1_BAA extends Component.withPins({
   "~{PEWAKE}": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PECLKP: "input", PECLKN: "input", AVDD33_3: "power_in", PETXP: "output", PETXN: "output", VDD10_6: "power_in", PERXP: "input", PERXN: "input", VDD10_9: "passive", "~{PECREQ}": "open_collector", PONRSTB: "input", VDD33_12: "power_in", SPISO: "input", "~{SPICS}": "output", SPISCK: "output", SPISI: "output", "~{OCI2}": "input", PPON2: "output", "~{OCI1}": "input", PPON1: "output", VDD10_21: "passive", VDD33_22: "passive", XT2: "output", XT1: "input", AVDD33_25: "passive", RREF: "passive", GND_27: "power_in", U3TXDP1: "bidirectional", U3TXDN1: "bidirectional", VDD10_30: "passive", U3RXDP1: "bidirectional", U3RXDN1: "bidirectional", VDD10_33: "passive", VDD33_34: "passive", U2DP1: "bidirectional", U2DM1: "bidirectional", U3TXDP2: "bidirectional", U3TXDN2: "bidirectional", VDD10_39: "passive", U3RXDP2: "bidirectional", U3RXDN2: "bidirectional", VDD10_42: "passive", VDD33_43: "passive", U2DP2: "bidirectional", U2DM2: "bidirectional", SMIB: "open_collector", "~{PERST}": "input", "~{PEWAKE}": "open_collector", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:UPD720202K8-7x1-BAA";
@@ -5823,7 +5957,8 @@ export class USB2504 extends Component.withPins({
   "RBIAS": "63",
   "VSS_64": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDDA33_1: "power_in", USBD0_P: "bidirectional", USBD0_N: "bidirectional", VSS_4: "power_in", USBD1_N: "bidirectional", USBD1_P: "bidirectional", VDDA33_7: "passive", USBD2_P: "bidirectional", USBD2_N: "bidirectional", VSS_10: "passive", USBD3_N: "bidirectional", USBD3_P: "bidirectional", VDDA33_13: "passive", USBD4_P: "bidirectional", USBD4_N: "bidirectional", VSS_16: "passive", NC_17: "no_connect", NC_18: "no_connect", "AM4/LED_EN": "bidirectional", "GR4/PRT_DIS1": "bidirectional", AM3: "bidirectional", "GR3/PRT_DIS0": "bidirectional", PRTPWR_POL: "bidirectional", "AM2/MTT_EN": "bidirectional", "GR2/NON_REM1": "bidirectional", "AM1/GANG_EN": "bidirectional", "GR1/NON_REM0": "bidirectional", VDD33: "power_in", VSS_29: "passive", VDD18_30: "power_in", TEST0: "input", NC_32: "no_connect", NC_33: "no_connect", "SDA/SMBDATA": "bidirectional", "SCL/SMBCLK": "bidirectional", CFG_SEL0: "input", PRTPWR4: "output", "~{OCS4}": "input", PRTPWR3: "output", "~{OCS3}": "input", VSS_41: "passive", VDD18_42: "passive", PRTPWR2: "output", "~{OCS2}": "input", PRTPWR1: "output", "~{OCS1}": "input", CLKIN_EN: "input", TEST1: "input", "~{RESET}": "input", CFG_SEL1: "input", SELF_PWR: "input", VBUS_DET: "bidirectional", VSS_53: "passive", VDD18_54: "passive", VSS_55: "passive", NC_56: "no_connect", XTAL2: "output", "XTAL1/CLKIN": "input", CFG_SEL2: "input", VDDA18PLL: "power_in", VDDA33PLL: "power_in", "ATEST/REG_EN": "bidirectional", RBIAS: "input", VSS_64: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB2504";
@@ -5878,7 +6013,8 @@ export class USB2514B_Bi extends Component.withPins({
   "VDDA33_36": "36",
   "VSS": "37",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "USBDM_DN1/PRT_DIS_M1": "bidirectional", "USBDP_DN1/PRT_DIS_P1": "bidirectional", "USBDM_DN2/PRT_DIS_M2": "bidirectional", "USBDP_DN2/PRT_DIS_P2": "bidirectional", VDDA33_5: "power_in", "USBDM_DN3/PRT_DIS_M3": "bidirectional", "USBDP_DN3/PRT_DIS_P3": "bidirectional", "USBDM_DN4/PRT_DIS_M4": "bidirectional", "USBDP_DN4/PRT_DIS_P4": "bidirectional", VDDA33_10: "power_in", TEST: "input", "PRTPWR1/BC_EN1": "bidirectional", OCS_N1: "input", CRFILT: "input", VDD33_15: "power_in", "PRTPWR2/BC_EN2": "bidirectional", OCS_N2: "input", "PRTPWR3/BC_EN3": "bidirectional", OCS_N3: "input", "PRTPWR4/BC_EN4": "bidirectional", OCS_N4: "input", "SDA/SMBDATA/NON_REM1": "bidirectional", VDD33_23: "power_in", "SCL/SMBCLK/CFG_SEL0": "bidirectional", "HS_IND/CFG_SEL1": "bidirectional", RESET_N: "input", VBUS_DET: "input", "SUSP_IND/LOCAL_PWR/NON_REM0": "bidirectional", VDDA33_29: "power_in", USBDM_UP: "bidirectional", USBDP_UP: "bidirectional", XTALOUT: "output", "XTALIN/CLKIN": "input", PLLFILT: "input", RBIAS: "input", VDDA33_36: "power_in", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB2514B_Bi";
@@ -5953,7 +6089,8 @@ export class USB3250_ABZJ extends Component.withPins({
   "VSS_56": "56",
   "EP": "57",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSSA_1: "power_in", DM: "bidirectional", DP: "bidirectional", "VDDA3.3_4": "power_in", VSSA_5: "passive", RBIAS: "passive", "VDDA3.3_7": "passive", VSSA_8: "passive", VSSA_9: "passive", XI: "input", XO: "output", "VDDA1.8": "power_in", "~{SUSPEND}": "input", VSS_14: "power_in", "VDD3.3_15": "power_in", "VDD1.8_16": "power_in", XCVRSELECT: "input", TERMSELECT: "input", OPMODE1: "input", OPMODE0: "input", LINESTATE1: "output", LINESTATE0: "output", "VDD1.8_23": "passive", RESET: "input", DATA15: "bidirectional", DATA14: "bidirectional", DATA13: "bidirectional", "VDD3.3_28": "passive", DATA12: "bidirectional", DATA11: "bidirectional", DATA10: "bidirectional", DATA9: "bidirectional", VSS_33: "passive", DATA8: "bidirectional", DATA7: "bidirectional", DATA6: "bidirectional", DATA5: "bidirectional", "VDD1.8_38": "passive", DATA4: "bidirectional", DATA3: "bidirectional", DATA2: "bidirectional", DATA1: "bidirectional", "VDD3.3_43": "passive", DATA0: "bidirectional", TXVALID: "input", RXVALID: "output", VALIDH: "bidirectional", VSS_48: "passive", CLKOUT: "output", RXACTIVE: "output", TXREADY: "output", RXERROR: "output", "VDD1.8_53": "passive", DATABUS16_8: "input", VSS_55: "passive", VSS_56: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3250-ABZJ";
@@ -6004,7 +6141,8 @@ export class USB3300_EZK extends Component.withPins({
   "RBIAS": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", GND_2: "power_in", CPEN: "output", VBUS: "power_in", ID: "input", "VDD3.3_6": "power_in", DP: "bidirectional", DM: "bidirectional", RESET: "input", EXTVBUS: "input", NXT: "output", DIR: "output", STP: "input", CLKOUT: "output", "VDD1.8_15": "power_out", "VDD3.3_16": "power_in", DATA7: "bidirectional", DATA6: "bidirectional", DATA5: "bidirectional", DATA4: "bidirectional", DATA3: "bidirectional", DATA2: "bidirectional", DATA1: "bidirectional", DATA0: "bidirectional", "VDD3.3_25": "power_in", "VDD1.8_26": "power_out", XO: "output", XI: "input", "VDDA1.8": "power_out", "VDD3.3_30": "power_in", REG_EN: "bidirectional", RBIAS: "passive", GND_33: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3300-EZK";
@@ -6047,7 +6185,8 @@ export class USB3341 extends Component.withPins({
   "DIR": "24",
   "GND": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKOUT: "output", NXT: "output", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", SPK_L: "bidirectional", SPK_R: "bidirectional", DP: "bidirectional", DM: "bidirectional", VDD33: "power_out", VBAT: "power_in", VBUS: "input", ID: "input", RBIAS: "passive", REFCLK: "input", "~{RESETB}": "input", VDD18: "power_out", STP: "input", DIR: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3341";
@@ -6090,7 +6229,8 @@ export class USB3343 extends Component.withPins({
   "STP": "24",
   "GND": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIR: "output", CLKOUT: "output", NXT: "output", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", VDDIO: "power_in", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", DP: "bidirectional", DM: "bidirectional", VDD33: "power_out", VBAT: "power_in", VBUS: "input", ID: "input", RBIAS: "passive", XO: "output", "REFCLK/XI": "input", "~{RESETB}": "input", VDD18: "power_out", STP: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3343";
@@ -6133,7 +6273,8 @@ export class USB3346 extends Component.withPins({
   "DIR": "24",
   "GND": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKOUT: "output", NXT: "output", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", SPK_L: "bidirectional", SPK_R: "bidirectional", DP: "bidirectional", DM: "bidirectional", VDD33: "power_out", VBAT: "power_in", VBUS: "input", ID: "input", RBIAS: "passive", REFCLK: "input", "~{RESETB}": "input", VDD18: "power_out", STP: "input", DIR: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3346";
@@ -6176,7 +6317,8 @@ export class USB3347 extends Component.withPins({
   "DIR": "24",
   "GND": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKOUT: "output", NXT: "output", DATA0: "bidirectional", DATA1: "bidirectional", DATA2: "bidirectional", DATA3: "bidirectional", DATA4: "bidirectional", DATA5: "bidirectional", DATA6: "bidirectional", DATA7: "bidirectional", SPK_L: "bidirectional", SPK_R: "bidirectional", DP: "bidirectional", DM: "bidirectional", VDD33: "power_out", VBAT: "power_in", VBUS: "input", ID: "input", RBIAS: "passive", REFCLK: "input", "~{RESETB}": "input", VDD18: "power_out", STP: "input", DIR: "output", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3347";
@@ -6203,7 +6345,8 @@ export class USB3740B_AI2 extends Component.withPins({
   "DM": "9",
   "DP": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DM_1: "bidirectional", DP_1: "bidirectional", OE_N: "input", S: "input", VDD: "power_in", DP_2: "bidirectional", DM_2: "bidirectional", GND: "power_in", DM: "bidirectional", DP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3740B-AI2";
@@ -6230,7 +6373,8 @@ export class USB3740B_AI9 extends Component.withPins({
   "DM": "9",
   "DP": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DM_1: "bidirectional", DP_1: "bidirectional", OE_N: "input", S: "input", VDD: "power_in", DP_2: "bidirectional", DM_2: "bidirectional", GND: "power_in", DM: "bidirectional", DP: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:USB3740B-AI9";
@@ -6312,7 +6456,8 @@ export class XR21B1424 extends Component.withPins({
   "GPIOA6/CLKA": "63",
   "TXA": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RXA: "input", "GPIOA5/~{RTSA}/RS485A": "bidirectional", "GPIOA4/~{CTSA}": "bidirectional", "GPIOA3/~{DTRA}": "bidirectional", "GPIOA2/~{DSRA}": "bidirectional", "GPIOA1/~{CDA}": "bidirectional", "GPIOA0/~{RIA}/~{RWKA}": "bidirectional", GND_8: "power_in", "USB_D+": "bidirectional", "USB_D-": "bidirectional", VIO_11: "power_in", VCC: "power_in", VCC_REG: "power_in", GND_14: "passive", GND_15: "passive", VBUS_SENSE: "input", "~{RESET}": "passive", USB_STAT2: "output", "GPIOC9/RXTC": "bidirectional", "GPIOC8/TXTC": "bidirectional", GND_21: "passive", "GPIOC7/RS485C": "bidirectional", "GPIOC6/CLKC": "bidirectional", TXC: "output", USB_STAT1: "output", RXC: "input", "GPIOC5/~{RTSC}/RS485C": "bidirectional", "GPIOC4/~{CTSC}": "bidirectional", "GPIOC3/~{DTRC}": "bidirectional", "GPIOC2/~{DSRC}": "bidirectional", "GPIOC1/~{CDC}": "bidirectional", "~{TEST}": "passive", "GPIOC0/~{RIC}/~{RWKC}": "bidirectional", "GPIOB9/RXTB": "bidirectional", "GPIOB8/TXTB": "bidirectional", "GPIOB7/RS485B": "bidirectional", "GPIOB6/CLKB": "bidirectional", VIO_38: "passive", GND_39: "passive", TXB: "output", RXB: "input", "GPIOB5/~{RTSB}/RS485B": "bidirectional", "GPIOB4/~{CTSB}": "bidirectional", "GPIOB3/~{DTRB}": "bidirectional", "GPIOB2/~{DSRB}": "bidirectional", "GPIOB1/~{CDB}": "bidirectional", "GPIOB0/~{RIB}/~{RWKB}": "bidirectional", "GPIOD9/RXTD": "bidirectional", "GPIOD8/TXTD": "bidirectional", "GPIOD7/RS485D": "bidirectional", "GPIOD6/CLKD": "bidirectional", TXD: "output", RXD: "input", "GPIOD5/~{RTSD}/RS485D": "bidirectional", "GPIOD4/~{CTSD}": "bidirectional", "GPIOD3/~{DTRD}": "bidirectional", "GPIOD2/~{DSRD}": "bidirectional", "GPIOD1/~{CDD}": "bidirectional", "GPIOD0/~{RID}/~{RWKD}": "bidirectional", "GPIOA9/RXTA": "bidirectional", "GPIOA8/TXTA": "bidirectional", "GPIOA7/RS485A": "bidirectional", "GPIOA6/CLKA": "bidirectional", TXA: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_USB:XR21B1424";

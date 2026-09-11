@@ -15,7 +15,8 @@ export class IRG4PF50W extends Component.withPins({
   "C": "2",
   "E": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", C: "passive", E: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_IGBT:IRG4PF50W";
@@ -36,7 +37,8 @@ export class STGP7NC60HD extends Component.withPins({
   "C": "2",
   "E": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", C: "passive", E: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_IGBT:STGP7NC60HD";

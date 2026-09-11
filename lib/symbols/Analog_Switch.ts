@@ -45,7 +45,8 @@ export class ADG1607xCP extends Component.withPins({
   "NC_32": "32",
   "V_{SS}_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", S8B: "bidirectional", S7B: "bidirectional", S6B: "bidirectional", S5B: "bidirectional", S4B: "bidirectional", S3B: "bidirectional", S2B: "bidirectional", S1B: "bidirectional", A2: "input", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", A1: "input", A0: "input", EN: "input", S1A: "bidirectional", S2A: "bidirectional", S3A: "bidirectional", S4A: "bidirectional", S5A: "bidirectional", S6A: "bidirectional", S7A: "bidirectional", S8A: "bidirectional", "V_{SS}_25": "power_in", NC_26: "no_connect", DA: "bidirectional", NC_28: "no_connect", "V_{DD}": "power_in", NC_30: "no_connect", DB: "bidirectional", NC_32: "no_connect", "V_{SS}_33": "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG1607xCP";
@@ -96,7 +97,8 @@ export class ADG1207BCPZ extends Component.withPins({
   "NC_32": "32",
   "V_{SS}_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", S8B: "bidirectional", S7B: "bidirectional", S6B: "bidirectional", S5B: "bidirectional", S4B: "bidirectional", S3B: "bidirectional", S2B: "bidirectional", S1B: "bidirectional", A2: "input", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", A1: "input", A0: "input", EN: "input", S1A: "bidirectional", S2A: "bidirectional", S3A: "bidirectional", S4A: "bidirectional", S5A: "bidirectional", S6A: "bidirectional", S7A: "bidirectional", S8A: "bidirectional", "V_{SS}_25": "power_in", NC_26: "no_connect", DA: "bidirectional", NC_28: "no_connect", "V_{DD}": "power_in", NC_30: "no_connect", DB: "bidirectional", NC_32: "no_connect", "V_{SS}_33": "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG1207BCPZ";
@@ -130,7 +132,8 @@ export class ADG1408YRUZ extends Component.withPins({
   "A2": "15",
   "A1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", A0: "input", EN: "input", VSS: "power_in", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", VDD: "power_in", A2: "input", A1: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG1408YRUZ";
@@ -172,7 +175,8 @@ export class ADG1414BRU extends Component.withPins({
   "VL": "23",
   "~{SYNC}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCLK: "input", VDD: "power_in", DIN: "input", GND: "power_in", S1: "passive", D1: "passive", S2: "passive", D2: "passive", S3: "passive", D3: "passive", S4: "passive", D4: "passive", D5: "passive", S5: "passive", D6: "passive", S6: "passive", D7: "passive", S7: "passive", D8: "passive", S8: "passive", VSS: "power_in", SDO: "open_collector", VL: "power_in", "~{SYNC}": "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG1414BRU";
@@ -198,7 +202,8 @@ export class DG418xJ extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418xJ";
@@ -224,7 +229,8 @@ export class ADG417BN extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG417BN";
@@ -250,7 +256,8 @@ export class DG418xY extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418xY";
@@ -276,7 +283,8 @@ export class ADG417BR extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG417BR";
@@ -302,7 +310,8 @@ export class DG419xJ extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419xJ";
@@ -328,7 +337,8 @@ export class ADG419BN extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG419BN";
@@ -354,7 +364,8 @@ export class DG419xY extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419xY";
@@ -380,7 +391,8 @@ export class ADG419BR extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG419BR";
@@ -406,7 +418,8 @@ export class ADG419BRM extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG419BRM";
@@ -441,7 +454,8 @@ export class ADG633YCP extends Component.withPins({
   "VDD": "14",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P9: "input", P10: "passive", P11: "passive", P12: "passive", P8: "input", P13: "passive", P15: "passive", P16: "passive", P1: "passive", P2: "passive", P3: "passive", P7: "input", "~{EN}": "input", VSS: "power_in", GND: "power_in", VDD: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG633YCP";
@@ -475,7 +489,8 @@ export class ADG633YRU extends Component.withPins({
   "GND": "8",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P11: "input", P12: "passive", P13: "passive", P14: "passive", P1: "passive", P2: "passive", P10: "input", P15: "passive", P3: "passive", P4: "passive", P5: "passive", P9: "input", "~{EN}": "input", VSS: "power_in", GND: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG633YRU";
@@ -510,7 +525,8 @@ export class ADG658YCP extends Component.withPins({
   "S7": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", D: "bidirectional", S8: "bidirectional", S6: "bidirectional", "~{EN}": "input", "V_{SS}": "power_in", A2: "input", A1: "input", A0: "input", S4: "bidirectional", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", "V_{DD}": "power_in", S5: "bidirectional", S7: "bidirectional", EPAD: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG658YCP";
@@ -556,7 +572,8 @@ export class ADG707BRU extends Component.withPins({
   "VSS": "27",
   "DA": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", DB: "passive", NC_3: "no_connect", S8B: "passive", S7B: "passive", S6B: "passive", S5B: "passive", S4B: "passive", S3B: "passive", S2B: "passive", S1B: "passive", GND: "power_in", NC_13: "no_connect", NC_14: "no_connect", A2: "input", A1: "input", A0: "input", EN: "input", S1A: "passive", S2A: "passive", S3A: "passive", S4A: "passive", S5A: "passive", S6A: "passive", S7A: "passive", S8A: "passive", VSS: "power_in", DA: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG707BRU";
@@ -598,7 +615,8 @@ export class ADG715 extends Component.withPins({
   "~{RESET}": "23",
   "A0": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", VDD: "power_in", SDA: "bidirectional", GND: "power_in", S1: "passive", D1: "passive", S2: "passive", D2: "passive", S3: "passive", D3: "passive", S4: "passive", D4: "passive", D5: "passive", S5: "passive", D6: "passive", S6: "passive", D7: "passive", S7: "passive", D8: "passive", S8: "passive", VSS: "power_in", A1: "input", "~{RESET}": "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG715";
@@ -632,7 +650,8 @@ export class ADG728 extends Component.withPins({
   "A1": "15",
   "A0": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", "~{RESET}": "input", SDA: "bidirectional", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", VDD: "power_in", GND: "power_in", A1: "input", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG728";
@@ -666,7 +685,8 @@ export class ADG729 extends Component.withPins({
   "GND": "15",
   "A0": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCL: "input", A1: "input", SDA: "bidirectional", S1A: "bidirectional", S2A: "bidirectional", S3A: "bidirectional", S4A: "bidirectional", DA: "bidirectional", DB: "bidirectional", S4B: "bidirectional", S3B: "bidirectional", S2B: "bidirectional", S1B: "bidirectional", VDD: "power_in", GND: "power_in", A0: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG729";
@@ -700,7 +720,8 @@ export class ADG733BRQ extends Component.withPins({
   "GND": "8",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "6": "input", P11: "input", P12: "passive", P13: "passive", P14: "passive", P1: "passive", P2: "passive", P10: "input", P15: "passive", P3: "passive", P4: "passive", P5: "passive", P9: "input", VSS: "power_in", GND: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG733BRQ";
@@ -734,7 +755,8 @@ export class ADG733BRU extends Component.withPins({
   "GND": "8",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P11: "input", P12: "passive", P13: "passive", P14: "passive", P1: "passive", P2: "passive", P10: "input", P15: "passive", P3: "passive", P4: "passive", P5: "passive", P9: "input", "~{EN}": "input", VSS: "power_in", GND: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG733BRU";
@@ -772,7 +794,8 @@ export class ADG734 extends Component.withPins({
   "NC": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P4: "passive", P7: "passive", P8: "passive", P9: "passive", P10: "input", P11: "input", P12: "passive", P13: "passive", P14: "passive", P17: "passive", P18: "passive", P19: "passive", P20: "input", VSS: "power_in", GND: "power_in", NC: "no_connect", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG734";
@@ -811,7 +834,8 @@ export class ADG758CPZ extends Component.withPins({
   "NC_20": "20",
   "V_{SS}_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", EN: "input", "V_{SS}_2": "power_in", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", NC_8: "no_connect", NC_9: "no_connect", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", "V_{DD}": "power_in", NC_16: "no_connect", A2: "input", A1: "input", A0: "input", NC_20: "no_connect", "V_{SS}_21": "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG758CPZ";
@@ -839,7 +863,8 @@ export class ADG824BCP extends Component.withPins({
   "S2A": "9",
   "GND": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S1A: "bidirectional", D1: "bidirectional", S1B: "bidirectional", IN1: "input", IN2: "input", VDD: "power_in", S2B: "bidirectional", D2: "bidirectional", S2A: "bidirectional", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG824BCP";
@@ -868,7 +893,8 @@ export class ADG884xCP extends Component.withPins({
   "S2A": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", S1A: "bidirectional", D1: "bidirectional", IN1: "input", S1B: "bidirectional", GND_6: "power_in", S2B: "bidirectional", IN2: "input", D2: "bidirectional", S2A: "bidirectional", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG884xCP";
@@ -896,7 +922,8 @@ export class ADG884xRM extends Component.withPins({
   "D2": "9",
   "S2A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", S1A: "bidirectional", D1: "bidirectional", IN1: "input", S1B: "bidirectional", GND: "power_in", S2B: "bidirectional", IN2: "input", D2: "bidirectional", S2A: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:ADG884xRM";
@@ -935,7 +962,8 @@ export class CBTL02043A extends Component.withPins({
   "GND_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", XSD: "input", A0_P: "passive", A0_N: "passive", GND_5: "power_in", VDD_6: "passive", A1_P: "passive", A1_N: "passive", SEL: "input", VDD_10: "passive", GND_11: "passive", C1_N: "passive", C1_P: "passive", C0_N: "passive", C0_P: "passive", B1_N: "passive", B1_P: "passive", B0_N: "passive", B0_P: "passive", GND_20: "passive", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CBTL02043A";
@@ -974,7 +1002,8 @@ export class CBTL02043B extends Component.withPins({
   "VDD_20": "20",
   "GND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", A0_P: "passive", A0_N: "passive", C0_P: "passive", C0_N: "passive", A1_P: "passive", A1_N: "passive", C1_P: "passive", C1_N: "passive", GND_10: "passive", VDD_11: "power_in", SEL: "input", B1_N: "passive", B1_P: "passive", GND_15: "passive", VDD_16: "passive", B0_N: "passive", B0_P: "passive", XSD: "input", VDD_20: "passive", GND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CBTL02043B";
@@ -1007,7 +1036,8 @@ export class CD4051B extends Component.withPins({
   "X2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X4: "bidirectional", X6: "bidirectional", X: "bidirectional", X7: "bidirectional", X5: "bidirectional", INH: "input", VEE: "power_in", VSS: "power_in", C: "input", B: "input", A: "input", X3: "bidirectional", X0: "bidirectional", X1: "bidirectional", X2: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4051B";
@@ -1040,7 +1070,8 @@ export class CD4052B extends Component.withPins({
   "X2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Y0: "bidirectional", Y2: "bidirectional", Y: "bidirectional", Y3: "bidirectional", Y1: "bidirectional", INH: "input", VEE: "power_in", VSS: "power_in", B: "input", A: "input", X3: "bidirectional", X0: "bidirectional", X: "bidirectional", X1: "bidirectional", X2: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4052B";
@@ -1073,7 +1104,8 @@ export class CD4053B extends Component.withPins({
   "B": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B1: "bidirectional", B0: "bidirectional", C1: "bidirectional", C: "bidirectional", C0: "bidirectional", INH: "input", VEE: "power_in", VSS: "power_in", S3: "input", S2: "input", S1: "input", A0: "bidirectional", A1: "bidirectional", A: "bidirectional", B: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4053B";
@@ -1105,7 +1137,8 @@ export class CD4066BE extends Component.withPins({
   "V_{SS}": "7",
   "V_{DD}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "bidirectional", P13: "input", P3: "bidirectional", P4: "bidirectional", P5: "input", P6: "input", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4066BE";
@@ -1137,7 +1170,8 @@ export class CD4066BM extends Component.withPins({
   "V_{SS}": "7",
   "V_{DD}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "bidirectional", P13: "input", P3: "bidirectional", P4: "bidirectional", P5: "input", P6: "input", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4066BM";
@@ -1169,7 +1203,8 @@ export class CD4066BNS extends Component.withPins({
   "V_{SS}": "7",
   "V_{DD}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "bidirectional", P13: "input", P3: "bidirectional", P4: "bidirectional", P5: "input", P6: "input", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4066BNS";
@@ -1201,7 +1236,8 @@ export class CD4066BPW extends Component.withPins({
   "V_{SS}": "7",
   "V_{DD}": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "bidirectional", P2: "bidirectional", P13: "input", P3: "bidirectional", P4: "bidirectional", P5: "input", P6: "input", P8: "bidirectional", P9: "bidirectional", P10: "bidirectional", P11: "bidirectional", P12: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4066BPW";
@@ -1242,7 +1278,8 @@ export class CD4097B extends Component.withPins({
   "Y0": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { X: "bidirectional", X7: "bidirectional", X6: "bidirectional", X5: "bidirectional", X4: "bidirectional", X3: "bidirectional", X2: "bidirectional", X1: "bidirectional", X0: "bidirectional", A: "input", B: "input", VSS: "power_in", INH: "input", C: "input", Y7: "bidirectional", Y6: "bidirectional", Y: "bidirectional", Y5: "bidirectional", Y4: "bidirectional", Y3: "bidirectional", Y2: "bidirectional", Y1: "bidirectional", Y0: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:CD4097B";
@@ -1276,7 +1313,8 @@ export class DG308AxJ extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG308AxJ";
@@ -1310,7 +1348,8 @@ export class DG308AxY extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG308AxY";
@@ -1344,7 +1383,8 @@ export class DG309xJ extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG309xJ";
@@ -1378,7 +1418,8 @@ export class DG309xY extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG309xY";
@@ -1412,7 +1453,8 @@ export class DG411xJ extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG411xJ";
@@ -1446,7 +1488,8 @@ export class DG411xUE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG411xUE";
@@ -1480,7 +1523,8 @@ export class DG411xY extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG411xY";
@@ -1514,7 +1558,8 @@ export class DG412xJ extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG412xJ";
@@ -1548,7 +1593,8 @@ export class DG412xUE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG412xUE";
@@ -1582,7 +1628,8 @@ export class DG412xY extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG412xY";
@@ -1616,7 +1663,8 @@ export class DG413xJ extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG413xJ";
@@ -1650,7 +1698,8 @@ export class DG413xUE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG413xUE";
@@ -1684,7 +1733,8 @@ export class DG413xY extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG413xY";
@@ -1710,7 +1760,8 @@ export class DG417LDJ extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417LDJ";
@@ -1736,7 +1787,8 @@ export class DG417LDJ_Maxim extends Component.withPins({
   "NC_5": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC_2: "no_connect", GND: "power_in", "V+": "power_in", NC_5: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417LDJ_Maxim";
@@ -1762,7 +1814,8 @@ export class DG417LDY extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417LDY";
@@ -1788,7 +1841,8 @@ export class DG417LDY_Maxim extends Component.withPins({
   "NC_5": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC_2: "no_connect", GND: "power_in", "V+": "power_in", NC_5: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417LDY_Maxim";
@@ -1814,7 +1868,8 @@ export class DG417LEUA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417LEUA";
@@ -1840,7 +1895,8 @@ export class DG417LEUA_Maxim extends Component.withPins({
   "NC_5": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC_2: "no_connect", GND: "power_in", "V+": "power_in", NC_5: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417LEUA_Maxim";
@@ -1866,7 +1922,8 @@ export class DG417xJ extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417xJ";
@@ -1892,7 +1949,8 @@ export class DG417xY extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG417xY";
@@ -1918,7 +1976,8 @@ export class DG418LDJ extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418LDJ";
@@ -1944,7 +2003,8 @@ export class DG418LDJ_Maxim extends Component.withPins({
   "NC_5": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC_2: "no_connect", GND: "power_in", "V+": "power_in", NC_5: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418LDJ_Maxim";
@@ -1970,7 +2030,8 @@ export class DG418LDY extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418LDY";
@@ -1996,7 +2057,8 @@ export class DG418LDY_Maxim extends Component.withPins({
   "NC_5": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC_2: "no_connect", GND: "power_in", "V+": "power_in", NC_5: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418LDY_Maxim";
@@ -2022,7 +2084,8 @@ export class DG418LEUA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418LEUA";
@@ -2048,7 +2111,8 @@ export class DG418LEUA_Maxim extends Component.withPins({
   "NC_5": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC_2: "no_connect", GND: "power_in", "V+": "power_in", NC_5: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG418LEUA_Maxim";
@@ -2074,7 +2138,8 @@ export class DG419LDJ extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419LDJ";
@@ -2100,7 +2165,8 @@ export class DG419LDJ_Maxim extends Component.withPins({
   "NC": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", NC: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419LDJ_Maxim";
@@ -2126,7 +2192,8 @@ export class DG419LDY extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419LDY";
@@ -2152,7 +2219,8 @@ export class DG419LDY_Maxim extends Component.withPins({
   "NC": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", NC: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419LDY_Maxim";
@@ -2178,7 +2246,8 @@ export class DG419LEUA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419LEUA";
@@ -2204,7 +2273,8 @@ export class DG419LEUA_Maxim extends Component.withPins({
   "NC": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", NC: "no_connect", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG419LEUA_Maxim";
@@ -2238,7 +2308,8 @@ export class DG441xJ extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG441xJ";
@@ -2272,7 +2343,8 @@ export class DG441xY extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG441xY";
@@ -2306,7 +2378,8 @@ export class DG442xJ extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG442xJ";
@@ -2340,7 +2413,8 @@ export class DG442xY extends Component.withPins({
   "NC": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG442xY";
@@ -2402,7 +2476,8 @@ export class DG884DN extends Component.withPins({
   "GNDA_43": "43",
   "OUT2": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GNDA_1: "power_in", OUT1: "output", GNDA_3: "passive", GNDA_4: "passive", IN1: "input", GNDA_6: "passive", IN2: "input", GNDA_8: "passive", IN3: "input", GNDA_10: "passive", IN4: "input", GNDA_12: "passive", IN5: "input", GNDA_14: "passive", IN6: "input", GNDA_16: "passive", IN7: "input", GNDA_18: "passive", IN8: "input", GNDA_20: "passive", "V-": "passive", "~{DIS1}": "open_collector", "~{DIS2}": "open_collector", "~{DIS3}": "open_collector", "~{DIS4}": "open_collector", "V+": "passive", B0: "input", B1: "input", "~{I}/O": "input", "~{CS}": "input", A0: "input", A1: "input", A2: "input", A3: "input", "~{WR}": "input", "~{SALVO}": "input", "~{RS}": "input", VCC: "power_in", GND: "power_in", OUT4: "output", GNDA_41: "passive", OUT3: "output", GNDA_43: "passive", OUT2: "output", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG884DN";
@@ -2426,7 +2501,8 @@ export class DG9421DV extends Component.withPins({
   "V-": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "passive", P5: "passive", P6: "input", "V+": "power_in", "V-": "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG9421DV";
@@ -2450,7 +2526,8 @@ export class DG9422DV extends Component.withPins({
   "V-": "3",
   "GND": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "passive", P5: "passive", P6: "input", "V+": "power_in", "V-": "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:DG9422DV";
@@ -2474,7 +2551,8 @@ export class NC7SB3157L6X extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NC7SB3157L6X";
@@ -2498,7 +2576,8 @@ export class FSA3157L6X extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:FSA3157L6X";
@@ -2522,7 +2601,8 @@ export class NC7SB3157P6X extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NC7SB3157P6X";
@@ -2546,7 +2626,8 @@ export class FSA3157P6X extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:FSA3157P6X";
@@ -2580,7 +2661,8 @@ export class HEF4051BT extends Component.withPins({
   "Y2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Y4: "passive", Y6: "passive", Z: "passive", Y7: "passive", Y5: "passive", "~{E}": "input", VEE: "power_in", VSS: "power_in", S3: "input", S2: "input", S1: "input", Y3: "passive", Y0: "passive", Y1: "passive", Y2: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4051BT";
@@ -2614,7 +2696,8 @@ export class HEF4051BTT extends Component.withPins({
   "Y2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Y4: "passive", Y6: "passive", Z: "passive", Y7: "passive", Y5: "passive", "~{E}": "input", VEE: "power_in", VSS: "power_in", S3: "input", S2: "input", S1: "input", Y3: "passive", Y0: "passive", Y1: "passive", Y2: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4051BTT";
@@ -2648,7 +2731,8 @@ export class HEF4052BT extends Component.withPins({
   "1Y2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "2Y0": "passive", "2Y2": "passive", "2Z": "passive", "2Y3": "passive", "2Y1": "passive", "~{E}": "input", VEE: "power_in", VSS: "power_in", S2: "input", S1: "input", "1Y3": "passive", "1Y0": "passive", "1Z": "passive", "1Y1": "passive", "1Y2": "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4052BT";
@@ -2682,7 +2766,8 @@ export class HEF4052BTT extends Component.withPins({
   "1Y2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "2Y0": "passive", "2Y2": "passive", "2Z": "passive", "2Y3": "passive", "2Y1": "passive", "~{E}": "input", VEE: "power_in", VSS: "power_in", S2: "input", S1: "input", "1Y3": "passive", "1Y0": "passive", "1Z": "passive", "1Y1": "passive", "1Y2": "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4052BTT";
@@ -2714,7 +2799,8 @@ export class HEF4066BT extends Component.withPins({
   "VSS": "7",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1Y": "passive", "1Z": "passive", "1E": "input", "2Z": "passive", "2Y": "passive", "2E": "input", "3E": "input", "3Y": "passive", "3Z": "passive", "4Z": "passive", "4Y": "passive", "4E": "input", VSS: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4066BT";
@@ -2756,7 +2842,8 @@ export class HEF4067BT extends Component.withPins({
   "Y8": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Z: "passive", Y7: "passive", Y6: "passive", Y5: "passive", Y4: "passive", Y3: "passive", Y2: "passive", Y1: "passive", Y0: "passive", A0: "input", A1: "input", VSS: "power_in", A3: "input", A2: "input", "~{E}": "input", Y15: "passive", Y14: "passive", Y13: "passive", Y12: "passive", Y11: "passive", Y10: "passive", Y9: "passive", Y8: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4067BT";
@@ -2798,7 +2885,8 @@ export class HEF4067BTT extends Component.withPins({
   "Y8": "23",
   "VDD": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Z: "passive", Y7: "passive", Y6: "passive", Y5: "passive", Y4: "passive", Y3: "passive", Y2: "passive", Y1: "passive", Y0: "passive", A0: "input", A1: "input", VSS: "power_in", A3: "input", A2: "input", "~{E}": "input", Y15: "passive", Y14: "passive", Y13: "passive", Y12: "passive", Y11: "passive", Y10: "passive", Y9: "passive", Y8: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HEF4067BTT";
@@ -2834,7 +2922,8 @@ export class HI524 extends Component.withPins({
   "V-": "17",
   "FBI": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "power_in", OUT: "output", SIGGND_3: "power_in", SIGGND_4: "passive", IN4: "input", SIGGND_6: "passive", IN3: "input", GND: "power_in", A1: "input", A0: "input", EN: "input", IN1: "input", SIGGND_13: "passive", IN2: "input", SIGGND_15: "passive", FBO: "output", "V-": "power_in", FBI: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:HI524";
@@ -2881,7 +2970,8 @@ export class MAX14662 extends Component.withPins({
   "GND_25": "25",
   "GND_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}/AD0": "input", NC_10: "no_connect", NC_12: "no_connect", NC_13: "no_connect", "V_{CC}": "power_in", "DIN/SDA": "bidirectional", "DOUT/AD1": "bidirectional", "SPI/~{I²C}": "input", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "bidirectional", A6: "bidirectional", A7: "bidirectional", A8: "bidirectional", GND_11: "power_in", B8: "bidirectional", B7: "bidirectional", B6: "bidirectional", B5: "bidirectional", B4: "bidirectional", B3: "bidirectional", B2: "bidirectional", B1: "bidirectional", "~{SD}": "input", "SCLK/SCL": "input", GND_25: "passive", GND_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX14662";
@@ -2908,7 +2998,8 @@ export class MAX14759 extends Component.withPins({
   "NC": "7",
   "VN_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B: "passive", A: "passive", EN: "input", VCC: "power_in", GND: "power_in", VN_3: "passive", VP: "passive", NC: "no_connect", VN_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX14759";
@@ -2937,7 +3028,8 @@ export class MAX14761 extends Component.withPins({
   "VP": "7",
   "VN_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B1: "passive", A1: "passive", EN1: "input", B2: "passive", A2: "passive", EN2: "input", VCC: "power_in", GND: "power_in", VN_4: "passive", VP: "passive", VN_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX14761";
@@ -2976,7 +3068,8 @@ export class MAX14778 extends Component.withPins({
   "B0": "20",
   "VN_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BCOM: "passive", VP: "passive", GND: "power_in", VN_4: "passive", ACOM: "passive", A0: "passive", A1: "passive", A2: "passive", A3: "passive", ENA: "input", SA0: "input", SA1: "input", VDD: "power_in", SB1: "input", SB0: "input", ENB: "input", B3: "passive", B2: "passive", B1: "passive", B0: "passive", VN_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX14778";
@@ -3010,7 +3103,8 @@ export class MAX312CPE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX312CPE";
@@ -3044,7 +3138,8 @@ export class MAX312CSE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX312CSE";
@@ -3078,7 +3173,8 @@ export class MAX312CUE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX312CUE";
@@ -3112,7 +3208,8 @@ export class MAX313CPE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX313CPE";
@@ -3146,7 +3243,8 @@ export class MAX313CSE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX313CSE";
@@ -3180,7 +3278,8 @@ export class MAX313CUE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX313CUE";
@@ -3214,7 +3313,8 @@ export class MAX314CPE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX314CPE";
@@ -3248,7 +3348,8 @@ export class MAX314CSE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX314CSE";
@@ -3282,7 +3383,8 @@ export class MAX314CUE extends Component.withPins({
   "VL": "12",
   "V+": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P6: "passive", P7: "passive", P8: "input", P9: "input", P10: "passive", P11: "passive", P14: "passive", P15: "passive", P16: "input", "V-": "power_in", GND: "power_in", VL: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX314CUE";
@@ -3308,7 +3410,8 @@ export class MAX317xPA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX317xPA";
@@ -3334,7 +3437,8 @@ export class MAX317xSA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX317xSA";
@@ -3360,7 +3464,8 @@ export class MAX318xPA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX318xPA";
@@ -3386,7 +3491,8 @@ export class MAX318xSA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P6: "input", P8: "passive", NC: "no_connect", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX318xSA";
@@ -3412,7 +3518,8 @@ export class MAX319xPA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX319xPA";
@@ -3438,7 +3545,8 @@ export class MAX319xSA extends Component.withPins({
   "VL": "5",
   "V-": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P6: "input", P8: "passive", GND: "power_in", "V+": "power_in", VL: "power_in", "V-": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX319xSA";
@@ -3464,7 +3572,8 @@ export class MAX323CPA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX323CPA";
@@ -3490,7 +3599,8 @@ export class MAX323CSA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX323CSA";
@@ -3516,7 +3626,8 @@ export class MAX323CUA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX323CUA";
@@ -3542,7 +3653,8 @@ export class MAX324CPA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX324CPA";
@@ -3568,7 +3680,8 @@ export class MAX324CSA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX324CSA";
@@ -3594,7 +3707,8 @@ export class MAX324CUA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX324CUA";
@@ -3620,7 +3734,8 @@ export class MAX325CPA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX325CPA";
@@ -3646,7 +3761,8 @@ export class MAX325CSA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX325CSA";
@@ -3672,7 +3788,8 @@ export class MAX325CUA extends Component.withPins({
   "V-": "4",
   "V+": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", P7: "input", P3: "input", P5: "passive", P6: "passive", "V-": "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX325CUA";
@@ -3709,7 +3826,8 @@ export class MAX333 extends Component.withPins({
   "NC": "15",
   "V+": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P4: "passive", P7: "passive", P8: "passive", P9: "passive", P10: "input", P11: "input", P12: "passive", P13: "passive", P14: "passive", P17: "passive", P18: "passive", P19: "passive", P20: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX333";
@@ -3746,7 +3864,8 @@ export class MAX333A extends Component.withPins({
   "NC": "15",
   "V+": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P4: "passive", P7: "passive", P8: "passive", P9: "passive", P10: "input", P11: "input", P12: "passive", P13: "passive", P14: "passive", P17: "passive", P18: "passive", P19: "passive", P20: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX333A";
@@ -3783,7 +3902,8 @@ export class MAX394 extends Component.withPins({
   "NC": "15",
   "V+": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P3: "passive", P4: "passive", P7: "passive", P8: "passive", P9: "passive", P10: "input", P11: "input", P12: "passive", P13: "passive", P14: "passive", P17: "passive", P18: "passive", P19: "passive", P20: "input", "V-": "power_in", GND: "power_in", NC: "no_connect", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX394";
@@ -3805,7 +3925,8 @@ export class MAX40200ANS extends Component.withPins({
   "EN": "B1",
   "GND": "B2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", OUT: "passive", EN: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX40200ANS";
@@ -3828,7 +3949,8 @@ export class MAX40200AUK extends Component.withPins({
   "NC": "4",
   "OUT": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", EN: "input", NC: "no_connect", OUT: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:MAX40200AUK";
@@ -3863,7 +3985,8 @@ export class NMUX1308BQ extends Component.withPins({
   "V_{CC}": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Y4: "passive", Y6: "passive", Z: "passive", Y7: "passive", Y5: "passive", "~{E}": "input", NC: "no_connect", GND: "power_in", S2: "input", S1: "input", S0: "input", Y3: "passive", Y0: "passive", Y1: "passive", Y2: "passive", "V_{CC}": "power_in", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NMUX1308BQ";
@@ -3897,7 +4020,8 @@ export class NMUX1308PW extends Component.withPins({
   "Y2": "15",
   "V_{CC}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Y4: "passive", Y6: "passive", Z: "passive", Y7: "passive", Y5: "passive", "~{E}": "input", NC: "no_connect", GND: "power_in", S2: "input", S1: "input", S0: "input", Y3: "passive", Y0: "passive", Y1: "passive", Y2: "passive", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NMUX1308PW";
@@ -3932,7 +4056,8 @@ export class NMUX1309BQ extends Component.withPins({
   "V_{CC}": "16",
   "EPAD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "2Y0": "passive", "2Y2": "passive", "2Z": "passive", "2Y3": "passive", "2Y1": "passive", "~{E}": "input", NC: "no_connect", GND: "power_in", S1: "input", S0: "input", "1Y3": "passive", "1Y0": "passive", "1Z": "passive", "1Y1": "passive", "1Y2": "passive", "V_{CC}": "power_in", EPAD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NMUX1309BQ";
@@ -3966,7 +4091,8 @@ export class NMUX1309PW extends Component.withPins({
   "1Y2": "15",
   "V_{CC}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "2Y0": "passive", "2Y2": "passive", "2Z": "passive", "2Y3": "passive", "2Y1": "passive", "~{E}": "input", NC: "no_connect", GND: "power_in", S1: "input", S0: "input", "1Y3": "passive", "1Y0": "passive", "1Z": "passive", "1Y1": "passive", "1Y2": "passive", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NMUX1309PW";
@@ -4001,7 +4127,8 @@ export class NX3L4051HR extends Component.withPins({
   "Y4": "15",
   "Y6": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", GND: "power_in", EP: "passive", Z: "bidirectional", Y7: "bidirectional", Y5: "bidirectional", "~{E}": "input", S3: "input", S2: "input", S1: "input", Y3: "bidirectional", Y0: "bidirectional", Y1: "bidirectional", Y2: "bidirectional", "V_{CC}": "power_in", Y4: "bidirectional", Y6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NX3L4051HR";
@@ -4035,7 +4162,8 @@ export class NX3L4051PW extends Component.withPins({
   "Y2": "15",
   "V_{CC}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", GND: "power_in", Y4: "bidirectional", Y6: "bidirectional", Z: "bidirectional", Y7: "bidirectional", Y5: "bidirectional", "~{E}": "input", S3: "input", S2: "input", S1: "input", Y3: "bidirectional", Y0: "bidirectional", Y1: "bidirectional", Y2: "bidirectional", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:NX3L4051PW";
@@ -4068,7 +4196,8 @@ export class SN74CBT3253 extends Component.withPins({
   "2~{OE}": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1~{OE}": "input", S1: "input", "1B4": "bidirectional", "1B3": "bidirectional", "1B2": "bidirectional", "1B1": "bidirectional", "1A": "bidirectional", GND: "power_in", "2A": "bidirectional", "2B1": "bidirectional", "2B2": "bidirectional", "2B3": "bidirectional", "2B4": "bidirectional", S0: "input", "2~{OE}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:SN74CBT3253";
@@ -4091,7 +4220,8 @@ export class TMUX1101DBV extends Component.withPins({
   "P4": "4",
   "V_{DD}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", GND: "power_in", P4: "input", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1101DBV";
@@ -4114,7 +4244,8 @@ export class TMUX1101DCK extends Component.withPins({
   "P4": "4",
   "V_{DD}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", GND: "power_in", P4: "input", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1101DCK";
@@ -4137,7 +4268,8 @@ export class TMUX1102DBV extends Component.withPins({
   "P4": "4",
   "V_{DD}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", GND: "power_in", P4: "input", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1102DBV";
@@ -4160,7 +4292,8 @@ export class TMUX1102DCK extends Component.withPins({
   "P4": "4",
   "V_{DD}": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", GND: "power_in", P4: "input", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1102DCK";
@@ -4194,7 +4327,8 @@ export class TMUX1108PW extends Component.withPins({
   "A2": "15",
   "A1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", A0: "input", EN: "input", VSS: "power_in", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", VDD: "power_in", A2: "input", A1: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1108PW";
@@ -4228,7 +4362,8 @@ export class TMUX1108RSV extends Component.withPins({
   "A0": "15",
   "EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VSS: "power_in", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", VDD: "power_in", A2: "input", A1: "input", A0: "input", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1108RSV";
@@ -4262,7 +4397,8 @@ export class TMUX1208PW extends Component.withPins({
   "A2": "15",
   "A1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", A0: "input", EN: "input", VSS: "power_in", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", VDD: "power_in", A2: "input", A1: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1208PW";
@@ -4296,7 +4432,8 @@ export class TMUX1208RSV extends Component.withPins({
   "A0": "15",
   "EN": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VSS: "power_in", S1: "bidirectional", S2: "bidirectional", S3: "bidirectional", S4: "bidirectional", D: "bidirectional", S8: "bidirectional", S7: "bidirectional", S6: "bidirectional", S5: "bidirectional", VDD: "power_in", A2: "input", A1: "input", A0: "input", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1208RSV";
@@ -4326,7 +4463,8 @@ export class TMUX131RMG extends Component.withPins({
   "D1": "11",
   "VDD": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SEL0: "input", SEL1: "input", S1B: "passive", S2B: "passive", S1C: "passive", S2C: "passive", S1A: "passive", S2A: "passive", GND: "power_in", D2: "passive", D1: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX131RMG";
@@ -4354,7 +4492,8 @@ export class TMUX154EDGS extends Component.withPins({
   "~{EN}": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SEL: "passive", A0: "passive", A1: "passive", A: "passive", GND: "power_in", B: "passive", B1: "passive", B0: "passive", "~{EN}": "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX154EDGS";
@@ -4382,7 +4521,8 @@ export class TMUX154ERSW extends Component.withPins({
   "VCC": "9",
   "SEL": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "passive", A1: "passive", A: "passive", GND: "power_in", B: "passive", B1: "passive", B0: "passive", "~{EN}": "passive", VCC: "power_in", SEL: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX154ERSW";
@@ -4416,7 +4556,8 @@ export class TMUX1574PW extends Component.withPins({
   "~{EN}": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SEL: "input", S1A: "passive", S1B: "passive", D1: "passive", S2A: "passive", S2B: "passive", D2: "passive", GND: "power_in", D3: "passive", S3B: "passive", S3A: "passive", D4: "passive", S4B: "passive", S4A: "passive", "~{EN}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1574PW";
@@ -4450,7 +4591,8 @@ export class TMUX1574DYY extends Component.withPins({
   "~{EN}": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SEL: "input", S1A: "passive", S1B: "passive", D1: "passive", S2A: "passive", S2B: "passive", D2: "passive", GND: "power_in", D3: "passive", S3B: "passive", S3A: "passive", D4: "passive", S4B: "passive", S4A: "passive", "~{EN}": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1574DYY";
@@ -4484,7 +4626,8 @@ export class TMUX1574RSV extends Component.withPins({
   "SEL": "15",
   "S1A": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S1B: "passive", D1: "passive", S2A: "passive", S2B: "passive", D2: "passive", GND: "power_in", D3: "passive", S3B: "passive", S3A: "passive", D4: "passive", S4B: "passive", S4A: "passive", "~{EN}": "input", VDD: "power_in", SEL: "input", S1A: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX1574RSV";
@@ -4519,7 +4662,8 @@ export class TMUX4051BQB extends Component.withPins({
   "VDD": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S4: "bidirectional", S6: "bidirectional", D: "bidirectional", S7: "bidirectional", S5: "bidirectional", "~{EN}": "input", VSS: "power_in", GND_8: "power_in", A2: "input", A1: "input", A0: "input", S3: "bidirectional", S0: "bidirectional", S1: "bidirectional", S2: "bidirectional", VDD: "power_in", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX4051BQB";
@@ -4553,7 +4697,8 @@ export class TMUX4051PW extends Component.withPins({
   "S2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S4: "bidirectional", S6: "bidirectional", D: "bidirectional", S7: "bidirectional", S5: "bidirectional", "~{EN}": "input", VSS: "power_in", GND: "power_in", A2: "input", A1: "input", A0: "input", S3: "bidirectional", S0: "bidirectional", S1: "bidirectional", S2: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX4051PW";
@@ -4587,7 +4732,8 @@ export class TMUX4051DYY extends Component.withPins({
   "S2": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { S4: "bidirectional", S6: "bidirectional", D: "bidirectional", S7: "bidirectional", S5: "bidirectional", "~{EN}": "input", VSS: "power_in", GND: "power_in", A2: "input", A1: "input", A0: "input", S3: "bidirectional", S0: "bidirectional", S1: "bidirectional", S2: "bidirectional", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TMUX4051DYY";
@@ -4615,7 +4761,8 @@ export class TS3A24159DGS extends Component.withPins({
   "VCC": "1",
   "GND": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "passive", P3: "passive", P4: "input", P5: "passive", P7: "passive", P8: "input", P9: "passive", P10: "passive", VCC: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A24159DGS";
@@ -4644,7 +4791,8 @@ export class TS3A24159DRC extends Component.withPins({
   "GND": "6",
   "PAD": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "passive", P3: "passive", P4: "input", P5: "passive", P7: "passive", P8: "input", P9: "passive", P10: "passive", VCC: "power_in", GND: "power_in", PAD: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A24159DRC";
@@ -4672,7 +4820,8 @@ export class TS3A24159YZP extends Component.withPins({
   "GND": "A2",
   "VCC": "D2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA1: "passive", PB1: "input", PC1: "passive", PD1: "passive", PA3: "passive", PB3: "input", PC3: "passive", PD3: "passive", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A24159YZP";
@@ -4714,7 +4863,8 @@ export class TS3A27518EPW extends Component.withPins({
   "NC3": "23",
   "IN1": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC2: "bidirectional", NC1: "bidirectional", "N.C.": "no_connect", COM1: "bidirectional", GND: "power_in", COM2: "bidirectional", COM3: "bidirectional", VCC: "power_in", COM4: "bidirectional", COM5: "bidirectional", NO1: "bidirectional", COM6: "bidirectional", NO2: "bidirectional", IN2: "input", NO3: "bidirectional", NO6: "bidirectional", NO4: "bidirectional", NO5: "bidirectional", NC5: "bidirectional", "~{EN}": "input", NC4: "bidirectional", NC6: "bidirectional", NC3: "bidirectional", IN1: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A27518EPW";
@@ -4757,7 +4907,8 @@ export class TS3A27518ERTW extends Component.withPins({
   "N.C.": "24",
   "GND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COM1: "bidirectional", GND_2: "power_in", COM2: "bidirectional", COM3: "bidirectional", VCC: "power_in", COM4: "bidirectional", COM5: "bidirectional", NO1: "bidirectional", COM6: "bidirectional", NO2: "bidirectional", IN2: "input", NO3: "bidirectional", NO6: "bidirectional", NO4: "bidirectional", NO5: "bidirectional", NC5: "bidirectional", "~{EN}": "input", NC4: "bidirectional", NC6: "bidirectional", NC3: "bidirectional", IN1: "input", NC2: "bidirectional", NC1: "bidirectional", "N.C.": "no_connect", GND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A27518ERTW";
@@ -4792,7 +4943,8 @@ export class TS3A5017RGY extends Component.withPins({
   "V+": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1~{EN}": "input", IN2: "input", "1S4": "bidirectional", "1S3": "bidirectional", "1S2": "bidirectional", "1S1": "bidirectional", "1D": "bidirectional", GND_8: "power_in", "2D": "bidirectional", "2S1": "bidirectional", "2S2": "bidirectional", "2S3": "bidirectional", "2S4": "bidirectional", IN1: "input", "2~{EN}": "input", "V+": "power_in", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A5017RGY";
@@ -4826,7 +4978,8 @@ export class TS3A5017RSV extends Component.withPins({
   "1~{EN}": "15",
   "IN2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1S4": "bidirectional", "1S3": "bidirectional", "1S2": "bidirectional", "1S1": "bidirectional", "1D": "bidirectional", GND: "power_in", "2D": "bidirectional", "2S1": "bidirectional", "2S2": "bidirectional", "2S3": "bidirectional", "2S4": "bidirectional", IN1: "input", "2~{EN}": "input", "V+": "power_in", "1~{EN}": "input", IN2: "input", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A5017RSV";
@@ -4854,7 +5007,8 @@ export class TS3A5223RSW extends Component.withPins({
   "VCC": "1",
   "GND": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P2: "passive", P3: "passive", P4: "input", P5: "passive", P7: "passive", P8: "input", P9: "passive", P10: "passive", VCC: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3A5223RSW";
@@ -4892,7 +5046,8 @@ export class TS3DS10224RUK extends Component.withPins({
   "OUTA1-": "19",
   "OUTA1+": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "INA+": "bidirectional", "INA-": "bidirectional", "INB+": "bidirectional", "INB-": "bidirectional", GND: "power_in", "OUTB1+": "bidirectional", "OUTB1-": "bidirectional", "OUTB0+": "bidirectional", "OUTB0-": "bidirectional", ENB: "input", SBO: "input", SBI: "input", VCC: "power_in", SAI: "input", SAO: "input", ENA: "input", "OUTA0-": "bidirectional", "OUTA0+": "bidirectional", "OUTA1-": "bidirectional", "OUTA1+": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3DS10224RUK";
@@ -4953,7 +5108,8 @@ export class TS3L501ERUA extends Component.withPins({
   "VDD_39": "39",
   "GND": "43",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "bidirectional", A1: "bidirectional", C1: "bidirectional", C0: "bidirectional", B1: "bidirectional", B0: "bidirectional", A2: "bidirectional", A3: "bidirectional", C3: "bidirectional", C2: "bidirectional", B3: "bidirectional", B2: "bidirectional", A4: "bidirectional", A5: "bidirectional", C5: "bidirectional", C4: "bidirectional", B5: "bidirectional", B4: "bidirectional", A6: "bidirectional", A7: "bidirectional", C7: "bidirectional", C6: "bidirectional", B7: "bidirectional", B6: "bidirectional", LED_A0: "bidirectional", LED_A1: "bidirectional", LED_B0: "bidirectional", LED_B1: "bidirectional", LED_C0: "bidirectional", LED_C1: "bidirectional", LED_C2: "bidirectional", LED_B2: "bidirectional", LED_A2: "bidirectional", VDD_1: "power_in", VDD_4: "power_in", PD: "input", VDD_8: "power_in", SEL: "input", VDD_14: "power_in", VDD_21: "power_in", VDD_30: "power_in", VDD_39: "power_in", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS3L501ERUA";
@@ -4981,7 +5137,8 @@ export class TS5A23159DGS extends Component.withPins({
   "GND": "3",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P9: "passive", P10: "passive", P4: "passive", P5: "input", P6: "passive", P7: "passive", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A23159DGS";
@@ -5009,7 +5166,8 @@ export class TS5A23157DGS extends Component.withPins({
   "GND": "3",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P9: "passive", P10: "passive", P4: "passive", P5: "input", P6: "passive", P7: "passive", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A23157DGS";
@@ -5037,7 +5195,8 @@ export class TS5A23159RSE extends Component.withPins({
   "GND": "3",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P9: "passive", P10: "passive", P4: "passive", P5: "input", P6: "passive", P7: "passive", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A23159RSE";
@@ -5065,7 +5224,8 @@ export class TS5A23157RSE extends Component.withPins({
   "GND": "3",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "input", P2: "passive", P9: "passive", P10: "passive", P4: "passive", P5: "input", P6: "passive", P7: "passive", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A23157RSE";
@@ -5089,7 +5249,8 @@ export class TS5A3159DBV extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3159DBV";
@@ -5113,7 +5274,8 @@ export class TS5A3159ADBVR extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3159ADBVR";
@@ -5137,7 +5299,8 @@ export class TS5A3159ADCK extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3159ADCK";
@@ -5161,7 +5324,8 @@ export class TS5A3159AYZPR extends Component.withPins({
   "GND": "B1",
   "V+": "B2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA1: "passive", PA2: "input", PC1: "passive", PC2: "passive", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3159AYZPR";
@@ -5185,7 +5349,8 @@ export class TS5A3159DCK extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3159DCK";
@@ -5209,7 +5374,8 @@ export class TS5A3160DBV extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3160DBV";
@@ -5233,7 +5399,8 @@ export class TS5A3160DCK extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3160DCK";
@@ -5256,7 +5423,8 @@ export class TS5A3166DBVR extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", GND: "power_in", P4: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3166DBVR";
@@ -5279,7 +5447,8 @@ export class TS5A3166DCKR extends Component.withPins({
   "P4": "4",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", GND: "power_in", P4: "input", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A3166DCKR";
@@ -5303,7 +5472,8 @@ export class TS5A63157DBV extends Component.withPins({
   "GND": "2",
   "V+": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P3: "passive", P4: "passive", P6: "input", GND: "power_in", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Analog_Switch:TS5A63157DBV";

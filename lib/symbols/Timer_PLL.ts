@@ -33,7 +33,8 @@ export class ADF4002BCPZ extends Component.withPins({
   "CP": "20",
   "AGND_21": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CPGND: "power_in", AGND_2: "power_in", AGND_3: "passive", RFINB: "input", RFINA: "input", AVDD_6: "passive", AVDD_7: "power_in", REFIN: "input", DGND_9: "power_in", DGND_10: "passive", CE: "input", CLK: "input", DATA: "input", LE: "input", MUXOUT: "output", DVDD_16: "power_in", DVDD_17: "passive", VP: "power_in", RSET: "input", CP: "output", AGND_21: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ADF4002BCPZ";
@@ -67,7 +68,8 @@ export class ADF4002BRUZ extends Component.withPins({
   "DVDD": "15",
   "VP": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RSET: "input", CP: "output", CPGND: "power_in", AGND: "power_in", RFINB: "input", RFINA: "input", AVDD: "power_in", REFIN: "input", DGND: "power_in", CE: "input", CLK: "input", DATA: "input", LE: "input", MUXOUT: "output", DVDD: "power_in", VP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ADF4002BRUZ";
@@ -110,7 +112,8 @@ export class ADF4158 extends Component.withPins({
   "CP": "24",
   "AGND_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CPGND: "power_in", AGND_2: "power_in", AGND_3: "passive", RFINB: "input", RFINA: "input", AVDD_6: "power_in", AVDD_7: "passive", AVDD_8: "passive", REFIN: "input", DGND: "power_in", SDGND: "power_in", TXDATA: "input", CE: "input", CLK: "input", DATA: "input", LE: "input", MUXOUT: "output", SDVDD: "power_in", DVDD: "power_in", SW1: "passive", SW2: "passive", VP: "power_in", RSET: "passive", CP: "output", AGND_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ADF4158";
@@ -161,7 +164,8 @@ export class ADF4351 extends Component.withPins({
   "SDVDD": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", DATA: "input", LE: "input", CE: "input", SW: "input", Vp: "power_in", CPout: "input", CPGND: "power_in", AGND: "power_in", AVDD: "power_in", AGNDVCO_11: "power_in", "RF_OUT_A+": "output", "RF_OUT_A-": "output", "RF_OUT_B+": "output", "RF_OUT_B-": "output", VVCO_16: "power_in", VVCO_17: "power_in", AGNDVCO_18: "power_in", TEMP: "input", VTUNE: "input", AGNDVCO_21: "power_in", RSET: "input", VCOM: "input", VREF: "input", LD: "input", PDB_RF: "input", DGND: "power_in", DVDD: "power_in", REFIN: "input", MUXOUT: "output", SDGND: "power_in", SDVDD: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ADF4351";
@@ -212,7 +216,8 @@ export class ADF4350 extends Component.withPins({
   "SDVDD": "32",
   "EP": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLK: "input", DATA: "input", LE: "input", CE: "input", SW: "input", Vp: "power_in", CPout: "input", CPGND: "power_in", AGND: "power_in", AVDD: "power_in", AGNDVCO_11: "power_in", "RF_OUT_A+": "output", "RF_OUT_A-": "output", "RF_OUT_B+": "output", "RF_OUT_B-": "output", VVCO_16: "power_in", VVCO_17: "power_in", AGNDVCO_18: "power_in", TEMP: "input", VTUNE: "input", AGNDVCO_21: "power_in", RSET: "input", VCOM: "input", VREF: "input", LD: "input", PDB_RF: "input", DGND: "power_in", DVDD: "power_in", REFIN: "input", MUXOUT: "output", SDGND: "power_in", SDVDD: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ADF4350";
@@ -237,7 +242,8 @@ export class CDCVF2505 extends Component.withPins({
   "1Y3": "7",
   "CLKOUT": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKIN: "input", "1Y1": "tri_state", "1Y0": "tri_state", GND: "power_in", "1Y2": "tri_state", VDD: "power_in", "1Y3": "tri_state", CLKOUT: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:CDCVF2505";
@@ -265,7 +271,8 @@ export class CS2000_CP extends Component.withPins({
   "SCL/CCLK": "9",
   "SDA/CDIN": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VD: "power_in", GND: "power_in", CLK_OUT: "output", AUX_OUT: "output", CLK_IN: "input", XTO: "output", "XTI/REF_CLK": "input", "AD0/~{CS}": "input", "SCL/CCLK": "input", "SDA/CDIN": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:CS2000-CP";
@@ -311,7 +318,8 @@ export class ICS525_01R extends Component.withPins({
   "R3": "27",
   "R4": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R5: "input", R6: "input", S0: "input", S1: "input", S2: "input", VDD_6: "power_in", "X1/ICLK": "input", X2: "output", GND_9: "power_in", V0: "input", V1: "input", V2: "input", V3: "input", V4: "input", V5: "input", V6: "input", V7: "input", V8: "input", "~{PD}": "input", GND_20: "passive", CLK: "tri_state", REF: "tri_state", VDD_23: "power_in", R0: "input", R1: "input", R2: "input", R3: "input", R4: "input", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ICS525-01R";
@@ -357,7 +365,8 @@ export class ICS525R_02 extends Component.withPins({
   "R3": "27",
   "R4": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R5: "input", R6: "input", S0: "input", S1: "input", S2: "input", VDD_6: "power_in", "X1/ICLK": "input", X2: "output", GND_9: "power_in", V0: "input", V1: "input", V2: "input", V3: "input", V4: "input", V5: "input", V6: "input", V7: "input", V8: "input", "~{PD}": "input", GND_20: "passive", CLK: "tri_state", REF: "tri_state", VDD_23: "power_in", R0: "input", R1: "input", R2: "input", R3: "input", R4: "input", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:ICS525R-02";
@@ -420,7 +429,8 @@ export class Si5342A_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS_26: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDS_29: "passive", "~{LOS0}": "output", "~{LOS1}": "output", VDD_32: "passive", "~{INTR}": "output", VDDS_34: "passive", "~{LOS2}": "output", "~{LOS3}": "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5342A-D";
@@ -483,7 +493,8 @@ export class Si5342B_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS_26: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDS_29: "passive", "~{LOS0}": "output", "~{LOS1}": "output", VDD_32: "passive", "~{INTR}": "output", VDDS_34: "passive", "~{LOS2}": "output", "~{LOS3}": "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5342B-D";
@@ -546,7 +557,8 @@ export class Si5342C_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS_26: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDS_29: "passive", "~{LOS0}": "output", "~{LOS1}": "output", VDD_32: "passive", "~{INTR}": "output", VDDS_34: "passive", "~{LOS2}": "output", "~{LOS3}": "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5342C-D";
@@ -609,7 +621,8 @@ export class Si5342D_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS_26: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDS_29: "passive", "~{LOS0}": "output", "~{LOS1}": "output", VDD_32: "passive", "~{INTR}": "output", VDDS_34: "passive", "~{LOS2}": "output", "~{LOS3}": "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5342D-D";
@@ -672,7 +685,8 @@ export class Si5344A_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "passive", "~{INTR}": "output", VDDO3: "power_in", OUT3b: "output", OUT3: "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5344A-D";
@@ -735,7 +749,8 @@ export class Si5344B_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "passive", "~{INTR}": "output", VDDO3: "power_in", OUT3b: "output", OUT3: "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5344B-D";
@@ -798,7 +813,8 @@ export class Si5344C_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "passive", "~{INTR}": "output", VDDO3: "power_in", OUT3b: "output", OUT3: "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5344C-D";
@@ -861,7 +877,8 @@ export class Si5344D_D extends Component.withPins({
   "IN0b": "44",
   "GND": "45",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", X1: "input", XA: "input", XB: "input", X2: "input", VDDA_8: "power_in", VDDA_9: "passive", IN2: "input", IN2b: "input", "~{OE}": "input", "SDA/SDIO": "bidirectional", SCLK: "input", "A1/SDO": "bidirectional", "A0/~{CS}": "input", "~{RST}": "input", VDDO0: "power_in", OUT0b: "output", OUT0: "output", VDD_21: "power_in", NC: "no_connect", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDS: "power_in", "~{LOL}": "output", "~{LOS_XAXB}": "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "passive", "~{INTR}": "output", VDDO3: "power_in", OUT3b: "output", OUT3: "output", IN_SEL1: "input", I2C_SEL: "input", VDD_39: "passive", VDD_40: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5344D-D";
@@ -944,7 +961,8 @@ export class Si5345A_D extends Component.withPins({
   "IN0b": "64",
   "GND": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", IN_SEL1: "input", NC_5: "no_connect", "~{RST}": "input", X1: "input", XA: "input", XB: "input", X2: "input", "~{OE}": "input", "~{INTR}": "output", VDDA: "power_in", IN2: "input", IN2b: "input", SCLK: "input", "A1/SDO": "bidirectional", "SDA/SDIO": "bidirectional", "A0/~{CS}": "input", NC_20: "no_connect", NC_21: "no_connect", VDDO0: "power_in", OUT0b: "output", OUT0: "output", FDEC: "input", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "power_in", VDDO3: "power_in", OUT3b: "output", OUT3: "output", VDDO4: "power_in", OUT4b: "output", OUT4: "output", I2C_SEL: "input", VDDO5: "power_in", OUT5b: "output", OUT5: "output", VDDO6: "power_in", OUT6b: "output", OUT6: "output", VDD_46: "passive", "~{LOL}": "output", FINC: "input", VDDO7: "power_in", OUT7b: "output", OUT7: "output", VDDO8: "power_in", OUT8b: "output", OUT8: "output", NC_55: "no_connect", NC_56: "no_connect", VDDO9: "power_in", OUT9b: "output", OUT9: "output", VDD_60: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5345A-D";
@@ -1027,7 +1045,8 @@ export class Si5345B_D extends Component.withPins({
   "IN0b": "64",
   "GND": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", IN_SEL1: "input", NC_5: "no_connect", "~{RST}": "input", X1: "input", XA: "input", XB: "input", X2: "input", "~{OE}": "input", "~{INTR}": "output", VDDA: "power_in", IN2: "input", IN2b: "input", SCLK: "input", "A1/SDO": "bidirectional", "SDA/SDIO": "bidirectional", "A0/~{CS}": "input", NC_20: "no_connect", NC_21: "no_connect", VDDO0: "power_in", OUT0b: "output", OUT0: "output", FDEC: "input", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "power_in", VDDO3: "power_in", OUT3b: "output", OUT3: "output", VDDO4: "power_in", OUT4b: "output", OUT4: "output", I2C_SEL: "input", VDDO5: "power_in", OUT5b: "output", OUT5: "output", VDDO6: "power_in", OUT6b: "output", OUT6: "output", VDD_46: "passive", "~{LOL}": "output", FINC: "input", VDDO7: "power_in", OUT7b: "output", OUT7: "output", VDDO8: "power_in", OUT8b: "output", OUT8: "output", NC_55: "no_connect", NC_56: "no_connect", VDDO9: "power_in", OUT9b: "output", OUT9: "output", VDD_60: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5345B-D";
@@ -1110,7 +1129,8 @@ export class Si5345C_D extends Component.withPins({
   "IN0b": "64",
   "GND": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", IN_SEL1: "input", NC_5: "no_connect", "~{RST}": "input", X1: "input", XA: "input", XB: "input", X2: "input", "~{OE}": "input", "~{INTR}": "output", VDDA: "power_in", IN2: "input", IN2b: "input", SCLK: "input", "A1/SDO": "bidirectional", "SDA/SDIO": "bidirectional", "A0/~{CS}": "input", NC_20: "no_connect", NC_21: "no_connect", VDDO0: "power_in", OUT0b: "output", OUT0: "output", FDEC: "input", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "power_in", VDDO3: "power_in", OUT3b: "output", OUT3: "output", VDDO4: "power_in", OUT4b: "output", OUT4: "output", I2C_SEL: "input", VDDO5: "power_in", OUT5b: "output", OUT5: "output", VDDO6: "power_in", OUT6b: "output", OUT6: "output", VDD_46: "passive", "~{LOL}": "output", FINC: "input", VDDO7: "power_in", OUT7b: "output", OUT7: "output", VDDO8: "power_in", OUT8b: "output", OUT8: "output", NC_55: "no_connect", NC_56: "no_connect", VDDO9: "power_in", OUT9b: "output", OUT9: "output", VDD_60: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5345C-D";
@@ -1193,7 +1213,8 @@ export class Si5345D_D extends Component.withPins({
   "IN0b": "64",
   "GND": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN1b: "input", IN_SEL0: "input", IN_SEL1: "input", NC_5: "no_connect", "~{RST}": "input", X1: "input", XA: "input", XB: "input", X2: "input", "~{OE}": "input", "~{INTR}": "output", VDDA: "power_in", IN2: "input", IN2b: "input", SCLK: "input", "A1/SDO": "bidirectional", "SDA/SDIO": "bidirectional", "A0/~{CS}": "input", NC_20: "no_connect", NC_21: "no_connect", VDDO0: "power_in", OUT0b: "output", OUT0: "output", FDEC: "input", VDDO1: "power_in", OUT1b: "output", OUT1: "output", VDDO2: "power_in", OUT2b: "output", OUT2: "output", VDD_32: "power_in", VDDO3: "power_in", OUT3b: "output", OUT3: "output", VDDO4: "power_in", OUT4b: "output", OUT4: "output", I2C_SEL: "input", VDDO5: "power_in", OUT5b: "output", OUT5: "output", VDDO6: "power_in", OUT6b: "output", OUT6: "output", VDD_46: "passive", "~{LOL}": "output", FINC: "input", VDDO7: "power_in", OUT7b: "output", OUT7: "output", VDDO8: "power_in", OUT8b: "output", OUT8: "output", NC_55: "no_connect", NC_56: "no_connect", VDDO9: "power_in", OUT9b: "output", OUT9: "output", VDD_60: "passive", "IN3/FB_IN": "input", "IN3b/FB_INb": "input", IN0: "input", IN0b: "input", GND: "power_in", ...opts.pinTypes } });
   }
   override schema = "Timer_PLL:Si5345D-D";

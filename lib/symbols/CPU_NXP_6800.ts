@@ -52,7 +52,8 @@ export class MC6800 extends Component.withPins({
   "TSC": "39",
   "~{RESET}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", "~{HALT}": "input", Phi1: "input", "~{IRQ}": "input", VMA: "output", "~{NMI}": "input", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", VSS_21: "power_in", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", "N.C._35": "no_connect", DBE: "input", Phi2: "input", "N.C._38": "no_connect", TSC: "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC6800";
@@ -110,7 +111,8 @@ export class MC6802 extends Component.withPins({
   "EXTAL": "39",
   "~{RESET}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "passive", "~{HALT}": "input", MR: "input", "~{IRQ}": "input", VMA: "output", "~{NMI}": "input", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", VSS_21: "power_in", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", VCC_STANDBY: "power_in", RE: "input", E: "output", XTAL: "passive", EXTAL: "passive", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC6802";
@@ -168,7 +170,8 @@ export class MC6809 extends Component.withPins({
   "XTAL": "39",
   "~{HALT}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{NMI}": "input", "~{IRQ}": "input", "~{FIRQ}": "input", BS: "output", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", "~{DMA/BREQ}": "input", E: "output", Q: "output", MRDY: "input", "~{RESET}": "input", EXTAL: "input", XTAL: "input", "~{HALT}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC6809";
@@ -226,7 +229,8 @@ export class MC6809E extends Component.withPins({
   "TSC": "39",
   "~{HALT}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{NMI}": "input", "~{IRQ}": "input", "~{FIRQ}": "input", BS: "output", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", BUSY: "output", E: "input", Q: "input", AVMA: "output", "~{RESET}": "input", LIC: "output", TSC: "input", "~{HALT}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC6809E";
@@ -284,7 +288,8 @@ export class MC68A00 extends Component.withPins({
   "TSC": "39",
   "~{RESET}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", "~{HALT}": "input", Phi1: "input", "~{IRQ}": "input", VMA: "output", "~{NMI}": "input", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", VSS_21: "power_in", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", "N.C._35": "no_connect", DBE: "input", Phi2: "input", "N.C._38": "no_connect", TSC: "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68A00";
@@ -342,7 +347,8 @@ export class MC68A02 extends Component.withPins({
   "EXTAL": "39",
   "~{RESET}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "passive", "~{HALT}": "input", MR: "input", "~{IRQ}": "input", VMA: "output", "~{NMI}": "input", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", VSS_21: "power_in", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", VCC_STANDBY: "power_in", RE: "input", E: "output", XTAL: "passive", EXTAL: "passive", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68A02";
@@ -400,7 +406,8 @@ export class MC68A09 extends Component.withPins({
   "XTAL": "39",
   "~{HALT}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{NMI}": "input", "~{IRQ}": "input", "~{FIRQ}": "input", BS: "output", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", "~{DMA/BREQ}": "input", E: "output", Q: "output", MRDY: "input", "~{RESET}": "input", EXTAL: "input", XTAL: "input", "~{HALT}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68A09";
@@ -458,7 +465,8 @@ export class MC68A09E extends Component.withPins({
   "TSC": "39",
   "~{HALT}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{NMI}": "input", "~{IRQ}": "input", "~{FIRQ}": "input", BS: "output", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", BUSY: "output", E: "input", Q: "input", AVMA: "output", "~{RESET}": "input", LIC: "output", TSC: "input", "~{HALT}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68A09E";
@@ -516,7 +524,8 @@ export class MC68B00 extends Component.withPins({
   "TSC": "39",
   "~{RESET}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", "~{HALT}": "input", Phi1: "input", "~{IRQ}": "input", VMA: "output", "~{NMI}": "input", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", VSS_21: "power_in", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", "N.C._35": "no_connect", DBE: "input", Phi2: "input", "N.C._38": "no_connect", TSC: "input", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68B00";
@@ -574,7 +583,8 @@ export class MC68B02 extends Component.withPins({
   "EXTAL": "39",
   "~{RESET}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "passive", "~{HALT}": "input", MR: "input", "~{IRQ}": "input", VMA: "output", "~{NMI}": "input", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", VSS_21: "power_in", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", VCC_STANDBY: "power_in", RE: "input", E: "output", XTAL: "passive", EXTAL: "passive", "~{RESET}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68B02";
@@ -632,7 +642,8 @@ export class MC68B09 extends Component.withPins({
   "XTAL": "39",
   "~{HALT}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{NMI}": "input", "~{IRQ}": "input", "~{FIRQ}": "input", BS: "output", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", "~{DMA/BREQ}": "input", E: "output", Q: "output", MRDY: "input", "~{RESET}": "input", EXTAL: "input", XTAL: "input", "~{HALT}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68B09";
@@ -690,7 +701,8 @@ export class MC68B09E extends Component.withPins({
   "TSC": "39",
   "~{HALT}": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{NMI}": "input", "~{IRQ}": "input", "~{FIRQ}": "input", BS: "output", BA: "output", VCC: "power_in", A0: "output", A1: "output", A2: "output", A3: "output", A4: "output", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "R/~{W}": "output", BUSY: "output", E: "input", Q: "input", AVMA: "output", "~{RESET}": "input", LIC: "output", TSC: "input", "~{HALT}": "input", ...opts.pinTypes } });
   }
   override schema = "CPU_NXP_6800:MC68B09E";

@@ -45,11 +45,11 @@ export function renderComponents(tree: Xml, options: { symbolSource?: string } =
     if (options.symbolSource) text += `  override symbolSource = fileURLToPath(new URL(${q(options.symbolSource)}, import.meta.url));\n`
     const flags = Object.fromEntries([['inBom', 'exclude_from_bom'], ['onBoard', 'exclude_from_board']].filter(([field]) => lib.value(field) === 'no').map(([, property]) => [property, null]))
     const pinTypes = Object.entries(mapping).map(([name, number]) => `${/^[A-Za-z_$][\w$]*$/.test(name) ? name : q(name)}: ${q(pins.find(pin => pin.get('num') === number)!.get('type') || 'unspecified')}`).join(', ')
-    text += `  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {\n    super({ ${lib.value('power') ? `value: ${q(lib.get('part'))}, ` : ''}...opts, pinTypes: { ${pinTypes}${pinTypes ? ', ' : ''}...opts.pinTypes }${Object.keys(flags).length ? `, properties: { ...${q(flags)}, ...opts.properties }` : ''} });\n  }\n`
+    text += `  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {\n    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;\n    super({ ${lib.value('power') ? `value: ${q(lib.get('part'))}, ` : ''}...opts, pinTypes: { ${pinTypes}${pinTypes ? ', ' : ''}...opts.pinTypes }${Object.keys(flags).length ? `, properties: { ...${q(flags)}, ...opts.properties }` : ''} });\n  }\n`
     text += `  override schema = ${q(key)};\n  override referencePrefix = ${q(prefix)};\n}\n\n`
   }
   for (const [id, helper] of [['Device:C', 'c'], ['Device:R', 'r']]) {
-    if (libraries[id]) text += `export const ${helper} = (opts: ConstructorParameters<typeof ${libraries[id].className}>[0] = {}) => new ${libraries[id].className}(opts);\n`
+    if (libraries[id]) text += `export const ${helper} = (...args: ConstructorParameters<typeof ${libraries[id].className}>) => new ${libraries[id].className}(...args);\n`
   }
   return { text: text.replace(/[ \t]+$/gm, '').trimEnd() + '\n', libraries }
 }

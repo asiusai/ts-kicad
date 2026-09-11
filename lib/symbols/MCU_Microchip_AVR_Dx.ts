@@ -40,7 +40,8 @@ export class AVR32DA28x_xSO extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA28x-xSO";
@@ -86,7 +87,8 @@ export class AVR128DA28x_xSO extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA28x-xSO";
@@ -132,7 +134,8 @@ export class AVR128DA28x_xSP extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA28x-xSP";
@@ -178,7 +181,8 @@ export class AVR128DA28x_xSS extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA28x-xSS";
@@ -228,7 +232,8 @@ export class AVR32DA32x_xPT extends Component.withPins({
   "PA1": "31",
   "PA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_19: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_29: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA32x-xPT";
@@ -278,7 +283,8 @@ export class AVR128DA32x_xPT extends Component.withPins({
   "PA1": "31",
   "PA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_19: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_29: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA32x-xPT";
@@ -329,7 +335,8 @@ export class AVR32DA32x_xRXB extends Component.withPins({
   "PA2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_19: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_29: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA32x-xRXB";
@@ -380,7 +387,8 @@ export class AVR128DA32x_xRXB extends Component.withPins({
   "PA2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_19: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_29: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA32x-xRXB";
@@ -447,7 +455,8 @@ export class AVR32DA48x_x6LX extends Component.withPins({
   "PA4": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_14: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_29: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD_42: "passive", GND_43: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA48x-x6LX";
@@ -514,7 +523,8 @@ export class AVR128DA48x_x6LX extends Component.withPins({
   "PA4": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_14: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_29: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD_42: "passive", GND_43: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA48x-x6LX";
@@ -580,7 +590,8 @@ export class AVR32DA48x_xPT extends Component.withPins({
   "PA3": "47",
   "PA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_14: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_29: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD_42: "passive", GND_43: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA48x-xPT";
@@ -646,7 +657,8 @@ export class AVR128DA48x_xPT extends Component.withPins({
   "PA3": "47",
   "PA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_14: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_29: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD_42: "passive", GND_43: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA48x-xPT";
@@ -729,7 +741,8 @@ export class AVR64DA64x_xMR extends Component.withPins({
   "PA2": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_20: "passive", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_35: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6_": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA64x-xMR";
@@ -812,7 +825,8 @@ export class AVR128DA64x_xMR extends Component.withPins({
   "PA2": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_20: "passive", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_35: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6_": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA64x-xMR";
@@ -894,7 +908,8 @@ export class AVR64DA64x_xPT extends Component.withPins({
   "PA1": "63",
   "PA2": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_20: "passive", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_35: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6_": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA64x-xPT";
@@ -976,7 +991,8 @@ export class AVR128DA64x_xPT extends Component.withPins({
   "PA1": "63",
   "PA2": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_20: "passive", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_35: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6_": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DA64x-xPT";
@@ -1022,7 +1038,8 @@ export class AVR32DB28x_xSO extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB28x-xSO";
@@ -1068,7 +1085,8 @@ export class AVR128DB28x_xSO extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB28x-xSO";
@@ -1114,7 +1132,8 @@ export class AVR128DB28x_xSP extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB28x-xSP";
@@ -1160,7 +1179,8 @@ export class AVR128DB28x_xSS extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB28x-xSS";
@@ -1210,7 +1230,8 @@ export class AVR32DB32x_xPT extends Component.withPins({
   "XTALHF2/PA1": "31",
   "PA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "input", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB32x-xPT";
@@ -1260,7 +1281,8 @@ export class AVR128DB32x_xPT extends Component.withPins({
   "XTALHF2/PA1": "31",
   "PA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "input", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB32x-xPT";
@@ -1311,7 +1333,8 @@ export class AVR32DB32x_xRXB extends Component.withPins({
   "PA2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "input", UPDI: "input", VDD: "power_in", GND_29: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB32x-xRXB";
@@ -1362,7 +1385,8 @@ export class AVR128DB32x_xRXB extends Component.withPins({
   "PA2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "input", UPDI: "input", VDD: "power_in", GND_29: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB32x-xRXB";
@@ -1429,7 +1453,8 @@ export class AVR32DB48x_x6LX extends Component.withPins({
   "PA4": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_43: "passive", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB48x-x6LX";
@@ -1496,7 +1521,8 @@ export class AVR128DB48x_x6LX extends Component.withPins({
   "PA4": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_43: "passive", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB48x-x6LX";
@@ -1562,7 +1588,8 @@ export class AVR32DB48x_xPT extends Component.withPins({
   "PA3": "47",
   "PA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_43: "passive", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB48x-xPT";
@@ -1628,7 +1655,8 @@ export class AVR128DB48x_xPT extends Component.withPins({
   "PA3": "47",
   "PA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_43: "passive", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB48x-xPT";
@@ -1711,7 +1739,8 @@ export class AVR64DB64x_xMR extends Component.withPins({
   "PA2": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB64x-xMR";
@@ -1794,7 +1823,8 @@ export class AVR128DB64x_xMR extends Component.withPins({
   "PA2": "64",
   "GND_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", GND_65: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB64x-xMR";
@@ -1876,7 +1906,8 @@ export class AVR64DB64x_xPT extends Component.withPins({
   "XTALHF2/PA1": "63",
   "PA2": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB64x-xPT";
@@ -1958,7 +1989,8 @@ export class AVR128DB64x_xPT extends Component.withPins({
   "XTALHF2/PA1": "63",
   "PA2": "64",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VDD_6: "power_in", GND_7: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_21: "passive", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", PE4: "bidirectional", PE5: "bidirectional", PE6: "bidirectional", PE7: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", PG0: "bidirectional", PG1: "bidirectional", PG2: "bidirectional", PG3: "bidirectional", VDD_56: "passive", GND_57: "passive", PG4: "bidirectional", PG5: "bidirectional", PG6: "bidirectional", PG7: "bidirectional", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR128DB64x-xPT";
@@ -2004,7 +2036,8 @@ export class AVR32DA28x_xSP extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA28x-xSP";
@@ -2050,7 +2083,8 @@ export class AVR32DA28x_xSS extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DA28x-xSS";
@@ -2096,7 +2130,8 @@ export class AVR32DB28x_xSP extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB28x-xSP";
@@ -2142,7 +2177,8 @@ export class AVR32DB28x_xSS extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR32DB28x-xSS";
@@ -2188,7 +2224,8 @@ export class AVR64DA28x_xSO extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA28x-xSO";
@@ -2234,7 +2271,8 @@ export class AVR64DA28x_xSP extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA28x-xSP";
@@ -2280,7 +2318,8 @@ export class AVR64DA28x_xSS extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_15: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_21: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA28x-xSS";
@@ -2330,7 +2369,8 @@ export class AVR64DA32x_xPT extends Component.withPins({
   "PA1": "31",
   "PA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_19: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_29: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA32x-xPT";
@@ -2381,7 +2421,8 @@ export class AVR64DA32x_xRXB extends Component.withPins({
   "PA2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_19: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_29: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA32x-xRXB";
@@ -2448,7 +2489,8 @@ export class AVR64DA48x_x6LX extends Component.withPins({
   "PA4": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_14: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_29: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD_42: "passive", GND_43: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA48x-x6LX";
@@ -2514,7 +2556,8 @@ export class AVR64DA48x_xPT extends Component.withPins({
   "PA3": "47",
   "PA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDD_14: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", GND_29: "passive", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD_42: "passive", GND_43: "passive", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DA48x-xPT";
@@ -2560,7 +2603,8 @@ export class AVR64DB28x_xSO extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB28x-xSO";
@@ -2606,7 +2650,8 @@ export class AVR64DB28x_xSP extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB28x-xSP";
@@ -2652,7 +2697,8 @@ export class AVR64DB28x_xSS extends Component.withPins({
   "PA5": "27",
   "PA6": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB28x-xSS";
@@ -2702,7 +2748,8 @@ export class AVR64DB32x_xPT extends Component.withPins({
   "XTALHF2/PA1": "31",
   "PA2": "32",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "input", UPDI: "input", VDD: "power_in", GND: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB32x-xPT";
@@ -2753,7 +2800,8 @@ export class AVR64DB32x_xRXB extends Component.withPins({
   "PA2": "32",
   "GND_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "input", UPDI: "input", VDD: "power_in", GND_29: "power_in", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", GND_33: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB32x-xRXB";
@@ -2820,7 +2868,8 @@ export class AVR64DB48x_x6LX extends Component.withPins({
   "PA4": "48",
   "GND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_43: "passive", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", GND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB48x-x6LX";
@@ -2886,7 +2935,8 @@ export class AVR64DB48x_xPT extends Component.withPins({
   "PA3": "47",
   "PA4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", VDDIO2: "power_in", GND_15: "power_in", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", PC7: "bidirectional", PD0: "bidirectional", PD1: "bidirectional", PD2: "bidirectional", PD3: "bidirectional", PD4: "bidirectional", PD5: "bidirectional", PD6: "bidirectional", "VREFA/PD7": "bidirectional", AVDD: "power_in", AGND: "power_in", PE0: "bidirectional", PE1: "bidirectional", PE2: "bidirectional", PE3: "bidirectional", "XTAL32K1/PF0": "bidirectional", "XTAL32K2/PF1": "bidirectional", PF2: "bidirectional", PF3: "bidirectional", PF4: "bidirectional", PF5: "bidirectional", "~{RESET}/PF6": "bidirectional", UPDI: "input", VDD: "power_in", GND_43: "passive", "XTALHF1/PA0": "bidirectional", "XTALHF2/PA1": "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "MCU_Microchip_AVR_Dx:AVR64DB48x-xPT";

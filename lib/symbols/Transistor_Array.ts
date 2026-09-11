@@ -32,7 +32,8 @@ export class A2982 extends Component.withPins({
   "OUT2": "19",
   "OUT1": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN2: "input", IN3: "input", IN4: "input", IN5: "input", IN6: "input", IN7: "input", IN8: "input", "+VS": "power_in", NC_10: "no_connect", NC_11: "no_connect", GND: "power_in", OUT8: "open_emitter", OUT7: "open_emitter", OUT6: "open_emitter", OUT5: "open_emitter", OUT4: "open_emitter", OUT3: "open_emitter", OUT2: "open_emitter", OUT1: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:A2982";
@@ -66,7 +67,8 @@ export class MC1413D extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:MC1413D";
@@ -100,7 +102,8 @@ export class MC1413BD extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:MC1413BD";
@@ -134,7 +137,8 @@ export class MC1413BP extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:MC1413BP";
@@ -168,7 +172,8 @@ export class MC1413P extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:MC1413P";
@@ -202,7 +207,8 @@ export class NCV1413B extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:NCV1413B";
@@ -235,7 +241,8 @@ export class SN75468 extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:SN75468";
@@ -268,7 +275,8 @@ export class SN75469 extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:SN75469";
@@ -303,7 +311,8 @@ export class TBD62783A extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", VCC: "power_in", GND: "power_in", O8: "open_emitter", O7: "open_emitter", O6: "open_emitter", O5: "open_emitter", O4: "open_emitter", O3: "open_emitter", O2: "open_emitter", O1: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:TBD62783A";
@@ -339,7 +348,8 @@ export class TBD62785APG extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", VCC: "power_in", GND: "power_in", O8: "open_emitter", O7: "open_emitter", O6: "open_emitter", O5: "open_emitter", O4: "open_emitter", O3: "open_emitter", O2: "open_emitter", O1: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:TBD62785APG";
@@ -375,7 +385,8 @@ export class TBD62785AFWG extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", VCC: "power_in", GND: "power_in", O8: "open_emitter", O7: "open_emitter", O6: "open_emitter", O5: "open_emitter", O4: "open_emitter", O3: "open_emitter", O2: "open_emitter", O1: "open_emitter", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:TBD62785AFWG";
@@ -409,7 +420,8 @@ export class TPL7407LAPW extends Component.withPins({
   "OUT2": "15",
   "OUT1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN2: "input", IN3: "input", IN4: "input", IN5: "input", IN6: "input", IN7: "input", GND: "power_in", COM: "power_in", OUT7: "open_collector", OUT6: "open_collector", OUT5: "open_collector", OUT4: "open_collector", OUT3: "open_collector", OUT2: "open_collector", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:TPL7407LAPW";
@@ -443,7 +455,8 @@ export class TPL7407LAD extends Component.withPins({
   "OUT2": "15",
   "OUT1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IN1: "input", IN2: "input", IN3: "input", IN4: "input", IN5: "input", IN6: "input", IN7: "input", GND: "power_in", COM: "power_in", OUT7: "open_collector", OUT6: "open_collector", OUT5: "open_collector", OUT4: "open_collector", OUT3: "open_collector", OUT2: "open_collector", OUT1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:TPL7407LAD";
@@ -476,7 +489,8 @@ export class ULN2003 extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2003";
@@ -509,7 +523,8 @@ export class ULN2002 extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2002";
@@ -542,7 +557,8 @@ export class ULN2002A extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2002A";
@@ -575,7 +591,8 @@ export class ULN2003A extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2003A";
@@ -608,7 +625,8 @@ export class ULN2004 extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2004";
@@ -641,7 +659,8 @@ export class ULN2004A extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2004A";
@@ -676,7 +695,8 @@ export class ULN2803A extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", GND: "power_in", COM: "passive", O8: "open_collector", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2803A";
@@ -711,7 +731,8 @@ export class ULN2801A extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", GND: "power_in", COM: "passive", O8: "open_collector", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2801A";
@@ -746,7 +767,8 @@ export class ULN2802A extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", GND: "power_in", COM: "passive", O8: "open_collector", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2802A";
@@ -781,7 +803,8 @@ export class ULN2804A extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", GND: "power_in", COM: "passive", O8: "open_collector", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2804A";
@@ -816,7 +839,8 @@ export class ULN2805A extends Component.withPins({
   "O2": "17",
   "O1": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", I8: "input", GND: "power_in", COM: "passive", O8: "open_collector", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULN2805A";
@@ -849,7 +873,8 @@ export class ULQ2003A extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULQ2003A";
@@ -882,7 +907,8 @@ export class ULQ2004A extends Component.withPins({
   "O2": "15",
   "O1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", GND: "power_in", COM: "passive", O7: "open_collector", O6: "open_collector", O5: "open_collector", O4: "open_collector", O3: "open_collector", O2: "open_collector", O1: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Transistor_Array:ULQ2004A";

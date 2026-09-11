@@ -34,7 +34,8 @@ export class AD_121F2 extends Component.withPins({
   "b-blue": "24",
   "b-red": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "e-green": "passive", "d-blue": "passive", "d-green": "passive", "d-red": "passive", "c-blue": "passive", "c-red": "passive", "e-blue": "passive", "e-red": "passive", "c-green": "passive", "f-green": "passive", "f-red": "passive", "g-green": "passive", "b-green": "passive", anode: "passive", "f-blue": "passive", "g-blue": "passive", "g-red": "passive", "a-blue": "passive", "a-green": "passive", "a-red": "passive", "b-blue": "passive", "b-red": "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:AD-121F2";
@@ -64,7 +65,8 @@ export class CA56_12CGKWA extends Component.withPins({
   "a": "11",
   "CA1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CA4: "input", b: "input", CA3: "input", CA2: "input", f: "input", a: "input", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CA56-12CGKWA";
@@ -94,7 +96,8 @@ export class CA56_12EWA extends Component.withPins({
   "a": "11",
   "CA1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CA4: "input", b: "input", CA3: "input", CA2: "input", f: "input", a: "input", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CA56-12EWA";
@@ -124,7 +127,8 @@ export class CA56_12SEKWA extends Component.withPins({
   "a": "11",
   "CA1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CA4: "input", b: "input", CA3: "input", CA2: "input", f: "input", a: "input", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CA56-12SEKWA";
@@ -154,7 +158,8 @@ export class CA56_12SRWA extends Component.withPins({
   "a": "11",
   "CA1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CA4: "input", b: "input", CA3: "input", CA2: "input", f: "input", a: "input", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CA56-12SRWA";
@@ -184,7 +189,8 @@ export class CA56_12SURKWA extends Component.withPins({
   "a": "11",
   "CA1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CA4: "input", b: "input", CA3: "input", CA2: "input", f: "input", a: "input", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CA56-12SURKWA";
@@ -214,7 +220,8 @@ export class CA56_12SYKWA extends Component.withPins({
   "a": "11",
   "CA1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CA4: "input", b: "input", CA3: "input", CA2: "input", f: "input", a: "input", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CA56-12SYKWA";
@@ -244,7 +251,8 @@ export class CC56_12CGKWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12CGKWA";
@@ -274,7 +282,8 @@ export class CC56_12EWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12EWA";
@@ -304,7 +313,8 @@ export class CC56_12GWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12GWA";
@@ -334,7 +344,8 @@ export class CC56_12SEKWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12SEKWA";
@@ -364,7 +375,8 @@ export class CC56_12SRWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12SRWA";
@@ -394,7 +406,8 @@ export class CC56_12SURKWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12SURKWA";
@@ -424,7 +437,8 @@ export class CC56_12SYKWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12SYKWA";
@@ -454,7 +468,8 @@ export class CC56_12YWA extends Component.withPins({
   "a": "11",
   "CC1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "input", d: "input", DPX: "input", c: "input", g: "input", CC4: "input", b: "input", CC3: "input", CC2: "input", f: "input", a: "input", CC1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:CC56-12YWA";
@@ -482,7 +497,8 @@ export class D168K extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:D168K";
@@ -510,7 +526,8 @@ export class D148K extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:D148K";
@@ -538,7 +555,8 @@ export class D198K extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:D198K";
@@ -566,7 +584,8 @@ export class D1X8K_14BL extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:D1X8K-14BL";
@@ -600,7 +619,8 @@ export class DA04_11CGKWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11CGKWA";
@@ -634,7 +654,8 @@ export class DA04_11SURKWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11SURKWA";
@@ -668,7 +689,8 @@ export class DA04_11EWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11EWA";
@@ -702,7 +724,8 @@ export class DA04_11GWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11GWA";
@@ -736,7 +759,8 @@ export class DA04_11SEKWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11SEKWA";
@@ -770,7 +794,8 @@ export class DA04_11SRWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11SRWA";
@@ -804,7 +829,8 @@ export class DA04_11SYKWA extends Component.withPins({
   "DIG1_A": "15",
   "DIG1_G": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_C: "input", DIG1_E: "input", DIG1_D: "input", DIG1_CA: "input", DIG2_CA: "input", DIG2_D: "input", DIG2_E: "input", DIG2_C: "input", DIG2_G: "input", DIG2_A: "input", DIG2_F: "input", DIG2_B: "input", DIG1_B: "input", DIG1_F: "input", DIG1_A: "input", DIG1_G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA04-11SYKWA";
@@ -840,7 +866,8 @@ export class DA56_11CGKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11CGKWA";
@@ -876,7 +903,8 @@ export class DA56_11SURKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11SURKWA";
@@ -912,7 +940,8 @@ export class DA56_11EWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11EWA";
@@ -948,7 +977,8 @@ export class DA56_11GWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11GWA";
@@ -984,7 +1014,8 @@ export class DA56_11SEKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11SEKWA";
@@ -1020,7 +1051,8 @@ export class DA56_11SRWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11SRWA";
@@ -1056,7 +1088,8 @@ export class DA56_11SYKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11SYKWA";
@@ -1092,7 +1125,8 @@ export class DA56_11YWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CA: "input", DIG1_CA: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DA56-11YWA";
@@ -1128,7 +1162,8 @@ export class DC56_11CGKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11CGKWA";
@@ -1164,7 +1199,8 @@ export class DC56_11SURKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11SURKWA";
@@ -1200,7 +1236,8 @@ export class DC56_11EWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11EWA";
@@ -1236,7 +1273,8 @@ export class DC56_11GWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11GWA";
@@ -1272,7 +1310,8 @@ export class DC56_11SEKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11SEKWA";
@@ -1308,7 +1347,8 @@ export class DC56_11SRWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11SRWA";
@@ -1344,7 +1384,8 @@ export class DC56_11SYKWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11SYKWA";
@@ -1380,7 +1421,8 @@ export class DC56_11YWA extends Component.withPins({
   "DIG1_G": "17",
   "DIG1_F": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIG1_E: "input", DIG1_D: "input", DIG1_C: "input", DP1: "input", DIG2_E: "input", DIG2_D: "input", DIG2_G: "input", DIG2_C: "input", DP2: "input", DIG2_B: "input", DIG2_A: "input", DIG2_F: "input", DIG2_CC: "input", DIG1_CC: "input", DIG1_B: "input", DIG1_A: "input", DIG1_G: "input", DIG1_F: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DC56-11YWA";
@@ -1438,7 +1480,8 @@ export class DE113_XX_XX extends Component.withPins({
   ":": "39",
   "BP_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BP_1: "input", "-": "input", K: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", DP1: "input", "1E": "input", "1D": "input", "1C": "input", DP2: "input", "2E": "input", "2D": "input", "2C": "input", DP3: "input", "3E": "input", "3D": "input", "3C": "input", "3B": "input", "3A": "input", "3F": "input", "3G": "input", "2B": "input", "2A": "input", "2F": "input", "2G": "input", COL: "input", "1B": "input", "1A": "input", "1F": "input", "1G": "input", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", LO_BAT: "input", ":": "input", BP_40: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DE113-XX-XX";
@@ -1496,7 +1539,8 @@ export class DE114_RS_20 extends Component.withPins({
   ":": "39",
   "BAT": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BP: "input", "-": "input", K: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", DP1: "input", "1E": "input", "1D": "input", "1C": "input", DP2: "input", "2E": "input", "2D": "input", "2C": "input", DP3: "input", "3E": "input", "3D": "input", "3C": "input", "3B": "input", "3A": "input", "3F": "input", "3G": "input", "2B": "input", "2A": "input", "2F": "input", "2G": "input", COL: "input", "1B": "input", "1A": "input", "1F": "input", "1G": "input", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", P37: "input", P38: "input", ":": "input", BAT: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DE114-RS-20";
@@ -1564,7 +1608,8 @@ export class DE122_XX_XX extends Component.withPins({
   "3A": "39",
   "3F": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "3G": "input", COL1: "input", "2B": "input", "2A": "input", "2F": "input", "2G": "input", "1B": "input", "1A": "input", "1F": "input", "1G": "input", BP: "input", "1E": "input", "1D": "input", "1C": "input", DP1: "input", "2E": "input", "2D": "input", "2C": "input", DP2: "input", "3E": "input", "3D": "input", "3C": "input", DP3: "input", "4E": "input", "4D": "input", "4C": "input", DP4: "input", "5E": "input", "5D": "input", "5C": "input", DP5: "input", "6E": "input", "6D": "input", "6C": "input", "6B": "input", "6A": "input", "6F": "input", "6G": "input", "5B": "input", "5A": "input", "5F": "input", "5G": "input", COL2: "input", "4B": "input", "4A": "input", "4F": "input", "4G": "input", "3B": "input", "3A": "input", "3F": "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DE122-XX-XX";
@@ -1622,7 +1667,8 @@ export class DE170_XX_XX extends Component.withPins({
   ":": "39",
   "BP_40": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { BP_1: "input", "-": "input", K: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", NC_7: "no_connect", DP1: "input", "1E": "input", "1D": "input", "1C": "input", DP2: "input", "2E": "input", "2D": "input", "2C": "input", DP3: "input", "3E": "input", "3D": "input", "3C": "input", "3B": "input", "3A": "input", "3F": "input", "3G": "input", "2B": "input", "2A": "input", "2F": "input", "2G": "input", COL: "input", "1B": "input", "1A": "input", "1F": "input", "1G": "input", NC_33: "no_connect", NC_34: "no_connect", NC_35: "no_connect", NC_36: "no_connect", NC_37: "no_connect", P38: "input", ":": "input", BP_40: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DE170-XX-XX";
@@ -1660,7 +1706,8 @@ export class DL1416 extends Component.withPins({
   "V-": "19",
   "D6": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D5: "input", D4: "input", D0: "input", D1: "input", D2: "input", D3: "input", "~{CE}": "input", "~{WR}": "input", "~{CU}": "input", A0: "input", A1: "input", Unused_12: "no_connect", Unused_13: "no_connect", Unused_14: "no_connect", Unused_15: "no_connect", Unused_16: "no_connect", Unused_17: "no_connect", "V+": "power_in", "V-": "power_in", D6: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:DL1416";
@@ -1684,7 +1731,8 @@ export class EA_T123X_I2C extends Component.withPins({
   "SDA": "5",
   "SCL": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", VLCD: "input", V0: "power_in", SDA: "bidirectional", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:EA_T123X-I2C";
@@ -1712,7 +1760,8 @@ export class ELD_426SYGWA extends Component.withPins({
   "g": "9",
   "CA_D1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { d: "input", DP: "input", e: "input", c: "input", CA_D2: "input", b: "input", a: "input", f: "input", g: "input", CA_D1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:ELD-426SYGWA";
@@ -1740,7 +1789,8 @@ export class HDSM_441B extends Component.withPins({
   "B": "9",
   "CA_DIG1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", DP: "input", A: "input", F: "input", CA_DIG2: "input", D: "input", E: "input", C: "input", B: "input", CA_DIG1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSM-441B";
@@ -1768,7 +1818,8 @@ export class HDSM_443B extends Component.withPins({
   "B": "9",
   "CC_DIG1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", DP: "input", A: "input", F: "input", CC_DIG2: "input", D: "input", E: "input", C: "input", B: "input", CC_DIG1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSM-443B";
@@ -1796,7 +1847,8 @@ export class HDSM_541B extends Component.withPins({
   "B": "9",
   "CA_DIG1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", DP: "input", A: "input", F: "input", CA_DIG2: "input", D: "input", E: "input", C: "input", B: "input", CA_DIG1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSM-541B";
@@ -1824,7 +1876,8 @@ export class HDSM_543B extends Component.withPins({
   "B": "9",
   "CC_DIG1": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", DP: "input", A: "input", F: "input", CC_DIG2: "input", D: "input", E: "input", C: "input", B: "input", CC_DIG1: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSM-543B";
@@ -1852,7 +1905,8 @@ export class HDSP_7401 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7401";
@@ -1880,7 +1934,8 @@ export class HDSP_7403 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7403";
@@ -1908,7 +1963,8 @@ export class HDSP_A151 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-A151";
@@ -1936,7 +1992,8 @@ export class HDSP_7501 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7501";
@@ -1964,7 +2021,8 @@ export class HDSP_A153 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-A153";
@@ -1992,7 +2050,8 @@ export class HDSP_7503 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7503";
@@ -2020,7 +2079,8 @@ export class HDSP_7507 extends Component.withPins({
   "B": "9",
   "NC_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", P: "input", M: "input", NC_4: "no_connect", NC_5: "no_connect", CA_6: "input", DP: "input", C: "input", B: "input", NC_10: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7507";
@@ -2048,7 +2108,8 @@ export class HDSP_7508 extends Component.withPins({
   "B": "9",
   "NC_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", P: "input", M: "input", NC_4: "no_connect", NC_5: "no_connect", CC_6: "input", DP: "input", C: "input", B: "input", NC_10: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7508";
@@ -2076,7 +2137,8 @@ export class HDSP_7801 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7801";
@@ -2104,7 +2166,8 @@ export class HDSP_7803 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7803";
@@ -2132,7 +2195,8 @@ export class HDSP_7807 extends Component.withPins({
   "B": "9",
   "NC_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", P: "input", M: "input", NC_4: "no_connect", NC_5: "no_connect", CA_6: "input", DP: "input", C: "input", B: "input", NC_10: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7807";
@@ -2160,7 +2224,8 @@ export class HDSP_7808 extends Component.withPins({
   "B": "9",
   "NC_10": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", P: "input", M: "input", NC_4: "no_connect", NC_5: "no_connect", CC_6: "input", DP: "input", C: "input", B: "input", NC_10: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-7808";
@@ -2188,7 +2253,8 @@ export class HDSP_A401 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-A401";
@@ -2216,7 +2282,8 @@ export class HDSP_A403 extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HDSP-A403";
@@ -2250,7 +2317,8 @@ export class HY1602E extends Component.withPins({
   "DB6": "15",
   "DB7": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LEDK: "passive", LEDA: "passive", VSS: "power_in", VDD: "power_in", Vo: "input", RS: "input", "R/~{W}": "input", E: "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Character:HY1602E";
@@ -2278,7 +2346,8 @@ export class KCSA02_105 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CA_3: "input", C: "input", DP: "input", B: "input", A: "input", CA_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSA02-105";
@@ -2306,7 +2375,8 @@ export class KCSA02_106 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CA_3: "input", C: "input", DP: "input", B: "input", A: "input", CA_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSA02-106";
@@ -2334,7 +2404,8 @@ export class KCSA02_107 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CA_3: "input", C: "input", DP: "input", B: "input", A: "input", CA_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSA02-107";
@@ -2362,7 +2433,8 @@ export class KCSA02_123 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CA_3: "input", C: "input", DP: "input", B: "input", A: "input", CA_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSA02-123";
@@ -2390,7 +2462,8 @@ export class KCSA02_136 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CA_3: "input", C: "input", DP: "input", B: "input", A: "input", CA_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSA02-136";
@@ -2418,7 +2491,8 @@ export class KCSC02_105 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSC02-105";
@@ -2446,7 +2520,8 @@ export class KCSC02_106 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSC02-106";
@@ -2474,7 +2549,8 @@ export class KCSC02_107 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSC02-107";
@@ -2502,7 +2578,8 @@ export class KCSC02_123 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSC02-123";
@@ -2530,7 +2607,8 @@ export class KCSC02_136 extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:KCSC02-136";
@@ -2568,7 +2646,8 @@ export class LCD_016N002L extends Component.withPins({
   "PK1": "K1",
   "PK2": "K2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", VO: "input", RS: "input", "R/~{W}": "input", E: "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", "A/VEE": "power_in", K: "power_in", PA1: "power_in", PA2: "power_in", PK1: "power_in", PK2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LCD-016N002L";
@@ -2600,7 +2679,8 @@ export class LM16255K extends Component.withPins({
   "DB6": "13",
   "DB7": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", VO: "power_in", RS: "input", "R/W": "input", E: "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LM16255K";
@@ -2632,7 +2712,8 @@ export class LTC_4627JG extends Component.withPins({
   "G": "15",
   "B": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA1: "input", CA2: "input", D: "input", CAL: "input", E: "input", CA3: "input", DP: "input", CA4: "input", NC: "no_connect", F: "input", C: "input", A: "input", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTC-4627JG";
@@ -2664,7 +2745,8 @@ export class LTC_4627JD extends Component.withPins({
   "G": "15",
   "B": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA1: "input", CA2: "input", D: "input", CAL: "input", E: "input", CA3: "input", DP: "input", CA4: "input", NC: "no_connect", F: "input", C: "input", A: "input", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTC-4627JD";
@@ -2696,7 +2778,8 @@ export class LTC_4627JD_01 extends Component.withPins({
   "G": "15",
   "B": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA1: "input", CA2: "input", D: "input", CAL: "input", E: "input", CA3: "input", DP: "input", CA4: "input", NC: "no_connect", F: "input", C: "input", A: "input", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTC-4627JD-01";
@@ -2728,7 +2811,8 @@ export class LTC_4627JF extends Component.withPins({
   "G": "15",
   "B": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA1: "input", CA2: "input", D: "input", CAL: "input", E: "input", CA3: "input", DP: "input", CA4: "input", NC: "no_connect", F: "input", C: "input", A: "input", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTC-4627JF";
@@ -2760,7 +2844,8 @@ export class LTC_4627JR extends Component.withPins({
   "G": "15",
   "B": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA1: "input", CA2: "input", D: "input", CAL: "input", E: "input", CA3: "input", DP: "input", CA4: "input", NC: "no_connect", F: "input", C: "input", A: "input", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTC-4627JR";
@@ -2792,7 +2877,8 @@ export class LTC_4627JS extends Component.withPins({
   "G": "15",
   "B": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA1: "input", CA2: "input", D: "input", CAL: "input", E: "input", CA3: "input", DP: "input", CA4: "input", NC: "no_connect", F: "input", C: "input", A: "input", G: "input", B: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTC-4627JS";
@@ -2820,7 +2906,8 @@ export class LTS_6960HR extends Component.withPins({
   "f": "9",
   "g": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "passive", d: "passive", "C.A._3": "passive", c: "passive", DP: "passive", b: "passive", a: "passive", "C.A._8": "passive", f: "passive", g: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTS-6960HR";
@@ -2848,7 +2935,8 @@ export class LTS_6980HR extends Component.withPins({
   "f": "9",
   "g": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { e: "passive", d: "passive", "C.K._3": "passive", c: "passive", DP: "passive", b: "passive", a: "passive", "C.K._8": "passive", f: "passive", g: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:LTS-6980HR";
@@ -2880,7 +2968,8 @@ export class MAN3410A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", E: "input", D: "input", "D.P.": "input", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3410A";
@@ -2912,7 +3001,8 @@ export class MAN3420A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", "D.P.": "input", E: "input", D: "input", NC_9: "no_connect", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3420A";
@@ -2944,7 +3034,8 @@ export class MAN3440A extends Component.withPins({
   "B": "13",
   "A": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { F: "input", G: "input", NC_3: "no_connect", CC_4: "input", NC_5: "no_connect", E: "input", D: "input", C: "input", "D.P.": "input", NC_10: "no_connect", NC_11: "no_connect", CC_12: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3440A";
@@ -2976,7 +3067,8 @@ export class MAN3610A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", E: "input", D: "input", "D.P.": "input", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3610A";
@@ -3008,7 +3100,8 @@ export class MAN3620A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", "D.P.": "input", E: "input", D: "input", NC_9: "no_connect", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3620A";
@@ -3040,7 +3133,8 @@ export class MAN3630A extends Component.withPins({
   "NC_13": "13",
   "CA_AB": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_CD_1: "input", NC_2: "no_connect", CA_CD_3: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", D: "input", C: "input", NC_9: "no_connect", B: "input", A: "input", NC_12: "no_connect", NC_13: "no_connect", CA_AB: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3630A";
@@ -3072,7 +3166,8 @@ export class MAN3640A extends Component.withPins({
   "B": "13",
   "A": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { F: "input", G: "input", NC_3: "no_connect", CC_4: "input", NC_5: "no_connect", E: "input", D: "input", C: "input", "D.P.": "input", NC_10: "no_connect", NC_11: "no_connect", CC_12: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3640A";
@@ -3104,7 +3199,8 @@ export class MAN3810A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", E: "input", D: "input", "D.P.": "input", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3810A";
@@ -3136,7 +3232,8 @@ export class MAN3820A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", "D.P.": "input", E: "input", D: "input", NC_9: "no_connect", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3820A";
@@ -3168,7 +3265,8 @@ export class MAN3840A extends Component.withPins({
   "B": "13",
   "A": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { F: "input", G: "input", NC_3: "no_connect", CC_4: "input", NC_5: "no_connect", E: "input", D: "input", C: "input", "D.P.": "input", NC_10: "no_connect", NC_11: "no_connect", CC_12: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN3840A";
@@ -3200,7 +3298,8 @@ export class MAN71A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", E: "input", D: "input", "D.P.": "input", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN71A";
@@ -3232,7 +3331,8 @@ export class MAN72A extends Component.withPins({
   "B": "13",
   "CA_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "input", F: "input", CA_3: "input", NC_4: "no_connect", NC_5: "no_connect", "D.P.": "input", E: "input", D: "input", NC_9: "no_connect", C: "input", G: "input", NC_12: "no_connect", B: "input", CA_14: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN72A";
@@ -3264,7 +3364,8 @@ export class MAN73A extends Component.withPins({
   "NC_13": "13",
   "CA_AB": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_CD_1: "input", NC_2: "no_connect", CA_CD_3: "input", NC_4: "no_connect", NC_5: "no_connect", NC_6: "no_connect", D: "input", C: "input", NC_9: "no_connect", B: "input", A: "input", NC_12: "no_connect", NC_13: "no_connect", CA_AB: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN73A";
@@ -3296,7 +3397,8 @@ export class MAN74A extends Component.withPins({
   "B": "13",
   "A": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { F: "input", G: "input", NC_3: "no_connect", CC_4: "input", NC_5: "no_connect", E: "input", D: "input", C: "input", "D.P.": "input", NC_10: "no_connect", NC_11: "no_connect", CC_12: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:MAN74A";
@@ -3330,7 +3432,8 @@ export class NHD_0420H1Z extends Component.withPins({
   "A": "15",
   "K": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", VO: "power_in", RS: "input", "R/W": "input", E: "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", A: "passive", K: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:NHD-0420H1Z";
@@ -3358,7 +3461,8 @@ export class NHD_C0220BIZ extends Component.withPins({
   "A": "9",
   "K": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", SCL: "input", SDA: "bidirectional", VSS: "power_in", VDD: "power_in", VOUT: "passive", "C1+": "passive", "C1-": "passive", A: "passive", K: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:NHD-C0220BIZ";
@@ -3388,7 +3492,8 @@ export class NHD_C0220BIZ_FSRGB extends Component.withPins({
   "(G)LED-": "11",
   "(R)LED-": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", SCL: "input", SDA: "bidirectional", "V_{SS}": "power_in", "V_{DD}": "power_in", "V_{out}": "passive", "C1+": "passive", "C1-": "passive", "LED+": "passive", "(B)LED-": "passive", "(G)LED-": "passive", "(R)LED-": "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:NHD-C0220BIZ-FSRGB";
@@ -3422,7 +3527,8 @@ export class RC1602A extends Component.withPins({
   "A/VEE": "15",
   "K": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", VO: "power_in", RS: "input", "R/W": "input", E: "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", "A/VEE": "power_in", K: "power_in", ...opts.pinTypes } });
   }
   override schema = "Display_Character:RC1602A";
@@ -3458,7 +3564,8 @@ export class RC1602A_GHW_ESX extends Component.withPins({
   "A": "A1",
   "K_K1": "K1",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", Vo: "input", RS: "input", "R/~{W}": "input", "~{E}": "input", DB0: "bidirectional", DB1: "bidirectional", DB2: "bidirectional", DB3: "bidirectional", DB4: "bidirectional", DB5: "bidirectional", DB6: "bidirectional", DB7: "bidirectional", "A/VEE": "passive", K_16: "passive", A: "passive", K_K1: "passive", ...opts.pinTypes } });
   }
   override schema = "Display_Character:RC1602A-GHW-ESX";
@@ -3486,7 +3593,8 @@ export class SA15_11SRWA extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", E: "input", D: "input", C: "input", CA_5: "input", B: "input", A: "input", DP: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA15-11SRWA";
@@ -3514,7 +3622,8 @@ export class SA15_11EWA extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", E: "input", D: "input", C: "input", CA_5: "input", B: "input", A: "input", DP: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA15-11EWA";
@@ -3542,7 +3651,8 @@ export class SA15_11GWA extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", E: "input", D: "input", C: "input", CA_5: "input", B: "input", A: "input", DP: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA15-11GWA";
@@ -3570,7 +3680,8 @@ export class SA39_11EWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CA_3: "input", E: "input", D: "input", DP: "input", C: "input", CA_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-11EWA";
@@ -3598,7 +3709,8 @@ export class SA39_11GWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CA_3: "input", E: "input", D: "input", DP: "input", C: "input", CA_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-11GWA";
@@ -3626,7 +3738,8 @@ export class SA39_11SRWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CA_3: "input", E: "input", D: "input", DP: "input", C: "input", CA_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-11SRWA";
@@ -3654,7 +3767,8 @@ export class SA39_11YWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CA_3: "input", E: "input", D: "input", DP: "input", C: "input", CA_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-11YWA";
@@ -3682,7 +3796,8 @@ export class SA39_12EWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-12EWA";
@@ -3710,7 +3825,8 @@ export class SA39_12GWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-12GWA";
@@ -3738,7 +3854,8 @@ export class SA39_12SRWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-12SRWA";
@@ -3766,7 +3883,8 @@ export class SA39_12YWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CA_1: "input", F: "input", G: "input", E: "input", D: "input", CA_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SA39-12YWA";
@@ -3794,7 +3912,8 @@ export class SBC18_11SURKCGKWA extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", E: "input", D: "input", C: "input", CC_5: "input", B: "input", A: "input", DP: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SBC18-11SURKCGKWA";
@@ -3822,7 +3941,8 @@ export class SBC18_11EGWA extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", E: "input", D: "input", C: "input", CC_5: "input", B: "input", A: "input", DP: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SBC18-11EGWA";
@@ -3850,7 +3970,8 @@ export class SC39_11EWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CC_3: "input", E: "input", D: "input", DP: "input", C: "input", CC_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-11EWA";
@@ -3878,7 +3999,8 @@ export class SC39_11GWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CC_3: "input", E: "input", D: "input", DP: "input", C: "input", CC_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-11GWA";
@@ -3906,7 +4028,8 @@ export class SC39_11SRWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CC_3: "input", E: "input", D: "input", DP: "input", C: "input", CC_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-11SRWA";
@@ -3934,7 +4057,8 @@ export class SC39_11YWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", F: "input", CC_3: "input", E: "input", D: "input", DP: "input", C: "input", CC_8: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-11YWA";
@@ -3962,7 +4086,8 @@ export class SC39_12EWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-12EWA";
@@ -3990,7 +4115,8 @@ export class SC39_12GWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-12GWA";
@@ -4018,7 +4144,8 @@ export class SC39_12SRWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-12SRWA";
@@ -4046,7 +4173,8 @@ export class SC39_12YWA extends Component.withPins({
   "B": "9",
   "A": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CC_1: "input", F: "input", G: "input", E: "input", D: "input", CC_6: "input", DP: "input", C: "input", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SC39-12YWA";
@@ -4074,7 +4202,8 @@ export class SM420561N extends Component.withPins({
   "F": "9",
   "G": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { E: "input", D: "input", CC_3: "input", C: "input", DP: "input", B: "input", A: "input", CC_8: "input", F: "input", G: "input", ...opts.pinTypes } });
   }
   override schema = "Display_Character:SM420561N";
@@ -4108,7 +4237,8 @@ export class WC1602A extends Component.withPins({
   "LED(+)": "15",
   "LED(-)": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", VDD: "power_in", VO: "input", RS: "input", "R/W": "input", E: "input", D0: "input", D1: "input", D2: "input", D3: "input", D4: "input", D5: "input", D6: "input", D7: "input", "LED(+)": "power_in", "LED(-)": "power_in", ...opts.pinTypes } });
   }
   override schema = "Display_Character:WC1602A";

@@ -12,7 +12,8 @@ export class Fan extends Component.withPins({
   "+": "1",
   "-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan";
@@ -32,7 +33,8 @@ export class Fan_Tacho extends Component.withPins({
   "+": "2",
   "Tacho": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "passive", "+": "passive", Tacho: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_Tacho";
@@ -52,7 +54,8 @@ export class Fan_3pin extends Component.withPins({
   "+": "2",
   "Tacho": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "passive", "+": "passive", Tacho: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_3pin";
@@ -73,7 +76,8 @@ export class Fan_Tacho_PWM extends Component.withPins({
   "Tacho": "3",
   "PWM": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "passive", "+": "passive", Tacho: "passive", PWM: "input", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_Tacho_PWM";
@@ -94,7 +98,8 @@ export class Fan_4pin extends Component.withPins({
   "Tacho": "3",
   "PWM": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "passive", "+": "passive", Tacho: "passive", PWM: "input", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_4pin";
@@ -112,7 +117,8 @@ export class Fan_ALT extends Component.withPins({
   "+": "1",
   "-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_ALT";
@@ -133,7 +139,8 @@ export class Fan_CPU_4pin extends Component.withPins({
   "Tacho": "3",
   "PWM": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "passive", "+": "passive", Tacho: "passive", PWM: "input", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_CPU_4pin";
@@ -151,7 +158,8 @@ export class Fan_IEC_60617 extends Component.withPins({
   "+": "1",
   "-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_IEC-60617";
@@ -169,7 +177,8 @@ export class Fan_ISO_14617 extends Component.withPins({
   "+": "1",
   "-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_ISO-14617";
@@ -189,7 +198,8 @@ export class Fan_PC_Chassis extends Component.withPins({
   "+": "2",
   "Tacho": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "-": "passive", "+": "passive", Tacho: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Fan_PC_Chassis";
@@ -207,7 +217,8 @@ export class Motor_AC extends Component.withPins({
   "P1": "1",
   "P2": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_AC";
@@ -225,7 +236,8 @@ export class Motor_DC extends Component.withPins({
   "+": "1",
   "-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_DC";
@@ -243,7 +255,8 @@ export class Motor_DC_ALT extends Component.withPins({
   "+": "1",
   "-": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_DC_ALT";
@@ -263,7 +276,8 @@ export class Motor_Servo extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWM: "passive", "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo";
@@ -283,7 +297,8 @@ export class Motor_Servo_AirTronics extends Component.withPins({
   "-": "2",
   "PWM": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "+": "passive", "-": "passive", PWM: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo_AirTronics";
@@ -303,7 +318,8 @@ export class Motor_Servo_Futaba_J extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWM: "passive", "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo_Futaba_J";
@@ -323,7 +339,8 @@ export class Motor_Servo_Grapner_JR extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWM: "passive", "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo_Grapner_JR";
@@ -343,7 +360,8 @@ export class Motor_Servo_Hitec extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWM: "passive", "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo_Hitec";
@@ -363,7 +381,8 @@ export class Motor_Servo_JR extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWM: "passive", "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo_JR";
@@ -383,7 +402,8 @@ export class Motor_Servo_Robbe extends Component.withPins({
   "+": "2",
   "-": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PWM: "passive", "+": "passive", "-": "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Motor_Servo_Robbe";
@@ -404,7 +424,8 @@ export class Stepper_Motor_bipolar extends Component.withPins({
   "P3": "3",
   "P4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", "-": "passive", P3: "passive", P4: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Stepper_Motor_bipolar";
@@ -426,7 +447,8 @@ export class Stepper_Motor_unipolar_5pin extends Component.withPins({
   "P4": "4",
   "P5": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", "-": "passive", P4: "passive", P5: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Stepper_Motor_unipolar_5pin";
@@ -449,7 +471,8 @@ export class Stepper_Motor_unipolar_6pin extends Component.withPins({
   "P5": "5",
   "P6": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P1: "passive", P2: "passive", "-": "passive", P4: "passive", P5: "passive", P6: "passive", ...opts.pinTypes } });
   }
   override schema = "Motor:Stepper_Motor_unipolar_6pin";

@@ -57,7 +57,8 @@ export class _68HC11 extends Component.withPins({
   "PD5/SS-": "47",
   "VCC": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PAI/PA7": "input", "OC2/PA6": "output", "OC3/PA5": "output", "OC4/PA4": "output", "OC5/PA3": "output", "IC1/PA2": "input", "IC2/PA1": "input", "IC3/PA0": "input", "A15/PB7": "output", PB6: "output", PB5: "output", PB4: "output", PB3: "output", PB2: "output", PB1: "output", "A8/PB0": "output", PE0: "input", PE1: "input", PE2: "input", PE3: "input", VRL: "passive", VRH: "passive", GND: "power_in", MODB: "input", MODA: "input", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "tri_state", PC1: "tri_state", PC2: "tri_state", PC3: "tri_state", PC4: "tri_state", PC5: "tri_state", PC6: "tri_state", "AD7/PC7": "tri_state", RESET: "input", XIRQ: "input", IRQ: "input", "PD0/RX": "input", "PD1/TX": "input", "PD2/MISO": "input", "PD3/MOSI": "input", "PD4/SCLK": "input", "PD5/SS-": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:68HC11";
@@ -120,7 +121,8 @@ export class _68HC11A8 extends Component.withPins({
   "PD5/SS-": "47",
   "VCC": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "PAI/PA7": "input", "OC2/PA6": "output", "OC3/PA5": "output", "OC4/PA4": "output", "OC5/PA3": "output", "IC1/PA2": "input", "IC2/PA1": "input", "IC3/PA0": "input", "A15/PB7": "output", PB6: "output", PB5: "output", PB4: "output", PB3: "output", PB2: "output", PB1: "output", "A8/PB0": "output", PE0: "input", PE1: "input", PE2: "input", PE3: "input", VRL: "passive", VRH: "passive", GND: "power_in", MODB: "input", MODA: "input", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "tri_state", PC1: "tri_state", PC2: "tri_state", PC3: "tri_state", PC4: "tri_state", PC5: "tri_state", PC6: "tri_state", "AD7/PC7": "tri_state", RESET: "input", XIRQ: "input", IRQ: "input", "PD0/RX": "input", "PD1/TX": "input", "PD2/MISO": "input", "PD3/MOSI": "input", "PD4/SCLK": "input", "PD5/SS-": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:68HC11A8";
@@ -204,7 +206,8 @@ export class _68HC11F1 extends Component.withPins({
   "VRL": "67",
   "VRH": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "MODB/STBY": "input", "MODA/LR": "input", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "4XOUT": "output", "D0/PC0": "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "input", PC4: "bidirectional", PC5: "bidirectional", PC6: "bidirectional", "D7/PC7": "bidirectional", RESET: "input", XIRQ: "input", IRQ: "input", "CSPROG/PG7": "bidirectional", "CSGEN/PG6": "bidirectional", "CSIO1/PG5": "bidirectional", "CSIO2/PG4": "bidirectional", PG3: "input", PG2: "bidirectional", PG1: "bidirectional", PG0: "bidirectional", "PD0/RX": "bidirectional", "PD1/TX": "bidirectional", "PD2/MISO": "bidirectional", "PD3/MOSI": "bidirectional", "PD4/SCLK": "bidirectional", "PD5/SS-": "bidirectional", VDD: "power_in", "PA1/PA7": "bidirectional", "OC2/PA6": "bidirectional", "OC3/PA5": "bidirectional", "OC4/PA4": "output", "OC5/PA3": "bidirectional", "IC1/PA2": "bidirectional", "IC2/PA1": "bidirectional", "IC3/PA0": "bidirectional", "A15/PB7": "output", PB6: "output", PB5: "output", PB4: "output", PB3: "output", PB2: "output", PB1: "tri_state", "A8/PB0": "tri_state", "A7/PF7": "bidirectional", PF6: "bidirectional", PF5: "bidirectional", PF4: "bidirectional", PF3: "bidirectional", PF2: "bidirectional", PF1: "bidirectional", "A0/PF0": "bidirectional", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "passive", VRH: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:68HC11F1";
@@ -271,7 +274,8 @@ export class _68HC11_PLCC extends Component.withPins({
   "VRL": "51",
   "VRH": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", MODB: "input", MODA: "input", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "tri_state", "AD1/PC1": "tri_state", "AD2/PC2": "tri_state", "AD3/PC3": "tri_state", "AD4/PC4": "tri_state", "AD5/PC5": "tri_state", "AD6/PC6": "tri_state", "AD7/PC7": "tri_state", RESET: "input", XIRQ: "input", IRQ: "input", "PD0/RX": "bidirectional", "PD1/TX": "bidirectional", PD2: "bidirectional", PD3: "input", PD4: "bidirectional", PD5: "bidirectional", VDD: "power_in", "PA1/PA7": "input", "OC2/PA6": "output", "OC3/PA5": "output", "OC4/PA4": "output", "OC5/PA3": "output", "IC1/PA2": "input", "IC2/PA1": "input", "IC3/PA0": "input", "A15/PB7": "output", PB6: "output", PB5: "output", PB4: "output", PB3: "output", PB2: "output", PB1: "output", "A8/PB0": "output", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "passive", VRH: "passive", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:68HC11_PLCC";
@@ -329,7 +333,8 @@ export class _68HC711_PLCC extends Component.withPins({
   "EXTAL": "43",
   "XTAL": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EVSS: "power_in", VSS: "power_in", PC0: "input", PC1: "input", PC2: "input", PC3: "input", PC4: "input", PC5: "input", PC6: "input", PC7: "input", "XIRQ/VPP": "input", "PD7-R/W": "output", "PD6-AS": "input", RESET: "input", "IRQ/CE": "input", "PD0/RX": "input", "PD1/TX": "input", PD2: "input", PD3: "input", PD4: "input", PD5: "input", VDD: "power_in", "PA1/PA7": "input", "OC2/PA6": "output", "OC3/PA5": "output", "OC4/PA4": "output", "OC5/PA3": "output", "IC1/PA2": "input", "IC2/PA1": "input", "IC3/PA0": "input", "PB7/OE": "output", PB6: "output", PB5: "output", PB4: "output", PB3: "output", PB2: "output", PB1: "output", PB0: "output", MODB: "input", MODA: "input", E: "output", EXTAL: "input", XTAL: "output", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:68HC711_PLCC";
@@ -396,7 +401,8 @@ export class MC68HC11A8CC extends Component.withPins({
   "VRL": "51",
   "VRH": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", MODB: "input", MODA: "bidirectional", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "bidirectional", "AD1/PC1": "bidirectional", "AD2/PC2": "bidirectional", "AD3/PC3": "bidirectional", "AD4/PC4": "bidirectional", "AD5/PC5": "bidirectional", "AD6/PC6": "bidirectional", "AD7/PC7": "bidirectional", "~{RESET}": "input", "~{XIRQ}": "input", "~{IRQ}": "input", "RXD/PD0": "bidirectional", "TXD/PD1": "bidirectional", "MIS/PD2": "bidirectional", "MOS/PD3": "bidirectional", "SCK/PD4": "bidirectional", "SS/PD5": "bidirectional", VDD: "power_in", PA7: "bidirectional", PA6: "output", PA5: "output", PA4: "output", PA3: "output", PA2: "input", PA1: "input", PA0: "input", "A15/PB7": "output", "A14/PB6": "output", "A13/PB5": "output", "A12/PB4": "output", "A11/PB3": "output", "A10/PB2": "output", "A9/PB1": "output", "A8/PB0": "output", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "input", VRH: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:MC68HC11A8CC";
@@ -463,7 +469,8 @@ export class MC68HC11A0CC extends Component.withPins({
   "VRL": "51",
   "VRH": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", MODB: "input", MODA: "bidirectional", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "bidirectional", "AD1/PC1": "bidirectional", "AD2/PC2": "bidirectional", "AD3/PC3": "bidirectional", "AD4/PC4": "bidirectional", "AD5/PC5": "bidirectional", "AD6/PC6": "bidirectional", "AD7/PC7": "bidirectional", "~{RESET}": "input", "~{XIRQ}": "input", "~{IRQ}": "input", "RXD/PD0": "bidirectional", "TXD/PD1": "bidirectional", "MIS/PD2": "bidirectional", "MOS/PD3": "bidirectional", "SCK/PD4": "bidirectional", "SS/PD5": "bidirectional", VDD: "power_in", PA7: "bidirectional", PA6: "output", PA5: "output", PA4: "output", PA3: "output", PA2: "input", PA1: "input", PA0: "input", "A15/PB7": "output", "A14/PB6": "output", "A13/PB5": "output", "A12/PB4": "output", "A11/PB3": "output", "A10/PB2": "output", "A9/PB1": "output", "A8/PB0": "output", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "input", VRH: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:MC68HC11A0CC";
@@ -530,7 +537,8 @@ export class MC68HC11A1CC extends Component.withPins({
   "VRL": "51",
   "VRH": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", MODB: "input", MODA: "bidirectional", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "bidirectional", "AD1/PC1": "bidirectional", "AD2/PC2": "bidirectional", "AD3/PC3": "bidirectional", "AD4/PC4": "bidirectional", "AD5/PC5": "bidirectional", "AD6/PC6": "bidirectional", "AD7/PC7": "bidirectional", "~{RESET}": "input", "~{XIRQ}": "input", "~{IRQ}": "input", "RXD/PD0": "bidirectional", "TXD/PD1": "bidirectional", "MIS/PD2": "bidirectional", "MOS/PD3": "bidirectional", "SCK/PD4": "bidirectional", "SS/PD5": "bidirectional", VDD: "power_in", PA7: "bidirectional", PA6: "output", PA5: "output", PA4: "output", PA3: "output", PA2: "input", PA1: "input", PA0: "input", "A15/PB7": "output", "A14/PB6": "output", "A13/PB5": "output", "A12/PB4": "output", "A11/PB3": "output", "A10/PB2": "output", "A9/PB1": "output", "A8/PB0": "output", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "input", VRH: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:MC68HC11A1CC";
@@ -597,7 +605,8 @@ export class MC68HC11A7CC extends Component.withPins({
   "VRL": "51",
   "VRH": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", MODB: "input", MODA: "bidirectional", AS: "output", E: "output", "R/W": "output", EXTAL: "input", XTAL: "output", "AD0/PC0": "bidirectional", "AD1/PC1": "bidirectional", "AD2/PC2": "bidirectional", "AD3/PC3": "bidirectional", "AD4/PC4": "bidirectional", "AD5/PC5": "bidirectional", "AD6/PC6": "bidirectional", "AD7/PC7": "bidirectional", "~{RESET}": "input", "~{XIRQ}": "input", "~{IRQ}": "input", "RXD/PD0": "bidirectional", "TXD/PD1": "bidirectional", "MIS/PD2": "bidirectional", "MOS/PD3": "bidirectional", "SCK/PD4": "bidirectional", "SS/PD5": "bidirectional", VDD: "power_in", PA7: "bidirectional", PA6: "output", PA5: "output", PA4: "output", PA3: "output", PA2: "input", PA1: "input", PA0: "input", "A15/PB7": "output", "A14/PB6": "output", "A13/PB5": "output", "A12/PB4": "output", "A11/PB3": "output", "A10/PB2": "output", "A9/PB1": "output", "A8/PB0": "output", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "input", VRH: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:MC68HC11A7CC";
@@ -683,7 +692,8 @@ export class MC68HC11F1CC extends Component.withPins({
   "VRL": "67",
   "VRH": "68",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", MODB: "input", MODA: "bidirectional", E: "output", "R/W": "output", EXTAL: "output", XTAL: "input", "4XOUT": "output", "D0/PC0": "bidirectional", "D1/PC1": "bidirectional", "D2/PC2": "bidirectional", "D3/PC3": "bidirectional", "D4/PC4": "bidirectional", "D5/PC5": "bidirectional", "D6/PC6": "bidirectional", "D7/PC7": "bidirectional", "~{RESET}": "input", "~{XIRQ}": "input", "~{IRQ}": "input", "CSPROG/PG7": "bidirectional", "CSGEN/PG6": "bidirectional", "CSIO1/PG5": "bidirectional", "CSIO2/PG4": "bidirectional", PG3: "bidirectional", PG2: "bidirectional", PG1: "bidirectional", PG0: "bidirectional", "RXD/PD0": "bidirectional", "TXD/PD1": "bidirectional", "MIS/PD2": "bidirectional", "MOS/PD3": "bidirectional", "SCK/PD4": "bidirectional", "SS/PD5": "bidirectional", VDD: "power_in", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "A15/PB7": "output", "A14/PB6": "output", "A13/PB5": "output", "A12/PB4": "output", "A11/PB3": "output", "A10/PB2": "output", "A9/PB1": "output", "A8/PB0": "output", "A7/PF7": "output", "A6/PF6": "output", "A5/PF5": "output", "A4/PF4": "output", "A3/PF3": "output", "A2/PF2": "output", "A1/PF1": "output", "A0/PF0": "output", PE0: "input", PE4: "input", PE1: "input", PE5: "input", PE2: "input", PE6: "input", PE3: "input", PE7: "input", VRL: "input", VRH: "input", ...opts.pinTypes } });
   }
   override schema = "MCU_NXP_HC11:MC68HC11F1CC";

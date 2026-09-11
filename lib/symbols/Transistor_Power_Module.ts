@@ -35,7 +35,8 @@ export class A2C25S12M3 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:A2C25S12M3";
@@ -76,7 +77,8 @@ export class A2C25S12M3_F extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:A2C25S12M3-F";
@@ -117,7 +119,8 @@ export class A2C35S12M3 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:A2C35S12M3";
@@ -158,7 +161,8 @@ export class A2C35S12M3_F extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:A2C35S12M3-F";
@@ -199,7 +203,8 @@ export class A2C50S65M2 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:A2C50S65M2";
@@ -240,7 +245,8 @@ export class A2C50S65M2_F extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:A2C50S65M2-F";
@@ -281,7 +287,8 @@ export class FP10R06W1E3 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP10R06W1E3";
@@ -322,7 +329,8 @@ export class FP15R06W1E3 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP15R06W1E3";
@@ -363,7 +371,8 @@ export class FP15R12W2T4 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP15R12W2T4";
@@ -404,7 +413,8 @@ export class FP25R12W2T4 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP25R12W2T4";
@@ -445,7 +455,8 @@ export class FP25R12W2T4P extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP25R12W2T4P";
@@ -486,7 +497,8 @@ export class FP35R12W2T4 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP35R12W2T4";
@@ -527,7 +539,8 @@ export class FP35R12W2T4P extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP35R12W2T4P";
@@ -568,7 +581,8 @@ export class FP50R06W2E3 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB: "passive", PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PGB: "passive", PL1: "passive", PL2: "passive", PL3: "passive", PN: "passive", PNB: "passive", PP: "passive", PP1: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FP50R06W2E3";
@@ -601,7 +615,8 @@ export class FS25R12W1T7 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PP: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FS25R12W1T7";
@@ -634,7 +649,8 @@ export class FS25R12W1T7B11 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PP: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FS25R12W1T7B11";
@@ -667,7 +683,8 @@ export class FS25R12W1T7PB11 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PP: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FS25R12W1T7PB11";
@@ -700,7 +717,8 @@ export class FS30R06W1E3 extends Component.withPins({
   "PV": "V",
   "PW": "W",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PEU: "passive", PEV: "passive", PEW: "passive", PG1: "passive", PG2: "passive", PG3: "passive", PG4: "passive", PG5: "passive", PG6: "passive", PP: "passive", PT1: "passive", PT2: "passive", PU: "passive", PV: "passive", PW: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FS30R06W1E3";
@@ -746,7 +764,8 @@ export class FS75R07N2E4 extends Component.withPins({
   "G6": "11",
   "N1_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { N1_13: "passive", N1_14: "passive", P1_15: "passive", P1_16: "passive", T1: "passive", T2: "passive", W_19: "passive", W_20: "passive", V_21: "passive", V_22: "passive", U_23: "passive", U_24: "passive", P1_25: "passive", P1_26: "passive", N1_27: "passive", N1_28: "passive", G1: "passive", U_2: "passive", G2: "passive", N1_4: "passive", G3: "passive", V_6: "passive", G4: "passive", N1_8: "passive", G5: "passive", W_10: "passive", G6: "passive", N1_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:FS75R07N2E4";
@@ -799,7 +818,8 @@ export class MG1275W_XN2MM extends Component.withPins({
   "U_28": "28",
   "U_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { N1_13: "passive", N1_14: "passive", N1_15: "passive", P1_16: "passive", P1_17: "passive", P1_18: "passive", T1: "passive", T2: "passive", P1_30: "passive", P1_31: "passive", P1_32: "passive", N1_33: "passive", N1_34: "passive", N1_35: "passive", G1: "passive", U_2: "passive", G2: "passive", N1_4: "passive", G3: "passive", V_6: "passive", G4: "passive", N1_8: "passive", G5: "passive", W_10: "passive", G6: "passive", N1_12: "passive", W_21: "passive", W_22: "passive", W_23: "passive", V_24: "passive", V_25: "passive", V_26: "passive", U_27: "passive", U_28: "passive", U_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1275W-XN2MM";
@@ -852,7 +872,8 @@ export class MG12100W_XN2MM extends Component.withPins({
   "U_28": "28",
   "U_29": "29",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { N1_13: "passive", N1_14: "passive", N1_15: "passive", P1_16: "passive", P1_17: "passive", P1_18: "passive", T1: "passive", T2: "passive", P1_30: "passive", P1_31: "passive", P1_32: "passive", N1_33: "passive", N1_34: "passive", N1_35: "passive", G1: "passive", U_2: "passive", G2: "passive", N1_4: "passive", G3: "passive", V_6: "passive", G4: "passive", N1_8: "passive", G5: "passive", W_10: "passive", G6: "passive", N1_12: "passive", W_21: "passive", W_22: "passive", W_23: "passive", V_24: "passive", V_25: "passive", V_26: "passive", U_27: "passive", U_28: "passive", U_29: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG12100W-XN2MM";
@@ -894,7 +915,8 @@ export class MG1215H_XBN2MM extends Component.withPins({
   "N": "23",
   "N1_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { L1: "passive", L2: "passive", L3: "passive", U_4: "passive", V_5: "passive", W_6: "passive", B: "passive", T1: "passive", T2: "passive", N1_10: "passive", G6: "passive", G4: "passive", G2: "passive", GB: "passive", W_15: "passive", G5: "passive", V_17: "passive", G3: "passive", U_19: "passive", G1: "passive", P: "passive", P1: "passive", N: "passive", N1_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1215H-XBN2MM";
@@ -936,7 +958,8 @@ export class MG1225H_XBN2MM extends Component.withPins({
   "N": "23",
   "N1_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { L1: "passive", L2: "passive", L3: "passive", U_4: "passive", V_5: "passive", W_6: "passive", B: "passive", T1: "passive", T2: "passive", N1_10: "passive", G6: "passive", G4: "passive", G2: "passive", GB: "passive", W_15: "passive", G5: "passive", V_17: "passive", G3: "passive", U_19: "passive", G1: "passive", P: "passive", P1: "passive", N: "passive", N1_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1225H-XBN2MM";
@@ -982,7 +1005,8 @@ export class MG1225H_XN2MM extends Component.withPins({
   "G6": "11",
   "N1_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { N1_13: "passive", N1_14: "passive", P1_15: "passive", P1_16: "passive", T1: "passive", T2: "passive", W_19: "passive", W_20: "passive", V_21: "passive", V_22: "passive", U_23: "passive", U_24: "passive", P1_25: "passive", P1_26: "passive", N1_27: "passive", N1_28: "passive", G1: "passive", U_2: "passive", G2: "passive", N1_4: "passive", G3: "passive", V_6: "passive", G4: "passive", N1_8: "passive", G5: "passive", W_10: "passive", G6: "passive", N1_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1225H-XN2MM";
@@ -1024,7 +1048,8 @@ export class MG1240H_XBN2MM extends Component.withPins({
   "N": "23",
   "N1_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { L1: "passive", L2: "passive", L3: "passive", U_4: "passive", V_5: "passive", W_6: "passive", B: "passive", T1: "passive", T2: "passive", N1_10: "passive", G6: "passive", G4: "passive", G2: "passive", GB: "passive", W_15: "passive", G5: "passive", V_17: "passive", G3: "passive", U_19: "passive", G1: "passive", P: "passive", P1: "passive", N: "passive", N1_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1240H-XBN2MM";
@@ -1070,7 +1095,8 @@ export class MG1250H_XN2MM extends Component.withPins({
   "G6": "11",
   "N1_12": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { N1_13: "passive", N1_14: "passive", P1_15: "passive", P1_16: "passive", T1: "passive", T2: "passive", W_19: "passive", W_20: "passive", V_21: "passive", V_22: "passive", U_23: "passive", U_24: "passive", P1_25: "passive", P1_26: "passive", N1_27: "passive", N1_28: "passive", G1: "passive", U_2: "passive", G2: "passive", N1_4: "passive", G3: "passive", V_6: "passive", G4: "passive", N1_8: "passive", G5: "passive", W_10: "passive", G6: "passive", N1_12: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1250H-XN2MM";
@@ -1112,7 +1138,8 @@ export class MG1250W_XBN2MM extends Component.withPins({
   "N": "23",
   "N1_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { L1: "passive", L2: "passive", L3: "passive", U_4: "passive", V_5: "passive", W_6: "passive", B: "passive", T1: "passive", T2: "passive", N1_10: "passive", G6: "passive", G4: "passive", G2: "passive", GB: "passive", W_15: "passive", G5: "passive", V_17: "passive", G3: "passive", U_19: "passive", G1: "passive", P: "passive", P1: "passive", N: "passive", N1_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1250W-XBN2MM";
@@ -1154,7 +1181,8 @@ export class MG1275W_XBN2MM extends Component.withPins({
   "N": "23",
   "N1_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { L1: "passive", L2: "passive", L3: "passive", U_4: "passive", V_5: "passive", W_6: "passive", B: "passive", T1: "passive", T2: "passive", N1_10: "passive", G6: "passive", G4: "passive", G2: "passive", GB: "passive", W_15: "passive", G5: "passive", V_17: "passive", G3: "passive", U_19: "passive", G1: "passive", P: "passive", P1: "passive", N: "passive", N1_24: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:MG1275W-XBN2MM";
@@ -1197,7 +1225,8 @@ export class STGIPS10C60_H extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", LINU: "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", LINV: "input", HINV: "input", OUTW: "output", VBOOTW: "passive", LINW: "input", HINW: "input", "~{SD}/OD": "input", CIN: "input", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS10C60-H";
@@ -1240,7 +1269,8 @@ export class STGIPS10K60A extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", LINU: "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", LINV: "input", HINV: "input", OUTW: "output", VBOOTW: "passive", LINW: "input", HINW: "input", T1: "passive", T2: "passive", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS10K60A";
@@ -1283,7 +1313,8 @@ export class STGIPS10K60A2 extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", LINU: "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", LINV: "input", HINV: "input", OUTW: "output", VBOOTW: "passive", LINW: "input", HINW: "input", T1: "passive", T2: "passive", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS10K60A2";
@@ -1326,7 +1357,8 @@ export class STGIPS14K60T extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", "~{LINU}": "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", "~{LINV}": "input", HINV: "input", OUTW: "output", VBOOTW: "passive", "~{LINW}": "input", HINW: "input", "~{SD}": "input", T1: "passive", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS14K60T";
@@ -1369,7 +1401,8 @@ export class STGIPS10K60T extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", "~{LINU}": "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", "~{LINV}": "input", HINV: "input", OUTW: "output", VBOOTW: "passive", "~{LINW}": "input", HINW: "input", "~{SD}": "input", T1: "passive", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS10K60T";
@@ -1412,7 +1445,8 @@ export class STGIPS20K60 extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", "~{LINU}": "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", "~{LINV}": "input", HINV: "input", OUTW: "output", VBOOTW: "passive", "~{LINW}": "input", HINW: "input", "~{SD}/OD": "input", CIN: "input", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS20K60";
@@ -1455,7 +1489,8 @@ export class STGIPS14K60 extends Component.withPins({
   "U": "24",
   "P_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { OUTU: "output", VBOOTU: "passive", "~{LINU}": "input", HINU: "input", VCC: "power_in", OUTV: "output", VBOOTV: "passive", GND: "power_in", "~{LINV}": "input", HINV: "input", OUTW: "output", VBOOTW: "passive", "~{LINW}": "input", HINW: "input", "~{SD}/OD": "input", CIN: "input", NW: "passive", W: "passive", P_19: "passive", NV: "passive", V: "passive", P_22: "passive", NU: "passive", U: "passive", P_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Transistor_Power_Module:STGIPS14K60";

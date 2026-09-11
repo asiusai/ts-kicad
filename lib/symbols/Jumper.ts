@@ -12,7 +12,8 @@ export class Jumper_2_Bridged extends Component.withPins({
   "A": "1",
   "B": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", ...opts.pinTypes } });
   }
   override schema = "Jumper:Jumper_2_Bridged";
@@ -30,7 +31,8 @@ export class Jumper_2_Open extends Component.withPins({
   "A": "1",
   "B": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", ...opts.pinTypes } });
   }
   override schema = "Jumper:Jumper_2_Open";
@@ -48,7 +50,8 @@ export class Jumper_2_Small_Bridged extends Component.withPins({
   "A": "1",
   "B": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", ...opts.pinTypes } });
   }
   override schema = "Jumper:Jumper_2_Small_Bridged";
@@ -66,7 +69,8 @@ export class Jumper_2_Small_Open extends Component.withPins({
   "A": "1",
   "B": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", ...opts.pinTypes } });
   }
   override schema = "Jumper:Jumper_2_Small_Open";
@@ -85,7 +89,8 @@ export class Jumper_3_Bridged12 extends Component.withPins({
   "C": "2",
   "B": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", C: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:Jumper_3_Bridged12";
@@ -104,7 +109,8 @@ export class Jumper_3_Open extends Component.withPins({
   "C": "2",
   "B": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", C: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:Jumper_3_Open";
@@ -122,7 +128,8 @@ export class SolderJumper_2_Bridged extends Component.withPins({
   "A": "1",
   "B": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:SolderJumper_2_Bridged";
@@ -140,7 +147,8 @@ export class SolderJumper_2_Open extends Component.withPins({
   "A": "1",
   "B": "2",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:SolderJumper_2_Open";
@@ -159,7 +167,8 @@ export class SolderJumper_3_Bridged12 extends Component.withPins({
   "C": "2",
   "B": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", C: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:SolderJumper_3_Bridged12";
@@ -178,7 +187,8 @@ export class SolderJumper_3_Bridged123 extends Component.withPins({
   "C": "2",
   "B": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", C: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:SolderJumper_3_Bridged123";
@@ -197,7 +207,8 @@ export class SolderJumper_3_Open extends Component.withPins({
   "C": "2",
   "B": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", C: "passive", B: "passive", ...opts.pinTypes }, properties: { ...{"exclude_from_bom":null}, ...opts.properties } });
   }
   override schema = "Jumper:SolderJumper_3_Open";

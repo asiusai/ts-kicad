@@ -28,7 +28,8 @@ export class _5PB1108PGxx extends Component.withPins({
   "Y3": "15",
   "Y1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { CLKIN: "input", "1G": "input", Y0: "output", GND_4: "power_in", VDD_5: "power_in", Y4: "output", GND_7: "passive", Y6: "output", Y7: "output", VDD_10: "passive", Y5: "output", GND_12: "passive", Y2: "output", VDD_14: "passive", Y3: "output", Y1: "output", ...opts.pinTypes } });
   }
   override schema = "Interface:5PB1108PGxx";
@@ -86,7 +87,8 @@ export class _6821 extends Component.withPins({
   "CA2": "39",
   "CA1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", CB1: "input", CB2: "bidirectional", VCC: "power_in", "R/~{W}": "input", CS0: "input", "~{CS2}": "input", CS1: "input", ENABLE: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{RESET}": "input", RS1: "input", RS0: "input", "~{IRQB}": "open_collector", "~{IRQA}": "open_collector", CA2: "bidirectional", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:6821";
@@ -144,7 +146,8 @@ export class _6822 extends Component.withPins({
   "CA2": "39",
   "CA1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", CB1: "input", CB2: "bidirectional", VCC: "power_in", "R/~{W}": "input", CS0: "input", "~{CS2}": "input", CS1: "input", ENABLE: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{RESET}": "input", RS1: "input", RS0: "input", "~{IRQB}": "open_collector", "~{IRQA}": "open_collector", CA2: "bidirectional", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:6822";
@@ -210,7 +213,8 @@ export class _68230 extends Component.withPins({
   "D3": "47",
   "D4": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D5: "tri_state", D6: "tri_state", D7: "tri_state", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", VCC: "power_in", H1: "input", H2: "bidirectional", H3: "input", H4: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", RS5: "input", RS4: "input", RS3: "input", RS2: "input", RS1: "input", PC0: "bidirectional", PC1: "bidirectional", "TIN/PC2": "bidirectional", "PC3/TOUT": "bidirectional", "DMAREQ/PC4": "bidirectional", "PC5/PIRQ": "bidirectional", "PC6/PIACK": "bidirectional", "PC7/TIACK": "bidirectional", GND: "power_in", RESET: "input", CLK: "input", CS: "input", DTACK: "open_collector", "R/W": "input", D0: "tri_state", D1: "tri_state", D2: "tri_state", D3: "tri_state", D4: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Interface:68230";
@@ -266,7 +270,8 @@ export class _68681 extends Component.withPins({
   "IP4": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RS1: "input", IP3: "input", RS2: "input", IP1: "input", RS3: "input", RS4: "input", IP0: "input", "R/W": "input", DTACK: "open_collector", RXDB: "input", TXDB: "output", OP1: "output", OP3: "output", OP5: "output", OP7: "output", D1: "tri_state", D3: "tri_state", D5: "tri_state", D7: "tri_state", GND: "power_in", IRQ: "output", D6: "tri_state", D4: "tri_state", D2: "tri_state", D0: "tri_state", OP6: "output", OP4: "output", OP2: "output", OP0: "output", TXDA: "output", RXDA: "input", "X1/CLK": "input", X2: "input", RESET: "input", CS: "input", IP2: "input", IACK: "input", IP5: "input", IP4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:68681";
@@ -330,7 +335,8 @@ export class _68901_PLCC extends Component.withPins({
   "DS": "51",
   "CS": "52",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "R/W": "input", RS1: "input", RS2: "input", RS3: "input", RS4: "input", RS5: "input", TC: "input", SO: "output", SI: "input", RC: "input", VCC: "power_in", MPX: "input", TAO: "output", TBO: "output", TCO: "output", TDO: "output", X1: "input", X2: "input", TAI: "input", TBI: "input", RESET: "input", I0: "input", I1: "input", I2: "input", I3: "input", I4: "input", I5: "input", I6: "input", I7: "input", TR: "output", RR: "output", IRQ: "output", IEO: "output", IEI: "input", CLK: "input", GND: "power_in", D0: "input", D1: "input", D2: "input", D3: "input", D4: "input", D5: "input", D6: "input", D7: "input", IACK: "input", DTACK: "output", DS: "input", CS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:68901_PLCC";
@@ -388,7 +394,8 @@ export class _8237 extends Component.withPins({
   "A6": "39",
   "A7": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{IOR}": "bidirectional", "~{IOW}": "bidirectional", "~{MEMR}": "tri_state", "~{MEMW}": "tri_state", PIN5: "input", READY: "input", HLDA: "input", ADSTB: "output", AEN: "output", HRQ: "output", "~{CS}": "input", CLK: "input", RESET: "input", DACK2: "output", DACK3: "output", DREQ3: "input", DREQ2: "input", DREQ1: "input", DREQ0: "input", Vss: "power_in", DB7: "bidirectional", DB6: "bidirectional", DB5: "bidirectional", DACK1: "output", DACK0: "output", DB4: "bidirectional", DB3: "bidirectional", DB2: "bidirectional", DB1: "bidirectional", DB0: "bidirectional", Vcc: "power_in", A0: "bidirectional", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", "~{EOP}": "bidirectional", A4: "tri_state", A5: "tri_state", A6: "tri_state", A7: "tri_state", ...opts.pinTypes } });
   }
   override schema = "Interface:8237";
@@ -446,7 +453,8 @@ export class _8255 extends Component.withPins({
   "PA5": "39",
   "PA4": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RD}": "input", "~{CS}": "input", GND: "power_in", A1: "input", A0: "input", PC7: "bidirectional", PC6: "bidirectional", PC5: "bidirectional", PC4: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RESET: "input", "~{WR}": "input", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:8255";
@@ -504,7 +512,8 @@ export class _8255A extends Component.withPins({
   "PA5": "39",
   "PA4": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RD}": "input", "~{CS}": "input", GND: "power_in", A1: "input", A0: "input", PC7: "bidirectional", PC6: "bidirectional", PC5: "bidirectional", PC4: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RESET: "input", "~{WR}": "input", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:8255A";
@@ -550,7 +559,8 @@ export class _8259 extends Component.withPins({
   "A0": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "~{RD}": "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", CAS0: "input", CAS1: "output", GND: "power_in", CAS2: "output", "~{SP}/~{EN}": "bidirectional", INT: "output", IR0: "input", IR1: "input", IR2: "input", IR3: "input", IR4: "input", IR5: "input", IR6: "input", IR7: "input", "~{INTA}": "input", A0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:8259";
@@ -596,7 +606,8 @@ export class _8259A extends Component.withPins({
   "A0": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "~{RD}": "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", CAS0: "input", CAS1: "output", GND: "power_in", CAS2: "output", "~{SP}/~{EN}": "bidirectional", INT: "output", IR0: "input", IR1: "input", IR2: "input", IR3: "input", IR4: "input", IR5: "input", IR6: "input", IR7: "input", "~{INTA}": "input", A0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:8259A";
@@ -642,7 +653,8 @@ export class _8259A_2 extends Component.withPins({
   "A0": "27",
   "VCC": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", "~{WR}": "input", "~{RD}": "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", CAS0: "input", CAS1: "output", GND: "power_in", CAS2: "output", "~{SP}/~{EN}": "bidirectional", INT: "output", IR0: "input", IR1: "input", IR2: "input", IR3: "input", IR4: "input", IR5: "input", IR6: "input", IR7: "input", "~{INTA}": "input", A0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:8259A-2";
@@ -680,7 +692,8 @@ export class _8288 extends Component.withPins({
   "~{S0}": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { IOB: "input", CLK: "input", "~{S1}": "input", "DT/~{R}": "output", ALE: "output", "~{AEN}": "input", "~{MRDC}": "tri_state", "~{AMWC}": "tri_state", "~{MWTC}": "tri_state", GND: "power_in", "~{IOWC}": "tri_state", "~{AIOWC}": "tri_state", "~{IORC}": "tri_state", "~{INTA}": "tri_state", CEN: "input", DEN: "output", "MCE/~{PDEN}": "output", "~{S2}": "input", "~{S0}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:8288";
@@ -738,7 +751,8 @@ export class _82C55A extends Component.withPins({
   "PA5": "39",
   "PA4": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RD}": "input", "~{CS}": "input", GND: "power_in", A1: "input", A0: "input", PC7: "bidirectional", PC6: "bidirectional", PC5: "bidirectional", PC4: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RESET: "input", "~{WR}": "input", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:82C55A";
@@ -800,7 +814,8 @@ export class _82C55A_PLCC extends Component.withPins({
   "PA5": "43",
   "PA4": "44",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{RD}": "input", "~{CS}": "input", GND: "power_in", A1: "input", A0: "input", PC7: "bidirectional", NC_12: "no_connect", PC6: "bidirectional", PC5: "bidirectional", PC4: "bidirectional", PC0: "bidirectional", PC1: "bidirectional", PC2: "bidirectional", PC3: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", NC_23: "no_connect", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", NC_34: "no_connect", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", RESET: "input", "~{WR}": "input", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:82C55A_PLCC";
@@ -895,7 +910,8 @@ export class _88SE9125C0_NAA extends Component.withPins({
   "NC_76": "76",
   "VSS_77": "77",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", NC_4: "no_connect", VDD_5: "power_in", NC_6: "no_connect", NC_7: "no_connect", NC_8: "no_connect", VDDIO_9: "power_in", NC_10: "no_connect", NC_11: "no_connect", NC_12: "no_connect", VDD_13: "passive", NC_14: "no_connect", NC_15: "no_connect", NC_16: "no_connect", GPIO3: "bidirectional", GPIO4: "bidirectional", GPIO5: "bidirectional", TESTMODE: "input", VDD_21: "power_in", TP: "bidirectional", RXP_1: "input", RXN_1: "input", VAA2_1: "power_in", TXN_1: "output", TXP_1: "output", VSS_28: "power_in", RXP_0: "input", RXN_0: "input", VAA2_0: "power_in", TXN_0: "output", TXP_0: "output", VAA1: "power_in", XTLIN_OSC: "input", XTLOUT: "output", ISET: "bidirectional", VCONT_10: "output", PTXN: "output", PTXP: "output", AVDDT: "power_in", AVDD: "power_in", PRXN: "input", PRXP: "input", CLKP: "input", CLKN: "input", SPI_DO: "output", SPI_CS: "output", SPI_DI: "input", SPI_CLK: "output", VDD_51: "power_in", "~{WAKE}": "open_collector", "~{PERST}": "input", GPIO0: "bidirectional", NC_55: "no_connect", NC_56: "no_connect", VDDIO_57: "power_in", NC_58: "no_connect", NC_59: "no_connect", NC_60: "no_connect", NC_61: "no_connect", NC_62: "no_connect", NC_63: "no_connect", VDD_64: "power_in", NC_65: "no_connect", NC_66: "no_connect", NC_67: "no_connect", NC_68: "no_connect", NC_69: "no_connect", NC_70: "no_connect", VDD_71: "passive", NC_72: "no_connect", VDDIO_73: "power_in", GPIO1: "bidirectional", GPIO2: "bidirectional", NC_76: "no_connect", VSS_77: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:88SE9125C0-NAA";
@@ -923,7 +939,8 @@ export class AD9833xRM extends Component.withPins({
   "AGND": "9",
   "VOUT": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { COMP: "passive", VDD: "power_in", "CAP/2.5V": "power_in", DGND: "power_in", MCLK: "input", SDATA: "input", SCLK: "input", "~{FSYNC}": "input", AGND: "power_in", VOUT: "output", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9833xRM";
@@ -961,7 +978,8 @@ export class AD9834 extends Component.withPins({
   "IOUT": "19",
   "IOUTB": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FS_ADJUST: "passive", REFOUT: "output", COMP: "passive", AVDD: "power_in", DVDD: "power_in", "CAP/2.5V": "passive", DGND: "power_in", MCLK: "input", FSELECT: "input", PSELECT: "input", RESET: "input", SLEEP: "input", SDATA: "input", SCLK: "input", "~{FSYNC}": "input", SIGNBITOUT: "output", VIN: "power_in", AGND: "power_in", IOUT: "output", IOUTB: "output", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9834";
@@ -1007,7 +1025,8 @@ export class AD9850 extends Component.withPins({
   "D5": "27",
   "D4": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D3: "input", D2: "input", D1: "input", D0: "input", DGND_5: "power_in", DVDD_6: "power_in", W_CLK: "input", FQ_UD: "input", CLKIN: "input", AGND_10: "power_in", AVDD_11: "power_in", RSET: "passive", QOUTB: "output", QOUT: "output", VINN: "input", VINP: "input", DACBL: "passive", AVDD_18: "passive", AGND_19: "passive", IOUTB: "output", IOUT: "output", RESET: "input", DVDD_23: "power_in", DGND_24: "power_in", D7: "input", D6: "input", D5: "input", D4: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9850";
@@ -1053,7 +1072,8 @@ export class AD9851 extends Component.withPins({
   "D5": "27",
   "D4": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D3: "input", D2: "input", D1: "input", D0: "input", PGND: "power_in", PVCC: "power_in", W_CLK: "input", FQ_UD: "input", REFCLK: "input", AGND_10: "power_in", AVDD_11: "power_in", RSET: "passive", VOUTN: "output", VOUTP: "output", VINN: "input", VINP: "input", DACBP: "passive", AVDD_18: "passive", AGND_19: "passive", IOUTB: "output", IOUT: "output", RESET: "input", DVDD: "power_in", DGND: "power_in", D7: "input", D6: "input", D5: "input", D4: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9851";
@@ -1172,7 +1192,8 @@ export class AD9910 extends Component.withPins({
   "NC_100": "100",
   "EP": "101",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", PLL_LOOP_FILTER: "input", AVDD_1V8_3: "power_in", AGND_4: "power_in", AGND_5: "passive", AVDD_1V8_6: "power_in", "SYNC_IN+": "input", "SYNC_IN-": "input", "SYNC_OUT+": "output", "SYNC_OUT-": "output", DVDD_IO_3V3_11: "power_in", SYNC_SMP_ERR: "output", DGND_13: "power_in", MASTER_RESET: "input", DVDD_IO_3V3_15: "passive", DGND_16: "passive", DVDD_1V8_17: "power_in", EXT_PWR_DWN: "input", PLL_LOCK: "output", NC_20: "no_connect", DVDD_IO_3V3_21: "passive", DGND_22: "passive", DVDD_1V8_23: "passive", RAM_SWP_OVR: "output", D15: "input", D14: "input", D13: "input", DVDD_IO_3V3_28: "passive", DGND_29: "passive", DVDD_1V8_30: "passive", D12: "input", D11: "input", D10: "input", D9: "input", D8: "input", D7: "input", D6: "input", D5: "input", D4: "input", PDCLK: "output", TxENABLE: "input", D3: "input", D2: "input", D1: "input", DVDD_IO_3V3_45: "passive", DGND_46: "passive", DVDD_1V8_47: "passive", D0: "input", F1: "input", F0: "input", DGND_51: "passive", PROFILE2: "input", PROFILE1: "input", PROFILE0: "input", SYNC_CLK: "output", DVDD_IO_3V3_56: "passive", DVDD_1V8_57: "passive", DGND_58: "passive", "I/O_UPDATE": "bidirectional", OSK: "input", DROVER: "output", DRCTL: "input", DRHOLD: "input", DVDD_1V8_64: "passive", DGND_65: "passive", DVDD_IO_3V3_66: "passive", SDIO: "bidirectional", SDO: "output", SCLK: "input", "~{CS}": "input", "I/O_RESET": "input", NC_72: "no_connect", AGND_73: "passive", AVDD_3V3_74: "power_in", AVDD_3V3_75: "passive", AVDD_3V3_76: "passive", AVDD_3V3_77: "passive", AGND_78: "passive", AGND_79: "passive", "~{IOUT}": "output", IOUT: "output", AGND_82: "passive", AVDD_3V3_83: "passive", DAC_RSET: "output", AGND_85: "passive", NC_86: "no_connect", NC_87: "no_connect", AGND_88: "passive", AVDD_1V8_89: "power_in", REF_CLK: "input", "~{REF_CLK}": "input", AVDD_1V8_92: "passive", NC_93: "no_connect", REFCLK_OUT: "output", XTAL_SEL: "input", AGND_96: "passive", NC_97: "no_connect", NC_98: "no_connect", NC_99: "no_connect", NC_100: "no_connect", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9910";
@@ -1255,7 +1276,8 @@ export class AD9912 extends Component.withPins({
   "SCLK": "64",
   "AVSS_65": "65",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "DVDD_I/O": "power_in", DVSS_2: "power_in", DVDD_3: "power_in", DVSS_4: "passive", DVDD_5: "passive", DVSS_6: "passive", DVDD_7: "passive", DVSS_8: "passive", S1: "tri_state", S2: "tri_state", AVDD_11: "power_in", NC_12: "no_connect", NC_13: "no_connect", AVDD3_14: "power_in", NC_15: "no_connect", NC_16: "no_connect", NC_17: "no_connect", NC_18: "no_connect", AVDD_19: "passive", NC_20: "no_connect", NC_21: "no_connect", NC_22: "no_connect", AVDD_23: "passive", AVDD_24: "passive", AVDD_25: "power_in", AVDD_26: "passive", SYSCLK: "input", SYSCLK_B: "input", AVDD_29: "passive", AVDD_30: "passive", LOOP_FILTER: "passive", CLKMODESEL: "input", AVSS_33: "power_in", OUTB: "output", OUT: "output", AVDD_36: "passive", AVDD3_37: "power_in", OUT_CMOS: "output", AVSS_39: "passive", FDBK_INB: "input", FDBK_IN: "input", AVDD_42: "passive", AVSS_43: "passive", AVDD_44: "passive", AVDD_45: "passive", AVDD3_46: "power_in", AVDD3_47: "passive", DAC_RSET: "passive", AVDD3_49: "passive", DAC_OUT: "output", DAC_OUTB: "output", AVSS_52: "passive", AVDD_53: "power_in", S3: "tri_state", S4: "tri_state", DVSS_56: "passive", DVSS_57: "passive", PWRDOWN: "input", RESET: "input", IO_UPDATE: "input", "~{CSB}": "input", SDO: "output", SDIO: "bidirectional", SCLK: "input", AVSS_65: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9912";
@@ -1322,7 +1344,8 @@ export class AD9951 extends Component.withPins({
   "DGND_48": "48",
   "AGND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "I/OUPDATE": "bidirectional", DVDD_2: "power_in", DGND_3: "power_in", AVDD_4: "power_in", AGND_5: "power_in", AVDD_6: "passive", AGND_7: "passive", "~{OSC/REFCLK}": "input", "OSC/REFCLK": "input", CRYSTALOUT: "output", CLKMODESELECT: "input", LOOP_FILTER: "input", AVDD_13: "passive", AGND_14: "passive", AGND_15: "passive", AVDD_16: "passive", AGND_17: "passive", AVDD_18: "passive", AVDD_19: "passive", "~{IOUT}": "output", IOUT: "output", AGND_22: "passive", DACBP: "input", "DAC_R_{SET}": "input", AVDD_25: "passive", AGND_26: "passive", AVDD_27: "passive", AGND_28: "passive", AVDD_29: "passive", AGND_30: "passive", AGND_31: "passive", AGND_32: "passive", DGND_33: "passive", DVDD_34: "passive", PWRDWNCTL: "input", RESET: "input", IOSYNC: "output", SDO: "output", "~{CS}": "input", SCLK: "input", SDIO: "bidirectional", DGND_42: "passive", "DVDD_I/O": "power_in", SYNC_IN: "power_in", SYNC_CLK: "output", OSK: "output", DGND_47: "passive", DGND_48: "passive", AGND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9951";
@@ -1389,7 +1412,8 @@ export class AD9954 extends Component.withPins({
   "PS1": "48",
   "AGND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "I/OUPDATE": "bidirectional", DVDD_2: "power_in", DGND_3: "power_in", AVDD_4: "power_in", AGND_5: "power_in", AVDD_6: "passive", AGND_7: "passive", "~{OSC/REFCLK}": "input", "OSC/REFCLK": "input", CRYSTALOUT: "output", CLKMODESELECT: "input", LOOP_FILTER: "input", AVDD_13: "passive", AGND_14: "passive", AGND_15: "passive", AVDD_16: "passive", AGND_17: "passive", AVDD_18: "passive", AVDD_19: "passive", "~{IOUT}": "output", IOUT: "output", AGND_22: "passive", DACBP: "input", "DAC_R_{SET}": "input", AVDD_25: "passive", AGND_26: "passive", AVDD_27: "passive", COMP_OUT: "output", AVDD_29: "passive", COMP_IN: "input", "~{COMP_IN}": "input", AGND_32: "passive", DGND_33: "passive", DVDD_34: "passive", PWRDWNCTL: "input", RESET: "input", IOSYNC: "input", SDO: "output", "~{CS}": "input", SCLK: "input", SDIO: "bidirectional", DGND_42: "passive", "DVDD_I/O": "power_in", SYNC_IN: "power_in", SYNC_CLK: "output", OSK: "input", PS0: "input", PS1: "input", AGND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:AD9954";
@@ -1423,7 +1447,8 @@ export class AM26LS31CD extends Component.withPins({
   "4A": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", "1Y": "tri_state", "1Z": "tri_state", G: "input", "2Z": "tri_state", "2Y": "tri_state", "2A": "input", GND: "power_in", "3A": "input", "3Y": "tri_state", "3Z": "tri_state", "~{G}": "input", "4Z": "tri_state", "4Y": "tri_state", "4A": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LS31CD";
@@ -1457,7 +1482,8 @@ export class AM26LS31CDB extends Component.withPins({
   "4A": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", "1Y": "tri_state", "1Z": "tri_state", G: "input", "2Z": "tri_state", "2Y": "tri_state", "2A": "input", GND: "power_in", "3A": "input", "3Y": "tri_state", "3Z": "tri_state", "~{G}": "input", "4Z": "tri_state", "4Y": "tri_state", "4A": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LS31CDB";
@@ -1491,7 +1517,8 @@ export class AM26LS31CN extends Component.withPins({
   "4A": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", "1Y": "tri_state", "1Z": "tri_state", G: "input", "2Z": "tri_state", "2Y": "tri_state", "2A": "input", GND: "power_in", "3A": "input", "3Y": "tri_state", "3Z": "tri_state", "~{G}": "input", "4Z": "tri_state", "4Y": "tri_state", "4A": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LS31CN";
@@ -1525,7 +1552,8 @@ export class AM26LS31MJ extends Component.withPins({
   "4A": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", "1Y": "tri_state", "1Z": "tri_state", G: "input", "2Z": "tri_state", "2Y": "tri_state", "2A": "input", GND: "power_in", "3A": "input", "3Y": "tri_state", "3Z": "tri_state", "~{G}": "input", "4Z": "tri_state", "4Y": "tri_state", "4A": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LS31MJ";
@@ -1559,7 +1587,8 @@ export class AM26LS31xNS extends Component.withPins({
   "4A": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1A": "input", "1Y": "tri_state", "1Z": "tri_state", G: "input", "2Z": "tri_state", "2Y": "tri_state", "2A": "input", GND: "power_in", "3A": "input", "3Y": "tri_state", "3Z": "tri_state", "~{G}": "input", "4Z": "tri_state", "4Y": "tri_state", "4A": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LS31xNS";
@@ -1593,7 +1622,8 @@ export class AM26LV32xD extends Component.withPins({
   "4B": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1B": "input", "1A": "input", "1Y": "tri_state", G: "input", "2Y": "tri_state", "2A": "input", "2B": "input", GND: "power_in", "3B": "input", "3A": "input", "3Y": "tri_state", "~{G}": "input", "4Y": "tri_state", "4A": "input", "4B": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LV32xD";
@@ -1627,7 +1657,8 @@ export class AM26LV32xNS extends Component.withPins({
   "4B": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "1B": "input", "1A": "input", "1Y": "tri_state", G: "input", "2Y": "tri_state", "2A": "input", "2B": "input", GND: "power_in", "3B": "input", "3A": "input", "3Y": "tri_state", "~{G}": "input", "4Y": "tri_state", "4A": "input", "4B": "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:AM26LV32xNS";
@@ -1662,7 +1693,8 @@ export class CDCLVP1102RGT extends Component.withPins({
   "GND_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND_1: "power_in", NC_2: "no_connect", NC_3: "no_connect", NC_4: "no_connect", VCC: "power_in", INP: "input", INN: "input", VAC_REF: "output", OUTP0: "output", OUTN0: "output", OUTP1: "output", OUTN1: "output", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", GND_16: "passive", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:CDCLVP1102RGT";
@@ -1700,7 +1732,8 @@ export class CH376T extends Component.withPins({
   "SD_CK": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{INT}": "output", RSTI: "input", "~{SPI}": "input", TXD: "bidirectional", RXD: "input", SD_DI: "input", V3: "passive", "UD+": "bidirectional", "UD-": "bidirectional", GND: "power_in", XI: "input", XO: "output", "~{SCS}": "input", SCK: "input", SDI: "input", SDO: "tri_state", SD_CS: "open_collector", SD_DO: "output", SD_CK: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:CH376T";
@@ -1766,7 +1799,8 @@ export class DS90C124 extends Component.withPins({
   "VDDPR0": "47",
   "REN": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RPWDNB: "input", RESRVD: "input", ROUT23: "output", ROUT22: "output", ROUT21: "output", ROUT20: "output", VDDOR3: "power_in", VSSOR3: "power_in", ROUT19: "output", ROUT18: "output", ROUT17: "output", ROUT16: "output", ROUT15: "output", ROUT14: "output", ROUT13: "output", ROUT12: "output", LOCK: "output", RCLK: "output", VSSOR2: "power_in", VDDOR2: "power_in", ROUT11: "output", ROUT10: "output", ROUT9: "output", ROUT8: "output", ROUT7: "output", ROUT6: "output", ROUT5: "output", ROUT4: "output", VSSOR1: "power_in", VDDOR1: "power_in", ROUT3: "output", ROUT2: "output", ROUT1: "output", ROUT0: "output", VSSR0: "power_in", VDDR0: "power_in", VDDR1: "power_in", VSSR1: "power_in", VDDIR: "power_in", VSSIR: "power_in", "RIN+": "input", "RIN-": "input", RRFB: "input", VSSPR1: "power_in", VDDPR1: "power_in", VSSPR0: "power_in", VDDPR0: "power_in", REN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:DS90C124";
@@ -1832,7 +1866,8 @@ export class DS90C241 extends Component.withPins({
   "DIN18": "47",
   "DIN19": "48",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DIN20: "input", DIN21: "input", DIN22: "input", DIN23: "input", DCAOFF: "input", VSSL: "power_in", VDDL: "power_in", DCBOFF: "input", TPWDNB: "input", TCLK: "input", TRFB: "input", VODSEL: "input", RESRVD: "input", VDDPT1: "power_in", VSSPT1: "power_in", VDDPT0: "power_in", VSSPT0: "power_in", DEN: "input", "DOUT-": "output", "DOUT+": "output", VSSDR: "power_in", VDDDR: "power_in", PRE: "input", VSS: "power_in", DIN0: "input", DIN1: "input", DIN2: "input", DIN3: "input", DIN4: "input", VDDT: "power_in", VSST: "power_in", DIN5: "input", DIN6: "input", DIN7: "input", DIN8: "input", DIN9: "input", DIN10: "input", DIN11: "input", DIN12: "input", DIN13: "input", DIN14: "input", VDDIT: "power_in", VSSIT: "power_in", DIN15: "input", DIN16: "input", DIN17: "input", DIN18: "input", DIN19: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:DS90C241";
@@ -1858,7 +1893,8 @@ export class DS90C402 extends Component.withPins({
   "RI2+": "7",
   "RI2-": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO1: "output", "RI1+": "input", "RI1-": "input", GND: "power_in", RO2: "output", "RI2+": "input", "RI2-": "input", ...opts.pinTypes } });
   }
   override schema = "Interface:DS90C402";
@@ -1881,7 +1917,8 @@ export class DS90LV011A extends Component.withPins({
   "OUT+": "4",
   "IN": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", "OUT-": "output", "OUT+": "output", IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:DS90LV011A";
@@ -1907,7 +1944,8 @@ export class DS90LV027A extends Component.withPins({
   "DO+1": "7",
   "DO-1": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", DI1: "input", DI2: "input", GND: "power_in", "DO-2": "output", "DO+2": "output", "DO+1": "output", "DO-1": "output", ...opts.pinTypes } });
   }
   override schema = "Interface:DS90LV027A";
@@ -1964,7 +2002,8 @@ export class FD1771 extends Component.withPins({
   "INTRQ": "39",
   "VDD": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VBB: "power_in", "~{WE}": "input", "~{CS}": "input", "~{RE}": "input", A0: "input", A1: "input", DI0: "tri_state", DI1: "tri_state", DI2: "tri_state", DI3: "tri_state", DI4: "tri_state", DI5: "tri_state", DI6: "tri_state", DI7: "tri_state", "~{PH1}/STEP": "output", "~{PH2}/DIRC": "output", PH3: "output", "~{3PM}": "input", "~{MR}": "input", GND: "power_in", VCC: "power_in", "~{TEST}": "input", HLT: "input", CLK: "input", "~{XTDS}": "input", FDCLK: "input", FDDATA: "input", TG43: "output", WG: "output", WD: "output", READY: "input", "~{WF}": "input", "~{TR00}": "input", "~{IP}": "input", "~{WPRT}": "input", "~{DINT}": "input", DRQ: "output", INTRQ: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:FD1771";
@@ -1996,7 +2035,8 @@ export class FIN1019M extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DE: "input", DI: "input", NC_3: "no_connect", RO: "tri_state", NC_5: "no_connect", NC_6: "no_connect", GND: "power_in", "~{RE}": "input", "RI-": "input", "RI+": "input", "DO-": "tri_state", "DO+": "tri_state", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:FIN1019M";
@@ -2028,7 +2068,8 @@ export class FIN1019MTC extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DE: "input", DI: "input", NC_3: "no_connect", RO: "tri_state", NC_5: "no_connect", NC_6: "no_connect", GND: "power_in", "~{RE}": "input", "RI-": "input", "RI+": "input", "DO-": "tri_state", "DO+": "tri_state", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:FIN1019MTC";
@@ -2066,7 +2107,8 @@ export class HT12D extends Component.withPins({
   "VDD": "19",
   "NC_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", A5: "input", A6: "input", A7: "input", VSS: "power_in", D8: "output", D9: "output", D10: "output", D11: "output", DIN: "input", OSC2: "output", OSC1: "input", VT: "output", VDD: "power_in", NC_20: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface:HT12D";
@@ -2104,7 +2146,8 @@ export class HT12E extends Component.withPins({
   "VDD": "19",
   "NC_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", A0: "input", A1: "input", A2: "input", A3: "input", A4: "input", A5: "input", A6: "input", A7: "input", VSS: "power_in", AD8: "output", AD9: "output", AD10: "output", AD11: "output", "~{TE}": "input", OSC2: "output", OSC1: "input", DOUT: "output", VDD: "power_in", NC_20: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Interface:HT12E";
@@ -2138,7 +2181,8 @@ export class LTC1518 extends Component.withPins({
   "B4": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B1: "input", A1: "input", Out1: "tri_state", EN: "input", Out2: "tri_state", A2: "input", B2: "input", GND: "power_in", B3: "input", A3: "input", Out3: "tri_state", "~{EN}": "input", Out4: "tri_state", A4: "input", B4: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC1518";
@@ -2172,7 +2216,8 @@ export class LTC1519 extends Component.withPins({
   "GND": "8",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B1: "input", A1: "input", Out1: "tri_state", EN12: "input", Out2: "tri_state", A2: "input", B2: "input", B3: "input", A3: "input", Out3: "tri_state", EN34: "input", Out4: "tri_state", A4: "input", B4: "input", GND: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC1519";
@@ -2206,7 +2251,8 @@ export class LTC1688 extends Component.withPins({
   "DI4": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DI1: "input", DO1A: "output", DO1B: "output", EN: "input", DO2B: "output", DO2A: "output", DI2: "input", GND: "power_in", DI3: "input", DO3A: "output", DO3B: "output", "~{EN}": "input", DO4B: "output", DO4A: "output", DI4: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC1688";
@@ -2240,7 +2286,8 @@ export class LTC1689 extends Component.withPins({
   "GND": "8",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DI1: "input", DO1A: "output", DO1B: "output", EN12: "input", DO2B: "output", DO2A: "output", DI2: "input", DI3: "input", DO3A: "output", DO3B: "output", EN34: "input", DO4B: "output", DO4A: "output", DI4: "input", GND: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC1689";
@@ -2271,7 +2318,8 @@ export class LTC6957xDD_1 extends Component.withPins({
   "SD1": "12",
   "GND_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND_5: "power_in", FILTB: "input", SD2: "input", "OUT2+": "open_emitter", "OUT2-": "open_emitter", "OUT1-": "open_emitter", "OUT1+": "open_emitter", SD1: "input", GND_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xDD-1";
@@ -2302,7 +2350,8 @@ export class LTC6957xDD_2 extends Component.withPins({
   "SD1": "12",
   "GND_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND_5: "power_in", FILTB: "input", SD2: "input", "OUT2+": "output", "OUT2-": "output", "OUT1-": "output", "OUT1+": "output", SD1: "input", GND_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xDD-2";
@@ -2333,7 +2382,8 @@ export class LTC6957xDD_3 extends Component.withPins({
   "SD1": "12",
   "GND_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND_5: "power_in", FILTB: "input", SD2: "input", GNDOUT: "output", OUT2: "output", OUT1: "output", VDD: "power_in", SD1: "input", GND_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xDD-3";
@@ -2364,7 +2414,8 @@ export class LTC6957xDD_4 extends Component.withPins({
   "SD1": "12",
   "GND_13": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND_5: "power_in", FILTB: "input", SD2: "input", GNDOUT: "output", OUT2: "output", OUT1: "output", VDD: "power_in", SD1: "input", GND_13: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xDD-4";
@@ -2394,7 +2445,8 @@ export class LTC6957xMS_1 extends Component.withPins({
   "OUT1+": "11",
   "SD1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND: "power_in", FILTB: "input", SD2: "input", "OUT2+": "open_emitter", "OUT2-": "open_emitter", "OUT1-": "open_emitter", "OUT1+": "open_emitter", SD1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xMS-1";
@@ -2424,7 +2476,8 @@ export class LTC6957xMS_2 extends Component.withPins({
   "OUT1+": "11",
   "SD1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND: "power_in", FILTB: "input", SD2: "input", "OUT2+": "output", "OUT2-": "output", "OUT1-": "output", "OUT1+": "output", SD1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xMS-2";
@@ -2454,7 +2507,8 @@ export class LTC6957xMS_3 extends Component.withPins({
   "VDD": "11",
   "SD1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND: "power_in", FILTB: "input", SD2: "input", GNDOUT: "output", OUT2: "output", OUT1: "output", VDD: "power_in", SD1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xMS-3";
@@ -2484,7 +2538,8 @@ export class LTC6957xMS_4 extends Component.withPins({
   "VDD": "11",
   "SD1": "12",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { FILTA: "input", "V+": "power_in", "IN+": "input", "IN-": "input", GND: "power_in", FILTB: "input", SD2: "input", GNDOUT: "output", OUT2: "output", OUT1: "output", VDD: "power_in", SD1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:LTC6957xMS-4";
@@ -2506,7 +2561,8 @@ export class MAX6816 extends Component.withPins({
   "OUT": "3",
   "VCC": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", IN: "input", OUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:MAX6816";
@@ -2532,7 +2588,8 @@ export class MC100EPT22D extends Component.withPins({
   "D0": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Q0: "output", "~{Q0}": "output", Q1: "output", "~{Q1}": "output", GND: "power_in", D1: "input", D0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:MC100EPT22D";
@@ -2558,7 +2615,8 @@ export class MC100EPT22DT extends Component.withPins({
   "D0": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Q0: "output", "~{Q0}": "output", Q1: "output", "~{Q1}": "output", GND: "power_in", D1: "input", D0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:MC100EPT22DT";
@@ -2584,7 +2642,8 @@ export class MC100LVELT22D extends Component.withPins({
   "D0": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Q0: "output", "~{Q0}": "output", Q1: "output", "~{Q1}": "output", GND: "power_in", D1: "input", D0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:MC100LVELT22D";
@@ -2610,7 +2669,8 @@ export class MC100LVELT22DT extends Component.withPins({
   "D0": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Q0: "output", "~{Q0}": "output", Q1: "output", "~{Q1}": "output", GND: "power_in", D1: "input", D0: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:MC100LVELT22DT";
@@ -2656,7 +2716,8 @@ export class MC6840 extends Component.withPins({
   "O1": "27",
   "~{C1}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{G2}": "input", O2: "output", "~{C2}": "input", "~{G3}": "input", O3: "output", "~{C3}": "input", "~{RESET}": "input", "~{IRQ}": "output", RS0: "input", RS1: "input", RS2: "input", "R/~{W}": "input", VCC: "power_in", "~{CS0}": "input", CS1: "input", E: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{G1}": "input", O1: "output", "~{C1}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC6840";
@@ -2714,7 +2775,8 @@ export class MC6843 extends Component.withPins({
   "WDT": "39",
   "TRZ": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_1: "power_in", VSS_2: "power_in", FIR: "output", FI: "input", WPT: "input", WGT: "output", "~{RESET}": "input", HDR: "output", DCK: "input", LCT: "output", IDX: "input", CLK: "input", RDY: "input", VFOC: "output", STP: "output", HLD: "output", RS2: "input", RS1: "input", RS0: "input", VCC: "power_in", TxAck: "input", "R/~{W}": "input", E: "input", "~{CS}": "input", BD: "output", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", NC_34: "no_connect", NC_35: "no_connect", TxRQ: "output", "~{IRQ}": "open_collector", RDT: "input", WDT: "output", TRZ: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC6843";
@@ -2772,7 +2834,8 @@ export class MC6844 extends Component.withPins({
   "~{RESET}": "39",
   "E": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{CS}/Tx_AKB": "bidirectional", "R/~{W}": "bidirectional", A0: "bidirectional", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", Tx_RQ3: "input", Tx_RQ2: "input", Tx_RQ1: "input", Tx_RQ0: "input", "~{IRQ}/~{DEND}": "output", "~{Tx_STB}": "output", Tx_AKA: "output", "~{DRQ2}": "output", "~{DRQ1}": "output", DGRNT: "input", "~{RESET}": "input", E: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC6844";
@@ -2830,7 +2893,8 @@ export class MC68A21 extends Component.withPins({
   "CA2": "39",
   "CA1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", CB1: "input", CB2: "bidirectional", VCC: "power_in", "R/~{W}": "input", CS0: "input", "~{CS2}": "input", CS1: "input", ENABLE: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{RESET}": "input", RS1: "input", RS0: "input", "~{IRQB}": "open_collector", "~{IRQA}": "open_collector", CA2: "bidirectional", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC68A21";
@@ -2876,7 +2940,8 @@ export class MC68A40 extends Component.withPins({
   "O1": "27",
   "~{C1}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{G2}": "input", O2: "output", "~{C2}": "input", "~{G3}": "input", O3: "output", "~{C3}": "input", "~{RESET}": "input", "~{IRQ}": "output", RS0: "input", RS1: "input", RS2: "input", "R/~{W}": "input", VCC: "power_in", "~{CS0}": "input", CS1: "input", E: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{G1}": "input", O1: "output", "~{C1}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC68A40";
@@ -2934,7 +2999,8 @@ export class MC68A44 extends Component.withPins({
   "~{RESET}": "39",
   "E": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{CS}/Tx_AKB": "bidirectional", "R/~{W}": "bidirectional", A0: "bidirectional", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", Tx_RQ3: "input", Tx_RQ2: "input", Tx_RQ1: "input", Tx_RQ0: "input", "~{IRQ}/~{DEND}": "output", "~{Tx_STB}": "output", Tx_AKA: "output", "~{DRQ2}": "output", "~{DRQ1}": "output", DGRNT: "input", "~{RESET}": "input", E: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC68A44";
@@ -2992,7 +3058,8 @@ export class MC68B21 extends Component.withPins({
   "CA2": "39",
   "CA1": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", CB1: "input", CB2: "bidirectional", VCC: "power_in", "R/~{W}": "input", CS0: "input", "~{CS2}": "input", CS1: "input", ENABLE: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{RESET}": "input", RS1: "input", RS0: "input", "~{IRQB}": "open_collector", "~{IRQA}": "open_collector", CA2: "bidirectional", CA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC68B21";
@@ -3038,7 +3105,8 @@ export class MC68B40 extends Component.withPins({
   "O1": "27",
   "~{C1}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{G2}": "input", O2: "output", "~{C2}": "input", "~{G3}": "input", O3: "output", "~{C3}": "input", "~{RESET}": "input", "~{IRQ}": "output", RS0: "input", RS1: "input", RS2: "input", "R/~{W}": "input", VCC: "power_in", "~{CS0}": "input", CS1: "input", E: "input", D7: "input", D6: "input", D5: "input", D4: "input", D3: "input", D2: "input", D1: "input", D0: "input", "~{G1}": "input", O1: "output", "~{C1}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC68B40";
@@ -3096,7 +3164,8 @@ export class MC68B44 extends Component.withPins({
   "~{RESET}": "39",
   "E": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", "~{CS}/Tx_AKB": "bidirectional", "R/~{W}": "bidirectional", A0: "bidirectional", A1: "bidirectional", A2: "bidirectional", A3: "bidirectional", A4: "bidirectional", A5: "output", A6: "output", A7: "output", A8: "output", A9: "output", A10: "output", A11: "output", A12: "output", A13: "output", A14: "output", A15: "output", VCC: "power_in", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", Tx_RQ3: "input", Tx_RQ2: "input", Tx_RQ1: "input", Tx_RQ0: "input", "~{IRQ}/~{DEND}": "output", "~{Tx_STB}": "output", Tx_AKA: "output", "~{DRQ2}": "output", "~{DRQ1}": "output", DGRNT: "input", "~{RESET}": "input", E: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:MC68B44";
@@ -3123,7 +3192,8 @@ export class NB3N551MN extends Component.withPins({
   "OE": "8",
   "EP": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ICLK: "input", Q1: "output", Q2: "output", Q3: "output", Q4: "output", GND: "power_in", VDD: "power_in", OE: "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:NB3N551MN";
@@ -3158,7 +3228,8 @@ export class ONET1191PRGT extends Component.withPins({
   "GND_16": "16",
   "GND_17": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC_1: "power_in", VCC_2: "passive", GND_3: "power_in", GND_4: "passive", "COC-": "passive", "COC+": "passive", "DIN+": "input", "DIN-": "input", TH: "input", LOS: "open_collector", DISABLE: "input", VAR: "input", GND_13: "passive", "DOUT-": "output", "DOUT+": "output", GND_16: "passive", GND_17: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface:ONET1191PRGT";
@@ -3183,7 +3254,8 @@ export class PCA9306 extends Component.withPins({
   "VREF2": "7",
   "EN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VREF1: "power_in", SCL1: "bidirectional", SDA1: "bidirectional", SDA2: "bidirectional", SCL2: "bidirectional", VREF2: "power_in", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9306";
@@ -3209,7 +3281,8 @@ export class PCA9306D extends Component.withPins({
   "VREF2": "7",
   "EN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VREF1: "power_in", SCL1: "bidirectional", SDA1: "bidirectional", SDA2: "bidirectional", SCL2: "bidirectional", VREF2: "power_in", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9306D";
@@ -3235,7 +3308,8 @@ export class PCA9306DC extends Component.withPins({
   "VREF2": "7",
   "EN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VREF1: "power_in", SCL1: "bidirectional", SDA1: "bidirectional", SDA2: "bidirectional", SCL2: "bidirectional", VREF2: "power_in", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9306DC";
@@ -3261,7 +3335,8 @@ export class PCA9306DC1 extends Component.withPins({
   "VREF2": "7",
   "EN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VREF1: "power_in", SCL1: "bidirectional", SDA1: "bidirectional", SDA2: "bidirectional", SCL2: "bidirectional", VREF2: "power_in", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9306DC1";
@@ -3287,7 +3362,8 @@ export class PCA9306DP extends Component.withPins({
   "VREF2": "7",
   "EN": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", VREF1: "power_in", SCL1: "bidirectional", SDA1: "bidirectional", SDA2: "bidirectional", SCL2: "bidirectional", VREF2: "power_in", EN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9306DP";
@@ -3313,7 +3389,8 @@ export class PCA9600D extends Component.withPins({
   "SY": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SX: "bidirectional", RX: "input", TX: "open_collector", GND: "power_in", TY: "open_collector", RY: "input", SY: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9600D";
@@ -3339,7 +3416,8 @@ export class PCA9600DP extends Component.withPins({
   "SY": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SX: "bidirectional", RX: "input", TX: "open_collector", GND: "power_in", TY: "open_collector", RY: "input", SY: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9600DP";
@@ -3367,7 +3445,8 @@ export class PCA9615DP extends Component.withPins({
   "DSDAM": "9",
   "V_{DD(B)}": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD(A)}": "power_in", SDA: "bidirectional", EN: "input", SCL: "bidirectional", "V_{SS}": "power_in", DSCLM: "bidirectional", DSCLP: "bidirectional", DSDAP: "bidirectional", DSDAM: "bidirectional", "V_{DD(B)}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:PCA9615DP";
@@ -3561,7 +3640,8 @@ export class PCI9030_PQFP176 extends Component.withPins({
   "AD29": "175",
   "VSS_176": "176",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD_1: "power_in", AD28: "bidirectional", AD27: "bidirectional", AD26: "bidirectional", AD25: "bidirectional", AD24: "bidirectional", "C/BE3#": "bidirectional", IDSEL: "input", AD23: "bidirectional", AD22: "bidirectional", AD21: "bidirectional", AD20: "bidirectional", VSS_13: "power_in", VDD_14: "power_in", AD19: "bidirectional", AD18: "bidirectional", AD17: "bidirectional", AD16: "bidirectional", "C/BE2#": "bidirectional", "FRAME#": "bidirectional", "IRDY#": "bidirectional", "TRDY#": "bidirectional", "DEVSEL#": "bidirectional", "STOP#": "bidirectional", "LOCK#": "input", "PERR#": "output", "SERR#": "output", PAR: "bidirectional", "C/BE1#": "bidirectional", AD15: "bidirectional", VSS_31: "power_in", VDD_32: "power_in", AD14: "bidirectional", AD13: "bidirectional", AD12: "bidirectional", AD11: "bidirectional", AD10: "bidirectional", AD9: "bidirectional", AD8: "bidirectional", "C/BE0#": "bidirectional", AD7: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", VSS_44: "power_in", VDD_45: "power_in", AD4: "bidirectional", AD3: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", "ENUM#": "output", "LEDON#": "output", "VI/O": "power_in", CPCISW: "input", "LBE3#": "output", VDD_56: "power_in", VSS_57: "power_in", "LBE2#": "output", "LBE1#": "output", "LBE0#": "output", LD31: "bidirectional", LD30: "bidirectional", LD29: "bidirectional", LD28: "bidirectional", LD27: "bidirectional", VSS_66: "power_in", LD26: "bidirectional", LD25: "bidirectional", LD24: "bidirectional", VDD_70: "power_in", BCLKo: "output", LD23: "bidirectional", LD22: "bidirectional", LD21: "bidirectional", ALE: "output", MODE: "input", LD20: "bidirectional", VSS_78: "power_in", LD19: "bidirectional", LD18: "bidirectional", LD17: "bidirectional", LD16: "bidirectional", LD15: "bidirectional", LD14: "bidirectional", VDD_85: "power_in", LD13: "bidirectional", LD12: "bidirectional", VSS_88: "power_in", LD11: "bidirectional", LD10: "bidirectional", LD9: "bidirectional", LD8: "bidirectional", LD7: "bidirectional", GPIO8: "bidirectional", LD6: "bidirectional", LD5: "bidirectional", LD4: "bidirectional", LD3: "bidirectional", LD2: "bidirectional", VDD_100: "power_in", VSS_101: "power_in", LD1: "bidirectional", LPMESET: "input", LD0: "bidirectional", LA2: "output", LA3: "output", LA4: "output", LA5: "output", LA6: "output", LA7: "output", LA8: "output", "BD-SEL#/TST": "input", VSS_113: "power_in", LA9: "output", LA10: "input", LA11: "output", VDD_117: "power_in", LA12: "output", LA13: "output", LA14: "output", LA15: "output", VSS_122: "power_in", LA16: "output", LA17: "output", LA18: "output", "LPMINT#": "output", LA19: "output", LA20: "output", LA21: "output", LA22: "output", LA23: "output", VSS_132: "power_in", VDD_133: "power_in", "GPIO7/LA24": "bidirectional", "GPIO6/LA25": "bidirectional", "GPIO5/LA26": "bidirectional", "GPIO4/LA27": "bidirectional", "ADS#": "output", "BLAST#": "output", "WR#": "output", "RD#": "output", "LW/R#": "output", "READY#": "input", "BTERM#": "input", LCLK: "input", VSS_146: "power_in", "CS0#": "output", "CS1#": "output", "LRESETo#": "output", LGNT: "output", LREQ: "input", LINTi1: "input", LINTi2: "input", "GPIO0/WAITo#": "bidirectional", "GPIO1/LLOCKo#": "bidirectional", "GPIO2/CS2#": "bidirectional", "GPIO3/CS3#": "bidirectional", EECS: "output", EEDO: "input", EESK: "output", EEDI: "output", VDD_162: "power_in", VSS_163: "power_in", "TRST#": "input", TCK: "input", TMS: "input", TDO: "output", TDI: "input", "PME#": "output", "INTA#": "output", "RST#": "input", PCLK: "input", AD31: "bidirectional", AD30: "bidirectional", AD29: "bidirectional", VSS_176: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:PCI9030-PQFP176";
@@ -3737,7 +3817,8 @@ export class S5933_PQ160 extends Component.withPins({
   "C/BE3#": "159",
   "IDSEL": "160",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS_10: "power_in", VSS_30: "power_in", VCC_31: "power_in", VSS_50: "power_in", VCC_51: "power_in", VSS_70: "power_in", VCC_71: "power_in", VSS_90: "power_in", VCC_91: "power_in", VSS_110: "power_in", VCC_111: "power_in", VSS_130: "power_in", VCC_131: "power_in", VSS_150: "power_in", VCC_151: "power_in", VCC_11: "power_in", EQ0: "bidirectional", AD23: "bidirectional", AD22: "bidirectional", AD21: "bidirectional", DQ31: "bidirectional", AD20: "bidirectional", AD19: "bidirectional", AD18: "bidirectional", EQ1: "bidirectional", AD17: "bidirectional", DQ30: "bidirectional", AD16: "bidirectional", "C/BE2#": "bidirectional", "FRAME#": "bidirectional", EQ2: "bidirectional", "IRDY#": "bidirectional", "TRDY#": "bidirectional", "DEVSEL#": "bidirectional", EQ3: "bidirectional", "STOP#": "bidirectional", "LOCK#": "input", "PERR#": "bidirectional", DQ29: "bidirectional", "SERR#": "output", PAR: "bidirectional", "C/BE1#": "bidirectional", "EQ4/FWC#": "bidirectional", AD15: "bidirectional", "EQ5/FRC#": "bidirectional", AD14: "bidirectional", AD13: "bidirectional", AD12: "bidirectional", DQ28: "bidirectional", AD11: "bidirectional", AD10: "bidirectional", AD9: "bidirectional", "EQ6/AMREN": "bidirectional", AD8: "bidirectional", "C/BE0#": "bidirectional", AD7: "bidirectional", DQ27: "bidirectional", AD6: "bidirectional", AD5: "bidirectional", AD4: "bidirectional", "EQ7/AMWEN": "bidirectional", AD3: "bidirectional", DQ26: "bidirectional", AD2: "bidirectional", AD1: "bidirectional", AD0: "bidirectional", EA0: "bidirectional", "INTA#": "output", "MODE_16/32": "input", "BE3#": "input", EA1: "bidirectional", "BE2#": "input", "BE1#": "input", ADR5: "input", DQ25: "bidirectional", ADR4: "input", ADR3: "input", ADR2: "input", EA2: "bidirectional", "RD#": "input", EA3: "bidirectional", "WR#": "input", "SELECT#": "input", DQ15: "bidirectional", DQ24: "bidirectional", DQ14: "bidirectional", DQ13: "bidirectional", DQ12: "bidirectional", EA4: "bidirectional", DQ11: "bidirectional", DQ10: "bidirectional", DQ9: "bidirectional", DQ23: "bidirectional", DQ8: "bidirectional", "BE0#": "input", DQ7: "bidirectional", EA5: "bidirectional", DQ6: "bidirectional", DQ22: "bidirectional", DQ5: "bidirectional", DQ4: "bidirectional", DQ3: "bidirectional", EA6: "bidirectional", DQ2: "bidirectional", DQ1: "bidirectional", DQ0: "bidirectional", EA7: "bidirectional", "WRFIFO#": "input", WRFULL: "output", "RDFIFO#": "input", DQ21: "bidirectional", RDEMPTY: "output", "PTADR#": "input", PTWR: "output", EA8: "bidirectional", "PTBURST#": "output", EA9: "output", "PTATN#": "output", "PTRDY#": "input", "PTBE0#": "output", DQ20: "bidirectional", "PTBE1#": "output", "PTBE2#": "output", "PTBE3#": "output", EA10: "output", PTNUM1: "output", PTNUM0: "output", "IRQ#": "output", DQ19: "bidirectional", "SYSRST#": "output", "EWR#/SDA": "bidirectional", "ERD#/SCL": "output", EA11: "output", ADR6: "input", DQ18: "bidirectional", SNV: "input", EA12: "output", "FLT#": "input", "RST#": "input", BPCLK: "output", EA13: "output", CLK: "input", "GNT#": "input", "REQ#": "output", DQ17: "bidirectional", AD31: "bidirectional", AD30: "bidirectional", AD29: "bidirectional", "EA14/FWE": "bidirectional", AD28: "bidirectional", "EA15/FRF": "bidirectional", AD27: "bidirectional", AD26: "bidirectional", AD25: "bidirectional", DQ16: "bidirectional", AD24: "bidirectional", "C/BE3#": "bidirectional", IDSEL: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:S5933_PQ160";
@@ -3763,7 +3844,8 @@ export class SI9986 extends Component.withPins({
   "INA": "7",
   "OUTA": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SA: "power_in", GND: "power_in", PWR: "power_in", SB: "power_in", OUTB: "input", INB: "input", INA: "input", OUTA: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:SI9986";
@@ -3809,7 +3891,8 @@ export class SLB9660xT extends Component.withPins({
   "NC_28": "28",
   "GPIO": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND_4: "power_in", VDD_5: "power_in", PP: "input", NC_8: "no_connect", NC_9: "no_connect", VDD_10: "power_in", GND_11: "passive", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", "~{LRESET}": "input", LAD3: "tri_state", GND_18: "passive", VDD_19: "power_in", LAD2: "tri_state", LCLK: "input", "~{LFRAME}": "input", LAD1: "tri_state", VDD_24: "power_in", GND_25: "passive", LAD0: "tri_state", SERIRQ: "tri_state", NC_28: "no_connect", GPIO: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:SLB9660xT";
@@ -3855,7 +3938,8 @@ export class SLB9665xT extends Component.withPins({
   "NC_28": "28",
   "GPIO": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", NC_2: "no_connect", NC_3: "no_connect", GND_4: "power_in", VDD_5: "power_in", PP: "input", NC_8: "no_connect", NC_9: "no_connect", VDD_10: "power_in", GND_11: "passive", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", "~{LRESET}": "input", LAD3: "tri_state", GND_18: "passive", VDD_19: "power_in", LAD2: "tri_state", LCLK: "input", "~{LFRAME}": "input", LAD1: "tri_state", VDD_24: "power_in", GND_25: "passive", LAD0: "tri_state", SERIRQ: "tri_state", NC_28: "no_connect", GPIO: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:SLB9665xT";
@@ -3889,7 +3973,8 @@ export class SN65LVDS047D extends Component.withPins({
   "DOUT1+": "15",
   "DOUT1-": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", DIN1: "input", DIN2: "input", VCC: "power_in", GND: "power_in", DIN3: "input", DIN4: "input", "~{EN}": "input", "DOUT4-": "output", "DOUT4+": "output", "DOUT3+": "output", "DOUT3-": "output", "DOUT2-": "output", "DOUT2+": "output", "DOUT1+": "output", "DOUT1-": "output", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDS047D";
@@ -3923,7 +4008,8 @@ export class SN65LVDS047PW extends Component.withPins({
   "DOUT1+": "15",
   "DOUT1-": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { EN: "input", DIN1: "input", DIN2: "input", VCC: "power_in", GND: "power_in", DIN3: "input", DIN4: "input", "~{EN}": "input", "DOUT4-": "output", "DOUT4+": "output", "DOUT3+": "output", "DOUT3-": "output", "DOUT2-": "output", "DOUT2+": "output", "DOUT1+": "output", "DOUT1-": "output", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDS047PW";
@@ -3949,7 +4035,8 @@ export class SN65LVDS1D extends Component.withPins({
   "Y": "7",
   "Z": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", D: "input", NC_3: "passive", GND: "power_in", NC_5: "passive", NC_6: "passive", Y: "output", Z: "output", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDS1D";
@@ -3972,7 +4059,8 @@ export class SN65LVDS1DBV extends Component.withPins({
   "Y": "4",
   "D": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", Z: "output", Y: "output", D: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDS1DBV";
@@ -3998,7 +4086,8 @@ export class SN65LVDS2D extends Component.withPins({
   "R": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B: "input", A: "input", NC_3: "passive", NC_4: "passive", GND: "power_in", NC_6: "passive", R: "output", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDS2D";
@@ -4021,7 +4110,8 @@ export class SN65LVDS2DBV extends Component.withPins({
   "B": "4",
   "R": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", A: "input", B: "input", R: "output", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDS2DBV";
@@ -4047,7 +4137,8 @@ export class SN65LVDT2D extends Component.withPins({
   "R": "7",
   "V_{CC}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { B: "input", A: "input", NC_3: "passive", NC_4: "passive", GND: "power_in", NC_6: "passive", R: "output", "V_{CC}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDT2D";
@@ -4070,7 +4161,8 @@ export class SN65LVDT2DBV extends Component.withPins({
   "B": "4",
   "R": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC}": "power_in", GND: "power_in", A: "input", B: "input", R: "output", ...opts.pinTypes } });
   }
   override schema = "Interface:SN65LVDT2DBV";
@@ -4108,7 +4200,8 @@ export class SN74LV8153N extends Component.withPins({
   "Y0": "19",
   "V_{CC2}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC1}": "power_in", A0: "input", A1: "input", A2: "input", D: "input", OUTSEL: "input", "~{RESET}": "input", "~{OE}": "input", SOUT: "output", GND_10: "power_in", GND_11: "passive", Y7: "open_collector", Y6: "open_collector", Y5: "open_collector", Y4: "open_collector", Y3: "open_collector", Y2: "open_collector", Y1: "open_collector", Y0: "open_collector", "V_{CC2}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:SN74LV8153N";
@@ -4146,7 +4239,8 @@ export class SN74LV8153PW extends Component.withPins({
   "Y0": "19",
   "V_{CC2}": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{CC1}": "power_in", A0: "input", A1: "input", A2: "input", D: "input", OUTSEL: "input", "~{RESET}": "input", "~{OE}": "input", SOUT: "output", GND_10: "power_in", GND_11: "passive", Y7: "open_collector", Y6: "open_collector", Y5: "open_collector", Y4: "open_collector", Y3: "open_collector", Y2: "open_collector", Y1: "open_collector", Y0: "open_collector", "V_{CC2}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:SN74LV8153PW";
@@ -4184,7 +4278,8 @@ export class SN75160BDW extends Component.withPins({
   "D1": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TE: "input", B1: "bidirectional", B2: "bidirectional", B3: "bidirectional", B4: "bidirectional", B5: "bidirectional", B6: "bidirectional", B7: "bidirectional", B8: "bidirectional", GND: "power_in", "~{PE}": "input", D8: "bidirectional", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:SN75160BDW";
@@ -4222,7 +4317,8 @@ export class SN75160BN extends Component.withPins({
   "D1": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TE: "input", B1: "bidirectional", B2: "bidirectional", B3: "bidirectional", B4: "bidirectional", B5: "bidirectional", B6: "bidirectional", B7: "bidirectional", B8: "bidirectional", GND: "power_in", "~{PE}": "input", D8: "bidirectional", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:SN75160BN";
@@ -4256,7 +4352,8 @@ export class TB5D1MD extends Component.withPins({
   "DI": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AI: "input", AO: "output", "~{AO}": "output", E1: "input", "~{BO}": "output", BO: "output", BI: "input", GND: "power_in", CI: "input", CO: "output", "~{CO}": "output", E2: "input", "~{DO}": "output", DO: "output", DI: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5D1MD";
@@ -4290,7 +4387,8 @@ export class TB5D1MDW extends Component.withPins({
   "DI": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AI: "input", AO: "output", "~{AO}": "output", E1: "input", "~{BO}": "output", BO: "output", BI: "input", GND: "power_in", CI: "input", CO: "output", "~{CO}": "output", E2: "input", "~{DO}": "output", DO: "output", DI: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5D1MDW";
@@ -4324,7 +4422,8 @@ export class TB5D2H extends Component.withPins({
   "DI": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AI: "input", AO: "output", "~{AO}": "output", E1: "input", "~{BO}": "output", BO: "output", BI: "input", GND: "power_in", CI: "input", CO: "output", "~{CO}": "output", E2: "input", "~{DO}": "output", DO: "output", DI: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5D2H";
@@ -4358,7 +4457,8 @@ export class TB5D2HDW extends Component.withPins({
   "DI": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { AI: "input", AO: "output", "~{AO}": "output", E1: "input", "~{BO}": "output", BO: "output", BI: "input", GND: "power_in", CI: "input", CO: "output", "~{CO}": "output", E2: "input", "~{DO}": "output", DO: "output", DI: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5D2HDW";
@@ -4392,7 +4492,8 @@ export class TB5R1D extends Component.withPins({
   "~{DI}": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{AI}": "input", AI: "input", AO: "output", E1: "input", BO: "output", BI: "input", "~{BI}": "input", GND: "power_in", "~{CI}": "input", CI: "input", CO: "output", "~{E2}": "input", DO: "output", DI: "input", "~{DI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5R1D";
@@ -4426,7 +4527,8 @@ export class TB5R1DW extends Component.withPins({
   "~{DI}": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{AI}": "input", AI: "input", AO: "output", E1: "input", BO: "output", BI: "input", "~{BI}": "input", GND: "power_in", "~{CI}": "input", CI: "input", CO: "output", "~{E2}": "input", DO: "output", DI: "input", "~{DI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5R1DW";
@@ -4460,7 +4562,8 @@ export class TB5R2D extends Component.withPins({
   "~{DI}": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{AI}": "input", AI: "input", AO: "output", E1: "input", BO: "output", BI: "input", "~{BI}": "input", GND: "power_in", "~{CI}": "input", CI: "input", CO: "output", "~{E2}": "input", DO: "output", DI: "input", "~{DI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5R2D";
@@ -4494,7 +4597,8 @@ export class TB5R2DW extends Component.withPins({
   "~{DI}": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{AI}": "input", AI: "input", AO: "output", E1: "input", BO: "output", BI: "input", "~{BI}": "input", GND: "power_in", "~{CI}": "input", CI: "input", CO: "output", "~{E2}": "input", DO: "output", DI: "input", "~{DI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TB5R2DW";
@@ -4519,7 +4623,8 @@ export class TCA9406DC extends Component.withPins({
   "VCCB": "7",
   "SCL_B": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA_B: "bidirectional", GND: "power_in", VCCA: "power_in", SDA_A: "bidirectional", SCL_A: "bidirectional", OE: "input", VCCB: "power_in", SCL_B: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:TCA9406DC";
@@ -4545,7 +4650,8 @@ export class TCA9800 extends Component.withPins({
   "SCLB": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", SCLA: "bidirectional", SDAA: "bidirectional", GND: "power_in", EN: "input", SDAB: "bidirectional", SCLB: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TCA9800";
@@ -4571,7 +4677,8 @@ export class TCA9801 extends Component.withPins({
   "SCLB": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", SCLA: "bidirectional", SDAA: "bidirectional", GND: "power_in", EN: "input", SDAB: "bidirectional", SCLB: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TCA9801";
@@ -4597,7 +4704,8 @@ export class TCA9802 extends Component.withPins({
   "SCLB": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", SCLA: "bidirectional", SDAA: "bidirectional", GND: "power_in", EN: "input", SDAB: "bidirectional", SCLB: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TCA9802";
@@ -4623,7 +4731,8 @@ export class TCA9803 extends Component.withPins({
   "SCLB": "7",
   "VCCB": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCA: "power_in", SCLA: "bidirectional", SDAA: "bidirectional", GND: "power_in", EN: "input", SDAB: "bidirectional", SCLB: "bidirectional", VCCB: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface:TCA9803";
@@ -4657,7 +4766,8 @@ export class U2270B extends Component.withPins({
   "RF": "15",
   "HIPASS": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", OUTPUT: "open_collector", "~{OE}": "input", INPUT: "input", MS: "input", CFE: "input", DGND: "power_in", COIL2: "output", COIL1: "output", VEXT: "power_in", DVS: "power_in", VBATT: "power_in", STANDBY: "input", VS: "power_in", RF: "input", HIPASS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:U2270B";
@@ -4715,7 +4825,8 @@ export class WD2791 extends Component.withPins({
   "INTRQ": "39",
   "HLT": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENP: "input", "~{WE}": "input", "~{CS}": "input", "~{RE}": "input", A0: "input", A1: "input", "~{DAL0}": "tri_state", "~{DAL1}": "tri_state", "~{DAL2}": "tri_state", "~{DAL3}": "tri_state", "~{DAL4}": "tri_state", "~{DAL5}": "tri_state", "~{DAL6}": "tri_state", "~{DAL7}": "tri_state", STEP: "output", DIRC: "output", "~{5}/8": "input", RPW: "input", "~{MR}": "input", VSS: "power_in", VCC: "power_in", "~{TEST}": "input", PUMP: "output", CLK: "input", "~{ENMF}": "input", VCO: "input", "~{RAW_READ}": "input", HLD: "output", TG43: "output", WG: "output", WD: "output", READY: "input", WPW: "input", "~{TR00}": "input", "~{IP}": "input", "~{WPRT}": "input", "~{DDEN}": "input", DRQ: "output", INTRQ: "output", HLT: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:WD2791";
@@ -4773,7 +4884,8 @@ export class WD2793 extends Component.withPins({
   "INTRQ": "39",
   "HLT": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENP: "input", "~{WE}": "input", "~{CS}": "input", "~{RE}": "input", A0: "input", A1: "input", DAL0: "tri_state", DAL1: "tri_state", DAL2: "tri_state", DAL3: "tri_state", DAL4: "tri_state", DAL5: "tri_state", DAL6: "tri_state", DAL7: "tri_state", STEP: "output", DIRC: "output", "~{5}/8": "input", RPW: "input", "~{MR}": "input", VSS: "power_in", VCC: "power_in", "~{TEST}": "input", PUMP: "output", CLK: "input", "~{ENMF}": "input", VCO: "input", "~{RAW_READ}": "input", HLD: "output", TG43: "output", WG: "output", WD: "output", READY: "input", WPW: "input", "~{TR00}": "input", "~{IP}": "input", "~{WPRT}": "input", "~{DDEN}": "input", DRQ: "output", INTRQ: "output", HLT: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:WD2793";
@@ -4831,7 +4943,8 @@ export class WD2795 extends Component.withPins({
   "INTRQ": "39",
   "HLT": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENP: "input", "~{WE}": "input", "~{CS}": "input", "~{RE}": "input", A0: "input", A1: "input", "~{DAL0}": "tri_state", "~{DAL1}": "tri_state", "~{DAL2}": "tri_state", "~{DAL3}": "tri_state", "~{DAL4}": "tri_state", "~{DAL5}": "tri_state", "~{DAL6}": "tri_state", "~{DAL7}": "tri_state", STEP: "output", DIRC: "output", "~{5}/8": "input", RPW: "input", "~{MR}": "input", VSS: "power_in", VCC: "power_in", "~{TEST}": "input", PUMP: "output", CLK: "input", SSO: "output", VCO: "input", "~{RAW_READ}": "input", HLD: "output", TG43: "output", WG: "output", WD: "output", READY: "input", WPW: "input", "~{TR00}": "input", "~{IP}": "input", "~{WPRT}": "input", "~{DDEN}": "input", DRQ: "output", INTRQ: "output", HLT: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:WD2795";
@@ -4889,7 +5002,8 @@ export class WD2797 extends Component.withPins({
   "INTRQ": "39",
   "HLT": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { ENP: "input", "~{WE}": "input", "~{CS}": "input", "~{RE}": "input", A0: "input", A1: "input", DAL0: "tri_state", DAL1: "tri_state", DAL2: "tri_state", DAL3: "tri_state", DAL4: "tri_state", DAL5: "tri_state", DAL6: "tri_state", DAL7: "tri_state", STEP: "output", DIRC: "output", "~{5}/8": "input", RPW: "input", "~{MR}": "input", VSS: "power_in", VCC: "power_in", "~{TEST}": "input", PUMP: "output", CLK: "input", SSO: "output", VCO: "input", "~{RAW_READ}": "input", HLD: "output", TG43: "output", WG: "output", WD: "output", READY: "input", WPW: "input", "~{TR00}": "input", "~{IP}": "input", "~{WPRT}": "input", "~{DDEN}": "input", DRQ: "output", INTRQ: "output", HLT: "input", ...opts.pinTypes } });
   }
   override schema = "Interface:WD2797";
@@ -4947,7 +5061,8 @@ export class Z8420 extends Component.withPins({
   "D4": "39",
   "D3": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D2: "bidirectional", D7: "bidirectional", D6: "bidirectional", "~{CE}": "input", "C/~{D}": "input", "B/~{A}": "input", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", GND: "power_in", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{ASTB}": "input", "~{BSTB}": "input", ARDY: "output", D0: "bidirectional", D1: "bidirectional", BRDY: "output", IEO: "output", "~{INT}": "open_collector", IEI: "input", CLK: "input", VCC: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", "~{RD}": "input", "~{IORQ}": "input", "~{M1}": "input", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:Z8420";
@@ -5005,7 +5120,8 @@ export class Z84C20 extends Component.withPins({
   "D4": "39",
   "D3": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D2: "bidirectional", D7: "bidirectional", D6: "bidirectional", "~{CE}": "input", "C/~{D}": "input", "B/~{A}": "input", PA7: "bidirectional", PA6: "bidirectional", PA5: "bidirectional", PA4: "bidirectional", GND: "power_in", PA3: "bidirectional", PA2: "bidirectional", PA1: "bidirectional", PA0: "bidirectional", "~{ASTB}": "input", "~{BSTB}": "input", ARDY: "output", D0: "bidirectional", D1: "bidirectional", BRDY: "output", IEO: "output", "~{INT}": "open_collector", IEI: "input", CLK: "input", VCC: "power_in", PB0: "bidirectional", PB1: "bidirectional", PB2: "bidirectional", PB3: "bidirectional", PB4: "bidirectional", PB5: "bidirectional", PB6: "bidirectional", PB7: "bidirectional", "~{RD}": "input", "~{IORQ}": "input", "~{M1}": "input", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface:Z84C20";

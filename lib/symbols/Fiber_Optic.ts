@@ -17,7 +17,8 @@ export class AFBR_1624Z extends Component.withPins({
   "HP_5": "5",
   "HP_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCCT: "power_in", NC: "no_connect", VEET: "power_in", Data_in: "input", HP_5: "passive", HP_8: "passive", ...opts.pinTypes } });
   }
   override schema = "Fiber_Optic:AFBR-1624Z";
@@ -40,7 +41,8 @@ export class AFBR_2624Z extends Component.withPins({
   "HP_5": "5",
   "HP_8": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Data_Out: "output", VEER: "power_in", VCCR: "power_in", NC: "no_connect", HP_5: "passive", HP_8: "passive", ...opts.pinTypes } });
   }
   override schema = "Fiber_Optic:AFBR-2624Z";

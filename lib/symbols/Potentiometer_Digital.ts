@@ -20,7 +20,8 @@ export class AD5160 extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { W: "passive", "V_{DD}": "power_in", GND: "power_in", CLK: "input", SDI: "input", "~{CS}": "input", B: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5160";
@@ -58,7 +59,8 @@ export class AD5254 extends Component.withPins({
   "W3": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { W0: "passive", B0: "passive", A0: "passive", AD0: "input", "~{WP}": "input", W1: "passive", B1: "passive", A1: "passive", SDA: "bidirectional", VSS: "power_in", A2: "passive", B2: "passive", W2: "passive", SCL: "input", DGND: "power_in", AD1: "input", A3: "passive", B3: "passive", W3: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5254";
@@ -96,7 +98,8 @@ export class AD5253 extends Component.withPins({
   "W3": "19",
   "VDD": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { W0: "passive", B0: "passive", A0: "passive", AD0: "input", "~{WP}": "input", W1: "passive", B1: "passive", A1: "passive", SDA: "bidirectional", VSS: "power_in", A2: "passive", B2: "passive", W2: "passive", SCL: "input", DGND: "power_in", AD1: "input", A3: "passive", B3: "passive", W3: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5253";
@@ -125,7 +128,8 @@ export class AD5272BCP extends Component.withPins({
   "ADDR": "10",
   "VSS_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", A: "passive", W: "passive", VSS_4: "power_in", EXT_CAP: "passive", GND: "power_in", "~{RESET}": "input", SDA: "bidirectional", SCL: "input", ADDR: "passive", VSS_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5272BCP";
@@ -153,7 +157,8 @@ export class AD5272BRM extends Component.withPins({
   "SCL": "9",
   "ADDR": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", A: "passive", W: "passive", VSS: "power_in", EXT_CAP: "passive", GND: "power_in", "~{RESET}": "input", SDA: "bidirectional", SCL: "input", ADDR: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5272BRM";
@@ -182,7 +187,8 @@ export class AD5274BCP extends Component.withPins({
   "ADDR": "10",
   "VSS_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", A: "passive", W: "passive", VSS_4: "power_in", EXT_CAP: "passive", GND: "power_in", "~{RESET}": "input", SDA: "bidirectional", SCL: "input", ADDR: "passive", VSS_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5274BCP";
@@ -210,7 +216,8 @@ export class AD5274BRM extends Component.withPins({
   "SCL": "9",
   "ADDR": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", A: "passive", W: "passive", VSS: "power_in", EXT_CAP: "passive", GND: "power_in", "~{RESET}": "input", SDA: "bidirectional", SCL: "input", ADDR: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5274BRM";
@@ -242,7 +249,8 @@ export class AD5280 extends Component.withPins({
   "VLOG": "13",
   "O1": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", W: "passive", B: "passive", VDD: "power_in", "~{SHDN}": "input", SCL: "input", SDA: "bidirectional", AD0: "input", AD1: "input", GND: "power_in", VSS: "power_in", O2: "output", VLOG: "power_in", O1: "output", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5280";
@@ -276,7 +284,8 @@ export class AD5282 extends Component.withPins({
   "W2": "15",
   "A2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { O1: "output", A1: "passive", W1: "passive", B1: "passive", VDD: "power_in", "~{SHDN}": "input", SCL: "input", SDA: "bidirectional", AD0: "input", AD1: "input", GND: "power_in", VSS: "power_in", VLOG: "power_in", B2: "passive", W2: "passive", A2: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5282";
@@ -304,7 +313,8 @@ export class AD5290 extends Component.withPins({
   "V_{DD}": "9",
   "W": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", B: "passive", "V_{SS}": "power_in", GND: "power_in", "~{CS}": "input", CLK: "input", SDI: "input", SDO: "output", "V_{DD}": "power_in", W: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5290";
@@ -336,7 +346,8 @@ export class AD5293 extends Component.withPins({
   "SDO": "13",
   "RDY": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RST}": "input", "Vss-": "power_in", RH: "passive", RW: "passive", RL: "passive", "Vdd+": "power_in", EXT_CAP: "passive", Vlog: "power_in", GND: "power_in", SDI: "input", CLK: "input", "~{CS}": "input", SDO: "output", RDY: "open_collector", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:AD5293";
@@ -368,7 +379,8 @@ export class DS1267_DIP extends Component.withPins({
   "SOUT": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VB: "power_in", H1: "passive", L1: "passive", W1: "passive", "~{Reset}": "input", CLK: "input", GND: "power_in", DQ: "input", COUT: "output", L0: "passive", H0: "passive", W0: "passive", SOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:DS1267_DIP";
@@ -400,7 +412,8 @@ export class DS1267_SOIC extends Component.withPins({
   "SOUT": "14",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VB: "power_in", H1: "passive", L1: "passive", W1: "passive", "~{Reset}": "input", CLK: "input", GND: "power_in", DQ: "input", COUT: "output", L0: "passive", H0: "passive", W0: "passive", SOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:DS1267_SOIC";
@@ -432,7 +445,8 @@ export class DS1267_TSSOP extends Component.withPins({
   "SOUT": "17",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VB: "power_in", H1: "passive", L1: "passive", W1: "passive", "~{Reset}": "input", CLK: "input", GND: "power_in", DQ: "input", COUT: "output", L0: "passive", H0: "passive", W0: "passive", SOUT: "output", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:DS1267_TSSOP";
@@ -466,7 +480,8 @@ export class DS1882E extends Component.withPins({
   "VCC": "15",
   "VDD": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", A2: "input", A1: "input", "V-": "power_in", A0: "input", W0: "passive", L0: "passive", H0: "passive", L1: "passive", H1: "passive", W1: "passive", "~{CE}": "input", SDA: "bidirectional", SCL: "input", VCC: "power_in", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:DS1882E";
@@ -494,7 +509,8 @@ export class DS3502 extends Component.withPins({
   "V+": "9",
   "SCL": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SDA: "bidirectional", GND: "power_in", VCC: "power_in", A1: "input", A0: "input", RH: "passive", RW: "passive", RL: "passive", "V+": "power_in", SCL: "input", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:DS3502";
@@ -520,7 +536,8 @@ export class MAX5436 extends Component.withPins({
   "L": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCLK: "input", Din: "input", CS: "input", Gnd: "power_in", "V-": "power_in", "V+": "power_in", H: "passive", W: "passive", L: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MAX5436";
@@ -546,7 +563,8 @@ export class MAX5438 extends Component.withPins({
   "L": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCLK: "input", Din: "input", CS: "input", Gnd: "power_in", "V-": "power_in", "V+": "power_in", H: "passive", W: "passive", L: "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MAX5438";
@@ -572,7 +590,8 @@ export class MCP4011_xxxxMS extends Component.withPins({
   "NC": "7",
   "U/~{D}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", A: "passive", W: "passive", "~{CS}": "input", B: "passive", NC: "no_connect", "U/~{D}": "input", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4011-xxxxMS";
@@ -598,7 +617,8 @@ export class MCP4011_xxxxSN extends Component.withPins({
   "NC": "7",
   "U/~{D}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", A: "passive", W: "passive", "~{CS}": "input", B: "passive", NC: "no_connect", "U/~{D}": "input", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4011-xxxxSN";
@@ -622,7 +642,8 @@ export class MCP4012_xxxxCH extends Component.withPins({
   "W": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", "U/~{D}": "input", "~{CS}": "input", W: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4012-xxxxCH";
@@ -646,7 +667,8 @@ export class MCP4013_xxxxCH extends Component.withPins({
   "W": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", "U/~{D}": "input", "~{CS}": "input", W: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4013-xxxxCH";
@@ -669,7 +691,8 @@ export class MCP4014_xxxxOT extends Component.withPins({
   "~{CS}": "4",
   "W": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", "U/~{D}": "input", "~{CS}": "input", W: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4014-xxxxOT";
@@ -693,7 +716,8 @@ export class MCP4017_xxxxLT extends Component.withPins({
   "B": "5",
   "W": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", SCL: "input", SDA: "bidirectional", B: "passive", W: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4017-xxxxLT";
@@ -717,7 +741,8 @@ export class MCP4018_xxxxLT extends Component.withPins({
   "W": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", SCL: "input", SDA: "bidirectional", W: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4018-xxxxLT";
@@ -740,7 +765,8 @@ export class MCP4019_xxxxLT extends Component.withPins({
   "SDA": "4",
   "W": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", SCL: "input", SDA: "bidirectional", W: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4019-xxxxLT";
@@ -766,7 +792,8 @@ export class MCP4021_xxxxMS extends Component.withPins({
   "NC": "7",
   "U/~{D}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", A: "passive", W: "passive", "~{CS}": "input", B: "passive", NC: "no_connect", "U/~{D}": "input", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4021-xxxxMS";
@@ -792,7 +819,8 @@ export class MCP4021_xxxxSN extends Component.withPins({
   "NC": "7",
   "U/~{D}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", A: "passive", W: "passive", "~{CS}": "input", B: "passive", NC: "no_connect", "U/~{D}": "input", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4021-xxxxSN";
@@ -816,7 +844,8 @@ export class MCP4022_xxxxCH extends Component.withPins({
   "W": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", "U/~{D}": "input", "~{CS}": "input", W: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4022-xxxxCH";
@@ -840,7 +869,8 @@ export class MCP4023_xxxxCH extends Component.withPins({
   "W": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", "U/~{D}": "input", "~{CS}": "input", W: "passive", A: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4023-xxxxCH";
@@ -863,7 +893,8 @@ export class MCP4024_xxxxOT extends Component.withPins({
   "~{CS}": "4",
   "W": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", VSS: "power_in", "U/~{D}": "input", "~{CS}": "input", W: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4024-xxxxOT";
@@ -888,7 +919,8 @@ export class MCP41010 extends Component.withPins({
   "PB0": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "passive", SI: "input", VSS: "power_in", PA0: "passive", PW0: "passive", PB0: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP41010";
@@ -913,7 +945,8 @@ export class MCP41050 extends Component.withPins({
   "PB0": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "passive", SI: "input", VSS: "power_in", PA0: "passive", PW0: "passive", PB0: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP41050";
@@ -938,7 +971,8 @@ export class MCP41100 extends Component.withPins({
   "PB0": "7",
   "VDD": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "passive", SI: "input", VSS: "power_in", PA0: "passive", PW0: "passive", PB0: "passive", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP41100";
@@ -964,7 +998,8 @@ export class MCP4131_xxxx_P extends Component.withPins({
   "P0B": "7",
   "V_{DD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "SDI/SDO": "bidirectional", "V_{SS}": "power_in", P0A: "passive", P0W: "passive", P0B: "passive", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4131-xxxx-P";
@@ -990,7 +1025,8 @@ export class MCP4132_xxxx_P extends Component.withPins({
   "P0B": "6",
   "SDO": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", SDI: "input", P0W: "passive", P0B: "passive", SDO: "output", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4132-xxxx-P";
@@ -1016,7 +1052,8 @@ export class MCP4141_xxxx_P extends Component.withPins({
   "P0B": "7",
   "V_{DD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "SDI/SDO": "bidirectional", "V_{SS}": "power_in", P0A: "passive", P0W: "passive", P0B: "passive", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4141-xxxx-P";
@@ -1042,7 +1079,8 @@ export class MCP4142_xxxx_P extends Component.withPins({
   "P0B": "6",
   "SDO": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", SDI: "input", P0W: "passive", P0B: "passive", SDO: "output", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4142-xxxx-P";
@@ -1068,7 +1106,8 @@ export class MCP4151_xxxx_P extends Component.withPins({
   "P0B": "7",
   "V_{DD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "SDI/SDO": "bidirectional", "V_{SS}": "power_in", P0A: "passive", P0W: "passive", P0B: "passive", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4151-xxxx-P";
@@ -1094,7 +1133,8 @@ export class MCP4152_xxxx_P extends Component.withPins({
   "P0B": "6",
   "SDO": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", SDI: "input", P0W: "passive", P0B: "passive", SDO: "output", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4152-xxxx-P";
@@ -1120,7 +1160,8 @@ export class MCP4161_xxxx_P extends Component.withPins({
   "P0B": "7",
   "V_{DD}": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "SDI/SDO": "bidirectional", "V_{SS}": "power_in", P0A: "passive", P0W: "passive", P0B: "passive", "V_{DD}": "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4161-xxxx-P";
@@ -1146,7 +1187,8 @@ export class MCP4162_xxxx_P extends Component.withPins({
   "P0B": "6",
   "SDO": "7",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", "V_{SS}": "power_in", "V_{DD}": "power_in", SDI: "input", P0W: "passive", P0B: "passive", SDO: "output", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4162-xxxx-P";
@@ -1181,7 +1223,8 @@ export class MCP41U83x_xxxx_7N extends Component.withPins({
   "V_{DD}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SDO/A1": "bidirectional", "SCK/SCL": "input", "SDI/SDA": "bidirectional", "~{CS}/A0": "input", SPI2C: "input", DGND: "power_in", P0B: "passive", P0W: "passive", P0A: "passive", "V_{SS}": "power_in", NC_11: "no_connect", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", NC_15: "no_connect", "V_{DD}": "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP41U83x-xxxx-7N";
@@ -1213,7 +1256,8 @@ export class MCP41U83x_xxxx_ST extends Component.withPins({
   "NC_13": "13",
   "NC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V_{DD}": "power_in", "SDO/A1": "bidirectional", "SCK/SCL": "input", "SDI/SDA": "bidirectional", "~{CS}/A0": "input", SPI2C: "input", DGND: "power_in", P0B: "passive", P0W: "passive", P0A: "passive", "V_{SS}": "power_in", NC_12: "no_connect", NC_13: "no_connect", NC_14: "no_connect", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP41U83x-xxxx-ST";
@@ -1244,7 +1288,8 @@ export class MCP42010 extends Component.withPins({
   "SO": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", SI: "input", VSS: "power_in", PB1: "passive", PW1: "passive", PA1: "passive", PA0: "passive", PW0: "passive", PB0: "passive", "~{RS}": "input", "~{SHDN}": "input", SO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP42010";
@@ -1275,7 +1320,8 @@ export class MCP42050 extends Component.withPins({
   "SO": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", SI: "input", VSS: "power_in", PB1: "passive", PW1: "passive", PA1: "passive", PA0: "passive", PW0: "passive", PB0: "passive", "~{RS}": "input", "~{SHDN}": "input", SO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP42050";
@@ -1306,7 +1352,8 @@ export class MCP42100 extends Component.withPins({
   "SO": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", SI: "input", VSS: "power_in", PB1: "passive", PW1: "passive", PA1: "passive", PA0: "passive", PW0: "passive", PB0: "passive", "~{RS}": "input", "~{SHDN}": "input", SO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP42100";
@@ -1341,7 +1388,8 @@ export class MCP4251_xxxx_ML extends Component.withPins({
   "~{CS}": "16",
   "EP": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { SCK: "input", SDI: "input", VSS_3: "power_in", VSS_4: "passive", P1B: "passive", P1W: "passive", P1A: "passive", P0A: "passive", P0W: "passive", P0B: "passive", NC: "no_connect", "~{WP}": "input", "~{SHDN}": "input", SDO: "output", VDD: "power_in", "~{CS}": "input", EP: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4251-xxxx-ML";
@@ -1373,7 +1421,8 @@ export class MCP4251_xxxx_P extends Component.withPins({
   "SDO": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", SDI: "input", VSS: "power_in", P1B: "passive", P1W: "passive", P1A: "passive", P0A: "passive", P0W: "passive", P0B: "passive", "~{WP}": "input", "~{SHDN}": "input", SDO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4251-xxxx-P";
@@ -1405,7 +1454,8 @@ export class MCP4251_xxxx_SL extends Component.withPins({
   "SDO": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", SDI: "input", VSS: "power_in", P1B: "passive", P1W: "passive", P1A: "passive", P0A: "passive", P0W: "passive", P0B: "passive", "~{WP}": "input", "~{SHDN}": "input", SDO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4251-xxxx-SL";
@@ -1437,7 +1487,8 @@ export class MCP4251_xxxx_ST extends Component.withPins({
   "SDO": "13",
   "VDD": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CS}": "input", SCK: "input", SDI: "input", VSS: "power_in", P1B: "passive", P1W: "passive", P1A: "passive", P0A: "passive", P0W: "passive", P0B: "passive", "~{WP}": "input", "~{SHDN}": "input", SDO: "output", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4251-xxxx-ST";
@@ -1475,7 +1526,8 @@ export class MCP4431_xxxx_ST extends Component.withPins({
   "A1": "16",
   "VDD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P0A: "passive", P0W: "passive", P0B: "passive", P1B: "passive", P1W: "passive", P1A: "passive", P2B: "passive", P2W: "passive", P2A: "passive", P3A: "passive", P3W: "passive", P3B: "passive", "HVC/A0": "input", SCL: "input", SDA: "bidirectional", VSS: "power_in", NC: "no_connect", "~{RESET}": "input", A1: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4431-xxxx-ST";
@@ -1513,7 +1565,8 @@ export class MCP4441_xxxx_ST extends Component.withPins({
   "A1": "16",
   "VDD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P0A: "passive", P0W: "passive", P0B: "passive", P1B: "passive", P1W: "passive", P1A: "passive", P2B: "passive", P2W: "passive", P2A: "passive", P3A: "passive", P3W: "passive", P3B: "passive", "HVC/A0": "input", SCL: "input", SDA: "bidirectional", VSS: "power_in", NC: "no_connect", "~{RESET}": "input", A1: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4441-xxxx-ST";
@@ -1551,7 +1604,8 @@ export class MCP4451_xxxx_ST extends Component.withPins({
   "A1": "16",
   "VDD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P0A: "passive", P0W: "passive", P0B: "passive", P1B: "passive", P1W: "passive", P1A: "passive", P2B: "passive", P2W: "passive", P2A: "passive", P3A: "passive", P3W: "passive", P3B: "passive", "HVC/A0": "input", SCL: "input", SDA: "bidirectional", VSS: "power_in", NC: "no_connect", "~{RESET}": "input", A1: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4451-xxxx-ST";
@@ -1589,7 +1643,8 @@ export class MCP4461_xxxx_ST extends Component.withPins({
   "A1": "16",
   "VDD": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { P0A: "passive", P0W: "passive", P0B: "passive", P1B: "passive", P1W: "passive", P1A: "passive", P2B: "passive", P2W: "passive", P2A: "passive", P3A: "passive", P3W: "passive", P3B: "passive", "HVC/A0": "input", SCL: "input", SDA: "bidirectional", VSS: "power_in", NC: "no_connect", "~{RESET}": "input", A1: "input", VDD: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP4461-xxxx-ST";
@@ -1628,7 +1683,8 @@ export class MCP45HV51_MQ extends Component.withPins({
   "NC_20": "20",
   "EP": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VL: "power_in", SCL: "input", A1: "input", SDA: "bidirectional", A0: "input", "~{WLAT}": "input", "~{SHDN}": "input", NC_8: "passive", NC_9: "passive", NC_10: "passive", DGND: "power_in", "V-": "power_in", P0B: "passive", P0W: "passive", P0A: "passive", "V+": "power_in", NC_17: "passive", NC_18: "passive", NC_19: "passive", NC_20: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP45HV51-MQ";
@@ -1667,7 +1723,8 @@ export class MCP45HV31_MQ extends Component.withPins({
   "NC_20": "20",
   "EP": "21",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VL: "power_in", SCL: "input", A1: "input", SDA: "bidirectional", A0: "input", "~{WLAT}": "input", "~{SHDN}": "input", NC_8: "passive", NC_9: "passive", NC_10: "passive", DGND: "power_in", "V-": "power_in", P0B: "passive", P0W: "passive", P0A: "passive", "V+": "power_in", NC_17: "passive", NC_18: "passive", NC_19: "passive", NC_20: "passive", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP45HV31-MQ";
@@ -1699,7 +1756,8 @@ export class MCP45HV51_ST extends Component.withPins({
   "P0A": "13",
   "V+": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VL: "power_in", SCL: "input", A1: "input", SDA: "bidirectional", A0: "input", "~{WLAT}": "input", NC: "passive", "~{SHDN}": "input", DGND: "power_in", "V-": "power_in", P0B: "passive", P0W: "passive", P0A: "passive", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP45HV51-ST";
@@ -1731,7 +1789,8 @@ export class MCP45HV31_ST extends Component.withPins({
   "P0A": "13",
   "V+": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VL: "power_in", SCL: "input", A1: "input", SDA: "bidirectional", A0: "input", "~{WLAT}": "input", NC: "passive", "~{SHDN}": "input", DGND: "power_in", "V-": "power_in", P0B: "passive", P0W: "passive", P0A: "passive", "V+": "power_in", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:MCP45HV31-ST";
@@ -1755,7 +1814,8 @@ export class TPL0401A_10_Q1 extends Component.withPins({
   "W": "5",
   "H": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", W: "passive", H: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:TPL0401A-10-Q1";
@@ -1779,7 +1839,8 @@ export class TPL0401B_10_Q1 extends Component.withPins({
   "W": "5",
   "H": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", GND: "power_in", SCL: "input", SDA: "bidirectional", W: "passive", H: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:TPL0401B-10-Q1";
@@ -1809,7 +1870,8 @@ export class X9118 extends Component.withPins({
   "RH0": "12",
   "RL0": "13",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "V+": "passive", A0: "input", SCL: "input", SDA: "bidirectional", VSS: "power_in", "V-": "passive", A1: "input", VCC: "power_in", "~{WP}": "input", RW0: "passive", RH0: "passive", RL0: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:X9118";
@@ -1850,7 +1912,8 @@ export class X9250 extends Component.withPins({
   "RH2": "21",
   "RL2": "22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", "V+": "passive", VCC: "power_in", "~{CS}": "input", SIN: "input", A1: "input", VSS: "power_in", "V-": "passive", SCL: "input", "~{HOLD}": "input", SOUT: "output", RW3: "passive", RH3: "passive", RL3: "passive", RL0: "passive", RH0: "passive", RW0: "passive", "~{WP}": "input", RL1: "passive", RH1: "passive", RW1: "passive", RW2: "passive", RH2: "passive", RL2: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:X9250";
@@ -1890,7 +1953,8 @@ export class X9258 extends Component.withPins({
   "RH2": "21",
   "RL2": "22",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", "V+": "passive", VCC: "power_in", A2: "input", SDA: "bidirectional", A1: "input", VSS: "power_in", "V-": "passive", SCL: "input", A3: "input", RW3: "passive", RH3: "passive", RL3: "passive", RL0: "passive", RH0: "passive", RW0: "passive", "~{WP}": "input", RL1: "passive", RH1: "passive", RW1: "passive", RW2: "passive", RH2: "passive", RL2: "passive", ...opts.pinTypes } });
   }
   override schema = "Potentiometer_Digital:X9258";

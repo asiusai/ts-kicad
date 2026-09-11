@@ -35,7 +35,8 @@ export class JoyWarrior24A10L extends Component.withPins({
   "Y1/B5": "23",
   "Y0/B4": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "X0/B0": "input", "X1/B1": "input", "X2/B2": "input", "X3/B3": "input", "~{CS}": "output", Din: "input", Aux0: "output", Aux2: "output", GND: "power_in", PullToGnd: "input", VREG: "power_out", Direct: "input", NC: "no_connect", VCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", Aux3: "output", Aux1: "output", Dout: "output", SCLK: "output", "Y3/B7": "input", "Y2/B6": "input", "Y1/B5": "input", "Y0/B4": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_HID:JoyWarrior24A10L";
@@ -76,7 +77,8 @@ export class JoyWarrior24A8L extends Component.withPins({
   "Y1/B5": "23",
   "Y0/B4": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "X0/B0": "input", "X1/B1": "input", "X2/B2": "input", "X3/B3": "input", "~{CS}": "output", Din: "input", Aux0: "output", Aux2: "output", GND: "power_in", PullToGnd: "input", VREG: "power_out", Direct: "input", NC: "no_connect", VCC: "power_in", "D-": "bidirectional", "D+": "bidirectional", Aux3: "output", Aux1: "output", Dout: "output", SCLK: "output", "Y3/B7": "input", "Y2/B6": "input", "Y1/B5": "input", "Y0/B4": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_HID:JoyWarrior24A8L";
@@ -117,7 +119,8 @@ export class SpinWarrior24A3 extends Component.withPins({
   "B2": "23",
   "A2": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", B0: "input", A1: "input", B1: "input", In0: "input", In2: "input", In4: "input", N2: "input", GND: "power_in", PullToGND: "input", Vreg: "power_out", Power: "input", NC: "no_connect", Vcc: "power_in", "D-": "bidirectional", "D+": "bidirectional", "~{EN}": "open_collector", In5: "input", In3: "input", In1: "input", N1: "input", N0: "input", B2: "input", A2: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_HID:SpinWarrior24A3";
@@ -158,7 +161,8 @@ export class SpinWarrior24R4 extends Component.withPins({
   "B2": "23",
   "A2": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", B0: "input", A1: "input", B1: "input", Sw0: "input", Sw2: "input", Sw4: "input", Sw6: "input", GND: "power_in", PullToGND: "input", Vreg: "power_out", Power: "input", NC: "no_connect", Vcc: "power_in", "D-": "bidirectional", "D+": "bidirectional", "~{EN}": "open_collector", Sw5: "input", Sw3: "input", Sw1: "input", B3: "input", A3: "input", B2: "input", A2: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_HID:SpinWarrior24R4";
@@ -199,7 +203,8 @@ export class SpinWarrior24R6 extends Component.withPins({
   "B2": "23",
   "A2": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A0: "input", B0: "input", A1: "input", B1: "input", Sw0: "input", Sw2: "input", B4: "input", B5: "input", GND: "power_in", PullToGND: "input", Vreg: "power_out", Power: "input", NC: "no_connect", Vcc: "power_in", "D-": "bidirectional", "D+": "bidirectional", "~{EN}": "open_collector", A5: "input", A4: "input", Sw1: "input", B3: "input", A3: "input", B2: "input", A2: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_HID:SpinWarrior24R6";

@@ -50,7 +50,8 @@ export class _16450 extends Component.withPins({
   "~{RI}": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D0: "bidirectional", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", RCLK: "input", SIN: "input", SOUT: "output", CS0: "input", CS1: "input", "~{CS2}": "input", "~{BAUDOUT}": "output", XIN: "input", XOUT: "output", "~{WR}": "input", WR: "input", GND: "power_in", "~{RD}": "input", RD: "input", DDIS: "output", CSOUT: "output", "~{ADS}": "input", A2: "input", A1: "input", A0: "input", INTR: "output", "~{OUT2}": "output", "~{RTS}": "output", "~{DTR}": "output", "~{OUT1}": "output", MR: "input", "~{CTS}": "input", "~{DSR}": "input", "~{DCD}": "input", "~{RI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:16450";
@@ -108,7 +109,8 @@ export class _16550 extends Component.withPins({
   "~{RI}": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D0: "bidirectional", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", RCLK: "input", SIN: "input", SOUT: "output", CS0: "input", CS1: "input", "~{CS2}": "input", "~{BAUDOUT}": "output", XIN: "input", XOUT: "output", "~{WR}": "input", WR: "input", GND: "power_in", "~{RD}": "input", RD: "input", DDIS: "output", "~{TXRDY}": "output", "~{ADS}": "input", A2: "input", A1: "input", A0: "input", "~{RXRDY}": "output", INTR: "output", "~{OUT2}": "output", "~{RTS}": "output", "~{DTR}": "output", "~{OUT1}": "output", MR: "input", "~{CTS}": "input", "~{DSR}": "input", "~{DCD}": "input", "~{RI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:16550";
@@ -164,7 +166,8 @@ export class _68C681 extends Component.withPins({
   "IP4": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "input", IP3: "input", A2: "input", IP1: "input", A3: "input", A4: "input", IP0: "input", RWN: "input", DTACKN: "output", RXDB: "input", TXDB: "output", OP1: "output", OP3: "output", OP5: "output", OP7: "output", D1: "input", D3: "input", D5: "input", D7: "input", GND: "power_in", INTRN: "output", D6: "input", D4: "input", D2: "input", D0: "input", OP6: "output", OP4: "output", OP2: "output", OP0: "output", TXDA: "output", RXDA: "input", "X1/CLK": "input", X2: "output", RESETN: "input", CSN: "input", IP2: "input", IACKN: "input", IP5: "input", IP4: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:68C681";
@@ -220,7 +223,8 @@ export class _8250 extends Component.withPins({
   "~{RI}": "39",
   "VCC": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D0: "bidirectional", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", RCLK: "input", SIN: "input", SOUT: "output", CS0: "input", CS1: "input", "~{CS2}": "input", "~{BAUDOUT}": "output", XIN: "input", XOUT: "output", "~{WR}": "input", WR: "input", GND: "power_in", "~{RD}": "input", RD: "input", DDIS: "output", CSOUT: "output", "~{ADS}": "input", A2: "input", A1: "input", A0: "input", INTR: "output", "~{OUT2}": "output", "~{RTS}": "output", "~{DTR}": "output", "~{OUT1}": "output", MR: "input", "~{CTS}": "input", "~{DSR}": "input", "~{DCD}": "input", "~{RI}": "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:8250";
@@ -265,7 +269,8 @@ export class _8252 extends Component.withPins({
   "VCC": "27",
   "CS0": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RD}": "input", "~{WR}": "input", D0: "bidirectional", D1: "bidirectional", D2: "bidirectional", D3: "bidirectional", D4: "bidirectional", D5: "bidirectional", D6: "bidirectional", D7: "bidirectional", A0: "input", A1: "input", IX: "input", OX: "output", "(TXD)SDO": "output", GND: "power_in", "~{CTS}": "input", "~{DSR}": "input", "~{DTR}": "output", "~{RTS}": "output", CO: "output", TBRE: "output", RST: "input", INTR: "output", "(RXD)SDI": "input", DR: "output", VCC: "power_in", CS0: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:8252";
@@ -293,7 +298,8 @@ export class ADM101E extends Component.withPins({
   "C1+": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "C1-": "passive", "VS-": "power_out", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", SD: "input", "C1+": "passive", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM101E";
@@ -319,7 +325,8 @@ export class LTC2850xS8 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2850xS8";
@@ -344,7 +351,8 @@ export class ADM1485xRZ extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM1485xRZ";
@@ -376,7 +384,8 @@ export class ADM1491EBR extends Component.withPins({
   "VCC_13": "13",
   "VCC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", VCC_13: "power_in", VCC_14: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM1491EBR";
@@ -418,7 +427,8 @@ export class ADM205 extends Component.withPins({
   "R3OUT": "23",
   "R3IN": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T4OUT: "output", T3OUT: "output", T3IN: "input", T4IN: "input", T5OUT: "output", T5IN: "input", T1OUT: "output", T2OUT: "output", R2IN: "input", R2OUT: "tri_state", T2IN: "input", T1IN: "input", R1OUT: "tri_state", R1IN: "input", GND: "power_in", VCC: "power_in", R5IN: "input", R5OUT: "tri_state", R4OUT: "tri_state", R4IN: "input", "~{EN}": "input", SD: "input", R3OUT: "tri_state", R3IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM205";
@@ -459,7 +469,8 @@ export class ADM206 extends Component.withPins({
   "R2OUT": "22",
   "R2IN": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T3OUT: "output", T3IN: "input", T4IN: "input", T4OUT: "output", T1OUT: "output", T2OUT: "output", R1IN: "input", R1OUT: "tri_state", T2IN: "input", T1IN: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R3IN: "input", R3OUT: "tri_state", "~{EN}": "input", SD: "input", R2OUT: "tri_state", R2IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM206";
@@ -500,7 +511,8 @@ export class ADM207 extends Component.withPins({
   "R2OUT": "22",
   "R2IN": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T3OUT: "output", T3IN: "input", T4IN: "input", T5OUT: "output", T5IN: "input", T4OUT: "output", T1OUT: "output", T2OUT: "output", R1IN: "input", R1OUT: "output", T2IN: "input", T1IN: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R3IN: "input", R3OUT: "output", R2OUT: "output", R2IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM207";
@@ -541,7 +553,8 @@ export class ADM208 extends Component.withPins({
   "R3OUT": "22",
   "R3IN": "23",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T3IN: "input", T4OUT: "output", T4IN: "input", T3OUT: "output", T2OUT: "output", T1OUT: "output", R2IN: "input", R2OUT: "output", T1IN: "input", R1OUT: "output", R1IN: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R4IN: "input", R4OUT: "output", T2IN: "input", R3OUT: "output", R3IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM208";
@@ -582,7 +595,8 @@ export class ADM209 extends Component.withPins({
   "T2IN": "23",
   "T1IN": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R5IN: "input", R5OUT: "tri_state", T3OUT: "output", NC: "no_connect", T3IN: "input", R1OUT: "tri_state", R1IN: "input", GND: "power_in", VCC: "power_in", "V+": "power_in", "C+": "passive", "C-": "passive", "V-": "power_out", R4OUT: "tri_state", R4IN: "input", "~{EN}": "input", R3OUT: "tri_state", R3IN: "input", T1OUT: "output", T2OUT: "output", R2IN: "input", R2OUT: "tri_state", T2IN: "input", T1IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM209";
@@ -627,7 +641,8 @@ export class ADM211 extends Component.withPins({
   "R3OUT": "26",
   "R3IN": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T3OUT: "output", T3IN: "input", T4IN: "input", T4OUT: "output", T1OUT: "output", T2OUT: "output", R2IN: "input", R2OUT: "tri_state", T2IN: "input", T1IN: "input", R1OUT: "tri_state", R1IN: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R5IN: "input", R5OUT: "tri_state", R4OUT: "tri_state", R4IN: "input", "~{EN}": "input", SD: "input", R3OUT: "tri_state", R3IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM211";
@@ -672,7 +687,8 @@ export class ADM213 extends Component.withPins({
   "R3OUT": "26",
   "R3IN": "27",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T3OUT: "output", T3IN: "input", T4IN: "input", T4OUT: "output", T1OUT: "output", T2OUT: "output", R2IN: "input", R2OUT: "tri_state", T2IN: "input", T1IN: "input", R1OUT: "tri_state", R1IN: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R5IN: "input", R5OUT: "tri_state", R4OUT: "tri_state", R4IN: "input", EN: "input", "~{SD}": "input", R3OUT: "tri_state", R3IN: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM213";
@@ -707,7 +723,8 @@ export class LT1080 extends Component.withPins({
   "VCC": "17",
   "ON/~{OFF}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", "ON/~{OFF}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1080";
@@ -742,7 +759,8 @@ export class ADM222 extends Component.withPins({
   "VCC": "17",
   "ON/~{OFF}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC: "no_connect", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", "ON/~{OFF}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM222";
@@ -775,7 +793,8 @@ export class MAX232 extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX232";
@@ -808,7 +827,8 @@ export class ADM232A extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM232A";
@@ -843,7 +863,8 @@ export class ADM242 extends Component.withPins({
   "VCC": "17",
   "~{SHDN}": "18",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{EN}": "input", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", "~{SHDN}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM242";
@@ -877,7 +898,8 @@ export class ADM2481xRW extends Component.withPins({
   "GND2_15": "15",
   "VDD2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", GND1_2: "power_in", RxD: "output", "~{RE}": "input", DE: "input", TxD: "input", GND1_7: "passive", GND1_8: "passive", GND2_9: "passive", GND2_10: "passive", NC_11: "no_connect", A: "bidirectional", B: "bidirectional", NC_14: "no_connect", GND2_15: "power_in", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2481xRW";
@@ -911,7 +933,8 @@ export class ADM2483xRW extends Component.withPins({
   "GND2_15": "15",
   "VDD2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", GND1_2: "power_in", RxD: "output", "~{RE}": "input", DE: "input", TxD: "input", PV: "input", GND1_8: "passive", GND2_9: "passive", NC_10: "no_connect", NC_11: "no_connect", A: "bidirectional", B: "bidirectional", NC_14: "no_connect", GND2_15: "power_in", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2483xRW";
@@ -945,7 +968,8 @@ export class ADM2484E extends Component.withPins({
   "GND2_15": "15",
   "VDD2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD1: "power_in", GND1_2: "power_in", RxD: "output", "~{RE}": "input", DE: "input", TxD: "input", NC_7: "no_connect", GND1_8: "power_in", GND2_9: "power_in", NC_10: "no_connect", Y: "output", Z: "output", B: "input", A: "input", GND2_15: "power_in", VDD2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2484E";
@@ -983,7 +1007,8 @@ export class ADM2587E extends Component.withPins({
   "Visoin": "19",
   "GND2_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND1_1: "power_in", VCC_2: "power_in", GND1_3: "power_in", RxD: "output", "~{RE}": "input", DE: "input", TxD: "input", VCC_8: "power_in", GND1_9: "power_in", GND1_10: "power_in", GND2_11: "power_in", Visoout: "power_out", Y: "output", GND2_14: "power_in", Z: "output", GND2_16: "power_in", B: "input", A: "input", Visoin: "power_in", GND2_20: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2587E";
@@ -1021,7 +1046,8 @@ export class ADM2582E extends Component.withPins({
   "Visoin": "19",
   "GND2_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND1_1: "power_in", VCC_2: "power_in", GND1_3: "power_in", RxD: "output", "~{RE}": "input", DE: "input", TxD: "input", VCC_8: "power_in", GND1_9: "power_in", GND1_10: "power_in", GND2_11: "power_in", Visoout: "power_out", Y: "output", GND2_14: "power_in", Z: "output", GND2_16: "power_in", B: "input", A: "input", Visoin: "power_in", GND2_20: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2582E";
@@ -1055,7 +1081,8 @@ export class ADM2682E extends Component.withPins({
   "VISOIN": "15",
   "GND2_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND1_1: "power_in", VCC_2: "power_in", RXD: "output", "~{RE}": "input", DE: "input", TXD: "input", VCC_7: "passive", GND1_8: "passive", GND2_9: "power_in", VISOOUT: "power_in", Y: "output", Z: "output", B: "input", A: "input", VISOIN: "power_in", GND2_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2682E";
@@ -1089,7 +1116,8 @@ export class ADM2687E extends Component.withPins({
   "VISOIN": "15",
   "GND2_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND1_1: "power_in", VCC_2: "power_in", RXD: "output", "~{RE}": "input", DE: "input", TXD: "input", VCC_7: "passive", GND1_8: "passive", GND2_9: "power_in", VISOOUT: "power_in", Y: "output", Z: "output", B: "input", A: "input", VISOIN: "power_in", GND2_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM2687E";
@@ -1115,7 +1143,8 @@ export class ADM3485xR extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM3485xR";
@@ -1141,7 +1170,8 @@ export class ADM3490ExR extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM3490ExR";
@@ -1167,7 +1197,8 @@ export class ADM3488ExR extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM3488ExR";
@@ -1199,7 +1230,8 @@ export class ADM3491ExR extends Component.withPins({
   "VCC_13": "13",
   "VCC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", VCC_13: "power_in", VCC_14: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ADM3491ExR";
@@ -1237,7 +1269,8 @@ export class AZ75232M extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:AZ75232M";
@@ -1275,7 +1308,8 @@ export class AZ75232G extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:AZ75232G";
@@ -1313,7 +1347,8 @@ export class AZ75232GS extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:AZ75232GS";
@@ -1351,7 +1386,8 @@ export class GD65232DB extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD65232DB";
@@ -1389,7 +1425,8 @@ export class GD65232DW extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD65232DW";
@@ -1427,7 +1464,8 @@ export class GD65232PW extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD65232PW";
@@ -1465,7 +1503,8 @@ export class GD75232DB extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD75232DB";
@@ -1503,7 +1542,8 @@ export class GD75232DW extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD75232DW";
@@ -1541,7 +1581,8 @@ export class GD75232N extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD75232N";
@@ -1579,7 +1620,8 @@ export class GD75232PW extends Component.withPins({
   "DA2": "15",
   "DA1": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RY3: "output", RY2: "output", RY1: "output", "V_{CC}": "power_in", "V_{DD}": "power_in", RA1: "input", RA2: "input", RA3: "input", DY1: "output", DY2: "output", RA4: "input", DY3: "output", RA5: "input", "V_{SS}": "power_in", GND: "power_in", RY5: "output", DA3: "input", RY4: "output", DA2: "input", DA1: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:GD75232PW";
@@ -1612,7 +1654,8 @@ export class ICL3232 extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ICL3232";
@@ -1638,7 +1681,8 @@ export class ISL3172E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3172E";
@@ -1664,7 +1708,8 @@ export class ISL3175E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3175E";
@@ -1690,7 +1735,8 @@ export class ISL3178E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3178E";
@@ -1713,7 +1759,8 @@ export class ISL3280ExHZ extends Component.withPins({
   "B": "4",
   "A": "5",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", RO: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3280ExHZ";
@@ -1737,7 +1784,8 @@ export class ISL3281ExHZ extends Component.withPins({
   "RE": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", RO: "output", B: "input", RE: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3281ExHZ";
@@ -1764,7 +1812,8 @@ export class ISL3282ExRHZ extends Component.withPins({
   "B": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", GND_2: "power_in", NC: "no_connect", VCC: "power_in", A: "input", VL: "power_in", "~{RE}": "input", B: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3282ExRHZ";
@@ -1788,7 +1837,8 @@ export class ISL3283ExHZ extends Component.withPins({
   "~{RE}": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", RO: "output", B: "input", "~{RE}": "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3283ExHZ";
@@ -1812,7 +1862,8 @@ export class ISL3284ExHZ extends Component.withPins({
   "VL": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", RO: "output", B: "input", VL: "power_in", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3284ExHZ";
@@ -1836,7 +1887,8 @@ export class ISL3295xxH extends Component.withPins({
   "GND": "5",
   "Y": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { DI: "input", VCC: "power_in", DE: "input", Z: "output", GND: "power_in", Y: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3295xxH";
@@ -1863,7 +1915,8 @@ export class ISL3298xxRT extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VL: "power_in", DE: "input", DI: "input", GND_4: "passive", GND_5: "power_in", Y: "output", Z: "output", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL3298xxRT";
@@ -1892,7 +1945,8 @@ export class ISL83491 extends Component.withPins({
   "VCC_13": "13",
   "VCC_14": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "power_in", Y: "output", "~{Z}": "output", "~{B}": "input", A: "input", VCC_13: "power_in", VCC_14: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISL83491";
@@ -1926,7 +1980,8 @@ export class ISO1500 extends Component.withPins({
   "GND2_15": "15",
   "VCC2_16": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC1: "power_in", GND1_2: "power_in", R: "output", "~{RE}": "input", DE: "input", D: "input", NC_7: "no_connect", GND1_8: "passive", GND2_9: "power_in", VCC2_10: "power_in", NC_11: "no_connect", A: "bidirectional", B: "bidirectional", NC_14: "no_connect", GND2_15: "passive", VCC2_16: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISO1500";
@@ -1960,7 +2015,8 @@ export class ISO3082DW extends Component.withPins({
   "GND2_15": "15",
   "Vcc2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc1: "power_in", GND1_2: "power_in", R: "output", "~{RE}": "input", DE: "input", D: "input", GND1_7: "power_in", GND1_8: "power_in", GND2_9: "power_in", GND2_10: "power_in", NC_11: "no_connect", A: "bidirectional", B: "bidirectional", NC_14: "no_connect", GND2_15: "power_in", Vcc2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISO3082DW";
@@ -1994,7 +2050,8 @@ export class ISO3088DW extends Component.withPins({
   "GND2_15": "15",
   "Vcc2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vcc1: "power_in", GND1_2: "power_in", R: "output", "~{RE}": "input", DE: "input", D: "input", GND1_7: "power_in", GND1_8: "power_in", GND2_9: "power_in", GND2_10: "power_in", NC_11: "no_connect", A: "bidirectional", B: "bidirectional", NC_14: "no_connect", GND2_15: "power_in", Vcc2: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ISO3088DW";
@@ -2020,7 +2077,8 @@ export class LT1785xN8 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1785xN8";
@@ -2046,7 +2104,8 @@ export class LT1785AxN8 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1785AxN8";
@@ -2072,7 +2131,8 @@ export class LT1785AxS8 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1785AxS8";
@@ -2098,7 +2158,8 @@ export class LT1785xS8 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1785xS8";
@@ -2130,7 +2191,8 @@ export class LT1791xN8 extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1791xN8";
@@ -2162,7 +2224,8 @@ export class LT1791AxN8 extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1791AxN8";
@@ -2194,7 +2257,8 @@ export class LTC2852xS extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2852xS";
@@ -2226,7 +2290,8 @@ export class LT1791AxS extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1791AxS";
@@ -2258,7 +2323,8 @@ export class LT1791xS extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LT1791xS";
@@ -2285,7 +2351,8 @@ export class LTC2850xDD extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_5: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2850xDD";
@@ -2311,7 +2378,8 @@ export class LTC2850xMS8 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2850xMS8";
@@ -2338,7 +2406,8 @@ export class LTC2851xDD extends Component.withPins({
   "A": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND_4: "power_in", Y: "output", Z: "output", B: "input", A: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2851xDD";
@@ -2364,7 +2433,8 @@ export class LTC2851xMS8 extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2851xMS8";
@@ -2390,7 +2460,8 @@ export class LTC2851xS8 extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2851xS8";
@@ -2419,7 +2490,8 @@ export class LTC2852xDD extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_5: "power_in", Y: "output", Z: "output", B: "input", A: "input", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2852xDD";
@@ -2447,7 +2519,8 @@ export class LTC2852xMS extends Component.withPins({
   "A": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2852xMS";
@@ -2474,7 +2547,8 @@ export class LTC2856xDD_1 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_5: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2856xDD-1";
@@ -2501,7 +2575,8 @@ export class LTC2856xDD_2 extends Component.withPins({
   "VCC": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_5: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2856xDD-2";
@@ -2527,7 +2602,8 @@ export class LTC2856xMS8_1 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2856xMS8-1";
@@ -2553,7 +2629,8 @@ export class LTC2856xMS8_2 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2856xMS8-2";
@@ -2580,7 +2657,8 @@ export class LTC2857xDD_1 extends Component.withPins({
   "A": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND_4: "power_in", Y: "output", Z: "output", B: "input", A: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2857xDD-1";
@@ -2607,7 +2685,8 @@ export class LTC2857xDD_2 extends Component.withPins({
   "A": "8",
   "GND_9": "9",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND_4: "power_in", Y: "output", Z: "output", B: "input", A: "input", GND_9: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2857xDD-2";
@@ -2633,7 +2712,8 @@ export class LTC2857xMS8_1 extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2857xMS8-1";
@@ -2659,7 +2739,8 @@ export class LTC2857xMS8_2 extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2857xMS8-2";
@@ -2688,7 +2769,8 @@ export class LTC2858xDD_1 extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_5: "power_in", Y: "output", Z: "output", B: "input", A: "input", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2858xDD-1";
@@ -2717,7 +2799,8 @@ export class LTC2858xDD_2 extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_5: "power_in", Y: "output", Z: "output", B: "input", A: "input", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2858xDD-2";
@@ -2745,7 +2828,8 @@ export class LTC2858xMS_1 extends Component.withPins({
   "A": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2858xMS-1";
@@ -2773,7 +2857,8 @@ export class LTC2858xMS_2 extends Component.withPins({
   "A": "9",
   "VCC": "10",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2858xMS-2";
@@ -2803,7 +2888,8 @@ export class LTC2861 extends Component.withPins({
   "A": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", RE: "input", DE: "input", DI: "input", TE: "input", GND: "power_in", SLO: "input", Y: "output", "~{Z}": "output", "~{B}": "input", A: "input", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:LTC2861";
@@ -2835,7 +2921,8 @@ export class MAX13432EESD extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vlogic: "power_in", RO: "output", DE: "input", "~{RE}": "input", DI: "input", GND_6: "power_in", NC_7: "no_connect", GND_8: "power_in", Y: "output", "~{Z}": "output", "~{B}": "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX13432EESD";
@@ -2868,7 +2955,8 @@ export class MAX13432EETD extends Component.withPins({
   "VCC": "14",
   "EP": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vlogic: "power_in", RO: "output", DE: "input", "~{RE}": "input", DI: "input", GND_6: "power_in", NC_7: "no_connect", GND_8: "power_in", Y: "output", "~{Z}": "output", "~{B}": "input", A: "input", NC_13: "no_connect", VCC: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX13432EETD";
@@ -2900,7 +2988,8 @@ export class MAX13433EESD extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vlogic: "power_in", RO: "output", DE: "input", "~{RE}": "input", DI: "input", GND_6: "power_in", NC_7: "no_connect", GND_8: "power_in", Y: "output", "~{Z}": "output", "~{B}": "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX13433EESD";
@@ -2933,7 +3022,8 @@ export class MAX13433EETD extends Component.withPins({
   "VCC": "14",
   "EP": "15",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { Vlogic: "power_in", RO: "output", DE: "input", "~{RE}": "input", DI: "input", GND_6: "power_in", NC_7: "no_connect", GND_8: "power_in", Y: "output", "~{Z}": "output", "~{B}": "input", A: "input", NC_13: "no_connect", VCC: "power_in", EP: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX13433EETD";
@@ -2959,7 +3049,8 @@ export class MAX14783ExS extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX14783ExS";
@@ -3026,7 +3117,8 @@ export class MAX14830 extends Component.withPins({
   "V18": "48",
   "AGND_49": "49",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "SPI/~{I2C}": "input", LDOEN: "input", "MISO/SDA": "bidirectional", "SCLK/SCL": "input", "~{CS}/A0": "input", "MOSI/A1": "input", "~{IRQ}": "input", "~{RST}": "input", VL: "power_in", DGND: "power_in", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", "~{RTS0}": "output", "~{CTS0}": "input", RX0: "input", TX0: "output", GPIO4: "bidirectional", GPIO5: "bidirectional", GPIO6: "bidirectional", GPIO7: "bidirectional", "~{RTS1}": "output", "~{CTS1}": "input", RX1: "input", TX1: "output", GPIO8: "bidirectional", GPIO9: "bidirectional", GPIO10: "bidirectional", GPIO11: "bidirectional", "~{RTS2}": "output", "~{CTS2}": "input", RX2: "input", TX2: "output", GPIO12: "bidirectional", GPIO13: "bidirectional", GPIO14: "bidirectional", GPIO15: "bidirectional", "~{RTS3}": "output", "~{CTS3}": "input", RX3: "input", TX3: "output", VEXT: "power_in", XOUT: "output", XIN: "input", AGND_46: "power_in", VA: "power_in", V18: "power_out", AGND_49: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX14830";
@@ -3051,7 +3143,8 @@ export class MAX481E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX481E";
@@ -3076,7 +3169,8 @@ export class MAX1487E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX1487E";
@@ -3109,7 +3203,8 @@ export class MAX202 extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX202";
@@ -3142,7 +3237,8 @@ export class MAX232I extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX232I";
@@ -3184,7 +3280,8 @@ export class MAX238xWG_ extends Component.withPins({
   "R1IN_23": "23",
   "T1OUT_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T2OUT_1: "output", T1OUT_2: "output", R2IN_3: "input", R2OUT_4: "output", T1IN_5: "input", R1OUT_6: "output", R1IN_7: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", R2IN_16: "input", R2OUT_17: "output", T2IN_18: "input", T1IN_19: "input", T2OUT_20: "output", T2IN_21: "input", R1OUT_22: "output", R1IN_23: "input", T1OUT_24: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX238xWG+";
@@ -3226,7 +3323,8 @@ export class MAX238xNG_ extends Component.withPins({
   "R1IN_23": "23",
   "T1OUT_24": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { T2OUT_1: "output", T1OUT_2: "output", R2IN_3: "input", R2OUT_4: "output", T1IN_5: "input", R1OUT_6: "output", R1IN_7: "input", GND: "power_in", VCC: "power_in", "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", R2IN_16: "input", R2OUT_17: "output", T2IN_18: "input", T1IN_19: "input", T2OUT_20: "output", T2IN_21: "input", R1OUT_22: "output", R1IN_23: "input", T1OUT_24: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX238xNG+";
@@ -3251,7 +3349,8 @@ export class MAX3051 extends Component.withPins({
   "CANH": "7",
   "RS": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { TXD: "input", GND: "power_in", VDD: "power_in", RXD: "output", SHDN: "input", CANL: "bidirectional", CANH: "bidirectional", RS: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3051";
@@ -3277,7 +3376,8 @@ export class MAX3072E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3072E";
@@ -3303,7 +3403,8 @@ export class SP3481CN extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3481CN";
@@ -3329,7 +3430,8 @@ export class MAX3075E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3075E";
@@ -3355,7 +3457,8 @@ export class MAX3078E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3078E";
@@ -3392,7 +3495,8 @@ export class MAX3218 extends Component.withPins({
   "V+": "19",
   "GND_20": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { LX: "passive", "~{INVALID}": "output", FORCEON: "input", "~{FORCEOFF}": "input", GND_5: "power_in", VCC: "power_in", T1IN: "input", T2IN: "input", R1OUT: "output", R2OUT: "output", R2IN: "input", R1IN: "input", T2OUT: "output", T1OUT: "output", "V-": "power_out", "C1-": "passive", GND_17: "passive", "C1+": "passive", "V+": "power_out", GND_20: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3218";
@@ -3425,7 +3529,8 @@ export class MAX3221 extends Component.withPins({
   "VCC": "15",
   "~{FORCEOFF}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{EN}": "input", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", RIN: "input", ROUT: "output", "~{INVALID}": "output", DIN: "input", FORCEON: "input", DOUT: "output", GND: "power_in", VCC: "power_in", "~{FORCEOFF}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3221";
@@ -3459,7 +3564,8 @@ export class MAX3226 extends Component.withPins({
   "VCC": "15",
   "~{FORCEOFF}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { READY: "output", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R1IN: "input", R1OUT: "output", "~{INVALID}": "output", T1IN: "input", FORCEON: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", "~{FORCEOFF}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3226";
@@ -3493,7 +3599,8 @@ export class MAX3227 extends Component.withPins({
   "VCC": "15",
   "~{FORCEOFF}": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { READY: "output", "C1+": "passive", "V+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "V-": "power_out", R1IN: "input", R1OUT: "output", "~{INVALID}": "output", T1IN: "input", FORCEON: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", "~{FORCEOFF}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3227";
@@ -3526,7 +3633,8 @@ export class MAX3232 extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3232";
@@ -3550,7 +3658,8 @@ export class MAX3284E extends Component.withPins({
   "VL": "5",
   "A": "6",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", GND: "power_in", RO: "output", B: "input", VL: "power_in", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3284E";
@@ -3575,7 +3684,8 @@ export class MAX3483 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3483";
@@ -3600,7 +3710,8 @@ export class MAX3485 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3485";
@@ -3625,7 +3736,8 @@ export class MAX3486 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3486";
@@ -3651,7 +3763,8 @@ export class MAX3488xPA extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3488xPA";
@@ -3677,7 +3790,8 @@ export class MAX3488xSA extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3488xSA";
@@ -3703,7 +3817,8 @@ export class MAX3490xPA extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3490xPA";
@@ -3729,7 +3844,8 @@ export class MAX3490xSA extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX3490xSA";
@@ -3754,7 +3870,8 @@ export class MAX483E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX483E";
@@ -3779,7 +3896,8 @@ export class MAX485E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX485E";
@@ -3804,7 +3922,8 @@ export class MAX487E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX487E";
@@ -3829,7 +3948,8 @@ export class MAX488E extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX488E";
@@ -3860,7 +3980,8 @@ export class MAX489E extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX489E";
@@ -3885,7 +4006,8 @@ export class MAX490E extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", RO: "output", DI: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX490E";
@@ -3916,7 +4038,8 @@ export class MAX491E extends Component.withPins({
   "NC_13": "13",
   "VCC": "14",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { NC_1: "no_connect", RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND_6: "power_in", GND_7: "passive", NC_8: "no_connect", Y: "output", Z: "output", B: "input", A: "input", NC_13: "no_connect", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MAX491E";
@@ -3958,7 +4081,8 @@ export class MC6850 extends Component.withPins({
   "~{DCD}": "23",
   "~{CTS}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", Rx_Data: "input", Rx_CLK: "input", Tx_CLK: "input", "~{RTS}": "output", Tx_Data: "output", "~{IRQ}": "output", CS0: "input", CS2: "input", CS1: "input", RS: "input", VCC: "power_in", "R/~{W}": "input", E: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{DCD}": "input", "~{CTS}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MC6850";
@@ -4000,7 +4124,8 @@ export class MC68A50 extends Component.withPins({
   "~{DCD}": "23",
   "~{CTS}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", Rx_Data: "input", Rx_CLK: "input", Tx_CLK: "input", "~{RTS}": "output", Tx_Data: "output", "~{IRQ}": "output", CS0: "input", CS2: "input", CS1: "input", RS: "input", VCC: "power_in", "R/~{W}": "input", E: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{DCD}": "input", "~{CTS}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MC68A50";
@@ -4042,7 +4167,8 @@ export class MC68B50 extends Component.withPins({
   "~{DCD}": "23",
   "~{CTS}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VSS: "power_in", Rx_Data: "input", Rx_CLK: "input", Tx_CLK: "input", "~{RTS}": "output", Tx_Data: "output", "~{IRQ}": "output", CS0: "input", CS2: "input", CS1: "input", RS: "input", VCC: "power_in", "R/~{W}": "input", E: "input", D7: "bidirectional", D6: "bidirectional", D5: "bidirectional", D4: "bidirectional", D3: "bidirectional", D2: "bidirectional", D1: "bidirectional", D0: "bidirectional", "~{DCD}": "input", "~{CTS}": "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:MC68B50";
@@ -4076,7 +4202,8 @@ export class SC16IS740 extends Component.withPins({
   "XTAL1": "15",
   "XTAL2": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VDD: "power_in", "A0/~{CS}": "input", "A1/SI": "input", SO: "output", "SCL/SCLK": "input", SDA: "bidirectional", "~{IRQ}": "open_collector", "I2C/~{SPI}": "input", VSS: "power_in", "~{RTS}": "output", "~{CTS}": "input", TX: "output", RX: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS740";
@@ -4119,7 +4246,8 @@ export class SC16IS750xBS extends Component.withPins({
   "RX": "24",
   "VSS_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", SO: "output", "SCL/SCLK": "input", SDA: "bidirectional", "~{IRQ}": "open_collector", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", VSS_16: "power_in", "GPIO4/~{DSR}": "bidirectional", "GPIO5/~{DTR}": "bidirectional", "GPIO6/~{CD}": "bidirectional", "GPIO7/~{RI}": "bidirectional", "~{RTS}": "output", "~{CTS}": "input", TX: "output", RX: "input", VSS_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS750xBS";
@@ -4161,7 +4289,8 @@ export class SC16IS750xPW extends Component.withPins({
   "GPIO7/~{RI}": "23",
   "~{RTS}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CTS}": "input", TX: "output", RX: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", SO: "output", "SCL/SCLK": "input", SDA: "bidirectional", "~{IRQ}": "open_collector", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", VSS: "power_in", "GPIO4/~{DSR}": "bidirectional", "GPIO5/~{DTR}": "bidirectional", "GPIO6/~{CD}": "bidirectional", "GPIO7/~{RI}": "bidirectional", "~{RTS}": "output", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS750xPW";
@@ -4212,7 +4341,8 @@ export class SC16IS752IBS extends Component.withPins({
   "TXA": "32",
   "VSS_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RXA: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD_5: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", "n.c./SO": "output", "SCL/SCLK": "input", "SDA/VSS": "bidirectional", VSS_12: "power_in", VDD_13: "passive", "~{IRQ}": "open_collector", "~{CTSB}": "input", "~{RTSB}": "output", "GPIO0/~{DSRB}": "bidirectional", "GPIO1/~{DTRB}": "bidirectional", "GPIO2/~{CDB}": "bidirectional", "GPIO3/~{RIB}": "bidirectional", VSS_21: "passive", TXB: "output", RXB: "input", "GPIO4/~{DSRA}": "bidirectional", "GPIO5/~{DTRA}": "bidirectional", "GPIO6/~{CDA}": "bidirectional", "GPIO7/~{RIA}": "bidirectional", VDD_28: "passive", VSS_29: "passive", "~{RTSA}": "output", "~{CTSA}": "input", TXA: "output", VSS_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS752IBS";
@@ -4258,7 +4388,8 @@ export class SC16IS752IPW extends Component.withPins({
   "GPIO6/~{CDA}": "27",
   "GPIO7/~{RIA}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RTSA}": "output", "~{CTSA}": "input", TXA: "output", RXA: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", "n.c./SO": "output", "SCL/SCLK": "input", "SDA/VSS": "bidirectional", "~{IRQ}": "open_collector", "~{CTSB}": "input", "~{RTSB}": "output", "GPIO0/~{DSRB}": "bidirectional", "GPIO1/~{DTRB}": "bidirectional", "GPIO2/~{CDB}": "bidirectional", "GPIO3/~{RIB}": "bidirectional", VSS: "power_in", TXB: "output", RXB: "input", "GPIO4/~{DSRA}": "bidirectional", "GPIO5/~{DTRA}": "bidirectional", "GPIO6/~{CDA}": "bidirectional", "GPIO7/~{RIA}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS752IPW";
@@ -4301,7 +4432,8 @@ export class SC16IS760xBS extends Component.withPins({
   "RX": "24",
   "VSS_25": "25",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", SO: "output", "SCL/SCLK": "input", SDA: "bidirectional", "~{IRQ}": "open_collector", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", VSS_16: "power_in", "GPIO4/~{DSR}": "bidirectional", "GPIO5/~{DTR}": "bidirectional", "GPIO6/~{CD}": "bidirectional", "GPIO7/~{RI}": "bidirectional", "~{RTS}": "output", "~{CTS}": "input", TX: "output", RX: "input", VSS_25: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS760xBS";
@@ -4343,7 +4475,8 @@ export class SC16IS760xPW extends Component.withPins({
   "GPIO7/~{RI}": "23",
   "~{RTS}": "24",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{CTS}": "input", TX: "output", RX: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", SO: "output", "SCL/SCLK": "input", SDA: "bidirectional", "~{IRQ}": "open_collector", GPIO0: "bidirectional", GPIO1: "bidirectional", GPIO2: "bidirectional", GPIO3: "bidirectional", VSS: "power_in", "GPIO4/~{DSR}": "bidirectional", "GPIO5/~{DTR}": "bidirectional", "GPIO6/~{CD}": "bidirectional", "GPIO7/~{RI}": "bidirectional", "~{RTS}": "output", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS760xPW";
@@ -4394,7 +4527,8 @@ export class SC16IS762IBS extends Component.withPins({
   "TXA": "32",
   "VSS_33": "33",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RXA: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD_5: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", "n.c./SO": "output", "SCL/SCLK": "input", "SDA/VSS": "bidirectional", VSS_12: "power_in", VDD_13: "passive", "~{IRQ}": "open_collector", "~{CTSB}": "input", "~{RTSB}": "output", "GPIO0/~{DSRB}": "bidirectional", "GPIO1/~{DTRB}": "bidirectional", "GPIO2/~{CDB}": "bidirectional", "GPIO3/~{RIB}": "bidirectional", VSS_21: "passive", TXB: "output", RXB: "input", "GPIO4/~{DSRA}": "bidirectional", "GPIO5/~{DTRA}": "bidirectional", "GPIO6/~{CDA}": "bidirectional", "GPIO7/~{RIA}": "bidirectional", VDD_28: "passive", VSS_29: "passive", "~{RTSA}": "output", "~{CTSA}": "input", TXA: "output", VSS_33: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS762IBS";
@@ -4440,7 +4574,8 @@ export class SC16IS762IPW extends Component.withPins({
   "GPIO6/~{CDA}": "27",
   "GPIO7/~{RIA}": "28",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "~{RTSA}": "output", "~{CTSA}": "input", TXA: "output", RXA: "input", "~{RESET}": "input", XTAL1: "input", XTAL2: "output", VDD: "power_in", "I2C/~{SPI}": "input", "A0/~{CS}": "input", "A1/SI": "input", "n.c./SO": "output", "SCL/SCLK": "input", "SDA/VSS": "bidirectional", "~{IRQ}": "open_collector", "~{CTSB}": "input", "~{RTSB}": "output", "GPIO0/~{DSRB}": "bidirectional", "GPIO1/~{DTRB}": "bidirectional", "GPIO2/~{CDB}": "bidirectional", "GPIO3/~{RIB}": "bidirectional", VSS: "power_in", TXB: "output", RXB: "input", "GPIO4/~{DSRA}": "bidirectional", "GPIO5/~{DTRA}": "bidirectional", "GPIO6/~{CDA}": "bidirectional", "GPIO7/~{RIA}": "bidirectional", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SC16IS762IPW";
@@ -4466,7 +4601,8 @@ export class SN65HVD11HD extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65HVD11HD";
@@ -4492,7 +4628,8 @@ export class SN65HVD1780 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65HVD1780";
@@ -4518,7 +4655,8 @@ export class SN65HVD1781 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65HVD1781";
@@ -4544,7 +4682,8 @@ export class SN65HVD1782 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65HVD1782";
@@ -4570,7 +4709,8 @@ export class SN75LBC176D extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN75LBC176D";
@@ -4596,7 +4736,8 @@ export class SN65LBC176D extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65LBC176D";
@@ -4622,7 +4763,8 @@ export class SN75LBC176P extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN75LBC176P";
@@ -4648,7 +4790,8 @@ export class SN65LBC176P extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65LBC176P";
@@ -4674,7 +4817,8 @@ export class SN65LBC176QD extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65LBC176QD";
@@ -4700,7 +4844,8 @@ export class SN65LBC176QDR extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN65LBC176QDR";
@@ -4726,7 +4871,8 @@ export class SN75176AD extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN75176AD";
@@ -4752,7 +4898,8 @@ export class SN75176AP extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SN75176AP";
@@ -4778,7 +4925,8 @@ export class SNJ55LBC176JG extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", "~{RE}": "input", DE: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SNJ55LBC176JG";
@@ -4804,7 +4952,8 @@ export class SP3481CP extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3481CP";
@@ -4830,7 +4979,8 @@ export class SP3481EN extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3481EN";
@@ -4856,7 +5006,8 @@ export class SP3481EP extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3481EP";
@@ -4882,7 +5033,8 @@ export class SP3485CN extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3485CN";
@@ -4908,7 +5060,8 @@ export class SP3485CP extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3485CP";
@@ -4934,7 +5087,8 @@ export class SP3485EN extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3485EN";
@@ -4960,7 +5114,8 @@ export class SP3485EP extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SP3485EP";
@@ -4986,7 +5141,8 @@ export class SSP3085 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:SSP3085";
@@ -5020,7 +5176,8 @@ export class ST202ExD extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ST202ExD";
@@ -5054,7 +5211,8 @@ export class ST232ExD extends Component.withPins({
   "GND": "15",
   "VCC": "16",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { "C1+": "passive", "VS+": "power_out", "C1-": "passive", "C2+": "passive", "C2-": "passive", "VS-": "power_out", T2OUT: "output", R2IN: "input", R2OUT: "output", T2IN: "input", T1IN: "input", R1OUT: "output", R1IN: "input", T1OUT: "output", GND: "power_in", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ST232ExD";
@@ -5080,7 +5238,8 @@ export class ST485E extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:ST485E";
@@ -5109,7 +5268,8 @@ export class STR485 extends Component.withPins({
   "VCC": "10",
   "GND_11": "11",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VL: "power_in", R: "output", DE: "input", "~{RE}": "input", D: "input", GND_6: "power_in", SLR: "input", A: "bidirectional", B: "bidirectional", VCC: "power_in", GND_11: "passive", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:STR485";
@@ -5135,7 +5295,8 @@ export class THVD1400D extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD1400D";
@@ -5161,7 +5322,8 @@ export class THVD1420D extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD1420D";
@@ -5187,7 +5349,8 @@ export class THVD1450D extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD1450D";
@@ -5213,7 +5376,8 @@ export class THVD1450DR extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD1450DR";
@@ -5239,7 +5403,8 @@ export class THVD1451D extends Component.withPins({
   "B": "7",
   "A": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { VCC: "power_in", R: "output", D: "input", GND: "power_in", Y: "output", Z: "output", B: "input", A: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD1451D";
@@ -5265,7 +5430,8 @@ export class THVD1500 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { RO: "output", "~{RE}": "input", DE: "input", DI: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD1500";
@@ -5291,7 +5457,8 @@ export class THVD8000 extends Component.withPins({
   "B": "7",
   "VCC": "8",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { R: "output", MODE: "input", F_SET: "input", D: "input", GND: "power_in", A: "bidirectional", B: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:THVD8000";
@@ -5347,7 +5514,8 @@ export class Z8530 extends Component.withPins({
   "D2": "39",
   "D0": "40",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { D1: "input", D3: "input", D5: "input", D7: "input", "~{INT}": "open_collector", IEO: "output", IEI: "input", "~{INTACK}": "input", VCC: "power_in", "~{W/REQA}": "output", "~{SYNCA}": "bidirectional", "~{RTXCA}": "input", RXDA: "input", "~{TRXCA}": "bidirectional", TXDA: "output", "~{DTR/REQA}": "output", "~{RTSA}": "output", "~{CTSA}": "input", "~{DCDA}": "input", PCLK: "input", "~{DCDB}": "input", "~{CTSB}": "input", "~{RTSB}": "output", "~{DTR/REQB}": "output", TXDB: "output", "~{TRXCB}": "bidirectional", RXDB: "input", "~{RTXCB}": "input", "~{SYNCB}": "bidirectional", "~{W/REQB}": "output", GND: "power_in", "D/~{C}": "input", "~{CE}": "input", "A/~{B}": "input", "~{WR}": "input", "~{RD}": "input", D6: "input", D4: "input", D2: "input", D0: "input", ...opts.pinTypes } });
   }
   override schema = "Interface_UART:Z8530";

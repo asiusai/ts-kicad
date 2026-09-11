@@ -15,7 +15,8 @@ export class TIC226 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:TIC226";
@@ -36,7 +37,8 @@ export class BT136_500 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT136-500";
@@ -57,7 +59,8 @@ export class BT136_600 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT136-600";
@@ -78,7 +81,8 @@ export class BT136_800 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT136-800";
@@ -99,7 +103,8 @@ export class BT138_600 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT138-600";
@@ -120,7 +125,8 @@ export class BT138_800 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT138-800";
@@ -141,7 +147,8 @@ export class BT139_600 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT139-600";
@@ -162,7 +169,8 @@ export class BT169B extends Component.withPins({
   "G": "2",
   "K": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", G: "input", K: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT169B";
@@ -183,7 +191,8 @@ export class BT169D extends Component.withPins({
   "G": "2",
   "K": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", G: "input", K: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT169D";
@@ -204,7 +213,8 @@ export class BT169G extends Component.withPins({
   "G": "2",
   "K": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A: "passive", G: "input", K: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BT169G";
@@ -225,7 +235,8 @@ export class BTA16_600B extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-600B";
@@ -246,7 +257,8 @@ export class BTA16_600BW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-600BW";
@@ -267,7 +279,8 @@ export class BTA16_600C extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-600C";
@@ -288,7 +301,8 @@ export class BTA16_600CW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-600CW";
@@ -309,7 +323,8 @@ export class BTA16_600SW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-600SW";
@@ -330,7 +345,8 @@ export class BTA16_800B extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-800B";
@@ -351,7 +367,8 @@ export class BTA16_800BW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-800BW";
@@ -372,7 +389,8 @@ export class BTA16_800C extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-800C";
@@ -393,7 +411,8 @@ export class BTA16_800CW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-800CW";
@@ -414,7 +433,8 @@ export class BTA16_800SW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTA16-800SW";
@@ -435,7 +455,8 @@ export class BTB16_600B extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-600B";
@@ -456,7 +477,8 @@ export class BTB16_600BW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-600BW";
@@ -477,7 +499,8 @@ export class BTB16_600C extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-600C";
@@ -498,7 +521,8 @@ export class BTB16_600CW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-600CW";
@@ -519,7 +543,8 @@ export class BTB16_600SW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-600SW";
@@ -540,7 +565,8 @@ export class BTB16_800B extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-800B";
@@ -561,7 +587,8 @@ export class BTB16_800BW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-800BW";
@@ -582,7 +609,8 @@ export class BTB16_800C extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-800C";
@@ -603,7 +631,8 @@ export class BTB16_800CW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-800CW";
@@ -624,7 +653,8 @@ export class BTB16_800SW extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:BTB16-800SW";
@@ -645,7 +675,8 @@ export class CT401T extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:CT401T";
@@ -663,7 +694,8 @@ export class Generic_Triac_A1A2G extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Generic_Triac_A1A2G";
@@ -681,7 +713,8 @@ export class Generic_Triac_A1GA2 extends Component.withPins({
   "G": "2",
   "A2": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", G: "input", A2: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Generic_Triac_A1GA2";
@@ -699,7 +732,8 @@ export class Generic_Triac_A2A1G extends Component.withPins({
   "A1": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2: "passive", A1: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Generic_Triac_A2A1G";
@@ -717,7 +751,8 @@ export class Generic_Triac_A2GA1 extends Component.withPins({
   "G": "2",
   "A1": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A2: "passive", G: "input", A1: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Generic_Triac_A2GA1";
@@ -735,7 +770,8 @@ export class Generic_Triac_GA1A2 extends Component.withPins({
   "A1": "2",
   "A2": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", A1: "passive", A2: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Generic_Triac_GA1A2";
@@ -753,7 +789,8 @@ export class Generic_Triac_GA2A1 extends Component.withPins({
   "A2": "2",
   "A1": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { G: "input", A2: "passive", A1: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Generic_Triac_GA2A1";
@@ -774,7 +811,8 @@ export class TIC106 extends Component.withPins({
   "A": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:TIC106";
@@ -795,7 +833,8 @@ export class TIC116 extends Component.withPins({
   "A": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:TIC116";
@@ -816,7 +855,8 @@ export class TIC126 extends Component.withPins({
   "A": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:TIC126";
@@ -837,7 +877,8 @@ export class TIC206 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:TIC206";
@@ -858,7 +899,8 @@ export class TIC216 extends Component.withPins({
   "A2": "2",
   "G": "3",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:TIC216";
@@ -880,7 +922,8 @@ export class X0202MN extends Component.withPins({
   "G": "3",
   "A_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A_2: "passive", G: "input", A_4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:X0202MN";
@@ -902,7 +945,8 @@ export class X0202NN extends Component.withPins({
   "G": "3",
   "A_4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { K: "passive", A_2: "passive", G: "input", A_4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:X0202NN";
@@ -924,7 +968,8 @@ export class Z0103MN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0103MN";
@@ -946,7 +991,8 @@ export class Z0103NN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0103NN";
@@ -968,7 +1014,8 @@ export class Z0107MN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0107MN";
@@ -990,7 +1037,8 @@ export class Z0107NN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0107NN";
@@ -1012,7 +1060,8 @@ export class Z0109MN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0109MN";
@@ -1034,7 +1083,8 @@ export class Z0109NN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0109NN";
@@ -1056,7 +1106,8 @@ export class Z0110MN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0110MN";
@@ -1078,7 +1129,8 @@ export class Z0110NN extends Component.withPins({
   "G": "3",
   "A4": "4",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { A1: "passive", A2: "passive", G: "input", A4: "passive", ...opts.pinTypes } });
   }
   override schema = "Triac_Thyristor:Z0110NN";

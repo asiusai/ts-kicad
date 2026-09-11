@@ -32,7 +32,8 @@ export class PY32F002AF15P extends Component.withPins({
   "PB1": "19",
   "VCC": "20",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { GND: "power_in", "PA13/SWD": "bidirectional", "PA14/SWC": "bidirectional", PB3: "bidirectional", "PB6/PF4/BOOT0": "bidirectional", PA6: "bidirectional", PA5: "bidirectional", "PF0/OSCIN": "bidirectional", "PF1/OSCOUT": "bidirectional", "PF2/~{RST}": "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", PB2: "bidirectional", PB1: "bidirectional", VCC: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Puya:PY32F002AF15P";
@@ -67,7 +68,8 @@ export class PY32F002AW15U extends Component.withPins({
   "PA8": "16",
   "VSS": "17",
 }) {
-  constructor(opts: ConstructorParameters<typeof Component>[0] = {}) {
+  constructor(refOrOpts: string | ConstructorParameters<typeof Component>[0] = {}, options: ConstructorParameters<typeof Component>[0] = {}) {
+    const opts = typeof refOrOpts === 'string' ? { ...options, ref: refOrOpts } : refOrOpts;
     super({ ...opts, pinTypes: { PB1: "bidirectional", PA12: "bidirectional", "PA13/SWD": "bidirectional", "PA14/SWC": "bidirectional", "PF2/~{RST}": "bidirectional", PA0: "bidirectional", PA1: "bidirectional", PA2: "bidirectional", PA3: "bidirectional", PA4: "bidirectional", PA5: "bidirectional", PA6: "bidirectional", PA7: "bidirectional", PB0: "bidirectional", VCC: "power_in", PA8: "bidirectional", VSS: "power_in", ...opts.pinTypes } });
   }
   override schema = "MCU_Puya:PY32F002AW15U";
