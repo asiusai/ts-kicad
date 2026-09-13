@@ -3,14 +3,78 @@ import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, writeFil
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { child, children, descendants, parse, val } from './kicad_sexpr'
+import { readNetlist } from './kicad_io'
+import { boardConnectivity } from './checks'
 
-async function sync(directory: string) {
-  const process = Bun.spawn([Bun.which('bun')!, join(import.meta.dir, '../cli.ts'), 'sync', directory], { stdout: 'pipe', stderr: 'pipe' })
-  const [stdout, stderr, status] = await Promise.all([new Response(process.stdout).text(), new Response(process.stderr).text(), process.exited])
+async function sync(directory: string, env = process.env) {
+  const child = Bun.spawn([Bun.which('bun')!, join(import.meta.dir, '../cli.ts'), 'sync', directory], { stdout: 'pipe', stderr: 'pipe', env })
+  const [stdout, stderr, status] = await Promise.all([new Response(child.stdout).text(), new Response(child.stderr).text(), child.exited])
   if (status) throw new Error(stdout + stderr)
+  return { stdout, stderr }
 }
 
 const available = !!Bun.which('kicad-cli')
+test.skipIf(!available)('sync preserves power banks and cross-sheet nets and reports stale PCB assignments', async () => {
+  const directory = mkdtempSync(join(tmpdir(), 'ts-kicad-power-banks-'))
+  try {
+    mkdirSync(join(directory, 'src'))
+    mkdirSync(join(directory, 'node_modules'))
+    symlinkSync(join(import.meta.dir, '..'), join(directory, 'node_modules/ts-kicad'), 'dir')
+    const name = directory.split('/').at(-1)!, schematic = join(directory, name + '.kicad_sch')
+    const entry = join(directory, 'src/index.ts'), board = join(directory, name + '.kicad_pcb')
+    writeFileSync(entry, `
+      import { Project, sheet, global, componentPins } from 'ts-kicad'
+      import { c, r } from 'ts-kicad/helpers'
+      import { GND, P3V3, PWR_FLAG } from 'ts-kicad/power'
+      import { LSM6DS3 } from 'ts-kicad/lib/symbols/Sensor_Motion'
+      import { C_0603_1608Metric } from 'ts-kicad/lib/footprints/Capacitor_SMD'
+      sheet('IMU')
+      const caps = Array.from({length: 12}, (_, i) => c('C' + (i + 1), {value:'100nF', footprint:C_0603_1608Metric}).wire({P1:GND}))
+      const imu = new LSM6DS3('U1', {value:'LSM6DS3'}).wire({
+        VDD: [P3V3, ...caps.slice(0,6).map(c => c.P2)],
+        VDDIO: [P3V3, ...caps.slice(6).map(c => c.P2)],
+        GND_6:GND, GND_7:GND, 'SDO/SA0':GND, SDX:GND,
+        SCL:global(), SDA:'DATA', CS:P3V3,
+      })
+      for (const [name, pin] of Object.entries(componentPins(imu)))
+        if (!pin.connections.size) imu.wire({[name]:null})
+      new PWR_FLAG('#FLG01').wire({P1:P3V3})
+      new PWR_FLAG('#FLG02').wire({P1:GND})
+      sheet('Connector')
+      const bridge = r('R1', {value:'100k'}).wire({P1:imu.SCL, P2:GND})
+      const separate = r('R2', {value:'100k'}).wire({P1:'DATA', P2:GND})
+      export default new Project({entries:[imu, bridge, separate]})
+    `)
+    await sync(directory)
+    const first = readNetlist(schematic)
+    const netAt = (ref: string, pin: string) => first.all('nets/net').find(n => n.all('node').some(p => p.get('ref') === ref && p.get('pin') === pin))!
+    for (let i = 1; i <= 12; i++) {
+      expect(netAt('C' + i, '1').get('name')).toBe('GND')
+      expect(netAt('C' + i, '2').get('name')).toBe('+3.3V')
+    }
+    expect(netAt('U1', '13')).toBe(netAt('R1', '1'))
+    expect(netAt('U1', '14')).not.toBe(netAt('R2', '1'))
+    expect(first.all('nets/net').flatMap(n => n.all('node')).filter(p => p.get('pintype').includes('no_connect'))).toHaveLength(5)
+
+    // Model the stale, unrouted PCB that previously went unnoticed by sync.
+    const stale = '(kicad_pcb (footprint "Capacitor_SMD:C_0603_1608Metric" (property "Reference" "C1") (pad "1" smd rect (net "unconnected-(C1-Pad1)")) (pad "2" smd rect (net "+3.3V"))))'
+    writeFileSync(board, stale)
+    // Reusing a generated project must resolve KiCad's built-in library variables
+    // even when those variables are not exported in the shell environment.
+    writeFileSync(entry, readFileSync(entry, 'utf8').replace('entries:[imu, bridge, separate]', `project:'../${name}.kicad_pro', entries:[imu, bridge, separate]`))
+    const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !/^KICAD\d*_FOOTPRINT_DIR$/.test(key)))
+    const repeated = await sync(directory, env)
+    expect(repeated.stdout).toContain('PASS: exported KiCad matches code')
+    expect(repeated.stderr).toContain('C1.1: unconnected-(C1-Pad1) -> GND')
+    expect(repeated.stderr).toContain('Update PCB from Schematic (F8)')
+    expect(readFileSync(board, 'utf8')).toBe(stale)
+    const second = readNetlist(schematic)
+    const identity = (tree: typeof first) => tree.all('components/comp').map(c => [c.get('ref'), c.value('tstamps')]).sort()
+    expect(identity(second)).toEqual(identity(first))
+    expect(boardConnectivity(parse(stale), second)).toContain('C1.1: unconnected-(C1-Pad1) -> GND')
+  } finally { rmSync(directory, { recursive: true, force: true }) }
+}, 30000)
+
 test.skipIf(!available)('sync creates KiCad files without touching libraries or the PCB', async () => {
   const directory = mkdtempSync(join(tmpdir(), 'ts-kicad-init-'))
   try {

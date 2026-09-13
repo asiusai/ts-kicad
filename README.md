@@ -10,6 +10,14 @@ TypeScript schematics, BOMs and KiCad settings. Requires Bun and KiCad 10 with i
 Generated labels for unnamed nets use component and pin names, such as
 `Net-(Q2-G)` or `Net-(R10-Pad2)`. Explicit signal and power names remain unchanged.
 
+Sync verifies the generated schematic through KiCad's native netlist and compares
+any existing PCB's saved pad nets with that netlist. It reports stale assignments,
+missing footprints and missing pads without changing PCB placement or routing.
+After an external sync, reload the schematic in KiCad before using Update PCB
+from Schematic (F8); an already-open editor may still hold the previous circuit.
+Project settings edited in KiCad are preserved unless explicitly set in the
+TypeScript project.
+
 Components accept a reference first: `r("R27", { value: "100R" })` or
 `new R("R27", { value: "100R" })`. Options are optional, so `new PWR_FLAG("#FLG01")`
 also works. The object-only form `r({ ref: "R27", value: "100R" })` remains supported.

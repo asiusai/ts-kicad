@@ -18,8 +18,8 @@ export function uuid(key: string) {
 const read = (path: string) => parse(readFileSync(path, 'utf8'))
 const write = (path: string, tree: Node) => { mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, dump(tree)+'\n') }
 
-function libraryPath(path: string, projectDirectory: string) {
-  return path.replace(/\$\{([^}]+)\}/g, (_, name) => name==='KIPRJMOD' ? projectDirectory : process.env[name] ?? '${'+name+'}')
+function libraryPath(path: string, projectDirectory: string, footprintRoot?: string) {
+  return path.replace(/\$\{([^}]+)\}/g, (_, name) => name==='KIPRJMOD' ? projectDirectory : process.env[name] ?? (/^KICAD\d*_FOOTPRINT_DIR$/.test(name) ? footprintRoot : undefined) ?? '${'+name+'}')
 }
 
 function writeLibraryTable(path:string,tree:Node) {
@@ -58,15 +58,15 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
     symbols.push(N('lib',N('name',library),N('type','KiCad'),N('uri',uri),N('options',''),N('descr','Generated project symbols')))
   }
   writeLibraryTable(join(directory,'sym-lib-table'), symbols)
+  const footprintRoots = [...Object.entries(process.env).filter(([key])=>/^KICAD\d*_FOOTPRINT_DIR$/.test(key)).map(([,v])=>v!),'/usr/share/kicad/footprints','/usr/local/share/kicad/footprints']
   const footprintPaths = new Map<string,string>()
   for (const path of options.footprints??[]) footprintPaths.set(basename(path,'.pretty'),resolve(path))
   if (options.project) {
     const table = join(dirname(options.project),'fp-lib-table')
     if (existsSync(table)) for (const lib of children(read(table),'lib')) {
-      const name=val(child(lib,'name')[1]);if(!footprintPaths.has(name))footprintPaths.set(name,libraryPath(val(child(lib,'uri')[1]),dirname(resolve(options.project))))
+      const name=val(child(lib,'name')[1]);if(!footprintPaths.has(name))footprintPaths.set(name,libraryPath(val(child(lib,'uri')[1]),dirname(resolve(options.project)),footprintRoots.find(existsSync)))
     }
   }
-  const footprintRoots = [...Object.entries(process.env).filter(([key])=>/^KICAD\d*_FOOTPRINT_DIR$/.test(key)).map(([,v])=>v!),'/usr/share/kicad/footprints','/usr/local/share/kicad/footprints']
   const pads = new Map<string,string[]>(), directLibraries=new Map<string,string>()
   for (const item of items) {
     if (!item.footprint || Object.hasOwn(item.properties,'exclude_from_board') || item.ref?.startsWith('#')) continue
@@ -95,9 +95,9 @@ export function prepareProject(output: string, items: ModelPart[], libraries: Ma
   {
     const current = JSON.parse(readFileSync(projectPath,'utf8'))
     const defaults = options.project ? mergeSettings(defaultSettings,JSON.parse(readFileSync(options.project,'utf8'))) : defaultSettings
-    const settings=mergeSettings(defaults,options.settings??{})
+    const settings=mergeSettings(mergeSettings(defaults,current),options.settings??{})
     Object.assign(current, settings)
-    current.meta = {...current.meta, filename:basename(projectPath), version:1}
+    current.meta = {version:1, ...current.meta, filename:basename(projectPath)}
     writeFileSync(projectPath,JSON.stringify(current,null,2)+'\n')
   }
 }

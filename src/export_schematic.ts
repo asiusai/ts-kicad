@@ -11,6 +11,7 @@ import { atom as A, node as N, num, child, children, descendants, remove, clone,
 import { inspect, readNetlist, type ModelPart, type ModelPin } from './kicad_io'
 import { loadSymbols, pinGeometry, snap } from './kicad_geometry'
 import { bounds, layoutGroup, packGroups, type Card, type LayoutMode } from './schematic_layout'
+import { checkBoardConnectivity } from './checks'
 
 function uid(key:string){const hex=createHash('sha1').update('ts-kicad/'+key).digest('hex').slice(0,32).split('');hex[12]='5';hex[16]=((parseInt(hex[16],16)&3)|8).toString(16);const s=hex.join('');return `${s.slice(0,8)}-${s.slice(8,12)}-${s.slice(12,16)}-${s.slice(16,20)}-${s.slice(20)}`}
 const at=(x:number,y:number,angle=0)=>N('at',num(x),num(y),num(angle))
@@ -55,6 +56,7 @@ export function verifyExport(output:string,items:ModelPart[],refs:Map<string,str
   }
   assert.deepEqual([...pins.keys()].sort(),[...expected].sort())
   console.log(`PASS: exported KiCad matches code: ${items.length} components, ${expected.size} pins, ${tree.all('nets/net').length} nets.`)
+  return tree
 }
 export async function exportSchematic(entry:string|string[],output:string,sources:string[],options:ProjectOptions & {layout?:LayoutMode}={}){
   options.project ??= sources.filter(path=>path.endsWith('.kicad_sch')).map(path=>path.replace(/\.kicad_sch$/,'.kicad_pro')).find(existsSync)
@@ -167,7 +169,8 @@ export async function exportSchematic(entry:string|string[],output:string,source
   writeFileSync(output,dump(root)+'\n')
   console.log(`Exported ${items.length} components to ${output}${outputs.length?` with ${outputs.length} subsheets`:''}`)
   prepareProject(output,items,libraries,options)
-  verifyExport(output,items,refs)
+  const netlist=verifyExport(output,items,refs)
+  checkBoardConnectivity(output.replace(/\.kicad_sch$/,'.kicad_pcb'),netlist)
   for(const filename of readdirSync(dirname(output))){
     if(!filename.startsWith(project+'--')||!filename.endsWith('.kicad_sch')||filenames.has(filename))continue
     const path=join(dirname(output),filename),tree=parse(readFileSync(path,'utf8'))
