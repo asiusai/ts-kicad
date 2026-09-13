@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, rmSync } from 'node:fs'
-import { run, type Xml } from './kicad_io'
+import { run, withTemp, type Xml } from './kicad_io'
+import { join } from 'node:path'
 import { child, children, parse, val, type Node } from './kicad_sexpr'
 
 /** Compare saved pad assignments, independently of whether the PCB is routed. */
@@ -24,7 +25,9 @@ export function boardConnectivity(board: Node, netlist: Xml): string[] {
       // Unnumbered mechanical pads do not represent electrical pins.
       if (expected === undefined) continue
       const actual = val(child(pad, 'net').at(-1))
-      if (actual !== expected) findings.push(`${key}: ${actual || '(no net)'} -> ${expected}`)
+      // XML netlists expose display names; PCB files retain KiCad's slash escape.
+      // Native parity below distinguishes literal slashes from sheet separators.
+      if (actual.replaceAll('{slash}', '/') !== expected) findings.push(`${key}: ${actual || '(no net)'} -> ${expected}`)
     }
     for (const key of nets.keys())
       if (key.startsWith(ref + '.') && !pads.has(key.slice(ref.length + 1))) findings.push(key + ': pad missing from PCB')
@@ -37,7 +40,15 @@ export function checkBoardConnectivity(path: string, netlist: Xml) {
   if (!existsSync(path)) return
   try {
     const findings = boardConnectivity(parse(readFileSync(path, 'utf8')), netlist)
-    if (!findings.length) { console.log('PCB connectivity matches the exported schematic.'); return }
+    if (!findings.length) {
+      const parity = withTemp(dir => {
+        const report = join(dir, 'parity.json')
+        run(['kicad-cli', 'pcb', 'drc', path, '--schematic-parity', '--format', 'json', '--output', report])
+        return (JSON.parse(readFileSync(report, 'utf8')) as { schematic_parity: Violation[] }).schematic_parity
+      })
+      for (const issue of parity) findings.push(issue.description + (issue.items?.length ? ': ' + issue.items.map(i => i.description).join('; ') : ''))
+      if (!findings.length) { console.log('PCB connectivity and native schematic parity match the exported schematic.'); return }
+    }
     for (const finding of findings) console.error('PCB connectivity: ' + finding)
     console.error(`PCB connectivity: ${findings.length} mismatches. Reload the generated schematic in KiCad, then Update PCB from Schematic (F8). Sync does not update the PCB.`)
   } catch (error) {
