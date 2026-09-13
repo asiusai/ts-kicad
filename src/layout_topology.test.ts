@@ -64,3 +64,22 @@ test.skipIf(!available)('every suppressed pin occurrence has a native wire and e
     }
   for (const label of layout.labels) expect(layout.wires.some((w) => w.net === label.text && onSegment(label, w))).toBe(true)
 })
+
+test.skipIf(!available)('power-label extensions retain explicit junctions at every wire branch', () => {
+  const cards = circuit(), capacitor = cards[1]
+  for (let i = 3; i <= 12; i++) cards.push({ ...capacitor,
+    item: { ...capacitor.item, name: 'CAP' + i }, template: clone(capacitor.template),
+    geometry: capacitor.geometry.map(p => ({ ...p })), box: { ...capacitor.box },
+  })
+  const layout = layoutTopology('IMU', cards)
+  const key = (p: { x: number; y: number }) => `${p.x.toFixed(4)},${p.y.toFixed(4)}`
+  const neighbors = new Map<string, Set<string>>()
+  for (const wire of layout.wires) for (const [a, b] of [[wire.a, wire.b], [wire.b, wire.a]]) {
+    const at = key(a), exits = neighbors.get(at) ?? new Set<string>()
+    exits.add(key(b)); neighbors.set(at, exits)
+  }
+  const junctions = new Set(layout.junctions.map(key))
+  const branches = [...neighbors].filter(([, exits]) => exits.size >= 3)
+  expect(branches.length).toBeGreaterThan(0)
+  for (const [point] of branches) expect(junctions.has(point)).toBe(true)
+})

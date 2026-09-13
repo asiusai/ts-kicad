@@ -163,7 +163,18 @@ export function routeSchematicGroup(group: LayoutGroup) {
       }
       group.labels.push({ ...point, text: start.net, angle: power ? (ground ? 270 : 90) : placement ? { 'x+': 0, 'x-': 180, 'y+': 90, 'y-': 270 }[placement.orientation] : 180 })
     }
-    for (const node of island) if (new Set(node.neighbors).size > 2) group.junctions.push(node.point)
+  }
+  // Power-label extensions can turn a two-wire corner into a T junction.
+  // Use the final wires, not the earlier island graph: Eeschema's cleanup
+  // merges collinear wires without a junction, disconnecting their branches.
+  const connections = new Map<string, { point: Point; exits: Set<string> }>()
+  for (const w of group.wires) for (const [a, b] of [[w.a, w.b], [w.b, w.a]]) {
+    const id = w.net + ':' + key(a), node = connections.get(id) ?? { point: a, exits: new Set<string>() }
+    node.exits.add(key(b)); connections.set(id, node)
+  }
+  for (const [id, node] of connections) {
+    const hasPin = [...covered].some(p => p.net + ':' + key(p.point) === id)
+    if (node.exits.size + Number(hasPin) > 2) group.junctions.push(node.point)
   }
   for (const p of covered) {
     if ([...pins.values()].filter((other) => other.card === p.card && other.number === p.number).every((other) => covered.has(other))) {

@@ -1,5 +1,6 @@
 import { expect, test } from 'bun:test'
 import { prepareProject } from './project_files'
+import type { JsonValue } from './index'
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -25,4 +26,30 @@ test('project settings are recreated and updated without a template', () => {
     expect(updated.board.design_settings.defaults.silk_line_width).toBe(0.12)
     expect(updated.board.design_settings.rules.min_clearance).toBe(0.2)
   } finally {rmSync(directory,{recursive:true,force:true})}
+})
+
+test('PCB-only Default netclass overrides retain valid schematic widths', () => {
+  const directory = mkdtempSync(join(tmpdir(), 'ts-kicad-netclass-'))
+  try {
+    const output = join(directory, 'board.kicad_sch'), project = join(directory, 'board.kicad_pro')
+    const settings: Record<string, JsonValue> = { net_settings: { classes: [
+      { name: 'Default', clearance: 0.1, track_width: 0.15 },
+      { name: 'Power', track_width: 0.75 },
+    ] } }
+    // Also repair a previously exported, incomplete Default class.
+    writeFileSync(project, JSON.stringify(settings))
+    prepareProject(output, [], new Map(), { settings })
+    const initial = JSON.parse(readFileSync(project, 'utf8'))
+    expect(initial.net_settings.classes[0]).toMatchObject({
+      name: 'Default', clearance: 0.1, track_width: 0.15,
+      wire_width: 6, bus_width: 12, line_style: 0,
+    })
+    expect(initial.net_settings.classes[1]).toEqual({ name: 'Power', track_width: 0.75 })
+    initial.net_settings.classes[0].wire_width = 8
+    writeFileSync(project, JSON.stringify(initial))
+    prepareProject(output, [], new Map(), { settings })
+    const repeated = JSON.parse(readFileSync(project, 'utf8'))
+    expect(repeated.net_settings.classes[0].wire_width).toBe(8)
+    expect(repeated.net_settings.classes[0].bus_width).toBe(12)
+  } finally { rmSync(directory, { recursive: true, force: true }) }
 })

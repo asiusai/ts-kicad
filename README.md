@@ -19,6 +19,11 @@ from Schematic (F8); an already-open editor may still hold the previous circuit.
 Project settings edited in KiCad are preserved unless explicitly set in the
 TypeScript project.
 
+Sync keeps KiCad's complete Default netclass, including its schematic wire and
+bus widths. Partial PCB netclass settings inherit these defaults. Junction dots
+are calculated after power-label wires are added, so branch connections survive
+the schematic editor's wire cleanup as well as command-line netlist export.
+
 Components accept a reference first: `r("R27", { value: "100R" })` or
 `new R("R27", { value: "100R" })`. Options are optional, so `new PWR_FLAG("#FLG01")`
 also works. The object-only form `r({ ref: "R27", value: "100R" })` remains supported.
