@@ -19,6 +19,26 @@ from Schematic (F8); an already-open editor may still hold the previous circuit.
 Project settings edited in KiCad are preserved unless explicitly set in the
 TypeScript project.
 
+Fabrication export includes KiCad's via filling/capping/plugging/covering Gerber
+artwork alongside the Excellon drills. Specify the fill material in fabrication
+notes and select the corresponding factory process when ordering.
+An optional project-local `fabrication.md` is copied into the outputs and
+included in the Gerber ZIP so material/process notes accompany the artwork.
+
+BOM rows with an assigned JLC/LCSC part number are grouped by that number and
+population status. Different schematic value labels or footprint aliases for
+the same purchased part are listed together in one row. DNP and off-board
+variants remain separate. Parts without a supplier number group by their full
+exported fields.
+
+The JLC `pos.csv` uses millimetres and component-side rotation angles: top
+angles stay unchanged; bottom angles become `180 - KiCad angle`, normalized to
+0 through 360 degrees (exclusive). Coordinates are not mirrored for the bottom.
+This follows [Fabrication Toolkit's conversion](https://github.com/bennymeg/Fabrication-Toolkit/blob/master/plugins/process.py).
+Individual footprint zero angles can still differ from JLC's component library.
+Check pin 1, polarity and connector direction in the assembly preview; matching
+the native KiCad angles alone does not verify assembly orientation.
+
 Sync keeps KiCad's complete Default netclass, including its schematic wire and
 bus widths. Partial PCB netclass settings inherit these defaults. Junction dots
 are calculated after power-label wires are added, so branch connections survive

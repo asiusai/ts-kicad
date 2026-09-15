@@ -1,10 +1,32 @@
 import {expect,test,spyOn} from 'bun:test'
-import {bomRows,csv,parseCsv,manufacturingLayers,isFabricationFile,checkPopulation,partsFromNetlist,type Part} from './export'
+import {bomRows,csv,parseCsv,jlcPositionRows,manufacturingLayers,isFabricationFile,checkPopulation,partsFromNetlist,type Part} from './export'
 import {parse} from './kicad_sexpr'
 import {parseXml} from './kicad_io'
 const part=(ref:string,extra:Partial<Part>={}):Part=>({ref,value:'10k',props:{Footprint:'Device:R'},dnp:false,inBom:true,onBoard:true,...extra})
 test('CSV round trips commas, quotes and multiline descriptions',()=>{
   const rows=[['ref','value'],['R1,R2','10k "precision"\nmatched']];expect(parseCsv(csv(rows))).toEqual(rows)
+})
+test('JLC bottom angles use the component view without mirroring board coordinates',()=>{
+  const source=csv([
+    ['Side','Ref','PosX','PosY','Rot'],
+    ['bottom','U1','10','-20','0'],['bottom','U2','11','-21','90'],
+    ['bottom','U3','12','-22','180'],['bottom','U4','13','-23','-90'],
+    ['bottom','U5','14','-24','30'],['top','U6','15','-25','-90'],
+    ['top','U7','16','-26','30'],['top','U8','17','-27','180'],
+    ['bottom','U9','18','-28','0'],
+  ])
+  expect(jlcPositionRows(source,Array.from({length:9},(_,i)=>part('U'+(i+1),{dnp:i===8})))).toEqual([
+    ['Layer','Designator','Mid X','Mid Y','Rotation'],
+    ['B','U1','10','-20','180.000000'],['B','U2','11','-21','90.000000'],
+    ['B','U3','12','-22','0.000000'],['B','U4','13','-23','270.000000'],
+    ['B','U5','14','-24','150.000000'],['T','U6','15','-25','270.000000'],
+    ['T','U7','16','-26','30.000000'],['T','U8','17','-27','180.000000'],
+  ])
+})
+test('JLC conversion rejects unknown sides and invalid angles instead of silently placing parts',()=>{
+  const header='Ref,PosX,PosY,Rot,Side\n'
+  for(const row of ['U1,1,2,0,unknown','U1,1,2,NaN,top','U1,1,2,,bottom'])expect(()=>jlcPositionRows(header+row,[part('U1')])).toThrow('Invalid KiCad placement for U1')
+  expect(()=>jlcPositionRows('Ref,PosX,PosY,Side\nU1,1,2,top',[part('U1')])).toThrow('Incomplete KiCad position CSV header')
 })
 test('BOM counts schematic components and keeps fitted and DNP items separate',()=>{
   const rows=bomRows([part('R1'),part('R2',{dnp:true}),part('R3',{inBom:false}),part('R4'),part('J1',{value:'Connector'})])
@@ -20,6 +42,30 @@ test('BOM exports common fields without interpreting project metadata',()=>{
     ['Designator','Qty','Comment','DNP','Exclude from BOM','Exclude from Board','MFR.Part #','Manufacturer','LCSC Part #','Footprint','Datasheet'],
     ['R1,R2,R3','3','10k','','','','R-10K','Maker','C100','Device:R','https://example.com/r.pdf'],
   ])
+})
+test('BOM groups an LCSC part once across value labels and footprint aliases',()=>{
+  const resistor={'JLCPCB Part #':'C21190','MFR.Part #':'0603WAF1001T5E',Footprint:'Resistor_SMD:R_0603_1608Metric'}
+  const parts=[
+    part('R3',{value:'1k',props:resistor}),part('R37',{value:'1k 1%',props:{...resistor,'JLCPCB Part #':' c21190 '}}),
+    part('U1',{value:'TCAN3403DRBRQ1',props:{'JLCPCB Part #':'C32921356',Footprint:'C32921356:HVSON'}}),
+    part('U2',{value:'TCAN3403DRBRQ1',props:{'LCSC Part':'C32921356',Footprint:'Panda:U2'}}),
+  ]
+  const rows=bomRows(parts)
+  expect(rows).toHaveLength(3)
+  expect(rows[1]).toEqual(['R3,R37','2','1k; 1k 1%','','','','0603WAF1001T5E','','C21190','Resistor_SMD:R_0603_1608Metric',''])
+  expect(rows[2]).toEqual(['U1,U2','2','TCAN3403DRBRQ1','','','','','','C32921356','C32921356:HVSON; Panda:U2',''])
+  expect(bomRows([...parts].reverse())).toEqual(rows)
+})
+test('BOM never merges different purchased parts or population variants',()=>{
+  const props={'JLCPCB Part #':'C100',Footprint:'R_0603'}
+  const rows=bomRows([
+    part('R1',{props}),part('R2',{props:{...props,'JLCPCB Part #':'C200'}}),
+    part('R3',{props,dnp:true}),part('R4',{props,onBoard:false}),part('R5',{props,inBom:false}),
+    part('R6'),part('R7'),part('R8',{value:'1k'}),
+  ])
+  expect(rows.slice(1).map(row=>row[0])).toEqual(['R1','R2','R3','R4','R6,R7','R8'])
+  expect(rows.find(row=>row[0]==='R3')![3]).toBe('DNP')
+  expect(rows.find(row=>row[0]==='R4')![5]).toBe('Exclude from Board')
 })
 test('native XML exclusions drive the BOM and PCB population',()=>{
   const parts=partsFromNetlist(parseXml('<export><components><comp ref="R1"><value>10k</value></comp><comp ref="R2"><property name="dnp"/></comp><comp ref="R3"><property name="exclude_from_bom"/></comp></components></export>'))
@@ -52,6 +98,7 @@ test('export logs check findings and failures while still producing files', asyn
     const bin=join(directory,'bin'),calls=join(directory,'calls.jsonl'),modeFile=join(directory,'mode'),output=join(directory,'outputs')
     mkdirSync(bin)
     writeFileSync(join(directory,'board.kicad_sch'),'fixture schematic')
+    writeFileSync(join(directory,'fabrication.md'),'Epoxy-filled, copper-capped vias. Keep acoustic holes open.')
     writeFileSync(join(bin,'kicad-cli'),`#!${process.execPath}
 import {appendFileSync,writeFileSync,readFileSync,mkdirSync} from 'node:fs'
 import {join} from 'node:path'
@@ -68,7 +115,10 @@ else if(args[2]==='gerbers'){
   for(const layer of args[args.indexOf('--layers')+1].split(','))writeFileSync(join(output,'board-'+layer.replaceAll('.','_')+'.gbr'),'fixture gerber')
   writeFileSync(join(output,'board-job.gbrjob'),'{}')
 }
-else if(args[2]==='drill')writeFileSync(join(output,'board.drl'),'fixture drill')
+else if(args[2]==='drill'){
+  const gerber=args[args.indexOf('--format')+1]==='gerber'
+  for(const file of gerber?['board-PTH-drl.gbr','board-filling-front-back.gbr','board-capping-front-back.gbr']:['board.drl'])writeFileSync(join(output,file),'fixture drill')
+}
 else if(args[2]==='pos')writeFileSync(output,'Ref,PosX,PosY,Rot,Side\\nR1,1,2,90,top\\nR9,3,4,0,bottom\\n')
 else if(output)writeFileSync(output,'fixture output')
 `,{mode:0o755})
@@ -96,7 +146,11 @@ writeFileSync(process.argv[3],'fixture zip')
     expect(board.stderr).toContain('fixture schematic mismatch')
     expect(board.stderr).toContain('fixture unrouted pin')
     for(const file of ['BOM.csv','board.pdf','board-erc.json','board-drc.json','board.step','board.stl','board-gerbers.zip','pos.csv','gerbers/board-F_Cu.gbr','gerbers/board.drl'])expect(existsSync(join(output,file))).toBe(true)
-    expect(parseCsv(readFileSync(join(output,'pos.csv'),'utf8'))).toEqual([['Designator','Mid X','Mid Y','Rotation','Layer'],['R1','1','2','90','T']])
+    for(const file of ['board-filling-front-back.gbr','board-capping-front-back.gbr'])expect(existsSync(join(output,'gerbers',file))).toBe(true)
+    expect(existsSync(join(output,'gerbers','board-PTH-drl.gbr'))).toBe(false)
+    expect(existsSync(join(output,'via-treatment'))).toBe(false)
+    expect(readFileSync(join(output,'fabrication.md'),'utf8')).toContain('Keep acoustic holes open.')
+    expect(parseCsv(readFileSync(join(output,'pos.csv'),'utf8'))).toEqual([['Designator','Mid X','Mid Y','Rotation','Layer'],['R1','1','2','90.000000','T']])
     const failedChecks=await run('check-failure')
     expect(failedChecks.status).toBe(0)
     expect(failedChecks.stderr).toContain('ERC could not complete:')

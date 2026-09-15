@@ -19,6 +19,25 @@ export function parseCsv(source:string) {
   if(field||row.length){row.push(field);rows.push(row)}return rows
 }
 export type Part={ref:string;value:string;props:Record<string,string>;dnp:boolean;inBom:boolean;onBoard:boolean}
+/** Convert native KiCad placement angles to JLC's component-side view. */
+export function jlcPositionRows(source:string,parts:Part[]){
+  const [header,...rows]=parseCsv(source)
+  const indices=['Ref','PosX','PosY','Rot','Side'].map(name=>header?.indexOf(name)??-1)
+  if(indices.some(index=>index<0))throw new Error('Incomplete KiCad position CSV header')
+  const [ref,,,rotation,side]=indices,refs=new Set(parts.filter(p=>p.inBom&&p.onBoard&&!p.dnp).map(p=>p.ref))
+  const names:Record<string,string>={Ref:'Designator',PosX:'Mid X',PosY:'Mid Y',Rot:'Rotation',Side:'Layer'}
+  return [header.map(h=>names[h]??h),...rows.filter(row=>refs.has(row[ref])).map(row=>{
+    const layer=row[side]?.toLowerCase(),angle=Number(row[rotation])
+    if(!['top','bottom'].includes(layer)||!row[rotation]?.trim()||!Number.isFinite(angle))throw new Error('Invalid KiCad placement for '+row[ref])
+    // Matches Fabrication Toolkit's bottom-side conversion. Footprint-specific
+    // zero-angle differences still require review against JLC's part preview.
+    // https://github.com/bennymeg/Fabrication-Toolkit/blob/master/plugins/process.py
+    const converted=layer==='bottom'?180-angle:angle
+    row[rotation]=(((converted%360)+360)%360).toFixed(6)
+    row[side]=layer==='bottom'?'B':'T'
+    return row
+  })]
+}
 export function partsFromNetlist(tree:Xml):Part[]{
   return tree.all('components/comp').filter(c=>!c.get('ref').startsWith('#')).map(c=>{
     const props=Object.fromEntries([...c.all('fields/field').map(f=>[f.get('name'),f.text]),...c.all('property').map(f=>[f.get('name'),f.get('value')])])
@@ -27,15 +46,21 @@ export function partsFromNetlist(tree:Xml):Part[]{
   }).sort((a,b)=>order(a.ref,b.ref))
 }
 export function bomRows(parts:Part[]) {
-  const grouped=new Map<string,string[]>()
-  for(const part of parts.filter(p=>p.inBom)){
+  const grouped=new Map<string,{refs:string[];fields:Set<string>[]}>()
+  for(const part of parts.filter(p=>p.inBom).sort((a,b)=>order(a.ref,b.ref))){
     const p=part.props
     const flags=[part.dnp?'DNP':'','',''+(part.onBoard?'':'Exclude from Board')]
-    const fields=[part.value,...flags,p['MFR.Part #']??p.MPN??'',p.Manufacturer??'',p['JLCPCB Part #']??p['LCSC Part']??'',p.Footprint??'',p.Datasheet??'']
-    const key=JSON.stringify(fields)
-    grouped.set(key,[...grouped.get(key)??[],part.ref])
+    const lcsc=(p['JLCPCB Part #']?.trim()||p['LCSC Part']?.trim()||'').toUpperCase()
+    const fields=[part.value,...flags,p['MFR.Part #']??p.MPN??'',p.Manufacturer??'',lcsc,p.Footprint??'',p.Datasheet??'']
+    // One purchase line per assigned part, even when value labels or footprint
+    // aliases differ. Keep population variants and unassigned parts separate.
+    const key=JSON.stringify(lcsc?['lcsc',lcsc,...flags]:['fields',...fields])
+    let group=grouped.get(key)
+    if(!group){group={refs:[],fields:fields.map(()=>new Set<string>())};grouped.set(key,group)}
+    group.refs.push(part.ref)
+    fields.forEach((value,index)=>{if(value)group.fields[index].add(value)})
   }
-  return [['Designator','Qty','Comment','DNP','Exclude from BOM','Exclude from Board','MFR.Part #','Manufacturer','LCSC Part #','Footprint','Datasheet'],...[...grouped].map(([key,refs])=>[refs.sort(order).join(','),String(refs.length),...JSON.parse(key) as string[]]).sort((a,b)=>order(a[0],b[0]))]
+  return [['Designator','Qty','Comment','DNP','Exclude from BOM','Exclude from Board','MFR.Part #','Manufacturer','LCSC Part #','Footprint','Datasheet'],...[...grouped.values()].map(({refs,fields})=>[refs.join(','),String(refs.length),...fields.map(values=>[...values].join('; '))]).sort((a,b)=>order(a[0],b[0]))]
 }
 export function writeDocs(schematic:string,output:string){
   const tree=readNetlist(schematic),parts=partsFromNetlist(tree);mkdirSync(output,{recursive:true})
@@ -85,18 +110,24 @@ export function fabricate(boardPath:string,output:string,parts:Part[]){
     }
     if(jobText)writeFileSync(job,jobText)
     run(['kicad-cli','pcb','export','drill','--output',gerbers+'/','--format','excellon','--excellon-units','mm','--excellon-zeros-format','decimal','--excellon-oval-format','alternate','--excellon-separate-th',boardPath])
+    // KiCad 10 emits via filling/capping artwork only through its Gerber drill
+    // writer. Keep the Excellon drills and copy just the treatment layers.
+    const treatment=join(stage,'via-treatment');mkdirSync(treatment)
+    run(['kicad-cli','pcb','export','drill','--output',treatment+'/','--format','gerber',boardPath])
+    for(const file of readdirSync(treatment))if(/-(?:filling|capping|plugging|covering)-.*\.gbr$/i.test(file))copyFileSync(join(treatment,file),join(gerbers,file))
     const positions=join(stage,'pos.csv');run(['kicad-cli','pcb','export','pos','--output',positions,'--side','both','--format','csv','--units','mm','--exclude-dnp','--use-drill-file-origin',boardPath])
-    const [header,...rows]=parseCsv(readFileSync(positions,'utf8')),names:Record<string,string>={Ref:'Designator',PosX:'Mid X',PosY:'Mid Y',Rot:'Rotation',Side:'Layer'},refs=new Set(parts.filter(p=>p.inBom&&p.onBoard&&!p.dnp).map(p=>p.ref)),side=header.indexOf('Side')
-    writeFileSync(positions,csv([header.map(h=>names[h]??h),...rows.filter(r=>refs.has(r[0])).map(r=>{r[side]=({top:'T',bottom:'B'} as Record<string,string>)[r[side]?.toLowerCase()]??r[side];return r})]))
+    writeFileSync(positions,csv(jlcPositionRows(readFileSync(positions,'utf8'),parts)))
     mechanical(boardPath,stage)
+    const notes=join(dirname(boardPath),'fabrication.md'),releaseNotes=join(stage,'fabrication.md')
+    if(existsSync(notes))copyFileSync(notes,releaseNotes)
     const zip=join(stage,name+'-gerbers.zip'),files=readdirSync(gerbers).filter(isFabricationFile)
-    run(['zip','-j',zip,...files.map(f=>join(gerbers,f))])
+    run(['zip','-j',zip,...files.map(f=>join(gerbers,f)),...existsSync(releaseNotes)?[releaseNotes]:[]])
     for(const file of readdirSync(output))if(isFabricationFile(file)||[name+'-gerbers.zip',name+'-all-pos.csv',name+'-pos.csv',name+'.step',name+'.stl'].includes(file))unlinkSync(join(output,file))
     const destination=join(output,'gerbers')
     mkdirSync(destination,{recursive:true})
     for(const file of readdirSync(destination))if(isFabricationFile(file))unlinkSync(join(destination,file))
     for(const file of files)copyFileSync(join(gerbers,file),join(destination,file))
-    for(const file of readdirSync(stage))if(file!=='gerbers')copyFileSync(join(stage,file),join(output,file))
+    for(const file of readdirSync(stage))if(statSync(join(stage,file)).isFile())copyFileSync(join(stage,file),join(output,file))
   })
   console.log('Fabrication outputs written to '+output)
 }
