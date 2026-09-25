@@ -1,5 +1,5 @@
 /** Native KiCad documentation and fabrication exports, shared by all projects. */
-import { existsSync, mkdirSync, readFileSync, readdirSync, copyFileSync, statSync, writeFileSync, renameSync, unlinkSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, readdirSync, copyFileSync, statSync, writeFileSync, renameSync, unlinkSync, rmSync, realpathSync } from 'node:fs'
 import { basename, dirname, join, resolve, extname } from 'node:path'
 import { cli, readNetlist, run, withTemp, type Xml } from './kicad_io'
 import { child, children, descendants, parse, val, type Node } from './kicad_sexpr'
@@ -97,7 +97,7 @@ function mechanical(board:string,output:string){
 export function fabricate(boardPath:string,output:string,parts:Part[]){
   const board=parse(readFileSync(boardPath,'utf8')),name=basename(boardPath,'.kicad_pcb');mkdirSync(output,{recursive:true})
   checkPopulation(board,parts)
-  checkDrc(boardPath,join(output,name+'-drc.json'))
+  checkDrc(boardPath)
   // Stage all manufacturing outputs so failed exports leave the previous release intact.
   withTemp(stage=>{
     const layers=manufacturingLayers(board),gerbers=join(stage,'gerbers')
@@ -118,10 +118,8 @@ export function fabricate(boardPath:string,output:string,parts:Part[]){
     const positions=join(stage,'pos.csv');run(['kicad-cli','pcb','export','pos','--output',positions,'--side','both','--format','csv','--units','mm','--exclude-dnp','--use-drill-file-origin',boardPath])
     writeFileSync(positions,csv(jlcPositionRows(readFileSync(positions,'utf8'),parts)))
     mechanical(boardPath,stage)
-    const notes=join(dirname(boardPath),'fabrication.md'),releaseNotes=join(stage,'fabrication.md')
-    if(existsSync(notes))copyFileSync(notes,releaseNotes)
     const zip=join(stage,name+'-gerbers.zip'),files=readdirSync(gerbers).filter(isFabricationFile)
-    run(['zip','-j',zip,...files.map(f=>join(gerbers,f)),...existsSync(releaseNotes)?[releaseNotes]:[]])
+    run(['zip','-j',zip,...files.map(f=>join(gerbers,f))])
     for(const file of readdirSync(output))if(isFabricationFile(file)||[name+'-gerbers.zip',name+'-all-pos.csv',name+'-pos.csv',name+'.step',name+'.stl'].includes(file))unlinkSync(join(output,file))
     const destination=join(output,'gerbers')
     mkdirSync(destination,{recursive:true})
@@ -143,7 +141,10 @@ export async function main(args:string[]){
   if(!['.kicad_sch','.kicad_pcb'].includes(extname(target)))throw new Error('Expected a KiCad schematic or PCB')
   const schematic=target.replace(/\.kicad_pcb$/,'.kicad_sch'),board=schematic.replace(/\.kicad_sch$/,'.kicad_pcb'),output=resolve(values.output as string??join(dirname(target),'outputs'))
   mkdirSync(output,{recursive:true})
-  checkErc(schematic,join(output,basename(schematic,'.kicad_sch')+'-erc.json'))
+  for(const check of ['erc','drc'])rmSync(join(output,basename(schematic,'.kicad_sch')+'-'+check+'.json'),{force:true})
+  // Remove the old exported copy, but preserve source notes when exporting beside the PCB.
+  if(realpathSync(output)!==realpathSync(dirname(schematic)))rmSync(join(output,'fabrication.md'),{force:true})
+  checkErc(schematic)
   const parts=writeDocs(schematic,output)
   if(existsSync(board))fabricate(board,output,parts)
 }
