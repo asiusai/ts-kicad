@@ -44,3 +44,33 @@ test('PCB connectivity reports missing footprints and pads instead of declaring 
     'C1.1: pad missing from PCB', 'C1.2: pad missing from PCB', 'J1: footprint missing from PCB',
   ])
 })
+
+test('PCB connectivity requires full schematic UUID paths even when references and nets match', () => {
+  const root = '22362d11-74aa-5b39-b298-6fa9d2eb7262'
+  const sheet = '59bae9af-6460-5ffc-b7aa-3b41ac347ccc'
+  const symbol = 'ba1eb5b9-3327-41b6-a3f3-f2faba882016'
+  const xml = parseXml(`<export><components>
+    <comp ref="R1"><sheetpath tstamps="/"/><tstamps>${symbol}</tstamps></comp>
+    <comp ref="R2"><sheetpath tstamps="/${sheet}/"/><tstamps>${symbol}</tstamps></comp>
+    </components><nets><net name="GND"><node ref="R1" pin="1"/><node ref="R2" pin="1"/></net></nets></export>`)
+  const linked = `(kicad_pcb
+    (footprint "Test:R" (property "Reference" "R1") (path "/${root}/${symbol}") (pad "1" smd rect (net "GND")))
+    (footprint "Test:R" (property "Reference" "R2") (path "/${root}/${sheet}/${symbol}") (pad "1" smd rect (net "GND"))))`
+  expect(boardConnectivity(parse(linked), xml, root)).toEqual([])
+  expect(boardConnectivity(parse(linked.replaceAll(/\(path "[^"]+"\)/g, '')), xml, root)).toEqual([
+    `R1: schematic link (missing) -> /${root}/${symbol}`,
+    `R2: schematic link (missing) -> /${root}/${sheet}/${symbol}`,
+  ])
+  const stale = linked.replace(`/${root}/${sheet}/`, `/${symbol}/${sheet}/`)
+  expect(boardConnectivity(parse(stale), xml, root)).toEqual([
+    `R2: schematic link /${symbol}/${sheet}/${symbol} -> /${root}/${sheet}/${symbol}`,
+  ])
+})
+
+test('PCB connectivity accepts board-only footprints but still reports unmatched BOM-excluded footprints', () => {
+  const xml = parseXml('<export><components/><nets/></export>')
+  const pcb = parse(`(kicad_pcb
+    (footprint "Test:H" (property "Reference" "H1") (attr board_only exclude_from_bom exclude_from_pos_files))
+    (footprint "Test:H" (property "Reference" "H2") (attr exclude_from_bom)))`)
+  expect(boardConnectivity(pcb, xml)).toEqual(['H2: footprint absent from schematic'])
+})

@@ -3,8 +3,8 @@ import { run, withTemp, type Xml } from './kicad_io'
 import { join } from 'node:path'
 import { child, children, parse, val, type Node } from './kicad_sexpr'
 
-/** Compare saved pad assignments, independently of whether the PCB is routed. */
-export function boardConnectivity(board: Node, netlist: Xml): string[] {
+/** Compare saved schematic links and pad assignments, independently of routing. */
+export function boardConnectivity(board: Node, netlist: Xml, rootUuid?: string): string[] {
   if (val(board[0]) !== 'kicad_pcb') throw new Error('Invalid KiCad PCB')
   const components = new Map(netlist.all('components/comp')
     .filter(c => !c.all('property').some(p => p.get('name') === 'exclude_from_board'))
@@ -17,7 +17,15 @@ export function boardConnectivity(board: Node, netlist: Xml): string[] {
     const ref = val(children(footprint, 'property').find(p => val(p[1]) === 'Reference')?.[2])
     const component = components.get(ref)
     found.add(ref)
-    if (!component) { findings.push(ref + ': footprint absent from schematic'); continue }
+    if (!component) {
+      if (!child(footprint, 'attr').some(a => val(a) === 'board_only')) findings.push(ref + ': footprint absent from schematic')
+      continue
+    }
+    if (rootUuid) {
+      const expected = '/' + rootUuid + (component.find('sheetpath')?.get('tstamps') || '/') + component.value('tstamps')
+      const actual = val(child(footprint, 'path')[1])
+      if (actual !== expected) findings.push(`${ref}: schematic link ${actual || '(missing)'} -> ${expected}`)
+    }
     const pads = new Set<string>()
     for (const pad of children(footprint, 'pad')) {
       const number = val(pad[1]), key = ref + '.' + number, expected = nets.get(key)
@@ -39,7 +47,10 @@ export function boardConnectivity(board: Node, netlist: Xml): string[] {
 export function checkBoardConnectivity(path: string, netlist: Xml) {
   if (!existsSync(path)) return
   try {
-    const findings = boardConnectivity(parse(readFileSync(path, 'utf8')), netlist)
+    const schematic = parse(readFileSync(netlist.value('design/source'), 'utf8'))
+    const rootUuid = val(child(schematic, 'uuid')[1])
+    if (!rootUuid) throw new Error('Root schematic UUID missing')
+    const findings = boardConnectivity(parse(readFileSync(path, 'utf8')), netlist, rootUuid)
     if (!findings.length) {
       const parity = withTemp(dir => {
         const report = join(dir, 'parity.json')

@@ -11,7 +11,8 @@ Generated labels for unnamed nets use component and pin names, such as
 `Net-(Q2-G)` or `Net-(R10-Pad2)`. Explicit signal and power names remain unchanged.
 
 Sync verifies the generated schematic through KiCad's native netlist and compares
-any existing PCB's saved pad nets with that netlist. If they match, native KiCad
+any existing PCB's saved pad nets and full schematic UUID paths with that netlist.
+Board-only footprints do not need schematic links. If these checks pass, native KiCad
 schematic parity also checks symbol fields, footprint identities and escaped net
 names. It reports mismatches without changing PCB placement or routing.
 After an external sync, reload the schematic in KiCad before using Update PCB
