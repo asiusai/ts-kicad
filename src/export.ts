@@ -2,7 +2,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, copyFileSync, statSync, writeFileSync, renameSync, unlinkSync, rmSync, realpathSync } from 'node:fs'
 import { basename, dirname, join, resolve, extname } from 'node:path'
 import { cli, readNetlist, run, withTemp, type Xml } from './kicad_io'
-import { child, children, descendants, parse, val, type Node } from './kicad_sexpr'
+import { child, children, descendants, dump, parse, val, type Node } from './kicad_sexpr'
 import { checkErc, checkDrc } from './checks'
 
 const order=(a:string,b:string)=>a.localeCompare(b,undefined,{numeric:true})
@@ -47,7 +47,7 @@ export function partsFromNetlist(tree:Xml):Part[]{
 }
 export function bomRows(parts:Part[]) {
   const grouped=new Map<string,{refs:string[];fields:Set<string>[]}>()
-  for(const part of parts.filter(p=>p.inBom).sort((a,b)=>order(a.ref,b.ref))){
+  for(const part of parts.filter(p=>p.inBom&&!p.dnp).sort((a,b)=>order(a.ref,b.ref))){
     const p=part.props
     const flags=[part.dnp?'DNP':'','',''+(part.onBoard?'':'Exclude from Board')]
     const lcsc=(p['JLCPCB Part #']?.trim()||p['LCSC Part']?.trim()||'').toUpperCase()
@@ -69,6 +69,11 @@ export function writeDocs(schematic:string,output:string){
   console.log('Wrote BOM and schematic PDF to '+output);return parts
 }
 const prop=(fp:Node,name:string)=>val(children(fp,'property').find(p=>val(p[1])===name)?.[2])||val(children(fp,'fp_text').find(p=>val(p[1])===name.toLowerCase())?.[2])
+/** Filter a temporary paste plot only. Native copper, masks and footprints stay unchanged. */
+export function assemblyPasteBoard(board:Node,parts:Part[]):Node{
+  const refs=new Set(parts.filter(p=>p.inBom&&p.onBoard&&!p.dnp).map(p=>p.ref))
+  return board.filter(n=>!Array.isArray(n)||!['footprint','module'].includes(val(n[0]))||refs.has(prop(n,'Reference')))
+}
 export function checkPopulation(board:Node,parts:Part[]){
   const expected=parts.filter(p=>p.inBom&&p.onBoard&&!p.dnp).map(p=>p.ref).sort(order)
   const actual=children(board,'footprint').concat(children(board,'module')).filter(fp=>!child(fp,'attr').slice(1).some(a=>['dnp','exclude_from_bom','board_only'].includes(val(a)))).map(fp=>prop(fp,'Reference')).sort(order)
@@ -102,18 +107,26 @@ export function fabricate(boardPath:string,output:string,parts:Part[]){
   withTemp(stage=>{
     const layers=manufacturingLayers(board),gerbers=join(stage,'gerbers')
     mkdirSync(gerbers)
-    run(['kicad-cli','pcb','export','gerbers','--no-protel-ext','--output',gerbers+'/','--layers',layers.join(','),'--check-zones',boardPath])
+    // Match the placement origin across copper, paste, drills and via treatment.
+    run(['kicad-cli','pcb','export','gerbers','--no-protel-ext','--use-drill-file-origin','--output',gerbers+'/','--layers',layers.join(','),'--check-zones',boardPath])
+    const pasteLayers=layers.filter(layer=>['F.Paste','B.Paste'].includes(layer)),pasteBoard=assemblyPasteBoard(board,parts)
+    if(pasteLayers.length&&pasteBoard.length!==board.length){
+      const paste=join(stage,'paste');mkdirSync(paste)
+      const source=join(paste,basename(boardPath));writeFileSync(source,dump(pasteBoard)+'\n')
+      run(['kicad-cli','pcb','export','gerbers','--no-protel-ext','--use-drill-file-origin','--output',paste+'/','--layers',pasteLayers.join(','),source])
+      for(const layer of pasteLayers){const file=name+'-'+layer.replace('.','_')+'.gbr';copyFileSync(join(paste,file),join(gerbers,file))}
+    }
     const job=join(gerbers,name+'-job.gbrjob');let jobText=existsSync(job)?readFileSync(job,'utf8'):''
     for(const layer of layers){const m=/^(pit|pib|fr4t|fr4b|gpt|gpb)_(\d+(?:\.\d+)?)$/.exec(layer);if(!m)continue
       const old=name+'-'+layer.replace(/[^A-Za-z0-9_+-]/g,'_')+'.gbr',dest=m[1]+'_'+Number(m[2])+'.gbr'
       if(existsSync(join(gerbers,old))){renameSync(join(gerbers,old),join(gerbers,dest));jobText=jobText.replaceAll(old,dest)}
     }
     if(jobText)writeFileSync(job,jobText)
-    run(['kicad-cli','pcb','export','drill','--output',gerbers+'/','--format','excellon','--excellon-units','mm','--excellon-zeros-format','decimal','--excellon-oval-format','alternate','--excellon-separate-th',boardPath])
+    run(['kicad-cli','pcb','export','drill','--output',gerbers+'/','--format','excellon','--drill-origin','plot','--excellon-units','mm','--excellon-zeros-format','decimal','--excellon-oval-format','alternate','--excellon-separate-th',boardPath])
     // KiCad 10 emits via filling/capping artwork only through its Gerber drill
     // writer. Keep the Excellon drills and copy just the treatment layers.
     const treatment=join(stage,'via-treatment');mkdirSync(treatment)
-    run(['kicad-cli','pcb','export','drill','--output',treatment+'/','--format','gerber',boardPath])
+    run(['kicad-cli','pcb','export','drill','--output',treatment+'/','--format','gerber','--drill-origin','plot',boardPath])
     for(const file of readdirSync(treatment))if(/-(?:filling|capping|plugging|covering)-.*\.gbr$/i.test(file))copyFileSync(join(treatment,file),join(gerbers,file))
     const positions=join(stage,'pos.csv');run(['kicad-cli','pcb','export','pos','--output',positions,'--side','both','--format','csv','--units','mm','--exclude-dnp','--use-drill-file-origin',boardPath])
     writeFileSync(positions,csv(jlcPositionRows(readFileSync(positions,'utf8'),parts)))

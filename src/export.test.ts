@@ -1,6 +1,6 @@
 import {expect,test,spyOn} from 'bun:test'
-import {bomRows,csv,parseCsv,jlcPositionRows,manufacturingLayers,isFabricationFile,checkPopulation,partsFromNetlist,type Part} from './export'
-import {parse} from './kicad_sexpr'
+import {bomRows,csv,parseCsv,jlcPositionRows,manufacturingLayers,isFabricationFile,checkPopulation,partsFromNetlist,assemblyPasteBoard,type Part} from './export'
+import {parse,dump} from './kicad_sexpr'
 import {parseXml} from './kicad_io'
 const part=(ref:string,extra:Partial<Part>={}):Part=>({ref,value:'10k',props:{Footprint:'Device:R'},dnp:false,inBom:true,onBoard:true,...extra})
 test('CSV round trips commas, quotes and multiline descriptions',()=>{
@@ -28,10 +28,10 @@ test('JLC conversion rejects unknown sides and invalid angles instead of silentl
   for(const row of ['U1,1,2,0,unknown','U1,1,2,NaN,top','U1,1,2,,bottom'])expect(()=>jlcPositionRows(header+row,[part('U1')])).toThrow('Invalid KiCad placement for U1')
   expect(()=>jlcPositionRows('Ref,PosX,PosY,Side\nU1,1,2,top',[part('U1')])).toThrow('Incomplete KiCad position CSV header')
 })
-test('BOM counts schematic components and keeps fitted and DNP items separate',()=>{
+test('BOM includes fitted components and omits native DNP items',()=>{
   const rows=bomRows([part('R1'),part('R2',{dnp:true}),part('R3',{inBom:false}),part('R4'),part('J1',{value:'Connector'})])
-  expect(rows).toHaveLength(4)
-  expect(rows.find(r=>r[0]==='R2')![3]).toBe('DNP')
+  expect(rows).toHaveLength(3)
+  expect(rows.find(r=>r[0]==='R2')).toBeUndefined()
   expect(rows.find(r=>r[0]==='R1,R4')!.slice(0,3)).toEqual(['R1,R4','2','10k'])
   expect(rows.find(r=>r[0]==='J1')!.slice(0,3)).toEqual(['J1','1','Connector'])
 })
@@ -63,13 +63,13 @@ test('BOM never merges different purchased parts or population variants',()=>{
     part('R3',{props,dnp:true}),part('R4',{props,onBoard:false}),part('R5',{props,inBom:false}),
     part('R6'),part('R7'),part('R8',{value:'1k'}),
   ])
-  expect(rows.slice(1).map(row=>row[0])).toEqual(['R1','R2','R3','R4','R6,R7','R8'])
-  expect(rows.find(row=>row[0]==='R3')![3]).toBe('DNP')
+  expect(rows.slice(1).map(row=>row[0])).toEqual(['R1','R2','R4','R6,R7','R8'])
+  expect(rows.find(row=>row[0]==='R3')).toBeUndefined()
   expect(rows.find(row=>row[0]==='R4')![5]).toBe('Exclude from Board')
 })
 test('native XML exclusions drive the BOM and PCB population',()=>{
   const parts=partsFromNetlist(parseXml('<export><components><comp ref="R1"><value>10k</value></comp><comp ref="R2"><property name="dnp"/></comp><comp ref="R3"><property name="exclude_from_bom"/></comp></components></export>'))
-  expect(bomRows(parts)).toHaveLength(3)
+  expect(bomRows(parts)).toHaveLength(2)
   const board=parse('(board (footprint "R" (property "Reference" "R1")) (module "R" (fp_text reference "R2") (attr dnp)) (footprint "Hole" (property "Reference" "H1") (attr board_only)))')
   const log=spyOn(console,'error').mockImplementation(()=>{})
   try{
@@ -77,6 +77,16 @@ test('native XML exclusions drive the BOM and PCB population',()=>{
     expect(()=>checkPopulation(board,[])).not.toThrow()
     expect(log).toHaveBeenCalledWith('BOM/PCB population mismatch. Missing: . Extra: R1. Continuing export.')
   }finally{log.mockRestore()}
+})
+test('paste omits DNP and excluded parts without changing the native board',()=>{
+  const board=parse('(kicad_pcb (layers (0 "F.Cu" signal)) (footprint "R" (property "Reference" "R1") (pad "1" smd rect (layers "F.Cu" "F.Mask" "F.Paste"))) (footprint "R" (property "Reference" "R2")) (module "ANT" (fp_text reference "ANT1")) (footprint "TestPoint" (property "Reference" "TP1")) (segment (start 0 0) (end 1 1)))')
+  const before=dump(board)
+  const filtered=dump(assemblyPasteBoard(board,[part('R1'),part('R2',{dnp:true}),part('ANT1',{inBom:false}),part('TP1',{inBom:false})]))
+  expect(filtered).toContain('"R1"')
+  for(const ref of ['R2','ANT1','TP1'])expect(filtered).not.toContain('"'+ref+'"')
+  expect(filtered).toContain('F.Paste')
+  expect(filtered).toContain('segment')
+  expect(dump(board)).toBe(before)
 })
 test('fabrication selects copper and used auxiliary FPC layers',()=>{
   const board=parse('(board (layers (0 "F.Cu" signal) (4 "In1.Cu" signal) (25 "Edge.Cuts" user) (40 "User.1" user "pit_0.10") (42 "User.2" user "pib_0.10")) (gr_line (layer "User.1")))')
@@ -143,7 +153,7 @@ writeFileSync(process.argv[3],JSON.stringify(process.argv.slice(4).map(file=>bas
     expect(schematic.stderr).toContain('ERC [warning] fixture ERC warning')
     expect(readdirSync(output).sort()).toEqual(['BOM.csv','board.pdf','keep.txt'])
     expect(schematic.stderr).not.toContain('See ')
-    writeFileSync(join(directory,'board.kicad_pcb'),'(kicad_pcb (layers (0 "F.Cu" signal) (2 "B.Cu" signal) (25 "Edge.Cuts" user)) (footprint "R" (property "Reference" "R1")) (footprint "R" (property "Reference" "R9")))')
+    writeFileSync(join(directory,'board.kicad_pcb'),'(kicad_pcb (layers (0 "F.Cu" signal) (2 "B.Cu" signal) (13 "F.Paste" user) (15 "B.Paste" user) (25 "Edge.Cuts" user)) (setup (aux_axis_origin 100 122)) (footprint "R" (property "Reference" "R1")) (footprint "R" (property "Reference" "R9")))')
     const board=await run('findings')
     expect(board.status).toBe(0)
     expect(board.stderr).toContain('Missing: R2. Extra: R9. Continuing export.')
@@ -187,5 +197,14 @@ writeFileSync(process.argv[3],JSON.stringify(process.argv.slice(4).map(file=>bas
       expect(existsSync(dirname(report))).toBe(false)
     }
     for(const command of ['gerbers','drill','pos','step','stl'])expect(commands.some(args=>args[2]===command)).toBe(true)
+    // All fabrication outputs must share the position file's origin, including
+    // filtered paste plots and via-treatment artwork generated separately.
+    const plots=commands.filter(args=>args[2]==='gerbers')
+    expect(plots.some(args=>args[args.indexOf('--layers')+1]==='F.Paste,B.Paste')).toBe(true)
+    for(const args of [...plots,...commands.filter(args=>args[2]==='pos')])expect(args).toContain('--use-drill-file-origin')
+    for(const args of commands.filter(args=>args[2]==='drill')){
+      expect(args).toContain('--drill-origin')
+      expect(args[args.indexOf('--drill-origin')+1]).toBe('plot')
+    }
   } finally {rmSync(directory,{recursive:true,force:true})}
 },20000)

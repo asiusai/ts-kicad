@@ -27,9 +27,11 @@ Project-local fabrication notes are not copied into the outputs or Gerber ZIP.
 
 BOM rows with an assigned JLC/LCSC part number are grouped by that number and
 population status. Different schematic value labels or footprint aliases for
-the same purchased part are listed together in one row. DNP and off-board
-variants remain separate. Parts without a supplier number group by their full
-exported fields.
+the same purchased part are listed together in one row. Native DNP parts are
+excluded from BOM.csv and pos.csv. Their schematic and PCB flags remain intact.
+Paste exports omit DNP and BOM-excluded parts. Native copper, mask, and footprint geometry remain unchanged.
+Off-board variants remain separate. Parts without a supplier number group by
+their full exported fields.
 
 The JLC `pos.csv` uses millimetres and component-side rotation angles: top
 angles stay unchanged; bottom angles become `180 - KiCad angle`, normalized to
